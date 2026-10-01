@@ -105,3 +105,9 @@ Fetching is low-rate and done for personal use:
 
 - **Errors:** always `{ok:false, error}` with `Cache-Control: no-store`. The API returns 400, 404, 405 (with an `Allow` header) and 429.
 - **Caching:** closed seasons are cacheable for a day. Everything else uses `no-cache` with ETags.
+
+## Deploying
+
+- **How:** deploys run through Cloudflare Workers Builds on every push to `main`, including the data bot's refresh commits. There is no manual deploy step.
+- **GitHub access:** the "Cloudflare Workers and Pages" GitHub app must have this repository in its repository access (organization Settings → GitHub Apps → Cloudflare Workers and Pages → Configure). Without that access, pushes never start a build.
+- **Check:** each push to `main` should show a "Workers Builds: hs-dashboard" check on its commit. If it doesn't, check the app's repository access first.
