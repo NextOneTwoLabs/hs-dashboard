@@ -1,5 +1,5 @@
 season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
-2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,unreported,,,,,Hebron Christian,,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,bye,,,,,,Hebron Christian,,bottom
 2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Darlington,1,,Mount Paran Christian,2,bottom
 2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Prince Avenue Christian,0,,Holy Innocents Episcopal,10,bottom
 2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Savannah Christian,0,,St. Vincent's,7,bottom
@@ -20,7 +20,7 @@ season,state,competition,division,round,round_name,date,status,decided_by,top_se
 2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Landmark Christian,0,,Savannah Country Day,9,bottom
 2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Fellowship Christian,2,,Trinity Christian,3,bottom
 2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Walker,1,,Aquinas,2,bottom
-2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,unreported,,,,,Wesleyan,,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,bye,,,,,,Wesleyan,,bottom
 2025-26,GA,ga-ghsa,Class Private,1,Round 2,2026-04-30,final,,,Lovett,3,,Mount Vernon,2,top
 2025-26,GA,ga-ghsa,Class Private,1,Round 2,2026-04-30,final,,,Whitefield Academy,6,,Calvary Day,1,top
 2025-26,GA,ga-ghsa,Class Private,1,Round 2,2026-04-30,final,,,Savannah Country Day,2,,Trinity Christian,3,bottom

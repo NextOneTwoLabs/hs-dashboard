@@ -1,5 +1,5 @@
 season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
-2018-19,CA,ca-cif-socal,Division 2,0,Round I,2019-02-26,final,unreported,1,Sunny Hills,,,,,bottom
+2018-19,CA,ca-cif-socal,Division 2,0,Round I,2019-02-26,bye,,1,Sunny Hills,,,,,top
 2018-19,CA,ca-cif-socal,Division 2,0,Round I,2019-02-26,final,pk,4,West Hills,1,5,Vista Murrieta,1,top
 2018-19,CA,ca-cif-socal,Division 2,0,Round I,2019-02-26,final,,3,El Camino Real,0,6,Long Beach Poly,3,bottom
 2018-19,CA,ca-cif-socal,Division 2,0,Round I,2019-02-26,final,,2,Mira Costa,2,7,Steele Canyon,0,top

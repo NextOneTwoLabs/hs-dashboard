@@ -15,14 +15,14 @@ season,state,competition,division,round,round_name,date,status,decided_by,top_se
 2025-26,TX,tx-uil,Conference 4A D2,0,Bi-District,2026-03-19,final,,,Sunnyvale,3,,Panther Creek,0,top
 2025-26,TX,tx-uil,Conference 4A D2,0,Bi-District,2026-03-19,final,,,Athens,8,,North Lamar,0,top
 2025-26,TX,tx-uil,Conference 4A D2,0,Bi-District,2026-03-19,final,,,Diboll,1,,Spring Hill,4,bottom
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Greenwood,2,,Borger,1,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Brownwood,2,,Benbrook,1,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Liberty,0,,Graham,1,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Godley,3,,Lake Worth,2,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Village Tech,0,,Aubrey,8,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Brownsboro,0,,Henderson,5,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Pinkston,0,,Sunnyvale,10,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Athens,8,,Spring Hill,1,
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Greenwood,2,,Borger,1,top
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Brownwood,2,,Benbrook,1,top
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Liberty,0,,Graham,1,bottom
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Godley,3,,Lake Worth,2,top
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Village Tech,0,,Aubrey,8,bottom
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Brownsboro,0,,Henderson,5,bottom
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Pinkston,0,,Sunnyvale,10,bottom
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Athens,8,,Spring Hill,1,top
 2025-26,TX,tx-uil,Conference 4A D2,2,Regional Semifinals,2026-03-26,final,,,Greenwood,2,,Brownwood,0,top
 2025-26,TX,tx-uil,Conference 4A D2,2,Regional Semifinals,2026-03-26,final,,,Graham,0,,Godley,1,bottom
 2025-26,TX,tx-uil,Conference 4A D2,2,Regional Semifinals,2026-03-26,final,,,Aubrey,4,,Henderson,1,top
@@ -45,14 +45,14 @@ season,state,competition,division,round,round_name,date,status,decided_by,top_se
 2025-26,TX,tx-uil,Conference 4A D2,0,Bi-District,2026-03-19,final,,,Pleasanton,2,,Luling,1,top
 2025-26,TX,tx-uil,Conference 4A D2,0,Bi-District,2026-03-19,final,,,Vanguard Academy Beethoven,0,,Ingleside,8,bottom
 2025-26,TX,tx-uil,Conference 4A D2,0,Bi-District,2026-03-19,final,,,Jubilee Brownsville,6,,IDEA Edinburg College Prep,0,top
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Hardin-Jefferson,4,,Scarborough,1,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Sweeny,0,,Lorena,3,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Little Cypress-Mauriceville,5,,Bellville,0,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Columbia,3,,La Grange,2,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Canyon Lake,8,,Cole,0,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,London,,,IDEA Robindale,,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Wimberley,8,,Pleasanton,0,
-2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,unreported,,,Ingleside,5,,Jubilee Brownsville,1,
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Hardin-Jefferson,4,,Scarborough,1,top
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Sweeny,0,,Lorena,3,bottom
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Little Cypress-Mauriceville,5,,Bellville,0,top
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Columbia,3,,La Grange,2,top
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Canyon Lake,8,,Cole,0,top
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,unreported,,London,,,IDEA Robindale,,top
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Wimberley,8,,Pleasanton,0,top
+2025-26,TX,tx-uil,Conference 4A D2,1,Area,2026-03-23,final,,,Ingleside,5,,Jubilee Brownsville,1,top
 2025-26,TX,tx-uil,Conference 4A D2,2,Regional Semifinals,2026-03-26,final,,,Hardin-Jefferson,1,,Lorena,0,top
 2025-26,TX,tx-uil,Conference 4A D2,2,Regional Semifinals,2026-03-26,final,,,Little Cypress-Mauriceville,4,,Columbia,1,top
 2025-26,TX,tx-uil,Conference 4A D2,2,Regional Semifinals,2026-03-26,final,,,Canyon Lake,2,,London,3,bottom

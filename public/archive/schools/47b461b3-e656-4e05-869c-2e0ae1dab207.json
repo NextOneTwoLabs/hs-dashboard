@@ -6,9 +6,9 @@
   "city": "Houston",
   "state": "TX",
   "maxpreps": "https://www.maxpreps.com/tx/houston/scarborough-spartans",
-  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":0},
-  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","result":"alive","reached":"Area"},
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","result":"eliminated","reached":"Area"},
   "appearances": [
-    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":0,"d":0,"gf":1,"ga":0,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"480b2118-5993-4e10-80d5-0c885272dd25","name":"New Waverly","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"8a8898e5-5604-4c8e-854e-a0f45a452893","name":"Hardin-Jefferson","seed":null,"score":4},"gf":1,"ga":4,"res":null,"pk":null}],"reachedRound":1,"reached":"Area","result":"alive","depth":0.167}
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":2,"ga":4,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"480b2118-5993-4e10-80d5-0c885272dd25","name":"New Waverly","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"8a8898e5-5604-4c8e-854e-a0f45a452893","name":"Hardin-Jefferson","seed":null,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
   ]
 }

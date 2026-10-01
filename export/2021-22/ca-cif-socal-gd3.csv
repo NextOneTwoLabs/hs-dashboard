@@ -1,5 +1,5 @@
 season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
-2021-22,CA,ca-cif-socal,Division 3,0,Round I,2022-03-01,final,unreported,1,El Segundo,,,,,bottom
+2021-22,CA,ca-cif-socal,Division 3,0,Round I,2022-03-01,bye,,1,El Segundo,,,,,top
 2021-22,CA,ca-cif-socal,Division 3,0,Round I,2022-03-01,final,pk,4,Portola,0,5,San Pasqual,0,bottom
 2021-22,CA,ca-cif-socal,Division 3,0,Round I,2022-03-01,final,,3,Sage Creek,4,6,Sonora,2,top
 2021-22,CA,ca-cif-socal,Division 3,0,Round I,2022-03-01,final,,2,West,11,7,Venice,0,top

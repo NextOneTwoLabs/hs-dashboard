@@ -7,8 +7,8 @@
   "state": "PA",
   "maxpreps": "https://www.maxpreps.com/pa/exeter/wyoming-area-warriors",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
-  "best": {"season":"2025-26","competition":"pa-piaa","division":"2a","divisionLabel":"2A","result":"alive","reached":"First Round"},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"2a","divisionLabel":"2A","result":"eliminated","reached":"First Round"},
   "appearances": [
-    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"2a","divisionLabel":"2A","gender":"girls","seed":null,"rounds":4,"w":0,"l":0,"d":1,"gf":0,"ga":0,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"e9ee4e37-4756-4777-8c52-ff4feb215d71","name":"Central Columbia","seed":null,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"}],"reachedRound":0,"reached":"First Round","result":"alive","depth":0.0}
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"2a","divisionLabel":"2A","gender":"girls","seed":null,"rounds":4,"w":0,"l":0,"d":1,"gf":0,"ga":0,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"e9ee4e37-4756-4777-8c52-ff4feb215d71","name":"Central Columbia","seed":null,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
   ]
 }

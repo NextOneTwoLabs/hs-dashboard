@@ -27,8 +27,8 @@ season,state,competition,division,round,round_name,date,status,decided_by,top_se
 2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,Tascosa,0,,Centennial,1,bottom
 2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,Walnut Grove,1,,Midlothian,0,top
 2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,Reedy,5,,Lake Belton,0,top
-2025-26,TX,tx-uil,Conference 5A D1,3,Regional Finals,2026-03-30,unreported,,,Colleyville Heritage,1,,Centennial,1,
-2025-26,TX,tx-uil,Conference 5A D1,3,Regional Finals,2026-03-30,unreported,,,Walnut Grove,2,,Reedy,0,
+2025-26,TX,tx-uil,Conference 5A D1,3,Regional Finals,2026-03-30,final,pk,,Colleyville Heritage,1,,Centennial,1,bottom
+2025-26,TX,tx-uil,Conference 5A D1,3,Regional Finals,2026-03-30,final,,,Walnut Grove,2,,Reedy,0,top
 2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,A&M Consolidated,7,,Crosby,2,top
 2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Barbers Hill,3,,La Porte,0,top
 2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Spring Woods,3,,Fort Bend Kempner,2,top
@@ -57,8 +57,8 @@ season,state,competition,division,round,round_name,date,status,decided_by,top_se
 2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,Kingwood Park,3,,Anderson,1,top
 2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,New Braunfels,5,,McAllen,0,top
 2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,Smithson Valley,8,,Corpus Christi Veterans Memorial,0,top
-2025-26,TX,tx-uil,Conference 5A D1,3,Regional Finals,2026-03-30,unreported,,,A&M Consolidated,4,,Kingwood Park,0,
-2025-26,TX,tx-uil,Conference 5A D1,3,Regional Finals,2026-03-30,unreported,,,New Braunfels,,,Smithson Valley,,
+2025-26,TX,tx-uil,Conference 5A D1,3,Regional Finals,2026-03-30,final,,,A&M Consolidated,4,,Kingwood Park,0,top
+2025-26,TX,tx-uil,Conference 5A D1,3,Regional Finals,2026-03-30,final,unreported,,New Braunfels,,,Smithson Valley,,bottom
 2025-26,TX,tx-uil,Conference 5A D1,4,State Semifinals,2026-04-02,final,,,Centennial,0,,Walnut Grove,2,bottom
 2025-26,TX,tx-uil,Conference 5A D1,4,State Semifinals,2026-04-02,final,,,A&M Consolidated,0,,Smithson Valley,2,bottom
 2025-26,TX,tx-uil,Conference 5A D1,5,State Finals,2026-04-09,unreported,,,Walnut Grove,,,Smithson Valley,,

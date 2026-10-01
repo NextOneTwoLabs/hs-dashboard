@@ -6,9 +6,9 @@
   "city": "Bellville",
   "state": "TX",
   "maxpreps": "https://www.maxpreps.com/tx/bellville/bellville-brahmas",
-  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":0},
-  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","result":"alive","reached":"Area"},
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","result":"eliminated","reached":"Area"},
   "appearances": [
-    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":0,"d":0,"gf":11,"ga":0,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"2bcf80ae-f56c-45ec-a341-6a5d8147fed0","name":"Worthing","seed":null,"score":0},"gf":11,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"e6cb1374-d5c9-42fa-a7bd-9dd0d5c89c32","name":"Little Cypress-Mauriceville","seed":null,"score":5},"gf":0,"ga":5,"res":null,"pk":null}],"reachedRound":1,"reached":"Area","result":"alive","depth":0.167}
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":11,"ga":5,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"2bcf80ae-f56c-45ec-a341-6a5d8147fed0","name":"Worthing","seed":null,"score":0},"gf":11,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"e6cb1374-d5c9-42fa-a7bd-9dd0d5c89c32","name":"Little Cypress-Mauriceville","seed":null,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
   ]
 }

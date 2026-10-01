@@ -6,9 +6,9 @@
   "city": "Roberta",
   "state": "GA",
   "maxpreps": "https://www.maxpreps.com/ga/roberta/crawford-county-eagles",
-  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
   "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","result":"eliminated","reached":"Round 2"},
   "appearances": [
-    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":0,"ga":8,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":null,"gf":null,"ga":null,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"e6086bd3-7bda-4ebf-9f7a-4ee807ba0238","name":"Atlanta Classical Academy","seed":null,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":8,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":null,"gf":null,"ga":null,"res":"BYE","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"e6086bd3-7bda-4ebf-9f7a-4ee807ba0238","name":"Atlanta Classical Academy","seed":null,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
   ]
 }

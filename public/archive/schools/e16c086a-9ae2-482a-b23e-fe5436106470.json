@@ -6,9 +6,9 @@
   "city": "Benbrook",
   "state": "TX",
   "maxpreps": "https://www.maxpreps.com/tx/benbrook/benbrook-bobcats",
-  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":0},
-  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","result":"alive","reached":"Area"},
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","result":"eliminated","reached":"Area"},
   "appearances": [
-    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":0,"d":0,"gf":6,"ga":0,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"31013dd3-eaa5-4d5d-bd04-212136c289ba","name":"Eagle Mountain","seed":null,"score":0},"gf":6,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"8a4b5d8d-e68f-4444-9350-f15d77a9b3ae","name":"Brownwood","seed":null,"score":2},"gf":1,"ga":2,"res":null,"pk":null}],"reachedRound":1,"reached":"Area","result":"alive","depth":0.167}
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":7,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"31013dd3-eaa5-4d5d-bd04-212136c289ba","name":"Eagle Mountain","seed":null,"score":0},"gf":6,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"8a4b5d8d-e68f-4444-9350-f15d77a9b3ae","name":"Brownwood","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
   ]
 }
