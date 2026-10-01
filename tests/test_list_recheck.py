@@ -5,6 +5,7 @@ day, in a temp store with a fake fetcher (offline; derive is stubbed out).
 """
 import copy
 import datetime as dt
+import http.client
 import io
 import json
 import shutil
@@ -78,6 +79,8 @@ class Fake:
         self.requests += 1
         Fake.log.append(url)
         got = self.routes.get(url, NotFound(url))
+        if isinstance(got, list):  # one response per request, the last one repeats
+            got = got.pop(0) if len(got) > 1 else got[0]
         if isinstance(got, Exception):
             if isinstance(got, urllib.error.HTTPError):
                 self.failed.append({"url": url, "status": got.code})
@@ -280,6 +283,51 @@ class Failures(unittest.TestCase):
             st.run_day(IN_TERM, routes)
             self.assertTrue((store.ARCHIVE / "refresh-state.json").exists())
             self.assertEqual(st.links()["divisions"]["4a-d1"]["errorCode"], 500)
+
+
+class ReviewK1K2(unittest.TestCase):
+    """Kongming's PR #7 review: K1 (a live bracket must not freeze after one error) and
+    K2 (read-time and parse errors must leave a status instead of crashing the run)."""
+
+    def test_live_bracket_error_retried_next_run(self):
+        # 5a-d1 is fetched and in its date window, so it is crawled on every run. Its 15th fetch
+        # (the 15:00 run) answers 500; the 15:30 run must fetch it again, not wait for 06:00.
+        u = BASE + BY_CODE["5a-d1"]["url"]
+        html = bracket_html("2027-01-20")
+        routes = {LIST_URL: list_html(BY_CODE["5a-d1"]), u: [html] * 14 + [http_error(u, 500)] + [html]}
+        with Store({"5a-d1": known("5a-d1")}, raw={"5a-d1": html}) as st:
+            per_run = st.run_day(IN_TERM, routes)
+            self.assertIn(u, per_run["15:00"])
+            self.assertIn(u, per_run["15:30"])
+            self.assertEqual(st.links()["divisions"]["5a-d1"]["status"], "ok")
+
+    def test_read_errors_recorded(self):
+        # Errors raised while reading the body (not URLError): timeout, reset, IncompleteRead.
+        cases = {"4a-d1": TimeoutError("The read operation timed out"),
+                 "4a-d2": ConnectionResetError(10054, "reset by peer"),
+                 "5a-d1": http.client.IncompleteRead(b"partial")}
+        routes = {LIST_URL: list_html(*(BY_CODE[c] for c in cases))}
+        routes.update({BASE + BY_CODE[c]["url"]: e for c, e in cases.items()})
+        with Store({c: entry_for(c) for c in cases}) as st:
+            urls = all_urls(st.run_day(IN_TERM, routes))
+            self.assertEqual(st.result, 0)
+            for c in cases:
+                d = st.links()["divisions"][c]
+                self.assertEqual((d["status"], d["errorCode"]), ("error", "network"), c)
+                self.assertEqual(urls.count(BASE + BY_CODE[c]["url"]), 2, c)  # first run + the 06:00 retry
+
+    def test_parse_error_recorded(self):
+        # Markup the parser can't read (a non-numeric round index) is recorded, not a crash.
+        u = BASE + BY_CODE["4a-d1"]["url"]
+        bad = '<div class="rounds"><div class="round" data-round-index="first"><ul></ul></div></div>'
+        routes = {LIST_URL: list_html(BY_CODE["4a-d1"]), u: bad}
+        with Store({"4a-d1": entry_for("4a-d1")}) as st:
+            urls = all_urls(st.run_day(IN_TERM, routes))
+            self.assertEqual(st.result, 0)
+            d = st.links()["divisions"]["4a-d1"]
+            self.assertEqual((d["status"], d["errorCode"]), ("error", "parse"))
+            self.assertEqual(urls.count(u), 2)
+            self.assertFalse((store.RAW / SEASON / "tx-uil" / "4a-d1.html").exists())
 
 
 class RefreshState(unittest.TestCase):

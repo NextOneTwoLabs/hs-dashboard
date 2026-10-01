@@ -19,6 +19,7 @@ way the bracket itself is a MaxPreps bracket page.
 import argparse
 import datetime as dt
 import hashlib
+import http.client
 import re
 import sys
 import time
@@ -198,8 +199,11 @@ class Crawler:
         if reason is None or self.force:
             return True
         status = div.get("status")
-        if status in FAILED:
-            return self.slot      # a failed or blocked division waits for the daily re-check
+        if status in FAILED and not _bracket_dates(season, comp_id, code):
+            # Failed or blocked with no usable bracket yet: only the daily re-check retries it.
+            # A bracket that has dates keeps the date rules, so one blip during its live window
+            # is retried on the next run instead of the next day.
+            return self.slot
         if status is None:
             return True           # newly listed: attempted once
         if reason == "dates":
@@ -245,7 +249,7 @@ class Crawler:
             self.log(f"{where}: tournament list not found ({entry['status']})")
             self.save_links()
             return
-        except (urllib.error.HTTPError, urllib.error.URLError) as e:
+        except (OSError, http.client.HTTPException) as e:  # HTTPError, URLError, timeouts, resets
             self.log(f"warning: {where}: tournament list failed ({getattr(e, 'code', 'network')}); status kept")
             return
         drop = [self.sources["states"][meta["state"]]["association"]]
@@ -317,7 +321,8 @@ class Crawler:
             raise
         except urllib.error.HTTPError as e:
             self._fail(season, comp_id, code, div, "error", e.code)
-        except urllib.error.URLError:
+        except (OSError, http.client.HTTPException):
+            # URLError, and errors while reading the body: timeouts, resets, IncompleteRead.
             self._fail(season, comp_id, code, div, "error", "network")
         return None
 
@@ -340,11 +345,16 @@ class Crawler:
         if got is None:
             return
         final_url, html = got
-        bracket_html = maxpreps.trim(html)
+        try:
+            bracket_html = maxpreps.trim(html)
+            parsed = maxpreps.parse(bracket_html) if bracket_html is not None else None
+        except Exception as e:  # unfamiliar markup must not crash the run (or be retried every run)
+            self.log(f"{season} {comp_id} {code}: could not parse the bracket page ({type(e).__name__}: {e})")
+            self._fail(season, comp_id, code, div, "error", "parse")
+            return
         if bracket_html is None:
             self._fail(season, comp_id, code, div, "no-bracket")
             return
-        parsed = maxpreps.parse(bracket_html)
         fetched = now_iso()
         header = (f"<!-- source: {escape(final_url)} -->\n"
                   f"<!-- fetched: {fetched} -->\n")
@@ -412,8 +422,9 @@ def main(argv=None):
                 plan.append((season, comp_id, reason is not None, reason if args.refresh else None))
         # Competitions live by their dates first, then the re-check-only ones in a daily rotation.
         dated = [p for p in plan if p[3] in ("dates", None)]
-        others = {p[1]: p for p in plan if p[3] not in ("dates", None)}
-        plan = dated + [others[c] for c in recheck_order(others, now)]
+        others = [p for p in plan if p[3] not in ("dates", None)]
+        rank = {c: i for i, c in enumerate(recheck_order(sorted({p[1] for p in others}), now))}
+        plan = dated + sorted(others, key=lambda p: (rank[p[1]], p[0]))  # keyed by (season, comp)
         blocked = exhausted = False
         done = 0
         if args.refresh and not plan:
