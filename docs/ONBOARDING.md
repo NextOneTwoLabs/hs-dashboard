@@ -66,6 +66,7 @@ games and school GUIDs all came through unchanged.
 ### Refresh
 - **Live windows:** the dates come from the bracket's own round dates. A competition is live while it has unplayed games and today is within a few days of a round, so there's no need to hand-maintain windows for 50 states.
 - **Cron:** the GitHub cron runs **all year**, because fall, winter and spring tournaments overlap. Off-season runs make no requests.
+- **Not yet published:** a registered tournament whose list page is pending or whose brackets have no dates yet is re-checked only by the one run that starts in `refresh.recheckSlotUtc` (06:00 UTC), and only inside its term window (`refresh.termWindows`, or `liveFrom`/`liveTo` per competition). That is at most one request a day per pending item, and none off-season.
 - **Weekly discovery:** a weekly run checks the current school year's index pages so new tournaments get flagged for review.
 
 ### API (v1, additive: existing routes keep working)
@@ -100,6 +101,7 @@ games and school GUIDs all came through unchanged.
    - **You review the result on a preview before it ships.**
 3. **All states, 2025-26:** the remaining 44 plus DC, after confirming the \* states.
 4. **Live 2026-27:** the fall states (in progress now), then winter and spring as they start.
+   - **Gate:** N10 from the PR #1 review must be merged first. Today a list page marked `ok` is never fetched again, so brackets a state publishes later would be missed for good. N10 re-checks an `ok` list page once a day in the re-check slot, inside the term window, until every division is complete.
 5. **Backfill** to 2017-18.
 6. **Later:** CA sections, private associations, Wyoming, boys.
 

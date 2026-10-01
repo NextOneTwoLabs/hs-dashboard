@@ -7,7 +7,16 @@
     "cif": { "base": "https://www.cifstate.org/sports/soccer/", "delaySeconds": 8 },
     "maxpreps": { "base": "https://www.maxpreps.com", "delaySeconds": 4 }
   },
-  "refresh": { "maxRequests": 60, "lookaheadDays": 2, "lookbackDays": 3 },
+  "refresh": {
+    "maxRequests": 60, "lookaheadDays": 2, "lookbackDays": 3,
+    "recheckSlotUtc": { "start": "06:00", "end": "06:29" },
+    "termWindows": {
+      "fall": { "from": "10-01", "to": "12-15", "year": "start" },
+      "winter": { "from": "01-15", "to": "04-20", "year": "end" },
+      "spring": { "from": "04-01", "to": "06-15", "year": "end" }
+    },
+    "notes": "A registered active-season tournament with no listed brackets, a pending list page, or brackets without dates is re-checked only by the one cron run that starts in recheckSlotUtc (06:00 UTC), and only inside its term window. A state whose playoffs fall outside its term window (some winter states may start before 01-15; unverified) sets liveFrom/liveTo (MM-DD) on its competition or season entry. tests/test_refresh.py checks that refresh.yml has exactly one daily run in the slot."
+  },
   "aliases": { "cif-state": "ca-cif-state", "cif-norcal": "ca-cif-norcal", "cif-socal": "ca-cif-socal" },
   "states": {
     "CA": { "name": "California", "association": "CIF", "associationName": "California Interscholastic Federation" },

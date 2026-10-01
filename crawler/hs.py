@@ -48,29 +48,68 @@ def division_gender(div, code):
     return div.get("gender") or ("boys" if code[0] == "b" else "girls")
 
 
-def is_live(sources, links, season, comp_id, ccfg, today):
+def in_term(sources, season, comp_id, ccfg, today):
+    """Is today inside the competition's playoff period for this season?
+
+    The period comes from `refresh.termWindows[term]` ({"from": "MM-DD",
+    "to": "MM-DD", "year": "start"|"end"} of the school year), or from
+    `liveFrom` / `liveTo` (MM-DD) on the season entry or the competition."""
+    meta = sources["competitions"][comp_id]
+    term = (sources.get("refresh", {}).get("termWindows") or {}).get(meta.get("term"))
+    lo = ccfg.get("liveFrom") or meta.get("liveFrom") or (term or {}).get("from")
+    hi = ccfg.get("liveTo") or meta.get("liveTo") or (term or {}).get("to")
+    if not lo or not hi:
+        return False
+    year = store.season_end_year(season) - (1 if (term or {}).get("year") == "start" else 0)
+    start = dt.date.fromisoformat(f"{year}-{lo}")
+    end = dt.date.fromisoformat(f"{year}-{hi}")
+    if start > end:  # wraps the new year: starts in the autumn before
+        start = start.replace(year=year - 1)
+    return start <= today <= end
+
+
+def in_recheck_slot(sources, now):
+    """True for a run that started inside the daily re-check slot (UTC).
+
+    `now` is the run's actual start time; a late or skipped cron run simply
+    misses that day's re-check (fewer requests, never more)."""
+    slot = sources.get("refresh", {}).get("recheckSlotUtc")
+    if now is None or not slot:
+        return False
+    hhmm = now.astimezone(dt.timezone.utc).strftime("%H:%M")
+    return slot["start"] <= hhmm <= slot["end"]
+
+
+def is_live(sources, links, season, comp_id, ccfg, today, now=None):
     """Live = inside a configured window, or (no window) the stored bracket
-    dates are near today and it has no champion yet, or it is a registered
-    tournament of the active season whose brackets were never fetched."""
+    dates are near today and it has no champion yet.
+
+    A registered active-season tournament whose list page is not fetched or
+    still empty, or whose brackets are missing or have no dates yet, is only
+    re-checked once a day (the run that starts in the re-check slot) and only
+    inside its term's playoff period. Off-season runs make no requests."""
     window = ccfg.get("window")
     if window:
         return in_window(window["start"], window["end"], today, sources)
     active = season == sources["activeSeason"]
+    recheck = active and in_term(sources, season, comp_id, ccfg, today) and in_recheck_slot(sources, now)
     entry = links.get(season, {}).get(comp_id)
     if not entry or not entry.get("divisions"):
-        return active
+        return recheck
     genders = {"boys" if g == "b" else "girls" for g in sources.get("genders", ["b", "g"])}
     for code, div in entry["divisions"].items():
         if div.get("complete") or division_gender(div, code) not in genders:
             continue
         raw = raw_path(season, comp_id, code)
         if not raw.exists():
-            if active:
+            if recheck:
                 return True
             continue
         parsed = maxpreps.parse(_HEADER.sub("", raw.read_text(encoding="utf-8")))
         dates = [r["date"] for r in parsed["rounds"] if r["date"]]
         if dates and in_window(min(dates), max(dates), today, sources):
+            return True
+        if not dates and recheck:
             return True
     return False
 
@@ -193,6 +232,7 @@ def main(argv=None):
     p.add_argument("--check", action="store_true")
     p.add_argument("--export", action="store_true")
     p.add_argument("--today", help="override today's date (YYYY-MM-DD) for --refresh")
+    p.add_argument("--now", help="override the run's start time (ISO, UTC) for --refresh, e.g. 2027-04-20T06:00Z")
     args = p.parse_args(argv)
 
     sources = store.load_json(store.SOURCES)
@@ -208,7 +248,12 @@ def main(argv=None):
 
     if crawling:
         started = time.monotonic()
-        today = dt.date.fromisoformat(args.today) if args.today else dt.date.today()
+        # The run's actual start time decides the daily re-check slot.
+        now = (dt.datetime.fromisoformat(args.now.replace("Z", "+00:00")) if args.now
+               else dt.datetime.now(dt.timezone.utc))
+        if now.tzinfo is None:
+            now = now.replace(tzinfo=dt.timezone.utc)
+        today = dt.date.fromisoformat(args.today) if args.today else now.astimezone(dt.timezone.utc).date()
         budget = sources["refresh"]["maxRequests"] if args.max_requests is None else args.max_requests
         fetcher = Fetcher(delays, budget)
         crawler = Crawler(sources, fetcher, force=args.force)
@@ -219,7 +264,7 @@ def main(argv=None):
             for comp_id, ccfg in scfg["competitions"].items():
                 if args.state and sources["competitions"][comp_id]["state"] != args.state.upper():
                     continue
-                live = is_live(sources, crawler.links, season, comp_id, ccfg, today)
+                live = is_live(sources, crawler.links, season, comp_id, ccfg, today, now=now)
                 if args.refresh and not live:
                     continue
                 plan.append((season, comp_id, live))
