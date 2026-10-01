@@ -4,10 +4,11 @@
   "name": "Hilmar",
   "fullName": null,
   "city": "Hilmar",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/hilmar/hilmar-yellowjackets",
   "summary": {"appearances":1,"titles":0,"finals":1,"w":1,"l":0,"d":2},
-  "best": {"season":"2023-24","competition":"cif-norcal","division":"gd5","result":"runner-up","reached":"Regional Final"},
+  "best": {"season":"2023-24","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","result":"runner-up","reached":"Regional Final"},
   "appearances": [
-    {"season":"2023-24","competition":"cif-norcal","division":"gd5","seed":1,"rounds":3,"w":1,"l":0,"d":2,"gf":4,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"1ac4ee2c-f3c9-4869-9db3-59d8985b43c5","name":"Caruthers","seed":8,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"cb1b553b-d2e4-487d-bd22-876660416421","name":"University Prep","seed":4,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2024-03-02","opp":{"id":"01e250af-f9de-4e2b-8e1a-11cc0a1fd241","name":"Winters","seed":6,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+    {"season":"2023-24","state":"CA","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":1,"rounds":3,"w":1,"l":0,"d":2,"gf":4,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"1ac4ee2c-f3c9-4869-9db3-59d8985b43c5","name":"Caruthers","seed":8,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"cb1b553b-d2e4-487d-bd22-876660416421","name":"University Prep","seed":4,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2024-03-02","opp":{"id":"01e250af-f9de-4e2b-8e1a-11cc0a1fd241","name":"Winters","seed":6,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "state": "FL",
+  "name": "Florida",
+  "association": "FHSAA",
+  "associationName": "Florida High School Athletic Association",
+  "activeSeason": "2026-27",
+  "latestSeason": "2025-26",
+  "genders": ["g"],
+  "seasons": [
+    {"season":"2025-26","note":null,"competitions":[{"id":"fl-fhsaa","state":"FL","label":"FHSAA State Championships","short":"State","term":"winter","divisions":[{"code":"7a","gender":"girls","label":"Class 7A","games":31,"played":31,"status":"complete","champion":{"id":"36fe2cfa-d986-4f45-b693-7ebe6fb6c2fc","name":"Lake Mary"},"runnerUp":{"id":"5df2a4f9-1148-4246-9bf0-1c085ebdc228","name":"Cypress Bay"},"start":"2026-02-05","end":"2026-02-25","order":0},{"code":"6a","gender":"girls","label":"Class 6A","games":31,"played":31,"status":"complete","champion":{"id":"bd12f619-3d60-413e-a9ef-5742cd4a21bb","name":"St. Thomas Aquinas"},"runnerUp":{"id":"fcfecb46-b7ac-493b-815c-30f78ab76cc3","name":"Niceville"},"start":"2026-02-05","end":"2026-02-25","order":1},{"code":"5a","gender":"girls","label":"Class 5A","games":31,"played":31,"status":"complete","champion":{"id":"fcfb639a-9516-46de-bf56-661156821e01","name":"Lourdes Academy"},"runnerUp":{"id":"2a954006-a714-45f1-9269-eda8ff3eacf9","name":"Chiles"},"start":"2026-02-05","end":"2026-02-28","order":2},{"code":"4a","gender":"girls","label":"Class 4A","games":31,"played":31,"status":"complete","champion":{"id":"d74071bd-dfc9-418d-8fb5-a24bffcaa5fa","name":"American Heritage"},"runnerUp":{"id":"113a7369-83ce-4e9c-bd61-a3b1444dfc5a","name":"Bishop Kenny"},"start":"2026-02-05","end":"2026-02-28","order":3},{"code":"3a","gender":"girls","label":"Class 3A","games":31,"played":31,"status":"complete","champion":{"id":"e15ab772-fb9c-441a-ab66-8967b1d719ab","name":"Montverde Academy"},"runnerUp":{"id":"a9ee1067-a30a-4c45-91f1-a259ea15101f","name":"Cardinal Gibbons"},"start":"2026-02-02","end":"2026-02-21","order":4},{"code":"2a","gender":"girls","label":"Class 2A","games":31,"played":31,"status":"complete","champion":{"id":"89dc97cb-8ff6-42b6-9294-281155f42c21","name":"King's Academy"},"runnerUp":{"id":"d82babb3-3a33-4308-bce4-8b5fcb0d722d","name":"Palmer Trinity"},"start":"2026-02-02","end":"2026-02-18","order":5},{"code":"1a","gender":"girls","label":"Class 1A","games":31,"played":31,"status":"complete","champion":{"id":"713a86e0-bfd3-41da-bf21-f6a9c4575930","name":"Canterbury"},"runnerUp":{"id":"03c4dc2e-7191-474b-ae6d-600a1d8e447d","name":"Victory Christian Academy"},"start":"2026-02-02","end":"2026-02-21","order":6}]}]}
+  ]
+}

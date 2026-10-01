@@ -4,10 +4,11 @@
   "name": "Grossmont",
   "fullName": null,
   "city": "El Cajon",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/el-cajon/grossmont-foothillers",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
-  "best": {"season":"2018-19","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2018-19","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-socal","division":"gd3","seed":3,"rounds":3,"w":1,"l":1,"d":0,"gf":4,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"4a750ed5-c3bd-4d4e-a61a-92b04074f0ff","name":"Downey","seed":6,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"1cc960d8-4724-43b3-9751-dabda19052df","name":"Flintridge Sacred Heart","seed":2,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":3,"rounds":3,"w":1,"l":1,"d":0,"gf":4,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"4a750ed5-c3bd-4d4e-a61a-92b04074f0ff","name":"Downey","seed":6,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"1cc960d8-4724-43b3-9751-dabda19052df","name":"Flintridge Sacred Heart","seed":2,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
   ]
 }

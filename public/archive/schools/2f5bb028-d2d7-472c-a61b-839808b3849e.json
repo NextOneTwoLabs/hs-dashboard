@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2f5bb028-d2d7-472c-a61b-839808b3849e",
+  "name": "Archbishop McCarthy",
+  "fullName": null,
+  "city": "Southwest Ranches",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/southwest-ranches/archbishop-mccarthy-mavericks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","gender":"girls","seed":2,"rounds":5,"w":1,"l":0,"d":1,"gf":10,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"8e687747-cf9b-492a-aec2-648123086fbc","name":"Varela","seed":7,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"c818ef46-6347-402a-8ce5-e98ac2f1a8f0","name":"Pembroke Pines Charter","seed":3,"score":2},"gf":2,"ga":2,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

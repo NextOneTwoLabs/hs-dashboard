@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "56957c5a-de36-4f1d-ba3a-b8ea773fcbf3",
+  "name": "Brookwood",
+  "fullName": null,
+  "city": "Snellville",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/snellville/brookwood-broncos",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":2,"l":1,"d":0,"gf":18,"ga":1,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"74e20964-a2d5-446f-a60b-addd44f58119","name":"Heritage","seed":null,"score":0},"gf":9,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"ad1a87e8-0889-4370-8a61-9f78928b99fe","name":"Mountain View","seed":null,"score":0},"gf":9,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"0bb7f5e0-2d47-4bad-82f4-c4fb1ac73fc8","name":"West Forsyth","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

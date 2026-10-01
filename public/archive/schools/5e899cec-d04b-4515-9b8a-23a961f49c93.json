@@ -4,10 +4,11 @@
   "name": "Notre Dame",
   "fullName": null,
   "city": "Riverside",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/riverside/notre-dame-titans",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
-  "best": {"season":"2018-19","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2018-19","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-socal","division":"gd5","seed":7,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"21b5019c-a9d1-4d42-8065-37b4ee7aaad0","name":"Arrowhead Christian","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"70883bec-ca17-4627-ab7f-088afc3908b0","name":"Desert Mirage","seed":3,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":7,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"21b5019c-a9d1-4d42-8065-37b4ee7aaad0","name":"Arrowhead Christian","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"70883bec-ca17-4627-ab7f-088afc3908b0","name":"Desert Mirage","seed":3,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
   ]
 }

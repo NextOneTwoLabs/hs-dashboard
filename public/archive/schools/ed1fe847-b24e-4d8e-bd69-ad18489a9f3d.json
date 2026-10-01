@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "ed1fe847-b24e-4d8e-bd69-ad18489a9f3d",
+  "name": "Mary Persons",
+  "fullName": null,
+  "city": "Forsyth",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/forsyth/mary-persons-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":5,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"bd63d5ed-3a33-4ca4-97cd-3f26c5187578","name":"Richmond Academy","seed":null,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

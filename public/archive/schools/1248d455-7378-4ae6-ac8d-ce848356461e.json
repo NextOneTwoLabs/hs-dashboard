@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1248d455-7378-4ae6-ac8d-ce848356461e",
+  "name": "P.K. Yonge",
+  "fullName": null,
+  "city": "Gainesville",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/gainesville/pk-yonge-blue-wave",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","gender":"girls","seed":3,"rounds":5,"w":1,"l":1,"d":0,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"a3bcab56-60b6-4911-ab43-364ffffc63f4","name":"Taylor County","seed":6,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"67f6df46-237e-4087-96e9-8801dc058d60","name":"Episcopal School of Jacksonville","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

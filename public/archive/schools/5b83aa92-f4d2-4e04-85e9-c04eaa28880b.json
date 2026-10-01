@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "5b83aa92-f4d2-4e04-85e9-c04eaa28880b",
+  "name": "Creekview",
+  "fullName": null,
+  "city": "Canton",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/canton/creekview-grizzlies",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":2,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"635c23cd-1fc4-449f-a973-f06e6fcc9248","name":"Houston County","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"9209e7f4-47f4-4bf5-8ecc-cd9e2cf24d6a","name":"McIntosh","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

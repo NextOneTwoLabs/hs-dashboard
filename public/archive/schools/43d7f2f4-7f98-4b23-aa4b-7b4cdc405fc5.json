@@ -4,11 +4,12 @@
   "name": "West Valley",
   "fullName": null,
   "city": "Cottonwood",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/cottonwood/west-valley-eagles",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
-  "best": {"season":"2025-26","competition":"cif-state","division":"gd5","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2025-26","competition":"ca-cif-state","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2024-25","competition":"cif-norcal","division":"gd5","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"a983a09b-86f3-4387-9ae2-b90968a23628","name":"Live Oak","seed":4,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2025-26","competition":"cif-state","division":"gd5","seed":5,"rounds":4,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"c35eb9a1-800f-405d-956f-852dbefe5ec8","name":"Oakland Tech","seed":4,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2024-25","state":"CA","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"a983a09b-86f3-4387-9ae2-b90968a23628","name":"Live Oak","seed":4,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","state":"CA","competition":"ca-cif-state","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":5,"rounds":4,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"c35eb9a1-800f-405d-956f-852dbefe5ec8","name":"Oakland Tech","seed":4,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

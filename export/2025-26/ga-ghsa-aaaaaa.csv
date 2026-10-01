@@ -1,0 +1,32 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Camden County,0,,Buford,6,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Parkview,5,,Grovetown,1,top
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,North Paulding,2,,Hillgrove,1,top
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Denmark,3,,East Coweta,0,top
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Mountain View,1,,Lowndes,0,top
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Heritage,0,,Brookwood,9,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Campbell,2,,Cherokee,0,top
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Chapel Hill,0,,West Forsyth,10,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,1,Round 2,2026-04-30,final,,,Buford,5,,Parkview,4,top
+2025-26,GA,ga-ghsa,Class AAAAAA,1,Round 2,2026-04-30,final,,,North Paulding,1,,Denmark,2,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,1,Round 2,2026-04-30,final,,,Mountain View,0,,Brookwood,9,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,1,Round 2,2026-04-30,final,,,Campbell,0,,West Forsyth,3,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,2,Round 3,2026-05-04,final,,,Buford,1,,Denmark,2,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,2,Round 3,2026-05-04,final,,,Brookwood,0,,West Forsyth,1,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Douglas County,0,,North Atlanta,10,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Marietta,1,,Harrison,3,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Archer,0,,Norcross,5,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Discovery,0,,Richmond Hill,7,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Lambert,2,,Carrollton,1,top
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Paulding County,0,,Walton,10,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,North Gwinnett,8,,South Gwinnett,0,top
+2025-26,GA,ga-ghsa,Class AAAAAA,0,Round 1,2026-04-23,final,,,Colquitt County,1,,Mill Creek,7,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,1,Round 2,2026-04-30,final,,,North Atlanta,0,,Harrison,1,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,1,Round 2,2026-04-30,final,,,Norcross,0,,Richmond Hill,2,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,1,Round 2,2026-04-30,final,,,Lambert,0,,Walton,5,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,1,Round 2,2026-04-30,final,,,North Gwinnett,1,,Mill Creek,0,top
+2025-26,GA,ga-ghsa,Class AAAAAA,2,Round 3,2026-05-04,final,,,Harrison,2,,Richmond Hill,1,top
+2025-26,GA,ga-ghsa,Class AAAAAA,2,Round 3,2026-05-04,final,,,Walton,2,,North Gwinnett,1,top
+2025-26,GA,ga-ghsa,Class AAAAAA,3,Round 4,2026-05-07,final,,,Denmark,0,,West Forsyth,6,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,3,Round 4,2026-05-07,final,,,Harrison,0,,Walton,2,bottom
+2025-26,GA,ga-ghsa,Class AAAAAA,4,Round 5,,final,,,West Forsyth,2,,Walton,1,top

@@ -4,11 +4,12 @@
   "name": "Liberty Ranch",
   "fullName": null,
   "city": "Galt",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/galt/liberty-ranch-hawks",
-  "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":3,"d":0},
-  "best": {"season":"2018-19","competition":"cif-norcal","division":"gd4","result":"eliminated","reached":"Regional Semi-Finals"},
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
+  "best": {"season":"2018-19","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-norcal","division":"gd4","seed":1,"rounds":3,"w":0,"l":2,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":null,"gf":null,"ga":null,"res":"L","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"05de9787-3f9c-4cd2-8026-0b658e736206","name":"Miramonte","seed":5,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
-    {"season":"2024-25","competition":"cif-norcal","division":"gd4","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"be2fc7fb-ec14-4069-9c6d-f6083a2f9229","name":"Fresno Christian","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":1,"rounds":3,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":null,"gf":null,"ga":null,"res":"BYE","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"05de9787-3f9c-4cd2-8026-0b658e736206","name":"Miramonte","seed":5,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
+    {"season":"2024-25","state":"CA","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"be2fc7fb-ec14-4069-9c6d-f6083a2f9229","name":"Fresno Christian","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

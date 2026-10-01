@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "240ee5cd-1e04-4406-8099-54a0829f57a3",
+  "name": "Dalton",
+  "fullName": null,
+  "city": "Dalton",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/dalton/dalton-catamounts",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":6,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"1db16208-7051-440f-845c-de618617f520","name":"Midtown","seed":null,"score":6},"gf":1,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

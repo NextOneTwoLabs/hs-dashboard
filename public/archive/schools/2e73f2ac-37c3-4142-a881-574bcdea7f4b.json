@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2e73f2ac-37c3-4142-a881-574bcdea7f4b",
+  "name": "Mountain View",
+  "fullName": null,
+  "city": "Vancouver",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/vancouver/mountain-view-thunder",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"Play-in"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":3,"ga":8,"games":[{"round":0,"roundName":"Play-in","date":null,"opp":{"id":"2caaf740-a7d3-45be-9b59-fe7a7d598cc4","name":"Oak Harbor","seed":null,"score":8},"gf":3,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"Play-in","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "a454aeed-206d-45f7-8aa1-5fcc185f9dbd",
+  "name": "Miller Grove",
+  "fullName": null,
+  "city": "Lithonia",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/lithonia/miller-grove-wolverines",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":13,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"9db7ff13-7833-4d0c-ba66-091cb885b736","name":"KIPP Atlanta Collegiate","seed":20,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

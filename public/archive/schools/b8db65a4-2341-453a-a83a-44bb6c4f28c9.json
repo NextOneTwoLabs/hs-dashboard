@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "b8db65a4-2341-453a-a83a-44bb6c4f28c9",
+  "name": "Pateros",
+  "fullName": null,
+  "city": "Pateros",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/pateros/pateros-billy-goats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":7,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"deb53398-73d7-4b69-bbf9-210ba1d93680","name":"Freeman","seed":null,"score":7},"gf":0,"ga":7,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

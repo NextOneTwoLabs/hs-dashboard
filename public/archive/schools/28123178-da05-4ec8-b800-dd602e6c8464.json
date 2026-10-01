@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "28123178-da05-4ec8-b800-dd602e6c8464",
+  "name": "River Ridge",
+  "fullName": null,
+  "city": "New Port Richey",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/new-port-richey/river-ridge-royal-knights",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","gender":"girls","seed":6,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"6fa78c98-6f68-4a20-b431-60d01523ba10","name":"New Smyrna Beach","seed":3,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

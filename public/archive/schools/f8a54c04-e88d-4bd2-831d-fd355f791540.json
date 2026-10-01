@@ -4,11 +4,12 @@
   "name": "Palisades",
   "fullName": null,
   "city": "Pacific Palisades",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/pacific-palisades/palisades-dolphins",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
-  "best": {"season":"2025-26","competition":"cif-state","division":"gd3","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2025-26","competition":"ca-cif-state","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-socal","division":"gd2","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"ca8174aa-c2f7-4a16-8884-9b27d9e02aa9","name":"Sunny Hills","seed":6,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2025-26","competition":"cif-state","division":"gd3","seed":8,"rounds":4,"w":0,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"ddf384b8-3189-4276-8703-71106d47a4d5","name":"Del Norte","seed":1,"score":4},"gf":3,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-socal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"ca8174aa-c2f7-4a16-8884-9b27d9e02aa9","name":"Sunny Hills","seed":6,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","state":"CA","competition":"ca-cif-state","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":8,"rounds":4,"w":0,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"ddf384b8-3189-4276-8703-71106d47a4d5","name":"Del Norte","seed":1,"score":4},"gf":3,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

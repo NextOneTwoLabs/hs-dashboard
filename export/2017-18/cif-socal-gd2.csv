@@ -1,8 +1,0 @@
-season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
-2017-18,cif-socal,gd2,0,Round I,2018-03-06,final,,1,Temecula Valley,3,8,Scripps Ranch,1,top
-2017-18,cif-socal,gd2,0,Round I,2018-03-06,final,,4,Cypress,3,5,Poway,1,top
-2017-18,cif-socal,gd2,0,Round I,2018-03-06,final,,3,Palisades,0,6,Sunny Hills,2,bottom
-2017-18,cif-socal,gd2,0,Round I,2018-03-06,final,,2,San Luis Obispo,1,7,Edison,0,top
-2017-18,cif-socal,gd2,1,Regional Semi-Finals,2018-03-08,final,pk,1,Temecula Valley,1,4,Cypress,1,top
-2017-18,cif-socal,gd2,1,Regional Semi-Finals,2018-03-08,final,,6,Sunny Hills,1,2,San Luis Obispo,0,top
-2017-18,cif-socal,gd2,2,Regional Final,2018-03-10,final,,1,Temecula Valley,1,6,Sunny Hills,0,top

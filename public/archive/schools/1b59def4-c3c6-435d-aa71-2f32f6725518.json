@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1b59def4-c3c6-435d-aa71-2f32f6725518",
+  "name": "Flanagan",
+  "fullName": null,
+  "city": "Pembroke Pines",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/pembroke-pines/flanagan-falcons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","gender":"girls","seed":5,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":4,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"e7903dfb-37a9-4b3b-af93-19f0569f5114","name":"West Boca Raton","seed":4,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

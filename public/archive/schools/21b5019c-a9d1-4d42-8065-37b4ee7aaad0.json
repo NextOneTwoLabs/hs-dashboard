@@ -4,11 +4,12 @@
   "name": "Arrowhead Christian",
   "fullName": null,
   "city": "Redlands",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/redlands/arrowhead-christian-eagles",
   "summary": {"appearances":2,"titles":0,"finals":1,"w":2,"l":2,"d":0},
-  "best": {"season":"2021-22","competition":"cif-socal","division":"gd5","result":"runner-up","reached":"Regional Final"},
+  "best": {"season":"2021-22","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"runner-up","reached":"Regional Final"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-socal","division":"gd5","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"5e899cec-d04b-4515-9b8a-23a961f49c93","name":"Notre Dame","seed":7,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2021-22","competition":"cif-socal","division":"gd5","seed":2,"rounds":3,"w":2,"l":1,"d":0,"gf":11,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"995a9818-bbfa-4890-a806-d8a6a44c0032","name":"Geffen Academy","seed":7,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"3ed1dc2b-659b-4ec7-9675-47b219df5d6e","name":"Bishop Diego","seed":3,"score":2},"gf":5,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"9c6ee102-3437-4054-bc67-68e04bd497bf","name":"Webb","seed":1,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"5e899cec-d04b-4515-9b8a-23a961f49c93","name":"Notre Dame","seed":7,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2021-22","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":2,"rounds":3,"w":2,"l":1,"d":0,"gf":11,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"995a9818-bbfa-4890-a806-d8a6a44c0032","name":"Geffen Academy","seed":7,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"3ed1dc2b-659b-4ec7-9675-47b219df5d6e","name":"Bishop Diego","seed":3,"score":2},"gf":5,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"9c6ee102-3437-4054-bc67-68e04bd497bf","name":"Webb","seed":1,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
   ]
 }

@@ -1,0 +1,32 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,1,Ponte Vedra,3,8,St. Augustine,0,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,4,Gulf Breeze,3,5,Mosley,1,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,2,Beachside,3,7,Fleming Island,0,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,3,Chiles,5,6,Clay,0,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,1,Auburndale,5,8,Springstead,0,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,4,Cypress Creek,2,5,Seabreeze,1,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,2,Innovation,4,7,Gainesville,0,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,3,New Smyrna Beach,1,6,River Ridge,0,top
+2025-26,FL,fl-fhsaa,Class 5A,1,Region Semifinal,2026-02-11,final,,1,Ponte Vedra,2,4,Gulf Breeze,1,top
+2025-26,FL,fl-fhsaa,Class 5A,1,Region Semifinal,2026-02-11,final,,2,Beachside,0,3,Chiles,2,bottom
+2025-26,FL,fl-fhsaa,Class 5A,1,Region Semifinal,2026-02-11,final,,1,Auburndale,0,4,Cypress Creek,4,bottom
+2025-26,FL,fl-fhsaa,Class 5A,1,Region Semifinal,2026-02-11,final,,2,Innovation,6,3,New Smyrna Beach,2,top
+2025-26,FL,fl-fhsaa,Class 5A,2,Region Final,2026-02-17,final,,1,Ponte Vedra,0,3,Chiles,1,bottom
+2025-26,FL,fl-fhsaa,Class 5A,2,Region Final,2026-02-17,final,,4,Cypress Creek,1,2,Innovation,2,bottom
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,1,Mariner,8,8,Cape Coral,0,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,4,St. Petersburg,1,5,Osceola,0,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,2,North Fort Myers,4,7,Gulf Coast,0,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,3,Braden River,1,6,Fort Myers,3,bottom
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,1,Lourdes Academy,9,8,Hollywood Hills,0,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,4,South Fork,7,5,Dr. Joaquin Garcia,0,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,2,Archbishop McCarthy,8,7,Varela,0,top
+2025-26,FL,fl-fhsaa,Class 5A,0,Region Quarterfinal,2026-02-05,final,,3,Pembroke Pines Charter,8,6,Jensen Beach,0,top
+2025-26,FL,fl-fhsaa,Class 5A,1,Region Semifinal,2026-02-11,final,,1,Mariner,2,4,St. Petersburg,1,top
+2025-26,FL,fl-fhsaa,Class 5A,1,Region Semifinal,2026-02-11,final,,2,North Fort Myers,8,6,Fort Myers,0,top
+2025-26,FL,fl-fhsaa,Class 5A,1,Region Semifinal,2026-02-11,final,,1,Lourdes Academy,3,4,South Fork,0,top
+2025-26,FL,fl-fhsaa,Class 5A,1,Region Semifinal,2026-02-11,final,pk,2,Archbishop McCarthy,2,3,Pembroke Pines Charter,2,bottom
+2025-26,FL,fl-fhsaa,Class 5A,2,Region Final,2026-02-17,final,,1,Mariner,1,2,North Fort Myers,2,bottom
+2025-26,FL,fl-fhsaa,Class 5A,2,Region Final,2026-02-17,final,pk,1,Lourdes Academy,2,3,Pembroke Pines Charter,2,top
+2025-26,FL,fl-fhsaa,Class 5A,3,State Semifinal,2026-02-27,final,,1,Lourdes Academy,4,4,Innovation,3,top
+2025-26,FL,fl-fhsaa,Class 5A,3,State Semifinal,2026-02-27,final,,2,Chiles,1,3,North Fort Myers,0,top
+2025-26,FL,fl-fhsaa,Class 5A,4,State Championship,2026-02-28,final,,1,Lourdes Academy,3,2,Chiles,0,top

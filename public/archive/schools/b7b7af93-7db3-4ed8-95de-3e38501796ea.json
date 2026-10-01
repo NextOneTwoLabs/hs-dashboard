@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "b7b7af93-7db3-4ed8-95de-3e38501796ea",
+  "name": "Harker Heights",
+  "fullName": null,
+  "city": "Harker Heights",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/harker-heights/harker-heights-knights",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"2a8fbc98-2181-4d0d-b225-dc1ac54d6d0d","name":"Horn","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "bd4dd10c-f515-42ed-899f-5ee707f00037",
+  "name": "Salado",
+  "fullName": null,
+  "city": "Salado",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/salado/salado-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":5,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","result":"runner-up","reached":"State Finals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","gender":"girls","seed":null,"rounds":6,"w":5,"l":1,"d":0,"gf":16,"ga":4,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"5a9ab198-40c9-4a81-b24b-2e1c54443c43","name":"China Spring","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"4857189a-fa0b-4a3e-a187-4591e71882b1","name":"Bay City","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"1b439bbd-8dd0-4c9b-bb64-d62ce108ca18","name":"Lumberton","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Regional Finals","date":"2026-03-30","opp":{"id":"6128279b-d163-4257-928b-faf750bb954c","name":"Vidor","seed":null,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":4,"roundName":"State Semifinals","date":"2026-04-02","opp":{"id":"032ffe24-9d72-45d5-9970-123c7050ab32","name":"Davenport","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":5,"roundName":"State Finals","date":"2026-04-09","opp":{"id":"a779a2c9-df77-4d6f-a04e-dfc380fe0f70","name":"Celina","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":5,"reached":"State Finals","result":"runner-up","depth":0.833}
+  ]
+}

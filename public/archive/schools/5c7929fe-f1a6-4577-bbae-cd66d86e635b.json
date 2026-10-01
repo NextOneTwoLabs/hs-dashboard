@@ -4,10 +4,11 @@
   "name": "Westridge",
   "fullName": null,
   "city": "Pasadena",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/pasadena/westridge-tigers",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":1},
-  "best": {"season":"2018-19","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2018-19","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-socal","division":"gd4","seed":5,"rounds":3,"w":1,"l":0,"d":1,"gf":9,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"868a29e5-7446-45e0-8bb0-2839694307a2","name":"Diego Rivera","seed":4,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"7ebd4eee-1fd8-404f-8238-8602557e8729","name":"La Salle","seed":1,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":5,"rounds":3,"w":1,"l":0,"d":1,"gf":9,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"868a29e5-7446-45e0-8bb0-2839694307a2","name":"Diego Rivera","seed":4,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"7ebd4eee-1fd8-404f-8238-8602557e8729","name":"La Salle","seed":1,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "60015933-996c-4744-afc7-f1b0271d7143",
+  "name": "Hart County",
+  "fullName": null,
+  "city": "Hartwell",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/hartwell/hart-county-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":15,"rounds":5,"w":0,"l":1,"d":0,"gf":2,"ga":4,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"f7121feb-b3f1-460a-80a3-1323babacd24","name":"Callaway","seed":18,"score":4},"gf":2,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

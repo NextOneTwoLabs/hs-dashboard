@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "b40ff112-5214-4f71-8eef-06e42229deb8",
+  "name": "Adairsville",
+  "fullName": null,
+  "city": "Adairsville",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/adairsville/adairsville-tigers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":0,"d":1,"gf":11,"ga":1,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"fdea45ee-f728-4951-9eb0-3966020ca04c","name":"Douglass","seed":null,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"d8918f62-71a2-4c3d-962f-94726490d255","name":"Johnson","seed":null,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "6a7b487c-e9ea-4f2f-9251-035df6f4f81d",
+  "name": "Pennridge",
+  "fullName": null,
+  "city": "Perkasie",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/perkasie/pennridge-rams",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"4a","divisionLabel":"4A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"4a","divisionLabel":"4A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"4bcd68f2-353c-4710-999e-66f1092663e1","name":"Central Dauphin","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

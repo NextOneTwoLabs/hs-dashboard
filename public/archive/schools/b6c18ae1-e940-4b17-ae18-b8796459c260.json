@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "b6c18ae1-e940-4b17-ae18-b8796459c260",
+  "name": "Prosper",
+  "fullName": null,
+  "city": "Prosper",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/prosper/prosper-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","gender":"girls","seed":null,"rounds":6,"w":2,"l":1,"d":0,"gf":5,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"7c0e57a9-870d-43cb-9334-e27c67d044c3","name":"Marcus","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"8b5e5d6e-78fc-4ee2-aa68-faab9f7204b4","name":"Arlington","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"fbce2bd4-14b1-4d70-affe-b7d2d746a418","name":"Southlake Carroll","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

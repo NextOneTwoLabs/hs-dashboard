@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "de413dd4-c2e2-4b2c-98fc-f355620e06df",
+  "name": "Village Tech",
+  "fullName": null,
+  "city": "Duncanville",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/duncanville/village-tech-viper-squid",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":8,"ga":8,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"ab5c531b-c499-4c99-a956-d4f319aafb65","name":"Roosevelt","seed":null,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"a4007d35-8ff9-4e24-bff1-afb9768d5018","name":"Aubrey","seed":null,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

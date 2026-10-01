@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "c779b59f-8d88-486b-bb76-d0e6f70ab056",
+  "name": "Villa Joseph Marie",
+  "fullName": null,
+  "city": "Holland",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/holland/villa-joseph-marie-jems",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"2a","divisionLabel":"2A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"2a","divisionLabel":"2A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":2,"ga":5,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"328f7292-bd41-4019-9d13-4490f088adac","name":"Archbishop Wood","seed":null,"score":5},"gf":2,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d585ce23-7bea-45d6-88ff-e8155b05e092",
+  "name": "Woodinville",
+  "fullName": null,
+  "city": "Woodinville",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/woodinville/woodinville-falcons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"4a","divisionLabel":"4A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"4a","divisionLabel":"4A","gender":"girls","seed":null,"rounds":4,"w":1,"l":0,"d":1,"gf":3,"ga":2,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"19339740-6e93-4929-b54d-f7123a6dd09e","name":"Puyallup","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-14","opp":{"id":"0a5ae530-1e21-4a32-adac-e2a3fb2885d1","name":"Tahoma","seed":null,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Quarterfinals","result":"eliminated","depth":0.25}
+  ]
+}

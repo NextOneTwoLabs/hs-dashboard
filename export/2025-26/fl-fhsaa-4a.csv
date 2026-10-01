@@ -1,0 +1,32 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,1,Bishop Kenny,8,8,Crystal River,0,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,4,Wakulla,1,5,Menendez,0,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,2,Vanguard,8,7,Citrus,0,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,3,Fort Walton Beach,3,6,Stanton,2,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,1,Bishop Moore,8,8,Hernando,0,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,4,Mount Dora,0,5,Merritt Island,1,bottom
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,2,Nature Coast Tech,5,7,Rockledge,0,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,3,Satellite,4,6,Lake Wales,1,top
+2025-26,FL,fl-fhsaa,Class 4A,1,Region Semifinal,2026-02-11,final,,1,Bishop Kenny,5,4,Wakulla,0,top
+2025-26,FL,fl-fhsaa,Class 4A,1,Region Semifinal,2026-02-11,final,,2,Vanguard,5,3,Fort Walton Beach,0,top
+2025-26,FL,fl-fhsaa,Class 4A,1,Region Semifinal,2026-02-11,final,,1,Bishop Moore,3,5,Merritt Island,0,top
+2025-26,FL,fl-fhsaa,Class 4A,1,Region Semifinal,2026-02-11,final,,2,Nature Coast Tech,0,3,Satellite,3,bottom
+2025-26,FL,fl-fhsaa,Class 4A,2,Region Final,2026-02-17,final,,1,Bishop Kenny,5,2,Vanguard,1,top
+2025-26,FL,fl-fhsaa,Class 4A,2,Region Final,2026-02-17,final,,2,Bishop Moore,2,3,Satellite,1,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,1,Barron Collier,12,8,Hardee,0,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,4,Naples,2,5,Lemon Bay,1,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,2,Estero,4,7,Cypress Lake,0,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,3,Seminole,4,6,Robinson,0,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,1,American Heritage,6,8,Suncoast,0,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,4,Mater Lakes Academy,1,5,TERRA Environmental,0,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,2,Somerset Academy,7,7,Key West,1,top
+2025-26,FL,fl-fhsaa,Class 4A,0,Region Quarterfinal,2026-02-05,final,,3,St. Brendan,8,6,Mourning,0,top
+2025-26,FL,fl-fhsaa,Class 4A,1,Region Semifinal,2026-02-11,final,,1,Barron Collier,1,4,Naples,0,top
+2025-26,FL,fl-fhsaa,Class 4A,1,Region Semifinal,2026-02-11,final,,2,Estero,1,3,Seminole,0,top
+2025-26,FL,fl-fhsaa,Class 4A,1,Region Semifinal,2026-02-11,final,,1,American Heritage,7,4,Mater Lakes Academy,0,top
+2025-26,FL,fl-fhsaa,Class 4A,1,Region Semifinal,2026-02-11,final,,2,Somerset Academy,4,3,St. Brendan,0,top
+2025-26,FL,fl-fhsaa,Class 4A,2,Region Final,2026-02-17,final,,1,Barron Collier,3,2,Estero,0,top
+2025-26,FL,fl-fhsaa,Class 4A,2,Region Final,2026-02-17,final,,1,American Heritage,4,2,Somerset Academy,1,top
+2025-26,FL,fl-fhsaa,Class 4A,3,State Semifinal,2026-02-26,final,,1,American Heritage,1,4,Bishop Moore,0,top
+2025-26,FL,fl-fhsaa,Class 4A,3,State Semifinal,2026-02-26,final,,2,Bishop Kenny,3,3,Barron Collier,2,top
+2025-26,FL,fl-fhsaa,Class 4A,4,State Championship,2026-02-28,final,,1,American Heritage,2,2,Bishop Kenny,0,top

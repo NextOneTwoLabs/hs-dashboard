@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "8b910319-983c-45c3-84ca-23fa79f8adb6",
+  "name": "Pierce County",
+  "fullName": null,
+  "city": "Blackshear",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/blackshear/pierce-county-bears",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":5,"rounds":5,"w":2,"l":1,"d":0,"gf":15,"ga":5,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"b16b592d-1dc3-4bf7-b8df-1806cc40fbe5","name":"Columbia","seed":28,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"162b980a-38db-4236-8744-080fc544cb7f","name":"Shaw","seed":null,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"f471822d-5747-4784-b675-dcf2fe32dcaa","name":"Columbus","seed":null,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

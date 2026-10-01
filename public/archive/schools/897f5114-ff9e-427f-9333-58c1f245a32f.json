@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "897f5114-ff9e-427f-9333-58c1f245a32f",
+  "name": "Trinity Christian",
+  "fullName": null,
+  "city": "Sharpsburg",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/sharpsburg/trinity-christian-lions",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","gender":"girls","seed":null,"rounds":5,"w":2,"l":1,"d":0,"gf":6,"ga":10,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"59c89b75-e7d6-441f-9e6a-863b45c3178e","name":"Fellowship Christian","seed":null,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"6e9d473e-0e85-4e50-af17-62808763feee","name":"Savannah Country Day","seed":null,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"d7130fa9-71ec-443a-86c7-d834c24b0498","name":"Wesleyan","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

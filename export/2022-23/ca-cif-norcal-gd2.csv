@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2022-23,CA,ca-cif-norcal,Division 2,0,Round I,2023-02-28,final,,1,Franklin,0,8,Marin Academy,3,bottom
+2022-23,CA,ca-cif-norcal,Division 2,0,Round I,2023-02-28,final,pk,4,Pleasant Valley,0,5,Maria Carrillo,0,bottom
+2022-23,CA,ca-cif-norcal,Division 2,0,Round I,2023-02-28,final,,3,Casa Grande,2,6,McClatchy,1,top
+2022-23,CA,ca-cif-norcal,Division 2,0,Round I,2023-02-28,final,,2,St. Ignatius College Preparatory,1,7,Branson,2,bottom
+2022-23,CA,ca-cif-norcal,Division 2,1,Regional Semifinals,2023-03-02,final,,8,Marin Academy,1,5,Maria Carrillo,0,top
+2022-23,CA,ca-cif-norcal,Division 2,1,Regional Semifinals,2023-03-02,final,,3,Casa Grande,0,7,Branson,1,bottom
+2022-23,CA,ca-cif-norcal,Division 2,2,Regional Final,2023-03-04,final,,8,Marin Academy,1,7,Branson,0,top

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "7c0e57a9-870d-43cb-9334-e27c67d044c3",
+  "name": "Marcus",
+  "fullName": null,
+  "city": "Flower Mound",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/flower-mound/marcus-marauders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"b6c18ae1-e940-4b17-ae18-b8796459c260","name":"Prosper","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

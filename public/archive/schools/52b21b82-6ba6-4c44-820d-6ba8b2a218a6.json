@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "52b21b82-6ba6-4c44-820d-6ba8b2a218a6",
+  "name": "Braden River",
+  "fullName": null,
+  "city": "Bradenton",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/bradenton/braden-river-pirates",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","gender":"girls","seed":3,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"048d0d8e-a187-4db4-a663-daef3cb5a193","name":"Fort Myers","seed":6,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "a9ee1067-a30a-4c45-91f1-a259ea15101f",
+  "name": "Cardinal Gibbons",
+  "fullName": null,
+  "city": "Fort Lauderdale",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/fort-lauderdale/cardinal-gibbons-chiefs",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":4,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"runner-up","reached":"State Championship"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":1,"rounds":5,"w":4,"l":1,"d":0,"gf":13,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"5602ea1a-0f89-4c7e-84a3-68f224ac2630","name":"Don Soffer Aventura","seed":8,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"b14f1bcd-df00-4ede-867d-1d1ed9d13484","name":"NSU University","seed":4,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-13","opp":{"id":"c98b6bd5-a5a4-4c92-a0b1-1bbf1bdd1bf4","name":"Immaculata-La Salle","seed":6,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"State Semifinal","date":"2026-02-19","opp":{"id":"5d705bf2-c1ea-43d1-899f-a2f37fbbbd36","name":"North Broward Prep","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":4,"roundName":"State Championship","date":"2026-02-21","opp":{"id":"e15ab772-fb9c-441a-ab66-8967b1d719ab","name":"Montverde Academy","seed":1,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":4,"reached":"State Championship","result":"runner-up","depth":0.8}
+  ]
+}

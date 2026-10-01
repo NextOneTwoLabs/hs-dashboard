@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "bdaf6ca0-2ca5-4764-acb9-7555791c10b5",
+  "name": "George Jenkins",
+  "fullName": null,
+  "city": "Lakeland",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/lakeland/george-jenkins-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":7,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"b9fae593-b179-408b-b44c-43b088730927","name":"Alonso","seed":2,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

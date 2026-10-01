@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "de4a3297-9cd7-4580-a062-3fff1f0c7f27",
+  "name": "The First Academy",
+  "fullName": null,
+  "city": "Orlando",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/orlando/the-first-academy-royals",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","gender":"girls","seed":6,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":7,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"2ce4d331-04e4-450d-be90-ba520bf016a2","name":"Edgewood","seed":3,"score":7},"gf":1,"ga":7,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

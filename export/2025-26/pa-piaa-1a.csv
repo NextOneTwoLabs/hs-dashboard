@@ -1,0 +1,16 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,PA,pa-piaa,1A,0,First Round,2025-11-04,final,,,Brandywine Heights Area,1,,Southern Columbia Area,4,bottom
+2025-26,PA,pa-piaa,1A,0,First Round,2025-11-04,final,,,Masterman,0,,Faith Christian,8,bottom
+2025-26,PA,pa-piaa,1A,0,First Round,2025-11-04,final,,,Muncy,3,,York Catholic,0,top
+2025-26,PA,pa-piaa,1A,0,First Round,2025-11-04,final,,,Holy Redeemer,0,,Schuylkill Haven,7,bottom
+2025-26,PA,pa-piaa,1A,0,First Round,2025-11-04,final,,,Bentworth,0,,McConnellsburg,2,bottom
+2025-26,PA,pa-piaa,1A,0,First Round,2025-11-04,final,,,Seneca,0,,Bishop Guilfoyle,1,bottom
+2025-26,PA,pa-piaa,1A,0,First Round,2025-11-04,final,,,Windber,1,,Springdale,2,bottom
+2025-26,PA,pa-piaa,1A,0,First Round,2025-11-04,final,,,Karns City,1,,Sewickley Academy,2,bottom
+2025-26,PA,pa-piaa,1A,1,Quarterfinals,2025-11-08,final,,,Southern Columbia Area,0,,Faith Christian,6,bottom
+2025-26,PA,pa-piaa,1A,1,Quarterfinals,2025-11-08,final,,,Muncy,2,,Schuylkill Haven,1,top
+2025-26,PA,pa-piaa,1A,1,Quarterfinals,2025-11-08,final,,,McConnellsburg,0,,Bishop Guilfoyle,6,bottom
+2025-26,PA,pa-piaa,1A,1,Quarterfinals,2025-11-08,final,,,Springdale,1,,Sewickley Academy,0,top
+2025-26,PA,pa-piaa,1A,2,Semi-Finals,2025-11-11,final,,,Faith Christian,3,,Muncy,0,top
+2025-26,PA,pa-piaa,1A,2,Semi-Finals,2025-11-11,final,,,Bishop Guilfoyle,2,,Springdale,1,top
+2025-26,PA,pa-piaa,1A,3,Final,2025-11-15,final,,,Faith Christian,2,,Bishop Guilfoyle,0,top

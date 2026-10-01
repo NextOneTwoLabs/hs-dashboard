@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "state": "TX",
+  "name": "Texas",
+  "association": "UIL",
+  "associationName": "University Interscholastic League",
+  "activeSeason": "2026-27",
+  "latestSeason": "2025-26",
+  "genders": ["g"],
+  "seasons": [
+    {"season":"2025-26","note":null,"competitions":[{"id":"tx-uil","state":"TX","label":"UIL State Championships","short":"State","term":"winter","divisions":[{"code":"6a-d1","gender":"girls","label":"Conference 6A D1","games":63,"played":63,"status":"complete","champion":{"id":"ba7a97b9-0faa-44b1-b29c-52795363a7ea","name":"Round Rock"},"runnerUp":{"id":"63481374-863b-454b-90b9-aaa97ae8cc1d","name":"Keller"},"start":"2026-03-19","end":"2026-04-09","order":0},{"code":"6a-d2","gender":"girls","label":"Conference 6A D2","games":63,"played":63,"status":"complete","champion":{"id":"93aaa88f-b5e5-43df-a3b2-c1623eaadbb5","name":"Kingwood"},"runnerUp":{"id":"638a88ef-afba-45fa-8679-7a04b8654257","name":"Forney"},"start":"2026-03-19","end":"2026-04-09","order":1},{"code":"5a-d1","gender":"girls","label":"Conference 5A D1","games":63,"played":62,"status":"unreported","champion":null,"runnerUp":null,"start":"2026-03-19","end":"2026-04-09","order":2},{"code":"5a-d2","gender":"girls","label":"Conference 5A D2","games":63,"played":63,"status":"complete","champion":{"id":"49cc3751-aa79-424a-8036-42593c70617b","name":"Lake Creek"},"runnerUp":{"id":"7ddaa698-ba9e-4921-9df2-200bcf4124d8","name":"Grapevine"},"start":"2026-03-19","end":"2026-04-09","order":3},{"code":"4a-d1","gender":"girls","label":"Conference 4A D1","games":63,"played":63,"status":"complete","champion":{"id":"a779a2c9-df77-4d6f-a04e-dfc380fe0f70","name":"Celina"},"runnerUp":{"id":"bd4dd10c-f515-42ed-899f-5ee707f00037","name":"Salado"},"start":"2026-03-19","end":"2026-04-09","order":4},{"code":"4a-d2","gender":"girls","label":"Conference 4A D2","games":63,"played":63,"status":"complete","champion":{"id":"4ccbc2a2-3669-4d67-b443-6c78dc0df118","name":"Wimberley"},"runnerUp":{"id":"7deffa9d-584c-4aaa-8cc1-90ae6760efe5","name":"Sunnyvale"},"start":"2026-03-19","end":"2026-04-09","order":5}]}]}
+  ]
+}

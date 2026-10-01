@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2176f274-435b-4e82-809a-785a0d94cdba",
+  "name": "Coahulla Creek",
+  "fullName": null,
+  "city": "Dalton",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/dalton/coahulla-creek-colts",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":4,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"runner-up","reached":"Round 5"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":2,"rounds":5,"w":4,"l":1,"d":0,"gf":15,"ga":4,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"3f1112cd-2c40-4782-aa54-24e34423a0c1","name":"Appling County","seed":31,"score":1},"gf":8,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"f7121feb-b3f1-460a-80a3-1323babacd24","name":"Callaway","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"8bb9607d-f501-43b8-a98b-673e645aaaa7","name":"Sonoraville","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Round 4","date":"2026-05-07","opp":{"id":"30bfbd32-c99a-45ee-b24b-b27f465d05bf","name":"Union County","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":4,"roundName":"Round 5","date":null,"opp":{"id":"84dd878e-671b-40d4-83de-e73ab301f92e","name":"Pike County","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":4,"reached":"Round 5","result":"runner-up","depth":0.8}
+  ]
+}

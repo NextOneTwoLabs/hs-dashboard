@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1f872a0c-288d-4962-86e8-cb578b4861bb",
+  "name": "Lake Brantley",
+  "fullName": null,
+  "city": "Altamonte Springs",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/altamonte-springs/lake-brantley-patriots",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":4,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":8,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"dcf8018f-eba1-465b-8c93-c7c74e74373d","name":"Timber Creek","seed":5,"score":8},"gf":1,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

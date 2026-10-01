@@ -4,10 +4,11 @@
   "name": "Foothill",
   "fullName": null,
   "city": "Santa Ana",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/santa-ana/foothill-knights",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2024-25","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2024-25","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2024-25","competition":"cif-socal","division":"gd3","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"70a363e2-26b8-4ef5-8ad0-20979f66399a","name":"Thousand Oaks","seed":3,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2024-25","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"70a363e2-26b8-4ef5-8ad0-20979f66399a","name":"Thousand Oaks","seed":3,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

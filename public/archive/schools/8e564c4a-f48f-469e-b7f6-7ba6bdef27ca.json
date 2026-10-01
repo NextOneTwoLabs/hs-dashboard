@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "8e564c4a-f48f-469e-b7f6-7ba6bdef27ca",
+  "name": "Innovation",
+  "fullName": null,
+  "city": "Orlando",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/orlando/innovation-bulls",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","result":"eliminated","reached":"State Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","gender":"girls","seed":2,"rounds":5,"w":3,"l":1,"d":0,"gf":15,"ga":7,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"4c2efcb8-a181-408b-ba0a-c8af2a5e90af","name":"Gainesville","seed":7,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"6fa78c98-6f68-4a20-b431-60d01523ba10","name":"New Smyrna Beach","seed":3,"score":2},"gf":6,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-17","opp":{"id":"e2182604-1474-4ccf-b611-6e3de205ef9d","name":"Cypress Creek","seed":4,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"State Semifinal","date":"2026-02-27","opp":{"id":"fcfb639a-9516-46de-bf56-661156821e01","name":"Lourdes Academy","seed":1,"score":4},"gf":3,"ga":4,"res":"L","pk":null}],"reachedRound":3,"reached":"State Semifinal","result":"eliminated","depth":0.6}
+  ]
+}

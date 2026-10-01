@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2023-24,CA,ca-cif-socal,Division 2,0,Round I,2024-02-27,final,,1,Palos Verdes,0,8,Westview,2,bottom
+2023-24,CA,ca-cif-socal,Division 2,0,Round I,2024-02-27,final,,4,Cleveland,0,5,Garces Memorial,1,bottom
+2023-24,CA,ca-cif-socal,Division 2,0,Round I,2024-02-27,final,,3,Mission Hills,1,6,JSerra Catholic,0,top
+2023-24,CA,ca-cif-socal,Division 2,0,Round I,2024-02-27,final,,2,Etiwanda,6,7,El Camino Real,2,top
+2023-24,CA,ca-cif-socal,Division 2,1,Regional Semifinals,2024-02-29,final,,8,Westview,2,5,Garces Memorial,1,top
+2023-24,CA,ca-cif-socal,Division 2,1,Regional Semifinals,2024-02-29,final,,3,Mission Hills,1,2,Etiwanda,0,top
+2023-24,CA,ca-cif-socal,Division 2,2,Regional Final,2024-03-02,final,,8,Westview,1,3,Mission Hills,0,top

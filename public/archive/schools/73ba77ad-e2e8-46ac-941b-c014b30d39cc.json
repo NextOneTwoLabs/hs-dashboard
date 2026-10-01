@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "73ba77ad-e2e8-46ac-941b-c014b30d39cc",
+  "name": "Auburndale",
+  "fullName": null,
+  "city": "Auburndale",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/auburndale/auburndale-bloodhounds",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","gender":"girls","seed":1,"rounds":5,"w":1,"l":1,"d":0,"gf":5,"ga":4,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"e4a76ce9-15a6-4ffa-947c-e2b1ff54e8cc","name":"Springstead","seed":8,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"e2182604-1474-4ccf-b611-6e3de205ef9d","name":"Cypress Creek","seed":4,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

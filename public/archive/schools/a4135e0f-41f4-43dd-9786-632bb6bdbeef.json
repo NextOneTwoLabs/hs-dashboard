@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "a4135e0f-41f4-43dd-9786-632bb6bdbeef",
+  "name": "South Gwinnett",
+  "fullName": null,
+  "city": "Snellville",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/snellville/south-gwinnett-comets",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":8,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"74f4574f-bb69-4568-a3e6-861d0b4b6551","name":"North Gwinnett","seed":null,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

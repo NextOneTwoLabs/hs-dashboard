@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "3b6a0f01-78b7-40b6-ad40-447c2588d34f",
+  "name": "Camden County",
+  "fullName": null,
+  "city": "Kingsland",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/kingsland/camden-county-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"6d00b044-607e-4dee-aa9b-e1fc2c6a87bc","name":"Buford","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

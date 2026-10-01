@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "0882a8d3-2c10-4577-bae5-3bcb6f89085f",
+  "name": "Tampa Catholic",
+  "fullName": null,
+  "city": "Tampa",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/tampa/tampa-catholic-crusaders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":5,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"6ae65209-f562-4951-8a4c-d234b87cbb04","name":"Calvary Christian","seed":4,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

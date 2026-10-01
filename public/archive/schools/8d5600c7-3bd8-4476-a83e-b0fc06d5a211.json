@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "8d5600c7-3bd8-4476-a83e-b0fc06d5a211",
+  "name": "Hollywood Hills",
+  "fullName": null,
+  "city": "Hollywood",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/hollywood/hollywood-hills-spartans",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","gender":"girls","seed":8,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":9,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"fcfb639a-9516-46de-bf56-661156821e01","name":"Lourdes Academy","seed":1,"score":9},"gf":0,"ga":9,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

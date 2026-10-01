@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e89d1516-8fc0-4372-abfd-942f5adc0a48",
+  "name": "Davenport",
+  "fullName": null,
+  "city": "Davenport",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/davenport/davenport-gorillas",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","gender":"girls","seed":null,"rounds":4,"w":1,"l":1,"d":0,"gf":5,"ga":5,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"15361ccb-bc54-42f0-99ff-a936548e6896","name":"Mount Vernon Christian","seed":null,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-14","opp":{"id":"deb53398-73d7-4b69-bbf9-210ba1d93680","name":"Freeman","seed":null,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":1,"reached":"Quarterfinals","result":"eliminated","depth":0.25}
+  ]
+}

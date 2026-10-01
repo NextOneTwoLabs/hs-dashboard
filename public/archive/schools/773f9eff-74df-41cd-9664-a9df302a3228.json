@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "773f9eff-74df-41cd-9664-a9df302a3228",
+  "name": "Florida Atlantic University",
+  "fullName": null,
+  "city": "Boca Raton",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/boca-raton/florida-atlantic-university-owls",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":4,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":4,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"312d4acc-805f-40c0-bcb3-9b3362c3fe5f","name":"Cardinal Mooney","seed":5,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

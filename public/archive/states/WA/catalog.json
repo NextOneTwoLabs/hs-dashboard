@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "state": "WA",
+  "name": "Washington",
+  "association": "WIAA",
+  "associationName": "Washington Interscholastic Activities Association",
+  "activeSeason": "2026-27",
+  "latestSeason": "2025-26",
+  "genders": ["g"],
+  "seasons": [
+    {"season":"2025-26","note":null,"competitions":[{"id":"wa-wiaa","state":"WA","label":"WIAA State Championships","short":"State","term":"fall","divisions":[{"code":"4a","gender":"girls","label":"4A","games":15,"played":15,"status":"complete","champion":{"id":"9400800e-da03-48c9-8e6a-644deeea6f55","name":"Mount Si"},"runnerUp":{"id":"0a5ae530-1e21-4a32-adac-e2a3fb2885d1","name":"Tahoma"},"start":"2025-11-11","end":"2025-11-22","order":0},{"code":"3a","gender":"girls","label":"3A","games":19,"played":19,"status":"complete","champion":{"id":"54de1e46-ce20-494a-b24f-437ba874db78","name":"Bellevue"},"runnerUp":{"id":"4ad3a91f-4bc2-4d04-9290-ac995a2c7471","name":"Liberty"},"start":"2025-11-14","end":"2025-11-22","order":1},{"code":"2a","gender":"girls","label":"2A","games":15,"played":15,"status":"complete","champion":{"id":"c3dc1987-24e3-4197-a0c9-44b948f506c9","name":"West Valley"},"runnerUp":{"id":"1538e79a-cf85-4673-9762-a99c1368e351","name":"Columbia River"},"start":"2025-11-11","end":"2025-11-22","order":2},{"code":"1a","gender":"girls","label":"1A","games":15,"played":15,"status":"complete","champion":{"id":"4affd226-4f87-4e09-94ea-477ce80aac3d","name":"Cedar Park Christian"},"runnerUp":{"id":"f85726f6-f33d-43ac-bd2b-2802634cf66b","name":"Seton Catholic"},"start":"2025-11-11","end":"2025-11-22","order":3},{"code":"1b-2b","gender":"girls","label":"1B/2B","games":15,"played":15,"status":"complete","champion":{"id":"3396f21e-0d9c-4c17-a7ae-bac8ac3af0ba","name":"Crosspoint Christian"},"runnerUp":{"id":"deb53398-73d7-4b69-bbf9-210ba1d93680","name":"Freeman"},"start":"2025-11-11","end":"2025-11-22","order":4}]}]}
+  ]
+}

@@ -4,11 +4,12 @@
   "name": "Carlsbad",
   "fullName": null,
   "city": "Carlsbad",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/carlsbad/carlsbad-lancers",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
-  "best": {"season":"2025-26","competition":"cif-state","division":"gd2","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2025-26","competition":"ca-cif-state","division":"gd2","divisionLabel":"Division 2","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-socal","division":"gd1","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"9dc04c54-8c9d-4b30-a1d2-fcc167363342","name":"Harvard-Westlake","seed":6,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2025-26","competition":"cif-state","division":"gd2","seed":4,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"7f79a046-d5c4-465f-b1c4-41fe50ed8ea8","name":"Notre Dame (SO)","seed":5,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-socal","division":"gd1","divisionLabel":"Division 1","gender":"girls","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"9dc04c54-8c9d-4b30-a1d2-fcc167363342","name":"Harvard-Westlake","seed":6,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","state":"CA","competition":"ca-cif-state","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":4,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"7f79a046-d5c4-465f-b1c4-41fe50ed8ea8","name":"Notre Dame (SO)","seed":5,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

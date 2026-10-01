@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "155a9258-b9df-4a4b-ab1c-89355c354457",
+  "name": "Woodville-Tompkins",
+  "fullName": null,
+  "city": "Savannah",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/savannah/woodville-tompkins",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":2,"ga":10,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"c741714b-86d7-43e9-a264-44ee91d89131","name":"Jasper County","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"fe4668fc-2d47-4061-8597-3ac6cba1e932","name":"Model","seed":null,"score":9},"gf":0,"ga":9,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

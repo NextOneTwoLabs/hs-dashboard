@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "ef73c9cf-8926-4cad-a6e7-198ea25a1dda",
+  "name": "Snohomish",
+  "fullName": null,
+  "city": "Snohomish",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/snohomish/snohomish-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":2,"ga":4,"games":[{"round":1,"roundName":"First Round","date":"2025-11-14","opp":{"id":"0d70beaf-a998-4dca-a880-c85b925854e9","name":"University","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Quarterfinals","date":"2025-11-15","opp":{"id":"831cad1c-da6a-498a-bc60-4c58a769f4c8","name":"Eastside Catholic","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Quarterfinals","result":"eliminated","depth":0.4}
+  ]
+}

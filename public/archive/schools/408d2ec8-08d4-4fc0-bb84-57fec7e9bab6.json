@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "408d2ec8-08d4-4fc0-bb84-57fec7e9bab6",
+  "name": "Christ's Church Academy",
+  "fullName": null,
+  "city": "Jacksonville",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/jacksonville/christs-church-academy-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","gender":"girls","seed":5,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"784acea3-eefc-4814-aa26-ef244b8108c1","name":"Rocky Bayou Christian","seed":4,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "f55a0945-47e6-4867-a932-20bd690dafdd",
+  "name": "Campbell",
+  "fullName": null,
+  "city": "Smyrna",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/smyrna/campbell-spartans",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"fd451662-75dc-4c82-ad7c-ab606e50f26c","name":"Cherokee","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"0bb7f5e0-2d47-4bad-82f4-c4fb1ac73fc8","name":"West Forsyth","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

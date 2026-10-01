@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "33698666-bc11-4091-8af6-4cd3c6c944cf",
+  "name": "Calallen",
+  "fullName": null,
+  "city": "Corpus Christi",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/corpus-christi/calallen-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","gender":"girls","seed":null,"rounds":6,"w":2,"l":1,"d":0,"gf":16,"ga":1,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"4dc9e75d-4dbc-473a-aedf-378e141a29fc","name":"Valley View","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"3a0687f6-4b5f-40f7-8996-ebf5588fcfb3","name":"Rio Hondo","seed":null,"score":0},"gf":12,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"731ae8c9-8f26-4a66-ba4a-fedd9aab4a5f","name":"La Vernia","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

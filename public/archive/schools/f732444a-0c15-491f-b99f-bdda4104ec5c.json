@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "f732444a-0c15-491f-b99f-bdda4104ec5c",
+  "name": "North Atlanta",
+  "fullName": null,
+  "city": "Atlanta",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/atlanta/north-atlanta-warriors",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":10,"ga":1,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"48ebfb9a-f8c8-4c0b-b6dd-08292a623230","name":"Douglas County","seed":null,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"ef9ea845-7b35-4fa0-aa32-08f1f70e8791","name":"Harrison","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

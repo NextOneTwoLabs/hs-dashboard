@@ -4,10 +4,11 @@
   "name": "Wheatland",
   "fullName": null,
   "city": "Wheatland",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/wheatland/wheatland-pirates",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2017-18","competition":"cif-norcal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2017-18","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-norcal","division":"gd4","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"cb1b553b-d2e4-487d-bd22-876660416421","name":"University Prep","seed":1,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"cb1b553b-d2e4-487d-bd22-876660416421","name":"University Prep","seed":1,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

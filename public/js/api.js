@@ -22,11 +22,13 @@ export function fetchJSON(path) {
 }
 
 export const api = {
-  catalog: () => fetchJSON('/catalog'),
   status: () => fetchJSON('/status'),
+  states: () => fetchJSON('/states'),
+  stateCatalog: (st) => fetchJSON(`/states/${st}/catalog`),
+  stateGames: (st, season) => fetchJSON(`/states/${st}/seasons/${season}/games`),
   schools: () => fetchJSON('/schools'),
+  searchIndex: () => fetchJSON('/search-index'),
   school: (id) => fetchJSON(`/schools/${encodeURIComponent(id)}`),
-  games: (season) => fetchJSON(`/seasons/${season}/games`),
   bracket: (season, comp, div) => fetchJSON(`/seasons/${season}/competitions/${comp}/divisions/${div}/bracket`),
 };
 

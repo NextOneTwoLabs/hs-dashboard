@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "a4d93334-e880-4e96-a7da-5f90be96b332",
+  "name": "Josey",
+  "fullName": null,
+  "city": "Augusta",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/augusta/josey-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":32,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":16,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"84dd878e-671b-40d4-83de-e73ab301f92e","name":"Pike County","seed":1,"score":16},"gf":0,"ga":16,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

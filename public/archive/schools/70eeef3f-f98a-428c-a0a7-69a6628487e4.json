@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "70eeef3f-f98a-428c-a0a7-69a6628487e4",
+  "name": "Johnson",
+  "fullName": null,
+  "city": "Buda",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/buda/johnson-jaguars",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","gender":"girls","seed":null,"rounds":6,"w":2,"l":1,"d":0,"gf":5,"ga":3,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"0c82b6cb-fbfe-4204-bc05-717e542d4419","name":"Alexander","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"441c8f24-91e2-41ac-afae-02558423e25c","name":"Los Fresnos","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"e095cff2-1a68-48bf-a8cb-7c85ea824e67","name":"Lake Travis","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

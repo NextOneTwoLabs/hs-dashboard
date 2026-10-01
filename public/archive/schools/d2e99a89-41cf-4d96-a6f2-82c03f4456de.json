@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d2e99a89-41cf-4d96-a6f2-82c03f4456de",
+  "name": "Klahowya",
+  "fullName": null,
+  "city": "Silverdale",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/silverdale/klahowya-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"3b3b4bbe-0c18-420d-a3fd-12846ffe871d","name":"University Prep","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

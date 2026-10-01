@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e142505a-a73f-4f3b-b002-f144c0f98cbb",
+  "name": "Bloomingdale",
+  "fullName": null,
+  "city": "Valrico",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/valrico/bloomingdale-bulls",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","gender":"girls","seed":8,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"ca51e5a8-90f0-4a54-bb7d-445fbe62a412","name":"Oviedo","seed":1,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

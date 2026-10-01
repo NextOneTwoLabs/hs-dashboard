@@ -4,10 +4,11 @@
   "name": "Palo Alto",
   "fullName": null,
   "city": "Palo Alto",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/palo-alto/palo-alto-vikings",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2017-18","competition":"cif-norcal","division":"gd1","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2017-18","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-norcal","division":"gd1","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"21625f1d-edb3-4fa8-9158-f6b6b0a04e2d","name":"Monte Vista","seed":1,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","gender":"girls","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"21625f1d-edb3-4fa8-9158-f6b6b0a04e2d","name":"Monte Vista","seed":1,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

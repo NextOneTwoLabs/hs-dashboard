@@ -4,10 +4,11 @@
   "name": "Linfield Christian",
   "fullName": "Linfield Christian Lions",
   "city": "Temecula",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/temecula/linfield-christian-lions",
   "summary": {"appearances":1,"titles":1,"finals":1,"w":3,"l":0,"d":0},
-  "best": {"season":"2020-21","competition":"cif-socal","division":"gd5","result":"champion","reached":"Regional Final"},
+  "best": {"season":"2020-21","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"champion","reached":"Regional Final"},
   "appearances": [
-    {"season":"2020-21","competition":"cif-socal","division":"gd5","seed":2,"rounds":3,"w":3,"l":0,"d":0,"gf":6,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"131b5089-3ef1-425e-a2c4-76772dfed792","name":"Canyon Springs","seed":7,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"4b60197c-701a-4994-8b96-54cbcc937b45","name":"Elsinore","seed":3,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2021-06-05","opp":{"id":"0595f25d-de4f-46fd-a019-41c8375e8eb2","name":"St. Bonaventure","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+    {"season":"2020-21","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":2,"rounds":3,"w":3,"l":0,"d":0,"gf":6,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"131b5089-3ef1-425e-a2c4-76772dfed792","name":"Canyon Springs","seed":7,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"4b60197c-701a-4994-8b96-54cbcc937b45","name":"Elsinore","seed":3,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2021-06-05","opp":{"id":"0595f25d-de4f-46fd-a019-41c8375e8eb2","name":"St. Bonaventure","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
   ]
 }

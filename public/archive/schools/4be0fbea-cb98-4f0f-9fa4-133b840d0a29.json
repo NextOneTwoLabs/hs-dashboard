@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "4be0fbea-cb98-4f0f-9fa4-133b840d0a29",
+  "name": "Coppell",
+  "fullName": null,
+  "city": "Coppell",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/coppell/coppell-cowboys",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","result":"eliminated","reached":"Regional Finals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","gender":"girls","seed":null,"rounds":6,"w":3,"l":1,"d":0,"gf":14,"ga":6,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"0bad373d-33a2-45b6-b1d4-6c55e876344c","name":"Allen","seed":null,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"316a1cd0-ca9f-4edb-8b6c-249656be6977","name":"South Grand Prairie","seed":null,"score":2},"gf":5,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"4e05ea4f-adee-4afa-b6c9-37c15c1bdca5","name":"Lake Ridge","seed":null,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"Regional Finals","date":"2026-03-30","opp":{"id":"63481374-863b-454b-90b9-aaa97ae8cc1d","name":"Keller","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":3,"reached":"Regional Finals","result":"eliminated","depth":0.5}
+  ]
+}

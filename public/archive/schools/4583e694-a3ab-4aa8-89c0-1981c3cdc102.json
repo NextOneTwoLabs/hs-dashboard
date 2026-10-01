@@ -4,10 +4,11 @@
   "name": "Orange Glen",
   "fullName": null,
   "city": "Escondido",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/escondido/orange-glen-patriots",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2020-21","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2020-21","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2020-21","competition":"cif-socal","division":"gd5","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"4b60197c-701a-4994-8b96-54cbcc937b45","name":"Elsinore","seed":3,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2020-21","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"4b60197c-701a-4994-8b96-54cbcc937b45","name":"Elsinore","seed":3,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

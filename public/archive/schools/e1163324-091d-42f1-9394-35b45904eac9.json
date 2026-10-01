@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e1163324-091d-42f1-9394-35b45904eac9",
+  "name": "Viera",
+  "fullName": null,
+  "city": "Viera",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/viera/viera-hawks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","result":"eliminated","reached":"State Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","gender":"girls","seed":2,"rounds":5,"w":3,"l":1,"d":0,"gf":13,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"e1e2b588-3a53-4ebe-b4de-a224a6b2bbe2","name":"Wharton","seed":7,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"08b7152c-637a-4660-ad82-d2865db939a3","name":"Steinbrenner","seed":3,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-17","opp":{"id":"ca51e5a8-90f0-4a54-bb7d-445fbe62a412","name":"Oviedo","seed":1,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"State Semifinal","date":"2026-02-23","opp":{"id":"bd12f619-3d60-413e-a9ef-5742cd4a21bb","name":"St. Thomas Aquinas","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":3,"reached":"State Semifinal","result":"eliminated","depth":0.6}
+  ]
+}

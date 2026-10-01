@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1bacfc47-48b0-4164-b7dd-50c6bea5f52a",
+  "name": "Lake View",
+  "fullName": null,
+  "city": "San Angelo",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/san-angelo/lake-view-chiefs-and-maidens",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"9b3f9d35-87bb-4b96-9396-912eafc2d864","name":"San Elizario","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

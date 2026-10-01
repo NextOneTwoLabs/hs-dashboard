@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "b57ce3de-c7b8-407b-8e85-99a39017f10f",
+  "name": "McConnellsburg",
+  "fullName": null,
+  "city": "Mcconnellsburg",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/mcconnellsburg/mcconnellsburg-spartans",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"1a","divisionLabel":"1A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"1a","divisionLabel":"1A","gender":"girls","seed":null,"rounds":4,"w":1,"l":1,"d":0,"gf":2,"ga":6,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"a4b2976f-e5f0-42b8-95e8-833035e111fd","name":"Bentworth","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-08","opp":{"id":"0f6e92d3-408c-4ea6-8a26-bbfa9d3978f1","name":"Bishop Guilfoyle","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":1,"reached":"Quarterfinals","result":"eliminated","depth":0.25}
+  ]
+}

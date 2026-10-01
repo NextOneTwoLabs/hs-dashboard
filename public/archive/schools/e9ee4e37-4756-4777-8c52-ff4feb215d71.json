@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e9ee4e37-4756-4777-8c52-ff4feb215d71",
+  "name": "Central Columbia",
+  "fullName": null,
+  "city": "Bloomsburg",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/bloomsburg/central-columbia-bluejays",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":1},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"2a","divisionLabel":"2A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"2a","divisionLabel":"2A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":1,"gf":0,"ga":4,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"090f959a-b71d-4a88-9bca-ec28e18d19ed","name":"Wyoming Area","seed":null,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":1,"roundName":"Quarterfinals","date":"2025-11-08","opp":{"id":"8810ce43-69fb-4268-8a73-842976fc98dc","name":"Northwestern Lehigh","seed":null,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":1,"reached":"Quarterfinals","result":"eliminated","depth":0.25}
+  ]
+}

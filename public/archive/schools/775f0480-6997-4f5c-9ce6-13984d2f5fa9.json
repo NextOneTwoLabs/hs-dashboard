@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "775f0480-6997-4f5c-9ce6-13984d2f5fa9",
+  "name": "Cypress Woods",
+  "fullName": null,
+  "city": "Cypress",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/cypress/cypress-woods-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","gender":"girls","seed":null,"rounds":6,"w":2,"l":1,"d":0,"gf":3,"ga":5,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"d6fb5a7a-b216-4f9e-881d-e25902a9dde8","name":"Tomball Memorial","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"d330a4be-0284-42ac-af3c-9825007ed971","name":"Oak Ridge","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"638a88ef-afba-45fa-8679-7a04b8654257","name":"Forney","seed":null,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

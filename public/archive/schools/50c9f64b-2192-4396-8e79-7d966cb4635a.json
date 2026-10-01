@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "50c9f64b-2192-4396-8e79-7d966cb4635a",
+  "name": "Richmond Hill",
+  "fullName": null,
+  "city": "Richmond Hill",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/richmond-hill/richmond-hill-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":2,"l":1,"d":0,"gf":10,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"756e2db2-dde7-4f61-a262-930f6c24aa03","name":"Discovery","seed":null,"score":0},"gf":7,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"9ad035ba-8f76-4027-a133-7578bea9b9df","name":"Norcross","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"ef9ea845-7b35-4fa0-aa32-08f1f70e8791","name":"Harrison","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

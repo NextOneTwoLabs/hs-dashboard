@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "state": "PA",
+  "name": "Pennsylvania",
+  "association": "PIAA",
+  "associationName": "Pennsylvania Interscholastic Athletic Association",
+  "activeSeason": "2026-27",
+  "latestSeason": "2025-26",
+  "genders": ["g"],
+  "seasons": [
+    {"season":"2025-26","note":null,"competitions":[{"id":"pa-piaa","state":"PA","label":"PIAA State Championships","short":"State","term":"fall","divisions":[{"code":"4a","gender":"girls","label":"4A","games":15,"played":15,"status":"complete","champion":{"id":"7fcbd578-aeec-4eb6-be95-5037bcb1f6b8","name":"Central Bucks East"},"runnerUp":{"id":"3436fbb7-2fca-4dfd-9e6e-f48933d96ebe","name":"Central Bucks South"},"start":"2025-11-04","end":"2025-11-15","order":0},{"code":"3a","gender":"girls","label":"3A","games":15,"played":15,"status":"complete","champion":{"id":"aa9bdf41-4385-46c2-87c3-132b10071472","name":"South Fayette"},"runnerUp":{"id":"671b615d-c975-4f12-8332-739f2d634922","name":"Radnor"},"start":"2025-11-04","end":"2025-11-14","order":1},{"code":"2a","gender":"girls","label":"2A","games":15,"played":15,"status":"complete","champion":{"id":"328f7292-bd41-4019-9d13-4490f088adac","name":"Archbishop Wood"},"runnerUp":{"id":"e3d9b4be-4166-40b7-afc6-02d3de247b7e","name":"Burrell"},"start":"2025-11-04","end":"2025-11-14","order":2},{"code":"1a","gender":"girls","label":"1A","games":15,"played":15,"status":"complete","champion":{"id":"ad95fe01-b829-48a2-bb88-fd22851dd3ed","name":"Faith Christian"},"runnerUp":{"id":"0f6e92d3-408c-4ea6-8a26-bbfa9d3978f1","name":"Bishop Guilfoyle"},"start":"2025-11-04","end":"2025-11-15","order":3}]}]}
+  ]
+}

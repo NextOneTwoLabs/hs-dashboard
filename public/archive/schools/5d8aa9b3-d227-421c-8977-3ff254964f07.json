@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "5d8aa9b3-d227-421c-8977-3ff254964f07",
+  "name": "Trinity",
+  "fullName": null,
+  "city": "Camp Hill",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/camp-hill/trinity-shamrocks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":1},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"2a","divisionLabel":"2A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"2a","divisionLabel":"2A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":1,"gf":2,"ga":4,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"9f76d205-30c3-47fe-939a-689b76de1aaa","name":"Allentown Central Catholic","seed":null,"score":1},"gf":1,"ga":1,"res":"D","pk":"W"},{"round":1,"roundName":"Quarterfinals","date":"2025-11-08","opp":{"id":"328f7292-bd41-4019-9d13-4490f088adac","name":"Archbishop Wood","seed":null,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Quarterfinals","result":"eliminated","depth":0.25}
+  ]
+}

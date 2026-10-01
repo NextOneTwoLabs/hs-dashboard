@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2484e085-1438-4702-8bd7-13eb01e237ce",
+  "name": "Peninsula",
+  "fullName": null,
+  "city": "Gig Harbor",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/gig-harbor/peninsula-seahawks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":1,"roundName":"First Round","date":"2025-11-14","opp":{"id":"2da9cf05-fcc8-4a04-abed-e3bc2a44a8c4","name":"Roosevelt","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"First Round","result":"eliminated","depth":0.2}
+  ]
+}

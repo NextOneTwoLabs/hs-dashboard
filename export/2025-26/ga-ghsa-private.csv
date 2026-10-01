@@ -1,0 +1,32 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,bye,,,,,,Hebron Christian,,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Darlington,1,,Mount Paran Christian,2,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Prince Avenue Christian,0,,Holy Innocents Episcopal,10,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Savannah Christian,0,,St. Vincent's,7,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,St. Francis,0,,Greater Atlanta Christian,10,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Galloway,2,,Athens Academy,3,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,North Cobb Christian,0,,Paideia,4,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Christian Heritage,0,,Providence Christian,9,bottom
+2025-26,GA,ga-ghsa,Class Private,1,Round 2,2026-04-30,final,,,Hebron Christian,7,,Mount Paran Christian,0,top
+2025-26,GA,ga-ghsa,Class Private,1,Round 2,2026-04-30,final,,,Holy Innocents Episcopal,9,,St. Vincent's,0,top
+2025-26,GA,ga-ghsa,Class Private,1,Round 2,2026-04-30,final,,,Greater Atlanta Christian,10,,Athens Academy,0,top
+2025-26,GA,ga-ghsa,Class Private,1,Round 2,2026-04-30,final,,,Paideia,1,,Providence Christian,0,top
+2025-26,GA,ga-ghsa,Class Private,2,Round 3,2026-05-04,final,,,Hebron Christian,2,,Holy Innocents Episcopal,6,bottom
+2025-26,GA,ga-ghsa,Class Private,2,Round 3,2026-05-04,final,,,Greater Atlanta Christian,2,,Paideia,0,top
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,The Weber School,0,,Lovett,10,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Mount Vernon,4,,Atlanta International,3,top
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Mount Pisgah Christian,1,,Whitefield Academy,6,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Mt. Bethel Christian Academy,0,,Calvary Day,1,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Landmark Christian,0,,Savannah Country Day,9,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Fellowship Christian,2,,Trinity Christian,3,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,final,,,Walker,1,,Aquinas,2,bottom
+2025-26,GA,ga-ghsa,Class Private,0,Round 1,2026-04-23,bye,,,,,,Wesleyan,,bottom
+2025-26,GA,ga-ghsa,Class Private,1,Round 2,2026-04-30,final,,,Lovett,3,,Mount Vernon,2,top
+2025-26,GA,ga-ghsa,Class Private,1,Round 2,2026-04-30,final,,,Whitefield Academy,6,,Calvary Day,1,top
+2025-26,GA,ga-ghsa,Class Private,1,Round 2,2026-04-30,final,,,Savannah Country Day,2,,Trinity Christian,3,bottom
+2025-26,GA,ga-ghsa,Class Private,1,Round 2,2026-04-30,final,,,Aquinas,0,,Wesleyan,10,bottom
+2025-26,GA,ga-ghsa,Class Private,2,Round 3,2026-05-04,final,,,Lovett,4,,Whitefield Academy,1,top
+2025-26,GA,ga-ghsa,Class Private,2,Round 3,2026-05-04,final,,,Trinity Christian,0,,Wesleyan,6,bottom
+2025-26,GA,ga-ghsa,Class Private,3,Round 4,2026-05-07,final,,,Holy Innocents Episcopal,4,,Greater Atlanta Christian,3,top
+2025-26,GA,ga-ghsa,Class Private,3,Round 4,2026-05-07,final,,,Lovett,1,,Wesleyan,3,bottom
+2025-26,GA,ga-ghsa,Class Private,4,Round 5,,final,,,Holy Innocents Episcopal,1,,Wesleyan,0,top

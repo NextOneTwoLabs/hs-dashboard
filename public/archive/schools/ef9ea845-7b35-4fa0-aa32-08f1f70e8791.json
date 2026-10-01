@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "ef9ea845-7b35-4fa0-aa32-08f1f70e8791",
+  "name": "Harrison",
+  "fullName": null,
+  "city": "Kennesaw",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/kennesaw/harrison-hoyas",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 4"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":3,"l":1,"d":0,"gf":6,"ga":4,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"507880c6-4e36-43b6-b375-e2a2fdee5ec3","name":"Marietta","seed":null,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"f732444a-0c15-491f-b99f-bdda4104ec5c","name":"North Atlanta","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"50c9f64b-2192-4396-8e79-7d966cb4635a","name":"Richmond Hill","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"Round 4","date":"2026-05-07","opp":{"id":"2fa97fcb-ebf2-40d0-b407-bfc2f0f9d996","name":"Walton","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":3,"reached":"Round 4","result":"eliminated","depth":0.6}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2a954006-a714-45f1-9269-eda8ff3eacf9",
+  "name": "Chiles",
+  "fullName": null,
+  "city": "Tallahassee",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/tallahassee/chiles-timberwolves",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":4,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","result":"runner-up","reached":"State Championship"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","gender":"girls","seed":3,"rounds":5,"w":4,"l":1,"d":0,"gf":9,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"40006da2-f5bb-4598-a1e5-1656581a7d48","name":"Clay","seed":6,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"8acf5ecc-5321-4165-95f7-94af516b57da","name":"Beachside","seed":2,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-17","opp":{"id":"ef2494bc-baf8-41bc-a48e-89f61d31c557","name":"Ponte Vedra","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"State Semifinal","date":"2026-02-27","opp":{"id":"8fbd4861-36fa-4303-8132-3691be0c7088","name":"North Fort Myers","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":4,"roundName":"State Championship","date":"2026-02-28","opp":{"id":"fcfb639a-9516-46de-bf56-661156821e01","name":"Lourdes Academy","seed":1,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":4,"reached":"State Championship","result":"runner-up","depth":0.8}
+  ]
+}

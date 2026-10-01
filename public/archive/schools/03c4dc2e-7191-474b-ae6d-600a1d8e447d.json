@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "03c4dc2e-7191-474b-ae6d-600a1d8e447d",
+  "name": "Victory Christian Academy",
+  "fullName": null,
+  "city": "Lakeland",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/lakeland/victory-christian-academy-storm",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":4,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","result":"runner-up","reached":"State Championship"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","gender":"girls","seed":3,"rounds":5,"w":4,"l":1,"d":0,"gf":16,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"d19b63a4-ee7f-45ee-ba15-95c9889c7a28","name":"St. Edward's","seed":6,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"b17ee378-189e-42ed-99f1-4d3a14a350bb","name":"The Pine School","seed":2,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-13","opp":{"id":"ad830181-357c-4d16-bf3d-00179ea6e17d","name":"All Saints' Academy","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"State Semifinal","date":"2026-02-20","opp":{"id":"6e58e482-a1c2-409e-8825-18b95aea48be","name":"St. Johns Country Day","seed":1,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":4,"roundName":"State Championship","date":"2026-02-21","opp":{"id":"713a86e0-bfd3-41da-bf21-f6a9c4575930","name":"Canterbury","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":4,"reached":"State Championship","result":"runner-up","depth":0.8}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "f46544e3-90de-4080-a2eb-4174175e197e",
+  "name": "Lake Stevens",
+  "fullName": null,
+  "city": "Lake Stevens",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/lake-stevens/lake-stevens-vikings",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"4a","divisionLabel":"4A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"4a","divisionLabel":"4A","gender":"girls","seed":null,"rounds":4,"w":1,"l":1,"d":0,"gf":3,"ga":6,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"c6e59fbb-47bc-40d4-8235-af2b00fd312f","name":"Sumner","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-14","opp":{"id":"5b66c7d5-1df4-442f-851b-425dbfbb6328","name":"Issaquah","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":1,"reached":"Quarterfinals","result":"eliminated","depth":0.25}
+  ]
+}

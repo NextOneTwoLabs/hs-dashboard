@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "f351f659-108b-4775-a9e4-94201b82509b",
+  "name": "Temple",
+  "fullName": null,
+  "city": "Temple",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/temple/temple-tigers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":2,"ga":5,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"fc6b89ab-937e-4cfa-9b94-1f3e6078621f","name":"Fannin County","seed":null,"score":5},"gf":2,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

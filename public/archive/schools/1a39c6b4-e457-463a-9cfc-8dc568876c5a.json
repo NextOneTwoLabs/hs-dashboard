@@ -4,10 +4,11 @@
   "name": "Menlo-Atherton",
   "fullName": null,
   "city": "Atherton",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/atherton/menlo-atherton-m-a-bears",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
-  "best": {"season":"2022-23","competition":"cif-norcal","division":"gd1","result":"eliminated","reached":"Regional Semifinals"},
+  "best": {"season":"2022-23","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","result":"eliminated","reached":"Regional Semifinals"},
   "appearances": [
-    {"season":"2022-23","competition":"cif-norcal","division":"gd1","seed":5,"rounds":3,"w":1,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"6846297a-f90b-4f26-8677-446dc97366c5","name":"Clovis North","seed":4,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"de6d3780-e8f6-4a2a-93f2-b5d89499f9b0","name":"Saint Francis","seed":1,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+    {"season":"2022-23","state":"CA","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","gender":"girls","seed":5,"rounds":3,"w":1,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"6846297a-f90b-4f26-8677-446dc97366c5","name":"Clovis North","seed":4,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"de6d3780-e8f6-4a2a-93f2-b5d89499f9b0","name":"Saint Francis","seed":1,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1e60baaa-b411-4c25-8fb3-a62d23fd6549",
+  "name": "Stephenville",
+  "fullName": null,
+  "city": "Stephenville",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/stephenville/stephenville-yellowjackets",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","gender":"girls","seed":null,"rounds":6,"w":2,"l":1,"d":0,"gf":6,"ga":1,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"fa3c2f49-4775-4724-8f7a-6ccba0b59cd1","name":"Alvarado","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"54b8cd69-bcfe-4162-9659-3835087e49ad","name":"Castleberry","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"fa11b3de-db78-4ee5-9ba7-7c0d8b73db30","name":"West Plains","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

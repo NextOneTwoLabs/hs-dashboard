@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1b439bbd-8dd0-4c9b-bb64-d62ce108ca18",
+  "name": "Lumberton",
+  "fullName": null,
+  "city": "Lumberton",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/lumberton/lumberton-raiders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","gender":"girls","seed":null,"rounds":6,"w":2,"l":1,"d":0,"gf":6,"ga":3,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"49ea89c0-5105-4ebd-9c40-a744720daf29","name":"Hargrave","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"14f65c67-df99-437e-ad42-f3fb806b87f0","name":"Freeman","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"bd4dd10c-f515-42ed-899f-5ee707f00037","name":"Salado","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

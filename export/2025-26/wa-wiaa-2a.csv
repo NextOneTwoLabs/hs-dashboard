@@ -1,0 +1,16 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,WA,wa-wiaa,2A,0,First Round,2025-11-11,final,,,Port Angeles,0,,Hockinson,1,bottom
+2025-26,WA,wa-wiaa,2A,0,First Round,2025-11-11,final,,,Ellensburg,1,,Sehome,5,bottom
+2025-26,WA,wa-wiaa,2A,0,First Round,2025-11-11,final,,,Tumwater,0,,Cedarcrest,3,bottom
+2025-26,WA,wa-wiaa,2A,0,First Round,2025-11-11,final,,,Nathan Hale,0,,West Valley,8,bottom
+2025-26,WA,wa-wiaa,2A,0,First Round,2025-11-11,final,,,North Kitsap,1,,Anacortes,2,bottom
+2025-26,WA,wa-wiaa,2A,0,First Round,2025-11-11,final,pk,,Selah,0,,Bainbridge,0,bottom
+2025-26,WA,wa-wiaa,2A,0,First Round,2025-11-11,final,,,Steilacoom,1,,East Valley,2,bottom
+2025-26,WA,wa-wiaa,2A,0,First Round,2025-11-11,final,,,East Valley,0,,Columbia River,5,bottom
+2025-26,WA,wa-wiaa,2A,1,Quarterfinals,2025-11-14,final,,,Hockinson,1,,Sehome,0,top
+2025-26,WA,wa-wiaa,2A,1,Quarterfinals,2025-11-14,final,,,Cedarcrest,0,,West Valley,7,bottom
+2025-26,WA,wa-wiaa,2A,1,Quarterfinals,2025-11-14,final,,,Anacortes,4,,Bainbridge,3,top
+2025-26,WA,wa-wiaa,2A,1,Quarterfinals,2025-11-14,final,,,East Valley,2,,Columbia River,3,bottom
+2025-26,WA,wa-wiaa,2A,2,Semifinals,2025-11-21,final,,,Hockinson,0,,West Valley,1,bottom
+2025-26,WA,wa-wiaa,2A,2,Semifinals,2025-11-21,final,,,Anacortes,0,,Columbia River,4,bottom
+2025-26,WA,wa-wiaa,2A,3,Finals,2025-11-22,final,,,West Valley,1,,Columbia River,0,top

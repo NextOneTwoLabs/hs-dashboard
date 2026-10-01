@@ -1,8 +1,0 @@
-season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
-2020-21,cif-socal,gd5,0,Round I,2021-06-01,final,,1,St. Bonaventure,3,8,Arvin,0,top
-2020-21,cif-socal,gd5,0,Round I,2021-06-01,final,,4,Santa Maria,3,5,Gardena,0,top
-2020-21,cif-socal,gd5,0,Round I,2021-06-01,final,,3,Elsinore,3,6,Orange Glen,0,top
-2020-21,cif-socal,gd5,0,Round I,2021-06-01,final,,2,Linfield Christian,3,7,Canyon Springs,0,top
-2020-21,cif-socal,gd5,1,Regional Semi-Finals,2021-06-03,final,pk,1,St. Bonaventure,0,4,Santa Maria,0,top
-2020-21,cif-socal,gd5,1,Regional Semi-Finals,2021-06-03,final,,3,Elsinore,0,2,Linfield Christian,2,bottom
-2020-21,cif-socal,gd5,2,Regional Final,2021-06-05,final,,1,St. Bonaventure,0,2,Linfield Christian,1,bottom

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "acfc9424-377e-4895-9eb6-a3effc3aa8a4",
+  "name": "Pensacola Catholic",
+  "fullName": null,
+  "city": "Pensacola",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/pensacola/pensacola-catholic-crusaders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"State Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":2,"rounds":5,"w":3,"l":1,"d":0,"gf":5,"ga":5,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"8f8ec7cb-9049-4219-9c7c-861a93477630","name":"North Bay Haven Academy","seed":7,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"e77af86d-d71d-4a52-83ce-cc03464e9fd6","name":"Florida State University High School","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-13","opp":{"id":"f939336f-4002-40ba-87b9-cba62ce794f2","name":"South Walton","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"State Semifinal","date":"2026-02-19","opp":{"id":"e15ab772-fb9c-441a-ab66-8967b1d719ab","name":"Montverde Academy","seed":1,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":3,"reached":"State Semifinal","result":"eliminated","depth":0.6}
+  ]
+}

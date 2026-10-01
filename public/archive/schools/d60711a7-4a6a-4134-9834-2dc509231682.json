@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d60711a7-4a6a-4134-9834-2dc509231682",
+  "name": "Montgomery",
+  "fullName": null,
+  "city": "Montgomery",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/montgomery/montgomery-bears",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":5,"ga":6,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"53835be8-1d03-4059-9a09-49e88f682a96","name":"West Fork","seed":null,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"97bf7f69-87f4-4c06-95fe-86e9ff2d8875","name":"Friendswood","seed":null,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "831cad1c-da6a-498a-bc60-4c58a769f4c8",
+  "name": "Eastside Catholic",
+  "fullName": null,
+  "city": "Sammamish",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/sammamish/eastside-catholic-crusaders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":5,"w":2,"l":0,"d":1,"gf":8,"ga":2,"games":[{"round":1,"roundName":"First Round","date":"2025-11-14","opp":{"id":"49c398fb-c7b8-4f6d-9425-642ae7e3cc86","name":"Enumclaw","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Quarterfinals","date":"2025-11-15","opp":{"id":"ef73c9cf-8926-4cad-a6e7-198ea25a1dda","name":"Snohomish","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Semifinals","date":"2025-11-21","opp":{"id":"4ad3a91f-4bc2-4d04-9290-ac995a2c7471","name":"Liberty","seed":null,"score":2},"gf":2,"ga":2,"res":"D","pk":"L"}],"reachedRound":3,"reached":"Semifinals","result":"eliminated","depth":0.6}
+  ]
+}

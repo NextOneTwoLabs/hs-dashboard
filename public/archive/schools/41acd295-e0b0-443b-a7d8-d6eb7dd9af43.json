@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "41acd295-e0b0-443b-a7d8-d6eb7dd9af43",
+  "name": "Molina",
+  "fullName": null,
+  "city": "Dallas",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/dallas/molina-jaguars",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":0,"ga":8,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"5dd60dfc-aa2d-43f0-92c6-43b447e6a702","name":"Poteet","seed":null,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

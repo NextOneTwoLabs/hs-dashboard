@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "dd533c0e-52d8-4fb5-b884-77f6fa73bd13",
+  "name": "Stephens County",
+  "fullName": null,
+  "city": "Toccoa",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/toccoa/stephens-county-indians",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":22,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":5,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"91b19f87-ebaf-4128-935d-6d82da6ad3d1","name":"East Jackson","seed":11,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

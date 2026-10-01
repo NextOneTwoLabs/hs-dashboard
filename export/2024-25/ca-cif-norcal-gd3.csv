@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2024-25,CA,ca-cif-norcal,Division 3,0,Round I,2025-03-04,final,,1,Menlo School,1,8,Sonoma Academy,0,top
+2024-25,CA,ca-cif-norcal,Division 3,0,Round I,2025-03-04,final,,4,Maria Carrillo,2,5,Pleasant Valley,0,top
+2024-25,CA,ca-cif-norcal,Division 3,0,Round I,2025-03-04,final,,3,Bakersfield Christian,1,6,Oakdale,0,top
+2024-25,CA,ca-cif-norcal,Division 3,0,Round I,2025-03-04,final,,2,Chico,1,7,Lincoln,0,top
+2024-25,CA,ca-cif-norcal,Division 3,1,Regional Semifinals,2025-03-06,final,pk,1,Menlo School,1,4,Maria Carrillo,1,bottom
+2024-25,CA,ca-cif-norcal,Division 3,1,Regional Semifinals,2025-03-06,final,pk,3,Bakersfield Christian,0,2,Chico,0,bottom
+2024-25,CA,ca-cif-norcal,Division 3,2,Regional Final,2025-03-08,final,,4,Maria Carrillo,1,2,Chico,0,top

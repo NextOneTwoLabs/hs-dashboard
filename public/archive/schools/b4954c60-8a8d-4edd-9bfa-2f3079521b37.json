@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "b4954c60-8a8d-4edd-9bfa-2f3079521b37",
+  "name": "Bolles",
+  "fullName": null,
+  "city": "Jacksonville",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/jacksonville/bolles-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":5,"rounds":5,"w":1,"l":1,"d":0,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"8593ab47-ee43-42eb-b191-01ce6391c8f9","name":"Fernandina Beach","seed":4,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"f939336f-4002-40ba-87b9-cba62ce794f2","name":"South Walton","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

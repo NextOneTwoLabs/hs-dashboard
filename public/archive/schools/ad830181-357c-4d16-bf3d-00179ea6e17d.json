@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "ad830181-357c-4d16-bf3d-00179ea6e17d",
+  "name": "All Saints' Academy",
+  "fullName": null,
+  "city": "Winter Haven",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/winter-haven/all-saints-academy-saints",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","result":"eliminated","reached":"Region Final"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","gender":"girls","seed":1,"rounds":5,"w":2,"l":1,"d":0,"gf":8,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"a8cb8295-9946-4a11-b974-8991070e0c59","name":"Orangewood Christian","seed":8,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"a4707bdd-729a-4357-b65d-1e9764fe6103","name":"Seffner Christian","seed":5,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-13","opp":{"id":"03c4dc2e-7191-474b-ae6d-600a1d8e447d","name":"Victory Christian Academy","seed":3,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Region Final","result":"eliminated","depth":0.4}
+  ]
+}

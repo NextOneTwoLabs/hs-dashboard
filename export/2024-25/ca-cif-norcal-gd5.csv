@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2024-25,CA,ca-cif-norcal,Division 5,0,Round I,2025-03-04,final,,1,Lowell,7,8,Hamilton,1,top
+2024-25,CA,ca-cif-norcal,Division 5,0,Round I,2025-03-04,final,,4,Live Oak,1,5,West Valley,0,top
+2024-25,CA,ca-cif-norcal,Division 5,0,Round I,2025-03-04,final,,3,Oakland Tech,3,6,Selma,1,top
+2024-25,CA,ca-cif-norcal,Division 5,0,Round I,2025-03-04,final,,2,Ripon Christian,3,7,Granite Hills,0,top
+2024-25,CA,ca-cif-norcal,Division 5,1,Regional Semifinals,2025-03-06,final,,1,Lowell,5,4,Live Oak,0,top
+2024-25,CA,ca-cif-norcal,Division 5,1,Regional Semifinals,2025-03-06,final,,3,Oakland Tech,0,2,Ripon Christian,1,bottom
+2024-25,CA,ca-cif-norcal,Division 5,2,Regional Final,2025-03-08,final,,1,Lowell,1,2,Ripon Christian,0,top

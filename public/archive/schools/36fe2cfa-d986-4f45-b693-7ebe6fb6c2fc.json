@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "36fe2cfa-d986-4f45-b693-7ebe6fb6c2fc",
+  "name": "Lake Mary",
+  "fullName": "Lake Mary Rams",
+  "city": "Lake Mary",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/lake-mary/lake-mary-rams",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":4,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"champion","reached":"State Championship"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":1,"rounds":5,"w":4,"l":0,"d":1,"gf":17,"ga":0,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"c92febfd-3fe6-4214-9c78-d8aa7e7f217c","name":"Seminole","seed":8,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"dcf8018f-eba1-465b-8c93-c7c74e74373d","name":"Timber Creek","seed":5,"score":0},"gf":7,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-17","opp":{"id":"a7bcd97d-9463-40b3-818f-c37e91c68f6f","name":"Creekside","seed":2,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"State Semifinal","date":"2026-02-24","opp":{"id":"c810185d-9468-417a-a993-e435af4ceac5","name":"Jupiter","seed":4,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":4,"roundName":"State Championship","date":"2026-02-25","opp":{"id":"5df2a4f9-1148-4246-9bf0-1c085ebdc228","name":"Cypress Bay","seed":2,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"}],"reachedRound":4,"reached":"State Championship","result":"champion","depth":1.0}
+  ]
+}

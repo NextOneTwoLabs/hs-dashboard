@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "56a30da7-e8b2-47b4-a3a4-3e8175b86966",
+  "name": "Starr's Mill",
+  "fullName": null,
+  "city": "Fayetteville",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/fayetteville/starrs-mill-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":7,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"5b34cfbd-4e21-408c-89db-fc5d034e641d","name":"Northview","seed":null,"score":0},"gf":7,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"31b1eb3d-903a-4d37-a2a4-21f5ddb8ff4d","name":"Westminster","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

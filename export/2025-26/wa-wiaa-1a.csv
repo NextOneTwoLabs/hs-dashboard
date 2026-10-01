@@ -1,0 +1,16 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,WA,wa-wiaa,1A,0,First Round,2025-11-11,final,,,Cascade,0,,Lynden Christian,8,bottom
+2025-26,WA,wa-wiaa,1A,0,First Round,2025-11-11,final,,,King's Way Christian,0,,Bear Creek,4,bottom
+2025-26,WA,wa-wiaa,1A,0,First Round,2025-11-11,final,,,Klahowya,0,,University Prep,3,bottom
+2025-26,WA,wa-wiaa,1A,0,First Round,2025-11-11,final,,,Wahluke,0,,Seton Catholic,7,bottom
+2025-26,WA,wa-wiaa,1A,0,First Round,2025-11-11,final,,,Tenino,3,,Cashmere,6,bottom
+2025-26,WA,wa-wiaa,1A,0,First Round,2025-11-11,final,,,Cascade Christian,0,,Montesano,4,bottom
+2025-26,WA,wa-wiaa,1A,0,First Round,2025-11-11,final,pk,,Bellevue Christian,1,,Naches Valley,1,top
+2025-26,WA,wa-wiaa,1A,0,First Round,2025-11-11,final,,,Blaine,1,,Cedar Park Christian,9,bottom
+2025-26,WA,wa-wiaa,1A,1,Quarterfinals,2025-11-14,final,,,Lynden Christian,0,,Bear Creek,1,bottom
+2025-26,WA,wa-wiaa,1A,1,Quarterfinals,2025-11-14,final,,,University Prep,0,,Seton Catholic,1,bottom
+2025-26,WA,wa-wiaa,1A,1,Quarterfinals,2025-11-14,final,,,Cashmere,0,,Montesano,1,bottom
+2025-26,WA,wa-wiaa,1A,1,Quarterfinals,2025-11-14,final,,,Bellevue Christian,0,,Cedar Park Christian,6,bottom
+2025-26,WA,wa-wiaa,1A,2,Semifinals,2025-11-21,final,,,Bear Creek,1,,Seton Catholic,2,bottom
+2025-26,WA,wa-wiaa,1A,2,Semifinals,2025-11-21,final,,,Montesano,0,,Cedar Park Christian,5,bottom
+2025-26,WA,wa-wiaa,1A,3,Finals,2025-11-22,final,,,Seton Catholic,0,,Cedar Park Christian,3,bottom

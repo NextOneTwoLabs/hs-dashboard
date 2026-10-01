@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "5be9e121-33a1-424a-9a58-ec31e6a36187",
+  "name": "Academy at the Lakes",
+  "fullName": null,
+  "city": "Land O Lakes",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/land-o-lakes/academy-at-the-lakes-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","gender":"girls","seed":7,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"a37c73b2-4e94-4182-a84e-e26334b02bd3","name":"Mount Dora Christian Academy","seed":2,"score":1},"gf":null,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

@@ -4,10 +4,11 @@
   "name": "Everett Alvarez",
   "fullName": null,
   "city": "Salinas",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/salinas/everett-alvarez-eagles",
   "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
-  "best": {"season":"2023-24","competition":"cif-norcal","division":"gd4","result":"runner-up","reached":"Regional Final"},
+  "best": {"season":"2023-24","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","result":"runner-up","reached":"Regional Final"},
   "appearances": [
-    {"season":"2023-24","competition":"cif-norcal","division":"gd4","seed":3,"rounds":3,"w":2,"l":1,"d":0,"gf":9,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"6a6f6833-277b-4d7a-8ac6-82fd49fcc05b","name":"Mission College Prep","seed":6,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"acc34401-46cf-4f11-b0b0-c09b82e36d0f","name":"Torres","seed":7,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2024-03-02","opp":{"id":"69e24861-fa93-42a2-acb5-be60e01ee555","name":"Marin Catholic","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+    {"season":"2023-24","state":"CA","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":3,"rounds":3,"w":2,"l":1,"d":0,"gf":9,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"6a6f6833-277b-4d7a-8ac6-82fd49fcc05b","name":"Mission College Prep","seed":6,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"acc34401-46cf-4f11-b0b0-c09b82e36d0f","name":"Torres","seed":7,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2024-03-02","opp":{"id":"69e24861-fa93-42a2-acb5-be60e01ee555","name":"Marin Catholic","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
   ]
 }

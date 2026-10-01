@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "480b2118-5993-4e10-80d5-0c885272dd25",
+  "name": "New Waverly",
+  "fullName": null,
+  "city": "New Waverly",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/new-waverly/new-waverly-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"47b461b3-e656-4e05-869c-2e0ae1dab207","name":"Scarborough","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

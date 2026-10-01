@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "06b5fa75-0cbb-4f09-8417-b955e2fb19f7",
+  "name": "Jefferson",
+  "fullName": "Jefferson Dragons",
+  "city": "Jefferson",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/jefferson/jefferson-dragons",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":5,"l":0,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","result":"champion","reached":"Round 5"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","gender":"girls","seed":null,"rounds":5,"w":5,"l":0,"d":0,"gf":28,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"80a5b0ba-affb-44e5-a5e5-b73b88d6eace","name":"Spalding","seed":null,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"01c82503-b5d4-4433-8270-8225b5b70061","name":"Northwest Whitfield","seed":null,"score":0},"gf":6,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"9b9a1bdb-e57c-4d00-883b-4c11cc115e36","name":"Cherokee Bluff","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Round 4","date":"2026-05-07","opp":{"id":"4a599da9-2439-4488-853f-36d0a47c8d8c","name":"Dawson County","seed":null,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":4,"roundName":"Round 5","date":null,"opp":{"id":"69d78a7d-6a9f-458e-81a6-e4e767a27906","name":"Oconee County","seed":null,"score":3},"gf":4,"ga":3,"res":"W","pk":null}],"reachedRound":4,"reached":"Round 5","result":"champion","depth":1.0}
+  ]
+}

@@ -4,11 +4,12 @@
   "name": "Corning",
   "fullName": null,
   "city": "Corning",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/corning/corning-cardinals",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":1,"l":2,"d":0},
-  "best": {"season":"2017-18","competition":"cif-norcal","division":"gd4","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2017-18","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-norcal","division":"gd4","seed":2,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"01e250af-f9de-4e2b-8e1a-11cc0a1fd241","name":"Winters","seed":7,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"67b79ebf-71d4-4b9b-93a0-20d52fbf2110","name":"Ripon","seed":3,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
-    {"season":"2018-19","competition":"cif-norcal","division":"gd5","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"c35eb9a1-800f-405d-956f-852dbefe5ec8","name":"Oakland Tech","seed":3,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":2,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"01e250af-f9de-4e2b-8e1a-11cc0a1fd241","name":"Winters","seed":7,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"67b79ebf-71d4-4b9b-93a0-20d52fbf2110","name":"Ripon","seed":3,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
+    {"season":"2018-19","state":"CA","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"c35eb9a1-800f-405d-956f-852dbefe5ec8","name":"Oakland Tech","seed":3,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

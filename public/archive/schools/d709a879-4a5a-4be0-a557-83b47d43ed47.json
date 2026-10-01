@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d709a879-4a5a-4be0-a557-83b47d43ed47",
+  "name": "Edmonds-Woodway",
+  "fullName": null,
+  "city": "Edmonds",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/edmonds/edmonds-woodway-warriors",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"Play-in"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Play-in","date":null,"opp":{"id":"af3e5aa1-f02c-4595-bad3-360be70baf61","name":"Silas","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Play-in","result":"eliminated","depth":0.0}
+  ]
+}

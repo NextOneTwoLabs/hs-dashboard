@@ -1,0 +1,16 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,PA,pa-piaa,4A,0,First Round,2025-11-04,final,,,Pennridge,0,,Central Dauphin,3,bottom
+2025-26,PA,pa-piaa,4A,0,First Round,2025-11-04,final,,,Archbishop Carroll,2,,Parkland,1,top
+2025-26,PA,pa-piaa,4A,0,First Round,2025-11-04,final,,,Nazareth Academy,3,,Lower Merion,2,top
+2025-26,PA,pa-piaa,4A,0,First Round,2025-11-04,final,,,Williamsport,0,,Central Bucks South,9,bottom
+2025-26,PA,pa-piaa,4A,0,First Round,2025-11-04,final,,,Manheim Township,0,,Central Bucks East,3,bottom
+2025-26,PA,pa-piaa,4A,0,First Round,2025-11-04,final,,,McDowell,1,,Seneca Valley,2,bottom
+2025-26,PA,pa-piaa,4A,0,First Round,2025-11-04,final,,,Downingtown West,2,,Mechanicsburg,1,top
+2025-26,PA,pa-piaa,4A,0,First Round,2025-11-04,final,,,North Allegheny,5,,Penn Manor,0,top
+2025-26,PA,pa-piaa,4A,1,Quarterfinals,2025-11-08,final,,,Central Dauphin,3,,Archbishop Carroll,0,top
+2025-26,PA,pa-piaa,4A,1,Quarterfinals,2025-11-08,final,,,Nazareth Academy,0,,Central Bucks South,1,bottom
+2025-26,PA,pa-piaa,4A,1,Quarterfinals,2025-11-08,final,,,Central Bucks East,3,,Seneca Valley,1,top
+2025-26,PA,pa-piaa,4A,1,Quarterfinals,2025-11-08,final,,,Downingtown West,1,,North Allegheny,2,bottom
+2025-26,PA,pa-piaa,4A,2,Semi-Finals,2025-11-11,final,,,Central Dauphin,2,,Central Bucks South,3,bottom
+2025-26,PA,pa-piaa,4A,2,Semi-Finals,2025-11-11,final,,,Central Bucks East,1,,North Allegheny,0,top
+2025-26,PA,pa-piaa,4A,3,Final,2025-11-15,final,,,Central Bucks South,0,,Central Bucks East,7,bottom

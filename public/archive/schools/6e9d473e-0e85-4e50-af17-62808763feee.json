@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "6e9d473e-0e85-4e50-af17-62808763feee",
+  "name": "Savannah Country Day",
+  "fullName": null,
+  "city": "Savannah",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/savannah/savannah-country-day-hornets",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":11,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"baeef946-74ee-4407-a4b5-305b7be3cb39","name":"Landmark Christian","seed":null,"score":0},"gf":9,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"897f5114-ff9e-427f-9333-58c1f245a32f","name":"Trinity Christian","seed":null,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

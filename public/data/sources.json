@@ -1,29 +1,58 @@
 {
-  "schema": 1,
+  "schema": 2,
   "sport": "soccer",
-  "state": "CA",
   "genders": ["g"],
   "activeSeason": "2026-27",
   "sources": {
     "cif": { "base": "https://www.cifstate.org/sports/soccer/", "delaySeconds": 8 },
     "maxpreps": { "base": "https://www.maxpreps.com", "delaySeconds": 4 }
   },
-  "competitions": {
-    "cif-state": { "label": "CIF State Championships", "short": "State" },
-    "cif-norcal": { "label": "CIF NorCal Regional Championships", "short": "NorCal" },
-    "cif-socal": { "label": "CIF SoCal Regional Championships", "short": "SoCal" }
+  "refresh": {
+    "maxRequests": 60, "lookaheadDays": 2, "lookbackDays": 3,
+    "recheckSlotUtc": { "start": "06:00", "end": "06:29" },
+    "termWindows": {
+      "fall": { "from": "10-01", "to": "12-15", "year": "start" },
+      "winter": { "from": "01-15", "to": "04-20", "year": "end" },
+      "spring": { "from": "04-01", "to": "06-15", "year": "end" }
+    },
+    "notes": "A registered active-season tournament with no listed brackets, a pending list page, or brackets without dates is re-checked only by the one cron run that starts in recheckSlotUtc (06:00 UTC), and only inside its term window. A state whose playoffs fall outside its term window (some winter states may start before 01-15; unverified) sets liveFrom/liveTo (MM-DD) on its competition or season entry. tests/test_refresh.py checks that refresh.yml has exactly one daily run in the slot."
   },
-  "refresh": { "maxRequests": 60, "lookaheadDays": 2, "lookbackDays": 3 },
+  "aliases": { "cif-state": "ca-cif-state", "cif-norcal": "ca-cif-norcal", "cif-socal": "ca-cif-socal" },
+  "states": {
+    "CA": { "name": "California", "association": "CIF", "associationName": "California Interscholastic Federation" },
+    "FL": { "name": "Florida", "association": "FHSAA", "associationName": "Florida High School Athletic Association" },
+    "GA": { "name": "Georgia", "association": "GHSA", "associationName": "Georgia High School Association" },
+    "PA": { "name": "Pennsylvania", "association": "PIAA", "associationName": "Pennsylvania Interscholastic Athletic Association" },
+    "TX": { "name": "Texas", "association": "UIL", "associationName": "University Interscholastic League" },
+    "WA": { "name": "Washington", "association": "WIAA", "associationName": "Washington Interscholastic Activities Association" }
+  },
+  "competitions": {
+    "ca-cif-state": { "state": "CA", "source": "cif", "term": "winter", "label": "CIF State Championships", "short": "State" },
+    "ca-cif-norcal": { "state": "CA", "source": "cif", "term": "winter", "label": "CIF NorCal Regional Championships", "short": "NorCal" },
+    "ca-cif-socal": { "state": "CA", "source": "cif", "term": "winter", "label": "CIF SoCal Regional Championships", "short": "SoCal" },
+    "fl-fhsaa": { "state": "FL", "source": "maxpreps", "term": "winter", "gender": "girls", "label": "FHSAA State Championships", "short": "State" },
+    "ga-ghsa": { "state": "GA", "source": "maxpreps", "term": "spring", "gender": "girls", "label": "GHSA State Championships", "short": "State" },
+    "pa-piaa": { "state": "PA", "source": "maxpreps", "term": "fall", "gender": "girls", "label": "PIAA State Championships", "short": "State" },
+    "tx-uil": { "state": "TX", "source": "maxpreps", "term": "winter", "gender": "girls", "label": "UIL State Championships", "short": "State" },
+    "wa-wiaa": { "state": "WA", "source": "maxpreps", "term": "fall", "gender": "girls", "label": "WIAA State Championships", "short": "State" }
+  },
   "seasons": {
-    "2017-18": { "competitions": { "cif-norcal": { "path": "NorCal_brkts_2018" }, "cif-socal": { "path": "SoCal_brkts_2018" } } },
-    "2018-19": { "competitions": { "cif-norcal": { "path": "NorCal_brkts_2019" }, "cif-socal": { "path": "SoCal_brkts_2019" } } },
-    "2019-20": { "competitions": {}, "note": "Regional championships cancelled (COVID-19)." },
-    "2020-21": { "competitions": { "cif-socal": { "path": "SoCal_brkts_2021" } } },
-    "2021-22": { "competitions": { "cif-norcal": { "path": "NorCal_brkts_2022" }, "cif-socal": { "path": "SoCal_brkts_2022" } } },
-    "2022-23": { "competitions": { "cif-norcal": { "path": "NorCal_brkts_2023" }, "cif-socal": { "path": "SoCal_brkts_2023" } } },
-    "2023-24": { "competitions": { "cif-norcal": { "path": "NorCal_brkts_2024" }, "cif-socal": { "path": "SoCal_brkts_2024" } } },
-    "2024-25": { "competitions": { "cif-norcal": { "path": "NorCal_brkts_2025" }, "cif-socal": { "path": "SoCal_brkts_2025" } } },
-    "2025-26": { "competitions": { "cif-state": { "path": "brkts_2026", "window": { "start": "2026-02-27", "end": "2026-03-16" } } } },
-    "2026-27": { "competitions": { "cif-state": { "path": "brkts_2027", "window": { "start": "2027-02-25", "end": "2027-03-16" } } } }
+    "2017-18": { "competitions": { "ca-cif-norcal": { "path": "NorCal_brkts_2018" }, "ca-cif-socal": { "path": "SoCal_brkts_2018" } } },
+    "2018-19": { "competitions": { "ca-cif-norcal": { "path": "NorCal_brkts_2019" }, "ca-cif-socal": { "path": "SoCal_brkts_2019" } } },
+    "2019-20": { "competitions": {}, "notes": { "CA": "Regional championships cancelled (COVID-19)." } },
+    "2020-21": { "competitions": { "ca-cif-socal": { "path": "SoCal_brkts_2021" } } },
+    "2021-22": { "competitions": { "ca-cif-norcal": { "path": "NorCal_brkts_2022" }, "ca-cif-socal": { "path": "SoCal_brkts_2022" } } },
+    "2022-23": { "competitions": { "ca-cif-norcal": { "path": "NorCal_brkts_2023" }, "ca-cif-socal": { "path": "SoCal_brkts_2023" } } },
+    "2023-24": { "competitions": { "ca-cif-norcal": { "path": "NorCal_brkts_2024" }, "ca-cif-socal": { "path": "SoCal_brkts_2024" } } },
+    "2024-25": { "competitions": { "ca-cif-norcal": { "path": "NorCal_brkts_2025" }, "ca-cif-socal": { "path": "SoCal_brkts_2025" } } },
+    "2025-26": { "competitions": {
+      "ca-cif-state": { "path": "brkts_2026", "window": { "start": "2026-02-27", "end": "2026-03-16" } },
+      "fl-fhsaa": { "tournament": "qhz-pwI00E-SFVCJ27pWow", "list": "/tournament/list/qhz-pwI00E-SFVCJ27pWow/girls-soccer-winter-25-26/2026-girls-soccer-state-championship-tournament.htm" },
+      "ga-ghsa": { "tournament": "qXk0SUbWTEKs03TLFo-qew", "list": "/tournament/list/qXk0SUbWTEKs03TLFo-qew/girls-soccer-spring-26/2026-ghsa-state-girls-soccer-championships-(georgia).htm" },
+      "pa-piaa": { "tournament": "M3YgzqWLmUe3y4b6Iwjf_g", "list": "/tournament/list/M3YgzqWLmUe3y4b6Iwjf_g/girls-soccer-25/2025-piaa-girls-soccer-championships.htm" },
+      "tx-uil": { "tournament": "8y9aX16M0U-dwDYbnzV5Jw", "list": "/tournament/list/8y9aX16M0U-dwDYbnzV5Jw/girls-soccer-winter-25-26/2026-uil-texas-girls-soccer-state-championships.htm" },
+      "wa-wiaa": { "tournament": "8SlIV1lTx0WSzEzAUm6YRg", "list": "/tournament/list/8SlIV1lTx0WSzEzAUm6YRg/girls-soccer-25/2025-wiaa-girls-soccer-state-championships.htm" }
+    } },
+    "2026-27": { "competitions": { "ca-cif-state": { "path": "brkts_2027", "window": { "start": "2027-02-25", "end": "2027-03-16" } } } }
   }
 }

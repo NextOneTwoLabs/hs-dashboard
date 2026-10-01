@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "84dd878e-671b-40d4-83de-e73ab301f92e",
+  "name": "Pike County",
+  "fullName": "Pike County Pirates",
+  "city": "Zebulon",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/zebulon/pike-county-pirates",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":5,"l":0,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"champion","reached":"Round 5"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":1,"rounds":5,"w":5,"l":0,"d":0,"gf":32,"ga":0,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"a4d93334-e880-4e96-a7da-5f90be96b332","name":"Josey","seed":32,"score":0},"gf":16,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"7a4095cc-08e2-48e3-9174-137315c39007","name":"Therrell","seed":null,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"8e96943c-db9e-4b84-b761-bb15f8f41b40","name":"Morgan County","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Round 4","date":"2026-05-07","opp":{"id":"f471822d-5747-4784-b675-dcf2fe32dcaa","name":"Columbus","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":4,"roundName":"Round 5","date":null,"opp":{"id":"2176f274-435b-4e82-809a-785a0d94cdba","name":"Coahulla Creek","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null}],"reachedRound":4,"reached":"Round 5","result":"champion","depth":1.0}
+  ]
+}

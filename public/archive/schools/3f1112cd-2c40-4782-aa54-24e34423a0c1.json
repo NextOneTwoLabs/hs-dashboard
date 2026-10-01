@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "3f1112cd-2c40-4782-aa54-24e34423a0c1",
+  "name": "Appling County",
+  "fullName": null,
+  "city": "Baxley",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/baxley/appling-county-pirates",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":31,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":8,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"2176f274-435b-4e82-809a-785a0d94cdba","name":"Coahulla Creek","seed":2,"score":8},"gf":1,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

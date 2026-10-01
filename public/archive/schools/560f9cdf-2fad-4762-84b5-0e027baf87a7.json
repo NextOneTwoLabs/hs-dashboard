@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "560f9cdf-2fad-4762-84b5-0e027baf87a7",
+  "name": "Bellevue Christian",
+  "fullName": null,
+  "city": "Clyde Hill",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/clyde-hill/bellevue-christian-vikings",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":1},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":1,"gf":1,"ga":7,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"ff8bdc99-2d3a-43f2-8016-a0d0bd483623","name":"Naches Valley","seed":null,"score":1},"gf":1,"ga":1,"res":"D","pk":"W"},{"round":1,"roundName":"Quarterfinals","date":"2025-11-14","opp":{"id":"4affd226-4f87-4e09-94ea-477ce80aac3d","name":"Cedar Park Christian","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":1,"reached":"Quarterfinals","result":"eliminated","depth":0.25}
+  ]
+}

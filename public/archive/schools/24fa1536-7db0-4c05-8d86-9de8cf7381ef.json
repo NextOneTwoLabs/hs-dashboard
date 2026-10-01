@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "24fa1536-7db0-4c05-8d86-9de8cf7381ef",
+  "name": "Fox Chapel",
+  "fullName": null,
+  "city": "Pittsburgh",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/pittsburgh/fox-chapel-foxes",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":4,"w":1,"l":1,"d":0,"gf":3,"ga":3,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"b81e272a-b272-4fa8-a880-eb2fee10f1a6","name":"Harbor Creek","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-08","opp":{"id":"c5e3af38-ee21-402c-a91a-5cbe53e35c60","name":"DuBois","seed":null,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Quarterfinals","result":"eliminated","depth":0.25}
+  ]
+}

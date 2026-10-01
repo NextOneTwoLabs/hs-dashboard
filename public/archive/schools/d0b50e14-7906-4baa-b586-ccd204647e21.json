@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d0b50e14-7906-4baa-b586-ccd204647e21",
+  "name": "Ysleta",
+  "fullName": null,
+  "city": "El Paso",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/el-paso/ysleta-indians",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"cbd6726f-84d0-41d1-80d8-f781462fc574","name":"Frenship Memorial","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

@@ -4,10 +4,11 @@
   "name": "Tulare Western",
   "fullName": null,
   "city": "Tulare",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/tulare/tulare-western-mustangs",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2025-26","competition":"cif-state","division":"gd3","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2025-26","competition":"ca-cif-state","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2025-26","competition":"cif-state","division":"gd3","seed":7,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":7,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"4d6fdf13-cda7-4718-b820-95c9480b4610","name":"Millikan","seed":2,"score":7},"gf":0,"ga":7,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2025-26","state":"CA","competition":"ca-cif-state","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":7,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":7,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"4d6fdf13-cda7-4718-b820-95c9480b4610","name":"Millikan","seed":2,"score":7},"gf":0,"ga":7,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

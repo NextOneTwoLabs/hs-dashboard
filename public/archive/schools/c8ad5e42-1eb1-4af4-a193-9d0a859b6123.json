@@ -4,10 +4,11 @@
   "name": "Selma",
   "fullName": null,
   "city": "Selma",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/selma/selma-bears",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2024-25","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2024-25","competition":"cif-norcal","division":"gd5","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"c35eb9a1-800f-405d-956f-852dbefe5ec8","name":"Oakland Tech","seed":3,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2024-25","state":"CA","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"c35eb9a1-800f-405d-956f-852dbefe5ec8","name":"Oakland Tech","seed":3,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

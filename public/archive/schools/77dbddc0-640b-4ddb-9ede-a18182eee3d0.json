@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "77dbddc0-640b-4ddb-9ede-a18182eee3d0",
+  "name": "Cleburne",
+  "fullName": null,
+  "city": "Cleburne",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/cleburne/cleburne-yellowjackets",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"96fd1b05-4c27-48db-ad2c-4906d77120cf","name":"Paschal","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

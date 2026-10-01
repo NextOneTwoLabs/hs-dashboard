@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "5e9a169e-29ae-4e9b-bdc4-8f1b8d48159f",
+  "name": "Wakeland",
+  "fullName": null,
+  "city": "Frisco",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/frisco/wakeland-wolverines",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":4,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"State Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":4,"l":1,"d":0,"gf":20,"ga":4,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"c280124c-5c36-4a4f-a1e9-b7f5dce7dffd","name":"Memorial","seed":null,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"57767bc9-9b18-43a5-9ac3-759b5f557aee","name":"Jacksonville","seed":null,"score":2},"gf":6,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"24c7e91a-f7e6-4bd1-90ba-7caaba91302f","name":"Belton","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Regional Finals","date":"2026-03-30","opp":{"id":"761e1afd-d386-4edd-a4ef-5e4f79d1fbf0","name":"Lovejoy","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":4,"roundName":"State Semifinals","date":"2026-04-02","opp":{"id":"7ddaa698-ba9e-4921-9df2-200bcf4124d8","name":"Grapevine","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":4,"reached":"State Semifinals","result":"eliminated","depth":0.667}
+  ]
+}

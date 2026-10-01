@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "dfea2520-789c-47da-97f5-03438f05d341",
+  "name": "Out-of-Door Academy",
+  "fullName": null,
+  "city": "Sarasota",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/sarasota/out-of-door-academy-thunder",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","result":"eliminated","reached":"Region Final"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","gender":"girls","seed":2,"rounds":5,"w":2,"l":1,"d":0,"gf":9,"ga":6,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"f6190ed9-c4ed-4a90-8dca-b9e16343131c","name":"Saint Stephen's Episcopal","seed":7,"score":2},"gf":5,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"3a064769-e112-49db-8f93-e9a581739734","name":"Evangelical Christian","seed":6,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-13","opp":{"id":"713a86e0-bfd3-41da-bf21-f6a9c4575930","name":"Canterbury","seed":1,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Region Final","result":"eliminated","depth":0.4}
+  ]
+}

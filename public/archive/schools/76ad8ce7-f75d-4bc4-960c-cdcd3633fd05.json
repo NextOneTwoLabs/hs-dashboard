@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "76ad8ce7-f75d-4bc4-960c-cdcd3633fd05",
+  "name": "Ridgeline",
+  "fullName": null,
+  "city": "Liberty Lake",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/liberty-lake/ridgeline-falcons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":4,"ga":2,"games":[{"round":0,"roundName":"Play-in","date":null,"opp":{"id":"8518a1ee-6485-4df5-9d16-72d69abe5103","name":"Shorewood","seed":null,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"First Round","date":"2025-11-14","opp":{"id":"54de1e46-ce20-494a-b24f-437ba874db78","name":"Bellevue","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"First Round","result":"eliminated","depth":0.2}
+  ]
+}

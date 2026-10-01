@@ -1,16 +1,19 @@
 name: Refresh data
 
-# Every 30 minutes, afternoon to late evening Pacific time, February and March
-# only (the CIF State girls soccer window). The crawler itself checks each
-# competition's window in public/data/sources.json and exits without any
-# request when none is open.
+# Fall, winter and spring state tournaments overlap, so this runs all year:
+# every 30 minutes from mid-morning to late evening US time. The crawler only
+# fetches competitions that are live (inside a configured window, or with
+# unfinished brackets whose dates are near today) and exits without any
+# request otherwise. Mondays it also lists the active season's MaxPreps
+# tournaments into archive/discovered/ for review (nothing is registered).
 on:
   schedule:
-    - cron: "*/30 0-7,20-23 * 2,3 *"
+    - cron: "*/30 0-6,15-23 * * *"
+    - cron: "0 9 * * 1"
   workflow_dispatch:
     inputs:
       mode:
-        description: "refresh (open windows only) or backfill (all incomplete seasons)"
+        description: "refresh (live competitions only) or backfill (all incomplete seasons)"
         default: refresh
         type: choice
         options: [refresh, backfill]
@@ -31,7 +34,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Discover tournaments (weekly)
+        if: github.event.schedule == '0 9 * * 1'
+        run: |
+          season=$(python -c "import json; print(json.load(open('public/data/sources.json'))['activeSeason'])")
+          python -m crawler.hs --discover "$season"
       - name: Crawl
+        if: github.event.schedule != '0 9 * * 1'
         run: python -m crawler.hs --${{ inputs.mode || 'refresh' }} --export
       - name: Commit changes
         run: |

@@ -258,8 +258,28 @@ table.data td.n, table.data th.n { text-align: right; font-variant-numeric: tabu
 .res-L { color: var(--danger-text); font-weight: 600; }
 .res-D { color: var(--text-secondary); font-weight: 600; }
 .fav-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.text-input {
+  height: 32px; padding: 0 10px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--bg-surface-alt); color: var(--text-primary); font: inherit;
+}
+
+/* ===== States overview ===== */
+.state-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.state-card { display: flex; flex-direction: column; padding: 16px 18px; }
+.state-card header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.state-card h2 { font-size: 18px; font-weight: 700; }
+.state-card h2 a { color: var(--text-primary); }
+.state-meta { font-size: 12px; margin: 10px 0 6px; }
+.champ-list { list-style: none; font-size: 13px; flex: 1; }
+.champ-list li { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; border-top: 1px solid var(--border-light); }
+.champ-list li > span { text-align: right; font-weight: 600; }
+.champ-list li > span a { color: var(--text-primary); }
+.state-card footer { display: flex; gap: 16px; margin-top: 12px; font-size: 13px; font-weight: 500; }
 
 /* ===== Responsive ===== */
+@media (max-width: 1100px) {
+  .brand-sub { display: none; }
+}
 @media (max-width: 900px) {
   .topbar { gap: 12px; padding: 0 12px; }
   .brand-sub { display: none; }

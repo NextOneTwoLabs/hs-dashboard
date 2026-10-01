@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "5b2c13b2-8a76-45a8-af41-a94ecdd27ee3",
+  "name": "Toledo",
+  "fullName": null,
+  "city": "Toledo",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/toledo/toledo-riverhawks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"e7b16e18-3461-4cad-a427-703ce4305d38","name":"Highland","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

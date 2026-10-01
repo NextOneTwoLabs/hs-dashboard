@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "b55009b0-f9fe-46a6-b905-a6988ab076dd",
+  "name": "Sickles",
+  "fullName": null,
+  "city": "Tampa",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/tampa/sickles-gryphons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","gender":"girls","seed":4,"rounds":5,"w":1,"l":1,"d":0,"gf":2,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"1004e3a1-b6d7-4704-b859-7d39af266600","name":"Mitchell","seed":5,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"aafb12f7-b885-495c-960c-7e56ef3fe434","name":"Lakewood Ranch","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

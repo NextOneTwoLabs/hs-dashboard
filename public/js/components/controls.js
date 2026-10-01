@@ -1,12 +1,21 @@
 import { esc } from '../util.js';
 
-export function seasonSelect(catalog, current, { withAll = false } = {}) {
+export function stateSelect(statesIndex, current, { withAll = false } = {}) {
+  const opts = statesIndex.states
+    .filter((s) => s.latestSeason)
+    .map((s) => `<option value="${esc(s.code)}"${s.code === current ? ' selected' : ''}>${esc(s.name)} (${esc(s.association)})</option>`)
+    .join('');
+  return `<div class="field"><label for="state-select">State</label>
+    <select id="state-select" data-set="st">${withAll ? `<option value=""${current ? '' : ' selected'}>All states</option>` : ''}${opts}</select></div>`;
+}
+
+export function seasonSelect(catalog, current) {
   const opts = catalog.seasons
     .filter((s) => s.competitions.length)
     .map((s) => `<option value="${esc(s.season)}"${s.season === current ? ' selected' : ''}>${esc(s.season)}</option>`)
     .join('');
   return `<div class="field"><label for="season-select">Season</label>
-    <select id="season-select" data-set="season">${withAll ? '<option value="">All seasons</option>' : ''}${opts}</select></div>`;
+    <select id="season-select" data-set="season">${opts}</select></div>`;
 }
 
 export function segmented(key, value, options, label) {
@@ -23,7 +32,7 @@ export const genderSeg = (g, catalog) =>
 // Wire [data-set=key] selects and [data-set-key] buttons to setState.
 export function bindControls(root, setState) {
   root.querySelectorAll('select[data-set]').forEach((sel) => {
-    sel.addEventListener('change', () => setState({ [sel.dataset.set]: sel.value }));
+    sel.addEventListener('change', () => setState({ [sel.dataset.set]: sel.value || null }));
   });
   root.querySelectorAll('button').forEach((btn) => {
     const attr = [...btn.attributes].find((a) => a.name.startsWith('data-set-'));

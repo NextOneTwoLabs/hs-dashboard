@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "7ce5b4a3-85c7-47db-9c5f-7570c35192c7",
+  "name": "Imagine School at North Port",
+  "fullName": null,
+  "city": "North Port",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/north-port/imagine-school-at-north-port-sharks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","gender":"girls","seed":5,"rounds":5,"w":0,"l":0,"d":1,"gf":2,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"9c84d2d5-3867-4963-86e9-fe396c307214","name":"St. Petersburg Catholic","seed":4,"score":2},"gf":2,"ga":2,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

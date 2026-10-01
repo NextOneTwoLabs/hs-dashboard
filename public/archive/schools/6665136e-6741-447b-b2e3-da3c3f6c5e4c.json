@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "6665136e-6741-447b-b2e3-da3c3f6c5e4c",
+  "name": "Jeff Davis",
+  "fullName": null,
+  "city": "Hazlehurst",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/hazlehurst/jeff-davis-yellowjackets",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":2,"l":1,"d":0,"gf":4,"ga":7,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"82b9da18-3bdc-4aa5-8be1-0c02a53e4a76","name":"Oglethorpe County","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"fdd99285-354c-438a-81a3-4c8afd7fe081","name":"Toombs County","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"fe4668fc-2d47-4061-8597-3ac6cba1e932","name":"Model","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

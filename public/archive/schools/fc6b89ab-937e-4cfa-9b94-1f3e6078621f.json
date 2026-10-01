@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "fc6b89ab-937e-4cfa-9b94-1f3e6078621f",
+  "name": "Fannin County",
+  "fullName": null,
+  "city": "Blue Ridge",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/blue-ridge/fannin-county-rebels",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":2,"l":1,"d":0,"gf":8,"ga":8,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"f351f659-108b-4775-a9e4-94201b82509b","name":"Temple","seed":null,"score":2},"gf":5,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"1c0bb365-c902-417e-8976-56848ad0b882","name":"Rabun County","seed":null,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"b6857b5a-e78d-4e3c-a0f2-843ebb099314","name":"Lamar County","seed":null,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

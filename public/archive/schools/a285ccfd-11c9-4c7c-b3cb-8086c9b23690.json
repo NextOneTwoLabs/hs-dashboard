@@ -4,10 +4,11 @@
   "name": "San Pedro",
   "fullName": null,
   "city": "San Pedro",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/san-pedro/san-pedro-pirates",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2024-25","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2024-25","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2024-25","competition":"cif-socal","division":"gd3","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"d627010f-8cc6-4595-9671-4456885d7143","name":"St. Joseph","seed":4,"score":4},"gf":3,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2024-25","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"d627010f-8cc6-4595-9671-4456885d7143","name":"St. Joseph","seed":4,"score":4},"gf":3,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

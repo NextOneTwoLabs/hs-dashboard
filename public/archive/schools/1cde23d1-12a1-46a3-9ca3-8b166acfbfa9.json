@@ -4,11 +4,12 @@
   "name": "Placer",
   "fullName": null,
   "city": "Auburn",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/auburn/placer-hillmen",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
-  "best": {"season":"2023-24","competition":"cif-norcal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2023-24","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2022-23","competition":"cif-norcal","division":"gd4","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"cb1b553b-d2e4-487d-bd22-876660416421","name":"University Prep","seed":3,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2023-24","competition":"cif-norcal","division":"gd4","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"acc34401-46cf-4f11-b0b0-c09b82e36d0f","name":"Torres","seed":7,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2022-23","state":"CA","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"cb1b553b-d2e4-487d-bd22-876660416421","name":"University Prep","seed":3,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2023-24","state":"CA","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"acc34401-46cf-4f11-b0b0-c09b82e36d0f","name":"Torres","seed":7,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2d2ca533-c723-4102-99f6-de8a50e9b546",
+  "name": "Montesano",
+  "fullName": null,
+  "city": "Montesano",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/montesano/montesano-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","result":"eliminated","reached":"Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","gender":"girls","seed":null,"rounds":4,"w":2,"l":1,"d":0,"gf":5,"ga":5,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"fdfbfaff-a031-49f9-8218-996cbe5a93e9","name":"Cascade Christian","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-14","opp":{"id":"da7da111-2fe5-474a-8d4c-cfbee4bd5bc0","name":"Cashmere","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Semifinals","date":"2025-11-21","opp":{"id":"4affd226-4f87-4e09-94ea-477ce80aac3d","name":"Cedar Park Christian","seed":null,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":2,"reached":"Semifinals","result":"eliminated","depth":0.5}
+  ]
+}

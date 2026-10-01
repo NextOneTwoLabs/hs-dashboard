@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "cd55b9aa-23e9-4239-9ea9-2fda68706dea",
+  "name": "Colleyville Heritage",
+  "fullName": null,
+  "city": "Colleyville",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/colleyville/colleyville-heritage-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","result":"eliminated","reached":"Regional Finals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","gender":"girls","seed":null,"rounds":6,"w":3,"l":0,"d":1,"gf":8,"ga":3,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"f26565c0-0ea0-4818-aa4c-c09863b7eac6","name":"Aledo","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"96fd1b05-4c27-48db-ad2c-4906d77120cf","name":"Paschal","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"8dd9d584-b4aa-4d6e-a625-b5fa746832b1","name":"Amarillo","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"Regional Finals","date":"2026-03-30","opp":{"id":"38f364bc-1a73-42a4-9d71-e6a43817c23e","name":"Centennial","seed":null,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":3,"reached":"Regional Finals","result":"eliminated","depth":0.5}
+  ]
+}

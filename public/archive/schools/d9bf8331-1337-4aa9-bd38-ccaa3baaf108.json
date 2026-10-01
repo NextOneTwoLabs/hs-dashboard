@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d9bf8331-1337-4aa9-bd38-ccaa3baaf108",
+  "name": "Graham",
+  "fullName": null,
+  "city": "Graham",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/graham/graham-steers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":1},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":1,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"3f856a70-a32d-4d6d-a727-bbcce636bcdd","name":"Randall","seed":null,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"332f99b6-5fdc-4ee8-8b72-56ef3f9c95f7","name":"Liberty","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"fdf9f6b0-e6aa-4720-ae84-63788667b1a7","name":"Godley","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

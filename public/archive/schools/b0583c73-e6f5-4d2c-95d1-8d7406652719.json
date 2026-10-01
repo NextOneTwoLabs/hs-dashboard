@@ -4,10 +4,11 @@
   "name": "Washington",
   "fullName": null,
   "city": "San Francisco",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/san-francisco/washington-eagles",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2021-22","competition":"cif-norcal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2021-22","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-norcal","division":"gd5","seed":1,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"cb1b553b-d2e4-487d-bd22-876660416421","name":"University Prep","seed":8,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":1,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"cb1b553b-d2e4-487d-bd22-876660416421","name":"University Prep","seed":8,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

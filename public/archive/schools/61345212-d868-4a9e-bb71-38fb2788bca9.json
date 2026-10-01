@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "61345212-d868-4a9e-bb71-38fb2788bca9",
+  "name": "Palmview",
+  "fullName": null,
+  "city": "La Joya",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/la-joya/palmview-lobos",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":0,"ga":7,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"41061aea-67f7-4310-82f6-caa308d2bcfe","name":"Flour Bluff","seed":null,"score":7},"gf":0,"ga":7,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

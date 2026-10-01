@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "cc8a553c-87cf-49f4-9197-6fcfb4ae0485",
+  "name": "Walnut Grove",
+  "fullName": null,
+  "city": "Walnut Grove",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/walnut-grove/walnut-grove-warriors",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":10,"ga":4,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"d0534032-a520-465e-8a2f-868f665c22a3","name":"Warner Robins","seed":null,"score":1},"gf":10,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"1db16208-7051-440f-845c-de618617f520","name":"Midtown","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

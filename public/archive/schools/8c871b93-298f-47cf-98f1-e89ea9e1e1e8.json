@@ -4,10 +4,11 @@
   "name": "West Adams",
   "fullName": null,
   "city": "Los Angeles",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/los-angeles/west-adams-panthers",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2017-18","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2017-18","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-socal","division":"gd4","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":12,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"02277c1d-2f70-4ad7-82be-7502ec0e9380","name":"Ventura","seed":2,"score":12},"gf":0,"ga":12,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":12,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"02277c1d-2f70-4ad7-82be-7502ec0e9380","name":"Ventura","seed":2,"score":12},"gf":0,"ga":12,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

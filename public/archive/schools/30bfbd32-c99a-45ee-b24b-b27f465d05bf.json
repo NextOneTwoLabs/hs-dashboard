@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "30bfbd32-c99a-45ee-b24b-b27f465d05bf",
+  "name": "Union County",
+  "fullName": null,
+  "city": "Blairsville",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/blairsville/union-county-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":1},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 4"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":14,"rounds":5,"w":2,"l":1,"d":1,"gf":9,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"ba18d2fc-d9b1-4242-a418-ac9898ca18be","name":"Franklin County","seed":19,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"06b08f6f-f034-4b37-be88-457e06f13c26","name":"Thomson","seed":null,"score":0},"gf":6,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"91b19f87-ebaf-4128-935d-6d82da6ad3d1","name":"East Jackson","seed":null,"score":1},"gf":1,"ga":1,"res":"D","pk":"W"},{"round":3,"roundName":"Round 4","date":"2026-05-07","opp":{"id":"2176f274-435b-4e82-809a-785a0d94cdba","name":"Coahulla Creek","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":3,"reached":"Round 4","result":"eliminated","depth":0.6}
+  ]
+}

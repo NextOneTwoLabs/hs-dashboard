@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "67a5c354-a6fb-4b54-99fe-eaf8c552a259",
+  "name": "Rockwall-Heath",
+  "fullName": null,
+  "city": "Rockwall",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/rockwall/rockwall-heath-hawks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"11973648-9f02-48b5-85d5-2643ec22674d","name":"Wylie","seed":null,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

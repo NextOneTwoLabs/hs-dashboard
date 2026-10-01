@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "334ff0f6-d1d3-4be1-9648-3dd3dfa93d99",
+  "name": "Central Kitsap",
+  "fullName": null,
+  "city": "Silverdale",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/silverdale/central-kitsap-cougars",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":3,"ga":3,"games":[{"round":1,"roundName":"First Round","date":"2025-11-14","opp":{"id":"32399a68-3aa7-479c-857a-ceae64af9bc8","name":"Holy Names Academy","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Quarterfinals","date":"2025-11-15","opp":{"id":"54de1e46-ce20-494a-b24f-437ba874db78","name":"Bellevue","seed":null,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Quarterfinals","result":"eliminated","depth":0.4}
+  ]
+}

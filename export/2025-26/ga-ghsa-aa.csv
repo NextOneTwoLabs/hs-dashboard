@@ -1,0 +1,32 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,32,Josey,0,1,Pike County,16,bottom
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,17,Johnson,1,16,Therrell,6,bottom
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,24,Salem,0,9,Morgan County,10,bottom
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,25,Jordan,0,8,Savannah Arts Academy,12,bottom
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,28,Columbia,0,5,Pierce County,10,bottom
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,21,Ringgold,1,12,Shaw,4,bottom
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,20,KIPP Atlanta Collegiate,6,13,Miller Grove,0,top
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,29,Spencer,0,4,Columbus,9,bottom
+2025-26,GA,ga-ghsa,Class AA,1,Round 2,2026-04-30,final,,,Pike County,10,,Therrell,0,top
+2025-26,GA,ga-ghsa,Class AA,1,Round 2,2026-04-30,final,,,Morgan County,2,,Savannah Arts Academy,1,top
+2025-26,GA,ga-ghsa,Class AA,1,Round 2,2026-04-30,final,,,Pierce County,5,,Shaw,0,top
+2025-26,GA,ga-ghsa,Class AA,1,Round 2,2026-04-30,final,,,KIPP Atlanta Collegiate,0,,Columbus,13,bottom
+2025-26,GA,ga-ghsa,Class AA,2,Round 3,2026-05-04,final,,,Pike County,3,,Morgan County,0,top
+2025-26,GA,ga-ghsa,Class AA,2,Round 3,2026-05-04,final,,,Pierce County,0,,Columbus,5,bottom
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,30,Butler,0,3,Thomson,10,bottom
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,19,Franklin County,0,14,Union County,2,bottom
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,22,Stephens County,1,11,East Jackson,5,bottom
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,27,Jackson,2,6,Drew Charter,1,top
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,26,Murray County,0,7,Sonoraville,5,bottom
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,23,Tattnall County,10,10,Richmond County Technical Career Magnet,0,top
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,18,Callaway,4,15,Hart County,2,top
+2025-26,GA,ga-ghsa,Class AA,0,Round 1,2026-04-23,final,,31,Appling County,1,2,Coahulla Creek,8,bottom
+2025-26,GA,ga-ghsa,Class AA,1,Round 2,2026-04-30,final,,,Thomson,0,,Union County,6,bottom
+2025-26,GA,ga-ghsa,Class AA,1,Round 2,2026-04-30,final,,,East Jackson,1,,Jackson,0,top
+2025-26,GA,ga-ghsa,Class AA,1,Round 2,2026-04-30,final,,,Sonoraville,2,,Tattnall County,1,top
+2025-26,GA,ga-ghsa,Class AA,1,Round 2,2026-04-30,final,,,Callaway,1,,Coahulla Creek,2,bottom
+2025-26,GA,ga-ghsa,Class AA,2,Round 3,2026-05-04,final,pk,,Union County,1,,East Jackson,1,top
+2025-26,GA,ga-ghsa,Class AA,2,Round 3,2026-05-04,final,,,Sonoraville,0,,Coahulla Creek,4,bottom
+2025-26,GA,ga-ghsa,Class AA,3,Round 4,2026-05-07,final,,,Pike County,1,,Columbus,0,top
+2025-26,GA,ga-ghsa,Class AA,3,Round 4,2026-05-07,final,,,Union County,0,,Coahulla Creek,1,bottom
+2025-26,GA,ga-ghsa,Class AA,4,Round 5,,final,,,Pike County,2,,Coahulla Creek,0,top

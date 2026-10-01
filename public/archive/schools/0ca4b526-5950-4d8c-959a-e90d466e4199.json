@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "0ca4b526-5950-4d8c-959a-e90d466e4199",
+  "name": "Academy for Classical Education",
+  "fullName": null,
+  "city": "Macon",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/macon/academy-for-classical-education-gryphons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 4"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":3,"l":1,"d":0,"gf":24,"ga":1,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"181677cd-fec0-4461-9339-7342096b3a98","name":"Gordon Central","seed":null,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"fa894b94-9451-49ed-98bd-589b91772f7c","name":"Pepperell","seed":null,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"963cdd4b-18df-44c2-ba32-ec0f5900e219","name":"Bremen","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Round 4","date":"2026-05-07","opp":{"id":"fe4668fc-2d47-4061-8597-3ac6cba1e932","name":"Model","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":3,"reached":"Round 4","result":"eliminated","depth":0.6}
+  ]
+}

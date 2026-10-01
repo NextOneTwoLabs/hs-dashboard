@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d9bf2525-d16b-48ff-bd3f-85546aa9f4d6",
+  "name": "Southeast Bulloch",
+  "fullName": null,
+  "city": "Brooklet",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/brooklet/southeast-bulloch-yellow-jackets",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"01c82503-b5d4-4433-8270-8225b5b70061","name":"Northwest Whitfield","seed":null,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

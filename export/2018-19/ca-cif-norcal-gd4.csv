@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2018-19,CA,ca-cif-norcal,Division 4,0,Round I,2019-02-26,bye,,1,Liberty Ranch,,,,,top
+2018-19,CA,ca-cif-norcal,Division 4,0,Round I,2019-02-26,final,,4,Kingsburg,0,5,Miramonte,1,bottom
+2018-19,CA,ca-cif-norcal,Division 4,0,Round I,2019-02-26,final,,3,Shasta,0,6,El Camino,1,bottom
+2018-19,CA,ca-cif-norcal,Division 4,0,Round I,2019-02-26,final,,2,Sacred Heart Prep,2,7,Campolindo,3,bottom
+2018-19,CA,ca-cif-norcal,Division 4,1,Regional Semi-Finals,2019-02-28,final,,1,Liberty Ranch,2,5,Miramonte,3,bottom
+2018-19,CA,ca-cif-norcal,Division 4,1,Regional Semi-Finals,2019-02-28,final,,6,El Camino,2,7,Campolindo,0,top
+2018-19,CA,ca-cif-norcal,Division 4,2,Regional Final,2019-03-02,final,,5,Miramonte,2,6,El Camino,0,top

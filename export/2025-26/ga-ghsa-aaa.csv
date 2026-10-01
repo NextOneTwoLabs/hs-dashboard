@@ -1,0 +1,32 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Riverdale,0,,Oconee County,10,bottom
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Pickens,2,,Calhoun,1,top
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Mary Persons,1,,Richmond Academy,5,bottom
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,LaGrange,0,,Lumpkin County,4,bottom
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Heritage,2,,Peach County,1,top
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,West Laurens,1,,Bainbridge,0,top
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Johnson,10,,Mt. Zion,0,top
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Douglass,0,,Adairsville,10,bottom
+2025-26,GA,ga-ghsa,Class AAA,1,Round 2,2026-04-28,final,,,Oconee County,8,,Pickens,0,top
+2025-26,GA,ga-ghsa,Class AAA,1,Round 2,2026-04-28,final,,,Richmond Academy,0,,Lumpkin County,5,bottom
+2025-26,GA,ga-ghsa,Class AAA,1,Round 2,2026-04-28,final,,,Heritage,2,,West Laurens,1,top
+2025-26,GA,ga-ghsa,Class AAA,1,Round 2,2026-04-28,final,pk,,Johnson,1,,Adairsville,1,top
+2025-26,GA,ga-ghsa,Class AAA,2,Round 3,2026-05-04,final,,,Oconee County,6,,Lumpkin County,1,top
+2025-26,GA,ga-ghsa,Class AAA,2,Round 3,2026-05-04,final,,,Heritage,0,,Johnson,9,bottom
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Cairo,0,,Harlem,7,bottom
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Upson-Lee,0,,Dawson County,4,bottom
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Monroe Area,6,,Long County,0,top
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Islands,5,,Luella,0,top
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Spalding,0,,Jefferson,10,bottom
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Southeast Bulloch,2,,Northwest Whitfield,3,bottom
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Cherokee Bluff,3,,Sandy Creek,2,top
+2025-26,GA,ga-ghsa,Class AAA,0,Round 1,2026-04-21,final,,,Westover,0,,Whitewater,10,bottom
+2025-26,GA,ga-ghsa,Class AAA,1,Round 2,2026-04-28,final,,,Harlem,2,,Dawson County,3,bottom
+2025-26,GA,ga-ghsa,Class AAA,1,Round 2,2026-04-28,final,,,Monroe Area,1,,Islands,0,top
+2025-26,GA,ga-ghsa,Class AAA,1,Round 2,2026-04-28,final,,,Jefferson,6,,Northwest Whitfield,0,top
+2025-26,GA,ga-ghsa,Class AAA,1,Round 2,2026-04-28,final,,,Cherokee Bluff,2,,Whitewater,1,top
+2025-26,GA,ga-ghsa,Class AAA,2,Round 3,2026-05-04,final,,,Dawson County,8,,Monroe Area,0,top
+2025-26,GA,ga-ghsa,Class AAA,2,Round 3,2026-05-04,final,,,Jefferson,3,,Cherokee Bluff,0,top
+2025-26,GA,ga-ghsa,Class AAA,3,Round 4,2026-05-07,final,,,Oconee County,3,,Johnson,0,top
+2025-26,GA,ga-ghsa,Class AAA,3,Round 4,2026-05-07,final,,,Dawson County,0,,Jefferson,5,bottom
+2025-26,GA,ga-ghsa,Class AAA,4,Round 5,,final,,,Oconee County,3,,Jefferson,4,bottom

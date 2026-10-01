@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "03962b43-d943-426a-bf1c-0031bbe7e3b8",
+  "name": "Lake Highland Prep",
+  "fullName": null,
+  "city": "Orlando",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/orlando/lake-highland-prep-highlanders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Final"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":2,"rounds":5,"w":2,"l":1,"d":0,"gf":12,"ga":5,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"922fdc43-9bb8-4a00-af3c-bd6cb0882d04","name":"The Villages Charter","seed":7,"score":0},"gf":7,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"22b6a34f-2a24-45e4-b1c5-0da082a534b3","name":"McKeel Academy","seed":3,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-13","opp":{"id":"e15ab772-fb9c-441a-ab66-8967b1d719ab","name":"Montverde Academy","seed":1,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Region Final","result":"eliminated","depth":0.4}
+  ]
+}

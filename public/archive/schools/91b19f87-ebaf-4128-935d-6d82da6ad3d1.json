@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "91b19f87-ebaf-4128-935d-6d82da6ad3d1",
+  "name": "East Jackson",
+  "fullName": null,
+  "city": "Commerce",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/commerce/east-jackson-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":11,"rounds":5,"w":2,"l":0,"d":1,"gf":7,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"dd533c0e-52d8-4fb5-b884-77f6fa73bd13","name":"Stephens County","seed":22,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"afdb2b07-2248-40f6-998b-2f92ba5f504e","name":"Jackson","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"30bfbd32-c99a-45ee-b24b-b27f465d05bf","name":"Union County","seed":null,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "49c398fb-c7b8-4f6d-9425-642ae7e3cc86",
+  "name": "Enumclaw",
+  "fullName": null,
+  "city": "Enumclaw",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/enumclaw/enumclaw-hornets",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Play-in","date":null,"opp":{"id":"d41a8db5-c877-418d-aada-66267e3e5345","name":"Prairie","seed":null,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"First Round","date":"2025-11-14","opp":{"id":"831cad1c-da6a-498a-bc60-4c58a769f4c8","name":"Eastside Catholic","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"First Round","result":"eliminated","depth":0.2}
+  ]
+}

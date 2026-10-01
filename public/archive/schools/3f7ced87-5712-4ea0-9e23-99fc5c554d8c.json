@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "3f7ced87-5712-4ea0-9e23-99fc5c554d8c",
+  "name": "Palestine",
+  "fullName": null,
+  "city": "Palestine",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/palestine/palestine-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":1,"ga":5,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"965a2449-0546-4d51-a2b6-25ff722ce3df","name":"Kilgore","seed":null,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

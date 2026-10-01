@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "63d28fc8-ba4c-4d86-82df-ed97adef099f",
+  "name": "Alexander",
+  "fullName": null,
+  "city": "Douglasville",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/douglasville/alexander-cougars",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":11,"ga":5,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"2932e8f5-8c6b-49e0-8407-7bf9e89b8976","name":"Langston Hughes","seed":null,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"075c4adc-c581-4992-861a-53e4d70a25e7","name":"Pope","seed":null,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

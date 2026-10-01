@@ -1,0 +1,16 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,PA,pa-piaa,3A,0,First Round,2025-11-04,final,,,Radnor,1,,Susquehannock,0,top
+2025-26,PA,pa-piaa,3A,0,First Round,2025-11-04,final,,,Shikellamy,0,,Abington Heights,6,bottom
+2025-26,PA,pa-piaa,3A,0,First Round,2025-11-04,final,,,St. Hubert Catholic for Girls,1,,Strath Haven,0,top
+2025-26,PA,pa-piaa,3A,0,First Round,2025-11-04,final,,,Blue Mountain,1,,Lower Dauphin,2,bottom
+2025-26,PA,pa-piaa,3A,0,First Round,2025-11-04,final,,,Cocalico,6,,Arts Academy at Benjamin Rush,0,top
+2025-26,PA,pa-piaa,3A,0,First Round,2025-11-04,final,,,Hollidaysburg,0,,South Fayette,5,bottom
+2025-26,PA,pa-piaa,3A,0,First Round,2025-11-04,final,,,Fox Chapel,2,,Harbor Creek,0,top
+2025-26,PA,pa-piaa,3A,0,First Round,2025-11-04,final,,,DuBois,4,,Moon Area,2,top
+2025-26,PA,pa-piaa,3A,1,Quarterfinals,2025-11-08,final,,,Radnor,1,,Abington Heights,0,top
+2025-26,PA,pa-piaa,3A,1,Quarterfinals,2025-11-08,final,,,St. Hubert Catholic for Girls,1,,Lower Dauphin,2,bottom
+2025-26,PA,pa-piaa,3A,1,Quarterfinals,2025-11-08,final,,,Cocalico,3,,South Fayette,4,bottom
+2025-26,PA,pa-piaa,3A,1,Quarterfinals,2025-11-08,final,,,Fox Chapel,1,,DuBois,3,bottom
+2025-26,PA,pa-piaa,3A,2,Semi-Finals,2025-11-11,final,,,Radnor,1,,Lower Dauphin,0,top
+2025-26,PA,pa-piaa,3A,2,Semi-Finals,2025-11-11,final,,,South Fayette,6,,DuBois,1,top
+2025-26,PA,pa-piaa,3A,3,Final,2025-11-14,final,,,Radnor,1,,South Fayette,3,bottom

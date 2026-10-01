@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "fdd99285-354c-438a-81a3-4c8afd7fe081",
+  "name": "Toombs County",
+  "fullName": null,
+  "city": "Lyons",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/lyons/toombs-county-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":5,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"f3558777-c5af-4102-bc29-47332ba3fb22","name":"Dodge County","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"6665136e-6741-447b-b2e3-da3c3f6c5e4c","name":"Jeff Davis","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

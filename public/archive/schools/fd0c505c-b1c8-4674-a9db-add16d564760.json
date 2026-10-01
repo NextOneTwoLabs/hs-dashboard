@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "fd0c505c-b1c8-4674-a9db-add16d564760",
+  "name": "Maclay",
+  "fullName": null,
+  "city": "Tallahassee",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/tallahassee/maclay-marauders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","gender":"girls","seed":4,"rounds":5,"w":1,"l":1,"d":0,"gf":5,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"1e437754-b245-4ccb-96e2-031956f2d3f7","name":"Newberry","seed":5,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"52c4bbbe-1897-42ed-8806-3d81412c22c2","name":"Providence School","seed":1,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "9366f169-fe02-4c0d-b877-e7e3dc92f6ed",
+  "name": "Floresville",
+  "fullName": null,
+  "city": "Floresville",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/floresville/floresville-tigers-jaguars",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":2,"ga":5,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"65b2b405-e451-4909-aa48-fd6233bc64b2","name":"Gonzales","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"032ffe24-9d72-45d5-9970-123c7050ab32","name":"Davenport","seed":null,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

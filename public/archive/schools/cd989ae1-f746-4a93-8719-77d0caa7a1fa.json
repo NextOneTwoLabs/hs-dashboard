@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "cd989ae1-f746-4a93-8719-77d0caa7a1fa",
+  "name": "Long County",
+  "fullName": null,
+  "city": "Ludowici",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/ludowici/long-county-blue-tide",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"3c33dd96-e701-4df1-ac48-3b7ee976db5a","name":"Monroe Area","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

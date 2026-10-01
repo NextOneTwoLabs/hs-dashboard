@@ -1,8 +1,0 @@
-season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
-2023-24,cif-norcal,gd1,0,Round I,2024-02-27,final,,1,Saint Francis,2,8,Carondelet,0,top
-2023-24,cif-norcal,gd1,0,Round I,2024-02-27,final,,4,Archbishop Mitty,2,5,Davis Sr.,1,top
-2023-24,cif-norcal,gd1,0,Round I,2024-02-27,final,,3,San Ramon Valley,2,6,Leigh,1,top
-2023-24,cif-norcal,gd1,0,Round I,2024-02-27,final,pk,2,Del Oro,0,7,Amador Valley,0,top
-2023-24,cif-norcal,gd1,1,Regional Semifinals,2024-02-29,final,,1,Saint Francis,2,4,Archbishop Mitty,3,bottom
-2023-24,cif-norcal,gd1,1,Regional Semifinals,2024-02-29,final,,3,San Ramon Valley,1,2,Del Oro,2,bottom
-2023-24,cif-norcal,gd1,2,Regional Final,2024-03-02,final,pk,4,Archbishop Mitty,0,2,Del Oro,0,top

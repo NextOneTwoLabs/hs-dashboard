@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "90cd4508-e21d-4ab8-8c3a-7035b19dce99",
+  "name": "Villa Rica",
+  "fullName": null,
+  "city": "Villa Rica",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/villa-rica/villa-rica-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"59b5978a-ca52-436b-a7a6-ef619517fbdd","name":"Northgate","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

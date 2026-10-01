@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "c2500760-c49e-4ee7-9393-b35a418ea142",
+  "name": "Victoria West",
+  "fullName": null,
+  "city": "Victoria",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/victoria/victoria-west-warriors",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"a221d051-60d0-44f1-9efb-9bc1a73b9c5b","name":"Waltrip","seed":null,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"f52d232a-deea-4642-b164-e19a363b3c25","name":"Liberal Arts & Science Academy - Austin","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "5ec496f8-17a3-4836-b343-196154ce1b2a",
+  "name": "Harlem",
+  "fullName": null,
+  "city": "Harlem",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/harlem/harlem-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":9,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"0d9305bf-13dc-4957-a5ed-22052eada89d","name":"Cairo","seed":null,"score":0},"gf":7,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"4a599da9-2439-4488-853f-36d0a47c8d8c","name":"Dawson County","seed":null,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

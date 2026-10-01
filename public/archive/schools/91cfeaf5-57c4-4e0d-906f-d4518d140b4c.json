@@ -4,10 +4,11 @@
   "name": "Los Osos",
   "fullName": null,
   "city": "Rancho Cucamonga",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/rancho-cucamonga/los-osos-grizzlies",
   "summary": {"appearances":1,"titles":0,"finals":1,"w":1,"l":1,"d":1},
-  "best": {"season":"2021-22","competition":"cif-socal","division":"gd2","result":"runner-up","reached":"Regional Final"},
+  "best": {"season":"2021-22","competition":"ca-cif-socal","division":"gd2","divisionLabel":"Division 2","result":"runner-up","reached":"Regional Final"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-socal","division":"gd2","seed":3,"rounds":3,"w":1,"l":1,"d":1,"gf":4,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"804990b1-145b-4b80-96cf-bd728f338bbc","name":"El Camino Real","seed":6,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"75b3c4b6-a228-4423-a670-32f9396be309","name":"Oaks Christian","seed":2,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"64933a7c-b8f1-4d59-96f6-c22658ba76e3","name":"Redondo Union","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-socal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":3,"rounds":3,"w":1,"l":1,"d":1,"gf":4,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"804990b1-145b-4b80-96cf-bd728f338bbc","name":"El Camino Real","seed":6,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"75b3c4b6-a228-4423-a670-32f9396be309","name":"Oaks Christian","seed":2,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"64933a7c-b8f1-4d59-96f6-c22658ba76e3","name":"Redondo Union","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "c3dc1987-24e3-4197-a0c9-44b948f506c9",
+  "name": "West Valley",
+  "fullName": "West Valley Eagles",
+  "city": "Spokane",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/spokane/west-valley-eagles",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":4,"l":0,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"2a","divisionLabel":"2A","result":"champion","reached":"Finals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"2a","divisionLabel":"2A","gender":"girls","seed":null,"rounds":4,"w":4,"l":0,"d":0,"gf":17,"ga":0,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"41f865c0-43cd-4afd-95dc-8fcadfa137e6","name":"Nathan Hale","seed":null,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-14","opp":{"id":"79a7d74f-7f4d-4028-8751-6736f89a9a73","name":"Cedarcrest","seed":null,"score":0},"gf":7,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Semifinals","date":"2025-11-21","opp":{"id":"6ed4c308-a786-4fb6-8bdb-8fb6c03dc155","name":"Hockinson","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Finals","date":"2025-11-22","opp":{"id":"1538e79a-cf85-4673-9762-a99c1368e351","name":"Columbia River","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":3,"reached":"Finals","result":"champion","depth":1.0}
+  ]
+}

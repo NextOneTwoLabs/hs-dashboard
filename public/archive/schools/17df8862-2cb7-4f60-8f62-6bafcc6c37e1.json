@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "17df8862-2cb7-4f60-8f62-6bafcc6c37e1",
+  "name": "American Heritage",
+  "fullName": null,
+  "city": "Delray Beach",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/delray-beach/american-heritage-stallions",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":7,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"5d705bf2-c1ea-43d1-899f-a2f37fbbbd36","name":"North Broward Prep","seed":2,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

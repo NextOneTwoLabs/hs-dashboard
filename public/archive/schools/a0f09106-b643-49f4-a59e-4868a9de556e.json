@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "a0f09106-b643-49f4-a59e-4868a9de556e",
+  "name": "MAST Academy",
+  "fullName": null,
+  "city": "Key Biscayne",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/key-biscayne/mast-academy-mako-sharks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":3,"rounds":5,"w":0,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"c98b6bd5-a5a4-4c92-a0b1-1bbf1bdd1bf4","name":"Immaculata-La Salle","seed":6,"score":4},"gf":3,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

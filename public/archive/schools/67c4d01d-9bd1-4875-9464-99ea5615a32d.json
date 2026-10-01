@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "67c4d01d-9bd1-4875-9464-99ea5615a32d",
+  "name": "El Campo",
+  "fullName": null,
+  "city": "El Campo",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/el-campo/el-campo-ricebirds",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","gender":"girls","seed":null,"rounds":6,"w":0,"l":0,"d":1,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"afa276f8-84eb-4fcd-b785-18420afd50f4","name":"Almeta Crawford","seed":null,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

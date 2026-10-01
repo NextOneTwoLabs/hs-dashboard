@@ -1,23 +1,26 @@
-import { api } from './api.js';
-import { normalize, readHash, writeHash } from './state.js';
+import { api, errorHtml } from './api.js';
+import { normalize, readHash, resolveState, writeHash } from './state.js';
 import { esc, schoolHref } from './util.js';
+import * as states from './views/states.js';
 import * as playoffs from './views/playoffs.js';
 import * as results from './views/results.js';
 import * as champions from './views/champions.js';
 import * as schools from './views/schools.js';
 import * as school from './views/school.js';
 
-const VIEWS = { playoffs, results, champions, schools, school };
+const VIEWS = { states, playoffs, results, champions, schools, school };
+// Tabs that show one state at a time and need that state's catalog.
+const STATE_TABS = new Set(['playoffs', 'results', 'champions']);
 const controls = document.getElementById('controls');
 const view = document.getElementById('view');
-let catalog = null;
+let statesIndex = null;
 let state = {};
 let renderSeq = 0;
 
 function setState(patch, { replace = false, silent = false } = {}) {
   const next = { ...state, ...patch };
   for (const k of Object.keys(next)) if (next[k] == null) delete next[k];
-  if ('season' in patch || 'g' in patch || 'comp' in patch || 'div' in patch) delete next.round;
+  if ('season' in patch || 'g' in patch || 'comp' in patch || 'div' in patch || 'st' in patch) delete next.round;
   state = next;
   writeHash(state, { replace });
   if (!silent) render();
@@ -25,18 +28,31 @@ function setState(patch, { replace = false, silent = false } = {}) {
 
 async function render() {
   const seq = ++renderSeq;
-  const raw = readHash();
-  state = raw.tab === 'schools' || raw.tab === 'school' ? { ...raw, season: raw.season } : normalize(raw, catalog);
-  if (!state.tab || !VIEWS[state.tab]) state.tab = 'playoffs';
-  if (state.tab === 'school' && !state.school) state.tab = 'schools';
+  let raw = readHash();
+  if (!raw.tab || !VIEWS[raw.tab]) raw.tab = raw.comp ? 'playoffs' : 'states';
+  if (raw.tab === 'school' && !raw.school) raw.tab = 'schools';
+  let catalog = null;
+  if (STATE_TABS.has(raw.tab)) {
+    raw = resolveState(raw, statesIndex);
+    try {
+      catalog = await api.stateCatalog(raw.st);
+    } catch (err) {
+      if (seq === renderSeq) view.innerHTML = errorHtml(err);
+      return;
+    }
+    if (seq !== renderSeq) return;
+    raw = normalize(raw, catalog);
+  }
+  state = raw;
   document.querySelectorAll('#tabs [data-tab]').forEach((a) => {
     const on = a.dataset.tab === state.tab || (state.tab === 'school' && a.dataset.tab === 'schools');
     a.setAttribute('aria-selected', on);
   });
-  if (state.tab === 'school' || state.tab === 'schools') document.title = 'Schools · High School Girls Soccer';
-  else document.title = 'High School Girls Soccer';
+  const stateName = catalog ? ` · ${catalog.name}` : '';
+  document.title = state.tab === 'school' || state.tab === 'schools'
+    ? 'Schools · High School Girls Soccer' : `High School Girls Soccer${stateName}`;
   try {
-    await VIEWS[state.tab].render({ state, catalog, controls, view, setState });
+    await VIEWS[state.tab].render({ state, catalog, statesIndex, controls, view, setState });
   } catch (err) {
     if (seq === renderSeq) {
       console.error(err);
@@ -50,13 +66,14 @@ view.addEventListener('click', (e) => {
   if (e.target.closest('[data-action="retry"]')) render();
 });
 
-// Keep the tab links pointing at the current season/gender.
+// Tab links keep the current state and season.
 document.getElementById('tabs').addEventListener('click', (e) => {
   const a = e.target.closest('[data-tab]');
   if (!a) return;
   e.preventDefault();
-  const { season, g } = state;
-  state = { tab: a.dataset.tab, season, g: a.dataset.tab === 'schools' ? undefined : g };
+  const tab = a.dataset.tab;
+  const { st, season, g } = state;
+  state = tab === 'states' ? { tab } : tab === 'schools' ? { tab, st } : { tab, st, season, g };
   writeHash(state);
   render();
 });
@@ -68,7 +85,7 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
   try { localStorage.setItem('hs-theme', next); } catch { /* ignore */ }
 });
 
-// ----- Global school search -----
+// ----- Global school search (all states) -----
 const input = document.getElementById('search-input');
 const list = document.getElementById('search-results');
 let directory = null;
@@ -78,7 +95,14 @@ async function search() {
   const q = input.value.trim().toLowerCase();
   if (!q) { list.hidden = true; return; }
   if (!directory) {
-    try { directory = (await api.schools()).schools; } catch { list.innerHTML = '<li class="empty">Search unavailable</li>'; list.hidden = false; return; }
+    try {
+      const idx = await api.searchIndex();
+      directory = idx.rows.map((r) => Object.fromEntries(idx.fields.map((f, i) => [f, r[i]])));
+    } catch {
+      list.innerHTML = '<li class="empty">Search unavailable</li>';
+      list.hidden = false;
+      return;
+    }
   }
   const hits = directory
     .filter((s) => s.name.toLowerCase().includes(q) || (s.city || '').toLowerCase().includes(q))
@@ -86,7 +110,7 @@ async function search() {
     .slice(0, 8);
   active = hits.length ? 0 : -1;
   list.innerHTML = hits.length
-    ? hits.map((s, i) => `<li><a href="${schoolHref(s.id)}" aria-selected="${i === 0}"><span>${esc(s.name)}</span><span class="muted">${esc(s.city || '')}</span></a></li>`).join('')
+    ? hits.map((s, i) => `<li><a href="${schoolHref(s.id)}" aria-selected="${i === 0}"><span>${esc(s.name)}</span><span class="muted">${esc([s.city, s.state].filter(Boolean).join(', '))}</span></a></li>`).join('')
     : '<li class="empty">No schools found</li>';
   list.hidden = false;
 }
@@ -118,16 +142,18 @@ document.addEventListener('keydown', (e) => {
 window.addEventListener('hashchange', render);
 (async function boot() {
   try {
-    catalog = await api.catalog();
+    statesIndex = await api.states();
   } catch {
-    view.innerHTML = '<div class="card notice"><p>Couldn\'t load the catalog.</p><button class="btn" onclick="location.reload()">Try again</button></div>';
+    view.innerHTML = '<div class="card notice"><p>Couldn\'t load the dashboard.</p><button class="btn" onclick="location.reload()">Try again</button></div>';
     return;
   }
+  const covered = statesIndex.states.filter((s) => s.latestSeason);
+  document.getElementById('status-line').textContent =
+    `Coverage: ${covered.length} states (${covered.map((s) => s.code).join(', ')}), more coming. Brackets from state associations via MaxPreps.`;
   render();
   api.status().then((s) => {
     if (s?.updatedAt) {
-      document.getElementById('status-line').textContent =
-        `Coverage: California (CIF) for now, more states coming. Brackets from state associations; game data from MaxPreps · updated ${new Date(s.updatedAt).toLocaleString()}`;
+      document.getElementById('status-line').textContent += ` Updated ${new Date(s.updatedAt).toLocaleString()}.`;
     }
   }).catch(() => {});
 })();

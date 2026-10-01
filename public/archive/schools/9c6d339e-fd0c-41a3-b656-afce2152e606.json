@@ -4,10 +4,11 @@
   "name": "La Serna",
   "fullName": null,
   "city": "Whittier",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/whittier/la-serna-lancers",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
-  "best": {"season":"2023-24","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2023-24","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2023-24","competition":"cif-socal","division":"gd3","seed":5,"rounds":3,"w":0,"l":0,"d":1,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"7f4d50f0-8690-493c-b4bc-262b512e8851","name":"Bonita Vista","seed":4,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2023-24","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":5,"rounds":3,"w":0,"l":0,"d":1,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"7f4d50f0-8690-493c-b4bc-262b512e8851","name":"Bonita Vista","seed":4,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

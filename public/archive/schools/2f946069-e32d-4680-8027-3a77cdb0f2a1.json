@@ -4,11 +4,12 @@
   "name": "Sequoia",
   "fullName": null,
   "city": "Redwood City",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/redwood-city/sequoia-ravens",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":1,"l":2,"d":0},
-  "best": {"season":"2022-23","competition":"cif-norcal","division":"gd3","result":"eliminated","reached":"Regional Semifinals"},
+  "best": {"season":"2022-23","competition":"ca-cif-norcal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Regional Semifinals"},
   "appearances": [
-    {"season":"2022-23","competition":"cif-norcal","division":"gd3","seed":1,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"653cb677-764e-4d81-9a2d-42421e439e9c","name":"Piedmont","seed":8,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"ad47af1b-1b44-42d7-ac0e-a495ff09a7e7","name":"Cardinal Newman","seed":4,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
-    {"season":"2023-24","competition":"cif-norcal","division":"gd2","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"a34f251c-c120-40b8-b1ef-d17d0e8baa69","name":"Las Lomas","seed":6,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2022-23","state":"CA","competition":"ca-cif-norcal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":1,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"653cb677-764e-4d81-9a2d-42421e439e9c","name":"Piedmont","seed":8,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"ad47af1b-1b44-42d7-ac0e-a495ff09a7e7","name":"Cardinal Newman","seed":4,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
+    {"season":"2023-24","state":"CA","competition":"ca-cif-norcal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"a34f251c-c120-40b8-b1ef-d17d0e8baa69","name":"Las Lomas","seed":6,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

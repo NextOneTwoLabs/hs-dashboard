@@ -4,10 +4,11 @@
   "name": "Sage Hill",
   "fullName": null,
   "city": "Newport Beach",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/newport-beach/sage-hill-lightning",
   "summary": {"appearances":1,"titles":0,"finals":1,"w":1,"l":1,"d":1},
-  "best": {"season":"2024-25","competition":"cif-socal","division":"gd4","result":"runner-up","reached":"Regional Final"},
+  "best": {"season":"2024-25","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","result":"runner-up","reached":"Regional Final"},
   "appearances": [
-    {"season":"2024-25","competition":"cif-socal","division":"gd4","seed":1,"rounds":3,"w":1,"l":1,"d":1,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"88b2f9f4-f69d-4365-a028-32cfab66524f","name":"San Diego","seed":8,"score":2},"gf":2,"ga":2,"res":"D","pk":"W"},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"5fff6cdf-6099-4cfb-9297-5734517e28ff","name":"Santa Maria","seed":5,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2025-03-08","opp":{"id":"f9adea13-f951-4743-a79c-b8d824e4d231","name":"La Mirada","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+    {"season":"2024-25","state":"CA","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":1,"rounds":3,"w":1,"l":1,"d":1,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"88b2f9f4-f69d-4365-a028-32cfab66524f","name":"San Diego","seed":8,"score":2},"gf":2,"ga":2,"res":"D","pk":"W"},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"5fff6cdf-6099-4cfb-9297-5734517e28ff","name":"Santa Maria","seed":5,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2025-03-08","opp":{"id":"f9adea13-f951-4743-a79c-b8d824e4d231","name":"La Mirada","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
   ]
 }

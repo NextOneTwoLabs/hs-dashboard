@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "ec00d511-6c9c-47c8-92e7-eb4fcc9fc46d",
+  "name": "Lowndes",
+  "fullName": null,
+  "city": "Valdosta",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/valdosta/lowndes-vikings",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"ad1a87e8-0889-4370-8a61-9f78928b99fe","name":"Mountain View","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

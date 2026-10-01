@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2d16a5bc-9a51-41b3-9110-bc24500a2e37",
+  "name": "Mosley",
+  "fullName": null,
+  "city": "Lynn Haven",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/lynn-haven/mosley-dolphins",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","gender":"girls","seed":5,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"3225b375-e31b-4769-92f4-bb0c22580a47","name":"Gulf Breeze","seed":4,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

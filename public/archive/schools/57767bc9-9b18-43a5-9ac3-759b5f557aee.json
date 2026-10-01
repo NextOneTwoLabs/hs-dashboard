@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "57767bc9-9b18-43a5-9ac3-759b5f557aee",
+  "name": "Jacksonville",
+  "fullName": null,
+  "city": "Jacksonville",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/jacksonville/jacksonville-fightin-indians",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":5,"ga":8,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"eb6bb436-fdd0-4583-9ac0-5f086e8761ae","name":"Anna","seed":null,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"5e9a169e-29ae-4e9b-bdc4-8f1b8d48159f","name":"Wakeland","seed":null,"score":6},"gf":2,"ga":6,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

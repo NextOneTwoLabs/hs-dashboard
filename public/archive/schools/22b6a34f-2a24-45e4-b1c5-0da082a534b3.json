@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "22b6a34f-2a24-45e4-b1c5-0da082a534b3",
+  "name": "McKeel Academy",
+  "fullName": null,
+  "city": "Lakeland",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/lakeland/mckeel-academy-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":3,"rounds":5,"w":1,"l":1,"d":0,"gf":4,"ga":7,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"1c1ca678-8b1e-42c5-978f-2f6ecf9357e7","name":"Academy of the Holy Names","seed":6,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"03962b43-d943-426a-bf1c-0031bbe7e3b8","name":"Lake Highland Prep","seed":2,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

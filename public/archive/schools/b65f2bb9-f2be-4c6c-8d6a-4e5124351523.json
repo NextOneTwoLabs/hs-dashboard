@@ -4,12 +4,13 @@
   "name": "Sonoma Academy",
   "fullName": null,
   "city": "Santa Rosa",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/santa-rosa/sonoma-academy-coyotes",
   "summary": {"appearances":3,"titles":0,"finals":0,"w":1,"l":3,"d":0},
-  "best": {"season":"2025-26","competition":"cif-state","division":"gd3","result":"eliminated","reached":"Regional Semifinals"},
+  "best": {"season":"2025-26","competition":"ca-cif-state","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Regional Semifinals"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-norcal","division":"gd4","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"dd1fc5bd-c075-4fe3-86dc-70112b7e6217","name":"Pioneer","seed":3,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2024-25","competition":"cif-norcal","division":"gd3","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"f133ba52-590e-4f91-b798-d9c06fd9fc4c","name":"Menlo School","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2025-26","competition":"cif-state","division":"gd3","seed":4,"rounds":4,"w":1,"l":1,"d":0,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"ebb8c443-1d2c-41d8-b859-67bce76d43b2","name":"Aptos","seed":5,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"1f152b3b-38dc-4d34-b260-9663dc3006a4","name":"Salinas","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.25}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"dd1fc5bd-c075-4fe3-86dc-70112b7e6217","name":"Pioneer","seed":3,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","state":"CA","competition":"ca-cif-norcal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"f133ba52-590e-4f91-b798-d9c06fd9fc4c","name":"Menlo School","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","state":"CA","competition":"ca-cif-state","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":4,"rounds":4,"w":1,"l":1,"d":0,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"ebb8c443-1d2c-41d8-b859-67bce76d43b2","name":"Aptos","seed":5,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"1f152b3b-38dc-4d34-b260-9663dc3006a4","name":"Salinas","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.25}
   ]
 }

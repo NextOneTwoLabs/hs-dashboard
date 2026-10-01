@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "dc0d2033-8372-4b17-bdf2-c248e3ff2c64",
+  "name": "St. Joseph Academy",
+  "fullName": null,
+  "city": "St Augustine",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/st-augustine/st-joseph-academy-fighting-flashes",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","gender":"girls","seed":3,"rounds":5,"w":1,"l":1,"d":0,"gf":7,"ga":5,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"89d40a19-891c-4e58-8d96-7d07d3a960df","name":"Oak Hall","seed":6,"score":2},"gf":5,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"a37c73b2-4e94-4182-a84e-e26334b02bd3","name":"Mount Dora Christian Academy","seed":2,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

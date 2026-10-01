@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e9cfc8cb-c5ac-440b-a4a2-3d3c91b059f5",
+  "name": "Bishop Verot",
+  "fullName": null,
+  "city": "Fort Myers",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/fort-myers/bishop-verot-vikings",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":3,"rounds":5,"w":0,"l":0,"d":1,"gf":2,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"935fab05-b14d-4c95-8f74-8a4bf6c7493d","name":"Aubrey Rogers","seed":6,"score":2},"gf":2,"ga":2,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

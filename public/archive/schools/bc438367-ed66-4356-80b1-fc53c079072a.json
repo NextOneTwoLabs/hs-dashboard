@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "bc438367-ed66-4356-80b1-fc53c079072a",
+  "name": "Lemon Bay",
+  "fullName": null,
+  "city": "Englewood",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/englewood/lemon-bay-manta-rays",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","gender":"girls","seed":5,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"eb0ece27-b7e5-4f64-b3f5-ceb7bc22996c","name":"Naples","seed":4,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

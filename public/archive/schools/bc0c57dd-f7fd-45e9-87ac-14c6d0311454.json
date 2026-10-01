@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "bc0c57dd-f7fd-45e9-87ac-14c6d0311454",
+  "name": "Lake Oconee Academy",
+  "fullName": null,
+  "city": "Greensboro",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/greensboro/lake-oconee-academy-titans",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","gender":"girls","seed":null,"rounds":5,"w":2,"l":1,"d":0,"gf":15,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"49641dd9-354a-4d8a-b007-117650377dee","name":"Furlow Charter School","seed":null,"score":0},"gf":9,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"7247b9b8-233c-45d4-9f7b-170c8699e05e","name":"Brooks County","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"77ae3fd1-e8b6-4531-9bca-42ddb200cd2a","name":"Screven County","seed":null,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

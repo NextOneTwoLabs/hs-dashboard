@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "616d37cf-d128-4616-a3d5-276bf7677969",
+  "name": "Berkeley Prep",
+  "fullName": null,
+  "city": "Tampa",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/tampa/berkeley-prep-buccaneers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","result":"eliminated","reached":"Region Final"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","gender":"girls","seed":3,"rounds":5,"w":2,"l":1,"d":0,"gf":6,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"c40ea874-16cb-4faf-a077-46933a661c9a","name":"Clearwater Central Catholic","seed":6,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"1eec54e4-c4e2-4b8b-baf8-27787eba60e9","name":"Santa Fe Catholic","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-13","opp":{"id":"0e92b6e2-2fd4-485a-9207-237de4546bfd","name":"Lakeland Christian","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Region Final","result":"eliminated","depth":0.4}
+  ]
+}

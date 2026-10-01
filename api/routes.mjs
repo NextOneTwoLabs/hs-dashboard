@@ -1,17 +1,20 @@
 // /api/v1 route table: maps a request path to one archived JSON asset.
 // Twin of crawler/api_routes.py; both are checked against tests/routes.json.
 
-const SEASON = '(\\d{4}-\\d{2})';
-const COMP = '([a-z][a-z0-9-]{1,40})';
-const DIV = '([a-z0-9]{2,8})';
 const ID = '([^/]+)';
 
 const ROUTES = [
   { re: /^\/api\/v1\/catalog$/, asset: () => '/archive/catalog.json' },
   { re: /^\/api\/v1\/status$/, asset: () => '/archive/refresh-state.json' },
   { re: /^\/api\/v1\/sources$/, asset: () => '/data/sources.json' },
+  { re: /^\/api\/v1\/states$/, asset: () => '/archive/states.json' },
+  { re: /^\/api\/v1\/search-index$/, asset: () => '/archive/search-index.json' },
   { re: /^\/api\/v1\/schools$/, asset: () => '/archive/schools.json' },
   { re: new RegExp(`^/api/v1/schools/${ID}$`), asset: ([id]) => `/archive/schools/${id}.json`, check: ([id]) => validId(id) },
+  { re: new RegExp(`^/api/v1/states/${ID}/catalog$`), asset: ([st]) => `/archive/states/${st}/catalog.json`, check: ([st]) => validState(st) },
+  { re: new RegExp(`^/api/v1/states/${ID}/schools$`), asset: ([st]) => `/archive/states/${st}/schools.json`, check: ([st]) => validState(st) },
+  { re: new RegExp(`^/api/v1/states/${ID}/seasons/${ID}/games$`), season: 1,
+    asset: ([st, s]) => `/archive/states/${st}/seasons/${s}/games.json`, check: ([st, s]) => validState(st) || validSeason(s) },
   { re: new RegExp(`^/api/v1/seasons/${ID}/games$`), season: 0,
     asset: ([s]) => `/archive/seasons/${s}/games.json`, check: ([s]) => validSeason(s) },
   { re: new RegExp(`^/api/v1/seasons/${ID}/competitions/${ID}/divisions/${ID}/bracket$`), season: 0,
@@ -20,17 +23,19 @@ const ROUTES = [
 ];
 
 export function validSeason(s) {
-  const m = new RegExp(`^${SEASON}$`).exec(s);
-  if (!m) return 'invalid season (expected YYYY-YY)';
+  if (!/^\d{4}-\d{2}$/.test(s)) return 'invalid season (expected YYYY-YY)';
   const start = Number(s.slice(0, 4));
   if ((start + 1) % 100 !== Number(s.slice(5))) return 'invalid season (years must be consecutive)';
   return null;
 }
+export function validState(st) {
+  return /^[A-Z]{2}$/.test(st) ? null : 'invalid state (expected two capital letters, e.g. TX)';
+}
 export function validComp(c) {
-  return new RegExp(`^${COMP}$`).test(c) ? null : 'invalid competition id';
+  return /^[a-z][a-z0-9-]{1,40}$/.test(c) ? null : 'invalid competition id';
 }
 export function validDiv(d) {
-  return /^[bg]d[1-9]$/.test(d) ? null : 'invalid division code (expected bd1-bd9 or gd1-gd9)';
+  return /^[a-z0-9][a-z0-9-]{0,29}$/.test(d) ? null : 'invalid division code';
 }
 export function validId(id) {
   return /^[a-z0-9][a-z0-9-]{2,100}$/.test(id) ? null : 'invalid school id';

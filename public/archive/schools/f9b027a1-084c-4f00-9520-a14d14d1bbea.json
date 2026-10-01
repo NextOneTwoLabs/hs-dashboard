@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "f9b027a1-084c-4f00-9520-a14d14d1bbea",
+  "name": "North Allegheny",
+  "fullName": null,
+  "city": "Wexford",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/wexford/north-allegheny-tigers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"4a","divisionLabel":"4A","result":"eliminated","reached":"Semi-Finals"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"4a","divisionLabel":"4A","gender":"girls","seed":null,"rounds":4,"w":2,"l":1,"d":0,"gf":7,"ga":2,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"547d4a11-9eee-4a56-b0c0-5183db528c65","name":"Penn Manor","seed":null,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-08","opp":{"id":"e19ffbe0-5471-4292-8562-bbafa59fb46e","name":"Downingtown West","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Semi-Finals","date":"2025-11-11","opp":{"id":"7fcbd578-aeec-4eb6-be95-5037bcb1f6b8","name":"Central Bucks East","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Semi-Finals","result":"eliminated","depth":0.5}
+  ]
+}

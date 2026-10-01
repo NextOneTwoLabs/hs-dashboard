@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "87692819-1507-4699-bfe4-4d04458b090e",
+  "name": "Crystal River",
+  "fullName": null,
+  "city": "Crystal River",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/crystal-river/crystal-river-pirates",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","gender":"girls","seed":8,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":8,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"113a7369-83ce-4e9c-bd61-a3b1444dfc5a","name":"Bishop Kenny","seed":1,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

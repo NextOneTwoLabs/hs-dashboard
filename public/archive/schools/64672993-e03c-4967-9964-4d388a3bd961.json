@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "64672993-e03c-4967-9964-4d388a3bd961",
+  "name": "Drew",
+  "fullName": null,
+  "city": "Riverdale",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/riverdale/drew",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":10,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"2a6b07f4-5938-4091-8b54-9df7ec4d1f58","name":"Allatoona","seed":null,"score":10},"gf":0,"ga":10,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

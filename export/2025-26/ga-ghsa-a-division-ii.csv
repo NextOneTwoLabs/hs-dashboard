@@ -1,0 +1,32 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,bye,,,Treutlen,,,,,top
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,final,,,Towns County,0,,Irwin County,10,bottom
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,final,,,Metter,1,,Atlanta Classical Academy,4,bottom
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,bye,,,,,,Crawford County,,bottom
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,final,,,Furlow Charter School,0,,Lake Oconee Academy,9,bottom
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,bye,,,Brooks County,,,,,top
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,final,,,Elite Scholars Academy,1,,Montgomery County,3,bottom
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,bye,,,,,,Screven County,,bottom
+2025-26,GA,ga-ghsa,Class A Division II,1,Round 2,2026-04-28,final,,,Treutlen,0,,Irwin County,2,bottom
+2025-26,GA,ga-ghsa,Class A Division II,1,Round 2,2026-04-28,final,,,Atlanta Classical Academy,8,,Crawford County,0,top
+2025-26,GA,ga-ghsa,Class A Division II,1,Round 2,2026-04-28,final,,,Lake Oconee Academy,4,,Brooks County,0,top
+2025-26,GA,ga-ghsa,Class A Division II,1,Round 2,2026-04-28,final,,,Montgomery County,1,,Screven County,2,bottom
+2025-26,GA,ga-ghsa,Class A Division II,2,Round 3,2026-05-04,final,,,Irwin County,3,,Atlanta Classical Academy,2,top
+2025-26,GA,ga-ghsa,Class A Division II,2,Round 3,2026-05-04,final,,,Lake Oconee Academy,2,,Screven County,3,bottom
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,final,,,Southwest Georgia STEM Charter,1,,Claxton,11,bottom
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,bye,,,,,,Trion,,bottom
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,final,,,Lanier County,2,,Lincoln County,1,top
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,bye,,,,,,Georgia Military College,,bottom
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,bye,,,,,,Chattahoochee County,,bottom
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,final,,,Mt. Zion,2,,Portal,9,bottom
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,bye,,,Washington-Wilkes,,,,,top
+2025-26,GA,ga-ghsa,Class A Division II,0,Round 1,2026-04-21,final,,,Dooly County,0,,Atkinson County,4,bottom
+2025-26,GA,ga-ghsa,Class A Division II,1,Round 2,2026-04-28,final,,,Claxton,0,,Trion,2,bottom
+2025-26,GA,ga-ghsa,Class A Division II,1,Round 2,2026-04-28,final,,,Lanier County,1,,Georgia Military College,2,bottom
+2025-26,GA,ga-ghsa,Class A Division II,1,Round 2,2026-04-28,final,,,Chattahoochee County,2,,Portal,3,bottom
+2025-26,GA,ga-ghsa,Class A Division II,1,Round 2,2026-04-28,final,,,Washington-Wilkes,0,,Atkinson County,2,bottom
+2025-26,GA,ga-ghsa,Class A Division II,2,Round 3,2026-05-04,final,,,Trion,4,,Georgia Military College,0,top
+2025-26,GA,ga-ghsa,Class A Division II,2,Round 3,2026-05-04,final,,,Portal,12,,Atkinson County,5,top
+2025-26,GA,ga-ghsa,Class A Division II,3,Round 4,2026-05-07,final,,,Irwin County,2,,Screven County,1,top
+2025-26,GA,ga-ghsa,Class A Division II,3,Round 4,2026-05-07,final,,,Trion,3,,Portal,0,top
+2025-26,GA,ga-ghsa,Class A Division II,4,Round 5,,final,,,Irwin County,1,,Trion,2,bottom

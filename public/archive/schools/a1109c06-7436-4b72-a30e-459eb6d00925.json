@@ -4,10 +4,11 @@
   "name": "San Pasqual",
   "fullName": null,
   "city": "Escondido",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/escondido/san-pasqual-golden-eagles",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":1},
-  "best": {"season":"2021-22","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Regional Semifinals"},
+  "best": {"season":"2021-22","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Regional Semifinals"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-socal","division":"gd3","seed":5,"rounds":3,"w":0,"l":1,"d":1,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"9c909108-0c4f-43ac-a1d6-0a8281c344f0","name":"Portola","seed":4,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"09faabc1-0e7c-4c67-b24a-00d5b02e9153","name":"El Segundo","seed":1,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":5,"rounds":3,"w":0,"l":1,"d":1,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"9c909108-0c4f-43ac-a1d6-0a8281c344f0","name":"Portola","seed":4,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"09faabc1-0e7c-4c67-b24a-00d5b02e9153","name":"El Segundo","seed":1,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "306a463d-493d-4966-93a8-e84b2f7e0bfb",
+  "name": "Mandarin",
+  "fullName": null,
+  "city": "Jacksonville",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/jacksonville/mandarin-mustangs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","gender":"girls","seed":6,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"87a26ee3-35d5-44c0-890d-80fbda3222bc","name":"Pace","seed":3,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

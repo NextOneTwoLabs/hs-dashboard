@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "9cfc1d18-e36b-4df6-9422-d3408df0f97a",
+  "name": "Dooly County",
+  "fullName": null,
+  "city": "Vienna",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/vienna/dooly-county-bobcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"5cbd6ef8-864b-4b83-993c-100056cfca36","name":"Atkinson County","seed":null,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

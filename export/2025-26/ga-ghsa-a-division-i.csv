@@ -1,0 +1,32 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Putnam County,0,,Thomasville,10,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Barrow Arts and Sciences Academy,5,,Berrien,0,top
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Commerce,2,,Armuchee,4,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Fitzgerald,1,,Social Circle,4,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Temple,2,,Fannin County,5,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Rabun County,4,,Vidalia,2,top
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Swainsboro,0,,Worth County,3,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Coosa,0,,Lamar County,5,bottom
+2025-26,GA,ga-ghsa,Class A Division I,1,Round 2,2026-04-28,final,,,Thomasville,5,,Barrow Arts and Sciences Academy,1,top
+2025-26,GA,ga-ghsa,Class A Division I,1,Round 2,2026-04-28,final,,,Armuchee,0,,Social Circle,2,bottom
+2025-26,GA,ga-ghsa,Class A Division I,1,Round 2,2026-04-28,final,,,Fannin County,3,,Rabun County,2,top
+2025-26,GA,ga-ghsa,Class A Division I,1,Round 2,2026-04-28,final,,,Worth County,0,,Lamar County,1,bottom
+2025-26,GA,ga-ghsa,Class A Division I,2,Round 3,2026-05-04,final,,,Thomasville,5,,Social Circle,0,top
+2025-26,GA,ga-ghsa,Class A Division I,2,Round 3,2026-05-04,final,,,Fannin County,0,,Lamar County,4,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Haralson County,0,,Model,10,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Jasper County,1,,Woodville-Tompkins,2,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Dodge County,0,,Toombs County,4,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Oglethorpe County,0,,Jeff Davis,2,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,East Laurens,0,,Bremen,10,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Dade County,0,,Bleckley County,1,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Central,0,,Pepperell,5,bottom
+2025-26,GA,ga-ghsa,Class A Division I,0,Round 1,2026-04-21,final,,,Gordon Central,0,,Academy for Classical Education,10,bottom
+2025-26,GA,ga-ghsa,Class A Division I,1,Round 2,2026-04-28,final,,,Model,9,,Woodville-Tompkins,0,top
+2025-26,GA,ga-ghsa,Class A Division I,1,Round 2,2026-04-28,final,,,Toombs County,1,,Jeff Davis,2,bottom
+2025-26,GA,ga-ghsa,Class A Division I,1,Round 2,2026-04-28,final,,,Bremen,7,,Bleckley County,0,top
+2025-26,GA,ga-ghsa,Class A Division I,1,Round 2,2026-04-28,final,,,Pepperell,0,,Academy for Classical Education,10,bottom
+2025-26,GA,ga-ghsa,Class A Division I,2,Round 3,2026-05-04,final,,,Model,6,,Jeff Davis,0,top
+2025-26,GA,ga-ghsa,Class A Division I,2,Round 3,2026-05-04,final,,,Bremen,0,,Academy for Classical Education,4,bottom
+2025-26,GA,ga-ghsa,Class A Division I,3,Round 4,2026-05-07,final,,,Thomasville,6,,Lamar County,1,top
+2025-26,GA,ga-ghsa,Class A Division I,3,Round 4,2026-05-07,final,,,Model,1,,Academy for Classical Education,0,top
+2025-26,GA,ga-ghsa,Class A Division I,4,Round 5,,final,,,Thomasville,1,,Model,0,top

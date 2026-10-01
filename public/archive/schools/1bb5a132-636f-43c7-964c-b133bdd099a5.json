@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1bb5a132-636f-43c7-964c-b133bdd099a5",
+  "name": "Masterman",
+  "fullName": null,
+  "city": "Philadelphia",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/philadelphia/masterman-blue-dragon",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"1a","divisionLabel":"1A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"1a","divisionLabel":"1A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":8,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"ad95fe01-b829-48a2-bb88-fd22851dd3ed","name":"Faith Christian","seed":null,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

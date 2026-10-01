@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "6c70d859-1343-4c8d-a93a-176bc0ca4325",
+  "name": "Fitzgerald",
+  "fullName": null,
+  "city": "Fitzgerald",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/fitzgerald/fitzgerald-hurricane",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":4,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"d6f305f6-1653-4d94-b33c-bae95e5ce562","name":"Social Circle","seed":null,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

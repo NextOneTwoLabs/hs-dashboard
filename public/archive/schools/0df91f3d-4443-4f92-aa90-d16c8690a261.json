@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "0df91f3d-4443-4f92-aa90-d16c8690a261",
+  "name": "Loganville",
+  "fullName": null,
+  "city": "Loganville",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/loganville/loganville-red-devils",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":5,"ga":5,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"320b823d-2e92-4b64-9b4c-4dd7d9a7fba6","name":"South Effingham","seed":null,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"e372bc25-b5c1-4c9a-ad82-6bac6c618767","name":"Milton","seed":null,"score":4},"gf":2,"ga":4,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

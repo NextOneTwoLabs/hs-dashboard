@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "c9d5b5ce-04f9-40fa-bcdf-91e2c6020003",
+  "name": "Murray County",
+  "fullName": null,
+  "city": "Chatsworth",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/chatsworth/murray-county-indians",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":26,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":5,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"8bb9607d-f501-43b8-a98b-673e645aaaa7","name":"Sonoraville","seed":7,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

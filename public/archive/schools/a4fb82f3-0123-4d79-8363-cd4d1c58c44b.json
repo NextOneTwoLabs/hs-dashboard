@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "a4fb82f3-0123-4d79-8363-cd4d1c58c44b",
+  "name": "Tenino",
+  "fullName": null,
+  "city": "Tenino",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/tenino/tenino-beavers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":3,"ga":6,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"da7da111-2fe5-474a-8d4c-cfbee4bd5bc0","name":"Cashmere","seed":null,"score":6},"gf":3,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

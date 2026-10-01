@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "ef2494bc-baf8-41bc-a48e-89f61d31c557",
+  "name": "Ponte Vedra",
+  "fullName": null,
+  "city": "Ponte Vedra",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/ponte-vedra/ponte-vedra-sharks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","result":"eliminated","reached":"Region Final"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","gender":"girls","seed":1,"rounds":5,"w":2,"l":1,"d":0,"gf":5,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"d9d0e8d1-a912-413d-be5d-65113edf150c","name":"St. Augustine","seed":8,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"3225b375-e31b-4769-92f4-bb0c22580a47","name":"Gulf Breeze","seed":4,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-17","opp":{"id":"2a954006-a714-45f1-9269-eda8ff3eacf9","name":"Chiles","seed":3,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Region Final","result":"eliminated","depth":0.4}
+  ]
+}

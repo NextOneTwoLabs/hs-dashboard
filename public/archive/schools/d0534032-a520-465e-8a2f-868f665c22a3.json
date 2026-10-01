@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d0534032-a520-465e-8a2f-868f665c22a3",
+  "name": "Warner Robins",
+  "fullName": null,
+  "city": "Warner Robins",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/warner-robins/warner-robins-demons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":10,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"cc8a553c-87cf-49f4-9197-6fcfb4ae0485","name":"Walnut Grove","seed":null,"score":10},"gf":1,"ga":10,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

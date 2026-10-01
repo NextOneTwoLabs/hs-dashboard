@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d047cf12-8031-40f0-bb0e-16205c2c558e",
+  "name": "Navarre",
+  "fullName": null,
+  "city": "Navarre",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/navarre/navarre-raiders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","gender":"girls","seed":8,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"fcfecb46-b7ac-493b-815c-30f78ab76cc3","name":"Niceville","seed":1,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "c6e59fbb-47bc-40d4-8235-af2b00fd312f",
+  "name": "Sumner",
+  "fullName": null,
+  "city": "Sumner",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/sumner/sumner-spartans",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"4a","divisionLabel":"4A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"4a","divisionLabel":"4A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"f46544e3-90de-4080-a2eb-4174175e197e","name":"Lake Stevens","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

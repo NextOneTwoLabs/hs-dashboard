@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "3d69ea74-957b-45f9-b53f-6cdbe454ed46",
+  "name": "Midlothian Heritage",
+  "fullName": null,
+  "city": "Midlothian",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/midlothian/midlothian-heritage-jaguars",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":2,"l":1,"d":0,"gf":12,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"d4f668a7-1c2a-4374-842b-78a5fa09b7d4","name":"University","seed":null,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"a3bd01c9-3acc-45bb-917d-d01b7ef73ce1","name":"Hillcrest","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"761e1afd-d386-4edd-a4ef-5e4f79d1fbf0","name":"Lovejoy","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

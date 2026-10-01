@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "638a88ef-afba-45fa-8679-7a04b8654257",
+  "name": "Forney",
+  "fullName": null,
+  "city": "Forney",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/forney/forney-jackrabbits",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":5,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","result":"runner-up","reached":"State Finals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","gender":"girls","seed":null,"rounds":6,"w":5,"l":0,"d":1,"gf":25,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"ce271035-67da-4c71-b085-b0a727d8e722","name":"Rowlett","seed":null,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"49748ca3-90a0-4327-b503-7ef1fff561a1","name":"Mesquite","seed":null,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"775f0480-6997-4f5c-9ce6-13984d2f5fa9","name":"Cypress Woods","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Regional Finals","date":"2026-03-30","opp":{"id":"33e62773-11ba-4566-a370-50b6c8fef1af","name":"Wylie East","seed":null,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":4,"roundName":"State Semifinals","date":"2026-04-02","opp":{"id":"fbce2bd4-14b1-4d70-affe-b7d2d746a418","name":"Southlake Carroll","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":5,"roundName":"State Finals","date":"2026-04-09","opp":{"id":"93aaa88f-b5e5-43df-a3b2-c1623eaadbb5","name":"Kingwood","seed":null,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":5,"reached":"State Finals","result":"runner-up","depth":0.833}
+  ]
+}

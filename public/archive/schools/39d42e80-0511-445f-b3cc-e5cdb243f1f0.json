@@ -4,10 +4,11 @@
   "name": "Montgomery",
   "fullName": null,
   "city": "Santa Rosa",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/santa-rosa/montgomery-vikings",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":1},
-  "best": {"season":"2018-19","competition":"cif-norcal","division":"gd2","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2018-19","competition":"ca-cif-norcal","division":"gd2","divisionLabel":"Division 2","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-norcal","division":"gd2","seed":2,"rounds":3,"w":1,"l":0,"d":1,"gf":7,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"f133ba52-590e-4f91-b798-d9c06fd9fc4c","name":"Menlo School","seed":7,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"09beba1b-240a-45b8-aa6e-281decefa275","name":"Mountain View","seed":3,"score":3},"gf":3,"ga":3,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-norcal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":2,"rounds":3,"w":1,"l":0,"d":1,"gf":7,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"f133ba52-590e-4f91-b798-d9c06fd9fc4c","name":"Menlo School","seed":7,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"09beba1b-240a-45b8-aa6e-281decefa275","name":"Mountain View","seed":3,"score":3},"gf":3,"ga":3,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
   ]
 }

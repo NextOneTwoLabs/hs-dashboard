@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "77188e18-4c52-445b-b8ee-5dcd8ba52f5e",
+  "name": "West Mesquite",
+  "fullName": null,
+  "city": "Mesquite",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/mesquite/west-mesquite-wranglers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":4,"ga":3,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"9b471dd2-19e6-45fe-81e0-56e3ebf8caae","name":"Sunset","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"0b1597e7-9cea-4390-82fe-e4fd658be117","name":"Lake Belton","seed":null,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

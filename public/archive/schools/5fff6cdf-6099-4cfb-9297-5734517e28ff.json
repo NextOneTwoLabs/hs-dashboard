@@ -4,11 +4,12 @@
   "name": "Santa Maria",
   "fullName": null,
   "city": "Santa Maria",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/santa-maria/santa-maria-saints",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":2,"l":1,"d":1},
-  "best": {"season":"2024-25","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Regional Semifinals"},
+  "best": {"season":"2024-25","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Regional Semifinals"},
   "appearances": [
-    {"season":"2020-21","competition":"cif-socal","division":"gd5","seed":4,"rounds":3,"w":1,"l":0,"d":1,"gf":3,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"eb044827-eede-454c-8b4e-a3cb325cc033","name":"Gardena","seed":5,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"0595f25d-de4f-46fd-a019-41c8375e8eb2","name":"St. Bonaventure","seed":1,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
-    {"season":"2024-25","competition":"cif-socal","division":"gd4","seed":5,"rounds":3,"w":1,"l":1,"d":0,"gf":4,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"f2d2fe0d-91e4-4b38-b2d9-43092d741203","name":"Viewpoint","seed":4,"score":3},"gf":4,"ga":3,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"8724822c-7a6a-4375-a7a1-fb89b0fb25d4","name":"Sage Hill","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+    {"season":"2020-21","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":4,"rounds":3,"w":1,"l":0,"d":1,"gf":3,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"eb044827-eede-454c-8b4e-a3cb325cc033","name":"Gardena","seed":5,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"0595f25d-de4f-46fd-a019-41c8375e8eb2","name":"St. Bonaventure","seed":1,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
+    {"season":"2024-25","state":"CA","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":5,"rounds":3,"w":1,"l":1,"d":0,"gf":4,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"f2d2fe0d-91e4-4b38-b2d9-43092d741203","name":"Viewpoint","seed":4,"score":3},"gf":4,"ga":3,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"8724822c-7a6a-4375-a7a1-fb89b0fb25d4","name":"Sage Hill","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
   ]
 }

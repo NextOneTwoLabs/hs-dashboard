@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "34eb7be6-b9ae-4aa1-9cac-aa01dda5ba09",
+  "name": "Skyview",
+  "fullName": null,
+  "city": "Vancouver",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/vancouver/skyview-storm",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"4a","divisionLabel":"4A","result":"eliminated","reached":"Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"4a","divisionLabel":"4A","gender":"girls","seed":null,"rounds":4,"w":2,"l":1,"d":0,"gf":6,"ga":2,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"4dd48c9a-5f4f-4dfd-8567-78c80fa1333e","name":"Stadium","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-14","opp":{"id":"3a5ae425-5f99-4c5f-8f6d-1b6f1a68c11a","name":"Mead","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Semifinals","date":"2025-11-21","opp":{"id":"0a5ae530-1e21-4a32-adac-e2a3fb2885d1","name":"Tahoma","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Semifinals","result":"eliminated","depth":0.5}
+  ]
+}

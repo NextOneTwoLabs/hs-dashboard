@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "129234f3-e8d5-476d-a415-01f44dd69e6c",
+  "name": "Blue Mountain",
+  "fullName": null,
+  "city": "Schuylkill Haven",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/schuylkill-haven/blue-mountain-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"8058abd1-bbaa-498a-9f1c-b54c24f68525","name":"Lower Dauphin","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

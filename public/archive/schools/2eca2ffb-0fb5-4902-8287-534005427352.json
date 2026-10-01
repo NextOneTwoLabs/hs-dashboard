@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2eca2ffb-0fb5-4902-8287-534005427352",
+  "name": "Summer Creek",
+  "fullName": null,
+  "city": "Houston",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/houston/summer-creek-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":4,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","result":"eliminated","reached":"State Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","gender":"girls","seed":null,"rounds":6,"w":4,"l":0,"d":1,"gf":11,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"768197dc-fd50-4df1-9c27-a2c0ffffd755","name":"Deer Park","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"bf77e3be-17df-4ecb-a620-507cade6b4f4","name":"Fort Bend Travis","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"31c3502e-be12-4d96-bce4-7c0b2227254e","name":"Fulshear","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Regional Finals","date":"2026-03-30","opp":{"id":"2d51e95d-195b-45d7-94df-142e494effca","name":"Seven Lakes","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":4,"roundName":"State Semifinals","date":"2026-04-02","opp":{"id":"ba7a97b9-0faa-44b1-b29c-52795363a7ea","name":"Round Rock","seed":null,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":4,"reached":"State Semifinals","result":"eliminated","depth":0.667}
+  ]
+}

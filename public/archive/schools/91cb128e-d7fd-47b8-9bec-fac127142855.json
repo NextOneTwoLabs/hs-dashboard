@@ -4,11 +4,12 @@
   "name": "McLane",
   "fullName": null,
   "city": "Fresno",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/fresno/mclane-highlanders",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":1,"d":1},
-  "best": {"season":"2025-26","competition":"cif-state","division":"gd5","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2025-26","competition":"ca-cif-state","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2022-23","competition":"cif-norcal","division":"gd5","seed":5,"rounds":3,"w":0,"l":0,"d":1,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"dacdc63c-d265-4ee2-8455-002a16f08e39","name":"Stone Ridge Christian","seed":4,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2025-26","competition":"cif-state","division":"gd5","seed":7,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"78ab1d8a-38ee-4c32-a9a5-ea05afd088a4","name":"Watsonville","seed":2,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2022-23","state":"CA","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":5,"rounds":3,"w":0,"l":0,"d":1,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"dacdc63c-d265-4ee2-8455-002a16f08e39","name":"Stone Ridge Christian","seed":4,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","state":"CA","competition":"ca-cif-state","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":7,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"78ab1d8a-38ee-4c32-a9a5-ea05afd088a4","name":"Watsonville","seed":2,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

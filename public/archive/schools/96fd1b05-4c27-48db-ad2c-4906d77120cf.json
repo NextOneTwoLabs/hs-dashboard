@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "96fd1b05-4c27-48db-ad2c-4906d77120cf",
+  "name": "Paschal",
+  "fullName": null,
+  "city": "Fort Worth",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/fort-worth/paschal-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"77dbddc0-640b-4ddb-9ede-a18182eee3d0","name":"Cleburne","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"cd55b9aa-23e9-4239-9ea9-2fda68706dea","name":"Colleyville Heritage","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "5a6e5723-2665-42cd-a003-de5d33e6993e",
+  "name": "Coral Springs Charter",
+  "fullName": null,
+  "city": "Coral Springs",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/coral-springs/coral-springs-charter-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":5,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"b14f1bcd-df00-4ede-867d-1d1ed9d13484","name":"NSU University","seed":4,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

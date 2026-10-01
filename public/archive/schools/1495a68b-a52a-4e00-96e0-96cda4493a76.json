@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1495a68b-a52a-4e00-96e0-96cda4493a76",
+  "name": "Holy Trinity Episcopal Academy",
+  "fullName": null,
+  "city": "Melbourne",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/melbourne/holy-trinity-episcopal-academy-tigers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":1},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","gender":"girls","seed":4,"rounds":5,"w":0,"l":1,"d":1,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"23ca64ff-57b9-4835-8671-96b63b17d958","name":"Melbourne Central Catholic","seed":5,"score":2},"gf":2,"ga":2,"res":"D","pk":"W"},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"89dc97cb-8ff6-42b6-9294-281155f42c21","name":"King's Academy","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

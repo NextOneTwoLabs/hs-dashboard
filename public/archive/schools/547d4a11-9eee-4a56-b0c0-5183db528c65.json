@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "547d4a11-9eee-4a56-b0c0-5183db528c65",
+  "name": "Penn Manor",
+  "fullName": null,
+  "city": "Millersville",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/millersville/penn-manor-comets",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"4a","divisionLabel":"4A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"4a","divisionLabel":"4A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":5,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"f9b027a1-084c-4f00-9520-a14d14d1bbea","name":"North Allegheny","seed":null,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

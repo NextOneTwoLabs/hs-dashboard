@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d19b63a4-ee7f-45ee-ba15-95c9889c7a28",
+  "name": "St. Edward's",
+  "fullName": null,
+  "city": "Vero Beach",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/vero-beach/st-edwards-pirates",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","gender":"girls","seed":6,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":8,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"03c4dc2e-7191-474b-ae6d-600a1d8e447d","name":"Victory Christian Academy","seed":3,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

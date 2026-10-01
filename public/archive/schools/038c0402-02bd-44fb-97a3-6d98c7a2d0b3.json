@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "038c0402-02bd-44fb-97a3-6d98c7a2d0b3",
+  "name": "Treutlen",
+  "fullName": null,
+  "city": "Soperton",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/soperton/treutlen-vikings",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":null,"gf":null,"ga":null,"res":"BYE","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"dfc70e97-1ffd-438a-b424-08fea6ffeffb","name":"Irwin County","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1de532f8-bb84-41a0-894f-e96a81172d2f",
+  "name": "Doral Academy",
+  "fullName": null,
+  "city": "Doral",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/doral/doral-academy-firebirds",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":5,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"2c67d12e-92be-4e2e-a1c0-e6809c4f22b3","name":"Stoneman Douglas","seed":4,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

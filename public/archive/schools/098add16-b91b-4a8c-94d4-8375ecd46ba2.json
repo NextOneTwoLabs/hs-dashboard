@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "098add16-b91b-4a8c-94d4-8375ecd46ba2",
+  "name": "Lumpkin County",
+  "fullName": null,
+  "city": "Dahlonega",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/dahlonega/lumpkin-county-indians",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","gender":"girls","seed":null,"rounds":5,"w":2,"l":1,"d":0,"gf":10,"ga":6,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"16e17221-c5df-4bf5-b60d-fde574f4bcec","name":"LaGrange","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"bd63d5ed-3a33-4ca4-97cd-3f26c5187578","name":"Richmond Academy","seed":null,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"69d78a7d-6a9f-458e-81a6-e4e767a27906","name":"Oconee County","seed":null,"score":6},"gf":1,"ga":6,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

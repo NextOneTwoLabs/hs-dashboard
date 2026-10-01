@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "5b34cfbd-4e21-408c-89db-fc5d034e641d",
+  "name": "Northview",
+  "fullName": null,
+  "city": "Johns Creek",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/johns-creek/northview-titans",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":7,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"56a30da7-e8b2-47b4-a3a4-3e8175b86966","name":"Starr's Mill","seed":null,"score":7},"gf":0,"ga":7,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

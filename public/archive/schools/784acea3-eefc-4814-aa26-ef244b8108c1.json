@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "784acea3-eefc-4814-aa26-ef244b8108c1",
+  "name": "Rocky Bayou Christian",
+  "fullName": null,
+  "city": "Niceville",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/niceville/rocky-bayou-christian-knights",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","gender":"girls","seed":4,"rounds":5,"w":1,"l":1,"d":0,"gf":1,"ga":5,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"408d2ec8-08d4-4fc0-bb84-57fec7e9bab6","name":"Christ's Church Academy","seed":5,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"6e58e482-a1c2-409e-8825-18b95aea48be","name":"St. Johns Country Day","seed":1,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

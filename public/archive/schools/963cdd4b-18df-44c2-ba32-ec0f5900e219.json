@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "963cdd4b-18df-44c2-ba32-ec0f5900e219",
+  "name": "Bremen",
+  "fullName": null,
+  "city": "Bremen",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/bremen/bremen-blue-devils",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":2,"l":1,"d":0,"gf":17,"ga":4,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"c0834748-f038-4d60-a32f-b58e8244e9be","name":"East Laurens","seed":null,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"d96091be-1837-47f5-9bb4-d670793cfc36","name":"Bleckley County","seed":null,"score":0},"gf":7,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"0ca4b526-5950-4d8c-959a-e90d466e4199","name":"Academy for Classical Education","seed":null,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

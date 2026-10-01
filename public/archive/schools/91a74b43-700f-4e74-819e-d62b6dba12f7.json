@@ -4,10 +4,11 @@
   "name": "Point Loma",
   "fullName": null,
   "city": "San Diego",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/san-diego/point-loma-fighting-pointers",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":1},
-  "best": {"season":"2021-22","competition":"cif-socal","division":"gd1","result":"eliminated","reached":"Regional Semifinals"},
+  "best": {"season":"2021-22","competition":"ca-cif-socal","division":"gd1","divisionLabel":"Division 1","result":"eliminated","reached":"Regional Semifinals"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-socal","division":"gd1","seed":7,"rounds":3,"w":1,"l":0,"d":1,"gf":1,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"6d02719b-1533-4cda-b01a-8e2fa0f6166c","name":"Santiago","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"ff3dcd2f-cdea-46e6-accf-fd929c0a4374","name":"San Marcos","seed":3,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-socal","division":"gd1","divisionLabel":"Division 1","gender":"girls","seed":7,"rounds":3,"w":1,"l":0,"d":1,"gf":1,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"6d02719b-1533-4cda-b01a-8e2fa0f6166c","name":"Santiago","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"ff3dcd2f-cdea-46e6-accf-fd929c0a4374","name":"San Marcos","seed":3,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
   ]
 }
