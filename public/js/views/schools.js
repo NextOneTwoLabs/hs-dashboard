@@ -43,7 +43,7 @@ export async function render({ state, catalog, controls, view, setState }) {
       aria-sort="${sort.key === c.key ? (sort.dir > 0 ? 'ascending' : 'descending') : 'none'}">${c.label}</th>`).join('');
     const body = rows.slice(0, 400).map((s) => `<tr><td><a href="${schoolHref(s.id)}">${esc(s.name)}</a></td><td>${esc(s.city || '')}</td>
       <td class="n">${s.apps}</td><td class="n">${s.titles || ''}</td><td class="num">${esc(s.last)}</td></tr>`).join('');
-    view.innerHTML = `<div class="page-head"><h1 class="page">Schools</h1><span class="muted">${rows.length} of ${data.count} schools with a CIF State or Regional appearance</span></div>
+    view.innerHTML = `<div class="page-head"><h1 class="page">Schools</h1><span class="muted">${rows.length} of ${data.count} schools with a state playoff appearance · California only so far</span></div>
       ${favs.length ? `<div class="fav-list"><span class="muted">Following:</span>${favs.map((f) => `<a class="chip accent" href="${schoolHref(f.id)}">★ ${esc(f.name)}</a>`).join('')}</div>` : ''}
       <div class="card table-wrap"><table class="data"><thead><tr>${head}</tr></thead><tbody>${body || '<tr><td colspan="5" class="cell-empty">No schools match.</td></tr>'}</tbody></table></div>`;
     view.querySelectorAll('th[data-sort]').forEach((th) => th.addEventListener('click', () => {

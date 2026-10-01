@@ -1,8 +1,11 @@
-# CIF Girls Soccer Dashboard
+# High School Girls Soccer Dashboard
 
-California high school girls soccer postseason dashboard: CIF State Championship
-brackets (2026 onward) and the NorCal / SoCal Regional Championships before them
-(2018–2025), with results, a champions grid and per-school playoff histories.
+A US high school girls soccer postseason dashboard: state championship brackets,
+results, a champions grid and per-school playoff histories.
+
+Coverage today is **California** only: the CIF State Championships (2026 onward) and
+the NorCal / SoCal Regional Championships before them (2018–2025). Other states are
+being onboarded; see [docs/ONBOARDING.md](docs/ONBOARDING.md).
 
 The architecture follows [ecnl-dashboard](https://github.com/NextOneTwoLabs/ecnl-dashboard):
 

@@ -33,8 +33,8 @@ async function render() {
     const on = a.dataset.tab === state.tab || (state.tab === 'school' && a.dataset.tab === 'schools');
     a.setAttribute('aria-selected', on);
   });
-  if (state.tab === 'school' || state.tab === 'schools') document.title = 'Schools · CIF Girls Soccer';
-  else document.title = 'CIF Girls Soccer';
+  if (state.tab === 'school' || state.tab === 'schools') document.title = 'Schools · High School Girls Soccer';
+  else document.title = 'High School Girls Soccer';
   try {
     await VIEWS[state.tab].render({ state, catalog, controls, view, setState });
   } catch (err) {
@@ -127,7 +127,7 @@ window.addEventListener('hashchange', render);
   api.status().then((s) => {
     if (s?.updatedAt) {
       document.getElementById('status-line').textContent =
-        `Data: CIF (cifstate.org) brackets, game data from MaxPreps · updated ${new Date(s.updatedAt).toLocaleString()}`;
+        `Coverage: California (CIF) for now, more states coming. Brackets from state associations; game data from MaxPreps · updated ${new Date(s.updatedAt).toLocaleString()}`;
     }
   }).catch(() => {});
 })();

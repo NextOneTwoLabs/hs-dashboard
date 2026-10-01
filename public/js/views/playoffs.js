@@ -23,7 +23,7 @@ export async function render({ state, catalog, controls, view, setState }) {
   const tabs = divs
     .map((d) => `<a href="#tab=playoffs&season=${state.season}&comp=${comp.id}&g=${state.g}&div=${d.code}" aria-current="${d.code === state.div}">${divShort(d.code)}</a>`)
     .join('');
-  view.innerHTML = `<div class="page-head"><h1 class="page">${esc(comp.label)}</h1><span class="muted">${esc(state.season)}</span></div>
+  view.innerHTML = `<div class="page-head"><h1 class="page">${esc(comp.label)}</h1><span class="muted">California · ${esc(state.season)}</span></div>
     <nav class="div-tabs" aria-label="Divisions">${tabs || '<span class="muted">No divisions</span>'}</nav>
     <div id="bracket-host"><div class="card notice">Loading bracket…</div></div>`;
   if (!div) return;

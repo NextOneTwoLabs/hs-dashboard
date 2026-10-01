@@ -38,6 +38,6 @@ export async function render({ state, catalog, controls, view, setState }) {
     })
     .join('');
   view.innerHTML = `<div class="page-head"><h1 class="page">${state.g === 'b' ? 'Boys' : 'Girls'} champions</h1>
-      <span class="muted">CIF State (2026–) and NorCal / SoCal Regional (2018–2025)</span></div>
+      <span class="muted">California: CIF State (2026–) and NorCal / SoCal Regional (2018–2025)</span></div>
     <div class="card table-wrap"><table class="data"><thead>${head}</thead><tbody>${body}</tbody></table></div>`;
 }
