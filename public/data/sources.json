@@ -15,7 +15,7 @@
       "winter": { "from": "01-15", "to": "04-20", "year": "end" },
       "spring": { "from": "04-01", "to": "06-15", "year": "end" }
     },
-    "notes": "A registered active-season tournament with no listed brackets, a pending list page, or brackets without dates is re-checked only by the one cron run that starts in recheckSlotUtc (06:00 UTC), and only inside its term window. A state whose playoffs fall outside its term window (some winter states may start before 01-15; unverified) sets liveFrom/liveTo (MM-DD) on its competition or season entry. tests/test_refresh.py checks that refresh.yml has exactly one daily run in the slot."
+    "notes": "A registered active-season tournament with no listed brackets, a pending list page, or brackets without dates is re-checked only by the one cron run that starts in recheckSlotUtc (06:00 UTC), and only inside its term window. That run also re-fetches every 'ok' MaxPreps list page in term for brackets added later, and retries failed or blocked brackets. A state whose playoffs fall outside its term window (some winter states may start before 01-15; unverified) sets liveFrom/liveTo (MM-DD) on its competition or season entry. tests/test_refresh.py checks that refresh.yml has exactly one daily run in the slot."
   },
   "aliases": { "cif-state": "ca-cif-state", "cif-norcal": "ca-cif-norcal", "cif-socal": "ca-cif-socal" },
   "states": {
