@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "ea4c6a16-bbd5-4f75-9415-f80b5b1e534e",
+  "name": "Wolfson",
+  "fullName": null,
+  "city": "Jacksonville",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/jacksonville/wolfson-wolfpack",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":6,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"e77af86d-d71d-4a52-83ce-cc03464e9fd6","name":"Florida State University High School","seed":3,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "6aea5c8b-d384-41b6-8256-53cfd3778273",
+  "name": "West Shore",
+  "fullName": null,
+  "city": "Melbourne",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/melbourne/west-shore-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","gender":"girls","seed":2,"rounds":5,"w":1,"l":1,"d":0,"gf":4,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"f403ce76-a49c-44d8-9d9b-a8d80e95a84b","name":"Trinity Prep","seed":7,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"2ce4d331-04e4-450d-be90-ba520bf016a2","name":"Edgewood","seed":3,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

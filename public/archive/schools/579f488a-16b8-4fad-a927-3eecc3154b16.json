@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "579f488a-16b8-4fad-a927-3eecc3154b16",
+  "name": "Onalaska",
+  "fullName": null,
+  "city": "Onalaska",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/onalaska/onalaska-loggers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"1f2bfa2b-1029-4de7-81cd-459b54fb22d1","name":"Northwest Christian School","seed":null,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

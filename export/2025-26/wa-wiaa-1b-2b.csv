@@ -1,0 +1,16 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,WA,wa-wiaa,1B/2B,0,First Round,2025-11-11,final,,,Mount Vernon Christian,1,,Davenport,4,bottom
+2025-26,WA,wa-wiaa,1B/2B,0,First Round,2025-11-11,final,,,Pateros,0,,Freeman,7,bottom
+2025-26,WA,wa-wiaa,1B/2B,0,First Round,2025-11-11,final,,,Okanogan,1,,Napavine,2,bottom
+2025-26,WA,wa-wiaa,1B/2B,0,First Round,2025-11-11,final,,,La Conner,0,,Cle Elum-Roslyn,6,bottom
+2025-26,WA,wa-wiaa,1B/2B,0,First Round,2025-11-11,final,,,Onalaska,0,,Northwest Christian School,4,bottom
+2025-26,WA,wa-wiaa,1B/2B,0,First Round,2025-11-11,final,,,Lopez,0,,Brewster,2,bottom
+2025-26,WA,wa-wiaa,1B/2B,0,First Round,2025-11-11,final,,,Toledo,1,,Highland,2,bottom
+2025-26,WA,wa-wiaa,1B/2B,0,First Round,2025-11-11,final,,,Liberty Bell,0,,Crosspoint Christian,4,bottom
+2025-26,WA,wa-wiaa,1B/2B,1,Quarterfinals,2025-11-14,final,,,Davenport,1,,Freeman,4,bottom
+2025-26,WA,wa-wiaa,1B/2B,1,Quarterfinals,2025-11-14,final,,,Napavine,0,,Cle Elum-Roslyn,3,bottom
+2025-26,WA,wa-wiaa,1B/2B,1,Quarterfinals,2025-11-14,final,,,Northwest Christian School,4,,Brewster,1,top
+2025-26,WA,wa-wiaa,1B/2B,1,Quarterfinals,2025-11-14,final,,,Highland,1,,Crosspoint Christian,4,bottom
+2025-26,WA,wa-wiaa,1B/2B,2,Semifinals,2025-11-21,final,,,Freeman,2,,Cle Elum-Roslyn,0,top
+2025-26,WA,wa-wiaa,1B/2B,2,Semifinals,2025-11-21,final,,,Northwest Christian School,0,,Crosspoint Christian,2,bottom
+2025-26,WA,wa-wiaa,1B/2B,3,Finals,2025-11-22,final,,,Freeman,0,,Crosspoint Christian,1,bottom

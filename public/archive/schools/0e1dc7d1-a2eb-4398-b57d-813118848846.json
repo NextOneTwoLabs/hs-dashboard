@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "0e1dc7d1-a2eb-4398-b57d-813118848846",
+  "name": "Southwest Georgia STEM Charter",
+  "fullName": null,
+  "city": "Shellman",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/shellman/southwest-georgia-stem-charter-aggies",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":11,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"e814642b-355b-4d3d-896c-26686ae95009","name":"Claxton","seed":null,"score":11},"gf":1,"ga":11,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

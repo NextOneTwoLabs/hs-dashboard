@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e8a3b321-ebe6-46d8-9d56-6ca2088ce8e0",
+  "name": "Parkland",
+  "fullName": null,
+  "city": "Allentown",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/allentown/parkland-trojans",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"4a","divisionLabel":"4A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"4a","divisionLabel":"4A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"73286316-d429-4d2f-a2b9-4ce36ee447de","name":"Archbishop Carroll","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

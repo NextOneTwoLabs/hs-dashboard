@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "97c72679-dfb7-4b7f-b589-30b0f0f6bc62",
+  "name": "Stanton",
+  "fullName": null,
+  "city": "Jacksonville",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/jacksonville/stanton-blue-devils",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","gender":"girls","seed":6,"rounds":5,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"e80d8029-cecb-44aa-98a5-4dcc42df3c2c","name":"Fort Walton Beach","seed":3,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

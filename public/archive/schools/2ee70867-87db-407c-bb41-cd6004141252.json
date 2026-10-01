@@ -4,10 +4,11 @@
   "name": "Tri-City Christian",
   "fullName": null,
   "city": "Vista",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/vista/tri-city-christian-eagles",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
-  "best": {"season":"2024-25","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Regional Semifinals"},
+  "best": {"season":"2024-25","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Regional Semifinals"},
   "appearances": [
-    {"season":"2024-25","competition":"cif-socal","division":"gd5","seed":1,"rounds":3,"w":1,"l":1,"d":0,"gf":11,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"326393a3-25f4-4e4c-9102-79108e7d35a8","name":"Bravo","seed":8,"score":0},"gf":11,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"e384a4ce-117d-4115-bca1-c2069c5ce362","name":"Vista del Lago","seed":5,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+    {"season":"2024-25","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":1,"rounds":3,"w":1,"l":1,"d":0,"gf":11,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"326393a3-25f4-4e4c-9102-79108e7d35a8","name":"Bravo","seed":8,"score":0},"gf":11,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"e384a4ce-117d-4115-bca1-c2069c5ce362","name":"Vista del Lago","seed":5,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "9684836a-0fc7-4685-99e4-1acf0f46468c",
+  "name": "Rowe",
+  "fullName": null,
+  "city": "Mcallen",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/mcallen/rowe-warriors",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":2,"l":1,"d":0,"gf":13,"ga":5,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"025f38f7-595e-4cb8-8fb7-7261d319a9a8","name":"Edcouch-Elsa","seed":null,"score":1},"gf":6,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"4d5f8498-69c9-40e0-85e2-822f5ca5e414","name":"Nixon","seed":null,"score":3},"gf":7,"ga":3,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"25344d3c-9f6f-4ee5-9c86-22be0c4b4ad7","name":"Pieper","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

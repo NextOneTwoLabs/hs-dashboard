@@ -1,7 +1,11 @@
 # Onboarding other states: plan for review
 
-Status: **proposal (2026-10-01)**. Nothing below has been built or crawled yet. The only
-change made so far is the US-wide wording on the site and in the README.
+Status (2026-10-01):
+- **Approved decisions:** the California IDs are renamed to `ca-cif-*` (old links still work), private associations are excluded for now, and the pilot states are TX, FL, GA, PA and WA, backfilling to 2017-18 later.
+- **Step 1 (model and parser) is done.**
+- **Step 2 (pilot, 2025-26) is crawled and awaiting review:** 30 brackets and 1,002 schools.
+  - Florida's tournament was confirmed as FHSAA from its schools' locations.
+  - Texas 5A D1's final stages were never scored on MaxPreps, so that bracket shows "not reported".
 
 ## 1. What I found
 

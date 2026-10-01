@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e1ddc49b-238d-4c19-8c7a-033361420204",
+  "name": "Land O' Lakes",
+  "fullName": null,
+  "city": "Land O Lakes",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/land-o-lakes/land-o-lakes-gators",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","gender":"girls","seed":6,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"08b7152c-637a-4660-ad82-d2865db939a3","name":"Steinbrenner","seed":3,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

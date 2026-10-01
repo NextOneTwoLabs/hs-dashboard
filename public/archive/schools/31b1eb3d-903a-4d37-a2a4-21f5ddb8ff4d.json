@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "31b1eb3d-903a-4d37-a2a4-21f5ddb8ff4d",
+  "name": "Westminster",
+  "fullName": null,
+  "city": "Atlanta",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/atlanta/westminster-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","result":"eliminated","reached":"Round 4"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","gender":"girls","seed":null,"rounds":5,"w":3,"l":1,"d":0,"gf":15,"ga":4,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"3c7b0402-992a-4f83-b074-f4f583c63b7f","name":"Union Grove","seed":null,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"56a30da7-e8b2-47b4-a3a4-3e8175b86966","name":"Starr's Mill","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"64f0fbd2-339b-4381-b3a2-34e2db56692e","name":"Pace Academy","seed":null,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"Round 4","date":"2026-05-07","opp":{"id":"9aa5cd7e-c52d-450d-9997-02abc6820f2e","name":"Marist","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":3,"reached":"Round 4","result":"eliminated","depth":0.6}
+  ]
+}

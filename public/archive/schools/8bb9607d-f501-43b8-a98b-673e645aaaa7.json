@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "8bb9607d-f501-43b8-a98b-673e645aaaa7",
+  "name": "Sonoraville",
+  "fullName": null,
+  "city": "Calhoun",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/calhoun/sonoraville-phoenix",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":7,"rounds":5,"w":2,"l":1,"d":0,"gf":7,"ga":5,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"c9d5b5ce-04f9-40fa-bcdf-91e2c6020003","name":"Murray County","seed":26,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"9cdb757e-2464-43cc-ae91-f58cc2499bb2","name":"Tattnall County","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"2176f274-435b-4e82-809a-785a0d94cdba","name":"Coahulla Creek","seed":null,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

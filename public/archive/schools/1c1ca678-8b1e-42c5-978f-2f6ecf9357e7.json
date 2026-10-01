@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1c1ca678-8b1e-42c5-978f-2f6ecf9357e7",
+  "name": "Academy of the Holy Names",
+  "fullName": null,
+  "city": "Tampa",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/tampa/academy-of-the-holy-names-jaguars",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":6,"rounds":5,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"22b6a34f-2a24-45e4-b1c5-0da082a534b3","name":"McKeel Academy","seed":3,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

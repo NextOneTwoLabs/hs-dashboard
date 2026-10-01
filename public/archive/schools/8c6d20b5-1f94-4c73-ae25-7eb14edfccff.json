@@ -4,10 +4,11 @@
   "name": "Wilson",
   "fullName": null,
   "city": "Los Angeles",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/los-angeles/wilson-mules",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2017-18","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2017-18","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-socal","division":"gd5","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":7,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"c06b18c8-19c8-4573-8377-a9a33e932ad6","name":"San Gabriel Mission","seed":1,"score":7},"gf":0,"ga":7,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":7,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"c06b18c8-19c8-4573-8377-a9a33e932ad6","name":"San Gabriel Mission","seed":1,"score":7},"gf":0,"ga":7,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2022-23,CA,ca-cif-norcal,Division 5,0,Round I,2023-02-28,final,,1,Hollister,7,8,Hamilton,0,top
+2022-23,CA,ca-cif-norcal,Division 5,0,Round I,2023-02-28,final,pk,4,Stone Ridge Christian,1,5,McLane,1,top
+2022-23,CA,ca-cif-norcal,Division 5,0,Round I,2023-02-28,final,,3,Oakland Tech,4,6,Live Oak,0,top
+2022-23,CA,ca-cif-norcal,Division 5,0,Round I,2023-02-28,final,,2,Lowell,5,7,Winters,1,top
+2022-23,CA,ca-cif-norcal,Division 5,1,Regional Semifinals,2023-03-02,final,,1,Hollister,7,4,Stone Ridge Christian,0,top
+2022-23,CA,ca-cif-norcal,Division 5,1,Regional Semifinals,2023-03-02,final,,3,Oakland Tech,0,2,Lowell,1,bottom
+2022-23,CA,ca-cif-norcal,Division 5,2,Regional Final,2023-03-04,final,,1,Hollister,1,2,Lowell,0,top

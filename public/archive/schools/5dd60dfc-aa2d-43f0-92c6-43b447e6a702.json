@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "5dd60dfc-aa2d-43f0-92c6-43b447e6a702",
+  "name": "Poteet",
+  "fullName": null,
+  "city": "Mesquite",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/mesquite/poteet-pirates",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":0,"d":1,"gf":8,"ga":0,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"41acd295-e0b0-443b-a7d8-d6eb7dd9af43","name":"Molina","seed":null,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"24c7e91a-f7e6-4bd1-90ba-7caaba91302f","name":"Belton","seed":null,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

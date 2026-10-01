@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "78ca140e-a0b0-4239-ab67-947577c959d6",
+  "name": "Elite Scholars Academy",
+  "fullName": null,
+  "city": "Jonesboro",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/jonesboro/elite-scholars-academy-knights",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"8c23bdc8-da38-4026-b7e0-f20d6300b44b","name":"Montgomery County","seed":null,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

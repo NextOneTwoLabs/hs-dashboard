@@ -4,10 +4,11 @@
   "name": "Geffen Academy",
   "fullName": null,
   "city": "Los Angeles",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/los-angeles/geffen-academy-bruins",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2021-22","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2021-22","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-socal","division":"gd5","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"21b5019c-a9d1-4d42-8065-37b4ee7aaad0","name":"Arrowhead Christian","seed":2,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"21b5019c-a9d1-4d42-8065-37b4ee7aaad0","name":"Arrowhead Christian","seed":2,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

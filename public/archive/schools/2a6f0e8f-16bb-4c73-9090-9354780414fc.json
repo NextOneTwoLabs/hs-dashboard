@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2a6f0e8f-16bb-4c73-9090-9354780414fc",
+  "name": "Kennesaw Mountain",
+  "fullName": null,
+  "city": "Kennesaw",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/kennesaw/kennesaw-mountain-mustangs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"9209e7f4-47f4-4bf5-8ecc-cd9e2cf24d6a","name":"McIntosh","seed":null,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

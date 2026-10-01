@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2caaf740-a7d3-45be-9b59-fe7a7d598cc4",
+  "name": "Oak Harbor",
+  "fullName": null,
+  "city": "Oak Harbor",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/oak-harbor/oak-harbor-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":10,"ga":11,"games":[{"round":0,"roundName":"Play-in","date":null,"opp":{"id":"2e73f2ac-37c3-4142-a881-574bcdea7f4b","name":"Mountain View","seed":null,"score":3},"gf":8,"ga":3,"res":"W","pk":null},{"round":1,"roundName":"First Round","date":"2025-11-14","opp":{"id":"7f967a77-5b02-4b94-81f0-3cc8879f8ef7","name":"Gig Harbor","seed":null,"score":8},"gf":2,"ga":8,"res":"L","pk":null}],"reachedRound":1,"reached":"First Round","result":"eliminated","depth":0.2}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "dea68770-42a4-44cf-89fe-a3eb64b7a620",
+  "name": "Southern Columbia Area",
+  "fullName": null,
+  "city": "Catawissa",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/catawissa/southern-columbia-area-tigers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"1a","divisionLabel":"1A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"1a","divisionLabel":"1A","gender":"girls","seed":null,"rounds":4,"w":1,"l":1,"d":0,"gf":4,"ga":7,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"c8dd4c9c-3895-4586-8e63-b81f93c4cdeb","name":"Brandywine Heights Area","seed":null,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-08","opp":{"id":"ad95fe01-b829-48a2-bb88-fd22851dd3ed","name":"Faith Christian","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":1,"reached":"Quarterfinals","result":"eliminated","depth":0.25}
+  ]
+}

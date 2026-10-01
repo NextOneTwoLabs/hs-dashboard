@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "f85726f6-f33d-43ac-bd2b-2802634cf66b",
+  "name": "Seton Catholic",
+  "fullName": null,
+  "city": "Vancouver",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/vancouver/seton-catholic-cougars",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","result":"runner-up","reached":"Finals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","gender":"girls","seed":null,"rounds":4,"w":3,"l":1,"d":0,"gf":10,"ga":4,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"cfd48a65-36ca-4f42-a59e-ac2620ada37f","name":"Wahluke","seed":null,"score":0},"gf":7,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-14","opp":{"id":"3b3b4bbe-0c18-420d-a3fd-12846ffe871d","name":"University Prep","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Semifinals","date":"2025-11-21","opp":{"id":"b78a9496-6d96-471f-baa6-b48c71c5e74a","name":"Bear Creek","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"Finals","date":"2025-11-22","opp":{"id":"4affd226-4f87-4e09-94ea-477ce80aac3d","name":"Cedar Park Christian","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":3,"reached":"Finals","result":"runner-up","depth":0.75}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "be2ab9ba-f8e2-451a-b189-2915ddb8779f",
+  "name": "Georgia Military College",
+  "fullName": null,
+  "city": "Milledgeville",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/milledgeville/georgia-military-college-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","gender":"girls","seed":null,"rounds":5,"w":2,"l":1,"d":0,"gf":2,"ga":5,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":null,"gf":null,"ga":null,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"4a12b792-cab7-440d-ab51-3c50291bc7d2","name":"Lanier County","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"2cce9353-67fd-44b2-bf30-5d4f4f1cfdcd","name":"Trion","seed":null,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

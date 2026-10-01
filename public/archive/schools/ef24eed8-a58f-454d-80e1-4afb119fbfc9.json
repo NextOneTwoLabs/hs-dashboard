@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "ef24eed8-a58f-454d-80e1-4afb119fbfc9",
+  "name": "Selah",
+  "fullName": null,
+  "city": "Selah",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/selah/selah-vikings",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"2a","divisionLabel":"2A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"2a","divisionLabel":"2A","gender":"girls","seed":null,"rounds":4,"w":0,"l":0,"d":1,"gf":0,"ga":0,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"937396f4-c9d0-4a28-872f-398edded91e3","name":"Bainbridge","seed":null,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

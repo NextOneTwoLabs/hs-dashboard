@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "cf7ba26f-c478-4d96-8a41-4c749ec0b3b4",
+  "name": "Barron Collier",
+  "fullName": null,
+  "city": "Naples",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/naples/barron-collier-cougars",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","result":"eliminated","reached":"State Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","gender":"girls","seed":1,"rounds":5,"w":3,"l":1,"d":0,"gf":18,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"4034c2fc-4914-4f6a-8b4f-1ea9dbc00ccd","name":"Hardee","seed":8,"score":0},"gf":12,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"eb0ece27-b7e5-4f64-b3f5-ceb7bc22996c","name":"Naples","seed":4,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-17","opp":{"id":"04057b9e-475d-4b19-b525-786aa5e01560","name":"Estero","seed":2,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"State Semifinal","date":"2026-02-26","opp":{"id":"113a7369-83ce-4e9c-bd61-a3b1444dfc5a","name":"Bishop Kenny","seed":2,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":3,"reached":"State Semifinal","result":"eliminated","depth":0.6}
+  ]
+}

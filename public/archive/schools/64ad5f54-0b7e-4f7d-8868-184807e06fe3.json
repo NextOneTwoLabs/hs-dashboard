@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "64ad5f54-0b7e-4f7d-8868-184807e06fe3",
+  "name": "North Paulding",
+  "fullName": null,
+  "city": "Dallas",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/dallas/north-paulding-wolfpack",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"1b393966-c3c8-4baa-b106-b003d0542630","name":"Hillgrove","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"ff1b45ca-7b8e-4f53-babb-401d2a4cdd9f","name":"Denmark","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

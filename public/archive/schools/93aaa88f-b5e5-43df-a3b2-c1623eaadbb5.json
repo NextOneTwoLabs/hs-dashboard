@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "93aaa88f-b5e5-43df-a3b2-c1623eaadbb5",
+  "name": "Kingwood",
+  "fullName": "Kingwood Mustangs",
+  "city": "Kingwood",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/kingwood/kingwood-mustangs",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":5,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","result":"champion","reached":"State Finals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","gender":"girls","seed":null,"rounds":6,"w":5,"l":0,"d":1,"gf":15,"ga":5,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"536af9fc-05b2-4822-803c-f02fead3453a","name":"Clear Lake","seed":null,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"841642a7-6292-4517-ba51-1682c8c64b4d","name":"Fort Bend Clements","seed":null,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"db922f92-9590-4519-8c86-3d621b7e0e68","name":"Stratford","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Regional Finals","date":"2026-03-30","opp":{"id":"b4965d0e-831a-43a8-a37d-3943386aca73","name":"Tompkins","seed":null,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":4,"roundName":"State Semifinals","date":"2026-04-02","opp":{"id":"b1d0d71b-2b3f-40d1-9912-130dfa073160","name":"Dripping Springs","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":5,"roundName":"State Finals","date":"2026-04-09","opp":{"id":"638a88ef-afba-45fa-8679-7a04b8654257","name":"Forney","seed":null,"score":1},"gf":1,"ga":1,"res":"D","pk":"W"}],"reachedRound":5,"reached":"State Finals","result":"champion","depth":1.0}
+  ]
+}

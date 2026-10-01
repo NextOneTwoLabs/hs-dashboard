@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "84a599c5-7856-409c-912d-52ecde0e3a70",
+  "name": "Karns City",
+  "fullName": null,
+  "city": "Karns City",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/karns-city/karns-city-gremlins",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"1a","divisionLabel":"1A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"1a","divisionLabel":"1A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"15470f71-ed08-41a5-99b7-2ccd582930dd","name":"Sewickley Academy","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

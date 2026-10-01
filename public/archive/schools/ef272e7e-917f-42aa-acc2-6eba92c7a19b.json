@@ -4,11 +4,12 @@
   "name": "Twelve Bridges",
   "fullName": null,
   "city": "Lincoln",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/lincoln/twelve-bridges-rhinos",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":1,"l":2,"d":1},
-  "best": {"season":"2025-26","competition":"cif-state","division":"gd4","result":"eliminated","reached":"Regional Finals"},
+  "best": {"season":"2025-26","competition":"ca-cif-state","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Regional Finals"},
   "appearances": [
-    {"season":"2024-25","competition":"cif-norcal","division":"gd2","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"ad47af1b-1b44-42d7-ac0e-a495ff09a7e7","name":"Cardinal Newman","seed":4,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2025-26","competition":"cif-state","division":"gd4","seed":2,"rounds":4,"w":1,"l":1,"d":1,"gf":3,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"2993e4ff-72d9-4f83-b862-8db615e795aa","name":"Shasta","seed":7,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"f133ba52-590e-4f91-b798-d9c06fd9fc4c","name":"Menlo School","seed":3,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Finals","date":"2026-03-07","opp":{"id":"69e24861-fa93-42a2-acb5-be60e01ee555","name":"Marin Catholic","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Finals","result":"eliminated","depth":0.5}
+    {"season":"2024-25","state":"CA","competition":"ca-cif-norcal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"ad47af1b-1b44-42d7-ac0e-a495ff09a7e7","name":"Cardinal Newman","seed":4,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","state":"CA","competition":"ca-cif-state","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":2,"rounds":4,"w":1,"l":1,"d":1,"gf":3,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"2993e4ff-72d9-4f83-b862-8db615e795aa","name":"Shasta","seed":7,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"f133ba52-590e-4f91-b798-d9c06fd9fc4c","name":"Menlo School","seed":3,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Finals","date":"2026-03-07","opp":{"id":"69e24861-fa93-42a2-acb5-be60e01ee555","name":"Marin Catholic","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Finals","result":"eliminated","depth":0.5}
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1b393966-c3c8-4baa-b106-b003d0542630",
+  "name": "Hillgrove",
+  "fullName": null,
+  "city": "Powder Springs",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/powder-springs/hillgrove-hawks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"64ad5f54-0b7e-4f7d-8868-184807e06fe3","name":"North Paulding","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

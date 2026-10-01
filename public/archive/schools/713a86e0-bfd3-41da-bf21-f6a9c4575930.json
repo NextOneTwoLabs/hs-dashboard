@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "713a86e0-bfd3-41da-bf21-f6a9c4575930",
+  "name": "Canterbury",
+  "fullName": "Canterbury Cougars",
+  "city": "Fort Myers",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/fort-myers/canterbury-cougars",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":5,"l":0,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","result":"champion","reached":"State Championship"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","gender":"girls","seed":1,"rounds":5,"w":5,"l":0,"d":0,"gf":15,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"0f60126b-4521-4092-8d98-6a8a247d41bf","name":"First Baptist Academy","seed":8,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"fc088264-2d08-4662-ba50-f4f1bd969f6e","name":"Indian Rocks Christian","seed":4,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-13","opp":{"id":"dfea2520-789c-47da-97f5-03438f05d341","name":"Out-of-Door Academy","seed":2,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":3,"roundName":"State Semifinal","date":"2026-02-20","opp":{"id":"bd501853-e9f6-4a6d-9efb-1ffbaf3b6211","name":"Berean Christian","seed":3,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":4,"roundName":"State Championship","date":"2026-02-21","opp":{"id":"03c4dc2e-7191-474b-ae6d-600a1d8e447d","name":"Victory Christian Academy","seed":4,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":4,"reached":"State Championship","result":"champion","depth":1.0}
+  ]
+}

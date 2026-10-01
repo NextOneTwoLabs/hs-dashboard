@@ -4,11 +4,12 @@
   "name": "Whitney",
   "fullName": null,
   "city": "Rocklin",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/rocklin/whitney-wildcats",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
-  "best": {"season":"2021-22","competition":"cif-norcal","division":"gd1","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2021-22","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-norcal","division":"gd2","seed":1,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"ad47af1b-1b44-42d7-ac0e-a495ff09a7e7","name":"Cardinal Newman","seed":8,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2021-22","competition":"cif-norcal","division":"gd1","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"54ef2b21-237c-4544-804f-af1d8e056c2b","name":"Buchanan","seed":3,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-norcal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":1,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"ad47af1b-1b44-42d7-ac0e-a495ff09a7e7","name":"Cardinal Newman","seed":8,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2021-22","state":"CA","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","gender":"girls","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"54ef2b21-237c-4544-804f-af1d8e056c2b","name":"Buchanan","seed":3,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

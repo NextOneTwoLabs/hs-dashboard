@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2024-25,CA,ca-cif-norcal,Division 2,0,Round I,2025-03-04,final,,1,Granite Bay,1,8,Homestead,0,top
+2024-25,CA,ca-cif-norcal,Division 2,0,Round I,2025-03-04,final,,4,Cardinal Newman,4,5,Twelve Bridges,1,top
+2024-25,CA,ca-cif-norcal,Division 2,0,Round I,2025-03-04,final,,3,Leland,1,6,Marin Academy,2,bottom
+2024-25,CA,ca-cif-norcal,Division 2,0,Round I,2025-03-04,final,,2,Roseville,0,7,St. Ignatius College Preparatory,1,bottom
+2024-25,CA,ca-cif-norcal,Division 2,1,Regional Semifinals,2025-03-06,final,,1,Granite Bay,1,4,Cardinal Newman,0,top
+2024-25,CA,ca-cif-norcal,Division 2,1,Regional Semifinals,2025-03-06,final,pk,6,Marin Academy,1,7,St. Ignatius College Preparatory,1,top
+2024-25,CA,ca-cif-norcal,Division 2,2,Regional Final,2025-03-08,final,,1,Granite Bay,1,6,Marin Academy,0,top

@@ -4,10 +4,11 @@
   "name": "Palos Verdes",
   "fullName": null,
   "city": "Palos Verdes Estates",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/palos-verdes-estates/palos-verdes-sea-kings",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2023-24","competition":"cif-socal","division":"gd2","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2023-24","competition":"ca-cif-socal","division":"gd2","divisionLabel":"Division 2","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2023-24","competition":"cif-socal","division":"gd2","seed":1,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"9ef67997-7f5d-4899-b500-2d0b5c758105","name":"Westview","seed":8,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2023-24","state":"CA","competition":"ca-cif-socal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":1,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"9ef67997-7f5d-4899-b500-2d0b5c758105","name":"Westview","seed":8,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

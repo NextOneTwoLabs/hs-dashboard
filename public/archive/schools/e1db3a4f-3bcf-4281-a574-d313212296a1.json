@@ -4,10 +4,11 @@
   "name": "Presentation",
   "fullName": null,
   "city": "San Jose",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/san-jose/presentation-panthers",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2022-23","competition":"cif-norcal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2022-23","competition":"ca-cif-norcal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2022-23","competition":"cif-norcal","division":"gd3","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":2,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"093dfd99-3456-4fa9-98ba-7f1a93af473b","name":"Windsor","seed":6,"score":4},"gf":2,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2022-23","state":"CA","competition":"ca-cif-norcal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":2,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"093dfd99-3456-4fa9-98ba-7f1a93af473b","name":"Windsor","seed":6,"score":4},"gf":2,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

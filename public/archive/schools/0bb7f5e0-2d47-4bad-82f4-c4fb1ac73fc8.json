@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "0bb7f5e0-2d47-4bad-82f4-c4fb1ac73fc8",
+  "name": "West Forsyth",
+  "fullName": "West Forsyth Wolverines",
+  "city": "Cumming",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/cumming/west-forsyth-wolverines",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":5,"l":0,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"champion","reached":"Round 5"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":5,"l":0,"d":0,"gf":22,"ga":1,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"9c62de6e-707f-48d7-a08b-89f11b290712","name":"Chapel Hill","seed":null,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"f55a0945-47e6-4867-a932-20bd690dafdd","name":"Campbell","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"56957c5a-de36-4f1d-ba3a-b8ea773fcbf3","name":"Brookwood","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Round 4","date":"2026-05-07","opp":{"id":"ff1b45ca-7b8e-4f53-babb-401d2a4cdd9f","name":"Denmark","seed":null,"score":0},"gf":6,"ga":0,"res":"W","pk":null},{"round":4,"roundName":"Round 5","date":null,"opp":{"id":"2fa97fcb-ebf2-40d0-b407-bfc2f0f9d996","name":"Walton","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null}],"reachedRound":4,"reached":"Round 5","result":"champion","depth":1.0}
+  ]
+}

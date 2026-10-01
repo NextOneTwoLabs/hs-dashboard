@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d5eccd84-e874-4a81-a89d-1d7e761b7ef0",
+  "name": "North Cobb Christian",
+  "fullName": null,
+  "city": "Kennesaw",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/kennesaw/north-cobb-christian-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"919a4ed0-7bdc-4515-a259-70b070ceb833","name":"Paideia","seed":null,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

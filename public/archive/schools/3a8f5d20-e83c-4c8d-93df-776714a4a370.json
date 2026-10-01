@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "3a8f5d20-e83c-4c8d-93df-776714a4a370",
+  "name": "King's Way Christian",
+  "fullName": null,
+  "city": "Vancouver",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/vancouver/kings-way-christian-knights",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"b78a9496-6d96-471f-baa6-b48c71c5e74a","name":"Bear Creek","seed":null,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

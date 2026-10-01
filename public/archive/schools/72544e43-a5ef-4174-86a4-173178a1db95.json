@@ -4,10 +4,11 @@
   "name": "Rialto",
   "fullName": null,
   "city": "Rialto",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/rialto/rialto-knights",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
-  "best": {"season":"2017-18","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2017-18","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-socal","division":"gd5","seed":2,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"51accb83-e83b-449e-9d4f-947c85b211cf","name":"High Tech NC","seed":7,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"429328a8-e18e-48d6-8b38-509d8e03ab03","name":"Fillmore","seed":3,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":2,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"51accb83-e83b-449e-9d4f-947c85b211cf","name":"High Tech NC","seed":7,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"429328a8-e18e-48d6-8b38-509d8e03ab03","name":"Fillmore","seed":3,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
   ]
 }

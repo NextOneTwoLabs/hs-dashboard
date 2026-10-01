@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "bd63d5ed-3a33-4ca4-97cd-3f26c5187578",
+  "name": "Richmond Academy",
+  "fullName": null,
+  "city": "Augusta",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/augusta/richmond-academy-musketeers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":5,"ga":6,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"ed1fe847-b24e-4d8e-bd69-ad18489a9f3d","name":"Mary Persons","seed":null,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"098add16-b91b-4a8c-94d4-8375ecd46ba2","name":"Lumpkin County","seed":null,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "8a8898e5-5604-4c8e-854e-a0f45a452893",
+  "name": "Hardin-Jefferson",
+  "fullName": null,
+  "city": "Sour Lake",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/sour-lake/hardin-jefferson-hawks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","result":"eliminated","reached":"State Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d2","divisionLabel":"Conference 4A D2","gender":"girls","seed":null,"rounds":6,"w":3,"l":1,"d":0,"gf":8,"ga":3,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"d39fe5fa-45d2-4746-ae4a-5c17ddc9759c","name":"Liberty","seed":null,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"47b461b3-e656-4e05-869c-2e0ae1dab207","name":"Scarborough","seed":null,"score":1},"gf":4,"ga":1,"res":null,"pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"b7fc40a8-590a-459e-b684-708119d30111","name":"Lorena","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Regional Finals","date":"2026-03-30","opp":{"id":"e6cb1374-d5c9-42fa-a7bd-9dd0d5c89c32","name":"Little Cypress-Mauriceville","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":4,"roundName":"State Semifinals","date":"2026-04-02","opp":{"id":"4ccbc2a2-3669-4d67-b443-6c78dc0df118","name":"Wimberley","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":4,"reached":"State Semifinals","result":"eliminated","depth":0.667}
+  ]
+}

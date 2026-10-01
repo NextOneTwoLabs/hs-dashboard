@@ -1,0 +1,64 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,El Paso,5,,El Dorado,3,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Amarillo,7,,Abilene,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Aledo,1,,Colleyville Heritage,2,bottom
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Paschal,2,,Cleburne,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Americas,3,,Chapin,2,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Legacy,0,,Tascosa,5,bottom
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Birdville,6,,Fossil Ridge,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Centennial,2,,Arlington Heights,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Walnut Grove,8,,Mt. Pleasant,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Heritage,1,,Highland Park,2,bottom
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,White,0,,North Mesquite,1,bottom
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Midlothian,8,,Waco,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Hallsville,2,,McKinney North,3,bottom
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Reedy,3,,Lebanon Trail,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,West Mesquite,3,,Sunset,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Lake Belton,4,,Red Oak,1,top
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,El Paso,1,,Amarillo,2,bottom
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,Colleyville Heritage,3,,Paschal,0,top
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,Americas,0,,Tascosa,2,bottom
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,Birdville,3,,Centennial,4,bottom
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,Walnut Grove,2,,Highland Park,0,top
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,North Mesquite,0,,Midlothian,4,bottom
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,McKinney North,0,,Reedy,5,bottom
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,West Mesquite,1,,Lake Belton,3,bottom
+2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,Amarillo,1,,Colleyville Heritage,2,bottom
+2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,Tascosa,0,,Centennial,1,bottom
+2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,Walnut Grove,1,,Midlothian,0,top
+2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,Reedy,5,,Lake Belton,0,top
+2025-26,TX,tx-uil,Conference 5A D1,3,Regional Finals,2026-03-30,unreported,,,Colleyville Heritage,1,,Centennial,1,
+2025-26,TX,tx-uil,Conference 5A D1,3,Regional Finals,2026-03-30,unreported,,,Walnut Grove,2,,Reedy,0,
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,A&M Consolidated,7,,Crosby,2,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Barbers Hill,3,,La Porte,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Spring Woods,3,,Fort Bend Kempner,2,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Hendrickson,5,,McCallum,1,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Kingwood Park,3,,College Station,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Angleton,6,,Sterling,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Victoria East,3,,Milby,1,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Anderson,2,,East View,1,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Leander,2,,New Braunfels,3,bottom
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Highlands,2,,Southwest Legacy,1,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Flour Bluff,7,,Palmview,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,McAllen,2,,Harlingen South,1,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Smithson Valley,4,,Rouse,0,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Southwest,6,,Seguin,1,top
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Mission,0,,Corpus Christi Veterans Memorial,4,bottom
+2025-26,TX,tx-uil,Conference 5A D1,0,Bi-District,2026-03-19,final,,,Rivera,2,,Vela,0,top
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,A&M Consolidated,2,,Barbers Hill,1,top
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,Spring Woods,0,,Hendrickson,7,bottom
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,Kingwood Park,3,,Angleton,1,top
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,Victoria East,0,,Anderson,5,bottom
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,New Braunfels,8,,Highlands,0,top
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,Flour Bluff,1,,McAllen,2,bottom
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,Smithson Valley,6,,Southwest,0,top
+2025-26,TX,tx-uil,Conference 5A D1,1,Area,2026-03-23,final,,,Corpus Christi Veterans Memorial,1,,Rivera,0,top
+2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,A&M Consolidated,1,,Hendrickson,0,top
+2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,Kingwood Park,3,,Anderson,1,top
+2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,New Braunfels,5,,McAllen,0,top
+2025-26,TX,tx-uil,Conference 5A D1,2,Regional Semifinals,2026-03-26,final,,,Smithson Valley,8,,Corpus Christi Veterans Memorial,0,top
+2025-26,TX,tx-uil,Conference 5A D1,3,Regional Finals,2026-03-30,unreported,,,A&M Consolidated,4,,Kingwood Park,0,
+2025-26,TX,tx-uil,Conference 5A D1,3,Regional Finals,2026-03-30,unreported,,,New Braunfels,,,Smithson Valley,,
+2025-26,TX,tx-uil,Conference 5A D1,4,State Semifinals,2026-04-02,final,,,Centennial,0,,Walnut Grove,2,bottom
+2025-26,TX,tx-uil,Conference 5A D1,4,State Semifinals,2026-04-02,final,,,A&M Consolidated,0,,Smithson Valley,2,bottom
+2025-26,TX,tx-uil,Conference 5A D1,5,State Finals,2026-04-09,unreported,,,Walnut Grove,,,Smithson Valley,,

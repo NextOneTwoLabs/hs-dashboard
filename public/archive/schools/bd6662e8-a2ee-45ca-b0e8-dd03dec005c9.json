@@ -4,11 +4,12 @@
   "name": "Leigh",
   "fullName": "Leigh Longhorns",
   "city": "San Jose",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/san-jose/leigh-longhorns",
   "summary": {"appearances":2,"titles":1,"finals":1,"w":3,"l":1,"d":0},
-  "best": {"season":"2021-22","competition":"cif-norcal","division":"gd2","result":"champion","reached":"Regional Final"},
+  "best": {"season":"2021-22","competition":"ca-cif-norcal","division":"gd2","divisionLabel":"Division 2","result":"champion","reached":"Regional Final"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-norcal","division":"gd2","seed":3,"rounds":3,"w":3,"l":0,"d":0,"gf":6,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"8ccdb557-16f2-41cd-a724-6b71bc221661","name":"Branson","seed":6,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"d6e80050-eb7a-4461-b54a-ccb18581c77c","name":"Vista del Lago","seed":2,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"1d925979-4b0f-4e53-a5d3-848ea1c06834","name":"Granite Bay","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0},
-    {"season":"2023-24","competition":"cif-norcal","division":"gd1","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"594e7f5d-3e25-480c-bc2c-c15cbf09c737","name":"San Ramon Valley","seed":3,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-norcal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":3,"rounds":3,"w":3,"l":0,"d":0,"gf":6,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"8ccdb557-16f2-41cd-a724-6b71bc221661","name":"Branson","seed":6,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"d6e80050-eb7a-4461-b54a-ccb18581c77c","name":"Vista del Lago","seed":2,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"1d925979-4b0f-4e53-a5d3-848ea1c06834","name":"Granite Bay","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0},
+    {"season":"2023-24","state":"CA","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","gender":"girls","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"594e7f5d-3e25-480c-bc2c-c15cbf09c737","name":"San Ramon Valley","seed":3,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

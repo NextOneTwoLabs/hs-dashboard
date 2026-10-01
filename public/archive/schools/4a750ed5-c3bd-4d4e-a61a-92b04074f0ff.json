@@ -4,11 +4,12 @@
   "name": "Downey",
   "fullName": null,
   "city": "Downey",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/downey/downey-vikings",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":1,"l":2,"d":0},
-  "best": {"season":"2020-21","competition":"cif-socal","division":"gd2","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2020-21","competition":"ca-cif-socal","division":"gd2","divisionLabel":"Division 2","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-socal","division":"gd3","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"cc4e78a6-0143-46eb-9fe9-72449a7ddda7","name":"Grossmont","seed":3,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2020-21","competition":"cif-socal","division":"gd2","seed":7,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"68a421c5-cca9-497e-8645-2049ebc86149","name":"Cleveland","seed":2,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"54ef2b21-237c-4544-804f-af1d8e056c2b","name":"Buchanan","seed":3,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"cc4e78a6-0143-46eb-9fe9-72449a7ddda7","name":"Grossmont","seed":3,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2020-21","state":"CA","competition":"ca-cif-socal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":7,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"68a421c5-cca9-497e-8645-2049ebc86149","name":"Cleveland","seed":2,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"54ef2b21-237c-4544-804f-af1d8e056c2b","name":"Buchanan","seed":3,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
   ]
 }

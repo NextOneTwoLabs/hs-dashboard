@@ -4,10 +4,11 @@
   "name": "Orosi",
   "fullName": null,
   "city": "Orosi",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/orosi/orosi-cardinals",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
-  "best": {"season":"2017-18","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2017-18","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-socal","division":"gd5","seed":4,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"f2bc1da2-439d-4621-8a63-6c2b142bcd7a","name":"Azusa","seed":5,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"c06b18c8-19c8-4573-8377-a9a33e932ad6","name":"San Gabriel Mission","seed":1,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":4,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"f2bc1da2-439d-4621-8a63-6c2b142bcd7a","name":"Azusa","seed":5,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"c06b18c8-19c8-4573-8377-a9a33e932ad6","name":"San Gabriel Mission","seed":1,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
   ]
 }

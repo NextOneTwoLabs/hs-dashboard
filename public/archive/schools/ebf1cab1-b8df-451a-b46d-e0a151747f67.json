@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "ebf1cab1-b8df-451a-b46d-e0a151747f67",
+  "name": "Chattahoochee",
+  "fullName": null,
+  "city": "Alpharetta",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/alpharetta/chattahoochee-cougars",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"a5e56856-d31e-471d-96d1-0133a7bc1af7","name":"Chamblee","seed":null,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "31c3502e-be12-4d96-bce4-7c0b2227254e",
+  "name": "Fulshear",
+  "fullName": null,
+  "city": "Fulshear",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/fulshear/fulshear-chargers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","gender":"girls","seed":null,"rounds":6,"w":2,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"5bd84368-72de-455b-99bd-cfe1ab8cdb8d","name":"Katy Taylor","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"faa7802b-b5bb-44ad-a560-000e9a89e6df","name":"Lamar","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"2eca2ffb-0fb5-4902-8287-534005427352","name":"Summer Creek","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

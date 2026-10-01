@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "fb103f2b-921c-4049-88bd-753a94b48650",
+  "name": "Americas",
+  "fullName": null,
+  "city": "El Paso",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/el-paso/americas-trail-blazers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"b53ed77b-e4f4-4174-966a-84cfcf5aeac6","name":"Chapin","seed":null,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"acf88208-de98-4bdb-a8ac-58c1a7f9a338","name":"Tascosa","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

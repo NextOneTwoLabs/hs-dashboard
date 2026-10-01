@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "0c82b6cb-fbfe-4204-bc05-717e542d4419",
+  "name": "Alexander",
+  "fullName": null,
+  "city": "Laredo",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/laredo/alexander-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"70eeef3f-f98a-428c-a0a7-69a6628487e4","name":"Johnson","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

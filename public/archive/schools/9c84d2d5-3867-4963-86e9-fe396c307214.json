@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "9c84d2d5-3867-4963-86e9-fe396c307214",
+  "name": "St. Petersburg Catholic",
+  "fullName": null,
+  "city": "St Petersburg",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/st-petersburg/st-petersburg-catholic-barons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":1},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","gender":"girls","seed":4,"rounds":5,"w":0,"l":1,"d":1,"gf":2,"ga":8,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"7ce5b4a3-85c7-47db-9c5f-7570c35192c7","name":"Imagine School at North Port","seed":5,"score":2},"gf":2,"ga":2,"res":"D","pk":"W"},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"0e92b6e2-2fd4-485a-9207-237de4546bfd","name":"Lakeland Christian","seed":1,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

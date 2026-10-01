@@ -30,6 +30,29 @@ class Store(unittest.TestCase):
         self.assertEqual(json.loads(text)["rows"][1]["a"], 2)
 
 
+class LiveDetection(unittest.TestCase):
+    """Uses the committed archive (no network)."""
+
+    def live(self, season, comp, day):
+        import datetime as dt
+        from crawler import hs
+        sources = store.load_json(store.SOURCES)
+        links = store.load_json(store.LINKS)
+        cfg = sources["seasons"][season]["competitions"][comp]
+        return hs.is_live(sources, links, season, comp, cfg, dt.date.fromisoformat(day))
+
+    def test_window(self):
+        self.assertTrue(self.live("2025-26", "ca-cif-state", "2026-03-10"))
+        self.assertFalse(self.live("2025-26", "ca-cif-state", "2026-10-01"))
+
+    def test_unfetched_disabled_gender_is_not_live(self):
+        # CA regionals list boys divisions that are never fetched (girls only).
+        self.assertFalse(self.live("2023-24", "ca-cif-norcal", "2026-10-01"))
+
+    def test_complete_maxpreps_tournament_is_not_live(self):
+        self.assertFalse(self.live("2025-26", "pa-piaa", "2025-11-15"))
+
+
 class FakeResponse:
     def __init__(self, status, headers=None, body=b""):
         self.status, self.headers, self._body = status, headers or {}, body

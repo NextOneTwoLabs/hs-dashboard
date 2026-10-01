@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "52dea55b-3988-4979-b5fd-20376058997f",
+  "name": "Centennial",
+  "fullName": null,
+  "city": "Roswell",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/roswell/centennial-knights",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":5,"ga":5,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"03bf8999-7f06-40a8-b7c1-2a4cfa212a89","name":"Jones County","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"da2304c6-0d35-471a-8959-532ab0af33d1","name":"Druid Hills","seed":null,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

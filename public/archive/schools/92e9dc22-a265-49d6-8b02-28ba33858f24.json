@@ -4,10 +4,11 @@
   "name": "Mount Miguel",
   "fullName": null,
   "city": "Spring Valley",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/spring-valley/mount-miguel-matadors",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
-  "best": {"season":"2021-22","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Regional Semifinals"},
+  "best": {"season":"2021-22","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Regional Semifinals"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-socal","division":"gd5","seed":4,"rounds":3,"w":1,"l":1,"d":0,"gf":7,"ga":10,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"fb4075b0-fb40-492f-b69b-5738486d0687","name":"GALA","seed":5,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"9c6ee102-3437-4054-bc67-68e04bd497bf","name":"Webb","seed":1,"score":9},"gf":2,"ga":9,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":4,"rounds":3,"w":1,"l":1,"d":0,"gf":7,"ga":10,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"fb4075b0-fb40-492f-b69b-5738486d0687","name":"GALA","seed":5,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"9c6ee102-3437-4054-bc67-68e04bd497bf","name":"Webb","seed":1,"score":9},"gf":2,"ga":9,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
   ]
 }

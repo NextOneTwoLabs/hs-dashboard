@@ -4,10 +4,11 @@
   "name": "Pioneer",
   "fullName": null,
   "city": "Woodland",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/woodland/pioneer-patriots",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2021-22","competition":"cif-norcal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2021-22","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-norcal","division":"gd4","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"87282a7f-872a-4aef-bd98-9a5b8a6fd154","name":"California","seed":7,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"87282a7f-872a-4aef-bd98-9a5b8a6fd154","name":"California","seed":7,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

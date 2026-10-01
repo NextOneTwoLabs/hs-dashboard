@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "79396e02-6745-4d92-891f-336b52b6e6e5",
+  "name": "South Florida HEAT",
+  "fullName": null,
+  "city": "Fort Lauderdale",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/fort-lauderdale/south-florida-heat",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","result":"eliminated","reached":"Region Final"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","gender":"girls","seed":2,"rounds":5,"w":2,"l":1,"d":0,"gf":13,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"748bbc38-0964-413b-9f03-89349c16d8b8","name":"Westwood Christian","seed":7,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"5f209766-b74e-479d-8be4-1500ae41c3f9","name":"Highlands Christian","seed":6,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-13","opp":{"id":"bd501853-e9f6-4a6d-9efb-1ffbaf3b6211","name":"Berean Christian","seed":1,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Region Final","result":"eliminated","depth":0.4}
+  ]
+}

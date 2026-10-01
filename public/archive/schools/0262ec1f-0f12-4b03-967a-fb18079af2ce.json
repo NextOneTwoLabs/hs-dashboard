@@ -4,10 +4,11 @@
   "name": "Hanford",
   "fullName": null,
   "city": "Hanford",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/hanford/hanford-bullpups",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
-  "best": {"season":"2020-21","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2020-21","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2020-21","competition":"cif-socal","division":"gd3","seed":2,"rounds":3,"w":1,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"6bff5f0d-d460-437a-be37-e4c1a2cee680","name":"Kingsburg","seed":7,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"9ef67997-7f5d-4899-b500-2d0b5c758105","name":"Westview","seed":3,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+    {"season":"2020-21","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":2,"rounds":3,"w":1,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"6bff5f0d-d460-437a-be37-e4c1a2cee680","name":"Kingsburg","seed":7,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"9ef67997-7f5d-4899-b500-2d0b5c758105","name":"Westview","seed":3,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2da9cf05-fcc8-4a04-abed-e3bc2a44a8c4",
+  "name": "Roosevelt",
+  "fullName": null,
+  "city": "Seattle",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/seattle/roosevelt-roughriders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":5,"w":2,"l":1,"d":0,"gf":3,"ga":1,"games":[{"round":1,"roundName":"First Round","date":"2025-11-14","opp":{"id":"2484e085-1438-4702-8bd7-13eb01e237ce","name":"Peninsula","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Quarterfinals","date":"2025-11-15","opp":{"id":"eb521293-83d3-4b14-8bd9-1461dd92afea","name":"Mt. Spokane","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Semifinals","date":"2025-11-21","opp":{"id":"54de1e46-ce20-494a-b24f-437ba874db78","name":"Bellevue","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":3,"reached":"Semifinals","result":"eliminated","depth":0.6}
+  ]
+}

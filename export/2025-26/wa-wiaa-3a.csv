@@ -1,0 +1,20 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,WA,wa-wiaa,3A,0,Play-in,,final,,,Shorewood,1,,Ridgeline,4,bottom
+2025-26,WA,wa-wiaa,3A,0,Play-in,,final,,,Silas,1,,Edmonds-Woodway,0,top
+2025-26,WA,wa-wiaa,3A,0,Play-in,,final,,,Prairie,1,,Enumclaw,3,bottom
+2025-26,WA,wa-wiaa,3A,0,Play-in,,final,,,Mountain View,3,,Oak Harbor,8,bottom
+2025-26,WA,wa-wiaa,3A,1,First Round,2025-11-14,final,,,Holy Names Academy,0,,Central Kitsap,1,bottom
+2025-26,WA,wa-wiaa,3A,1,First Round,2025-11-14,final,,,Ridgeline,0,,Bellevue,1,bottom
+2025-26,WA,wa-wiaa,3A,1,First Round,2025-11-14,final,,,Peninsula,0,,Roosevelt,1,bottom
+2025-26,WA,wa-wiaa,3A,1,First Round,2025-11-14,final,,,Silas,0,,Mt. Spokane,3,bottom
+2025-26,WA,wa-wiaa,3A,1,First Round,2025-11-14,final,,,University,1,,Snohomish,2,bottom
+2025-26,WA,wa-wiaa,3A,1,First Round,2025-11-14,final,,,Enumclaw,0,,Eastside Catholic,3,bottom
+2025-26,WA,wa-wiaa,3A,1,First Round,2025-11-14,final,,,Liberty,3,,White River,2,top
+2025-26,WA,wa-wiaa,3A,1,First Round,2025-11-14,final,,,Oak Harbor,2,,Gig Harbor,8,bottom
+2025-26,WA,wa-wiaa,3A,2,Quarterfinals,2025-11-15,final,,,Central Kitsap,2,,Bellevue,3,bottom
+2025-26,WA,wa-wiaa,3A,2,Quarterfinals,2025-11-15,final,,,Roosevelt,2,,Mt. Spokane,0,top
+2025-26,WA,wa-wiaa,3A,2,Quarterfinals,2025-11-15,final,,,Snohomish,0,,Eastside Catholic,3,bottom
+2025-26,WA,wa-wiaa,3A,2,Quarterfinals,2025-11-15,final,,,Liberty,4,,Gig Harbor,3,top
+2025-26,WA,wa-wiaa,3A,3,Semifinals,2025-11-21,final,,,Bellevue,1,,Roosevelt,0,top
+2025-26,WA,wa-wiaa,3A,3,Semifinals,2025-11-21,final,pk,,Eastside Catholic,2,,Liberty,2,bottom
+2025-26,WA,wa-wiaa,3A,4,Finals,2025-11-22,final,,,Bellevue,1,,Liberty,0,top

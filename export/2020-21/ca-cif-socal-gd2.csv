@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2020-21,CA,ca-cif-socal,Division 2,0,Round I,2021-06-01,final,,1,La Mirada,0,8,Del Norte,1,bottom
+2020-21,CA,ca-cif-socal,Division 2,0,Round I,2021-06-01,final,,4,Cathedral Catholic,2,5,Claremont,1,top
+2020-21,CA,ca-cif-socal,Division 2,0,Round I,2021-06-01,final,pk,3,Buchanan,3,6,Saugus,3,top
+2020-21,CA,ca-cif-socal,Division 2,0,Round I,2021-06-01,final,,2,Cleveland,0,7,Downey,2,bottom
+2020-21,CA,ca-cif-socal,Division 2,1,Regional Semi-Finals,2021-06-03,final,,8,Del Norte,0,4,Cathedral Catholic,5,bottom
+2020-21,CA,ca-cif-socal,Division 2,1,Regional Semi-Finals,2021-06-03,final,,3,Buchanan,5,7,Downey,1,top
+2020-21,CA,ca-cif-socal,Division 2,2,Regional Final,2021-06-05,final,,4,Cathedral Catholic,1,3,Buchanan,4,bottom

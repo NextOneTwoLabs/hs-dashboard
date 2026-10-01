@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "fdea45ee-f728-4951-9eb0-3966020ca04c",
+  "name": "Douglass",
+  "fullName": null,
+  "city": "Atlanta",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/atlanta/douglass-astros",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":10,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"b40ff112-5214-4f71-8eef-06e42229deb8","name":"Adairsville","seed":null,"score":10},"gf":0,"ga":10,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

@@ -4,10 +4,11 @@
   "name": "Animo De La Hoya",
   "fullName": null,
   "city": "Los Angeles",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/los-angeles/animo-de-la-hoya-boxers",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2021-22","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2021-22","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-socal","division":"gd4","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":10,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"d69e2853-30b1-4411-9e4f-906a66267f6d","name":"Marshall","seed":3,"score":10},"gf":0,"ga":10,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":10,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"d69e2853-30b1-4411-9e4f-906a66267f6d","name":"Marshall","seed":3,"score":10},"gf":0,"ga":10,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

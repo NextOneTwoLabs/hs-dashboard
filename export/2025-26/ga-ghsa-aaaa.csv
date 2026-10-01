@@ -1,0 +1,32 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Warner Robins,1,,Walnut Grove,10,bottom
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Dalton,1,,Midtown,6,bottom
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,pk,,Druid Hills,0,,Harris County,0,top
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Centennial,4,,Jones County,0,top
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,East Forsyth,5,,Wayne County,1,top
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Drew,0,,Allatoona,10,bottom
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Northside,0,,St. Pius X Catholic,4,bottom
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Locust Grove,0,,Blessed Trinity,10,bottom
+2025-26,GA,ga-ghsa,Class AAAA,1,Round 2,2026-04-30,final,,,Walnut Grove,0,,Midtown,3,bottom
+2025-26,GA,ga-ghsa,Class AAAA,1,Round 2,2026-04-30,final,,,Druid Hills,5,,Centennial,1,top
+2025-26,GA,ga-ghsa,Class AAAA,1,Round 2,2026-04-30,final,,,East Forsyth,0,,Allatoona,6,bottom
+2025-26,GA,ga-ghsa,Class AAAA,1,Round 2,2026-04-30,final,,,St. Pius X Catholic,0,,Blessed Trinity,3,bottom
+2025-26,GA,ga-ghsa,Class AAAA,2,Round 3,2026-05-04,final,,,Midtown,4,,Druid Hills,0,top
+2025-26,GA,ga-ghsa,Class AAAA,2,Round 3,2026-05-04,final,,,Allatoona,0,,Blessed Trinity,5,bottom
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Union Grove,0,,Westminster,10,bottom
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Northview,0,,Starr's Mill,7,bottom
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Pace Academy,7,,Cartersville,0,top
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Eastside,0,,Perry,3,bottom
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Cambridge,10,,Ola,0,top
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Central,0,,Marist,10,bottom
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Woodland,1,,Jackson,5,bottom
+2025-26,GA,ga-ghsa,Class AAAA,0,Round 1,2026-04-23,final,,,Ware County,0,,North Oconee,8,bottom
+2025-26,GA,ga-ghsa,Class AAAA,1,Round 2,2026-04-30,final,,,Westminster,2,,Starr's Mill,0,top
+2025-26,GA,ga-ghsa,Class AAAA,1,Round 2,2026-04-30,final,,,Pace Academy,5,,Perry,0,top
+2025-26,GA,ga-ghsa,Class AAAA,1,Round 2,2026-04-30,final,,,Cambridge,1,,Marist,6,bottom
+2025-26,GA,ga-ghsa,Class AAAA,1,Round 2,2026-04-30,final,,,Jackson,0,,North Oconee,5,bottom
+2025-26,GA,ga-ghsa,Class AAAA,2,Round 3,2026-05-04,final,,,Westminster,3,,Pace Academy,1,top
+2025-26,GA,ga-ghsa,Class AAAA,2,Round 3,2026-05-04,final,,,Marist,6,,North Oconee,1,top
+2025-26,GA,ga-ghsa,Class AAAA,3,Round 4,2026-05-07,final,,,Midtown,0,,Blessed Trinity,3,bottom
+2025-26,GA,ga-ghsa,Class AAAA,3,Round 4,2026-05-07,final,,,Westminster,0,,Marist,3,bottom
+2025-26,GA,ga-ghsa,Class AAAA,4,Round 5,,final,,,Blessed Trinity,1,,Marist,0,top

@@ -1,0 +1,16 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,CA,ca-cif-state,Division 4,0,Round I,2026-03-03,final,,1,Marin Catholic,4,8,Winters,0,top
+2025-26,CA,ca-cif-state,Division 4,0,Round I,2026-03-03,final,pk,4,Fresno Christian,0,5,West Campus,0,top
+2025-26,CA,ca-cif-state,Division 4,0,Round I,2026-03-03,final,,3,Menlo School,3,6,Terra Linda,1,top
+2025-26,CA,ca-cif-state,Division 4,0,Round I,2026-03-03,final,,2,Twelve Bridges,3,7,Shasta,0,top
+2025-26,CA,ca-cif-state,Division 4,0,Round I,2026-03-03,final,pk,1,Birmingham,1,8,Segerstrom,1,bottom
+2025-26,CA,ca-cif-state,Division 4,0,Round I,2026-03-03,final,,4,Ramona,2,5,Coachella Valley,3,bottom
+2025-26,CA,ca-cif-state,Division 4,0,Round I,2026-03-03,final,,3,San Jacinto,1,6,Mission Vista,0,top
+2025-26,CA,ca-cif-state,Division 4,0,Round I,2026-03-03,final,pk,2,Immaculate Heart,0,7,Del Sol,0,bottom
+2025-26,CA,ca-cif-state,Division 4,1,Regional Semifinals,2026-03-05,final,,1,Marin Catholic,3,4,Fresno Christian,0,top
+2025-26,CA,ca-cif-state,Division 4,1,Regional Semifinals,2026-03-05,final,pk,3,Menlo School,0,2,Twelve Bridges,0,bottom
+2025-26,CA,ca-cif-state,Division 4,1,Regional Semifinals,2026-03-05,final,,8,Segerstrom,1,5,Coachella Valley,4,bottom
+2025-26,CA,ca-cif-state,Division 4,1,Regional Semifinals,2026-03-05,final,,3,San Jacinto,3,7,Del Sol,2,top
+2025-26,CA,ca-cif-state,Division 4,2,Regional Finals,2026-03-07,final,,1,Marin Catholic,1,2,Twelve Bridges,0,top
+2025-26,CA,ca-cif-state,Division 4,2,Regional Finals,2026-03-07,final,,5,Coachella Valley,3,3,San Jacinto,1,top
+2025-26,CA,ca-cif-state,Division 4,3,State Final,2026-03-13,final,,1,Marin Catholic,4,5,Coachella Valley,1,top

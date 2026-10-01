@@ -4,10 +4,11 @@
   "name": "Warren",
   "fullName": null,
   "city": "Downey",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/downey/warren-bears",
   "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
-  "best": {"season":"2024-25","competition":"cif-socal","division":"gd3","result":"runner-up","reached":"Regional Final"},
+  "best": {"season":"2024-25","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","result":"runner-up","reached":"Regional Final"},
   "appearances": [
-    {"season":"2024-25","competition":"cif-socal","division":"gd3","seed":1,"rounds":3,"w":2,"l":1,"d":0,"gf":4,"ga":7,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"78ad824a-61a0-462b-aa6f-1d5f6fb1bd5f","name":"La Costa Canyon","seed":8,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"d627010f-8cc6-4595-9671-4456885d7143","name":"St. Joseph","seed":4,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2025-03-08","opp":{"id":"e71f479e-b2c8-48da-a8b4-4f270c3afb92","name":"Patrick Henry","seed":2,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+    {"season":"2024-25","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":1,"rounds":3,"w":2,"l":1,"d":0,"gf":4,"ga":7,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"78ad824a-61a0-462b-aa6f-1d5f6fb1bd5f","name":"La Costa Canyon","seed":8,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"d627010f-8cc6-4595-9671-4456885d7143","name":"St. Joseph","seed":4,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2025-03-08","opp":{"id":"e71f479e-b2c8-48da-a8b4-4f270c3afb92","name":"Patrick Henry","seed":2,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
   ]
 }

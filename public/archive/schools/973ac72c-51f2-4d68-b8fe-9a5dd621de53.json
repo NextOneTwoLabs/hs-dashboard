@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "973ac72c-51f2-4d68-b8fe-9a5dd621de53",
+  "name": "Putnam County",
+  "fullName": null,
+  "city": "Eatonton",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/eatonton/putnam-county-war-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":10,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"f5b39d8f-b944-4b2a-b597-0851b9c1d852","name":"Thomasville","seed":null,"score":10},"gf":0,"ga":10,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

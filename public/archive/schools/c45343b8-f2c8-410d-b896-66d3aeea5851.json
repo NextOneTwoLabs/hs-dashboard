@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "c45343b8-f2c8-410d-b896-66d3aeea5851",
+  "name": "Argyle",
+  "fullName": null,
+  "city": "Argyle",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/argyle/argyle-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Regional Finals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":3,"l":1,"d":0,"gf":10,"ga":1,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"b8f94f70-a4b8-4be5-af8b-e1fd774951fd","name":"Azle","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"e21a2b35-6f66-430b-974d-3018d14689d0","name":"Burleson","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"e4827d31-9641-4195-a2c3-dd69ad7aaa62","name":"Wylie","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Regional Finals","date":"2026-03-30","opp":{"id":"7ddaa698-ba9e-4921-9df2-200bcf4124d8","name":"Grapevine","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":3,"reached":"Regional Finals","result":"eliminated","depth":0.5}
+  ]
+}

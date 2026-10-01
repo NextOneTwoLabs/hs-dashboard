@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "577f6b3c-90f8-4adf-bca2-23839f42a17c",
+  "name": "Midland",
+  "fullName": null,
+  "city": "Midland",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/midland/midland-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","gender":"girls","seed":null,"rounds":6,"w":2,"l":1,"d":0,"gf":6,"ga":6,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"49a06215-a52f-4859-b6e4-ece29ba1d5fb","name":"Pebble Hills","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"87734fb1-a6c0-4b67-9957-235ab57d7184","name":"Weatherford","seed":null,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"af3babf8-6b92-43ec-9d72-6a442b512c92","name":"Guyer","seed":null,"score":5},"gf":2,"ga":5,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

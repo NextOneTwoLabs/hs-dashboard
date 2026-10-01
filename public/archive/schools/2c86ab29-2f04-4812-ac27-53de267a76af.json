@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2c86ab29-2f04-4812-ac27-53de267a76af",
+  "name": "Longview",
+  "fullName": null,
+  "city": "Longview",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/longview/longview-lobos",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d2","divisionLabel":"Conference 6A D2","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"33e62773-11ba-4566-a370-50b6c8fef1af","name":"Wylie East","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

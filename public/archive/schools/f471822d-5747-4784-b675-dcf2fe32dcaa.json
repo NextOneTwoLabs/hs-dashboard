@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "f471822d-5747-4784-b675-dcf2fe32dcaa",
+  "name": "Columbus",
+  "fullName": null,
+  "city": "Columbus",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/columbus/columbus-blue-devils",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 4"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":4,"rounds":5,"w":3,"l":1,"d":0,"gf":27,"ga":1,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"f5080337-a7f3-4f7f-8f8d-d203781d820e","name":"Spencer","seed":29,"score":0},"gf":9,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"9db7ff13-7833-4d0c-ba66-091cb885b736","name":"KIPP Atlanta Collegiate","seed":null,"score":0},"gf":13,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"8b910319-983c-45c3-84ca-23fa79f8adb6","name":"Pierce County","seed":null,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Round 4","date":"2026-05-07","opp":{"id":"84dd878e-671b-40d4-83de-e73ab301f92e","name":"Pike County","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":3,"reached":"Round 4","result":"eliminated","depth":0.6}
+  ]
+}

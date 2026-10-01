@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e9851eab-e306-422e-87b0-a2d55fdfeef3",
+  "name": "Lynden Christian",
+  "fullName": null,
+  "city": "Lynden",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/lynden/lynden-christian-lyncs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1a","divisionLabel":"1A","gender":"girls","seed":null,"rounds":4,"w":1,"l":1,"d":0,"gf":8,"ga":1,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"26b90e9b-87c3-4104-ab72-1fa5779b7858","name":"Cascade","seed":null,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-14","opp":{"id":"b78a9496-6d96-471f-baa6-b48c71c5e74a","name":"Bear Creek","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Quarterfinals","result":"eliminated","depth":0.25}
+  ]
+}

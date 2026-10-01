@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "dfa7d660-5ba9-4da9-870c-e31cb69f8d49",
+  "name": "Riverview Sarasota",
+  "fullName": null,
+  "city": "Sarasota",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/sarasota/riverview-sarasota-rams",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":1},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":5,"rounds":5,"w":0,"l":1,"d":1,"gf":4,"ga":5,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"98df2fb0-7dd6-4008-90b8-b692275de60c","name":"Sumner","seed":4,"score":2},"gf":2,"ga":2,"res":"D","pk":"W"},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"bf6646e8-b9cc-4564-ae92-ab4ebff4feae","name":"Newsome","seed":1,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

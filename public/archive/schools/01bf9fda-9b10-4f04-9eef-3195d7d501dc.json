@@ -4,10 +4,11 @@
   "name": "Ann Sobrato",
   "fullName": null,
   "city": "Morgan Hill",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/morgan-hill/ann-sobrato-bulldogs",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2017-18","competition":"cif-norcal","division":"gd2","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2017-18","competition":"ca-cif-norcal","division":"gd2","divisionLabel":"Division 2","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-norcal","division":"gd2","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"3efa4873-5364-4df7-9b1f-e260f8b11429","name":"Maria Carrillo","seed":1,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-norcal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"3efa4873-5364-4df7-9b1f-e260f8b11429","name":"Maria Carrillo","seed":1,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

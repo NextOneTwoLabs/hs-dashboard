@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "95d53ce6-1e91-4a06-9238-53452787d28e",
+  "name": "Plant",
+  "fullName": null,
+  "city": "Tampa",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/tampa/plant-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":3,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"5831617c-0454-4d77-996e-461ba121cd08","name":"Palm Harbor University","seed":6,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

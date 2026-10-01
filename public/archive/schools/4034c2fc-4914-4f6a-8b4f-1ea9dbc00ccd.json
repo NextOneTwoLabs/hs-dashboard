@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "4034c2fc-4914-4f6a-8b4f-1ea9dbc00ccd",
+  "name": "Hardee",
+  "fullName": null,
+  "city": "Wauchula",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/wauchula/hardee-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","gender":"girls","seed":8,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":12,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"cf7ba26f-c478-4d96-8a41-4c749ec0b3b4","name":"Barron Collier","seed":1,"score":12},"gf":0,"ga":12,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

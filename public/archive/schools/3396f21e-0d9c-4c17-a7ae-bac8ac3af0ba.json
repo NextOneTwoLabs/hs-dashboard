@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "3396f21e-0d9c-4c17-a7ae-bac8ac3af0ba",
+  "name": "Crosspoint Christian",
+  "fullName": "Crosspoint Christian Wildcats",
+  "city": "Bremerton",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/bremerton/crosspoint-christian-wildcats",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":4,"l":0,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","result":"champion","reached":"Finals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","gender":"girls","seed":null,"rounds":4,"w":4,"l":0,"d":0,"gf":11,"ga":1,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"ecf08364-c0e1-494a-bf4e-c9d049f7eff1","name":"Liberty Bell","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-14","opp":{"id":"e7b16e18-3461-4cad-a427-703ce4305d38","name":"Highland","seed":null,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Semifinals","date":"2025-11-21","opp":{"id":"1f2bfa2b-1029-4de7-81cd-459b54fb22d1","name":"Northwest Christian School","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Finals","date":"2025-11-22","opp":{"id":"deb53398-73d7-4b69-bbf9-210ba1d93680","name":"Freeman","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":3,"reached":"Finals","result":"champion","depth":1.0}
+  ]
+}

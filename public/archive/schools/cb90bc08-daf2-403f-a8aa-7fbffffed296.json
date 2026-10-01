@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "cb90bc08-daf2-403f-a8aa-7fbffffed296",
+  "name": "Christian Heritage",
+  "fullName": null,
+  "city": "Dalton",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/dalton/christian-heritage-lions",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":9,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"3e0cd3ed-96c5-4bc7-9e1a-48424aa33d54","name":"Providence Christian","seed":null,"score":9},"gf":0,"ga":9,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

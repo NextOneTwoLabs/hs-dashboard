@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "5cbd6ef8-864b-4b83-993c-100056cfca36",
+  "name": "Atkinson County",
+  "fullName": null,
+  "city": "Pearson",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/pearson/atkinson-county-rebels",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-ii","divisionLabel":"Class A Division II","gender":"girls","seed":null,"rounds":5,"w":2,"l":1,"d":0,"gf":11,"ga":12,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"9cfc1d18-e36b-4df6-9422-d3408df0f97a","name":"Dooly County","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"0165d86c-5af0-4235-a73c-d55e0e95a32c","name":"Washington-Wilkes","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"1b60176f-08df-4849-894a-7617c3fd05ce","name":"Portal","seed":null,"score":12},"gf":5,"ga":12,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

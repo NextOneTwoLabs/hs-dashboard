@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "312d4acc-805f-40c0-bcb3-9b3362c3fe5f",
+  "name": "Cardinal Mooney",
+  "fullName": null,
+  "city": "Sarasota",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/sarasota/cardinal-mooney-cougars",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":5,"rounds":5,"w":1,"l":1,"d":0,"gf":4,"ga":4,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"773f9eff-74df-41cd-9664-a9df302a3228","name":"Florida Atlantic University","seed":4,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"c3ca9d34-87ed-437d-8cb9-f6441da5e97a","name":"Somerset Academy - Canyons","seed":1,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

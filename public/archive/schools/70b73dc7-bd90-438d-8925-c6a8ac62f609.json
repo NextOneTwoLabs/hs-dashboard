@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "70b73dc7-bd90-438d-8925-c6a8ac62f609",
+  "name": "Riviera Prep",
+  "fullName": null,
+  "city": "Miami",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/miami/riviera-prep-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","gender":"girls","seed":7,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":8,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"42a40b28-f55b-4388-978c-d0d382b6e652","name":"True North Classical Academy","seed":2,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

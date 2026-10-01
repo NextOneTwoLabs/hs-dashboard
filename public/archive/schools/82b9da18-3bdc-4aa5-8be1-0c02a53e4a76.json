@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "82b9da18-3bdc-4aa5-8be1-0c02a53e4a76",
+  "name": "Oglethorpe County",
+  "fullName": null,
+  "city": "Lexington",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/lexington/oglethorpe-county-patriots",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"6665136e-6741-447b-b2e3-da3c3f6c5e4c","name":"Jeff Davis","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

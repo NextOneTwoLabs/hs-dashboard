@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d2000171-b90c-4d92-81c6-300d4cca306a",
+  "name": "Central",
+  "fullName": null,
+  "city": "Macon",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/macon/central-chargers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":5,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"fa894b94-9451-49ed-98bd-589b91772f7c","name":"Pepperell","seed":null,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

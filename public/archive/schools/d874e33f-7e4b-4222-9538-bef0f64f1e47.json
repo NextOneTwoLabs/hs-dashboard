@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d874e33f-7e4b-4222-9538-bef0f64f1e47",
+  "name": "Barbers Hill",
+  "fullName": null,
+  "city": "Mt Belvieu",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/mt-belvieu/barbers-hill-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":4,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"523ae181-652f-452d-8c58-2c4f94e33280","name":"La Porte","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"27d249f0-494a-4832-a163-436a1a7f1680","name":"A&M Consolidated","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

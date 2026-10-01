@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "52d89642-6d2d-4bbb-b0a3-d0484800936c",
+  "name": "Lee County",
+  "fullName": null,
+  "city": "Leesburg",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/leesburg/lee-county-trojans",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"249b3bdb-e0d1-4972-a540-3b10e79b6cee","name":"Riverwood","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

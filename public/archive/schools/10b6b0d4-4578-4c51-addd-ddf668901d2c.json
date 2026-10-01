@@ -4,10 +4,11 @@
   "name": "Ygnacio Valley",
   "fullName": null,
   "city": "Concord",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/concord/ygnacio-valley-wolves",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2017-18","competition":"cif-norcal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2017-18","competition":"ca-cif-norcal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-norcal","division":"gd3","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"2993e4ff-72d9-4f83-b862-8db615e795aa","name":"Shasta","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-norcal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"2993e4ff-72d9-4f83-b862-8db615e795aa","name":"Shasta","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

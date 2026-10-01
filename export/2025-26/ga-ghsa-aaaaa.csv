@@ -1,0 +1,32 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Glynn Academy,0,,Jackson County,6,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Chattahoochee,1,,Chamblee,3,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Kennesaw Mountain,1,,McIntosh,3,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Creekview,1,,Houston County,0,top
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Habersham Central,0,,Lakeside,2,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Dunwoody,0,,Roswell,3,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Newnan,0,,Rome,4,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Lee County,0,,Riverwood,3,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,1,Round 2,2026-04-28,final,,,Jackson County,0,,Chamblee,1,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,1,Round 2,2026-04-28,final,,,McIntosh,2,,Creekview,1,top
+2025-26,GA,ga-ghsa,Class AAAAA,1,Round 2,2026-04-28,final,,,Lakeside,0,,Roswell,1,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,1,Round 2,2026-04-28,final,,,Rome,2,,Riverwood,6,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,2,Round 3,2026-05-04,final,,,Chamblee,2,,McIntosh,1,top
+2025-26,GA,ga-ghsa,Class AAAAA,2,Round 3,2026-05-04,final,,,Roswell,2,,Riverwood,1,top
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Thomas County Central,1,,Lassiter,6,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Villa Rica,0,,Northgate,6,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Decatur,2,,Johns Creek,3,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Clarke Central,0,,Greenbrier,5,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Pope,10,,Veterans,0,top
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Langston Hughes,0,,Alexander,10,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,Milton,2,,Woodward Academy,1,top
+2025-26,GA,ga-ghsa,Class AAAAA,0,Round 1,2026-04-21,final,,,South Effingham,1,,Loganville,3,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,1,Round 2,2026-04-28,final,pk,,Lassiter,1,,Northgate,1,top
+2025-26,GA,ga-ghsa,Class AAAAA,1,Round 2,2026-04-28,final,,,Johns Creek,3,,Greenbrier,4,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,1,Round 2,2026-04-28,final,,,Pope,5,,Alexander,1,top
+2025-26,GA,ga-ghsa,Class AAAAA,1,Round 2,2026-04-28,final,,,Milton,4,,Loganville,2,top
+2025-26,GA,ga-ghsa,Class AAAAA,2,Round 3,2026-05-04,final,,,Lassiter,1,,Greenbrier,2,bottom
+2025-26,GA,ga-ghsa,Class AAAAA,2,Round 3,2026-05-04,final,,,Pope,3,,Milton,2,top
+2025-26,GA,ga-ghsa,Class AAAAA,3,Round 4,2026-05-07,final,,,Chamblee,2,,Roswell,1,top
+2025-26,GA,ga-ghsa,Class AAAAA,3,Round 4,2026-05-07,final,,,Greenbrier,3,,Pope,2,top
+2025-26,GA,ga-ghsa,Class AAAAA,4,Round 5,,final,,,Chamblee,0,,Greenbrier,3,bottom

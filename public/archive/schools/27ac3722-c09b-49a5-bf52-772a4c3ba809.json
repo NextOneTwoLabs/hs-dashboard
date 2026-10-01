@@ -4,10 +4,11 @@
   "name": "Apple Valley",
   "fullName": null,
   "city": "Apple Valley",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/apple-valley/apple-valley-sun-devils",
   "summary": {"appearances":1,"titles":0,"finals":1,"w":1,"l":0,"d":2},
-  "best": {"season":"2023-24","competition":"cif-socal","division":"gd3","result":"runner-up","reached":"Regional Final"},
+  "best": {"season":"2023-24","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","result":"runner-up","reached":"Regional Final"},
   "appearances": [
-    {"season":"2023-24","competition":"cif-socal","division":"gd3","seed":7,"rounds":3,"w":1,"l":0,"d":2,"gf":4,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"e147e259-13ce-4929-b531-c822636769c7","name":"Quartz Hill","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"3bc34a32-a552-42c4-a8bd-edef5067ff09","name":"Oak Park","seed":6,"score":2},"gf":2,"ga":2,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2024-03-02","opp":{"id":"1fd5ff77-0482-4f19-a9c2-e03a6ef04ce8","name":"Granada Hills Charter","seed":1,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+    {"season":"2023-24","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":7,"rounds":3,"w":1,"l":0,"d":2,"gf":4,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"e147e259-13ce-4929-b531-c822636769c7","name":"Quartz Hill","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"3bc34a32-a552-42c4-a8bd-edef5067ff09","name":"Oak Park","seed":6,"score":2},"gf":2,"ga":2,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2024-03-02","opp":{"id":"1fd5ff77-0482-4f19-a9c2-e03a6ef04ce8","name":"Granada Hills Charter","seed":1,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
   ]
 }

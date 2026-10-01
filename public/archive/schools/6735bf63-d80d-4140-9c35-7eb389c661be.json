@@ -4,10 +4,11 @@
   "name": "San Marcos",
   "fullName": null,
   "city": "Santa Barbara",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/santa-barbara/san-marcos-royals",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2020-21","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2020-21","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2020-21","competition":"cif-socal","division":"gd4","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"258374d8-324b-422b-ae6f-060b059510e7","name":"San Dimas","seed":3,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2020-21","state":"CA","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"258374d8-324b-422b-ae6f-060b059510e7","name":"San Dimas","seed":3,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "f4d5b89b-d9ac-4cbf-9058-ec7715d66b7e",
+  "name": "Tuloso-Midway",
+  "fullName": null,
+  "city": "Corpus Christi",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/corpus-christi/tuloso-midway-warriors-and-cherokees",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","gender":"girls","seed":null,"rounds":6,"w":2,"l":1,"d":0,"gf":4,"ga":10,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"5da6dd1c-660a-45f2-a877-c041ade95b6d","name":"Hidalgo Early College","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"1b0365b9-a21f-4ed4-a41b-5a6b35088b74","name":"IDEA Riverview","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"032ffe24-9d72-45d5-9970-123c7050ab32","name":"Davenport","seed":null,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

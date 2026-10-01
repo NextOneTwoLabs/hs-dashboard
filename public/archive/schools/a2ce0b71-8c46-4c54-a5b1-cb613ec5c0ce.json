@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "a2ce0b71-8c46-4c54-a5b1-cb613ec5c0ce",
+  "name": "Joshua",
+  "fullName": null,
+  "city": "Joshua",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/joshua/joshua-owls",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":15,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"59378fc2-80d0-4cdb-a57e-8efe86f6c083","name":"Trimble Tech","seed":null,"score":1},"gf":15,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"7ddaa698-ba9e-4921-9df2-200bcf4124d8","name":"Grapevine","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

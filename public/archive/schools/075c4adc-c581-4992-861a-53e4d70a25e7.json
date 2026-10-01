@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "075c4adc-c581-4992-861a-53e4d70a25e7",
+  "name": "Pope",
+  "fullName": null,
+  "city": "Marietta",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/marietta/pope-greyhounds",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","result":"eliminated","reached":"Round 4"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","gender":"girls","seed":null,"rounds":5,"w":3,"l":1,"d":0,"gf":20,"ga":6,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"2837b96b-5194-4559-b761-87a88b39b256","name":"Veterans","seed":null,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-28","opp":{"id":"63d28fc8-ba4c-4d86-82df-ed97adef099f","name":"Alexander","seed":null,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"e372bc25-b5c1-4c9a-ad82-6bac6c618767","name":"Milton","seed":null,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":3,"roundName":"Round 4","date":"2026-05-07","opp":{"id":"caba2299-2b6b-47ea-a668-61dbd240c084","name":"Greenbrier","seed":null,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":3,"reached":"Round 4","result":"eliminated","depth":0.6}
+  ]
+}

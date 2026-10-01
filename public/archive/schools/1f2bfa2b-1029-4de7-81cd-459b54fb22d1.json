@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1f2bfa2b-1029-4de7-81cd-459b54fb22d1",
+  "name": "Northwest Christian School",
+  "fullName": null,
+  "city": "Colbert",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/colbert/northwest-christian-school-crusaders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","result":"eliminated","reached":"Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","gender":"girls","seed":null,"rounds":4,"w":2,"l":1,"d":0,"gf":8,"ga":3,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"579f488a-16b8-4fad-a927-3eecc3154b16","name":"Onalaska","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-14","opp":{"id":"f552cffc-257f-4a97-902e-9a04cfa70e63","name":"Brewster","seed":null,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Semifinals","date":"2025-11-21","opp":{"id":"3396f21e-0d9c-4c17-a7ae-bac8ac3af0ba","name":"Crosspoint Christian","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Semifinals","result":"eliminated","depth":0.5}
+  ]
+}

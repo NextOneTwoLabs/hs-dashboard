@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "95bd5c00-b840-447e-8158-c6541d168953",
+  "name": "East Valley",
+  "fullName": null,
+  "city": "Spokane",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/spokane/east-valley-knights",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"2a","divisionLabel":"2A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"2a","divisionLabel":"2A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":5,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"1538e79a-cf85-4673-9762-a99c1368e351","name":"Columbia River","seed":null,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

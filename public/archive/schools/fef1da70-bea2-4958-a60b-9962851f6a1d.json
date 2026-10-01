@@ -4,10 +4,11 @@
   "name": "Madison",
   "fullName": null,
   "city": "San Diego",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/san-diego/madison-warhawks",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2022-23","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2022-23","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2022-23","competition":"cif-socal","division":"gd5","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"3c68fab4-0b6f-4f91-85e3-20f698b3e937","name":"Carter","seed":2,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2022-23","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"3c68fab4-0b6f-4f91-85e3-20f698b3e937","name":"Carter","seed":2,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

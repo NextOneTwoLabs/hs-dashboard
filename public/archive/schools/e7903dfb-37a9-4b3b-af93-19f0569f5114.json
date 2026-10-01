@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e7903dfb-37a9-4b3b-af93-19f0569f5114",
+  "name": "West Boca Raton",
+  "fullName": null,
+  "city": "Boca Raton",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/boca-raton/west-boca-raton-bulls",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","gender":"girls","seed":4,"rounds":5,"w":1,"l":1,"d":0,"gf":4,"ga":8,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"1b59def4-c3c6-435d-aa71-2f32f6725518","name":"Flanagan","seed":5,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"bd12f619-3d60-413e-a9ef-5742cd4a21bb","name":"St. Thomas Aquinas","seed":1,"score":7},"gf":0,"ga":7,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

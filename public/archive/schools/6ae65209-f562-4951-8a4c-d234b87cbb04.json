@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "6ae65209-f562-4951-8a4c-d234b87cbb04",
+  "name": "Calvary Christian",
+  "fullName": null,
+  "city": "Clearwater",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/clearwater/calvary-christian-warriors",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":4,"rounds":5,"w":1,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"0882a8d3-2c10-4577-bae5-3bcb6f89085f","name":"Tampa Catholic","seed":5,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"e15ab772-fb9c-441a-ab66-8967b1d719ab","name":"Montverde Academy","seed":1,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

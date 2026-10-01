@@ -4,10 +4,11 @@
   "name": "Saugus",
   "fullName": null,
   "city": "Saugus",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/saugus/saugus-centurions",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
-  "best": {"season":"2020-21","competition":"cif-socal","division":"gd2","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2020-21","competition":"ca-cif-socal","division":"gd2","divisionLabel":"Division 2","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2020-21","competition":"cif-socal","division":"gd2","seed":6,"rounds":3,"w":0,"l":0,"d":1,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"54ef2b21-237c-4544-804f-af1d8e056c2b","name":"Buchanan","seed":3,"score":3},"gf":3,"ga":3,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2020-21","state":"CA","competition":"ca-cif-socal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":6,"rounds":3,"w":0,"l":0,"d":1,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"54ef2b21-237c-4544-804f-af1d8e056c2b","name":"Buchanan","seed":3,"score":3},"gf":3,"ga":3,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

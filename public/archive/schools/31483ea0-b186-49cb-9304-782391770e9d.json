@@ -4,10 +4,11 @@
   "name": "La Quinta",
   "fullName": null,
   "city": "Westminster",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/westminster/la-quinta-aztecs",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
-  "best": {"season":"2022-23","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Regional Semifinals"},
+  "best": {"season":"2022-23","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Regional Semifinals"},
   "appearances": [
-    {"season":"2022-23","competition":"cif-socal","division":"gd5","seed":6,"rounds":3,"w":1,"l":1,"d":0,"gf":5,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"7a4a068d-78ba-4153-b498-51fd9476b4f0","name":"Larchmont Charter","seed":3,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"3c68fab4-0b6f-4f91-85e3-20f698b3e937","name":"Carter","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+    {"season":"2022-23","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":6,"rounds":3,"w":1,"l":1,"d":0,"gf":5,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"7a4a068d-78ba-4153-b498-51fd9476b4f0","name":"Larchmont Charter","seed":3,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"3c68fab4-0b6f-4f91-85e3-20f698b3e937","name":"Carter","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
   ]
 }

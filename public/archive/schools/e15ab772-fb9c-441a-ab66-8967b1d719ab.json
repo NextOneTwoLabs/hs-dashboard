@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e15ab772-fb9c-441a-ab66-8967b1d719ab",
+  "name": "Montverde Academy",
+  "fullName": "Montverde Academy Eagles",
+  "city": "Montverde",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/montverde/montverde-academy-eagles",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":5,"l":0,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"champion","reached":"State Championship"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":1,"rounds":5,"w":5,"l":0,"d":0,"gf":21,"ga":0,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"18e06727-60d5-47e2-b14b-f133b9e0b880","name":"Astronaut","seed":8,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"6ae65209-f562-4951-8a4c-d234b87cbb04","name":"Calvary Christian","seed":4,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-13","opp":{"id":"03962b43-d943-426a-bf1c-0031bbe7e3b8","name":"Lake Highland Prep","seed":2,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"State Semifinal","date":"2026-02-19","opp":{"id":"acfc9424-377e-4895-9eb6-a3effc3aa8a4","name":"Pensacola Catholic","seed":4,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":4,"roundName":"State Championship","date":"2026-02-21","opp":{"id":"a9ee1067-a30a-4c45-91f1-a259ea15101f","name":"Cardinal Gibbons","seed":2,"score":0},"gf":2,"ga":0,"res":"W","pk":null}],"reachedRound":4,"reached":"State Championship","result":"champion","depth":1.0}
+  ]
+}

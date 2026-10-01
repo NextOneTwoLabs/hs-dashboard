@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "7f967a77-5b02-4b94-81f0-3cc8879f8ef7",
+  "name": "Gig Harbor",
+  "fullName": null,
+  "city": "Gig Harbor",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/gig-harbor/gig-harbor-tides",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":11,"ga":6,"games":[{"round":1,"roundName":"First Round","date":"2025-11-14","opp":{"id":"2caaf740-a7d3-45be-9b59-fe7a7d598cc4","name":"Oak Harbor","seed":null,"score":2},"gf":8,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Quarterfinals","date":"2025-11-15","opp":{"id":"4ad3a91f-4bc2-4d04-9290-ac995a2c7471","name":"Liberty","seed":null,"score":4},"gf":3,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Quarterfinals","result":"eliminated","depth":0.4}
+  ]
+}

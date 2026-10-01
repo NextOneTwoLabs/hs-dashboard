@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "cbd6726f-84d0-41d1-80d8-f781462fc574",
+  "name": "Frenship Memorial",
+  "fullName": null,
+  "city": "Lubbock",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/lubbock/frenship-memorial-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":2,"ga":5,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"d0b50e14-7906-4baa-b586-ccd204647e21","name":"Ysleta","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"80384819-4dd1-433f-b905-70a4f4e03187","name":"Decatur","seed":null,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

@@ -4,10 +4,11 @@
   "name": "Bell Gardens",
   "fullName": null,
   "city": "Bell Gardens",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/bell-gardens/bell-gardens-lancers",
   "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
-  "best": {"season":"2023-24","competition":"cif-socal","division":"gd5","result":"runner-up","reached":"Regional Final"},
+  "best": {"season":"2023-24","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"runner-up","reached":"Regional Final"},
   "appearances": [
-    {"season":"2023-24","competition":"cif-socal","division":"gd5","seed":2,"rounds":3,"w":2,"l":1,"d":0,"gf":5,"ga":6,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"cbb5096a-4756-40a7-97d3-4b668a2a250a","name":"Mar Vista","seed":7,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"3d27be7e-d54c-45bc-933b-b8ae54ceecf3","name":"Artesia","seed":3,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2024-03-02","opp":{"id":"c481b37e-d488-4d1e-987a-082e0a5aedf7","name":"Diamond Ranch","seed":1,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+    {"season":"2023-24","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":2,"rounds":3,"w":2,"l":1,"d":0,"gf":5,"ga":6,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"cbb5096a-4756-40a7-97d3-4b668a2a250a","name":"Mar Vista","seed":7,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"3d27be7e-d54c-45bc-933b-b8ae54ceecf3","name":"Artesia","seed":3,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2024-03-02","opp":{"id":"c481b37e-d488-4d1e-987a-082e0a5aedf7","name":"Diamond Ranch","seed":1,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
   ]
 }

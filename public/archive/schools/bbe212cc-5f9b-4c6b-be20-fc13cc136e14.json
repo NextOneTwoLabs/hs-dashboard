@@ -4,11 +4,12 @@
   "name": "Eagle Rock",
   "fullName": null,
   "city": "Los Angeles",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/los-angeles/eagle-rock-eagles",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
-  "best": {"season":"2024-25","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2024-25","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2023-24","competition":"cif-socal","division":"gd4","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"59e38f88-dd08-4300-a8a6-680a6516ac0a","name":"Arroyo Grande","seed":1,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2024-25","competition":"cif-socal","division":"gd4","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"f9adea13-f951-4743-a79c-b8d824e4d231","name":"La Mirada","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2023-24","state":"CA","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"59e38f88-dd08-4300-a8a6-680a6516ac0a","name":"Arroyo Grande","seed":1,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","state":"CA","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"f9adea13-f951-4743-a79c-b8d824e4d231","name":"La Mirada","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

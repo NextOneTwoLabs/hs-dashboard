@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "eb521293-83d3-4b14-8bd9-1461dd92afea",
+  "name": "Mt. Spokane",
+  "fullName": null,
+  "city": "Mead",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/mead/mt-spokane-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"3a","divisionLabel":"3A","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":3,"ga":2,"games":[{"round":1,"roundName":"First Round","date":"2025-11-14","opp":{"id":"af3e5aa1-f02c-4595-bad3-360be70baf61","name":"Silas","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Quarterfinals","date":"2025-11-15","opp":{"id":"2da9cf05-fcc8-4a04-abed-e3bc2a44a8c4","name":"Roosevelt","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Quarterfinals","result":"eliminated","depth":0.4}
+  ]
+}

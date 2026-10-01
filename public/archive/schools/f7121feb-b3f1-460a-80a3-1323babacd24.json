@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "f7121feb-b3f1-460a-80a3-1323babacd24",
+  "name": "Callaway",
+  "fullName": null,
+  "city": "Hogansville",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/hogansville/callaway-cavaliers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":18,"rounds":5,"w":1,"l":1,"d":0,"gf":5,"ga":4,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"60015933-996c-4744-afc7-f1b0271d7143","name":"Hart County","seed":15,"score":2},"gf":4,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"2176f274-435b-4e82-809a-785a0d94cdba","name":"Coahulla Creek","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

@@ -4,10 +4,11 @@
   "name": "Upland",
   "fullName": "Upland Highlanders",
   "city": "Upland",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/upland/upland-highlanders",
   "summary": {"appearances":1,"titles":1,"finals":1,"w":3,"l":0,"d":0},
-  "best": {"season":"2017-18","competition":"cif-socal","division":"gd1","result":"champion","reached":"Regional Final"},
+  "best": {"season":"2017-18","competition":"ca-cif-socal","division":"gd1","divisionLabel":"Division 1","result":"champion","reached":"Regional Final"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-socal","division":"gd1","seed":6,"rounds":3,"w":3,"l":0,"d":0,"gf":6,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"804990b1-145b-4b80-96cf-bd728f338bbc","name":"El Camino Real","seed":3,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"f9adea13-f951-4743-a79c-b8d824e4d231","name":"La Mirada","seed":7,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2018-03-10","opp":{"id":"a3a4b4d3-bce3-47b1-a57b-30226feba5e1","name":"JSerra Catholic","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-socal","division":"gd1","divisionLabel":"Division 1","gender":"girls","seed":6,"rounds":3,"w":3,"l":0,"d":0,"gf":6,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"804990b1-145b-4b80-96cf-bd728f338bbc","name":"El Camino Real","seed":3,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"f9adea13-f951-4743-a79c-b8d824e4d231","name":"La Mirada","seed":7,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2018-03-10","opp":{"id":"a3a4b4d3-bce3-47b1-a57b-30226feba5e1","name":"JSerra Catholic","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
   ]
 }

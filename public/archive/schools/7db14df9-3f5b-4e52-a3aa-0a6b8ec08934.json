@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "7db14df9-3f5b-4e52-a3aa-0a6b8ec08934",
+  "name": "Tumwater",
+  "fullName": null,
+  "city": "Tumwater",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/tumwater/tumwater-thunderbirds",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"2a","divisionLabel":"2A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"2a","divisionLabel":"2A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"79a7d74f-7f4d-4028-8751-6736f89a9a73","name":"Cedarcrest","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

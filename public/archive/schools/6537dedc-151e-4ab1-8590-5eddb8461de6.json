@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "6537dedc-151e-4ab1-8590-5eddb8461de6",
+  "name": "Drew Charter",
+  "fullName": null,
+  "city": "Atlanta",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/atlanta/drew-charter",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":6,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"afdb2b07-2248-40f6-998b-2f92ba5f504e","name":"Jackson","seed":27,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "210a3e28-56ad-4ea0-afe8-4398d27af969",
+  "name": "Moses Lake",
+  "fullName": null,
+  "city": "Moses Lake",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/moses-lake/moses-lake-mavericks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"4a","divisionLabel":"4A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"4a","divisionLabel":"4A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":8,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"5b66c7d5-1df4-442f-851b-425dbfbb6328","name":"Issaquah","seed":null,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

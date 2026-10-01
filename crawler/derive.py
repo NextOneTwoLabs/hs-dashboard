@@ -3,12 +3,26 @@
 Pure function of (sources.json, archive/links.json, archive/raw/**, school
 aliases): no network and no wall-clock timestamps, so CI can rebuild it and
 fail on drift.
+
+Outputs (all schema 1 unless noted):
+  catalog.json                         every state's seasons -> competitions -> divisions
+  states.json                          coverage index, one row per state
+  states/<ST>/catalog.json             one state's catalog
+  states/<ST>/schools.json             one state's school directory
+  states/<ST>/seasons/<season>/games.json
+  seasons/<season>/games.json          all states (kept for the original v1 route)
+  brackets/<season>/<comp>/<div>.json  normalized bracket
+  schools.json                         full school directory (all states)
+  schools/<id>.json                    one school's appearances
+  search-index.json                    compact rows for the header search
 """
 import csv
 import io
 import re
+import sys
+from collections import Counter
 
-from . import cif, maxpreps, store
+from . import divisions, maxpreps, store
 
 SCHEMA = 1
 _HEADER = re.compile(r"^(?:<!--.*?-->\s*)+", re.S)
@@ -27,26 +41,52 @@ def _school_key(side, merge):
     return merge.get(sid, sid) if sid else None
 
 
-def load_brackets(sources, links):
+def _bracket_state(games):
+    states = Counter()
+    for g in games:
+        for side in ("top", "bottom"):
+            st = maxpreps.state_from_path((g[side] or {}).get("path"))
+            if st:
+                states[st] += 1
+    return states.most_common(1)[0][0] if states else None
+
+
+def load_brackets(sources, links, warn=None):
     """Yield normalized bracket dicts in registry order."""
-    genders = sources.get("genders", ["b", "g"])
+    genders = {"boys" if g == "b" else "girls" for g in sources.get("genders", ["b", "g"])}
     for season, scfg in sources["seasons"].items():
         for comp_id in scfg["competitions"]:
+            meta = sources["competitions"][comp_id]
             entry = links.get(season, {}).get(comp_id, {})
             for code, div in sorted(entry.get("divisions", {}).items()):
-                if code[0] not in genders:
+                gender = div.get("gender") or divisions.cif_division(code)[0]
+                if gender not in genders:
                     continue
                 raw = store.RAW / season / comp_id / f"{code}.html"
                 if not raw.exists():
                     continue
-                html = _HEADER.sub("", raw.read_text(encoding="utf-8"))
-                parsed = maxpreps.parse(html)
+                parsed = maxpreps.parse(_HEADER.sub("", raw.read_text(encoding="utf-8")))
+                if meta["source"] == "maxpreps":
+                    found = _bracket_state(parsed["games"])
+                    if found and found != meta["state"]:
+                        if warn:
+                            warn(f"skipped {season}/{comp_id}/{code}: schools are in {found}, "
+                                 f"expected {meta['state']}")
+                        continue
+                # A game whose date had passed when we fetched it, with both teams set
+                # but no result, was never reported by the source.
+                fetched = (div.get("fetchedAt") or "")[:10]
+                for g in parsed["games"]:
+                    if (g["status"] == "scheduled" and g["top"] and g["bottom"] and g["date"]
+                            and fetched and g["date"] < fetched):
+                        g["status"] = "unreported"
+                label = div.get("label") or divisions.cif_division(code)[1]
                 yield {
                     "schema": SCHEMA,
                     "season": season,
+                    "state": meta["state"],
                     "competition": comp_id,
-                    "division": {"code": code, "gender": "boys" if code[0] == "b" else "girls",
-                                 "level": int(code[2:]), "label": cif.division_label(code)},
+                    "division": {"code": code, "gender": gender, "label": label},
                     "source": {"cif": div.get("cif"), "maxpreps": div.get("canonical") or div.get("maxpreps"),
                                "fetchedAt": div.get("fetchedAt")},
                     "champion": parsed["champion"],
@@ -56,7 +96,6 @@ def load_brackets(sources, links):
 
 
 def _outcome(game, side):
-    mine, theirs = game[side], game["bottom" if side == "top" else "top"]
     if game["status"] != "final":
         return None
     won = game["winner"] == side
@@ -65,33 +104,41 @@ def _outcome(game, side):
     return ("W" if won else "L"), None
 
 
-def build_all(sources, check=False, export=False):
+def build_all(sources, check=False, export=False, warn=None):
+    warn = warn or (lambda msg: print("warning: " + msg, file=sys.stderr))
     links = store.load_json(store.LINKS, {}) or {}
     aliases = store.load_json(store.ALIASES, {}) or {}
     merge = aliases.get("merge", {})
     out = {}
-    brackets = list(load_brackets(sources, links))
+    brackets = list(load_brackets(sources, links, warn))
 
     schools = {}
-    season_games = {}
-    catalog_seasons = {s: {"season": s, "note": cfg.get("note"), "competitions": []}
-                       for s, cfg in sources["seasons"].items()}
+    games_by = {}            # (state, season) -> games
+    catalog = {}             # state -> season -> {season, note, competitions:[...]}
     comp_index = {}
 
+    for st in sources["states"]:
+        catalog[st] = {}
+        for season, scfg in sources["seasons"].items():
+            note = (scfg.get("notes") or {}).get(st)
+            if note:
+                catalog[st][season] = {"season": season, "note": note, "competitions": []}
+
     for b in brackets:
-        season, comp, code = b["season"], b["competition"], b["division"]["code"]
+        season, st, comp, code = b["season"], b["state"], b["competition"], b["division"]["code"]
         out[f"brackets/{season}/{comp}/{code}.json"] = b
+        main_games = [g for g in b["games"] if "place" not in g]
         rounds = {r["index"]: r for r in b["rounds"]}
         last_round = max(rounds) if rounds else 0
 
-        # Catalog entry.
         key = (season, comp)
         if key not in comp_index:
-            comp_meta = sources["competitions"][comp]
-            comp_index[key] = {"id": comp, "label": comp_meta["label"], "short": comp_meta["short"],
-                               "divisions": []}
-            catalog_seasons[season]["competitions"].append(comp_index[key])
-        finals = [g for g in b["games"] if g["round"] == last_round and g["status"] == "final"]
+            meta = sources["competitions"][comp]
+            comp_index[key] = {"id": comp, "state": st, "label": meta["label"], "short": meta["short"],
+                               "term": meta.get("term"), "divisions": []}
+            catalog[st].setdefault(season, {"season": season, "note": None, "competitions": []})
+            catalog[st][season]["competitions"].append(comp_index[key])
+        finals = [g for g in main_games if g["round"] == last_round and g["status"] == "final"]
         runner = None
         if b["champion"] and finals:
             g = finals[0]
@@ -101,24 +148,27 @@ def build_all(sources, check=False, export=False):
         comp_index[key]["divisions"].append({
             **b["division"],
             "games": len(b["games"]), "played": played,
-            "status": "complete" if b["champion"] else ("in-progress" if played else "scheduled"),
+            "status": ("complete" if b["champion"]
+                       else "unreported" if any(g["status"] == "unreported" for g in main_games)
+                       and not any(g["status"] == "scheduled" for g in main_games)
+                       else "in-progress" if played else "scheduled"),
             "champion": {"id": b["champion"]["schoolId"], "name": b["champion"]["name"]} if b["champion"] else None,
             "runnerUp": {"id": runner["id"], "name": runner["name"]} if runner else None,
             "start": min(dates) if dates else None, "end": max(dates) if dates else None,
         })
 
-        # Flat season game list (Results tab).
         for g in b["games"]:
-            season_games.setdefault(season, []).append({
-                "id": g["id"], "competition": comp, "division": code, "round": g["round"],
-                "roundName": rounds.get(g["round"], {}).get("name"), "date": g["date"],
-                "status": g["status"], "decidedBy": g["decidedBy"], "winner": g["winner"],
+            games_by.setdefault((st, season), []).append({
+                "id": g["id"], "state": st, "competition": comp, "division": code,
+                "divisionLabel": b["division"]["label"], "gender": b["division"]["gender"], "round": g["round"],
+                "roundName": rounds.get(g["round"], {}).get("name") if "place" not in g else "Third place",
+                "date": g["date"], "status": g["status"], "decidedBy": g["decidedBy"], "winner": g["winner"],
                 "top": _game_side(g["top"], merge), "bottom": _game_side(g["bottom"], merge),
             })
 
         # School appearances.
         per_school = {}
-        for g in sorted(b["games"], key=lambda x: (x["round"], x["slot"])):
+        for g in sorted(b["games"], key=lambda x: ("place" in x, x["round"], x["slot"])):
             for side in ("top", "bottom"):
                 team = g[side]
                 if not team:
@@ -133,15 +183,20 @@ def build_all(sources, check=False, export=False):
                 app = per_school.get(sid)
                 if app is None:
                     app = per_school[sid] = {
-                        "season": season, "competition": comp, "division": code, "seed": team["seed"],
-                        "rounds": last_round + 1, "w": 0, "l": 0, "d": 0, "gf": 0, "ga": 0, "games": []}
+                        "season": season, "state": st, "competition": comp, "division": code,
+                        "divisionLabel": b["division"]["label"], "gender": b["division"]["gender"],
+                        "seed": team["seed"], "rounds": last_round + 1,
+                        "w": 0, "l": 0, "d": 0, "gf": 0, "ga": 0, "games": []}
                     s["appearances"].append(app)
                 other = g["bottom" if side == "top" else "top"]
                 res = _outcome(g, side)
-                row = {"round": g["round"], "roundName": rounds.get(g["round"], {}).get("name"),
+                row = {"round": g["round"],
+                       "roundName": rounds.get(g["round"], {}).get("name") if "place" not in g else "Third place",
                        "date": g["date"], "opp": _game_side(other, merge),
                        "gf": team["score"], "ga": other["score"] if other else None,
                        "res": res[0] if res else None, "pk": res[1] if res else None}
+                if "place" in g:
+                    row["place"] = g["place"]
                 app["games"].append(row)
                 if res:
                     app[res[0].lower()] += 1
@@ -152,27 +207,34 @@ def build_all(sources, check=False, export=False):
             if cid in schools:
                 schools[cid]["fullName"] = b["champion"]["fullName"]
 
-        for sid, app in per_school.items():
-            last = app["games"][-1]
+        for app in per_school.values():
+            main = [r for r in app["games"] if "place" not in r] or app["games"]
+            last = main[-1]
             app["reachedRound"] = last["round"]
             app["reached"] = last["roundName"]
+            won_last = last["res"] == "W" or last["pk"] == "W"
             if last["res"] is None:
                 app["result"] = "alive"
-            elif last["round"] == last_round and (last["res"] == "W" or last["pk"] == "W"):
+            elif last["round"] == last_round and won_last:
                 app["result"] = "champion"
             elif last["round"] == last_round:
                 app["result"] = "runner-up"
-            elif last["res"] == "W" or last["pk"] == "W":
+            elif won_last:
                 app["result"] = "alive"
             else:
                 app["result"] = "eliminated"
             # 0..1 progress through the bracket, for the history chart.
             app["depth"] = round((last["round"] + (1 if app["result"] == "champion" else 0)) / app["rounds"], 3)
 
+    # Order divisions within each competition (largest class first, then D1, D2...).
+    for comp in comp_index.values():
+        comp["divisions"].sort(key=lambda d: divisions.order_key(d["label"]))
+        for i, d in enumerate(comp["divisions"]):
+            d["order"] = i
+
     directory = []
     for sid, s in sorted(schools.items(), key=lambda kv: kv[0]):
-        latest_season = max(s["names"])
-        name = s["names"][latest_season]
+        name = s["names"][max(s["names"])]
         apps = sorted(s["appearances"], key=lambda a: (a["season"], a["competition"]))
         titles = sum(1 for a in apps if a["result"] == "champion")
         best = max(apps, key=lambda a: (a["depth"], a["season"]))
@@ -181,31 +243,78 @@ def build_all(sources, check=False, export=False):
                    "w": sum(a["w"] for a in apps), "l": sum(a["l"] for a in apps),
                    "d": sum(a["d"] for a in apps)}
         city = maxpreps.city_from_path(s["path"])
+        state = maxpreps.state_from_path(s["path"]) or apps[-1]["state"]
         out[f"schools/{sid}.json"] = {
-            "schema": SCHEMA, "id": sid, "name": name, "fullName": s["fullName"], "city": city,
+            "schema": SCHEMA, "id": sid, "name": name, "fullName": s["fullName"], "city": city, "state": state,
             "maxpreps": (sources["sources"]["maxpreps"]["base"] + s["path"]) if s["path"] else None,
             "summary": summary,
-            "best": {k: best[k] for k in ("season", "competition", "division", "result", "reached")},
+            "best": {k: best[k] for k in ("season", "competition", "division", "divisionLabel", "result", "reached")},
             "appearances": apps,
         }
-        directory.append({"id": sid, "name": name, "city": city,
-                          "gender": sorted({a["division"][0] for a in apps}),
-                          "apps": len(apps), "titles": titles,
-                          "last": apps[-1]["season"]})
+        directory.append({"id": sid, "name": name, "city": city, "state": state,
+                          "gender": sorted({a["gender"][0] for a in apps}),
+                          "apps": len(apps), "titles": titles, "last": apps[-1]["season"]})
     out["schools.json"] = {"schema": SCHEMA, "count": len(directory), "schools": directory}
+    out["search-index.json"] = {
+        "schema": SCHEMA, "fields": ["id", "name", "city", "state", "apps", "titles"],
+        "rows": [[d["id"], d["name"], d["city"], d["state"], d["apps"], d["titles"]] for d in directory],
+    }
 
-    for season, games in season_games.items():
+    all_games = {}
+    for (st, season), games in games_by.items():
         games.sort(key=lambda g: (g["date"] or "", g["competition"], g["division"], g["round"]))
+        out[f"states/{st}/seasons/{season}/games.json"] = {"schema": SCHEMA, "state": st, "season": season,
+                                                           "games": games}
+        all_games.setdefault(season, []).extend(games)
+    for season, games in all_games.items():
+        games.sort(key=lambda g: (g["date"] or "", g["state"], g["competition"], g["division"], g["round"]))
         out[f"seasons/{season}/games.json"] = {"schema": SCHEMA, "season": season, "games": games}
 
-    seasons_with_data = [s for s in catalog_seasons.values() if s["competitions"]]
+    competitions = {cid: {k: v for k, v in meta.items() if k != "source"}
+                    for cid, meta in sources["competitions"].items()}
+    states_rows, all_seasons = [], {}
+    for st, smeta in sorted(sources["states"].items()):
+        seasons = sorted(catalog[st].values(), key=lambda s: s["season"], reverse=True)
+        with_data = [s for s in seasons if s["competitions"]]
+        latest = with_data[0] if with_data else None
+        out[f"states/{st}/catalog.json"] = {
+            "schema": SCHEMA, "state": st, **smeta, "activeSeason": sources["activeSeason"],
+            "latestSeason": latest["season"] if latest else None,
+            "genders": sources.get("genders", ["b", "g"]), "seasons": seasons,
+        }
+        st_schools = [d for d in directory if d["state"] == st]
+        out[f"states/{st}/schools.json"] = {"schema": SCHEMA, "state": st, "count": len(st_schools),
+                                            "schools": st_schools}
+        terms = sorted({sources["competitions"][c]["term"] for c in sources["competitions"]
+                        if sources["competitions"][c]["state"] == st})
+        states_rows.append({
+            "code": st, **smeta, "terms": terms,
+            "seasons": [s["season"] for s in with_data],
+            "latestSeason": latest["season"] if latest else None,
+            "latest": [{"competition": c["id"], "short": c["short"],
+                        "divisions": [{k: d[k] for k in ("code", "label", "status", "champion", "start", "end")}
+                                      for d in c["divisions"]]}
+                       for c in (latest["competitions"] if latest else [])],
+            "schools": len(st_schools),
+        })
+        for s in seasons:
+            merged = all_seasons.setdefault(s["season"], {"season": s["season"], "notes": {}, "competitions": []})
+            if s["note"]:
+                merged["notes"][st] = s["note"]
+            merged["competitions"].extend(s["competitions"])
+    out["states.json"] = {"schema": SCHEMA, "activeSeason": sources["activeSeason"],
+                          "genders": sources.get("genders", ["b", "g"]),
+                          "aliases": sources.get("aliases", {}), "competitions": competitions,
+                          "states": states_rows}
+    seasons_with_data = [s for s in all_seasons.values() if s["competitions"]]
     out["catalog.json"] = {
-        "schema": SCHEMA,
+        "schema": 2,
         "activeSeason": sources["activeSeason"],
         "latestSeason": max((s["season"] for s in seasons_with_data), default=None),
         "genders": sources.get("genders", ["b", "g"]),
-        "competitions": sources["competitions"],
-        "seasons": sorted(catalog_seasons.values(), key=lambda s: s["season"], reverse=True),
+        "states": sources["states"],
+        "competitions": competitions,
+        "seasons": sorted(all_seasons.values(), key=lambda s: s["season"], reverse=True),
     }
 
     files = {store.ARCHIVE / rel: store.dumps(obj) for rel, obj in out.items()}
@@ -215,9 +324,12 @@ def build_all(sources, check=False, export=False):
 
     changed = []
     # Prune derived files that are no longer produced (e.g. a gender switched off).
-    for sub in ("brackets", "schools", "seasons"):
-        for path in sorted((store.ARCHIVE / sub).rglob("*.json")):
-            if path not in files:
+    managed = [store.ARCHIVE / sub for sub in ("brackets", "schools", "seasons", "states")]
+    if export:
+        managed.append(store.EXPORT)
+    for folder in managed:
+        for path in sorted(folder.rglob("*.*")) if folder.exists() else []:
+            if path.is_file() and path not in files:
                 changed.append(str(path.relative_to(store.ROOT)) + " (stale)")
                 if not check:
                     path.unlink()
@@ -231,6 +343,11 @@ def build_all(sources, check=False, export=False):
                 changed.append(str(path.relative_to(store.ROOT)))
         elif store.write_text(path, text):
             changed.append(str(path.relative_to(store.ROOT)))
+    if not check:
+        for folder in managed:
+            for d in sorted(folder.rglob("*"), reverse=True) if folder.exists() else []:
+                if d.is_dir() and not any(d.iterdir()):
+                    d.rmdir()
     return changed
 
 
@@ -245,12 +362,13 @@ def _csv(b):
     buf = io.StringIO()
     w = csv.writer(buf, lineterminator="\n")
     names = {r["index"]: r["name"] for r in b["rounds"]}
-    w.writerow(["season", "competition", "division", "round", "round_name", "date", "status",
+    w.writerow(["season", "state", "competition", "division", "round", "round_name", "date", "status",
                 "decided_by", "top_seed", "top_school", "top_score", "bottom_seed", "bottom_school",
                 "bottom_score", "winner"])
     for g in b["games"]:
         t, o = g["top"] or {}, g["bottom"] or {}
-        w.writerow([b["season"], b["competition"], b["division"]["code"], g["round"], names.get(g["round"]),
+        w.writerow([b["season"], b["state"], b["competition"], b["division"]["label"], g["round"],
+                    names.get(g["round"]) if "place" not in g else "Third place",
                     g["date"], g["status"], g["decidedBy"] or "", t.get("seed"), t.get("name"), t.get("score"),
                     o.get("seed"), o.get("name"), o.get("score"), g["winner"] or ""])
     return buf.getvalue()

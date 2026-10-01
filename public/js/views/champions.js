@@ -1,43 +1,48 @@
-import { bindControls, genderSeg } from '../components/controls.js';
-import { esc, schoolHref } from '../util.js';
+import { bindControls, genderSeg, stateSelect } from '../components/controls.js';
+import { bracketHref, esc, schoolHref } from '../util.js';
 
-// Season-by-season grid of champions per division, straight from the catalog.
-export async function render({ state, catalog, controls, view, setState }) {
-  controls.innerHTML = genderSeg(state.g, catalog);
-  bindControls(controls, setState);
+// Season-by-season grid of a state's champions, one column per division.
+export async function render({ state, catalog, statesIndex, controls, view, setState }) {
+  controls.innerHTML = stateSelect(statesIndex, state.st) + genderSeg(state.g, catalog);
+  bindControls(controls, (patch) => setState(patch.st ? { ...patch, season: null } : patch));
 
+  // Columns: every division code seen, ordered by its most recent position.
+  const columns = new Map();
   const rows = [];
-  let maxLevel = 0;
   for (const s of catalog.seasons) {
     if (!s.competitions.length) {
       if (s.note) rows.push({ season: s.season, note: s.note });
       continue;
     }
     for (const c of s.competitions) {
-      const divs = new Map(c.divisions.filter((d) => d.gender[0] === state.g).map((d) => [d.level, d]));
-      maxLevel = Math.max(maxLevel, ...divs.keys());
+      const divs = new Map(c.divisions.filter((d) => d.gender[0] === state.g).map((d) => [d.code, d]));
+      for (const d of divs.values()) if (!columns.has(d.code)) columns.set(d.code, d);
       rows.push({ season: s.season, comp: c, divs });
     }
   }
-  const levels = Array.from({ length: maxLevel }, (_, i) => i + 1);
-  const head = `<tr><th>Season</th><th>Championship</th>${levels.map((l) => `<th>Division ${l}</th>`).join('')}</tr>`;
+  const cols = [...columns.values()].sort((a, b) => a.order - b.order);
+  const multiComp = new Set(rows.filter((r) => r.comp).map((r) => r.comp.id)).size > 1;
+  const head = `<tr><th>Season</th>${multiComp ? '<th>Championship</th>' : ''}${cols.map((d) => `<th>${esc(d.label)}</th>`).join('')}</tr>`;
   const body = rows
     .map((r) => {
-      if (r.note) return `<tr><td>${esc(r.season)}</td><td colspan="${levels.length + 1}" class="cell-empty">${esc(r.note)}</td></tr>`;
-      const cells = levels
-        .map((l) => {
-          const d = r.divs.get(l);
+      if (r.note) return `<tr><td class="num">${esc(r.season)}</td><td colspan="${cols.length + (multiComp ? 1 : 0)}" class="cell-empty">${esc(r.note)}</td></tr>`;
+      const cells = cols
+        .map((col) => {
+          const d = r.divs.get(col.code);
           if (!d) return '<td class="cell-empty">—</td>';
-          const link = `#tab=playoffs&season=${r.season}&comp=${r.comp.id}&g=${state.g}&div=${d.code}`;
-          if (!d.champion) return `<td><a href="${link}">${d.status === 'scheduled' ? 'Scheduled' : 'In progress'}</a></td>`;
+          const link = bracketHref(state.st, r.season, r.comp.id, d.code);
+          if (!d.champion) {
+            const text = d.status === 'scheduled' ? 'Scheduled' : d.status === 'unreported' ? 'Not reported' : 'In progress';
+            return `<td><a href="${link}">${text}</a></td>`;
+          }
           return `<td><div class="cell-champ"><a href="${schoolHref(d.champion.id, state.g)}">${esc(d.champion.name)}</a></div>
             <div class="cell-runner">def. ${d.runnerUp ? `<a href="${schoolHref(d.runnerUp.id, state.g)}" class="muted">${esc(d.runnerUp.name)}</a>` : '—'} · <a href="${link}" class="muted">bracket</a></div></td>`;
         })
         .join('');
-      return `<tr><td class="num">${esc(r.season)}</td><td>${esc(r.comp.short)}</td>${cells}</tr>`;
+      return `<tr><td class="num">${esc(r.season)}</td>${multiComp ? `<td>${esc(r.comp.short)}</td>` : ''}${cells}</tr>`;
     })
     .join('');
-  view.innerHTML = `<div class="page-head"><h1 class="page">${state.g === 'b' ? 'Boys' : 'Girls'} champions</h1>
-      <span class="muted">California: CIF State (2026–) and NorCal / SoCal Regional (2018–2025)</span></div>
+  view.innerHTML = `<div class="page-head"><h1 class="page">${esc(catalog.name)} champions</h1>
+      <span class="muted">${esc(catalog.associationName)} (${esc(catalog.association)})</span></div>
     <div class="card table-wrap"><table class="data"><thead>${head}</thead><tbody>${body}</tbody></table></div>`;
 }

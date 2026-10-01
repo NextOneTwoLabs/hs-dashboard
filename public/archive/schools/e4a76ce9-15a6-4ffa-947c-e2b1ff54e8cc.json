@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e4a76ce9-15a6-4ffa-947c-e2b1ff54e8cc",
+  "name": "Springstead",
+  "fullName": null,
+  "city": "Spring Hill",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/spring-hill/springstead-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","gender":"girls","seed":8,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":5,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"73ba77ad-e2e8-46ac-941b-c014b30d39cc","name":"Auburndale","seed":1,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "39187412-7115-4b7b-bae6-8070a86c3d92",
+  "name": "Tocoi Creek",
+  "fullName": null,
+  "city": "St Augustine",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/st-augustine/tocoi-creek-toros",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","gender":"girls","seed":5,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"8d072dc8-fa1e-4aba-92bc-2e83f83a0c89","name":"Nease","seed":4,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

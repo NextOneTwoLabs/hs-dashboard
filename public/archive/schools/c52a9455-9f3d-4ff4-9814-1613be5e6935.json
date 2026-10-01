@@ -4,10 +4,11 @@
   "name": "Kimball",
   "fullName": "Kimball Jaguars",
   "city": "Tracy",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/tracy/kimball-jaguars",
   "summary": {"appearances":1,"titles":1,"finals":1,"w":3,"l":0,"d":0},
-  "best": {"season":"2021-22","competition":"cif-norcal","division":"gd5","result":"champion","reached":"Regional Final"},
+  "best": {"season":"2021-22","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","result":"champion","reached":"Regional Final"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-norcal","division":"gd5","seed":5,"rounds":3,"w":3,"l":0,"d":0,"gf":3,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"be2fc7fb-ec14-4069-9c6d-f6083a2f9229","name":"Fresno Christian","seed":4,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"cb1b553b-d2e4-487d-bd22-876660416421","name":"University Prep","seed":8,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"b131236b-76db-48d3-ad28-5b5d94697d73","name":"Sutter","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":5,"rounds":3,"w":3,"l":0,"d":0,"gf":3,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"be2fc7fb-ec14-4069-9c6d-f6083a2f9229","name":"Fresno Christian","seed":4,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"cb1b553b-d2e4-487d-bd22-876660416421","name":"University Prep","seed":8,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"b131236b-76db-48d3-ad28-5b5d94697d73","name":"Sutter","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
   ]
 }

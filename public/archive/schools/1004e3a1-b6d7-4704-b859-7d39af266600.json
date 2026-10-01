@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1004e3a1-b6d7-4704-b859-7d39af266600",
+  "name": "Mitchell",
+  "fullName": null,
+  "city": "New Port Richey",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/new-port-richey/mitchell-mustangs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","gender":"girls","seed":5,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"b55009b0-f9fe-46a6-b905-a6988ab076dd","name":"Sickles","seed":4,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

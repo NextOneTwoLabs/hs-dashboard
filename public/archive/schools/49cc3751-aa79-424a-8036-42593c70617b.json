@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "49cc3751-aa79-424a-8036-42593c70617b",
+  "name": "Lake Creek",
+  "fullName": "Lake Creek Lions",
+  "city": "Montgomery",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/montgomery/lake-creek-lions",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":6,"l":0,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"champion","reached":"State Finals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":6,"l":0,"d":0,"gf":26,"ga":9,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"e88f853d-eeea-4eaa-9f6c-485a8f4bd993","name":"Splendora","seed":null,"score":0},"gf":9,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"d45fe67b-132a-4902-bb2e-9a113e25b37a","name":"Port Neches-Groves","seed":null,"score":2},"gf":4,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"64b145cb-b2bf-4cc2-b2a8-30e7152e6c09","name":"Georgetown","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Regional Finals","date":"2026-03-30","opp":{"id":"97bf7f69-87f4-4c06-95fe-86e9ff2d8875","name":"Friendswood","seed":null,"score":2},"gf":4,"ga":2,"res":"W","pk":null},{"round":4,"roundName":"State Semifinals","date":"2026-04-02","opp":{"id":"25344d3c-9f6f-4ee5-9c86-22be0c4b4ad7","name":"Pieper","seed":null,"score":3},"gf":4,"ga":3,"res":"W","pk":null},{"round":5,"roundName":"State Finals","date":"2026-04-09","opp":{"id":"7ddaa698-ba9e-4921-9df2-200bcf4124d8","name":"Grapevine","seed":null,"score":2},"gf":3,"ga":2,"res":"W","pk":null}],"reachedRound":5,"reached":"State Finals","result":"champion","depth":1.0}
+  ]
+}

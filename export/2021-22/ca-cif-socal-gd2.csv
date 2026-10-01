@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2021-22,CA,ca-cif-socal,Division 2,0,Round I,2022-03-01,final,unreported,1,Redondo Union,,,,,bottom
+2021-22,CA,ca-cif-socal,Division 2,0,Round I,2022-03-01,final,,4,Del Norte,1,5,Hart,2,bottom
+2021-22,CA,ca-cif-socal,Division 2,0,Round I,2022-03-01,final,,3,Los Osos,3,6,El Camino Real,1,top
+2021-22,CA,ca-cif-socal,Division 2,0,Round I,2022-03-01,final,,2,Oaks Christian,1,7,Torrey Pines,0,top
+2021-22,CA,ca-cif-socal,Division 2,1,Regional Semifinals,2022-03-03,final,,1,Redondo Union,6,5,Hart,1,top
+2021-22,CA,ca-cif-socal,Division 2,1,Regional Semifinals,2022-03-03,final,pk,3,Los Osos,0,2,Oaks Christian,0,top
+2021-22,CA,ca-cif-socal,Division 2,2,Regional Final,2022-03-05,final,,1,Redondo Union,2,3,Los Osos,1,top

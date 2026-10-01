@@ -4,11 +4,12 @@
   "name": "Mt. Carmel",
   "fullName": null,
   "city": "San Diego",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/san-diego/mt-carmel-sundevils",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
-  "best": {"season":"2025-26","competition":"cif-state","division":"gd1","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2025-26","competition":"ca-cif-state","division":"gd1","divisionLabel":"Division 1","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-socal","division":"gd3","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"c28d7b20-4e4d-456d-a944-e9f223d56e84","name":"Pacifica","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2025-26","competition":"cif-state","division":"gd1","seed":3,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"75b3c4b6-a228-4423-a670-32f9396be309","name":"Oaks Christian","seed":6,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"c28d7b20-4e4d-456d-a944-e9f223d56e84","name":"Pacifica","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","state":"CA","competition":"ca-cif-state","division":"gd1","divisionLabel":"Division 1","gender":"girls","seed":3,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"75b3c4b6-a228-4423-a670-32f9396be309","name":"Oaks Christian","seed":6,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

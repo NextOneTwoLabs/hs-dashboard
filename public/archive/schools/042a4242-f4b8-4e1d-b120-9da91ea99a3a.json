@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "042a4242-f4b8-4e1d-b120-9da91ea99a3a",
+  "name": "Victoria East",
+  "fullName": null,
+  "city": "Victoria",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/victoria/victoria-east-titans",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d1","divisionLabel":"Conference 5A D1","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":3,"ga":6,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"82c030b7-3b6b-4b7a-9074-686af2d2e7b2","name":"Milby","seed":null,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"65454546-6626-4996-b8c8-1414dee7f48e","name":"Anderson","seed":null,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

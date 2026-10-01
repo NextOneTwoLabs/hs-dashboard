@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "bfd5900a-64c8-48fd-9ed3-daf89d70b41a",
+  "name": "Napavine",
+  "fullName": null,
+  "city": "Napavine",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/napavine/napavine-tigers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","gender":"girls","seed":null,"rounds":4,"w":1,"l":1,"d":0,"gf":2,"ga":4,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"53b062fa-d42e-40f6-9e6a-ceea670f82c7","name":"Okanogan","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-14","opp":{"id":"77b53011-9b5d-4ecc-80c9-8ec6f4f15e25","name":"Cle Elum-Roslyn","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Quarterfinals","result":"eliminated","depth":0.25}
+  ]
+}

@@ -4,10 +4,11 @@
   "name": "Piedmont",
   "fullName": null,
   "city": "Piedmont",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/piedmont/piedmont-highlanders",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2022-23","competition":"cif-norcal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2022-23","competition":"ca-cif-norcal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2022-23","competition":"cif-norcal","division":"gd3","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"2f946069-e32d-4680-8027-3a77cdb0f2a1","name":"Sequoia","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2022-23","state":"CA","competition":"ca-cif-norcal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"2f946069-e32d-4680-8027-3a77cdb0f2a1","name":"Sequoia","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

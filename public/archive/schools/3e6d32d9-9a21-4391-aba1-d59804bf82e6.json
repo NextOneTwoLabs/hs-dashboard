@@ -4,10 +4,11 @@
   "name": "Sierra Canyon",
   "fullName": null,
   "city": "Chatsworth",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/chatsworth/sierra-canyon-trailblazers",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2021-22","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2021-22","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-socal","division":"gd4","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"a858d139-5648-40b3-8ff6-8d946185ab7b","name":"Hemet","seed":7,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"a858d139-5648-40b3-8ff6-8d946185ab7b","name":"Hemet","seed":7,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

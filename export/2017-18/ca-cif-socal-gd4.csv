@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2017-18,CA,ca-cif-socal,Division 4,0,Round I,2018-03-06,final,,1,Paloma Valley,10,8,Mater Dei Catholic,0,top
+2017-18,CA,ca-cif-socal,Division 4,0,Round I,2018-03-06,final,pk,4,Kingsburg,1,5,Westminster,1,bottom
+2017-18,CA,ca-cif-socal,Division 4,0,Round I,2018-03-06,final,,3,South Pasadena,4,6,Marquez,0,top
+2017-18,CA,ca-cif-socal,Division 4,0,Round I,2018-03-06,final,,2,Ventura,12,7,West Adams,0,top
+2017-18,CA,ca-cif-socal,Division 4,1,Regional Semi-Finals,2018-03-08,final,,1,Paloma Valley,4,5,Westminster,0,top
+2017-18,CA,ca-cif-socal,Division 4,1,Regional Semi-Finals,2018-03-08,final,,3,South Pasadena,0,2,Ventura,3,bottom
+2017-18,CA,ca-cif-socal,Division 4,2,Regional Final,2018-03-10,final,pk,1,Paloma Valley,0,2,Ventura,0,bottom

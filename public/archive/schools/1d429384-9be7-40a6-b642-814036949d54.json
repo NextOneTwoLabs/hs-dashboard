@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1d429384-9be7-40a6-b642-814036949d54",
+  "name": "St. Pius X Catholic",
+  "fullName": null,
+  "city": "Atlanta",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/atlanta/st-pius-x-catholic-golden-lions",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":4,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"c3c45eff-7e7f-45ef-9990-22d7e49142de","name":"Northside","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"76d9c5f9-e46c-4a1d-a130-d1e47281bf7a","name":"Blessed Trinity","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

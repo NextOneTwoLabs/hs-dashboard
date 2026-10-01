@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "94b04e65-289c-4a6e-a52d-4bac9a19097d",
+  "name": "Celebration",
+  "fullName": null,
+  "city": "Celebration",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/celebration/celebration-the-storm",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":3,"rounds":5,"w":1,"l":1,"d":0,"gf":2,"ga":5,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"5d24e8dd-140c-484a-832d-82ffe4c1cc4d","name":"Vero Beach","seed":6,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"c810185d-9468-417a-a993-e435af4ceac5","name":"Jupiter","seed":2,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

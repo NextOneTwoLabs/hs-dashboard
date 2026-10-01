@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "9f6c5772-b807-4539-9cd4-e7b6444468dd",
+  "name": "Vidalia",
+  "fullName": null,
+  "city": "Vidalia",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/vidalia/vidalia-indians",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":2,"ga":4,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"1c0bb365-c902-417e-8976-56848ad0b882","name":"Rabun County","seed":null,"score":4},"gf":2,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

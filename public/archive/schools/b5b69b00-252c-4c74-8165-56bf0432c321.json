@@ -4,10 +4,11 @@
   "name": "Alta Loma",
   "fullName": null,
   "city": "Alta Loma",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/alta-loma/alta-loma-lions",
   "summary": {"appearances":1,"titles":0,"finals":1,"w":1,"l":1,"d":1},
-  "best": {"season":"2020-21","competition":"cif-socal","division":"gd3","result":"runner-up","reached":"Regional Final"},
+  "best": {"season":"2020-21","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","result":"runner-up","reached":"Regional Final"},
   "appearances": [
-    {"season":"2020-21","competition":"cif-socal","division":"gd3","seed":5,"rounds":3,"w":1,"l":1,"d":1,"gf":5,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"804990b1-145b-4b80-96cf-bd728f338bbc","name":"El Camino Real","seed":4,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"a8d1fb44-0502-4665-8619-435b1045761f","name":"Buena","seed":8,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":null,"opp":{"id":"9ef67997-7f5d-4899-b500-2d0b5c758105","name":"Westview","seed":3,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+    {"season":"2020-21","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":5,"rounds":3,"w":1,"l":1,"d":1,"gf":5,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"804990b1-145b-4b80-96cf-bd728f338bbc","name":"El Camino Real","seed":4,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"a8d1fb44-0502-4665-8619-435b1045761f","name":"Buena","seed":8,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":null,"opp":{"id":"9ef67997-7f5d-4899-b500-2d0b5c758105","name":"Westview","seed":3,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
   ]
 }

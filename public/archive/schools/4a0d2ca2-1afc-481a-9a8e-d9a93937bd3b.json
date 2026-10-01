@@ -4,10 +4,11 @@
   "name": "Bernstein",
   "fullName": null,
   "city": "Hollywood",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/hollywood/bernstein-dragons",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2023-24","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2023-24","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2023-24","competition":"cif-socal","division":"gd5","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"3d27be7e-d54c-45bc-933b-b8ae54ceecf3","name":"Artesia","seed":3,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2023-24","state":"CA","competition":"ca-cif-socal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"3d27be7e-d54c-45bc-933b-b8ae54ceecf3","name":"Artesia","seed":3,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

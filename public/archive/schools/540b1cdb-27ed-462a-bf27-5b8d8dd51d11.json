@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "540b1cdb-27ed-462a-bf27-5b8d8dd51d11",
+  "name": "Burges",
+  "fullName": null,
+  "city": "El Paso",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/el-paso/burges-mustangs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Area"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":1,"l":1,"d":0,"gf":4,"ga":5,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"9d522901-89fe-422b-ade7-170d692937ed","name":"Parkland","seed":null,"score":3},"gf":4,"ga":3,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"e4827d31-9641-4195-a2c3-dd69ad7aaa62","name":"Wylie","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Area","result":"eliminated","depth":0.167}
+  ]
+}

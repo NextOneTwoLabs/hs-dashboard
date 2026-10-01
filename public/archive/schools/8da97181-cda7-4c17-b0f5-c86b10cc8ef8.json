@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "8da97181-cda7-4c17-b0f5-c86b10cc8ef8",
+  "name": "South Plantation",
+  "fullName": null,
+  "city": "Plantation",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/plantation/south-plantation-paladins",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","gender":"girls","seed":6,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":6,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"f45f41e9-2ee3-45f1-9de0-e58396efb05e","name":"Cooper City","seed":3,"score":6},"gf":1,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

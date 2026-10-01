@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "b9fae593-b179-408b-b44c-43b088730927",
+  "name": "Alonso",
+  "fullName": null,
+  "city": "Tampa",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/tampa/alonso-ravens",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"eliminated","reached":"Region Final"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":2,"rounds":5,"w":2,"l":1,"d":0,"gf":6,"ga":4,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"bdaf6ca0-2ca5-4764-acb9-7555791c10b5","name":"George Jenkins","seed":7,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"5831617c-0454-4d77-996e-461ba121cd08","name":"Palm Harbor University","seed":6,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-17","opp":{"id":"bf6646e8-b9cc-4564-ae92-ab4ebff4feae","name":"Newsome","seed":1,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Region Final","result":"eliminated","depth":0.4}
+  ]
+}

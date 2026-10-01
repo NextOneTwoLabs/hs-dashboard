@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2022-23,CA,ca-cif-norcal,Division 3,0,Round I,2023-02-28,final,,1,Sequoia,2,8,Piedmont,1,top
+2022-23,CA,ca-cif-norcal,Division 3,0,Round I,2023-02-28,final,,4,Cardinal Newman,2,5,Vista del Lago,1,top
+2022-23,CA,ca-cif-norcal,Division 3,0,Round I,2023-02-28,final,,3,Presentation,2,6,Windsor,4,bottom
+2022-23,CA,ca-cif-norcal,Division 3,0,Round I,2023-02-28,final,,2,Christian Brothers,5,7,Chico,0,top
+2022-23,CA,ca-cif-norcal,Division 3,1,Regional Semifinals,2023-03-02,final,,1,Sequoia,1,4,Cardinal Newman,2,bottom
+2022-23,CA,ca-cif-norcal,Division 3,1,Regional Semifinals,2023-03-02,final,pk,6,Windsor,1,2,Christian Brothers,1,bottom
+2022-23,CA,ca-cif-norcal,Division 3,2,Regional Final,2023-03-04,final,pk,4,Cardinal Newman,1,2,Christian Brothers,1,bottom

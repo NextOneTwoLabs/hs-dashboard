@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "57adbc5a-911e-4084-9b9a-4c3e9b7ef07d",
+  "name": "South Hills",
+  "fullName": null,
+  "city": "Fort Worth",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/fort-worth/south-hills-scorpions",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":0,"ga":5,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"e21a2b35-6f66-430b-974d-3018d14689d0","name":"Burleson","seed":null,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

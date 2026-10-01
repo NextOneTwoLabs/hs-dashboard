@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "b91cf08a-e0ab-43ac-b886-a3f118096927",
+  "name": "Calhoun",
+  "fullName": null,
+  "city": "Calhoun",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/calhoun/calhoun-yellow-jackets",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaa","divisionLabel":"Class AAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"0ebd8bb1-a358-4d89-907c-e5bb3db9b5c3","name":"Pickens","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

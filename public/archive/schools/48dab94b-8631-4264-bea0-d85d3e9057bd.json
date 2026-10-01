@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "48dab94b-8631-4264-bea0-d85d3e9057bd",
+  "name": "Camas",
+  "fullName": null,
+  "city": "Camas",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/camas/camas-papermakers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"4a","divisionLabel":"4A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"4a","divisionLabel":"4A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"9400800e-da03-48c9-8e6a-644deeea6f55","name":"Mount Si","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

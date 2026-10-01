@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "232db70e-cc4d-493b-9454-44ab70e4a687",
+  "name": "Eastlake",
+  "fullName": null,
+  "city": "El Paso",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/el-paso/eastlake-falcons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"6a-d1","divisionLabel":"Conference 6A D1","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"e7143c77-1fcf-49b5-866c-6320fdc69f78","name":"Permian","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "162b980a-38db-4236-8744-080fc544cb7f",
+  "name": "Shaw",
+  "fullName": null,
+  "city": "Columbus",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/columbus/shaw-raiders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":12,"rounds":5,"w":1,"l":1,"d":0,"gf":4,"ga":6,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"398b75a6-8977-4e78-9735-6fb209a71f65","name":"Ringgold","seed":21,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"8b910319-983c-45c3-84ca-23fa79f8adb6","name":"Pierce County","seed":null,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

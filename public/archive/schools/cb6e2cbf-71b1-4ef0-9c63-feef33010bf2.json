@@ -4,11 +4,12 @@
   "name": "Leland",
   "fullName": null,
   "city": "San Jose",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/san-jose/leland-chargers",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
-  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd2","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2024-25","competition":"ca-cif-norcal","division":"gd2","divisionLabel":"Division 2","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-norcal","division":"gd2","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"aa03a009-dae4-4fec-8061-b1b804a31e12","name":"St. Francis","seed":4,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
-    {"season":"2024-25","competition":"cif-norcal","division":"gd2","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"9f489fa8-a23a-4924-a2a0-5c5cff3c0fdc","name":"Marin Academy","seed":6,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-norcal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"aa03a009-dae4-4fec-8061-b1b804a31e12","name":"St. Francis","seed":4,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","state":"CA","competition":"ca-cif-norcal","division":"gd2","divisionLabel":"Division 2","gender":"girls","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"9f489fa8-a23a-4924-a2a0-5c5cff3c0fdc","name":"Marin Academy","seed":6,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

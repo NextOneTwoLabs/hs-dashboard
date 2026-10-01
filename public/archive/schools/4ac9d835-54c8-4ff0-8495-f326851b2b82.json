@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "4ac9d835-54c8-4ff0-8495-f326851b2b82",
+  "name": "Lake Placid",
+  "fullName": null,
+  "city": "Lake Placid",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/lake-placid/lake-placid-dragons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":8,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":12,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"c3ca9d34-87ed-437d-8cb9-f6441da5e97a","name":"Somerset Academy - Canyons","seed":1,"score":12},"gf":0,"ga":12,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

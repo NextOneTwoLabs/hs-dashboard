@@ -4,10 +4,11 @@
   "name": "Sierra",
   "fullName": null,
   "city": "Manteca",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/manteca/sierra-timberwolves",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
-  "best": {"season":"2018-19","competition":"cif-norcal","division":"gd3","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2018-19","competition":"ca-cif-norcal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-norcal","division":"gd3","seed":2,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"041ef7b7-089b-4e7d-9c9c-9ff1f833f829","name":"Chico","seed":7,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"8ccdb557-16f2-41cd-a724-6b71bc221661","name":"Branson","seed":6,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-norcal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":2,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"041ef7b7-089b-4e7d-9c9c-9ff1f833f829","name":"Chico","seed":7,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"8ccdb557-16f2-41cd-a724-6b71bc221661","name":"Branson","seed":6,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "a22c520b-cd1a-40c2-bd7a-9bec4e4a324f",
+  "name": "Darlington",
+  "fullName": null,
+  "city": "Rome",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/rome/darlington-tigers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"a9a7e30e-9bf4-4819-9f66-32f4234c7fe9","name":"Mount Paran Christian","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

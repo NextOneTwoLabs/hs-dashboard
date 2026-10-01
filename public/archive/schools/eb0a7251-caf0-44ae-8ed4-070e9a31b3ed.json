@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "eb0a7251-caf0-44ae-8ed4-070e9a31b3ed",
+  "name": "Monterey",
+  "fullName": null,
+  "city": "Lubbock",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/lubbock/monterey-plainsmen",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"77bbf87a-b0d5-46bd-8215-d889375f0b5e","name":"Memorial","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

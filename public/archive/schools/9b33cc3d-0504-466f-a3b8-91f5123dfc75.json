@@ -4,11 +4,12 @@
   "name": "Ramona",
   "fullName": null,
   "city": "Ramona",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/ramona/ramona-bulldogs",
   "summary": {"appearances":2,"titles":0,"finals":0,"w":1,"l":1,"d":1},
-  "best": {"season":"2018-19","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2018-19","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-socal","division":"gd4","seed":6,"rounds":3,"w":1,"l":0,"d":1,"gf":4,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"a6ac9657-0c71-40fb-91e5-d98ba2731ced","name":"Los Amigos","seed":3,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"59a69ccf-834f-4a89-a095-413ab6bb50a1","name":"St. Margaret's","seed":2,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
-    {"season":"2025-26","competition":"cif-state","division":"gd4","seed":4,"rounds":4,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"2820c11b-09a0-4c3a-9587-48b03d4c4b76","name":"Coachella Valley","seed":5,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":6,"rounds":3,"w":1,"l":0,"d":1,"gf":4,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"a6ac9657-0c71-40fb-91e5-d98ba2731ced","name":"Los Amigos","seed":3,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"59a69ccf-834f-4a89-a095-413ab6bb50a1","name":"St. Margaret's","seed":2,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
+    {"season":"2025-26","state":"CA","competition":"ca-cif-state","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":4,"rounds":4,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"2820c11b-09a0-4c3a-9587-48b03d4c4b76","name":"Coachella Valley","seed":5,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "456d5763-94f5-426f-8a80-683d71b1aa87",
+  "name": "Geneva",
+  "fullName": null,
+  "city": "Casselberry",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/casselberry/geneva-knights",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"1a","divisionLabel":"Class 1A","gender":"girls","seed":7,"rounds":5,"w":0,"l":1,"d":0,"gf":2,"ga":5,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"b17ee378-189e-42ed-99f1-4d3a14a350bb","name":"The Pine School","seed":2,"score":5},"gf":2,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

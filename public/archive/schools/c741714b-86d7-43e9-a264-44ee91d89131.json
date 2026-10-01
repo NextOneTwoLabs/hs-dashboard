@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "c741714b-86d7-43e9-a264-44ee91d89131",
+  "name": "Jasper County",
+  "fullName": null,
+  "city": "Monticello",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/monticello/jasper-county-hurricanes",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"155a9258-b9df-4a4b-ab1c-89355c354457","name":"Woodville-Tompkins","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

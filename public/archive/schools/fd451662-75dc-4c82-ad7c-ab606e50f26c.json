@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "fd451662-75dc-4c82-ad7c-ab606e50f26c",
+  "name": "Cherokee",
+  "fullName": null,
+  "city": "Canton",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/canton/cherokee-warriors",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"f55a0945-47e6-4867-a932-20bd690dafdd","name":"Campbell","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

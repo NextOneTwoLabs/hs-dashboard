@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2024-25,CA,ca-cif-norcal,Division 1,0,Round I,2025-03-04,final,pk,1,Del Oro,0,8,Bishop O'Dowd,0,bottom
+2024-25,CA,ca-cif-norcal,Division 1,0,Round I,2025-03-04,final,,4,Monte Vista,0,5,Archbishop Mitty,1,bottom
+2024-25,CA,ca-cif-norcal,Division 1,0,Round I,2025-03-04,final,,3,Rocklin,1,6,Amador Valley,2,bottom
+2024-25,CA,ca-cif-norcal,Division 1,0,Round I,2025-03-04,final,,2,Saint Francis,3,7,Folsom,0,top
+2024-25,CA,ca-cif-norcal,Division 1,1,Regional Semifinals,2025-03-06,final,pk,8,Bishop O'Dowd,2,5,Archbishop Mitty,2,bottom
+2024-25,CA,ca-cif-norcal,Division 1,1,Regional Semifinals,2025-03-06,final,,6,Amador Valley,0,2,Saint Francis,2,bottom
+2024-25,CA,ca-cif-norcal,Division 1,2,Regional Final,2025-03-08,final,,5,Archbishop Mitty,0,2,Saint Francis,1,bottom

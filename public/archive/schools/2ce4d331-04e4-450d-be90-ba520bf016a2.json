@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2ce4d331-04e4-450d-be90-ba520bf016a2",
+  "name": "Edgewood",
+  "fullName": null,
+  "city": "Merritt Island",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/merritt-island/edgewood-red-wolves",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","result":"eliminated","reached":"Region Final"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"2a","divisionLabel":"Class 2A","gender":"girls","seed":3,"rounds":5,"w":2,"l":1,"d":0,"gf":10,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"de4a3297-9cd7-4580-a062-3fff1f0c7f27","name":"The First Academy","seed":6,"score":1},"gf":7,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"6aea5c8b-d384-41b6-8256-53cfd3778273","name":"West Shore","seed":2,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-13","opp":{"id":"89dc97cb-8ff6-42b6-9294-281155f42c21","name":"King's Academy","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Region Final","result":"eliminated","depth":0.4}
+  ]
+}

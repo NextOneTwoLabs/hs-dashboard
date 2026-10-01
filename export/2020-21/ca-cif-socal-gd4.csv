@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2020-21,CA,ca-cif-socal,Division 4,0,Round I,2021-06-01,final,,1,El Segundo,1,8,Classical Academy,0,top
+2020-21,CA,ca-cif-socal,Division 4,0,Round I,2021-06-01,final,,4,Venice,0,5,Exeter,3,bottom
+2020-21,CA,ca-cif-socal,Division 4,0,Round I,2021-06-01,final,,3,San Dimas,2,6,San Marcos,1,top
+2020-21,CA,ca-cif-socal,Division 4,0,Round I,2021-06-01,final,,2,Los Angeles CES,0,7,Paraclete,2,bottom
+2020-21,CA,ca-cif-socal,Division 4,1,Regional Semi-Finals,2021-06-03,final,,1,El Segundo,4,5,Exeter,0,top
+2020-21,CA,ca-cif-socal,Division 4,1,Regional Semi-Finals,2021-06-03,final,,3,San Dimas,5,7,Paraclete,0,top
+2020-21,CA,ca-cif-socal,Division 4,2,Regional Final,2021-06-05,final,,1,El Segundo,2,3,San Dimas,5,bottom

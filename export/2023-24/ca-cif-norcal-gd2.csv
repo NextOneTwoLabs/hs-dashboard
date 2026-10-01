@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2023-24,CA,ca-cif-norcal,Division 2,0,Round I,2024-02-27,final,,1,St. Francis,4,8,Casa Grande,0,top
+2023-24,CA,ca-cif-norcal,Division 2,0,Round I,2024-02-27,final,,4,Chico,0,5,Homestead,4,bottom
+2023-24,CA,ca-cif-norcal,Division 2,0,Round I,2024-02-27,final,,3,Sequoia,1,6,Las Lomas,2,bottom
+2023-24,CA,ca-cif-norcal,Division 2,0,Round I,2024-02-27,final,,2,Tamalpais,0,7,Granite Bay,2,bottom
+2023-24,CA,ca-cif-norcal,Division 2,1,Regional Semifinals,2024-02-29,final,,1,St. Francis,2,5,Homestead,0,top
+2023-24,CA,ca-cif-norcal,Division 2,1,Regional Semifinals,2024-02-29,final,,6,Las Lomas,2,7,Granite Bay,3,bottom
+2023-24,CA,ca-cif-norcal,Division 2,2,Regional Final,2024-03-02,final,,1,St. Francis,1,7,Granite Bay,0,top

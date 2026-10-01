@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2020-21,CA,ca-cif-socal,Division 1,0,Round I,2021-06-01,final,,1,Harvard-Westlake,1,8,Torrey Pines,0,top
+2020-21,CA,ca-cif-socal,Division 1,0,Round I,2021-06-01,final,,4,Granada Hills Charter,0,5,Villa Park,7,bottom
+2020-21,CA,ca-cif-socal,Division 1,0,Round I,2021-06-01,final,,3,La Costa Canyon,0,6,Santiago,1,bottom
+2020-21,CA,ca-cif-socal,Division 1,0,Round I,2021-06-01,final,,2,Clovis North,0,7,Pacifica,1,bottom
+2020-21,CA,ca-cif-socal,Division 1,1,Regional Semi-Finals,2021-06-03,final,,1,Harvard-Westlake,2,5,Villa Park,1,top
+2020-21,CA,ca-cif-socal,Division 1,1,Regional Semi-Finals,2021-06-03,final,,6,Santiago,1,7,Pacifica,2,bottom
+2020-21,CA,ca-cif-socal,Division 1,2,Regional Final,2021-06-05,final,,1,Harvard-Westlake,6,7,Pacifica,1,top

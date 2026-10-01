@@ -4,10 +4,11 @@
   "name": "Mira Monte",
   "fullName": "Mira Monte Lions",
   "city": "Bakersfield",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/bakersfield/mira-monte-lions",
   "summary": {"appearances":1,"titles":1,"finals":1,"w":3,"l":0,"d":0},
-  "best": {"season":"2022-23","competition":"cif-norcal","division":"gd4","result":"champion","reached":"Regional Final"},
+  "best": {"season":"2022-23","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","result":"champion","reached":"Regional Final"},
   "appearances": [
-    {"season":"2022-23","competition":"cif-norcal","division":"gd4","seed":5,"rounds":3,"w":3,"l":0,"d":0,"gf":4,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"686a54d1-81c5-44b8-8e1f-2f094ce5902a","name":"Exeter","seed":4,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"7ad2b4f5-955e-4a92-ac1f-a1acced4df4b","name":"University","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2023-03-04","opp":{"id":"280e003a-95fc-4ac2-a10b-a3773afe79ac","name":"Colfax","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+    {"season":"2022-23","state":"CA","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":5,"rounds":3,"w":3,"l":0,"d":0,"gf":4,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"686a54d1-81c5-44b8-8e1f-2f094ce5902a","name":"Exeter","seed":4,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"7ad2b4f5-955e-4a92-ac1f-a1acced4df4b","name":"University","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2023-03-04","opp":{"id":"280e003a-95fc-4ac2-a10b-a3773afe79ac","name":"Colfax","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
   ]
 }

@@ -4,10 +4,11 @@
   "name": "El Camino",
   "fullName": null,
   "city": "Sacramento",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/sacramento/el-camino-eagles",
   "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
-  "best": {"season":"2018-19","competition":"cif-norcal","division":"gd4","result":"runner-up","reached":"Regional Final"},
+  "best": {"season":"2018-19","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","result":"runner-up","reached":"Regional Final"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-norcal","division":"gd4","seed":6,"rounds":3,"w":2,"l":1,"d":0,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"2993e4ff-72d9-4f83-b862-8db615e795aa","name":"Shasta","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"b6b1981a-7182-44bd-9b84-e4db9df44256","name":"Campolindo","seed":7,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2019-03-02","opp":{"id":"05de9787-3f9c-4cd2-8026-0b658e736206","name":"Miramonte","seed":5,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-norcal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":6,"rounds":3,"w":2,"l":1,"d":0,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"2993e4ff-72d9-4f83-b862-8db615e795aa","name":"Shasta","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"b6b1981a-7182-44bd-9b84-e4db9df44256","name":"Campolindo","seed":7,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2019-03-02","opp":{"id":"05de9787-3f9c-4cd2-8026-0b658e736206","name":"Miramonte","seed":5,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
   ]
 }

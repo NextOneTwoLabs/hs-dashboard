@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2c67d12e-92be-4e2e-a1c0-e6809c4f22b3",
+  "name": "Stoneman Douglas",
+  "fullName": null,
+  "city": "Parkland",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/parkland/stoneman-douglas-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":4,"rounds":5,"w":1,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"1de532f8-bb84-41a0-894f-e96a81172d2f","name":"Doral Academy","seed":5,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"5df2a4f9-1148-4246-9bf0-1c085ebdc228","name":"Cypress Bay","seed":1,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

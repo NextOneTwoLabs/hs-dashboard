@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "ff1b45ca-7b8e-4f53-babb-401d2a4cdd9f",
+  "name": "Denmark",
+  "fullName": null,
+  "city": "Alpharetta",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/alpharetta/denmark",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 4"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":3,"l":1,"d":0,"gf":7,"ga":8,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"21adb76d-a477-4d4a-8ae3-d59f9d3baaab","name":"East Coweta","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"64ad5f54-0b7e-4f7d-8868-184807e06fe3","name":"North Paulding","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"6d00b044-607e-4dee-aa9b-e1fc2c6a87bc","name":"Buford","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"Round 4","date":"2026-05-07","opp":{"id":"0bb7f5e0-2d47-4bad-82f4-c4fb1ac73fc8","name":"West Forsyth","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":3,"reached":"Round 4","result":"eliminated","depth":0.6}
+  ]
+}

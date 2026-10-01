@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "8ad78532-e54e-4479-9294-bf595496d9d1",
+  "name": "Liberty Hill",
+  "fullName": null,
+  "city": "Liberty Hill",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/liberty-hill/liberty-hill-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","result":"eliminated","reached":"Bi-District"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"5a-d2","divisionLabel":"Conference 5A D2","gender":"girls","seed":null,"rounds":6,"w":0,"l":0,"d":1,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"25344d3c-9f6f-4ee5-9c86-22be0c4b4ad7","name":"Pieper","seed":null,"score":3},"gf":3,"ga":3,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Bi-District","result":"eliminated","depth":0.0}
+  ]
+}

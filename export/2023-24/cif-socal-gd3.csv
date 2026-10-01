@@ -1,8 +1,0 @@
-season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
-2023-24,cif-socal,gd3,0,Round I,2024-02-27,final,,1,Granada Hills Charter,2,8,Granite Hills,1,top
-2023-24,cif-socal,gd3,0,Round I,2024-02-27,final,pk,4,Bonita Vista,1,5,La Serna,1,top
-2023-24,cif-socal,gd3,0,Round I,2024-02-27,final,,3,Independence,1,6,Oak Park,3,bottom
-2023-24,cif-socal,gd3,0,Round I,2024-02-27,final,,2,Quartz Hill,0,7,Apple Valley,1,bottom
-2023-24,cif-socal,gd3,1,Regional Semifinals,2024-02-29,final,,1,Granada Hills Charter,3,4,Bonita Vista,2,top
-2023-24,cif-socal,gd3,1,Regional Semifinals,2024-02-29,final,pk,6,Oak Park,2,7,Apple Valley,2,bottom
-2023-24,cif-socal,gd3,2,Regional Final,2024-03-02,final,pk,1,Granada Hills Charter,1,7,Apple Valley,1,top

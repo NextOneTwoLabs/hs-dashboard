@@ -1,0 +1,32 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,1,South Walton,5,8,Keystone Heights,0,top
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,4,Fernandina Beach,0,5,Bolles,1,bottom
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,2,Pensacola Catholic,3,7,North Bay Haven Academy,0,top
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,3,Florida State University High School,2,6,Wolfson,0,top
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,1,Montverde Academy,8,8,Astronaut,0,top
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,4,Calvary Christian,1,5,Tampa Catholic,0,top
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,2,Lake Highland Prep,7,7,The Villages Charter,0,top
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,3,McKeel Academy,3,6,Academy of the Holy Names,2,top
+2025-26,FL,fl-fhsaa,Class 3A,1,Region Semifinal,2026-02-09,final,,1,South Walton,1,5,Bolles,0,top
+2025-26,FL,fl-fhsaa,Class 3A,1,Region Semifinal,2026-02-09,final,,2,Pensacola Catholic,1,3,Florida State University High School,0,top
+2025-26,FL,fl-fhsaa,Class 3A,1,Region Semifinal,2026-02-09,final,,1,Montverde Academy,2,4,Calvary Christian,0,top
+2025-26,FL,fl-fhsaa,Class 3A,1,Region Semifinal,2026-02-09,final,,2,Lake Highland Prep,5,3,McKeel Academy,1,top
+2025-26,FL,fl-fhsaa,Class 3A,2,Region Final,2026-02-13,final,,1,South Walton,0,2,Pensacola Catholic,1,bottom
+2025-26,FL,fl-fhsaa,Class 3A,2,Region Final,2026-02-13,final,,1,Montverde Academy,4,2,Lake Highland Prep,0,top
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,1,Somerset Academy - Canyons,12,8,Lake Placid,0,top
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,4,Florida Atlantic University,1,5,Cardinal Mooney,4,bottom
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,2,North Broward Prep,4,7,American Heritage,0,top
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,pk,3,Bishop Verot,2,6,Aubrey Rogers,2,bottom
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,1,Cardinal Gibbons,8,8,Don Soffer Aventura,0,top
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,4,NSU University,4,5,Coral Springs Charter,0,top
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,2,Pine Crest,5,7,Gulliver Prep,1,top
+2025-26,FL,fl-fhsaa,Class 3A,0,Region Quarterfinal,2026-02-02,final,,3,MAST Academy,3,6,Immaculata-La Salle,4,bottom
+2025-26,FL,fl-fhsaa,Class 3A,1,Region Semifinal,2026-02-09,final,,1,Somerset Academy - Canyons,3,5,Cardinal Mooney,0,top
+2025-26,FL,fl-fhsaa,Class 3A,1,Region Semifinal,2026-02-09,final,,2,North Broward Prep,3,6,Aubrey Rogers,0,top
+2025-26,FL,fl-fhsaa,Class 3A,1,Region Semifinal,2026-02-09,final,,1,Cardinal Gibbons,1,4,NSU University,0,top
+2025-26,FL,fl-fhsaa,Class 3A,1,Region Semifinal,2026-02-09,final,,2,Pine Crest,2,6,Immaculata-La Salle,3,bottom
+2025-26,FL,fl-fhsaa,Class 3A,2,Region Final,2026-02-13,final,pk,1,Somerset Academy - Canyons,1,2,North Broward Prep,1,bottom
+2025-26,FL,fl-fhsaa,Class 3A,2,Region Final,2026-02-13,final,,1,Cardinal Gibbons,3,6,Immaculata-La Salle,1,top
+2025-26,FL,fl-fhsaa,Class 3A,3,State Semifinal,2026-02-19,final,,1,Montverde Academy,5,4,Pensacola Catholic,0,top
+2025-26,FL,fl-fhsaa,Class 3A,3,State Semifinal,2026-02-19,final,,2,Cardinal Gibbons,1,3,North Broward Prep,0,top
+2025-26,FL,fl-fhsaa,Class 3A,4,State Championship,2026-02-21,final,,1,Montverde Academy,2,2,Cardinal Gibbons,0,top

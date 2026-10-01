@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "3a98606b-041c-4df4-b129-a34e2c29123a",
+  "name": "Prince Avenue Christian",
+  "fullName": null,
+  "city": "Athens",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/athens/prince-avenue-christian-wolverines",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":10,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"3aa19fdd-4268-4b67-b17a-614c002f0c16","name":"Holy Innocents Episcopal","seed":null,"score":10},"gf":0,"ga":10,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

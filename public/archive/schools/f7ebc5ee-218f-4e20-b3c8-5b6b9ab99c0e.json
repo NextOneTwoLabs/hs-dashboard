@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "f7ebc5ee-218f-4e20-b3c8-5b6b9ab99c0e",
+  "name": "Flagler Palm Coast",
+  "fullName": null,
+  "city": "Palm Coast",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/palm-coast/flagler-palm-coast-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":7,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"a7bcd97d-9463-40b3-818f-c37e91c68f6f","name":"Creekside","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "186ee540-e889-4029-94a3-90b86cf7898b",
+  "name": "Nature Coast Tech",
+  "fullName": null,
+  "city": "Brooksville",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/brooksville/nature-coast-tech-sharks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","gender":"girls","seed":2,"rounds":5,"w":1,"l":1,"d":0,"gf":5,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"a3c57299-e48e-466b-91e0-ae9dab905e11","name":"Rockledge","seed":7,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"392f2640-4774-45cc-8c8e-dea1a66ecd19","name":"Satellite","seed":3,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

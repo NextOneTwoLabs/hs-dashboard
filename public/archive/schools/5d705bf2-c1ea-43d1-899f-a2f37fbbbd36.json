@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "5d705bf2-c1ea-43d1-899f-a2f37fbbbd36",
+  "name": "North Broward Prep",
+  "fullName": null,
+  "city": "Coconut Creek",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/coconut-creek/north-broward-prep-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":1},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"State Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":2,"rounds":5,"w":2,"l":1,"d":1,"gf":8,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"17df8862-2cb7-4f60-8f62-6bafcc6c37e1","name":"American Heritage","seed":7,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"935fab05-b14d-4c95-8f74-8a4bf6c7493d","name":"Aubrey Rogers","seed":6,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-13","opp":{"id":"c3ca9d34-87ed-437d-8cb9-f6441da5e97a","name":"Somerset Academy - Canyons","seed":1,"score":1},"gf":1,"ga":1,"res":"D","pk":"W"},{"round":3,"roundName":"State Semifinal","date":"2026-02-19","opp":{"id":"a9ee1067-a30a-4c45-91f1-a259ea15101f","name":"Cardinal Gibbons","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":3,"reached":"State Semifinal","result":"eliminated","depth":0.6}
+  ]
+}

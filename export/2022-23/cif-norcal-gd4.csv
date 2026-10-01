@@ -1,8 +1,0 @@
-season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
-2022-23,cif-norcal,gd4,0,Round I,2023-02-28,final,,1,University,6,8,West Park,0,top
-2022-23,cif-norcal,gd4,0,Round I,2023-02-28,final,,4,Exeter,1,5,Mira Monte,2,bottom
-2022-23,cif-norcal,gd4,0,Round I,2023-02-28,final,,3,University Prep,1,6,Placer,0,top
-2022-23,cif-norcal,gd4,0,Round I,2023-02-28,final,pk,2,Colfax,1,7,Wilcox,1,top
-2022-23,cif-norcal,gd4,1,Regional Semifinals,2023-03-02,final,,1,University,0,5,Mira Monte,1,bottom
-2022-23,cif-norcal,gd4,1,Regional Semifinals,2023-03-02,final,,3,University Prep,0,2,Colfax,3,bottom
-2022-23,cif-norcal,gd4,2,Regional Final,2023-03-04,final,,5,Mira Monte,1,2,Colfax,0,top

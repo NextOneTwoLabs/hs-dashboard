@@ -4,10 +4,11 @@
   "name": "Ventura",
   "fullName": "Ventura Cougars",
   "city": "Ventura",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/ventura/ventura-cougars",
   "summary": {"appearances":1,"titles":1,"finals":1,"w":2,"l":0,"d":1},
-  "best": {"season":"2017-18","competition":"cif-socal","division":"gd4","result":"champion","reached":"Regional Final"},
+  "best": {"season":"2017-18","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","result":"champion","reached":"Regional Final"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-socal","division":"gd4","seed":2,"rounds":3,"w":2,"l":0,"d":1,"gf":15,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"8c871b93-298f-47cf-98f1-e89ea9e1e1e8","name":"West Adams","seed":7,"score":0},"gf":12,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"055183d8-80b6-464d-aeb4-c4717a3ad782","name":"South Pasadena","seed":3,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2018-03-10","opp":{"id":"156365e0-6cf2-404b-a990-cb12e0922bca","name":"Paloma Valley","seed":1,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":2,"rounds":3,"w":2,"l":0,"d":1,"gf":15,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"8c871b93-298f-47cf-98f1-e89ea9e1e1e8","name":"West Adams","seed":7,"score":0},"gf":12,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"055183d8-80b6-464d-aeb4-c4717a3ad782","name":"South Pasadena","seed":3,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2018-03-10","opp":{"id":"156365e0-6cf2-404b-a990-cb12e0922bca","name":"Paloma Valley","seed":1,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
   ]
 }

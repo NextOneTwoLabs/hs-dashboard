@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2d232e8f-2033-4e14-a847-79b3e5f1ed04",
+  "name": "Eastside",
+  "fullName": null,
+  "city": "Covington",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/covington/eastside-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaa","divisionLabel":"Class AAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"e0422d18-5d84-4657-87ee-f22f660d1b96","name":"Perry","seed":null,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

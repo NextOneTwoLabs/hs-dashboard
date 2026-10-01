@@ -4,10 +4,11 @@
   "name": "Centennial",
   "fullName": null,
   "city": "Corona",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/corona/centennial-huskies",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
-  "best": {"season":"2017-18","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2017-18","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2017-18","competition":"cif-socal","division":"gd3","seed":5,"rounds":3,"w":1,"l":1,"d":0,"gf":6,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"d74e4255-19f5-493e-ad49-2ed492f950c7","name":"Independence","seed":4,"score":0},"gf":6,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"5bb3581c-7c17-4942-a860-a7f998d7068b","name":"Flintridge Prep","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+    {"season":"2017-18","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":5,"rounds":3,"w":1,"l":1,"d":0,"gf":6,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"d74e4255-19f5-493e-ad49-2ed492f950c7","name":"Independence","seed":4,"score":0},"gf":6,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"5bb3581c-7c17-4942-a860-a7f998d7068b","name":"Flintridge Prep","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
   ]
 }

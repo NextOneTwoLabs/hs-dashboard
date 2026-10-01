@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "47bf2e0a-2743-40bf-8105-5a6fe7944b8f",
+  "name": "Harmony",
+  "fullName": null,
+  "city": "Harmony",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/harmony/harmony-longhorns",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":4,"rounds":5,"w":1,"l":1,"d":0,"gf":2,"ga":1,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"034da149-da90-45bc-905e-c2e1e90a783f","name":"Windermere","seed":5,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"b2fd1644-22ee-43a7-a601-c0a3907dc9fc","name":"Lake Nona","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

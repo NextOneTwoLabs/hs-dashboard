@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "80384819-4dd1-433f-b905-70a4f4e03187",
+  "name": "Decatur",
+  "fullName": null,
+  "city": "Decatur",
+  "state": "TX",
+  "maxpreps": "https://www.maxpreps.com/tx/decatur/decatur-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","state":"TX","competition":"tx-uil","division":"4a-d1","divisionLabel":"Conference 4A D1","gender":"girls","seed":null,"rounds":6,"w":2,"l":1,"d":0,"gf":12,"ga":3,"games":[{"round":0,"roundName":"Bi-District","date":"2026-03-19","opp":{"id":"f245a6bc-5e59-40c0-ad00-e2a3ea9225bc","name":"Canyon","seed":null,"score":1},"gf":7,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Area","date":"2026-03-23","opp":{"id":"cbd6726f-84d0-41d1-80d8-f781462fc574","name":"Frenship Memorial","seed":null,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Semifinals","date":"2026-03-26","opp":{"id":"45718c90-5392-4b1a-8aff-481a624224bb","name":"Life Waxahachie","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

@@ -4,10 +4,11 @@
   "name": "Immaculate Heart",
   "fullName": null,
   "city": "Los Angeles",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/los-angeles/immaculate-heart-pandas",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
-  "best": {"season":"2025-26","competition":"cif-state","division":"gd4","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2025-26","competition":"ca-cif-state","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2025-26","competition":"cif-state","division":"gd4","seed":2,"rounds":4,"w":0,"l":0,"d":1,"gf":0,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"300f459c-387d-4332-b654-5f0df27412b5","name":"Del Sol","seed":7,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2025-26","state":"CA","competition":"ca-cif-state","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":2,"rounds":4,"w":0,"l":0,"d":1,"gf":0,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"300f459c-387d-4332-b654-5f0df27412b5","name":"Del Sol","seed":7,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

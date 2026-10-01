@@ -1,0 +1,16 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,WA,wa-wiaa,4A,0,First Round,2025-11-11,final,,,Mead,3,,Wenatchee,0,top
+2025-26,WA,wa-wiaa,4A,0,First Round,2025-11-11,final,,,Stadium,0,,Skyview,4,bottom
+2025-26,WA,wa-wiaa,4A,0,First Round,2025-11-11,final,,,Puyallup,1,,Woodinville,2,bottom
+2025-26,WA,wa-wiaa,4A,0,First Round,2025-11-11,final,,,Richland,1,,Tahoma,3,bottom
+2025-26,WA,wa-wiaa,4A,0,First Round,2025-11-11,final,,,Mount Si,1,,Camas,0,top
+2025-26,WA,wa-wiaa,4A,0,First Round,2025-11-11,final,,,Skyline,3,,Lewis & Clark,2,top
+2025-26,WA,wa-wiaa,4A,0,First Round,2025-11-11,final,,,Lake Stevens,3,,Sumner,0,top
+2025-26,WA,wa-wiaa,4A,0,First Round,2025-11-11,final,,,Moses Lake,0,,Issaquah,8,bottom
+2025-26,WA,wa-wiaa,4A,1,Quarterfinals,2025-11-14,final,,,Mead,0,,Skyview,1,bottom
+2025-26,WA,wa-wiaa,4A,1,Quarterfinals,2025-11-14,final,pk,,Woodinville,1,,Tahoma,1,bottom
+2025-26,WA,wa-wiaa,4A,1,Quarterfinals,2025-11-14,final,,,Mount Si,2,,Skyline,0,top
+2025-26,WA,wa-wiaa,4A,1,Quarterfinals,2025-11-14,final,,,Lake Stevens,0,,Issaquah,6,bottom
+2025-26,WA,wa-wiaa,4A,2,Semifinals,2025-11-21,final,,,Skyview,1,,Tahoma,2,bottom
+2025-26,WA,wa-wiaa,4A,2,Semifinals,2025-11-21,final,,,Mount Si,2,,Issaquah,1,top
+2025-26,WA,wa-wiaa,4A,3,Finals,2025-11-22,final,,,Tahoma,0,,Mount Si,2,bottom

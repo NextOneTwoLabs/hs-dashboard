@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "8de3b315-faf8-4c5c-b004-11f1e33ab67e",
+  "name": "Quaker Valley",
+  "fullName": null,
+  "city": "Leetsdale",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/leetsdale/quaker-valley-quakers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"2a","divisionLabel":"2A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"2a","divisionLabel":"2A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"47270a3b-9005-42bf-8fd4-88cff5afa34a","name":"Bedford","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

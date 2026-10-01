@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e19ffbe0-5471-4292-8562-bbafa59fb46e",
+  "name": "Downingtown West",
+  "fullName": null,
+  "city": "Downingtown",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/downingtown/downingtown-west-whippets",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"4a","divisionLabel":"4A","result":"eliminated","reached":"Quarterfinals"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"4a","divisionLabel":"4A","gender":"girls","seed":null,"rounds":4,"w":1,"l":1,"d":0,"gf":3,"ga":3,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"477b1cf0-64af-444c-8d95-e63e9ffbd5ae","name":"Mechanicsburg","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-08","opp":{"id":"f9b027a1-084c-4f00-9520-a14d14d1bbea","name":"North Allegheny","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Quarterfinals","result":"eliminated","depth":0.25}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "b66548be-e296-401e-a9d1-8d3c9f4dc5cb",
+  "name": "Palmetto",
+  "fullName": null,
+  "city": "Palmetto",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/palmetto/palmetto-tigers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"6a","divisionLabel":"Class 6A","gender":"girls","seed":6,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"85d4f7e8-e09f-4a9f-a0b2-b6b7af6979c1","name":"East Lake","seed":3,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

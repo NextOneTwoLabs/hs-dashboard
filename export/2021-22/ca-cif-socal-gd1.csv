@@ -1,0 +1,8 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2021-22,CA,ca-cif-socal,Division 1,0,Round I,2022-03-01,final,unreported,1,Temecula Valley,,,,,bottom
+2021-22,CA,ca-cif-socal,Division 1,0,Round I,2022-03-01,final,,4,Los Alamitos,7,5,Cleveland,1,top
+2021-22,CA,ca-cif-socal,Division 1,0,Round I,2022-03-01,final,,3,San Marcos,1,6,Villa Park,0,top
+2021-22,CA,ca-cif-socal,Division 1,0,Round I,2022-03-01,final,,2,Santiago,0,7,Point Loma,1,bottom
+2021-22,CA,ca-cif-socal,Division 1,1,Regional Semifinals,2022-03-03,final,,1,Temecula Valley,3,4,Los Alamitos,0,top
+2021-22,CA,ca-cif-socal,Division 1,1,Regional Semifinals,2022-03-03,final,pk,3,San Marcos,0,7,Point Loma,0,top
+2021-22,CA,ca-cif-socal,Division 1,2,Regional Final,2022-03-05,final,,1,Temecula Valley,4,3,San Marcos,1,top

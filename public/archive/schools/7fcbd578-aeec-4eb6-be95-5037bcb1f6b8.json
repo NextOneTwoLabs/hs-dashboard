@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "7fcbd578-aeec-4eb6-be95-5037bcb1f6b8",
+  "name": "Central Bucks East",
+  "fullName": "Central Bucks East Patriots",
+  "city": "Doylestown",
+  "state": "PA",
+  "maxpreps": "https://www.maxpreps.com/pa/doylestown/central-bucks-east-patriots",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":4,"l":0,"d":0},
+  "best": {"season":"2025-26","competition":"pa-piaa","division":"4a","divisionLabel":"4A","result":"champion","reached":"Final"},
+  "appearances": [
+    {"season":"2025-26","state":"PA","competition":"pa-piaa","division":"4a","divisionLabel":"4A","gender":"girls","seed":null,"rounds":4,"w":4,"l":0,"d":0,"gf":14,"ga":1,"games":[{"round":0,"roundName":"First Round","date":"2025-11-04","opp":{"id":"16052b06-0fd6-4926-89e2-28f207a28f5d","name":"Manheim Township","seed":null,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Quarterfinals","date":"2025-11-08","opp":{"id":"4851d1d9-b7aa-406f-99f4-f248e44dbddf","name":"Seneca Valley","seed":null,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Semi-Finals","date":"2025-11-11","opp":{"id":"f9b027a1-084c-4f00-9520-a14d14d1bbea","name":"North Allegheny","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"Final","date":"2025-11-15","opp":{"id":"3436fbb7-2fca-4dfd-9e6e-f48933d96ebe","name":"Central Bucks South","seed":null,"score":0},"gf":7,"ga":0,"res":"W","pk":null}],"reachedRound":3,"reached":"Final","result":"champion","depth":1.0}
+  ]
+}

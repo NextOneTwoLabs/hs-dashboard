@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "5634299d-02d7-4895-b763-0159d6432fb9",
+  "name": "Pine Crest",
+  "fullName": null,
+  "city": "Fort Lauderdale",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/fort-lauderdale/pine-crest-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"3a","divisionLabel":"Class 3A","gender":"girls","seed":2,"rounds":5,"w":1,"l":1,"d":0,"gf":7,"ga":4,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-02","opp":{"id":"a6625ad8-d94a-47d8-99ae-405bb740adfe","name":"Gulliver Prep","seed":7,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-09","opp":{"id":"c98b6bd5-a5a4-4c92-a0b1-1bbf1bdd1bf4","name":"Immaculata-La Salle","seed":6,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

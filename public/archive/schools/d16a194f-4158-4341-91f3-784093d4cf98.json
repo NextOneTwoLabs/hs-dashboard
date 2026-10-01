@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d16a194f-4158-4341-91f3-784093d4cf98",
+  "name": "TERRA Environmental",
+  "fullName": null,
+  "city": "Miami",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/miami/terra-environmental",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"4a","divisionLabel":"Class 4A","gender":"girls","seed":5,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"c6299700-46f7-41ef-97d8-e49d31a20db2","name":"Mater Lakes Academy","seed":4,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

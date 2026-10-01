@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "98df2fb0-7dd6-4008-90b8-b692275de60c",
+  "name": "Sumner",
+  "fullName": null,
+  "city": "Riverview",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/riverview/sumner-stingrays",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"eliminated","reached":"Region Quarterfinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":4,"rounds":5,"w":0,"l":0,"d":1,"gf":2,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"dfa7d660-5ba9-4da9-870c-e31cb69f8d49","name":"Riverview Sarasota","seed":5,"score":2},"gf":2,"ga":2,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Region Quarterfinal","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "90c5f82e-540f-4054-9051-eff1cd1ece82",
+  "name": "Paulding County",
+  "fullName": null,
+  "city": "Dallas",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/dallas/paulding-county-patriots",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":10,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"2fa97fcb-ebf2-40d0-b407-bfc2f0f9d996","name":"Walton","seed":null,"score":10},"gf":0,"ga":10,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e2182604-1474-4ccf-b611-6e3de205ef9d",
+  "name": "Cypress Creek",
+  "fullName": null,
+  "city": "Wesley Chapel",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/wesley-chapel/cypress-creek-coyotes",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","result":"eliminated","reached":"Region Final"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","gender":"girls","seed":4,"rounds":5,"w":2,"l":1,"d":0,"gf":7,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"560a74c7-71d2-417e-800f-6dd695d8f595","name":"Seabreeze","seed":5,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"73ba77ad-e2e8-46ac-941b-c014b30d39cc","name":"Auburndale","seed":1,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Region Final","date":"2026-02-17","opp":{"id":"8e564c4a-f48f-469e-b7f6-7ba6bdef27ca","name":"Innovation","seed":2,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Region Final","result":"eliminated","depth":0.4}
+  ]
+}

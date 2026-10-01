@@ -4,10 +4,11 @@
   "name": "Oak Hills",
   "fullName": null,
   "city": "Hesperia",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/hesperia/oak-hills-bulldogs",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":1},
-  "best": {"season":"2018-19","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Regional Semi-Finals"},
+  "best": {"season":"2018-19","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","result":"eliminated","reached":"Regional Semi-Finals"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-socal","division":"gd3","seed":1,"rounds":3,"w":1,"l":0,"d":1,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"88b2f9f4-f69d-4365-a028-32cfab66524f","name":"San Diego","seed":8,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"b32b852a-6016-4fdf-9008-a20b47b679af","name":"Culver City","seed":5,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","seed":1,"rounds":3,"w":1,"l":0,"d":1,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"88b2f9f4-f69d-4365-a028-32cfab66524f","name":"San Diego","seed":8,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"b32b852a-6016-4fdf-9008-a20b47b679af","name":"Culver City","seed":5,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
   ]
 }

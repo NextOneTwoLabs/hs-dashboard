@@ -4,10 +4,11 @@
   "name": "Los Amigos",
   "fullName": null,
   "city": "Fountain Valley",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/fountain-valley/los-amigos-lobos",
   "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
-  "best": {"season":"2018-19","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "best": {"season":"2018-19","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","result":"eliminated","reached":"Round I"},
   "appearances": [
-    {"season":"2018-19","competition":"cif-socal","division":"gd4","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"9b33cc3d-0504-466f-a3b8-91f5123dfc75","name":"Ramona","seed":6,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+    {"season":"2018-19","state":"CA","competition":"ca-cif-socal","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"9b33cc3d-0504-466f-a3b8-91f5123dfc75","name":"Ramona","seed":6,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
   ]
 }

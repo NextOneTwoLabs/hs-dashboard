@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "9ad035ba-8f76-4027-a133-7578bea9b9df",
+  "name": "Norcross",
+  "fullName": null,
+  "city": "Norcross",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/norcross/norcross-blue-devils",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":5,"ga":2,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"2bab8320-786d-4cbc-9605-db7ac46fed55","name":"Archer","seed":null,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"50c9f64b-2192-4396-8e79-7d966cb4635a","name":"Richmond Hill","seed":null,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

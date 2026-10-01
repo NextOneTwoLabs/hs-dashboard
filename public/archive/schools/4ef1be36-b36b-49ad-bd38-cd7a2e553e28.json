@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "4ef1be36-b36b-49ad-bd38-cd7a2e553e28",
+  "name": "Port Angeles",
+  "fullName": null,
+  "city": "Port Angeles",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/port-angeles/port-angeles-roughriders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"2a","divisionLabel":"2A","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"2a","divisionLabel":"2A","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"6ed4c308-a786-4fb6-8bdb-8fb6c03dc155","name":"Hockinson","seed":null,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

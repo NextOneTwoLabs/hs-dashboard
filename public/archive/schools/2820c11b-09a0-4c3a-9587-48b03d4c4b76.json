@@ -4,10 +4,11 @@
   "name": "Coachella Valley",
   "fullName": null,
   "city": "Thermal",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/thermal/coachella-valley-mighty-arabs",
   "summary": {"appearances":1,"titles":0,"finals":1,"w":3,"l":1,"d":0},
-  "best": {"season":"2025-26","competition":"cif-state","division":"gd4","result":"runner-up","reached":"State Final"},
+  "best": {"season":"2025-26","competition":"ca-cif-state","division":"gd4","divisionLabel":"Division 4","result":"runner-up","reached":"State Final"},
   "appearances": [
-    {"season":"2025-26","competition":"cif-state","division":"gd4","seed":5,"rounds":4,"w":3,"l":1,"d":0,"gf":11,"ga":8,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"9b33cc3d-0504-466f-a3b8-91f5123dfc75","name":"Ramona","seed":4,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"ba35330e-6e9a-4f9d-8867-86cd68fad308","name":"Segerstrom","seed":8,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Finals","date":"2026-03-07","opp":{"id":"239c4e28-a48f-4cf3-ab07-db3613861d20","name":"San Jacinto","seed":3,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"State Final","date":"2026-03-13","opp":{"id":"69e24861-fa93-42a2-acb5-be60e01ee555","name":"Marin Catholic","seed":1,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":3,"reached":"State Final","result":"runner-up","depth":0.75}
+    {"season":"2025-26","state":"CA","competition":"ca-cif-state","division":"gd4","divisionLabel":"Division 4","gender":"girls","seed":5,"rounds":4,"w":3,"l":1,"d":0,"gf":11,"ga":8,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"9b33cc3d-0504-466f-a3b8-91f5123dfc75","name":"Ramona","seed":4,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"ba35330e-6e9a-4f9d-8867-86cd68fad308","name":"Segerstrom","seed":8,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Finals","date":"2026-03-07","opp":{"id":"239c4e28-a48f-4cf3-ab07-db3613861d20","name":"San Jacinto","seed":3,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"State Final","date":"2026-03-13","opp":{"id":"69e24861-fa93-42a2-acb5-be60e01ee555","name":"Marin Catholic","seed":1,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":3,"reached":"State Final","result":"runner-up","depth":0.75}
   ]
 }

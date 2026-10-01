@@ -1,0 +1,32 @@
+season,state,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,1,Lake Mary,2,8,Seminole,0,top
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,4,Lake Brantley,1,5,Timber Creek,8,bottom
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,2,Creekside,1,7,Flagler Palm Coast,0,top
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,3,West Orange,0,6,Winter Park,3,bottom
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,1,Lake Nona,4,8,Olympia,0,top
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,4,Harmony,2,5,Windermere,0,top
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,2,Jupiter,2,7,East Ridge,0,top
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,3,Celebration,2,6,Vero Beach,0,top
+2025-26,FL,fl-fhsaa,Class 7A,1,Region Semifinal,2026-02-11,final,,1,Lake Mary,7,5,Timber Creek,0,top
+2025-26,FL,fl-fhsaa,Class 7A,1,Region Semifinal,2026-02-11,final,,2,Creekside,2,6,Winter Park,0,top
+2025-26,FL,fl-fhsaa,Class 7A,1,Region Semifinal,2026-02-11,final,,1,Lake Nona,1,4,Harmony,0,top
+2025-26,FL,fl-fhsaa,Class 7A,1,Region Semifinal,2026-02-11,final,,2,Jupiter,5,3,Celebration,0,top
+2025-26,FL,fl-fhsaa,Class 7A,2,Region Final,2026-02-17,final,,1,Lake Mary,3,2,Creekside,0,top
+2025-26,FL,fl-fhsaa,Class 7A,2,Region Final,2026-02-17,final,,1,Lake Nona,1,2,Jupiter,3,bottom
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,1,Newsome,8,8,Venice,0,top
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,pk,4,Sumner,2,5,Riverview Sarasota,2,bottom
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,2,Alonso,3,7,George Jenkins,0,top
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,3,Plant,0,6,Palm Harbor University,2,bottom
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,1,Cypress Bay,7,8,Goleman,0,top
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,4,Stoneman Douglas,3,5,Doral Academy,0,top
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,2,Wellington,2,7,Coral Reef,0,top
+2025-26,FL,fl-fhsaa,Class 7A,0,Region Quarterfinal,2026-02-05,final,,3,Palmetto,2,6,Spanish River,1,top
+2025-26,FL,fl-fhsaa,Class 7A,1,Region Semifinal,2026-02-11,final,,1,Newsome,3,5,Riverview Sarasota,2,top
+2025-26,FL,fl-fhsaa,Class 7A,1,Region Semifinal,2026-02-11,final,,2,Alonso,2,6,Palm Harbor University,0,top
+2025-26,FL,fl-fhsaa,Class 7A,1,Region Semifinal,2026-02-11,final,,1,Cypress Bay,4,4,Stoneman Douglas,0,top
+2025-26,FL,fl-fhsaa,Class 7A,1,Region Semifinal,2026-02-11,final,,2,Wellington,2,3,Palmetto,0,top
+2025-26,FL,fl-fhsaa,Class 7A,2,Region Final,2026-02-17,final,,1,Newsome,4,2,Alonso,1,top
+2025-26,FL,fl-fhsaa,Class 7A,2,Region Final,2026-02-17,final,,1,Cypress Bay,2,2,Wellington,1,top
+2025-26,FL,fl-fhsaa,Class 7A,3,State Semifinal,2026-02-24,final,,1,Lake Mary,5,4,Jupiter,0,top
+2025-26,FL,fl-fhsaa,Class 7A,3,State Semifinal,2026-02-24,final,,2,Cypress Bay,3,3,Newsome,2,top
+2025-26,FL,fl-fhsaa,Class 7A,4,State Championship,2026-02-25,final,pk,1,Lake Mary,0,2,Cypress Bay,0,top

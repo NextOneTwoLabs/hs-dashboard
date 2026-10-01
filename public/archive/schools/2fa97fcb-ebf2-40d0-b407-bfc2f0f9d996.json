@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2fa97fcb-ebf2-40d0-b407-bfc2f0f9d996",
+  "name": "Walton",
+  "fullName": null,
+  "city": "Marietta",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/marietta/walton-raiders",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":4,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","result":"runner-up","reached":"Round 5"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaaa","divisionLabel":"Class AAAAAA","gender":"girls","seed":null,"rounds":5,"w":4,"l":1,"d":0,"gf":20,"ga":3,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"90c5f82e-540f-4054-9051-eff1cd1ece82","name":"Paulding County","seed":null,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"e6666d93-91b4-48bd-a850-f95734fee7c7","name":"Lambert","seed":null,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"74f4574f-bb69-4568-a3e6-861d0b4b6551","name":"North Gwinnett","seed":null,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"Round 4","date":"2026-05-07","opp":{"id":"ef9ea845-7b35-4fa0-aa32-08f1f70e8791","name":"Harrison","seed":null,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":4,"roundName":"Round 5","date":null,"opp":{"id":"0bb7f5e0-2d47-4bad-82f4-c4fb1ac73fc8","name":"West Forsyth","seed":null,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":4,"reached":"Round 5","result":"runner-up","depth":0.8}
+  ]
+}

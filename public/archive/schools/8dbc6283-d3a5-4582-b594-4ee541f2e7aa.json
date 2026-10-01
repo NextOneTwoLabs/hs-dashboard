@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "8dbc6283-d3a5-4582-b594-4ee541f2e7aa",
+  "name": "Calvary Day",
+  "fullName": null,
+  "city": "Savannah",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/savannah/calvary-day-cavaliers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","gender":"girls","seed":null,"rounds":5,"w":1,"l":1,"d":0,"gf":2,"ga":6,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"eac197fb-e9ae-4af8-8ee0-a35d941c0215","name":"Mt. Bethel Christian Academy","seed":null,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"1d144a62-7faa-4469-a82f-ef5f62cb37d4","name":"Whitefield Academy","seed":null,"score":6},"gf":1,"ga":6,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

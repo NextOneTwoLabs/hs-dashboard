@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "2837b96b-5194-4559-b761-87a88b39b256",
+  "name": "Veterans",
+  "fullName": null,
+  "city": "Kathleen",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/kathleen/veterans-warhawks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","result":"eliminated","reached":"Round 1"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aaaaa","divisionLabel":"Class AAAAA","gender":"girls","seed":null,"rounds":5,"w":0,"l":1,"d":0,"gf":0,"ga":10,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-21","opp":{"id":"075c4adc-c581-4992-861a-53e4d70a25e7","name":"Pope","seed":null,"score":10},"gf":0,"ga":10,"res":"L","pk":null}],"reachedRound":0,"reached":"Round 1","result":"eliminated","depth":0.0}
+  ]
+}

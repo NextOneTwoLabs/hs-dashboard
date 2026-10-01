@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "edcaabe2-65b2-42bc-8257-0b3e7f1fcbeb",
+  "name": "Hebron Christian",
+  "fullName": null,
+  "city": "Dacula",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/dacula/hebron-christian-lions",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":2,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","result":"eliminated","reached":"Round 3"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"private","divisionLabel":"Class Private","gender":"girls","seed":null,"rounds":5,"w":2,"l":1,"d":0,"gf":9,"ga":6,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":null,"gf":null,"ga":null,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"a9a7e30e-9bf4-4819-9f66-32f4234c7fe9","name":"Mount Paran Christian","seed":null,"score":0},"gf":7,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Round 3","date":"2026-05-04","opp":{"id":"3aa19fdd-4268-4b67-b17a-614c002f0c16","name":"Holy Innocents Episcopal","seed":null,"score":6},"gf":2,"ga":6,"res":"L","pk":null}],"reachedRound":2,"reached":"Round 3","result":"eliminated","depth":0.4}
+  ]
+}

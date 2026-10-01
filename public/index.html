@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>High School Girls Soccer</title>
-  <meta name="description" content="US high school girls soccer state championship brackets, results, champions and school histories. Coverage starts with California (CIF); more states are being added.">
+  <meta name="description" content="US high school girls soccer state championship brackets, results, champions and school histories, state by state.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/css/app.css">
@@ -18,11 +18,12 @@
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#tab=playoffs">
+    <a class="brand" href="#tab=states">
       <span class="brand-mark" aria-hidden="true"></span>
       <span><strong>High School Girls Soccer</strong> <span class="brand-sub">US state playoffs</span></span>
     </a>
     <nav class="tabs" role="tablist" aria-label="Sections" id="tabs">
+      <a role="tab" data-tab="states" href="#tab=states">States</a>
       <a role="tab" data-tab="playoffs" href="#tab=playoffs">Brackets</a>
       <a role="tab" data-tab="results" href="#tab=results">Results</a>
       <a role="tab" data-tab="champions" href="#tab=champions">Champions</a>
@@ -41,7 +42,7 @@
   <main id="view" class="view" aria-live="polite"></main>
 
   <footer class="footer">
-    <span id="status-line">Coverage: California (CIF) for now, more states coming. Brackets from state associations; game data from MaxPreps.</span>
+    <span id="status-line">US high school girls soccer state championships. Brackets from state associations via MaxPreps.</span>
   </footer>
 
   <script type="module" src="/js/app.js"></script>

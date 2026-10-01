@@ -4,10 +4,11 @@
   "name": "Sutter",
   "fullName": null,
   "city": "Sutter",
+  "state": "CA",
   "maxpreps": "https://www.maxpreps.com/ca/sutter/sutter-huskies",
   "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
-  "best": {"season":"2021-22","competition":"cif-norcal","division":"gd5","result":"runner-up","reached":"Regional Final"},
+  "best": {"season":"2021-22","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","result":"runner-up","reached":"Regional Final"},
   "appearances": [
-    {"season":"2021-22","competition":"cif-norcal","division":"gd5","seed":2,"rounds":3,"w":2,"l":1,"d":0,"gf":4,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"99a12476-5407-4206-97f3-e34b517f55b9","name":"Ben Holt College Prep Academy","seed":7,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"4cf99677-251f-4362-8c99-3a238e223f55","name":"Leadership","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"c52a9455-9f3d-4ff4-9814-1613be5e6935","name":"Kimball","seed":5,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+    {"season":"2021-22","state":"CA","competition":"ca-cif-norcal","division":"gd5","divisionLabel":"Division 5","gender":"girls","seed":2,"rounds":3,"w":2,"l":1,"d":0,"gf":4,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"99a12476-5407-4206-97f3-e34b517f55b9","name":"Ben Holt College Prep Academy","seed":7,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"4cf99677-251f-4362-8c99-3a238e223f55","name":"Leadership","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"c52a9455-9f3d-4ff4-9814-1613be5e6935","name":"Kimball","seed":5,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
   ]
 }

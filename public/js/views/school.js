@@ -1,9 +1,9 @@
 import { api, errorHtml } from '../api.js';
 import { bindChart, depthChart } from '../components/chart.js';
 import { bindControls, segmented } from '../components/controls.js';
-import { divShort, esc, favorites, fmtDate, genderLabel, resultText, schoolHref, toggleFavorite } from '../util.js';
+import { bracketHref, esc, favorites, fmtDate, genderLabel, resultText, schoolHref, toggleFavorite } from '../util.js';
 
-export async function render({ state, catalog, controls, view, setState }) {
+export async function render({ state, statesIndex, controls, view, setState }) {
   controls.innerHTML = '';
   view.innerHTML = '<div class="card notice">Loading school…</div>';
   let s;
@@ -13,13 +13,13 @@ export async function render({ state, catalog, controls, view, setState }) {
     view.innerHTML = errorHtml(err);
     return;
   }
-  const comps = catalog.competitions;
+  const comps = statesIndex.competitions || {};
   const fav = favorites().some((f) => f.id === s.id);
   // One MaxPreps school id covers both programs; show one program at a time.
-  const count = (g) => s.appearances.filter((a) => a.division[0] === g).length;
+  const count = (g) => s.appearances.filter((a) => a.gender[0] === g).length;
   const programs = ['b', 'g'].filter(count);
   const g = programs.includes(state.g) ? state.g : programs.sort((a, b) => count(b) - count(a))[0];
-  const own = s.appearances.filter((a) => a.division[0] === g);
+  const own = s.appearances.filter((a) => a.gender[0] === g);
   const sum = {
     appearances: own.length,
     titles: own.filter((a) => a.result === 'champion').length,
@@ -31,34 +31,40 @@ export async function render({ state, catalog, controls, view, setState }) {
     controls.innerHTML = segmented('g', g, programs.map((p) => [p, genderLabel(p)]), 'Program');
     bindControls(controls, setState);
   }
+  const bracketName = (a) => {
+    const c = comps[a.competition];
+    const prefix = c && c.short !== 'State' ? `${c.short} · ` : '';
+    return `${prefix}${a.divisionLabel}`;
+  };
   const apps = [...own].reverse();
   const points = own.map((a) => ({
     label: a.season.slice(2),
     value: a.depth,
-    detail: `${comps[a.competition]?.short} ${genderLabel(a.division[0])} ${divShort(a.division)} — ${resultText(a)}`,
+    detail: `${bracketName(a)} — ${resultText(a)}`,
   }));
 
   const rows = apps
     .map((a) => {
-      const href = `#tab=playoffs&season=${a.season}&comp=${a.competition}&g=${a.division[0]}&div=${a.division}`;
       const chip = a.result === 'champion'
         ? '<span class="chip gold trophy">Champion</span>'
         : a.result === 'runner-up' ? '<span class="chip accent">Runner-up</span>' : esc(resultText(a));
       const games = a.games
-        .map((g) => `<li>${esc(g.roundName)} · ${esc(fmtDate(g.date))} · ${g.res ? `<span class="res-${g.res}">${g.res}</span>` : 'vs'} ${g.gf ?? ''}${g.gf != null ? '–' : ''}${g.ga ?? ''}${g.pk ? ` (PK ${g.pk === 'W' ? 'won' : 'lost'})` : ''}
-          ${g.opp ? `${g.res ? 'vs' : ''} <a href="${schoolHref(g.opp.id, a.division[0])}">${esc(g.opp.name)}</a>${g.opp.seed ? ` <span class="muted">(${g.opp.seed})</span>` : ''}` : 'TBD'}</li>`)
+        .map((x) => `<li>${esc(x.roundName)} · ${esc(fmtDate(x.date))} · ${x.res ? `<span class="res-${x.res}">${x.res}</span>` : 'vs'} ${x.gf ?? ''}${x.gf != null ? '–' : ''}${x.ga ?? ''}${x.pk ? ` (PK ${x.pk === 'W' ? 'won' : 'lost'})` : ''}
+          ${x.opp ? `${x.res ? 'vs' : ''} <a href="${schoolHref(x.opp.id, g)}">${esc(x.opp.name)}</a>${x.opp.seed ? ` <span class="muted">(${x.opp.seed})</span>` : ''}` : 'TBD'}</li>`)
         .join('');
-      return `<tr><td class="num"><a href="${href}">${esc(a.season)}</a></td>
-        <td>${esc(comps[a.competition]?.short)} · ${genderLabel(a.division[0])} ${divShort(a.division)}</td>
+      return `<tr><td class="num"><a href="${bracketHref(a.state, a.season, a.competition, a.division)}">${esc(a.season)}</a></td>
+        <td>${esc(bracketName(a))}</td>
         <td class="n">${esc(a.seed ?? '')}</td><td>${chip}</td>
         <td class="n">${a.w}-${a.l}-${a.d}</td><td class="n">${a.gf}:${a.ga}</td>
         <td><ul class="games-list">${games}</ul></td></tr>`;
     })
     .join('');
 
+  const stateMeta = statesIndex.states.find((x) => x.code === s.state);
+  const place = [s.city, s.state].filter(Boolean).join(', ');
   view.innerHTML = `<div class="card card-pad">
       <div class="school-head"><div><h1>${esc(s.fullName || s.name)}</h1>
-        <div class="muted">${esc(s.city || '')}${s.city ? ', CA' : ''}${s.maxpreps ? ` · <a href="${esc(s.maxpreps)}" target="_blank" rel="noopener">MaxPreps</a>` : ''}</div></div>
+        <div class="muted">${esc(place)}${stateMeta ? ` · ${esc(stateMeta.association)}` : ''}${s.maxpreps ? ` · <a href="${esc(s.maxpreps)}" target="_blank" rel="noopener">MaxPreps</a>` : ''}</div></div>
         <button class="star-btn" id="fav" aria-pressed="${fav}">${fav ? '★ Following' : '☆ Follow'}</button></div>
       <div class="stats">
         <div class="stat"><div class="v">${sum.appearances}</div><div class="k">Appearances</div></div>

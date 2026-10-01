@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "06b08f6f-f034-4b37-be88-457e06f13c26",
+  "name": "Thomson",
+  "fullName": null,
+  "city": "Thomson",
+  "state": "GA",
+  "maxpreps": "https://www.maxpreps.com/ga/thomson/thomson-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","result":"eliminated","reached":"Round 2"},
+  "appearances": [
+    {"season":"2025-26","state":"GA","competition":"ga-ghsa","division":"aa","divisionLabel":"Class AA","gender":"girls","seed":3,"rounds":5,"w":1,"l":1,"d":0,"gf":10,"ga":6,"games":[{"round":0,"roundName":"Round 1","date":"2026-04-23","opp":{"id":"e5ddc338-f95c-4d33-9a5f-273705ab566a","name":"Butler","seed":30,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Round 2","date":"2026-04-30","opp":{"id":"30bfbd32-c99a-45ee-b24b-b27f465d05bf","name":"Union County","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":1,"reached":"Round 2","result":"eliminated","depth":0.2}
+  ]
+}

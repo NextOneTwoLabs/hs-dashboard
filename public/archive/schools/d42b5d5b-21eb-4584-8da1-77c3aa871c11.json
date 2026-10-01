@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d42b5d5b-21eb-4584-8da1-77c3aa871c11",
+  "name": "La Conner",
+  "fullName": null,
+  "city": "La Conner",
+  "state": "WA",
+  "maxpreps": "https://www.maxpreps.com/wa/la-conner/la-conner-braves",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","result":"eliminated","reached":"First Round"},
+  "appearances": [
+    {"season":"2025-26","state":"WA","competition":"wa-wiaa","division":"1b-2b","divisionLabel":"1B/2B","gender":"girls","seed":null,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"First Round","date":"2025-11-11","opp":{"id":"77b53011-9b5d-4ecc-80c9-8ec6f4f15e25","name":"Cle Elum-Roslyn","seed":null,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"First Round","result":"eliminated","depth":0.0}
+  ]
+}

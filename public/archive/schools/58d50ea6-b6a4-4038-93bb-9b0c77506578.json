@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "58d50ea6-b6a4-4038-93bb-9b0c77506578",
+  "name": "St. Petersburg",
+  "fullName": null,
+  "city": "St Petersburg",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/st-petersburg/st-petersburg-green-devils",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"5a","divisionLabel":"Class 5A","gender":"girls","seed":4,"rounds":5,"w":1,"l":1,"d":0,"gf":2,"ga":2,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"7204e596-3034-4af3-9377-17c56ecc2383","name":"Osceola","seed":5,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"355b4649-46eb-42c8-8511-ec70122041fc","name":"Mariner","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}

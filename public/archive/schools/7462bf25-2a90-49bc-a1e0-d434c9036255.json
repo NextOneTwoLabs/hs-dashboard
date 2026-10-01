@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "7462bf25-2a90-49bc-a1e0-d434c9036255",
+  "name": "Palmetto",
+  "fullName": null,
+  "city": "Miami",
+  "state": "FL",
+  "maxpreps": "https://www.maxpreps.com/fl/miami/palmetto-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","result":"eliminated","reached":"Region Semifinal"},
+  "appearances": [
+    {"season":"2025-26","state":"FL","competition":"fl-fhsaa","division":"7a","divisionLabel":"Class 7A","gender":"girls","seed":3,"rounds":5,"w":1,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Region Quarterfinal","date":"2026-02-05","opp":{"id":"51b8b1b1-8c45-4dd4-b155-be622046a45b","name":"Spanish River","seed":6,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Region Semifinal","date":"2026-02-11","opp":{"id":"8a68b444-b217-49b4-91f2-6e7b33fcae19","name":"Wellington","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Region Semifinal","result":"eliminated","depth":0.2}
+  ]
+}
