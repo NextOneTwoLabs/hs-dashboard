@@ -1,10 +1,16 @@
 import { api, errorHtml } from '../api.js';
 import { bindChart, depthChart } from '../components/chart.js';
 import { bindControls, segmented } from '../components/controls.js';
+import { setHead } from '../components/pageHeader.js';
+import { statePills } from '../components/sidebar.js';
+import { hrefFor } from '../nav.js';
 import { bracketHref, esc, favorites, fmtDate, genderLabel, resultText, schoolHref, toggleFavorite } from '../util.js';
 
-export async function render({ state, statesIndex, controls, view, setState }) {
-  controls.innerHTML = '';
+export async function render({ state, statesIndex, controls, view, head, setState }) {
+  const pills = (st) => statePills(statesIndex, st, (code) => hrefFor({ tab: 'schools', st: code }),
+    { all: hrefFor({ tab: 'schools' }), count: 'schools' });
+  controls.innerHTML = pills(null);
+  setHead(head, { crumbs: [['All states', '#tab=states'], ['Schools', '#tab=schools'], ['School']], title: 'School' });
   view.innerHTML = '<div class="card notice">Loading school…</div>';
   let s;
   try {
@@ -27,8 +33,9 @@ export async function render({ state, statesIndex, controls, view, setState }) {
     w: own.reduce((t, a) => t + a.w, 0), l: own.reduce((t, a) => t + a.l, 0), d: own.reduce((t, a) => t + a.d, 0),
   };
   const best = own.reduce((b, a) => (!b || a.depth > b.depth || (a.depth === b.depth && a.season > b.season) ? a : b), null);
+  controls.innerHTML = pills(s.state);
   if (programs.length > 1) {
-    controls.innerHTML = segmented('g', g, programs.map((p) => [p, genderLabel(p)]), 'Program');
+    controls.innerHTML += segmented('g', g, programs.map((p) => [p, genderLabel(p)]), 'Program');
     bindControls(controls, setState);
   }
   const bracketName = (a) => {
@@ -62,11 +69,15 @@ export async function render({ state, statesIndex, controls, view, setState }) {
 
   const stateMeta = statesIndex.states.find((x) => x.code === s.state);
   const place = [s.city, s.state].filter(Boolean).join(', ');
+  setHead(head, {
+    crumbs: [['All states', '#tab=states'], ['Schools', hrefFor({ tab: 'schools', st: s.state })], [s.name]],
+    title: s.fullName || s.name,
+    subtitle: `${esc(place)}${stateMeta ? ` · ${esc(stateMeta.association)}` : ''}`,
+    right: `<button class="star-btn" id="fav" type="button" aria-pressed="${fav}">${fav ? '★ Following' : '☆ Follow'}</button>`
+      + (s.maxpreps ? `<a href="${esc(s.maxpreps)}" target="_blank" rel="noopener">MaxPreps <span aria-hidden="true">↗</span></a>` : ''),
+  });
   view.innerHTML = `<div class="card card-pad">
-      <div class="school-head"><div><h1>${esc(s.fullName || s.name)}</h1>
-        <div class="muted">${esc(place)}${stateMeta ? ` · ${esc(stateMeta.association)}` : ''}${s.maxpreps ? ` · <a href="${esc(s.maxpreps)}" target="_blank" rel="noopener">MaxPreps</a>` : ''}</div></div>
-        <button class="star-btn" id="fav" aria-pressed="${fav}">${fav ? '★ Following' : '☆ Follow'}</button></div>
-      <div class="stats">
+      <div class="stats" style="margin-top:0">
         <div class="stat"><div class="v">${sum.appearances}</div><div class="k">Appearances</div></div>
         <div class="stat"><div class="v">${sum.titles}</div><div class="k">Titles</div></div>
         <div class="stat"><div class="v">${sum.finals}</div><div class="k">Finals</div></div>
@@ -79,7 +90,7 @@ export async function render({ state, statesIndex, controls, view, setState }) {
     <tbody>${rows}</tbody></table></div>
     <p class="muted" style="margin-top:10px;font-size:12px">Games decided on penalty kicks count as draws (D) in the record.</p>`;
   bindChart(view);
-  view.querySelector('#fav').addEventListener('click', (e) => {
+  head.querySelector('#fav').addEventListener('click', (e) => {
     const on = toggleFavorite(s);
     e.currentTarget.setAttribute('aria-pressed', on);
     e.currentTarget.textContent = on ? '★ Following' : '☆ Follow';

@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>High School Girls Soccer</title>
   <meta name="description" content="US high school girls soccer state championship brackets, results, champions and school histories, state by state.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="/css/app.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%231d4ed8'/%3E%3Cpath d='M16 9l6 4.5-2.3 7h-7.4L10 13.5z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
   <script>
     try {
       const t = localStorage.getItem('hs-theme');
@@ -17,33 +17,51 @@
   </script>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#tab=states">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span><strong>High School Girls Soccer</strong> <span class="brand-sub">US state playoffs</span></span>
-    </a>
-    <nav class="tabs" role="tablist" aria-label="Sections" id="tabs">
-      <a role="tab" data-tab="states" href="#tab=states">States</a>
-      <a role="tab" data-tab="playoffs" href="#tab=playoffs">Brackets</a>
-      <a role="tab" data-tab="results" href="#tab=results">Results</a>
-      <a role="tab" data-tab="champions" href="#tab=champions">Champions</a>
-      <a role="tab" data-tab="schools" href="#tab=schools">Schools</a>
-    </nav>
-    <div class="search" id="search">
-      <input type="search" id="search-input" placeholder="Find a school  /" aria-label="Find a school" autocomplete="off">
+  <header class="header" id="header">
+    <div class="header-left">
+      <button class="hamburger" id="sidebar-toggle" type="button" aria-label="Show filters" aria-controls="sidebar" aria-expanded="true">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="15" height="12" rx="2"/><path d="M7.5 4v12"/></svg>
+      </button>
+      <a class="wordmark" href="https://www.nextonetwo.com"><img src="/assets/logo.svg" alt="" width="32" height="32">next<span class="accent">one</span>two</a>
+      <div class="header-divider" aria-hidden="true"></div>
+      <a class="section-label" href="#tab=states">High School Girls Soccer</a>
+    </div>
+    <div class="header-search search" id="search" role="search">
+      <input type="search" class="search-input" id="search-input" placeholder="Find a school  /" aria-label="Find a school" autocomplete="off">
       <ul class="search-results" id="search-results" role="listbox" hidden></ul>
     </div>
-    <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.4 5.4 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8C12.92 3.04 12.46 3 12 3z"/></svg>
-    </button>
+    <div class="header-right">
+      <span class="observed-top" id="data-updated"></span>
+      <a class="header-link" href="#tab=about">About the data</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.4 5.4 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8C12.92 3.04 12.46 3 12 3z"/></svg>
+      </button>
+    </div>
   </header>
 
-  <div class="controls" id="controls"></div>
-  <main id="view" class="view" aria-live="polite"></main>
-
-  <footer class="footer">
-    <span id="status-line">US high school girls soccer state championships. Brackets from state associations via MaxPreps.</span>
-  </footer>
+  <div class="layout" id="layout">
+    <div class="sidebar-overlay" id="sidebar-overlay" hidden></div>
+    <aside class="sidebar" id="sidebar" aria-label="Filters">
+      <div class="controls" id="controls"></div>
+      <div class="drawer-show"><button class="btn primary" type="button" id="drawer-done">Show results</button></div>
+    </aside>
+    <div class="main" id="main">
+      <div class="content-header">
+        <div class="content-header-row" id="page-head"></div>
+        <nav class="view-tabs" aria-label="Views" id="tabs">
+          <a class="view-tab" data-tab="states" href="#tab=states">States</a>
+          <a class="view-tab" data-tab="playoffs" href="#tab=playoffs">Brackets</a>
+          <a class="view-tab" data-tab="results" href="#tab=results">Results</a>
+          <a class="view-tab" data-tab="champions" href="#tab=champions">Champions</a>
+          <a class="view-tab" data-tab="schools" href="#tab=schools">Schools</a>
+        </nav>
+      </div>
+      <div class="content-body" id="view" aria-live="polite"></div>
+      <footer class="footer">
+        <span id="status-line">US high school girls soccer state championships. Brackets from state associations via MaxPreps.</span>
+      </footer>
+    </div>
+  </div>
 
   <script type="module" src="/js/app.js"></script>
 </body>

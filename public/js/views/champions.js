@@ -1,10 +1,19 @@
-import { bindControls, genderSeg, stateSelect } from '../components/controls.js';
+import { bindControls, genderSeg } from '../components/controls.js';
+import { setHead } from '../components/pageHeader.js';
+import { statePills } from '../components/sidebar.js';
+import { hrefFor } from '../nav.js';
 import { bracketHref, esc, schoolHref } from '../util.js';
 
 // Season-by-season grid of a state's champions, one column per division.
-export async function render({ state, catalog, statesIndex, controls, view, setState }) {
-  controls.innerHTML = stateSelect(statesIndex, state.st) + genderSeg(state.g, catalog);
-  bindControls(controls, (patch) => setState(patch.st ? { ...patch, season: null } : patch));
+export async function render({ state, catalog, statesIndex, controls, view, head, setState }) {
+  controls.innerHTML = statePills(statesIndex, state.st, (code) => hrefFor({ tab: 'champions', st: code, g: state.g }))
+    + genderSeg(state.g, catalog);
+  bindControls(controls, setState);
+  setHead(head, {
+    crumbs: [['All states', '#tab=states'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], ['Champions']],
+    title: `${catalog.name} champions`,
+    subtitle: `${esc(catalog.associationName)} (${esc(catalog.association)})`,
+  });
 
   // Columns: every division code seen, ordered by its most recent position.
   const columns = new Map();
@@ -22,7 +31,7 @@ export async function render({ state, catalog, statesIndex, controls, view, setS
   }
   const cols = [...columns.values()].sort((a, b) => a.order - b.order);
   const multiComp = new Set(rows.filter((r) => r.comp).map((r) => r.comp.id)).size > 1;
-  const head = `<tr><th>Season</th>${multiComp ? '<th>Championship</th>' : ''}${cols.map((d) => `<th>${esc(d.label)}</th>`).join('')}</tr>`;
+  const thead = `<tr><th>Season</th>${multiComp ? '<th>Championship</th>' : ''}${cols.map((d) => `<th>${esc(d.label)}</th>`).join('')}</tr>`;
   const body = rows
     .map((r) => {
       if (r.note) return `<tr><td class="num">${esc(r.season)}</td><td colspan="${cols.length + (multiComp ? 1 : 0)}" class="cell-empty">${esc(r.note)}</td></tr>`;
@@ -42,7 +51,5 @@ export async function render({ state, catalog, statesIndex, controls, view, setS
       return `<tr><td class="num">${esc(r.season)}</td>${multiComp ? `<td>${esc(r.comp.short)}</td>` : ''}${cells}</tr>`;
     })
     .join('');
-  view.innerHTML = `<div class="page-head"><h1 class="page">${esc(catalog.name)} champions</h1>
-      <span class="muted">${esc(catalog.associationName)} (${esc(catalog.association)})</span></div>
-    <div class="card table-wrap"><table class="data"><thead>${head}</thead><tbody>${body}</tbody></table></div>`;
+  view.innerHTML = `<div class="card table-wrap"><table class="data"><thead>${thead}</thead><tbody>${body}</tbody></table></div>`;
 }

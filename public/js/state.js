@@ -1,5 +1,5 @@
 // Hash deep links: #tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=6a-d1
-const KEYS = ['tab', 'st', 'season', 'comp', 'div', 'g', 'school', 'show', 'round', 'q'];
+export const KEYS = ['tab', 'st', 'season', 'comp', 'div', 'g', 'school', 'show', 'round', 'q'];
 
 export function readHash() {
   const params = new URLSearchParams(location.hash.slice(1));

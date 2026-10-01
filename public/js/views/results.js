@@ -1,17 +1,22 @@
 import { api, errorHtml } from '../api.js';
-import { bindControls, genderSeg, seasonSelect, segmented, stateSelect } from '../components/controls.js';
+import { bindControls, genderSeg, seasonSelect } from '../components/controls.js';
 import { bindHighlight, matchCard } from '../components/match.js';
+import { setHead } from '../components/pageHeader.js';
+import { showPills, statePills } from '../components/sidebar.js';
+import { hrefFor } from '../nav.js';
 import { bracketHref, esc, fmtLongDate } from '../util.js';
 
-export async function render({ state, catalog, statesIndex, controls, view, setState }) {
+export async function render({ state, catalog, statesIndex, controls, view, head, setState }) {
   const show = state.show || 'all';
   controls.innerHTML = [
-    stateSelect(statesIndex, state.st),
-    seasonSelect(catalog, state.season),
+    statePills(statesIndex, state.st, (code) => hrefFor({ tab: 'results', st: code, g: state.g, show: state.show })),
+    `<div class="browse-row">${seasonSelect(catalog, state.season)}</div>`,
+    showPills(state),
     genderSeg(state.g, catalog),
-    segmented('show', show, [['all', 'All'], ['results', 'Results'], ['upcoming', 'Upcoming']], 'Show'),
   ].join('');
-  bindControls(controls, (patch) => setState(patch.st ? { ...patch, season: null } : patch));
+  bindControls(controls, setState);
+  const crumbs = [['All states', '#tab=states'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], [`${state.season} results`]];
+  setHead(head, { crumbs, title: `${catalog.name} results`, subtitle: `${esc(catalog.association)} · ${esc(state.season)}` });
   view.innerHTML = '<div class="card notice">Loading games…</div>';
 
   let data;
@@ -47,7 +52,8 @@ export async function render({ state, catalog, statesIndex, controls, view, setS
       return `<section class="day"><h3>${esc(date ? fmtLongDate(date) : 'Date TBD')}</h3><div class="cards">${cards}</div></section>`;
     })
     .join('');
-  view.innerHTML = `<div class="page-head"><h1 class="page">${esc(catalog.name)} results</h1><span class="muted">${esc(catalog.association)} · ${esc(data.season)} · ${games.length} games</span></div>
-    ${html || '<div class="card notice">No games match these filters.</div>'}`;
+  setHead(head, { crumbs, title: `${catalog.name} results`,
+    subtitle: `${esc(catalog.association)} · ${esc(data.season)} · ${games.length} games` });
+  view.innerHTML = html || '<div class="card notice">No games match these filters.</div>';
   bindHighlight(view);
 }

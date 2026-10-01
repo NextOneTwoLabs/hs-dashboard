@@ -7,8 +7,12 @@ import * as results from './views/results.js';
 import * as champions from './views/champions.js';
 import * as schools from './views/schools.js';
 import * as school from './views/school.js';
+import * as about from './views/about.js';
+import { activeTab, resolveTab, tabHref } from './nav.js';
+import './shell.js';
 
-const VIEWS = { states, playoffs, results, champions, schools, school };
+const VIEWS = { states, playoffs, results, champions, schools, school, about };
+const head = document.getElementById('page-head');
 // Tabs that show one state at a time and need that state's catalog.
 const STATE_TABS = new Set(['playoffs', 'results', 'champions']);
 const controls = document.getElementById('controls');
@@ -28,9 +32,7 @@ function setState(patch, { replace = false, silent = false } = {}) {
 
 async function render() {
   const seq = ++renderSeq;
-  let raw = readHash();
-  if (!raw.tab || !VIEWS[raw.tab]) raw.tab = raw.comp ? 'playoffs' : 'states';
-  if (raw.tab === 'school' && !raw.school) raw.tab = 'schools';
+  let raw = resolveTab(readHash());
   let catalog = null;
   if (STATE_TABS.has(raw.tab)) {
     raw = resolveState(raw, statesIndex);
@@ -45,21 +47,22 @@ async function render() {
   }
   state = raw;
   document.querySelectorAll('#tabs [data-tab]').forEach((a) => {
-    const on = a.dataset.tab === state.tab || (state.tab === 'school' && a.dataset.tab === 'schools');
-    a.setAttribute('aria-selected', on);
+    a.href = tabHref(a.dataset.tab, state);
+    if (a.dataset.tab === activeTab(state.tab)) a.setAttribute('aria-current', 'page');
+    else a.removeAttribute('aria-current');
   });
   const stateName = catalog ? ` · ${catalog.name}` : '';
   document.title = state.tab === 'school' || state.tab === 'schools'
     ? 'Schools · High School Girls Soccer' : `High School Girls Soccer${stateName}`;
   try {
-    await VIEWS[state.tab].render({ state, catalog, statesIndex, controls, view, setState });
+    await VIEWS[state.tab].render({ state, catalog, statesIndex, controls, view, head, setState });
   } catch (err) {
     if (seq === renderSeq) {
       console.error(err);
       view.innerHTML = '<div class="card notice">Something went wrong rendering this page.</div>';
     }
   }
-  if (seq === renderSeq) window.scrollTo({ top: 0 });
+  if (seq === renderSeq) document.getElementById('main').scrollTo({ top: 0 }); // the content column scrolls, not the window
 }
 
 view.addEventListener('click', (e) => {

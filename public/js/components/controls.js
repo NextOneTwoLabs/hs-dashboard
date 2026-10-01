@@ -1,13 +1,6 @@
 import { esc } from '../util.js';
 
-export function stateSelect(statesIndex, current, { withAll = false } = {}) {
-  const opts = statesIndex.states
-    .filter((s) => s.latestSeason)
-    .map((s) => `<option value="${esc(s.code)}"${s.code === current ? ' selected' : ''}>${esc(s.name)} (${esc(s.association)})</option>`)
-    .join('');
-  return `<div class="field"><label for="state-select">State</label>
-    <select id="state-select" data-set="st">${withAll ? `<option value=""${current ? '' : ' selected'}>All states</option>` : ''}${opts}</select></div>`;
-}
+// State and division choices are sidebar pills now (components/sidebar.js).
 
 export function seasonSelect(catalog, current) {
   const opts = catalog.seasons
