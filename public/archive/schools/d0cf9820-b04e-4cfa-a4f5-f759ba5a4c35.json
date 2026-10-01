@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "d0cf9820-b04e-4cfa-a4f5-f759ba5a4c35",
+  "name": "Magnolia Science Academy Reseda",
+  "fullName": null,
+  "city": "Reseda",
+  "maxpreps": "https://www.maxpreps.com/ca/reseda/magnolia-science-academy-reseda-warriors",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2023-24","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-socal","division":"gd5","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":8,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"c481b37e-d488-4d1e-987a-082e0a5aedf7","name":"Diamond Ranch","seed":1,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

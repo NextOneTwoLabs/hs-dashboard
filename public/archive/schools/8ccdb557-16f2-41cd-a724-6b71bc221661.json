@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "8ccdb557-16f2-41cd-a724-6b71bc221661",
+  "name": "Branson",
+  "fullName": "Branson Bulls",
+  "city": "Ross",
+  "maxpreps": "https://www.maxpreps.com/ca/ross/branson-bulls",
+  "summary": {"appearances":4,"titles":1,"finals":3,"w":6,"l":3,"d":1},
+  "best": {"season":"2018-19","competition":"cif-norcal","division":"gd3","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-norcal","division":"gd2","seed":3,"rounds":3,"w":1,"l":1,"d":1,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"5594d1a9-342a-4406-92a5-8ccf47679bec","name":"River City","seed":6,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"0b05ee2d-9888-4150-91f9-2278a0b03fb9","name":"Livermore","seed":2,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2018-03-10","opp":{"id":"8ab469c1-67a4-4248-bfe2-76eb427c7a1c","name":"Woodland","seed":5,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667},
+    {"season":"2018-19","competition":"cif-norcal","division":"gd3","seed":6,"rounds":3,"w":3,"l":0,"d":0,"gf":3,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"1806a4eb-3371-4e7c-a755-835229bc515e","name":"Sacred Heart Cathedral Preparatory","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"8981f6f2-904d-409e-ba11-2da79563dfbf","name":"Sierra","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2019-03-02","opp":{"id":"9f489fa8-a23a-4924-a2a0-5c5cff3c0fdc","name":"Marin Academy","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0},
+    {"season":"2021-22","competition":"cif-norcal","division":"gd2","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"bd6662e8-a2ee-45ca-b0e8-dd03dec005c9","name":"Leigh","seed":3,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2022-23","competition":"cif-norcal","division":"gd2","seed":7,"rounds":3,"w":2,"l":1,"d":0,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"1dc4836b-4daf-4573-b525-27b474bd5366","name":"St. Ignatius College Preparatory","seed":2,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"a6620c92-7511-4441-a80a-7fdb988b92f3","name":"Casa Grande","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2023-03-04","opp":{"id":"9f489fa8-a23a-4924-a2a0-5c5cff3c0fdc","name":"Marin Academy","seed":8,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "cf3a7998-81da-42d7-8cc4-7807be38443a",
+  "name": "Villa Park",
+  "fullName": null,
+  "city": "Villa Park",
+  "maxpreps": "https://www.maxpreps.com/ca/villa-park/villa-park-spartans",
+  "summary": {"appearances":4,"titles":0,"finals":0,"w":2,"l":4,"d":0},
+  "best": {"season":"2022-23","competition":"cif-socal","division":"gd1","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-socal","division":"gd1","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"89c3c2f2-7adc-4b39-9391-7b73ec069794","name":"Los Alamitos","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2020-21","competition":"cif-socal","division":"gd1","seed":5,"rounds":3,"w":1,"l":1,"d":0,"gf":8,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"1fd5ff77-0482-4f19-a9c2-e03a6ef04ce8","name":"Granada Hills Charter","seed":4,"score":0},"gf":7,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"9dc04c54-8c9d-4b30-a1d2-fcc167363342","name":"Harvard-Westlake","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
+    {"season":"2021-22","competition":"cif-socal","division":"gd1","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"ff3dcd2f-cdea-46e6-accf-fd929c0a4374","name":"San Marcos","seed":3,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2022-23","competition":"cif-socal","division":"gd1","seed":4,"rounds":3,"w":1,"l":1,"d":0,"gf":2,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"78ad824a-61a0-462b-aa6f-1d5f6fb1bd5f","name":"La Costa Canyon","seed":5,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"ff429903-681b-4ad1-abd7-356a7492395e","name":"Santa Margarita","seed":1,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

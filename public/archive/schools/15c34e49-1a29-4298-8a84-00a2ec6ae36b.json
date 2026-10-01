@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "15c34e49-1a29-4298-8a84-00a2ec6ae36b",
+  "name": "Cathedral Catholic",
+  "fullName": null,
+  "city": "San Diego",
+  "maxpreps": "https://www.maxpreps.com/ca/san-diego/cathedral-catholic-dons",
+  "summary": {"appearances":2,"titles":0,"finals":1,"w":2,"l":2,"d":0},
+  "best": {"season":"2020-21","competition":"cif-socal","division":"gd2","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2020-21","competition":"cif-socal","division":"gd2","seed":4,"rounds":3,"w":2,"l":1,"d":0,"gf":8,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"65ef8aa7-1a9d-4fab-9d7c-0374339ab1fe","name":"Claremont","seed":5,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"ddf384b8-3189-4276-8703-71106d47a4d5","name":"Del Norte","seed":8,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2021-06-05","opp":{"id":"54ef2b21-237c-4544-804f-af1d8e056c2b","name":"Buchanan","seed":3,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667},
+    {"season":"2022-23","competition":"cif-socal","division":"gd1","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"89c3c2f2-7adc-4b39-9391-7b73ec069794","name":"Los Alamitos","seed":3,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

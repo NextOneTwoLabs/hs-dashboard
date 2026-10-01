@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "93090aaf-caf6-4a5a-bb52-b75d02ca8ff8",
+  "name": "Edison",
+  "fullName": null,
+  "city": "Fresno",
+  "maxpreps": "https://www.maxpreps.com/ca/fresno/edison-tigers",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
+  "best": {"season":"2018-19","competition":"cif-norcal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd2","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"e3798ac4-f77c-4305-b7c1-ec498ea3adfc","name":"San Luis Obispo","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2018-19","competition":"cif-norcal","division":"gd3","seed":4,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"d6e80050-eb7a-4461-b54a-ccb18581c77c","name":"Vista del Lago","seed":5,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

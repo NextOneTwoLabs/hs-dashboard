@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "ad43e80f-2296-4b96-a0a9-44e6a8ea76f2",
+  "name": "Torrey Pines",
+  "fullName": "Torrey Pines Falcons",
+  "city": "San Diego",
+  "maxpreps": "https://www.maxpreps.com/ca/san-diego/torrey-pines-falcons",
+  "summary": {"appearances":4,"titles":1,"finals":1,"w":2,"l":3,"d":1},
+  "best": {"season":"2024-25","competition":"cif-socal","division":"gd2","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2020-21","competition":"cif-socal","division":"gd1","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"9dc04c54-8c9d-4b30-a1d2-fcc167363342","name":"Harvard-Westlake","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2021-22","competition":"cif-socal","division":"gd2","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"75b3c4b6-a228-4423-a670-32f9396be309","name":"Oaks Christian","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2023-24","competition":"cif-socal","division":"gd1","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"89c3c2f2-7adc-4b39-9391-7b73ec069794","name":"Los Alamitos","seed":6,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","competition":"cif-socal","division":"gd2","seed":8,"rounds":3,"w":2,"l":0,"d":1,"gf":3,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"6e2527e7-3d64-4806-8002-17fa14b0d57d","name":"Troy","seed":1,"score":1},"gf":1,"ga":1,"res":"D","pk":"W"},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"1fd5ff77-0482-4f19-a9c2-e03a6ef04ce8","name":"Granada Hills Charter","seed":4,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2025-03-08","opp":{"id":"098e1491-1717-4088-b7a0-55e47c8e1d17","name":"Orange Lutheran","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+  ]
+}

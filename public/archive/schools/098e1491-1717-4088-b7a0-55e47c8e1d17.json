@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "098e1491-1717-4088-b7a0-55e47c8e1d17",
+  "name": "Orange Lutheran",
+  "fullName": null,
+  "city": "Orange",
+  "maxpreps": "https://www.maxpreps.com/ca/orange/orange-lutheran-lancers",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-socal","division":"gd2","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-socal","division":"gd2","seed":2,"rounds":3,"w":2,"l":1,"d":0,"gf":6,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"68a421c5-cca9-497e-8645-2049ebc86149","name":"Cleveland","seed":7,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"e3798ac4-f77c-4305-b7c1-ec498ea3adfc","name":"San Luis Obispo","seed":3,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2025-03-08","opp":{"id":"ad43e80f-2296-4b96-a0a9-44e6a8ea76f2","name":"Torrey Pines","seed":8,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "6a6f6833-277b-4d7a-8ac6-82fd49fcc05b",
+  "name": "Mission College Prep",
+  "fullName": null,
+  "city": "San Luis Obispo",
+  "maxpreps": "https://www.maxpreps.com/ca/san-luis-obispo/mission-college-prep-royals",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2023-24","competition":"cif-norcal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-norcal","division":"gd4","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"783e6de8-bd47-447c-9a87-3923e84f99e0","name":"Everett Alvarez","seed":3,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

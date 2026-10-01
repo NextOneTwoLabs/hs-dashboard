@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "c43b6abd-9e83-4b98-ba96-ce6b34234e03",
+  "name": "Saint Joseph",
+  "fullName": "Saint Joseph Jesters",
+  "city": "Lakewood",
+  "maxpreps": "https://www.maxpreps.com/ca/lakewood/saint-joseph-jesters",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":3,"l":0,"d":0},
+  "best": {"season":"2021-22","competition":"cif-socal","division":"gd4","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-socal","division":"gd4","seed":1,"rounds":3,"w":3,"l":0,"d":0,"gf":13,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"5914df37-1218-4653-92be-f6d87981959f","name":"Chula Vista Learning Community Charter","seed":8,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"6b0a43a2-6cd9-42fc-abf8-4b03221952e1","name":"Bakersfield Christian","seed":4,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"a858d139-5648-40b3-8ff6-8d946185ab7b","name":"Hemet","seed":7,"score":2},"gf":3,"ga":2,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+  ]
+}

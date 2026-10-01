@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "fcea74f2-f0cb-4917-823f-3f72037a2560",
+  "name": "West Campus",
+  "fullName": null,
+  "city": "Sacramento",
+  "maxpreps": "https://www.maxpreps.com/ca/sacramento/west-campus-warriors",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2025-26","competition":"cif-state","division":"gd4","seed":5,"rounds":4,"w":0,"l":0,"d":1,"gf":0,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"be2fc7fb-ec14-4069-9c6d-f6083a2f9229","name":"Fresno Christian","seed":4,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

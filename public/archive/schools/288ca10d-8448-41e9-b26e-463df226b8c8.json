@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "288ca10d-8448-41e9-b26e-463df226b8c8",
+  "name": "Davis Sr.",
+  "fullName": null,
+  "city": "Davis",
+  "maxpreps": "https://www.maxpreps.com/ca/davis/davis-sr-blue-devils",
+  "summary": {"appearances":4,"titles":0,"finals":1,"w":1,"l":4,"d":1},
+  "best": {"season":"2018-19","competition":"cif-norcal","division":"gd1","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-norcal","division":"gd1","seed":4,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"f62e70f3-0c88-4711-9e52-3e9e132006b3","name":"Carondelet","seed":5,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2018-19","competition":"cif-norcal","division":"gd1","seed":1,"rounds":3,"w":1,"l":1,"d":1,"gf":2,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"1dc4836b-4daf-4573-b525-27b474bd5366","name":"St. Ignatius College Preparatory","seed":8,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"594e7f5d-3e25-480c-bc2c-c15cbf09c737","name":"San Ramon Valley","seed":4,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2019-03-02","opp":{"id":"21625f1d-edb3-4fa8-9158-f6b6b0a04e2d","name":"Monte Vista","seed":6,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667},
+    {"season":"2023-24","competition":"cif-norcal","division":"gd1","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"0f63870a-34f3-4d5b-9dbf-653c8410f969","name":"Archbishop Mitty","seed":4,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","competition":"cif-state","division":"gd2","seed":1,"rounds":4,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"a34f251c-c120-40b8-b1ef-d17d0e8baa69","name":"Las Lomas","seed":8,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

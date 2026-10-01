@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "f8c33d57-a1ba-4322-aac1-acb5b2698e4d",
+  "name": "Coastal Academy",
+  "fullName": null,
+  "city": "Oceanside",
+  "maxpreps": "https://www.maxpreps.com/ca/oceanside/coastal-academy-na",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":3,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd5","result":"runner-up","reached":"State Final"},
+  "appearances": [
+    {"season":"2025-26","competition":"cif-state","division":"gd5","seed":8,"rounds":4,"w":3,"l":1,"d":0,"gf":6,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"cb3c4816-4749-4381-8c4c-5613ef8c89c9","name":"Ocean View","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"326393a3-25f4-4e4c-9102-79108e7d35a8","name":"Bravo","seed":5,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Finals","date":"2026-03-07","opp":{"id":"30041ed8-ba8f-4008-9366-f7a9576cf5dc","name":"Kennedy","seed":3,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"State Final","date":"2026-03-13","opp":{"id":"e3575c9e-ba9a-45fc-87af-b1dfd2fe6172","name":"Lowell","seed":1,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":3,"reached":"State Final","result":"runner-up","depth":0.75}
+  ]
+}

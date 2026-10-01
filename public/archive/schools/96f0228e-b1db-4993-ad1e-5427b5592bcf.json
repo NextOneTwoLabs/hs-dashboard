@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "96f0228e-b1db-4993-ad1e-5427b5592bcf",
+  "name": "Marina",
+  "fullName": null,
+  "city": "Huntington Beach",
+  "maxpreps": "https://www.maxpreps.com/ca/huntington-beach/marina-vikings",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":1,"l":0,"d":2},
+  "best": {"season":"2022-23","competition":"cif-socal","division":"gd3","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2022-23","competition":"cif-socal","division":"gd3","seed":3,"rounds":3,"w":1,"l":0,"d":2,"gf":4,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"a8a6f59d-5b3b-486b-af11-9f6aa7983a20","name":"Centennial","seed":6,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"9c909108-0c4f-43ac-a1d6-0a8281c344f0","name":"Portola","seed":7,"score":1},"gf":1,"ga":1,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2023-03-04","opp":{"id":"966e5b54-904d-4d40-81d3-8ada9df7485d","name":"Moorpark","seed":1,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

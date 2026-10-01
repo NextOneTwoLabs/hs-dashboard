@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "59a69ccf-834f-4a89-a095-413ab6bb50a1",
+  "name": "St. Margaret's",
+  "fullName": "St. Margaret's Tartans",
+  "city": "San Juan Capistrano",
+  "maxpreps": "https://www.maxpreps.com/ca/san-juan-capistrano/st-margarets-tartans",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":2,"l":0,"d":1},
+  "best": {"season":"2018-19","competition":"cif-socal","division":"gd4","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-socal","division":"gd4","seed":2,"rounds":3,"w":2,"l":0,"d":1,"gf":6,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"37f8616d-a849-4c95-a861-65f49d0cb170","name":"Roosevelt","seed":7,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"9b33cc3d-0504-466f-a3b8-91f5123dfc75","name":"Ramona","seed":6,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2019-03-02","opp":{"id":"7ebd4eee-1fd8-404f-8238-8602557e8729","name":"La Salle","seed":1,"score":1},"gf":2,"ga":1,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+  ]
+}

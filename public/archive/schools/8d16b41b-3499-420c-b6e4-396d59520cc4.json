@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "8d16b41b-3499-420c-b6e4-396d59520cc4",
+  "name": "Cypress",
+  "fullName": null,
+  "city": "Cypress",
+  "maxpreps": "https://www.maxpreps.com/ca/cypress/cypress-centurions",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":1},
+  "best": {"season":"2017-18","competition":"cif-socal","division":"gd2","result":"eliminated","reached":"Regional Semi-Finals"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd2","seed":4,"rounds":3,"w":1,"l":0,"d":1,"gf":4,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"9adef103-5c38-4dc2-a6c4-b36ea4f5400c","name":"Poway","seed":5,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"8f350275-199e-4549-b574-2257e718069f","name":"Temecula Valley","seed":1,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+  ]
+}

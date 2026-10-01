@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "3bc34a32-a552-42c4-a8bd-edef5067ff09",
+  "name": "Oak Park",
+  "fullName": null,
+  "city": "Oak Park",
+  "maxpreps": "https://www.maxpreps.com/ca/oak-park/oak-park-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":0,"d":1},
+  "best": {"season":"2023-24","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-socal","division":"gd3","seed":6,"rounds":3,"w":1,"l":0,"d":1,"gf":5,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"d74e4255-19f5-493e-ad49-2ed492f950c7","name":"Independence","seed":3,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"27ac3722-c09b-49a5-bf52-772a4c3ba809","name":"Apple Valley","seed":7,"score":2},"gf":2,"ga":2,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

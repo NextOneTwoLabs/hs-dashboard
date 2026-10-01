@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "54ef2b21-237c-4544-804f-af1d8e056c2b",
+  "name": "Buchanan",
+  "fullName": "Buchanan Bears",
+  "city": "Clovis",
+  "maxpreps": "https://www.maxpreps.com/ca/clovis/buchanan-bears",
+  "summary": {"appearances":4,"titles":1,"finals":2,"w":5,"l":1,"d":4},
+  "best": {"season":"2020-21","competition":"cif-socal","division":"gd2","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd1","seed":2,"rounds":3,"w":0,"l":0,"d":1,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"f9adea13-f951-4743-a79c-b8d824e4d231","name":"La Mirada","seed":7,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2020-21","competition":"cif-socal","division":"gd2","seed":3,"rounds":3,"w":2,"l":0,"d":1,"gf":12,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"50ca2b84-41d3-4452-8abf-fe5ff164e40c","name":"Saugus","seed":6,"score":3},"gf":3,"ga":3,"res":"D","pk":"W"},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"4a750ed5-c3bd-4d4e-a61a-92b04074f0ff","name":"Downey","seed":7,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2021-06-05","opp":{"id":"15c34e49-1a29-4298-8a84-00a2ec6ae36b","name":"Cathedral Catholic","seed":4,"score":1},"gf":4,"ga":1,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0},
+    {"season":"2021-22","competition":"cif-norcal","division":"gd1","seed":3,"rounds":3,"w":2,"l":0,"d":1,"gf":5,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"c524610f-013c-459f-be22-b2c57bcb555d","name":"Whitney","seed":6,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"de6d3780-e8f6-4a2a-93f2-b5d89499f9b0","name":"Saint Francis","seed":7,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"74c1621c-e0cf-4821-b5e1-3c8170c8125a","name":"Oak Ridge","seed":1,"score":2},"gf":2,"ga":2,"res":"D","pk":"L"}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667},
+    {"season":"2025-26","competition":"cif-state","division":"gd1","seed":5,"rounds":4,"w":1,"l":1,"d":1,"gf":2,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"de6d3780-e8f6-4a2a-93f2-b5d89499f9b0","name":"Saint Francis","seed":4,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"f62e70f3-0c88-4711-9e52-3e9e132006b3","name":"Carondelet","seed":8,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Finals","date":"2026-03-07","opp":{"id":"f8a146fc-198e-4220-b0fc-ee145a8a81d9","name":"Bishop O'Dowd","seed":2,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Finals","result":"eliminated","depth":0.5}
+  ]
+}

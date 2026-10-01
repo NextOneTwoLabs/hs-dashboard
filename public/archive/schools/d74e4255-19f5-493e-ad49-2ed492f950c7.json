@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d74e4255-19f5-493e-ad49-2ed492f950c7",
+  "name": "Independence",
+  "fullName": null,
+  "city": "Bakersfield",
+  "maxpreps": "https://www.maxpreps.com/ca/bakersfield/independence-falcons",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
+  "best": {"season":"2023-24","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd3","seed":4,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"b700374b-e564-4aee-a01b-f5d363d642b9","name":"Centennial","seed":5,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2023-24","competition":"cif-socal","division":"gd3","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"3bc34a32-a552-42c4-a8bd-edef5067ff09","name":"Oak Park","seed":6,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

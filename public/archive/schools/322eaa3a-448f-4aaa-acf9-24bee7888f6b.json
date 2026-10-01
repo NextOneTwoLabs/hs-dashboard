@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "322eaa3a-448f-4aaa-acf9-24bee7888f6b",
+  "name": "Ramona",
+  "fullName": null,
+  "city": "Riverside",
+  "maxpreps": "https://www.maxpreps.com/ca/riverside/ramona-rams",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
+  "best": {"season":"2022-23","competition":"cif-socal","division":"gd5","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2022-23","competition":"cif-socal","division":"gd5","seed":1,"rounds":3,"w":2,"l":1,"d":0,"gf":10,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"60c4e6d0-44cc-4084-9559-0b3058c4f473","name":"Alliance Marine-Innovation & Technology","seed":8,"score":0},"gf":8,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"50ebec25-d857-4178-9f5a-1a6241c43b85","name":"Clairemont","seed":4,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2023-03-04","opp":{"id":"3c68fab4-0b6f-4f91-85e3-20f698b3e937","name":"Carter","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

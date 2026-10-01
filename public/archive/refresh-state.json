@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-10-01T17:03:51Z",
+  "mode": "backfill",
+  "requests": 77,
+  "blocked": false,
+  "budgetExhausted": false,
+  "crawled": ["2021-22/cif-socal/gd1","2021-22/cif-socal/gd2","2021-22/cif-socal/gd3","2021-22/cif-socal/gd4","2021-22/cif-socal/gd5","2022-23/cif-norcal/gd1","2022-23/cif-norcal/gd2","2022-23/cif-norcal/gd3","2022-23/cif-norcal/gd4","2022-23/cif-norcal/gd5","2022-23/cif-socal/gd1","2022-23/cif-socal/gd2","2022-23/cif-socal/gd3","2022-23/cif-socal/gd4","2022-23/cif-socal/gd5","2023-24/cif-norcal/gd1","2023-24/cif-norcal/gd2","2023-24/cif-norcal/gd3","2023-24/cif-norcal/gd4","2023-24/cif-norcal/gd5","2023-24/cif-socal/gd1","2023-24/cif-socal/gd2","2023-24/cif-socal/gd3","2023-24/cif-socal/gd4","2023-24/cif-socal/gd5","2024-25/cif-norcal/gd1","2024-25/cif-norcal/gd2","2024-25/cif-norcal/gd3","2024-25/cif-norcal/gd4","2024-25/cif-norcal/gd5","2024-25/cif-socal/gd1","2024-25/cif-socal/gd2","2024-25/cif-socal/gd3","2024-25/cif-socal/gd4","2024-25/cif-socal/gd5"],
+  "failed": [],
+  "durationSeconds": 328.7
+}

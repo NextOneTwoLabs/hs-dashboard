@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "2623825f-5332-461c-ba57-d16558cbad0d",
+  "name": "Granite Hills",
+  "fullName": null,
+  "city": "Porterville",
+  "maxpreps": "https://www.maxpreps.com/ca/porterville/granite-hills-grizzlies",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-norcal","division":"gd5","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"33f6ddc6-d95f-4534-b600-6aec25fac907","name":"Ripon Christian","seed":2,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "27d82a51-2b44-492e-b2cf-114730027de3",
+  "name": "Sacred Heart Prep",
+  "fullName": "Sacred Heart Prep Gators",
+  "city": "Atherton",
+  "maxpreps": "https://www.maxpreps.com/ca/atherton/sacred-heart-prep-gators",
+  "summary": {"appearances":2,"titles":1,"finals":1,"w":3,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd4","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-norcal","division":"gd4","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"b6b1981a-7182-44bd-9b84-e4db9df44256","name":"Campolindo","seed":7,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","competition":"cif-norcal","division":"gd4","seed":3,"rounds":3,"w":3,"l":0,"d":0,"gf":11,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"47e98d21-4568-49d1-82aa-20cd03bf0302","name":"Sonoma Valley","seed":6,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"a8cc3305-2fa6-4e76-91ea-5bea8583505a","name":"Soquel","seed":2,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2025-03-08","opp":{"id":"be2fc7fb-ec14-4069-9c6d-f6083a2f9229","name":"Fresno Christian","seed":1,"score":2},"gf":3,"ga":2,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+  ]
+}

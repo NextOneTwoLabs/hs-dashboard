@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "id": "33f6ddc6-d95f-4534-b600-6aec25fac907",
+  "name": "Ripon Christian",
+  "fullName": null,
+  "city": "Ripon",
+  "maxpreps": "https://www.maxpreps.com/ca/ripon/ripon-christian-knights",
+  "summary": {"appearances":3,"titles":0,"finals":1,"w":3,"l":3,"d":1},
+  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd5","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-norcal","division":"gd5","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"01e250af-f9de-4e2b-8e1a-11cc0a1fd241","name":"Winters","seed":6,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","competition":"cif-norcal","division":"gd5","seed":2,"rounds":3,"w":2,"l":1,"d":0,"gf":4,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"2623825f-5332-461c-ba57-d16558cbad0d","name":"Granite Hills","seed":7,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"c35eb9a1-800f-405d-956f-852dbefe5ec8","name":"Oakland Tech","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2025-03-08","opp":{"id":"e3575c9e-ba9a-45fc-87af-b1dfd2fe6172","name":"Lowell","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667},
+    {"season":"2025-26","competition":"cif-state","division":"gd5","seed":3,"rounds":4,"w":1,"l":1,"d":1,"gf":5,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"a983a09b-86f3-4387-9ae2-b90968a23628","name":"Live Oak","seed":6,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"78ab1d8a-38ee-4c32-a9a5-ea05afd088a4","name":"Watsonville","seed":2,"score":2},"gf":2,"ga":2,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Finals","date":"2026-03-07","opp":{"id":"e3575c9e-ba9a-45fc-87af-b1dfd2fe6172","name":"Lowell","seed":1,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Finals","result":"eliminated","depth":0.5}
+  ]
+}

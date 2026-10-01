@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2017-18,cif-norcal,gd4,0,Round I,2018-03-06,final,,1,University Prep,5,8,Wheatland,1,top
+2017-18,cif-norcal,gd4,0,Round I,2018-03-06,final,,4,Lowell,1,5,Oakland Tech,0,top
+2017-18,cif-norcal,gd4,0,Round I,2018-03-06,final,,3,Ripon,3,6,Golden Sierra,0,top
+2017-18,cif-norcal,gd4,0,Round I,2018-03-06,final,,2,Corning,1,7,Winters,0,top
+2017-18,cif-norcal,gd4,1,Regional Semi-Finals,2018-03-08,final,,1,University Prep,1,4,Lowell,2,bottom
+2017-18,cif-norcal,gd4,1,Regional Semi-Finals,2018-03-08,final,,3,Ripon,3,2,Corning,2,top
+2017-18,cif-norcal,gd4,2,Regional Final,2018-03-10,final,,4,Lowell,2,3,Ripon,1,top

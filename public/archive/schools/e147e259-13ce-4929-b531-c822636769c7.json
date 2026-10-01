@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e147e259-13ce-4929-b531-c822636769c7",
+  "name": "Quartz Hill",
+  "fullName": "Quartz Hill Royals",
+  "city": "Quartz Hill",
+  "maxpreps": "https://www.maxpreps.com/ca/quartz-hill/quartz-hill-royals",
+  "summary": {"appearances":2,"titles":1,"finals":1,"w":4,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd3","result":"champion","reached":"State Final"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-socal","division":"gd3","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"27ac3722-c09b-49a5-bf52-772a4c3ba809","name":"Apple Valley","seed":7,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","competition":"cif-state","division":"gd3","seed":4,"rounds":4,"w":4,"l":0,"d":0,"gf":6,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"045b97e7-41d4-4730-9279-e8cbb50636f0","name":"El Diamante","seed":5,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"ddf384b8-3189-4276-8703-71106d47a4d5","name":"Del Norte","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Finals","date":"2026-03-07","opp":{"id":"4d6fdf13-cda7-4718-b820-95c9480b4610","name":"Millikan","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"State Final","date":"2026-03-14","opp":{"id":"1f152b3b-38dc-4d34-b260-9663dc3006a4","name":"Salinas","seed":1,"score":0},"gf":2,"ga":0,"res":"W","pk":null}],"reachedRound":3,"reached":"State Final","result":"champion","depth":1.0}
+  ]
+}

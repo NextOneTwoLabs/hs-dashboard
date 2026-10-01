@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "6a4bb546-7266-4859-81e0-936887fa3c98",
+  "name": "Crean Lutheran",
+  "fullName": null,
+  "city": "Irvine",
+  "maxpreps": "https://www.maxpreps.com/ca/irvine/crean-lutheran-saints",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
+  "best": {"season":"2022-23","competition":"cif-socal","division":"gd4","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2022-23","competition":"cif-socal","division":"gd4","seed":3,"rounds":3,"w":2,"l":1,"d":0,"gf":6,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"cb5ca505-fe1e-4e37-9e9f-e4ab45cae631","name":"South Gate","seed":6,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"1fd5ff77-0482-4f19-a9c2-e03a6ef04ce8","name":"Granada Hills Charter","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2023-03-04","opp":{"id":"a858d139-5648-40b3-8ff6-8d946185ab7b","name":"Hemet","seed":5,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

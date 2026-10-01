@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "30041ed8-ba8f-4008-9366-f7a9576cf5dc",
+  "name": "Kennedy",
+  "fullName": null,
+  "city": "Delano",
+  "maxpreps": "https://www.maxpreps.com/ca/delano/kennedy-thunderbirds",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":1},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd5","result":"eliminated","reached":"Regional Finals"},
+  "appearances": [
+    {"season":"2025-26","competition":"cif-state","division":"gd5","seed":3,"rounds":4,"w":1,"l":1,"d":1,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"d1aaa3e2-766d-4a4e-aa26-7df43dbfb1f0","name":"Marquez","seed":6,"score":2},"gf":2,"ga":2,"res":"D","pk":"W"},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"7a833d0d-d42e-4842-afd7-507da3d1eaa8","name":"Pacifica Christian/Santa Monica","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Finals","date":"2026-03-07","opp":{"id":"f8c33d57-a1ba-4322-aac1-acb5b2698e4d","name":"Coastal Academy","seed":8,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Finals","result":"eliminated","depth":0.5}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "70883bec-ca17-4627-ab7f-088afc3908b0",
+  "name": "Desert Mirage",
+  "fullName": null,
+  "city": "Thermal",
+  "maxpreps": "https://www.maxpreps.com/ca/thermal/desert-mirage-rams",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
+  "best": {"season":"2018-19","competition":"cif-socal","division":"gd5","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-socal","division":"gd5","seed":3,"rounds":3,"w":2,"l":1,"d":0,"gf":10,"ga":6,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"88818d07-8fde-4a63-8786-ab3d44354a3d","name":"Hoover","seed":6,"score":2},"gf":6,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"5e899cec-d04b-4515-9b8a-23a961f49c93","name":"Notre Dame","seed":7,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2019-03-02","opp":{"id":"000472c2-dee8-4be6-bcdd-c0ff8a4582aa","name":"South El Monte","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

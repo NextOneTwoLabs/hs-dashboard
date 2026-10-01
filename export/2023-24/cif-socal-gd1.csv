@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2023-24,cif-socal,gd1,0,Round I,2024-02-27,final,,1,Santiago,3,8,Eastlake,0,top
+2023-24,cif-socal,gd1,0,Round I,2024-02-27,final,,4,Liberty,1,5,Mira Costa,2,bottom
+2023-24,cif-socal,gd1,0,Round I,2024-02-27,final,,3,Torrey Pines,1,6,Los Alamitos,2,bottom
+2023-24,cif-socal,gd1,0,Round I,2024-02-27,final,,2,Santa Margarita,5,7,Roosevelt,1,top
+2023-24,cif-socal,gd1,1,Regional Semifinals,2024-02-29,final,,1,Santiago,2,5,Mira Costa,0,top
+2023-24,cif-socal,gd1,1,Regional Semifinals,2024-02-29,final,,6,Los Alamitos,0,2,Santa Margarita,4,bottom
+2023-24,cif-socal,gd1,2,Regional Final,2024-03-02,final,pk,1,Santiago,2,2,Santa Margarita,2,bottom

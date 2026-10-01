@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2021-22,cif-socal,gd4,0,Round I,2022-03-01,final,,1,Saint Joseph,8,8,Chula Vista Learning Community Charter,0,top
+2021-22,cif-socal,gd4,0,Round I,2022-03-01,final,,4,Bakersfield Christian,6,5,South Gate,0,top
+2021-22,cif-socal,gd4,0,Round I,2022-03-01,final,,3,Marshall,10,6,Animo De La Hoya,0,top
+2021-22,cif-socal,gd4,0,Round I,2022-03-01,final,,2,Sierra Canyon,0,7,Hemet,1,bottom
+2021-22,cif-socal,gd4,1,Regional Semifinals,2022-03-03,final,,1,Saint Joseph,2,4,Bakersfield Christian,1,top
+2021-22,cif-socal,gd4,1,Regional Semifinals,2022-03-03,final,,3,Marshall,1,7,Hemet,3,bottom
+2021-22,cif-socal,gd4,2,Regional Final,2022-03-05,final,,1,Saint Joseph,3,7,Hemet,2,top

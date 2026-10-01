@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d627010f-8cc6-4595-9671-4456885d7143",
+  "name": "St. Joseph",
+  "fullName": null,
+  "city": "Santa Maria",
+  "maxpreps": "https://www.maxpreps.com/ca/santa-maria/st-joseph-knights",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":1,"l":2,"d":0},
+  "best": {"season":"2024-25","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2022-23","competition":"cif-socal","division":"gd2","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"9dc04c54-8c9d-4b30-a1d2-fcc167363342","name":"Harvard-Westlake","seed":3,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","competition":"cif-socal","division":"gd3","seed":4,"rounds":3,"w":1,"l":1,"d":0,"gf":6,"ga":6,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"a285ccfd-11c9-4c7c-b3cb-8086c9b23690","name":"San Pedro","seed":5,"score":3},"gf":4,"ga":3,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"ca1369d9-9569-41c6-9619-c64df0e7c5b0","name":"Warren","seed":1,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

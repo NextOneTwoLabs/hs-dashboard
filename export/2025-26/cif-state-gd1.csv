@@ -1,0 +1,16 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,cif-state,gd1,0,Round I,2026-03-03,final,,1,Gregori,0,8,Carondelet,2,bottom
+2025-26,cif-state,gd1,0,Round I,2026-03-03,final,,4,Saint Francis,1,5,Buchanan,2,bottom
+2025-26,cif-state,gd1,0,Round I,2026-03-03,final,,3,Los Gatos,3,6,Vacaville,1,top
+2025-26,cif-state,gd1,0,Round I,2026-03-03,final,,2,Bishop O'Dowd,4,7,Rocklin,0,top
+2025-26,cif-state,gd1,0,Round I,2026-03-03,final,pk,1,Santa Margarita,2,8,Roosevelt,2,top
+2025-26,cif-state,gd1,0,Round I,2026-03-03,final,,4,Cleveland,2,5,Redondo Union,0,top
+2025-26,cif-state,gd1,0,Round I,2026-03-03,final,,3,Mt. Carmel,0,6,Oaks Christian,1,bottom
+2025-26,cif-state,gd1,0,Round I,2026-03-03,final,,2,Mater Dei,5,7,San Marcos,0,top
+2025-26,cif-state,gd1,1,Regional Semifinals,2026-03-05,final,pk,8,Carondelet,0,5,Buchanan,0,bottom
+2025-26,cif-state,gd1,1,Regional Semifinals,2026-03-05,final,,3,Los Gatos,1,2,Bishop O'Dowd,2,bottom
+2025-26,cif-state,gd1,1,Regional Semifinals,2026-03-05,final,,1,Santa Margarita,3,4,Cleveland,0,top
+2025-26,cif-state,gd1,1,Regional Semifinals,2026-03-05,final,,6,Oaks Christian,0,2,Mater Dei,2,bottom
+2025-26,cif-state,gd1,2,Regional Finals,2026-03-07,final,,5,Buchanan,0,2,Bishop O'Dowd,4,bottom
+2025-26,cif-state,gd1,2,Regional Finals,2026-03-07,final,,1,Santa Margarita,0,2,Mater Dei,2,bottom
+2025-26,cif-state,gd1,3,State Final,2026-03-14,final,,2,Bishop O'Dowd,0,2,Mater Dei,2,bottom

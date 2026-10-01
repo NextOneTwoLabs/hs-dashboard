@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "67c08b6d-5f06-432a-a783-aee8b2a7a939",
+  "name": "Crystal Springs Uplands",
+  "fullName": null,
+  "city": "Hillsborough",
+  "maxpreps": "https://www.maxpreps.com/ca/hillsborough/crystal-springs-uplands-gryphons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2023-24","competition":"cif-norcal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-norcal","division":"gd4","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"8f97e676-a23c-43cf-8545-a474f732e6fb","name":"Kerman","seed":4,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

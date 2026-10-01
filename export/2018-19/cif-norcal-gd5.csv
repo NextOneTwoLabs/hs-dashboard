@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2018-19,cif-norcal,gd5,0,Round I,2019-02-26,final,,1,Lowell,4,8,Washington Union,0,top
+2018-19,cif-norcal,gd5,0,Round I,2019-02-26,final,,4,Ripon,3,5,Summerville,0,top
+2018-19,cif-norcal,gd5,0,Round I,2019-02-26,final,,3,Oakland Tech,4,6,Corning,0,top
+2018-19,cif-norcal,gd5,0,Round I,2019-02-26,final,,2,University Prep,5,7,Winters,0,top
+2018-19,cif-norcal,gd5,1,Regional Semi-Finals,2019-02-28,final,,1,Lowell,1,4,Ripon,0,top
+2018-19,cif-norcal,gd5,1,Regional Semi-Finals,2019-02-28,final,,3,Oakland Tech,0,2,University Prep,1,bottom
+2018-19,cif-norcal,gd5,2,Regional Final,2019-03-02,final,,1,Lowell,4,2,University Prep,0,top

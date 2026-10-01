@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2023-24,cif-norcal,gd5,0,Round I,2024-02-27,final,,1,Hilmar,3,8,Caruthers,1,top
+2023-24,cif-norcal,gd5,0,Round I,2024-02-27,final,,4,University Prep,2,5,Oakland Tech,1,top
+2023-24,cif-norcal,gd5,0,Round I,2024-02-27,final,,3,Ripon Christian,2,6,Winters,3,bottom
+2023-24,cif-norcal,gd5,0,Round I,2024-02-27,final,,2,Lowell,6,7,Hamilton,0,top
+2023-24,cif-norcal,gd5,1,Regional Semifinals,2024-02-29,final,pk,1,Hilmar,0,4,University Prep,0,top
+2023-24,cif-norcal,gd5,1,Regional Semifinals,2024-02-29,final,pk,6,Winters,1,2,Lowell,1,top
+2023-24,cif-norcal,gd5,2,Regional Final,2024-03-02,final,pk,1,Hilmar,1,6,Winters,1,bottom

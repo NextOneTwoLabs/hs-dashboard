@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "6e2527e7-3d64-4806-8002-17fa14b0d57d",
+  "name": "Troy",
+  "fullName": null,
+  "city": "Fullerton",
+  "maxpreps": "https://www.maxpreps.com/ca/fullerton/troy-warriors",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
+  "best": {"season":"2024-25","competition":"cif-socal","division":"gd2","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-socal","division":"gd2","seed":1,"rounds":3,"w":0,"l":0,"d":1,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"ad43e80f-2296-4b96-a0a9-44e6a8ea76f2","name":"Torrey Pines","seed":8,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "0595f25d-de4f-46fd-a019-41c8375e8eb2",
+  "name": "St. Bonaventure",
+  "fullName": null,
+  "city": "Ventura",
+  "maxpreps": "https://www.maxpreps.com/ca/ventura/st-bonaventure-seraphs",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":1,"l":1,"d":1},
+  "best": {"season":"2020-21","competition":"cif-socal","division":"gd5","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2020-21","competition":"cif-socal","division":"gd5","seed":1,"rounds":3,"w":1,"l":1,"d":1,"gf":3,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"48e8e576-66a4-4ae5-8bfe-912e20e9635f","name":"Arvin","seed":8,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"5fff6cdf-6099-4cfb-9297-5734517e28ff","name":"Santa Maria","seed":4,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2021-06-05","opp":{"id":"f56cf0be-7123-4d90-a325-49750478ae92","name":"Linfield Christian","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

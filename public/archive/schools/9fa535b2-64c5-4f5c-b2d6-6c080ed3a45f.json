@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "9fa535b2-64c5-4f5c-b2d6-6c080ed3a45f",
+  "name": "Sylmar",
+  "fullName": null,
+  "city": "Sylmar",
+  "maxpreps": "https://www.maxpreps.com/ca/sylmar/sylmar-spartans",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-socal","division":"gd5","seed":4,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"e384a4ce-117d-4115-bca1-c2069c5ce362","name":"Vista del Lago","seed":5,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

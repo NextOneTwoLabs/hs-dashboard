@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "055183d8-80b6-464d-aeb4-c4717a3ad782",
+  "name": "South Pasadena",
+  "fullName": null,
+  "city": "South Pasadena",
+  "maxpreps": "https://www.maxpreps.com/ca/south-pasadena/south-pasadena-tigers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2017-18","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Regional Semi-Finals"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd4","seed":3,"rounds":3,"w":1,"l":1,"d":0,"gf":4,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"d1aaa3e2-766d-4a4e-aa26-7df43dbfb1f0","name":"Marquez","seed":6,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"02277c1d-2f70-4ad7-82be-7502ec0e9380","name":"Ventura","seed":2,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+  ]
+}

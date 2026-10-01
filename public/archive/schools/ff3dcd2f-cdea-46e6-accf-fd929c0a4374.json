@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "ff3dcd2f-cdea-46e6-accf-fd929c0a4374",
+  "name": "San Marcos",
+  "fullName": null,
+  "city": "San Marcos",
+  "maxpreps": "https://www.maxpreps.com/ca/san-marcos/san-marcos-knights",
+  "summary": {"appearances":4,"titles":0,"finals":2,"w":4,"l":4,"d":1},
+  "best": {"season":"2022-23","competition":"cif-socal","division":"gd2","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-socal","division":"gd1","seed":3,"rounds":3,"w":1,"l":1,"d":1,"gf":2,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"cf3a7998-81da-42d7-8cc4-7807be38443a","name":"Villa Park","seed":6,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"91a74b43-700f-4e74-819e-d62b6dba12f7","name":"Point Loma","seed":7,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"8f350275-199e-4549-b574-2257e718069f","name":"Temecula Valley","seed":1,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667},
+    {"season":"2022-23","competition":"cif-socal","division":"gd2","seed":2,"rounds":3,"w":2,"l":1,"d":0,"gf":6,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"bbdfe0de-c4fd-47d5-92e2-6c51aa38f03e","name":"Westlake","seed":7,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"9dc04c54-8c9d-4b30-a1d2-fcc167363342","name":"Harvard-Westlake","seed":3,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2023-03-04","opp":{"id":"5a6fe733-38be-42a0-82fa-ba10a9d46975","name":"Hart","seed":1,"score":4},"gf":2,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667},
+    {"season":"2024-25","competition":"cif-socal","division":"gd1","seed":4,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"9dc04c54-8c9d-4b30-a1d2-fcc167363342","name":"Harvard-Westlake","seed":5,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"ff429903-681b-4ad1-abd7-356a7492395e","name":"Santa Margarita","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
+    {"season":"2025-26","competition":"cif-state","division":"gd1","seed":7,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"2b6b45d3-4465-4750-ba48-a273b674e37c","name":"Mater Dei","seed":2,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

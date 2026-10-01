@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "c757caad-52a9-489d-b5fa-671ef9580047",
+  "name": "Western Christian",
+  "fullName": null,
+  "city": "Upland",
+  "maxpreps": "https://www.maxpreps.com/ca/upland/western-christian-fightng-lancers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2022-23","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2022-23","competition":"cif-socal","division":"gd3","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"966e5b54-904d-4d40-81d3-8ada9df7485d","name":"Moorpark","seed":1,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

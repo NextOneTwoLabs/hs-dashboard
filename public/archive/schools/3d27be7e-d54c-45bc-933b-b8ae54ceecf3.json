@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "3d27be7e-d54c-45bc-933b-b8ae54ceecf3",
+  "name": "Artesia",
+  "fullName": null,
+  "city": "Lakewood",
+  "maxpreps": "https://www.maxpreps.com/ca/lakewood/artesia-pioneers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2023-24","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-socal","division":"gd5","seed":3,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"4a0d2ca2-1afc-481a-9a8e-d9a93937bd3b","name":"Bernstein","seed":6,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"05b41cf7-1f9d-439b-8b55-f66984cc1530","name":"Bell Gardens","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "78ad824a-61a0-462b-aa6f-1d5f6fb1bd5f",
+  "name": "La Costa Canyon",
+  "fullName": null,
+  "city": "Carlsbad",
+  "maxpreps": "https://www.maxpreps.com/ca/carlsbad/la-costa-canyon-mavericks",
+  "summary": {"appearances":4,"titles":0,"finals":0,"w":0,"l":4,"d":0},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd2","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2020-21","competition":"cif-socal","division":"gd1","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"6d02719b-1533-4cda-b01a-8e2fa0f6166c","name":"Santiago","seed":6,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2022-23","competition":"cif-socal","division":"gd1","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"cf3a7998-81da-42d7-8cc4-7807be38443a","name":"Villa Park","seed":4,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","competition":"cif-socal","division":"gd3","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"ca1369d9-9569-41c6-9619-c64df0e7c5b0","name":"Warren","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","competition":"cif-state","division":"gd2","seed":7,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"bbdfe0de-c4fd-47d5-92e2-6c51aa38f03e","name":"Westlake","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

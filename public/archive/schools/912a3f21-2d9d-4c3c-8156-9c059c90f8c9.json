@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "912a3f21-2d9d-4c3c-8156-9c059c90f8c9",
+  "name": "Crescenta Valley",
+  "fullName": null,
+  "city": "La Crescenta",
+  "maxpreps": "https://www.maxpreps.com/ca/la-crescenta/crescenta-valley-falcons",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd3","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2020-21","competition":"cif-socal","division":"gd3","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"9ef67997-7f5d-4899-b500-2d0b5c758105","name":"Westview","seed":3,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","competition":"cif-state","division":"gd3","seed":6,"rounds":4,"w":0,"l":1,"d":0,"gf":2,"ga":7,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"a043c498-a9f5-4cf1-aaf0-9dffb641ec11","name":"Ayala","seed":3,"score":7},"gf":2,"ga":7,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

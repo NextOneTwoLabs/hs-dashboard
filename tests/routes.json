@@ -1,0 +1,28 @@
+{
+  "routes": [
+    { "method": "GET", "path": "/api/v1/catalog", "status": 200, "asset": "/archive/catalog.json", "season": null },
+    { "method": "HEAD", "path": "/api/v1/status", "status": 200, "asset": "/archive/refresh-state.json", "season": null },
+    { "method": "GET", "path": "/api/v1/sources", "status": 200, "asset": "/data/sources.json", "season": null },
+    { "method": "GET", "path": "/api/v1/schools", "status": 200, "asset": "/archive/schools.json", "season": null },
+    { "method": "GET", "path": "/api/v1/schools/2b6b45d3-4465-4750-ba48-a273b674e37c", "status": 200, "asset": "/archive/schools/2b6b45d3-4465-4750-ba48-a273b674e37c.json", "season": null },
+    { "method": "GET", "path": "/api/v1/schools/..%2Fcatalog", "status": 400 },
+    { "method": "GET", "path": "/api/v1/schools/AB", "status": 400 },
+    { "method": "GET", "path": "/api/v1/seasons/2025-26/games", "status": 200, "asset": "/archive/seasons/2025-26/games.json", "season": "2025-26" },
+    { "method": "GET", "path": "/api/v1/seasons/2025-27/games", "status": 400 },
+    { "method": "GET", "path": "/api/v1/seasons/1999-00/games", "status": 200, "asset": "/archive/seasons/1999-00/games.json", "season": "1999-00" },
+    { "method": "GET", "path": "/api/v1/seasons/2026/games", "status": 400 },
+    { "method": "GET", "path": "/api/v1/seasons/2025-26/competitions/cif-state/divisions/bd1/bracket", "status": 200, "asset": "/archive/brackets/2025-26/cif-state/bd1.json", "season": "2025-26" },
+    { "method": "GET", "path": "/api/v1/seasons/2025-26/competitions/CIF/divisions/bd1/bracket", "status": 400 },
+    { "method": "GET", "path": "/api/v1/seasons/2025-26/competitions/cif-state/divisions/xd1/bracket", "status": 400 },
+    { "method": "POST", "path": "/api/v1/catalog", "status": 405 },
+    { "method": "DELETE", "path": "/api/v1/schools/2b6b45d3-4465-4750-ba48-a273b674e37c", "status": 405 },
+    { "method": "GET", "path": "/api/v1/nope", "status": 404 },
+    { "method": "GET", "path": "/api/v2/catalog", "status": 404 }
+  ],
+  "cachePolicy": [
+    { "season": null, "active": "2026-27", "expect": "no-cache" },
+    { "season": "2026-27", "active": "2026-27", "expect": "no-cache" },
+    { "season": "2025-26", "active": "2026-27", "expect": "public, max-age=86400, stale-while-revalidate=86400" },
+    { "season": "2025-26", "active": null, "expect": "no-cache" }
+  ]
+}

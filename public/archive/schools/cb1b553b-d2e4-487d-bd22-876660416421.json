@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "cb1b553b-d2e4-487d-bd22-876660416421",
+  "name": "University Prep",
+  "fullName": null,
+  "city": "Redding",
+  "maxpreps": "https://www.maxpreps.com/ca/redding/university-prep-panthers",
+  "summary": {"appearances":5,"titles":0,"finals":1,"w":6,"l":4,"d":1},
+  "best": {"season":"2018-19","competition":"cif-norcal","division":"gd5","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-norcal","division":"gd4","seed":1,"rounds":3,"w":1,"l":1,"d":0,"gf":6,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"aad4111e-e78e-4b4a-b6a8-724f76bb4345","name":"Wheatland","seed":8,"score":1},"gf":5,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"e3575c9e-ba9a-45fc-87af-b1dfd2fe6172","name":"Lowell","seed":4,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
+    {"season":"2018-19","competition":"cif-norcal","division":"gd5","seed":2,"rounds":3,"w":2,"l":1,"d":0,"gf":6,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"01e250af-f9de-4e2b-8e1a-11cc0a1fd241","name":"Winters","seed":7,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"c35eb9a1-800f-405d-956f-852dbefe5ec8","name":"Oakland Tech","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2019-03-02","opp":{"id":"e3575c9e-ba9a-45fc-87af-b1dfd2fe6172","name":"Lowell","seed":1,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667},
+    {"season":"2021-22","competition":"cif-norcal","division":"gd5","seed":8,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"b0583c73-e6f5-4d2c-95d1-8d7406652719","name":"Washington","seed":1,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"c52a9455-9f3d-4ff4-9814-1613be5e6935","name":"Kimball","seed":5,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
+    {"season":"2022-23","competition":"cif-norcal","division":"gd4","seed":3,"rounds":3,"w":1,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"1cde23d1-12a1-46a3-9ca3-8b166acfbfa9","name":"Placer","seed":6,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"280e003a-95fc-4ac2-a10b-a3773afe79ac","name":"Colfax","seed":2,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
+    {"season":"2023-24","competition":"cif-norcal","division":"gd5","seed":4,"rounds":3,"w":1,"l":0,"d":1,"gf":2,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"c35eb9a1-800f-405d-956f-852dbefe5ec8","name":"Oakland Tech","seed":5,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"754acbee-9400-40f3-a702-bb685937c321","name":"Hilmar","seed":1,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

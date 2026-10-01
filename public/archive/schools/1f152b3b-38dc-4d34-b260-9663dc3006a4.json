@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "1f152b3b-38dc-4d34-b260-9663dc3006a4",
+  "name": "Salinas",
+  "fullName": null,
+  "city": "Salinas",
+  "maxpreps": "https://www.maxpreps.com/ca/salinas/salinas-cowboys",
+  "summary": {"appearances":2,"titles":0,"finals":1,"w":3,"l":2,"d":0},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd3","result":"runner-up","reached":"State Final"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-norcal","division":"gd4","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"8f97e676-a23c-43cf-8545-a474f732e6fb","name":"Kerman","seed":4,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","competition":"cif-state","division":"gd3","seed":1,"rounds":4,"w":3,"l":1,"d":0,"gf":5,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"7ad2b4f5-955e-4a92-ac1f-a1acced4df4b","name":"University","seed":8,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"b65f2bb9-f2be-4c6c-8d6a-4e5124351523","name":"Sonoma Academy","seed":4,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Finals","date":"2026-03-07","opp":{"id":"b2158563-2344-4e5d-8dbe-15762bbfde42","name":"Oakdale","seed":2,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":3,"roundName":"State Final","date":"2026-03-14","opp":{"id":"e147e259-13ce-4929-b531-c822636769c7","name":"Quartz Hill","seed":4,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":3,"reached":"State Final","result":"runner-up","depth":0.75}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "7a833d0d-d42e-4842-afd7-507da3d1eaa8",
+  "name": "Pacifica Christian/Santa Monica",
+  "fullName": null,
+  "city": "Santa Monica",
+  "maxpreps": "https://www.maxpreps.com/ca/santa-monica/pacifica-christian-santa-monica-seawolves",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd5","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2025-26","competition":"cif-state","division":"gd5","seed":2,"rounds":4,"w":1,"l":1,"d":0,"gf":4,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"b97c14db-b675-41f1-84b1-c7069229b361","name":"Poly","seed":7,"score":3},"gf":4,"ga":3,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"30041ed8-ba8f-4008-9366-f7a9576cf5dc","name":"Kennedy","seed":3,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.25}
+  ]
+}

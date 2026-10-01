@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "f8a146fc-198e-4220-b0fc-ee145a8a81d9",
+  "name": "Bishop O'Dowd",
+  "fullName": null,
+  "city": "Oakland",
+  "maxpreps": "https://www.maxpreps.com/ca/oakland/bishop-odowd-dragons",
+  "summary": {"appearances":2,"titles":0,"finals":1,"w":3,"l":1,"d":2},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd1","result":"runner-up","reached":"State Final"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-norcal","division":"gd1","seed":8,"rounds":3,"w":0,"l":0,"d":2,"gf":2,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"38af84a6-48a9-4953-804e-cad1cc07c0ef","name":"Del Oro","seed":1,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"0f63870a-34f3-4d5b-9dbf-653c8410f969","name":"Archbishop Mitty","seed":5,"score":2},"gf":2,"ga":2,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
+    {"season":"2025-26","competition":"cif-state","division":"gd1","seed":2,"rounds":4,"w":3,"l":1,"d":0,"gf":10,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"21c1edbb-4233-47ff-8f5a-70857a366328","name":"Rocklin","seed":7,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"bdb0b593-ef7f-4c69-8c2a-e0a48c934ca7","name":"Los Gatos","seed":3,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Finals","date":"2026-03-07","opp":{"id":"54ef2b21-237c-4544-804f-af1d8e056c2b","name":"Buchanan","seed":5,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":3,"roundName":"State Final","date":"2026-03-14","opp":{"id":"2b6b45d3-4465-4750-ba48-a273b674e37c","name":"Mater Dei","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":3,"reached":"State Final","result":"runner-up","depth":0.75}
+  ]
+}

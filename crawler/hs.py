@@ -1,0 +1,191 @@
+"""High school soccer crawler / deriver.
+
+  python -m crawler.hs --refresh              crawl competitions whose window is open today
+  python -m crawler.hs --backfill             crawl every registry season not yet complete
+  python -m crawler.hs --season 2025-26       crawl one season (any state)
+  python -m crawler.hs --derive               rebuild public/archive from archive/raw (no network)
+  python -m crawler.hs --derive --check       fail if committed derived files are stale
+  python -m crawler.hs --export               also write CSV exports
+
+Crawling always runs --derive afterwards. Closed, complete divisions are
+never refetched unless --force is given.
+"""
+import argparse
+import datetime as dt
+import sys
+import time
+from html import escape
+
+from . import cif, derive, maxpreps, store
+from .fetch import Blocked, BudgetExhausted, Fetcher, NotFound
+
+
+def now_iso():
+    return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def in_window(window, today, sources):
+    if not window:
+        return False
+    r = sources.get("refresh", {})
+    start = dt.date.fromisoformat(window["start"]) - dt.timedelta(days=r.get("lookaheadDays", 2))
+    end = dt.date.fromisoformat(window["end"]) + dt.timedelta(days=r.get("lookbackDays", 3))
+    return start <= today <= end
+
+
+def raw_path(season, comp, code):
+    return store.RAW / season / comp / f"{code}.html"
+
+
+class Crawler:
+    def __init__(self, sources, fetcher, force=False, log=print):
+        self.sources = sources
+        self.fetcher = fetcher
+        self.force = force
+        self.log = log
+        self.links = store.load_json(store.LINKS, {}) or {}
+        self.crawled = []
+        self.base = sources["sources"]["cif"]["base"]
+        self.mp_base = sources["sources"]["maxpreps"]["base"]
+
+    def save_links(self):
+        store.write_json(store.LINKS, dict(sorted(self.links.items())))
+
+    def crawl(self, season, comp_id, live):
+        cfg = self.sources["seasons"][season]["competitions"][comp_id]
+        entry = self.links.setdefault(season, {}).setdefault(comp_id, {"divisions": {}})
+        status = entry.get("status")
+        if status == "missing" and not live and not self.force:
+            return
+        if status != "ok" or self.force:
+            url = self.base + cfg["path"] + "/index"
+            try:
+                _, html = self.fetcher.get(url, "cif")
+            except NotFound:
+                entry["status"] = "pending" if live else "missing"
+                self.log(f"{season} {comp_id}: index not found ({entry['status']})")
+                self.save_links()
+                return
+            found = cif.parse_index(html, cfg["path"], self.base)
+            entry["status"] = "ok" if found else "pending"
+            for code, div_url in found.items():
+                entry["divisions"].setdefault(code, {})["cif"] = div_url
+            self.save_links()
+        genders = self.sources.get("genders", ["b", "g"])
+        for code, div in sorted(entry["divisions"].items()):
+            if code[0] not in genders:
+                continue
+            self.crawl_division(season, comp_id, code, div, live)
+
+    def crawl_division(self, season, comp_id, code, div, live):
+        raw = raw_path(season, comp_id, code)
+        # A bracket with a champion never changes again.
+        if div.get("complete") and raw.exists() and not self.force:
+            return
+        if not div.get("maxpreps"):
+            try:
+                _, html = self.fetcher.get(div["cif"], "cif")
+            except NotFound:
+                div["status"] = "missing"
+                self.save_links()
+                return
+            link = cif.parse_division(html)
+            if not link:
+                div["status"] = "no-bracket"
+                self.save_links()
+                return
+            div["maxpreps"] = link
+            self.save_links()
+        final_url, html = self.fetcher.get(div["maxpreps"], "maxpreps")
+        bracket_html = maxpreps.trim(html)
+        if bracket_html is None:
+            div["status"] = "no-bracket"
+            self.save_links()
+            return
+        parsed = maxpreps.parse(bracket_html)
+        fetched = now_iso()
+        header = (f"<!-- source: {escape(final_url)} -->\n"
+                  f"<!-- fetched: {fetched} -->\n")
+        store.write_text(raw, header + bracket_html + "\n")
+        div.update({"status": "ok", "canonical": final_url, "fetchedAt": fetched,
+                    "complete": parsed["champion"] is not None})
+        self.save_links()
+        self.crawled.append(f"{season}/{comp_id}/{code}")
+        self.log(f"{season} {comp_id} {code}: {len(parsed['games'])} games"
+                 + (f", champion {parsed['champion']['name']}" if parsed["champion"] else ""))
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("--refresh", action="store_true")
+    p.add_argument("--backfill", action="store_true")
+    p.add_argument("--season")
+    p.add_argument("--force", action="store_true")
+    p.add_argument("--max-requests", type=int)
+    p.add_argument("--derive", action="store_true")
+    p.add_argument("--check", action="store_true")
+    p.add_argument("--export", action="store_true")
+    p.add_argument("--today", help="override today's date (YYYY-MM-DD) for --refresh")
+    args = p.parse_args(argv)
+
+    sources = store.load_json(store.SOURCES)
+    crawling = args.refresh or args.backfill or args.season
+    if not crawling and not args.derive and not args.export:
+        p.print_help()
+        return 2
+
+    if crawling:
+        started = time.monotonic()
+        today = dt.date.fromisoformat(args.today) if args.today else dt.date.today()
+        delays = {k: v["delaySeconds"] for k, v in sources["sources"].items()}
+        fetcher = Fetcher(delays, args.max_requests or sources["refresh"]["maxRequests"])
+        crawler = Crawler(sources, fetcher, force=args.force)
+        plan = []
+        for season, scfg in sources["seasons"].items():
+            if args.season and season != args.season:
+                continue
+            for comp_id, ccfg in scfg["competitions"].items():
+                live = in_window(ccfg.get("window"), today, sources)
+                if args.refresh and not live:
+                    continue
+                plan.append((season, comp_id, live))
+        blocked = exhausted = False
+        if args.refresh and not plan:
+            print("no competition window open today; nothing to fetch")
+        for season, comp_id, live in plan:
+            try:
+                crawler.crawl(season, comp_id, live)
+            except Blocked as e:
+                blocked = True
+                print(f"blocked by bot protection at {e}; stopping this run", file=sys.stderr)
+                break
+            except BudgetExhausted:
+                exhausted = True
+                print("request budget exhausted; continue in the next run", file=sys.stderr)
+                break
+        if plan:
+            store.write_json(store.ARCHIVE / "refresh-state.json", {
+                "schema": 1,
+                "updatedAt": now_iso(),
+                "mode": "refresh" if args.refresh else ("backfill" if args.backfill else "season"),
+                "requests": fetcher.requests,
+                "blocked": blocked,
+                "budgetExhausted": exhausted,
+                "crawled": crawler.crawled,
+                "failed": fetcher.failed,
+                "durationSeconds": round(time.monotonic() - started, 1),
+            })
+
+    changed = derive.build_all(sources, check=args.check, export=args.export)
+    if args.check:
+        if changed:
+            print("derived files are stale:\n  " + "\n  ".join(changed), file=sys.stderr)
+            return 1
+        print("derived files are up to date")
+    elif changed:
+        print(f"derived: {len(changed)} file(s) written")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

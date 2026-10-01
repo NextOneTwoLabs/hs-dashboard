@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "dd1fc5bd-c075-4fe3-86dc-70112b7e6217",
+  "name": "Pioneer",
+  "fullName": null,
+  "city": "San Jose",
+  "maxpreps": "https://www.maxpreps.com/ca/san-jose/pioneer-mustangs",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
+  "best": {"season":"2021-22","competition":"cif-norcal","division":"gd4","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-norcal","division":"gd4","seed":3,"rounds":3,"w":2,"l":1,"d":0,"gf":5,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"b65f2bb9-f2be-4c6c-8d6a-4e5124351523","name":"Sonoma Academy","seed":6,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"87282a7f-872a-4aef-bd98-9a5b8a6fd154","name":"California","seed":7,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"773e862d-e186-44aa-b268-461b4064ce52","name":"Christopher","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

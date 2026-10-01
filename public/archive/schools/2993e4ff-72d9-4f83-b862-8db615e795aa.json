@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "id": "2993e4ff-72d9-4f83-b862-8db615e795aa",
+  "name": "Shasta",
+  "fullName": null,
+  "city": "Redding",
+  "maxpreps": "https://www.maxpreps.com/ca/redding/shasta-wolves",
+  "summary": {"appearances":3,"titles":0,"finals":0,"w":1,"l":2,"d":1},
+  "best": {"season":"2017-18","competition":"cif-norcal","division":"gd3","result":"eliminated","reached":"Regional Semi-Finals"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-norcal","division":"gd3","seed":1,"rounds":3,"w":1,"l":0,"d":1,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"10b6b0d4-4578-4c51-addd-ddf668901d2c","name":"Ygnacio Valley","seed":8,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"7826ff5b-bbb2-4469-99b7-6a217240afa8","name":"Bradshaw Christian","seed":4,"score":2},"gf":2,"ga":2,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
+    {"season":"2018-19","competition":"cif-norcal","division":"gd4","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"1bdbd887-aea2-44b1-8cd0-9be5f0d20a0c","name":"El Camino","seed":6,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","competition":"cif-state","division":"gd4","seed":7,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"ef272e7e-917f-42aa-acc2-6eba92c7a19b","name":"Twelve Bridges","seed":2,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

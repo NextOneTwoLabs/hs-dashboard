@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "a858d139-5648-40b3-8ff6-8d946185ab7b",
+  "name": "Hemet",
+  "fullName": "Hemet Bulldogs",
+  "city": "Hemet",
+  "maxpreps": "https://www.maxpreps.com/ca/hemet/hemet-bulldogs",
+  "summary": {"appearances":2,"titles":1,"finals":2,"w":5,"l":1,"d":0},
+  "best": {"season":"2022-23","competition":"cif-socal","division":"gd4","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-socal","division":"gd4","seed":7,"rounds":3,"w":2,"l":1,"d":0,"gf":6,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"3e6d32d9-9a21-4391-aba1-d59804bf82e6","name":"Sierra Canyon","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"d69e2853-30b1-4411-9e4f-906a66267f6d","name":"Marshall","seed":3,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"c43b6abd-9e83-4b98-ba96-ce6b34234e03","name":"Saint Joseph","seed":1,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667},
+    {"season":"2022-23","competition":"cif-socal","division":"gd4","seed":5,"rounds":3,"w":3,"l":0,"d":0,"gf":9,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"0875f91d-390a-4e48-a697-78f8882e2084","name":"Monte Vista","seed":4,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"212ca817-5dfb-4f37-9bdd-2e5b6dde76aa","name":"El Rancho","seed":1,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2023-03-04","opp":{"id":"6a4bb546-7266-4859-81e0-936887fa3c98","name":"Crean Lutheran","seed":3,"score":0},"gf":2,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+  ]
+}

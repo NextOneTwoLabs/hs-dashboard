@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "6f0346b8-781a-4f07-bab2-039274fa276d",
+  "name": "Paraclete",
+  "fullName": null,
+  "city": "Lancaster",
+  "maxpreps": "https://www.maxpreps.com/ca/lancaster/paraclete-spirits",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2020-21","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Regional Semi-Finals"},
+  "appearances": [
+    {"season":"2020-21","competition":"cif-socal","division":"gd4","seed":7,"rounds":3,"w":1,"l":1,"d":0,"gf":2,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"11d301cc-ae2a-4a89-aeee-87c24587f496","name":"Los Angeles CES","seed":2,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"258374d8-324b-422b-ae6f-060b059510e7","name":"San Dimas","seed":3,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+  ]
+}

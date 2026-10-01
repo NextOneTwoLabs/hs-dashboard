@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "sport": "soccer",
+  "state": "CA",
+  "genders": ["g"],
+  "activeSeason": "2026-27",
+  "sources": {
+    "cif": { "base": "https://www.cifstate.org/sports/soccer/", "delaySeconds": 8 },
+    "maxpreps": { "base": "https://www.maxpreps.com", "delaySeconds": 4 }
+  },
+  "competitions": {
+    "cif-state": { "label": "CIF State Championships", "short": "State" },
+    "cif-norcal": { "label": "CIF NorCal Regional Championships", "short": "NorCal" },
+    "cif-socal": { "label": "CIF SoCal Regional Championships", "short": "SoCal" }
+  },
+  "refresh": { "maxRequests": 60, "lookaheadDays": 2, "lookbackDays": 3 },
+  "seasons": {
+    "2017-18": { "competitions": { "cif-norcal": { "path": "NorCal_brkts_2018" }, "cif-socal": { "path": "SoCal_brkts_2018" } } },
+    "2018-19": { "competitions": { "cif-norcal": { "path": "NorCal_brkts_2019" }, "cif-socal": { "path": "SoCal_brkts_2019" } } },
+    "2019-20": { "competitions": {}, "note": "Regional championships cancelled (COVID-19)." },
+    "2020-21": { "competitions": { "cif-socal": { "path": "SoCal_brkts_2021" } } },
+    "2021-22": { "competitions": { "cif-norcal": { "path": "NorCal_brkts_2022" }, "cif-socal": { "path": "SoCal_brkts_2022" } } },
+    "2022-23": { "competitions": { "cif-norcal": { "path": "NorCal_brkts_2023" }, "cif-socal": { "path": "SoCal_brkts_2023" } } },
+    "2023-24": { "competitions": { "cif-norcal": { "path": "NorCal_brkts_2024" }, "cif-socal": { "path": "SoCal_brkts_2024" } } },
+    "2024-25": { "competitions": { "cif-norcal": { "path": "NorCal_brkts_2025" }, "cif-socal": { "path": "SoCal_brkts_2025" } } },
+    "2025-26": { "competitions": { "cif-state": { "path": "brkts_2026", "window": { "start": "2026-02-27", "end": "2026-03-16" } } } },
+    "2026-27": { "competitions": { "cif-state": { "path": "brkts_2027", "window": { "start": "2027-02-25", "end": "2027-03-16" } } } }
+  }
+}

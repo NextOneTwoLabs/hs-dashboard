@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "c3d3c40c-8434-48d8-8561-b6920c22062b",
+  "name": "Foothill",
+  "fullName": null,
+  "city": "Pleasanton",
+  "maxpreps": "https://www.maxpreps.com/ca/pleasanton/foothill-falcons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2017-18","competition":"cif-norcal","division":"gd1","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-norcal","division":"gd1","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"0f63870a-34f3-4d5b-9dbf-653c8410f969","name":"Archbishop Mitty","seed":2,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

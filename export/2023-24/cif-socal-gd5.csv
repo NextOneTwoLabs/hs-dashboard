@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2023-24,cif-socal,gd5,0,Round I,2024-02-27,final,,1,Diamond Ranch,8,8,Magnolia Science Academy Reseda,0,top
+2023-24,cif-socal,gd5,0,Round I,2024-02-27,final,,4,South East,1,5,Maranatha,2,bottom
+2023-24,cif-socal,gd5,0,Round I,2024-02-27,final,,3,Artesia,3,6,Bernstein,1,top
+2023-24,cif-socal,gd5,0,Round I,2024-02-27,final,,2,Bell Gardens,3,7,Mar Vista,2,top
+2023-24,cif-socal,gd5,1,Regional Semifinals,2024-02-29,final,,1,Diamond Ranch,1,5,Maranatha,0,top
+2023-24,cif-socal,gd5,1,Regional Semifinals,2024-02-29,final,,3,Artesia,0,2,Bell Gardens,2,bottom
+2023-24,cif-socal,gd5,2,Regional Final,2024-03-02,final,,1,Diamond Ranch,4,2,Bell Gardens,0,top

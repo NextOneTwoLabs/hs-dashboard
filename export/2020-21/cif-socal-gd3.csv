@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2020-21,cif-socal,gd3,0,Round I,2021-06-01,final,,1,King,1,8,Buena,2,bottom
+2020-21,cif-socal,gd3,0,Round I,2021-06-01,final,pk,4,El Camino Real,0,5,Alta Loma,0,bottom
+2020-21,cif-socal,gd3,0,Round I,2021-06-01,final,,3,Westview,3,6,Crescenta Valley,2,top
+2020-21,cif-socal,gd3,0,Round I,2021-06-01,final,,2,Hanford,1,7,Kingsburg,0,top
+2020-21,cif-socal,gd3,1,Regional Semi-Finals,2021-06-03,final,,8,Buena,0,5,Alta Loma,5,bottom
+2020-21,cif-socal,gd3,1,Regional Semi-Finals,2021-06-03,final,,3,Westview,2,2,Hanford,0,top
+2020-21,cif-socal,gd3,2,Regional Final,,final,,5,Alta Loma,0,3,Westview,2,bottom

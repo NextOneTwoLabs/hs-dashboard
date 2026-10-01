@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "21c1edbb-4233-47ff-8f5a-70857a366328",
+  "name": "Rocklin",
+  "fullName": null,
+  "city": "Rocklin",
+  "maxpreps": "https://www.maxpreps.com/ca/rocklin/rocklin-thunder",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd1","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-norcal","division":"gd1","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"db693a74-09e7-4f63-982b-d3cbb3cf138a","name":"Amador Valley","seed":6,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","competition":"cif-state","division":"gd1","seed":7,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"f8a146fc-198e-4220-b0fc-ee145a8a81d9","name":"Bishop O'Dowd","seed":2,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

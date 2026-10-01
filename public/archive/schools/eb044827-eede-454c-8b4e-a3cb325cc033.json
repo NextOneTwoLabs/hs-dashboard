@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "eb044827-eede-454c-8b4e-a3cb325cc033",
+  "name": "Gardena",
+  "fullName": null,
+  "city": "Gardena",
+  "maxpreps": "https://www.maxpreps.com/ca/gardena/gardena-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2020-21","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2020-21","competition":"cif-socal","division":"gd5","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"5fff6cdf-6099-4cfb-9297-5734517e28ff","name":"Santa Maria","seed":4,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

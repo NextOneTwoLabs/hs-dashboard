@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "9c6ee102-3437-4054-bc67-68e04bd497bf",
+  "name": "Webb",
+  "fullName": "Webb Gauls",
+  "city": "Claremont",
+  "maxpreps": "https://www.maxpreps.com/ca/claremont/the-webb-school-gauls",
+  "summary": {"appearances":2,"titles":1,"finals":1,"w":2,"l":2,"d":0},
+  "best": {"season":"2021-22","competition":"cif-socal","division":"gd5","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-socal","division":"gd5","seed":1,"rounds":3,"w":2,"l":1,"d":0,"gf":12,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":null,"gf":null,"ga":null,"res":"L","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"92e9dc22-a265-49d6-8b02-28ba33858f24","name":"Mount Miguel","seed":4,"score":2},"gf":9,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"21b5019c-a9d1-4d42-8065-37b4ee7aaad0","name":"Arrowhead Christian","seed":2,"score":2},"gf":3,"ga":2,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0},
+    {"season":"2025-26","competition":"cif-state","division":"gd5","seed":4,"rounds":4,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"326393a3-25f4-4e4c-9102-79108e7d35a8","name":"Bravo","seed":5,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

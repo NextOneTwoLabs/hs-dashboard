@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "6ffd5704-345e-4ec2-bfa4-0aff6800306b",
+  "name": "Notre Dame",
+  "fullName": null,
+  "city": "Belmont",
+  "maxpreps": "https://www.maxpreps.com/ca/belmont/notre-dame-tigers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
+  "best": {"season":"2018-19","competition":"cif-norcal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-norcal","division":"gd3","seed":8,"rounds":3,"w":0,"l":0,"d":1,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"9f489fa8-a23a-4924-a2a0-5c5cff3c0fdc","name":"Marin Academy","seed":1,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

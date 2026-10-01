@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "0ec72890-2274-4c03-b87b-4b42c604c562",
+  "name": "Terra Linda",
+  "fullName": null,
+  "city": "San Rafael",
+  "maxpreps": "https://www.maxpreps.com/ca/san-rafael/terra-linda-trojans",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2025-26","competition":"cif-state","division":"gd4","seed":6,"rounds":4,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"f133ba52-590e-4f91-b798-d9c06fd9fc4c","name":"Menlo School","seed":3,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

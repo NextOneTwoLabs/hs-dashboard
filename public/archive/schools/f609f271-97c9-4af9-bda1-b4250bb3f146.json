@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "f609f271-97c9-4af9-bda1-b4250bb3f146",
+  "name": "Folsom",
+  "fullName": null,
+  "city": "Folsom",
+  "maxpreps": "https://www.maxpreps.com/ca/folsom/folsom-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd1","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-norcal","division":"gd1","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"de6d3780-e8f6-4a2a-93f2-b5d89499f9b0","name":"Saint Francis","seed":2,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

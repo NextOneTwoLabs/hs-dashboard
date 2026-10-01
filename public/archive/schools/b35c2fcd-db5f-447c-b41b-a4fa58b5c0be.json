@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "b35c2fcd-db5f-447c-b41b-a4fa58b5c0be",
+  "name": "Christian Brothers",
+  "fullName": "Christian Brothers Falcons",
+  "city": "Sacramento",
+  "maxpreps": "https://www.maxpreps.com/ca/sacramento/christian-brothers-falcons",
+  "summary": {"appearances":2,"titles":1,"finals":1,"w":2,"l":1,"d":2},
+  "best": {"season":"2022-23","competition":"cif-norcal","division":"gd3","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-norcal","division":"gd2","seed":4,"rounds":3,"w":1,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"12616b84-157c-48d3-b353-434576d9df8d","name":"Redwood","seed":5,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"1d925979-4b0f-4e53-a5d3-848ea1c06834","name":"Granite Bay","seed":1,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
+    {"season":"2022-23","competition":"cif-norcal","division":"gd3","seed":2,"rounds":3,"w":1,"l":0,"d":2,"gf":7,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"041ef7b7-089b-4e7d-9c9c-9ff1f833f829","name":"Chico","seed":7,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"093dfd99-3456-4fa9-98ba-7f1a93af473b","name":"Windsor","seed":6,"score":1},"gf":1,"ga":1,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2023-03-04","opp":{"id":"ad47af1b-1b44-42d7-ac0e-a495ff09a7e7","name":"Cardinal Newman","seed":4,"score":1},"gf":1,"ga":1,"res":"D","pk":"W"}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+  ]
+}

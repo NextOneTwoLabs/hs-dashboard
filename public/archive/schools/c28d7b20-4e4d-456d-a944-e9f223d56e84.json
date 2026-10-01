@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "c28d7b20-4e4d-456d-a944-e9f223d56e84",
+  "name": "Pacifica",
+  "fullName": null,
+  "city": "Garden Grove",
+  "maxpreps": "https://www.maxpreps.com/ca/garden-grove/pacifica-mariners",
+  "summary": {"appearances":2,"titles":0,"finals":1,"w":3,"l":2,"d":0},
+  "best": {"season":"2020-21","competition":"cif-socal","division":"gd1","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd3","seed":2,"rounds":3,"w":1,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"688ec7f8-2985-4e7e-900a-4d78f845b197","name":"Mt. Carmel","seed":7,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"74924b7c-c128-4c04-8456-c5d51dbeb0e7","name":"Academy of Our Lady of Peace","seed":3,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
+    {"season":"2020-21","competition":"cif-socal","division":"gd1","seed":7,"rounds":3,"w":2,"l":1,"d":0,"gf":4,"ga":7,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"6846297a-f90b-4f26-8677-446dc97366c5","name":"Clovis North","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"6d02719b-1533-4cda-b01a-8e2fa0f6166c","name":"Santiago","seed":6,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2021-06-05","opp":{"id":"9dc04c54-8c9d-4b30-a1d2-fcc167363342","name":"Harvard-Westlake","seed":1,"score":6},"gf":1,"ga":6,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

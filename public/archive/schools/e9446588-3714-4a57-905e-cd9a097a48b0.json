@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "e9446588-3714-4a57-905e-cd9a097a48b0",
+  "name": "Mission Vista",
+  "fullName": null,
+  "city": "Oceanside",
+  "maxpreps": "https://www.maxpreps.com/ca/oceanside/mission-vista",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2025-26","competition":"cif-state","division":"gd4","seed":6,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"239c4e28-a48f-4cf3-ab07-db3613861d20","name":"San Jacinto","seed":3,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

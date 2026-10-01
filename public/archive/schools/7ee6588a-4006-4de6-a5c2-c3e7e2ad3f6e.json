@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "7ee6588a-4006-4de6-a5c2-c3e7e2ad3f6e",
+  "name": "Mission Oak",
+  "fullName": null,
+  "city": "Tulare",
+  "maxpreps": "https://www.maxpreps.com/ca/tulare/mission-oak-hawks",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2018-19","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-socal","division":"gd3","seed":4,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"b32b852a-6016-4fdf-9008-a20b47b679af","name":"Culver City","seed":5,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

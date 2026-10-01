@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2024-25,cif-socal,gd4,0,Round I,2025-03-04,final,pk,1,Sage Hill,2,8,San Diego,2,top
+2024-25,cif-socal,gd4,0,Round I,2025-03-04,final,,4,Viewpoint,3,5,Santa Maria,4,bottom
+2024-25,cif-socal,gd4,0,Round I,2025-03-04,final,,3,Banning,0,6,Heritage,5,bottom
+2024-25,cif-socal,gd4,0,Round I,2025-03-04,final,,2,La Mirada,1,7,Eagle Rock,0,top
+2024-25,cif-socal,gd4,1,Regional Semifinals,2025-03-06,final,,1,Sage Hill,1,5,Santa Maria,0,top
+2024-25,cif-socal,gd4,1,Regional Semifinals,2025-03-06,final,,6,Heritage,0,2,La Mirada,1,bottom
+2024-25,cif-socal,gd4,2,Regional Final,2025-03-08,final,,1,Sage Hill,0,2,La Mirada,1,bottom

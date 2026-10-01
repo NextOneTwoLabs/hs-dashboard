@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "ee8f04c3-1a53-472a-9b27-86337d28def1",
+  "name": "Summerville",
+  "fullName": null,
+  "city": "Tuolumne",
+  "maxpreps": "https://www.maxpreps.com/ca/tuolumne/summerville-bears",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2018-19","competition":"cif-norcal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-norcal","division":"gd5","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"67b79ebf-71d4-4b9b-93a0-20d52fbf2110","name":"Ripon","seed":4,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

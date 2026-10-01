@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "2336e4f9-fbda-43b7-9767-395aca2ace78",
+  "name": "Narbonne",
+  "fullName": null,
+  "city": "Harbor City",
+  "maxpreps": "https://www.maxpreps.com/ca/harbor-city/narbonne-gauchos",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2017-18","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd3","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":14,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"5bb3581c-7c17-4942-a860-a7f998d7068b","name":"Flintridge Prep","seed":1,"score":14},"gf":1,"ga":14,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

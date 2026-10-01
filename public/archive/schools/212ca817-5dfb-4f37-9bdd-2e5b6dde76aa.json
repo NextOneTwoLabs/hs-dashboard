@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "212ca817-5dfb-4f37-9bdd-2e5b6dde76aa",
+  "name": "El Rancho",
+  "fullName": null,
+  "city": "Pico Rivera",
+  "maxpreps": "https://www.maxpreps.com/ca/pico-rivera/el-rancho-dons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2022-23","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2022-23","competition":"cif-socal","division":"gd4","seed":1,"rounds":3,"w":1,"l":1,"d":0,"gf":4,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"fb4075b0-fb40-492f-b69b-5738486d0687","name":"GALA","seed":8,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"a858d139-5648-40b3-8ff6-8d946185ab7b","name":"Hemet","seed":5,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

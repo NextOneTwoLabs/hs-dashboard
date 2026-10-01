@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "id": "cb134f17-80c0-44ef-9e36-1e3dc29c2fdc",
+  "name": "Venice",
+  "fullName": null,
+  "city": "Los Angeles",
+  "maxpreps": "https://www.maxpreps.com/ca/los-angeles/venice-gondoliers",
+  "summary": {"appearances":3,"titles":0,"finals":0,"w":0,"l":2,"d":1},
+  "best": {"season":"2021-22","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-socal","division":"gd5","seed":5,"rounds":3,"w":0,"l":0,"d":1,"gf":0,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"48e8e576-66a4-4ae5-8bfe-912e20e9635f","name":"Arvin","seed":4,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2020-21","competition":"cif-socal","division":"gd4","seed":4,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"686a54d1-81c5-44b8-8e1f-2f094ce5902a","name":"Exeter","seed":5,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2021-22","competition":"cif-socal","division":"gd3","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":11,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"d3e4b657-c16c-421f-ba55-b0ce044f9d4c","name":"West","seed":2,"score":11},"gf":0,"ga":11,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

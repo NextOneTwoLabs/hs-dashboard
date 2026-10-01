@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "01e250af-f9de-4e2b-8e1a-11cc0a1fd241",
+  "name": "Winters",
+  "fullName": "Winters Warriors",
+  "city": "Winters",
+  "maxpreps": "https://www.maxpreps.com/ca/winters/winters-warriors",
+  "summary": {"appearances":6,"titles":1,"finals":1,"w":1,"l":5,"d":2},
+  "best": {"season":"2023-24","competition":"cif-norcal","division":"gd5","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-norcal","division":"gd4","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"8f1a8024-2d40-4cab-bcba-3b9b367c6873","name":"Corning","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2018-19","competition":"cif-norcal","division":"gd5","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"cb1b553b-d2e4-487d-bd22-876660416421","name":"University Prep","seed":2,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2022-23","competition":"cif-norcal","division":"gd5","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"e3575c9e-ba9a-45fc-87af-b1dfd2fe6172","name":"Lowell","seed":2,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2023-24","competition":"cif-norcal","division":"gd5","seed":6,"rounds":3,"w":1,"l":0,"d":2,"gf":5,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"33f6ddc6-d95f-4534-b600-6aec25fac907","name":"Ripon Christian","seed":3,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"e3575c9e-ba9a-45fc-87af-b1dfd2fe6172","name":"Lowell","seed":2,"score":1},"gf":1,"ga":1,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2024-03-02","opp":{"id":"754acbee-9400-40f3-a702-bb685937c321","name":"Hilmar","seed":1,"score":1},"gf":1,"ga":1,"res":"D","pk":"W"}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0},
+    {"season":"2024-25","competition":"cif-norcal","division":"gd4","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"6deaadb4-0c1a-4e30-9f52-a47b5c872b76","name":"Petaluma","seed":4,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","competition":"cif-state","division":"gd4","seed":8,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"69e24861-fa93-42a2-acb5-be60e01ee555","name":"Marin Catholic","seed":1,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "74c1621c-e0cf-4821-b5e1-3c8170c8125a",
+  "name": "Oak Ridge",
+  "fullName": "Oak Ridge Trojans",
+  "city": "El Dorado Hills",
+  "maxpreps": "https://www.maxpreps.com/ca/el-dorado-hills/oak-ridge-trojans",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":2,"l":0,"d":1},
+  "best": {"season":"2021-22","competition":"cif-norcal","division":"gd1","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-norcal","division":"gd1","seed":1,"rounds":3,"w":2,"l":0,"d":1,"gf":7,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"093dfd99-3456-4fa9-98ba-7f1a93af473b","name":"Windsor","seed":8,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"09beba1b-240a-45b8-aa6e-281decefa275","name":"Mountain View","seed":4,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2022-03-05","opp":{"id":"54ef2b21-237c-4544-804f-af1d8e056c2b","name":"Buchanan","seed":3,"score":2},"gf":2,"ga":2,"res":"D","pk":"W"}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+  ]
+}

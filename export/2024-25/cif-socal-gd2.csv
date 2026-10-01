@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2024-25,cif-socal,gd2,0,Round I,2025-03-04,final,pk,1,Troy,1,8,Torrey Pines,1,bottom
+2024-25,cif-socal,gd2,0,Round I,2025-03-04,final,,4,Granada Hills Charter,1,5,Westview,0,top
+2024-25,cif-socal,gd2,0,Round I,2025-03-04,final,pk,3,San Luis Obispo,0,6,Westlake,0,top
+2024-25,cif-socal,gd2,0,Round I,2025-03-04,final,,2,Orange Lutheran,4,7,Cleveland,0,top
+2024-25,cif-socal,gd2,1,Regional Semifinals,2025-03-06,final,,8,Torrey Pines,1,4,Granada Hills Charter,0,top
+2024-25,cif-socal,gd2,1,Regional Semifinals,2025-03-06,final,,3,San Luis Obispo,0,2,Orange Lutheran,2,bottom
+2024-25,cif-socal,gd2,2,Regional Final,2025-03-08,final,,8,Torrey Pines,1,2,Orange Lutheran,0,top

@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "b887560d-fc7a-48c0-a962-ae7d4ada9719",
+  "name": "Garces Memorial",
+  "fullName": null,
+  "city": "Bakersfield",
+  "maxpreps": "https://www.maxpreps.com/ca/bakersfield/garces-memorial-rams",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":2,"l":2,"d":0},
+  "best": {"season":"2023-24","competition":"cif-socal","division":"gd2","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-socal","division":"gd2","seed":5,"rounds":3,"w":1,"l":1,"d":0,"gf":2,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"68a421c5-cca9-497e-8645-2049ebc86149","name":"Cleveland","seed":4,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"9ef67997-7f5d-4899-b500-2d0b5c758105","name":"Westview","seed":8,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
+    {"season":"2025-26","competition":"cif-state","division":"gd2","seed":3,"rounds":4,"w":1,"l":1,"d":0,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"1fd5ff77-0482-4f19-a9c2-e03a6ef04ce8","name":"Granada Hills Charter","seed":6,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"bbdfe0de-c4fd-47d5-92e2-6c51aa38f03e","name":"Westlake","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.25}
+  ]
+}

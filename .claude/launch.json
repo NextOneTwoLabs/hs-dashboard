@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "dev", "runtimeExecutable": "python", "runtimeArgs": ["dev_server.py", "--port", "8787"], "port": 8787 },
+    { "name": "worker", "runtimeExecutable": "npx", "runtimeArgs": ["wrangler", "dev", "--port", "8788"], "port": 8788 }
+  ]
+}

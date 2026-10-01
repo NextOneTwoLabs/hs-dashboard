@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "b5c4f1b5-f988-47a4-b6bc-b115d24467fd",
+  "name": "Whittier Christian",
+  "fullName": null,
+  "city": "La Habra",
+  "maxpreps": "https://www.maxpreps.com/ca/la-habra/whittier-christian-heralds",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-socal","division":"gd5","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-socal","division":"gd5","seed":3,"rounds":3,"w":2,"l":1,"d":0,"gf":6,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"07859ad1-be4e-4969-be8b-28c0871933b0","name":"Lincoln","seed":6,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"64f553bb-6b41-4da9-a228-e7dcf8539a18","name":"Temecula Prep","seed":7,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2025-03-08","opp":{"id":"e384a4ce-117d-4115-bca1-c2069c5ce362","name":"Vista del Lago","seed":5,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "a8d1fb44-0502-4665-8619-435b1045761f",
+  "name": "Buena",
+  "fullName": null,
+  "city": "Ventura",
+  "maxpreps": "https://www.maxpreps.com/ca/ventura/buena-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2020-21","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Regional Semi-Finals"},
+  "appearances": [
+    {"season":"2020-21","competition":"cif-socal","division":"gd3","seed":8,"rounds":3,"w":1,"l":1,"d":0,"gf":2,"ga":6,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"270001f4-fe6f-457e-bc15-af447860a2cf","name":"King","seed":1,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"b5b69b00-252c-4c74-8165-56bf0432c321","name":"Alta Loma","seed":5,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+  ]
+}

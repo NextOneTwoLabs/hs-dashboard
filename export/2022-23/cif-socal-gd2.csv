@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2022-23,cif-socal,gd2,0,Round I,2023-02-28,final,,1,Hart,2,8,El Camino Real,0,top
+2022-23,cif-socal,gd2,0,Round I,2023-02-28,final,,4,West Hills,3,5,Etiwanda,2,top
+2022-23,cif-socal,gd2,0,Round I,2023-02-28,final,,3,Harvard-Westlake,3,6,St. Joseph,2,top
+2022-23,cif-socal,gd2,0,Round I,2023-02-28,final,,2,San Marcos,2,7,Westlake,1,top
+2022-23,cif-socal,gd2,1,Regional Semifinals,2023-03-02,final,,1,Hart,2,4,West Hills,0,top
+2022-23,cif-socal,gd2,1,Regional Semifinals,2023-03-02,final,,3,Harvard-Westlake,0,2,San Marcos,2,bottom
+2022-23,cif-socal,gd2,2,Regional Final,2023-03-04,final,,1,Hart,4,2,San Marcos,2,top

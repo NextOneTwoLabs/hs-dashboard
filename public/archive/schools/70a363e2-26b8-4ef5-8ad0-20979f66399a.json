@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "70a363e2-26b8-4ef5-8ad0-20979f66399a",
+  "name": "Thousand Oaks",
+  "fullName": null,
+  "city": "Thousand Oaks",
+  "maxpreps": "https://www.maxpreps.com/ca/thousand-oaks/thousand-oaks-lancers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-socal","division":"gd3","seed":3,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"1982cdd7-b066-4104-9b36-b4b4ef67f33a","name":"Foothill","seed":6,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"e71f479e-b2c8-48da-a8b4-4f270c3afb92","name":"Patrick Henry","seed":2,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

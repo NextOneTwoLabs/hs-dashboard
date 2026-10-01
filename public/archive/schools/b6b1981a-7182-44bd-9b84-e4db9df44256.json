@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "id": "b6b1981a-7182-44bd-9b84-e4db9df44256",
+  "name": "Campolindo",
+  "fullName": null,
+  "city": "Moraga",
+  "maxpreps": "https://www.maxpreps.com/ca/moraga/campolindo-cougars",
+  "summary": {"appearances":3,"titles":0,"finals":0,"w":1,"l":3,"d":0},
+  "best": {"season":"2018-19","competition":"cif-norcal","division":"gd4","result":"eliminated","reached":"Regional Semi-Finals"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-norcal","division":"gd3","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"1806a4eb-3371-4e7c-a755-835229bc515e","name":"Sacred Heart Cathedral Preparatory","seed":2,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2018-19","competition":"cif-norcal","division":"gd4","seed":7,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"27d82a51-2b44-492e-b2cf-114730027de3","name":"Sacred Heart Prep","seed":2,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"1bdbd887-aea2-44b1-8cd0-9be5f0d20a0c","name":"El Camino","seed":6,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
+    {"season":"2021-22","competition":"cif-norcal","division":"gd3","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"0279f2de-d5ce-484d-b210-2286ded42058","name":"Los Altos","seed":3,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

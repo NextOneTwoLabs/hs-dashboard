@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "810f4e87-4ffe-4af6-88c7-50d1c0fa27db",
+  "name": "Washington Union",
+  "fullName": null,
+  "city": "Fresno",
+  "maxpreps": "https://www.maxpreps.com/ca/fresno/washington-union-panthers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2018-19","competition":"cif-norcal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-norcal","division":"gd5","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"e3575c9e-ba9a-45fc-87af-b1dfd2fe6172","name":"Lowell","seed":1,"score":4},"gf":0,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

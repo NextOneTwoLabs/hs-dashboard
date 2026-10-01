@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "f4344874-0eb2-4c23-aa5f-4322013af0d1",
+  "name": "Rosamond",
+  "fullName": null,
+  "city": "Rosamond",
+  "maxpreps": "https://www.maxpreps.com/ca/rosamond/rosamond-roadrunners",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2017-18","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd5","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":7,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"429328a8-e18e-48d6-8b38-509d8e03ab03","name":"Fillmore","seed":3,"score":7},"gf":0,"ga":7,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

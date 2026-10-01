@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "738a2432-7acb-4ad6-b041-115ec0f331c2",
+  "name": "Homestead",
+  "fullName": null,
+  "city": "Cupertino",
+  "maxpreps": "https://www.maxpreps.com/ca/cupertino/homestead-mustangs",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":1,"l":2,"d":0},
+  "best": {"season":"2023-24","competition":"cif-norcal","division":"gd2","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-norcal","division":"gd2","seed":5,"rounds":3,"w":1,"l":1,"d":0,"gf":4,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"041ef7b7-089b-4e7d-9c9c-9ff1f833f829","name":"Chico","seed":4,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"aa03a009-dae4-4fec-8061-b1b804a31e12","name":"St. Francis","seed":1,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
+    {"season":"2024-25","competition":"cif-norcal","division":"gd2","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"1d925979-4b0f-4e53-a5d3-848ea1c06834","name":"Granite Bay","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

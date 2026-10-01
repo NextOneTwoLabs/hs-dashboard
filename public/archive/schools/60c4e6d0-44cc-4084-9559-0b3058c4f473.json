@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "60c4e6d0-44cc-4084-9559-0b3058c4f473",
+  "name": "Alliance Marine-Innovation & Technology",
+  "fullName": null,
+  "city": "Sun Valley",
+  "maxpreps": "https://www.maxpreps.com/ca/sun-valley/alliance-marine-innovation-and-technology-griffins",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2022-23","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2022-23","competition":"cif-socal","division":"gd5","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":8,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"322eaa3a-448f-4aaa-acf9-24bee7888f6b","name":"Ramona","seed":1,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

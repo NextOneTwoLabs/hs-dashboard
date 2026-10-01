@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "67b79ebf-71d4-4b9b-93a0-20d52fbf2110",
+  "name": "Ripon",
+  "fullName": null,
+  "city": "Ripon",
+  "maxpreps": "https://www.maxpreps.com/ca/ripon/ripon-indians",
+  "summary": {"appearances":2,"titles":0,"finals":1,"w":3,"l":2,"d":0},
+  "best": {"season":"2017-18","competition":"cif-norcal","division":"gd4","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-norcal","division":"gd4","seed":3,"rounds":3,"w":2,"l":1,"d":0,"gf":7,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"22baf74e-d753-4ec7-82b1-89709272d2d2","name":"Golden Sierra","seed":6,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"8f1a8024-2d40-4cab-bcba-3b9b367c6873","name":"Corning","seed":2,"score":2},"gf":3,"ga":2,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2018-03-10","opp":{"id":"e3575c9e-ba9a-45fc-87af-b1dfd2fe6172","name":"Lowell","seed":4,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667},
+    {"season":"2018-19","competition":"cif-norcal","division":"gd5","seed":4,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"ee8f04c3-1a53-472a-9b27-86337d28def1","name":"Summerville","seed":5,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"e3575c9e-ba9a-45fc-87af-b1dfd2fe6172","name":"Lowell","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+  ]
+}

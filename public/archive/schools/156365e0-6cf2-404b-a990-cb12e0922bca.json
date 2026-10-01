@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "156365e0-6cf2-404b-a990-cb12e0922bca",
+  "name": "Paloma Valley",
+  "fullName": null,
+  "city": "Menifee",
+  "maxpreps": "https://www.maxpreps.com/ca/menifee/paloma-valley-wildcats",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":0,"d":1},
+  "best": {"season":"2017-18","competition":"cif-socal","division":"gd4","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd4","seed":1,"rounds":3,"w":2,"l":0,"d":1,"gf":14,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"f6ea8dc3-690b-4ae3-887a-0093a1b07582","name":"Mater Dei Catholic","seed":8,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"e29a06f4-38a4-44c6-8bb0-a23159d66f7d","name":"Westminster","seed":5,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2018-03-10","opp":{"id":"02277c1d-2f70-4ad7-82be-7502ec0e9380","name":"Ventura","seed":2,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

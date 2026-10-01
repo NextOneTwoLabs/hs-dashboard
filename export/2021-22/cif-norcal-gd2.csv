@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2021-22,cif-norcal,gd2,0,Round I,2022-03-01,final,,1,Granite Bay,4,8,Sanger,1,top
+2021-22,cif-norcal,gd2,0,Round I,2022-03-01,final,,4,Christian Brothers,1,5,Redwood,0,top
+2021-22,cif-norcal,gd2,0,Round I,2022-03-01,final,,3,Leigh,3,6,Branson,1,top
+2021-22,cif-norcal,gd2,0,Round I,2022-03-01,final,,2,Vista del Lago,1,7,Archbishop Mitty,0,top
+2021-22,cif-norcal,gd2,1,Regional Semifinals,2022-03-03,final,,1,Granite Bay,3,4,Christian Brothers,0,top
+2021-22,cif-norcal,gd2,1,Regional Semifinals,2022-03-03,final,,3,Leigh,2,2,Vista del Lago,0,top
+2021-22,cif-norcal,gd2,2,Regional Final,2022-03-05,final,,1,Granite Bay,0,3,Leigh,1,bottom

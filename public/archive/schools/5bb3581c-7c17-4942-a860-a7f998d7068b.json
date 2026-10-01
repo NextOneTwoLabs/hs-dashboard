@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "5bb3581c-7c17-4942-a860-a7f998d7068b",
+  "name": "Flintridge Prep",
+  "fullName": null,
+  "city": "La Canada",
+  "maxpreps": "https://www.maxpreps.com/ca/la-canada/flintridge-prep-wolves",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
+  "best": {"season":"2017-18","competition":"cif-socal","division":"gd3","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd3","seed":1,"rounds":3,"w":2,"l":1,"d":0,"gf":17,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"2336e4f9-fbda-43b7-9767-395aca2ace78","name":"Narbonne","seed":8,"score":1},"gf":14,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"b700374b-e564-4aee-a01b-f5d363d642b9","name":"Centennial","seed":5,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2018-03-10","opp":{"id":"74924b7c-c128-4c04-8456-c5d51dbeb0e7","name":"Academy of Our Lady of Peace","seed":3,"score":3},"gf":2,"ga":3,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

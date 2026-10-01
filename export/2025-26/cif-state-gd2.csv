@@ -1,0 +1,16 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2025-26,cif-state,gd2,0,Round I,2026-03-03,final,,1,Davis Sr.,2,8,Las Lomas,3,bottom
+2025-26,cif-state,gd2,0,Round I,2026-03-03,final,pk,4,Archbishop Mitty,0,5,Amador Valley,0,top
+2025-26,cif-state,gd2,0,Round I,2026-03-03,final,,3,Cardinal Newman,2,6,St. Ignatius College Preparatory,0,top
+2025-26,cif-state,gd2,0,Round I,2026-03-03,final,pk,2,Vista del Lago,1,7,San Ramon Valley,1,bottom
+2025-26,cif-state,gd2,0,Round I,2026-03-03,final,,1,Newport Harbor,0,8,Westview,1,bottom
+2025-26,cif-state,gd2,0,Round I,2026-03-03,final,,4,Carlsbad,0,5,Notre Dame (SO),3,bottom
+2025-26,cif-state,gd2,0,Round I,2026-03-03,final,,3,Garces Memorial,1,6,Granada Hills Charter,0,top
+2025-26,cif-state,gd2,0,Round I,2026-03-03,final,,2,Westlake,1,7,La Costa Canyon,0,top
+2025-26,cif-state,gd2,1,Regional Semifinals,2026-03-05,final,,8,Las Lomas,1,4,Archbishop Mitty,2,bottom
+2025-26,cif-state,gd2,1,Regional Semifinals,2026-03-05,final,,3,Cardinal Newman,0,7,San Ramon Valley,1,bottom
+2025-26,cif-state,gd2,1,Regional Semifinals,2026-03-05,final,,8,Westview,2,5,Notre Dame (SO),0,top
+2025-26,cif-state,gd2,1,Regional Semifinals,2026-03-05,final,,3,Garces Memorial,0,2,Westlake,1,bottom
+2025-26,cif-state,gd2,2,Regional Finals,2026-03-07,final,,4,Archbishop Mitty,0,7,San Ramon Valley,1,bottom
+2025-26,cif-state,gd2,2,Regional Finals,2026-03-07,final,pk,8,Westview,0,2,Westlake,0,bottom
+2025-26,cif-state,gd2,3,State Final,2026-03-13,final,,7,San Ramon Valley,1,2,Westlake,0,top

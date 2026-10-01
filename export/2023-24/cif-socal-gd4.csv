@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2023-24,cif-socal,gd4,0,Round I,2024-02-27,final,,1,Arroyo Grande,2,8,Eagle Rock,0,top
+2023-24,cif-socal,gd4,0,Round I,2024-02-27,final,,4,Rancho Buena Vista,0,5,Estancia,1,bottom
+2023-24,cif-socal,gd4,0,Round I,2024-02-27,final,,3,Monrovia,4,6,Campbell Hall,0,top
+2023-24,cif-socal,gd4,0,Round I,2024-02-27,final,,2,Louisville,5,7,La Jolla Country Day,0,top
+2023-24,cif-socal,gd4,1,Regional Semifinals,2024-02-29,final,,1,Arroyo Grande,2,5,Estancia,0,top
+2023-24,cif-socal,gd4,1,Regional Semifinals,2024-02-29,final,,3,Monrovia,0,2,Louisville,1,bottom
+2023-24,cif-socal,gd4,2,Regional Final,2024-03-02,final,,1,Arroyo Grande,0,2,Louisville,1,bottom

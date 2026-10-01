@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "c06b18c8-19c8-4573-8377-a9a33e932ad6",
+  "name": "San Gabriel Mission",
+  "fullName": "San Gabriel Mission Pioneers",
+  "city": "San Gabriel",
+  "maxpreps": "https://www.maxpreps.com/ca/san-gabriel/san-gabriel-mission-pioneers",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":3,"l":0,"d":0},
+  "best": {"season":"2017-18","competition":"cif-socal","division":"gd5","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd5","seed":1,"rounds":3,"w":3,"l":0,"d":0,"gf":12,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"8c6d20b5-1f94-4c73-ae25-7eb14edfccff","name":"Wilson","seed":8,"score":0},"gf":7,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"a2f59660-f908-4a6b-925a-96375f37b84a","name":"Orosi","seed":4,"score":1},"gf":3,"ga":1,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2018-03-10","opp":{"id":"429328a8-e18e-48d6-8b38-509d8e03ab03","name":"Fillmore","seed":3,"score":1},"gf":2,"ga":1,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+  ]
+}

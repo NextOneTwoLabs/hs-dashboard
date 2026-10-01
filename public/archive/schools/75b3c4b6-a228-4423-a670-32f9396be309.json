@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "75b3c4b6-a228-4423-a670-32f9396be309",
+  "name": "Oaks Christian",
+  "fullName": null,
+  "city": "Westlake Village",
+  "maxpreps": "https://www.maxpreps.com/ca/westlake-village/oaks-christian-lions",
+  "summary": {"appearances":4,"titles":0,"finals":0,"w":2,"l":2,"d":3},
+  "best": {"season":"2024-25","competition":"cif-socal","division":"gd1","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-socal","division":"gd2","seed":2,"rounds":3,"w":1,"l":0,"d":1,"gf":1,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"ad43e80f-2296-4b96-a0a9-44e6a8ea76f2","name":"Torrey Pines","seed":7,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"91cfeaf5-57c4-4e0d-906f-d4518d140b4c","name":"Los Osos","seed":3,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
+    {"season":"2022-23","competition":"cif-socal","division":"gd1","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"9ef67997-7f5d-4899-b500-2d0b5c758105","name":"Westview","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","competition":"cif-socal","division":"gd1","seed":6,"rounds":3,"w":0,"l":0,"d":2,"gf":2,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"c17546ed-7f7e-4324-8919-ddd0da2bb553","name":"Liberty","seed":3,"score":1},"gf":1,"ga":1,"res":"D","pk":"W"},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"6d02719b-1533-4cda-b01a-8e2fa0f6166c","name":"Santiago","seed":2,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
+    {"season":"2025-26","competition":"cif-state","division":"gd1","seed":6,"rounds":4,"w":1,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"688ec7f8-2985-4e7e-900a-4d78f845b197","name":"Mt. Carmel","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"2b6b45d3-4465-4750-ba48-a273b674e37c","name":"Mater Dei","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.25}
+  ]
+}

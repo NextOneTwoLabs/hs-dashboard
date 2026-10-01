@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.tmp
+.wrangler/
+node_modules/
+.DS_Store
+.claude/settings.local.json

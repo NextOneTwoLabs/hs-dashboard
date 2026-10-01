@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "b97c14db-b675-41f1-84b1-c7069229b361",
+  "name": "Poly",
+  "fullName": null,
+  "city": "Sun Valley",
+  "maxpreps": "https://www.maxpreps.com/ca/sun-valley/poly-parrots",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd5","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2025-26","competition":"cif-state","division":"gd5","seed":7,"rounds":4,"w":0,"l":1,"d":0,"gf":3,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"7a833d0d-d42e-4842-afd7-507da3d1eaa8","name":"Pacifica Christian/Santa Monica","seed":2,"score":4},"gf":3,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "131b5089-3ef1-425e-a2c4-76772dfed792",
+  "name": "Canyon Springs",
+  "fullName": null,
+  "city": "Moreno Valley",
+  "maxpreps": "https://www.maxpreps.com/ca/moreno-valley/canyon-springs-cougars",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2020-21","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2020-21","competition":"cif-socal","division":"gd5","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"f56cf0be-7123-4d90-a325-49750478ae92","name":"Linfield Christian","seed":2,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

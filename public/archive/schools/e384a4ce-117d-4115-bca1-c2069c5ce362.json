@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "e384a4ce-117d-4115-bca1-c2069c5ce362",
+  "name": "Vista del Lago",
+  "fullName": "Vista del Lago Ravens",
+  "city": "Moreno Valley",
+  "maxpreps": "https://www.maxpreps.com/ca/moreno-valley/vista-del-lago-ravens",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":3,"l":0,"d":0},
+  "best": {"season":"2024-25","competition":"cif-socal","division":"gd5","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-socal","division":"gd5","seed":5,"rounds":3,"w":3,"l":0,"d":0,"gf":6,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"9fa535b2-64c5-4f5c-b2d6-6c080ed3a45f","name":"Sylmar","seed":4,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"2ee70867-87db-407c-bb41-cd6004141252","name":"Tri-City Christian","seed":1,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2025-03-08","opp":{"id":"b5c4f1b5-f988-47a4-b6bc-b115d24467fd","name":"Whittier Christian","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+  ]
+}

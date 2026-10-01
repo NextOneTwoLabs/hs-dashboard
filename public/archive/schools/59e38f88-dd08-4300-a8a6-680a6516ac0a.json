@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "59e38f88-dd08-4300-a8a6-680a6516ac0a",
+  "name": "Arroyo Grande",
+  "fullName": null,
+  "city": "Arroyo Grande",
+  "maxpreps": "https://www.maxpreps.com/ca/arroyo-grande/arroyo-grande-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
+  "best": {"season":"2023-24","competition":"cif-socal","division":"gd4","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-socal","division":"gd4","seed":1,"rounds":3,"w":2,"l":1,"d":0,"gf":4,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"bbe212cc-5f9b-4c6b-be20-fc13cc136e14","name":"Eagle Rock","seed":8,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"8d782b8d-7803-4767-8b7e-0115f99a9f00","name":"Estancia","seed":5,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2024-03-02","opp":{"id":"b4e357e5-333d-4314-9db8-27943591b45e","name":"Louisville","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

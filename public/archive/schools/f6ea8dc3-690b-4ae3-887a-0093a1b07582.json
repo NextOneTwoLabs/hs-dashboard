@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "f6ea8dc3-690b-4ae3-887a-0093a1b07582",
+  "name": "Mater Dei Catholic",
+  "fullName": null,
+  "city": "Chula Vista",
+  "maxpreps": "https://www.maxpreps.com/ca/chula-vista/mater-dei-catholic-crusaders",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2017-18","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd4","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":10,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"156365e0-6cf2-404b-a990-cb12e0922bca","name":"Paloma Valley","seed":1,"score":10},"gf":0,"ga":10,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

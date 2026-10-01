@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "326393a3-25f4-4e4c-9102-79108e7d35a8",
+  "name": "Bravo",
+  "fullName": null,
+  "city": "Los Angeles",
+  "maxpreps": "https://www.maxpreps.com/ca/los-angeles/bravo-knights",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":1,"l":2,"d":0},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd5","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-socal","division":"gd5","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":11,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"2ee70867-87db-407c-bb41-cd6004141252","name":"Tri-City Christian","seed":1,"score":11},"gf":0,"ga":11,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","competition":"cif-state","division":"gd5","seed":5,"rounds":4,"w":1,"l":1,"d":0,"gf":2,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"9c6ee102-3437-4054-bc67-68e04bd497bf","name":"Webb","seed":4,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2026-03-05","opp":{"id":"f8c33d57-a1ba-4322-aac1-acb5b2698e4d","name":"Coastal Academy","seed":8,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.25}
+  ]
+}

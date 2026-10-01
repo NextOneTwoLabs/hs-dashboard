@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "bc645887-e6fa-4017-bc99-24f8baa38fd1",
+  "name": "Roseville",
+  "fullName": null,
+  "city": "Roseville",
+  "maxpreps": "https://www.maxpreps.com/ca/roseville/roseville-tigers",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
+  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd2","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-norcal","division":"gd2","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"0b05ee2d-9888-4150-91f9-2278a0b03fb9","name":"Livermore","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","competition":"cif-norcal","division":"gd2","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"1dc4836b-4daf-4573-b525-27b474bd5366","name":"St. Ignatius College Preparatory","seed":7,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

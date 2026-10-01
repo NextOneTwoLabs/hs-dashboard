@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "381f3ecb-256f-4f26-9ca8-2481b0c75419",
+  "name": "San Rafael",
+  "fullName": null,
+  "city": "San Rafael",
+  "maxpreps": "https://www.maxpreps.com/ca/san-rafael/san-rafael-bulldogs",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-norcal","division":"gd4","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"a8cc3305-2fa6-4e76-91ea-5bea8583505a","name":"Soquel","seed":2,"score":4},"gf":1,"ga":4,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

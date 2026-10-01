@@ -1,0 +1,46 @@
+name: Refresh data
+
+# Every 30 minutes, afternoon to late evening Pacific time, February and March
+# only (the CIF State girls soccer window). The crawler itself checks each
+# competition's window in public/data/sources.json and exits without any
+# request when none is open.
+on:
+  schedule:
+    - cron: "*/30 0-7,20-23 * 2,3 *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "refresh (open windows only) or backfill (all incomplete seasons)"
+        default: refresh
+        type: choice
+        options: [refresh, backfill]
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Crawl
+        run: python -m crawler.hs --${{ inputs.mode || 'refresh' }} --export
+      - name: Commit changes
+        run: |
+          git config user.name "hs-dashboard-bot"
+          git config user.email "hs-dashboard-bot@users.noreply.github.com"
+          git add -A archive public/archive export
+          if git diff --cached --quiet; then
+            echo "no data changes"
+          else
+            git commit -m "data: refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi

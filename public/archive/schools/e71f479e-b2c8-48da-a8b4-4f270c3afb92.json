@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "e71f479e-b2c8-48da-a8b4-4f270c3afb92",
+  "name": "Patrick Henry",
+  "fullName": "Patrick Henry Patriots",
+  "city": "San Diego",
+  "maxpreps": "https://www.maxpreps.com/ca/san-diego/patrick-henry-patriots",
+  "summary": {"appearances":2,"titles":1,"finals":1,"w":3,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-socal","division":"gd3","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2022-23","competition":"cif-socal","division":"gd3","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"9c909108-0c4f-43ac-a1d6-0a8281c344f0","name":"Portola","seed":7,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","competition":"cif-socal","division":"gd3","seed":2,"rounds":3,"w":3,"l":0,"d":0,"gf":12,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"6089f6a4-f1e9-46cc-b64f-c5302d41e69d","name":"Long Beach Poly","seed":7,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"70a363e2-26b8-4ef5-8ad0-20979f66399a","name":"Thousand Oaks","seed":3,"score":0},"gf":4,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2025-03-08","opp":{"id":"ca1369d9-9569-41c6-9619-c64df0e7c5b0","name":"Warren","seed":1,"score":0},"gf":5,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+  ]
+}

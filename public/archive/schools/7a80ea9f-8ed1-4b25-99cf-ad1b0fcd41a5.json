@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "7a80ea9f-8ed1-4b25-99cf-ad1b0fcd41a5",
+  "name": "Scripps Ranch",
+  "fullName": null,
+  "city": "San Diego",
+  "maxpreps": "https://www.maxpreps.com/ca/san-diego/scripps-ranch-falcons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2017-18","competition":"cif-socal","division":"gd2","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd2","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"8f350275-199e-4549-b574-2257e718069f","name":"Temecula Valley","seed":1,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

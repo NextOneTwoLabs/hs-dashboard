@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "5914df37-1218-4653-92be-f6d87981959f",
+  "name": "Chula Vista Learning Community Charter",
+  "fullName": null,
+  "city": "San Diego",
+  "maxpreps": "https://www.maxpreps.com/ca/san-diego/chula-vista-learning-community-charter-cobras",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2021-22","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-socal","division":"gd4","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":8,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"c43b6abd-9e83-4b98-ba96-ce6b34234e03","name":"Saint Joseph","seed":1,"score":8},"gf":0,"ga":8,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

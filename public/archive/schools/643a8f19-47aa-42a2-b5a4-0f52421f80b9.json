@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "643a8f19-47aa-42a2-b5a4-0f52421f80b9",
+  "name": "Mission Hills",
+  "fullName": null,
+  "city": "San Marcos",
+  "maxpreps": "https://www.maxpreps.com/ca/san-marcos/mission-hills-grizzlies",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":2,"l":1,"d":0},
+  "best": {"season":"2023-24","competition":"cif-socal","division":"gd2","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-socal","division":"gd2","seed":3,"rounds":3,"w":2,"l":1,"d":0,"gf":2,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"a3a4b4d3-bce3-47b1-a57b-30226feba5e1","name":"JSerra Catholic","seed":6,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"c459af5a-4705-4543-9d86-e66bb29831c2","name":"Etiwanda","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2024-03-02","opp":{"id":"9ef67997-7f5d-4899-b500-2d0b5c758105","name":"Westview","seed":8,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

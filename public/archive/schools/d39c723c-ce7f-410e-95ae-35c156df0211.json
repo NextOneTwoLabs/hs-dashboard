@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "d39c723c-ce7f-410e-95ae-35c156df0211",
+  "name": "Roosevelt",
+  "fullName": null,
+  "city": "Eastvale",
+  "maxpreps": "https://www.maxpreps.com/ca/eastvale/roosevelt-mustangs",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":1,"d":1},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd1","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-socal","division":"gd1","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"ff429903-681b-4ad1-abd7-356a7492395e","name":"Santa Margarita","seed":2,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2025-26","competition":"cif-state","division":"gd1","seed":8,"rounds":4,"w":0,"l":0,"d":1,"gf":2,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"ff429903-681b-4ad1-abd7-356a7492395e","name":"Santa Margarita","seed":1,"score":2},"gf":2,"ga":2,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

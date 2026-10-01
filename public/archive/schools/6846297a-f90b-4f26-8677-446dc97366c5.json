@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "6846297a-f90b-4f26-8677-446dc97366c5",
+  "name": "Clovis North",
+  "fullName": null,
+  "city": "Fresno",
+  "maxpreps": "https://www.maxpreps.com/ca/fresno/clovis-north-broncos",
+  "summary": {"appearances":4,"titles":0,"finals":0,"w":0,"l":4,"d":0},
+  "best": {"season":"2022-23","competition":"cif-norcal","division":"gd1","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-norcal","division":"gd1","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"f62e70f3-0c88-4711-9e52-3e9e132006b3","name":"Carondelet","seed":2,"score":5},"gf":1,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2020-21","competition":"cif-socal","division":"gd1","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"c28d7b20-4e4d-456d-a944-e9f223d56e84","name":"Pacifica","seed":7,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2021-22","competition":"cif-norcal","division":"gd1","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"09beba1b-240a-45b8-aa6e-281decefa275","name":"Mountain View","seed":4,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2022-23","competition":"cif-norcal","division":"gd1","seed":4,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"1a39c6b4-e457-463a-9cfc-8dc568876c5a","name":"Menlo-Atherton","seed":5,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2022-23,cif-socal,gd5,0,Round I,2023-02-28,final,,1,Ramona,8,8,Alliance Marine-Innovation & Technology,0,top
+2022-23,cif-socal,gd5,0,Round I,2023-02-28,final,,4,Clairemont,3,5,Magnolia,1,top
+2022-23,cif-socal,gd5,0,Round I,2023-02-28,final,,3,Larchmont Charter,1,6,La Quinta,5,bottom
+2022-23,cif-socal,gd5,0,Round I,2023-02-28,final,,2,Carter,3,7,Madison,1,top
+2022-23,cif-socal,gd5,1,Regional Semifinals,2023-03-02,final,,1,Ramona,2,4,Clairemont,0,top
+2022-23,cif-socal,gd5,1,Regional Semifinals,2023-03-02,final,,6,La Quinta,0,2,Carter,2,bottom
+2022-23,cif-socal,gd5,2,Regional Final,2023-03-04,final,,1,Ramona,0,2,Carter,1,bottom

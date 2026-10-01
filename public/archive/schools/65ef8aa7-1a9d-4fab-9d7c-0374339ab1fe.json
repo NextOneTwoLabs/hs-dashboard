@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "65ef8aa7-1a9d-4fab-9d7c-0374339ab1fe",
+  "name": "Claremont",
+  "fullName": null,
+  "city": "Claremont",
+  "maxpreps": "https://www.maxpreps.com/ca/claremont/claremont-wolfpack",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2020-21","competition":"cif-socal","division":"gd2","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2020-21","competition":"cif-socal","division":"gd2","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"15c34e49-1a29-4298-8a84-00a2ec6ae36b","name":"Cathedral Catholic","seed":4,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

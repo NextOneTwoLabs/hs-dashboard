@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "c595f6e0-233d-44b6-bb0d-586d4f6ea320",
+  "name": "Vista Murrieta",
+  "fullName": null,
+  "city": "Murrieta",
+  "maxpreps": "https://www.maxpreps.com/ca/murrieta/vista-murrieta-broncos",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
+  "best": {"season":"2018-19","competition":"cif-socal","division":"gd2","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-socal","division":"gd2","seed":5,"rounds":3,"w":0,"l":0,"d":1,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"fe6cd6e7-3e92-4522-9435-12dde635eb78","name":"West Hills","seed":4,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

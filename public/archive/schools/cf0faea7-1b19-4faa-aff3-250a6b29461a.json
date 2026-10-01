@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "cf0faea7-1b19-4faa-aff3-250a6b29461a",
+  "name": "Bishop Amat",
+  "fullName": null,
+  "city": "La Puente",
+  "maxpreps": "https://www.maxpreps.com/ca/la-puente/bishop-amat-lancers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2022-23","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2022-23","competition":"cif-socal","division":"gd3","seed":5,"rounds":3,"w":1,"l":1,"d":0,"gf":5,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"68a421c5-cca9-497e-8645-2049ebc86149","name":"Cleveland","seed":4,"score":1},"gf":4,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2023-03-02","opp":{"id":"966e5b54-904d-4d40-81d3-8ada9df7485d","name":"Moorpark","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

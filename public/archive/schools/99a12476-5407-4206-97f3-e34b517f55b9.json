@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "99a12476-5407-4206-97f3-e34b517f55b9",
+  "name": "Ben Holt College Prep Academy",
+  "fullName": null,
+  "city": "Stockton",
+  "maxpreps": "https://www.maxpreps.com/ca/stockton/ben-holt-college-prep-academy-bobcats",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2021-22","competition":"cif-norcal","division":"gd5","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-norcal","division":"gd5","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"b131236b-76db-48d3-ad28-5b5d94697d73","name":"Sutter","seed":2,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

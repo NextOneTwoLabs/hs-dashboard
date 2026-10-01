@@ -1,0 +1,8 @@
+season,competition,division,round,round_name,date,status,decided_by,top_seed,top_school,top_score,bottom_seed,bottom_school,bottom_score,winner
+2024-25,cif-socal,gd1,0,Round I,2025-03-04,final,,1,Santa Margarita,3,8,Bonita Vista,0,top
+2024-25,cif-socal,gd1,0,Round I,2025-03-04,final,,4,San Marcos,2,5,Harvard-Westlake,1,top
+2024-25,cif-socal,gd1,0,Round I,2025-03-04,final,pk,3,Liberty,1,6,Oaks Christian,1,bottom
+2024-25,cif-socal,gd1,0,Round I,2025-03-04,final,,2,Santiago,1,7,Mater Dei,0,top
+2024-25,cif-socal,gd1,1,Regional Semifinals,2025-03-06,final,,1,Santa Margarita,2,4,San Marcos,1,top
+2024-25,cif-socal,gd1,1,Regional Semifinals,2025-03-06,final,pk,6,Oaks Christian,1,2,Santiago,1,bottom
+2024-25,cif-socal,gd1,2,Regional Final,2025-03-08,final,pk,1,Santa Margarita,1,2,Santiago,1,bottom

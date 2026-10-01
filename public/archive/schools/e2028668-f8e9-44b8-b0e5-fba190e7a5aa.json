@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "e2028668-f8e9-44b8-b0e5-fba190e7a5aa",
+  "name": "Lincoln",
+  "fullName": null,
+  "city": "Lincoln",
+  "maxpreps": "https://www.maxpreps.com/ca/lincoln/lincoln-zebras",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-norcal","division":"gd3","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"041ef7b7-089b-4e7d-9c9c-9ff1f833f829","name":"Chico","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

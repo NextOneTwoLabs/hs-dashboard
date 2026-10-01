@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "6089f6a4-f1e9-46cc-b64f-c5302d41e69d",
+  "name": "Long Beach Poly",
+  "fullName": null,
+  "city": "Long Beach",
+  "maxpreps": "https://www.maxpreps.com/ca/long-beach/long-beach-poly-jackrabbits",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":1,"l":2,"d":0},
+  "best": {"season":"2018-19","competition":"cif-socal","division":"gd2","result":"eliminated","reached":"Regional Semi-Finals"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-socal","division":"gd2","seed":6,"rounds":3,"w":1,"l":1,"d":0,"gf":5,"ga":4,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"804990b1-145b-4b80-96cf-bd728f338bbc","name":"El Camino Real","seed":3,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"616bf1cd-fbea-485e-9c0b-e66d559ee695","name":"Mira Costa","seed":2,"score":4},"gf":2,"ga":4,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
+    {"season":"2024-25","competition":"cif-socal","division":"gd3","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"e71f479e-b2c8-48da-a8b4-4f270c3afb92","name":"Patrick Henry","seed":2,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

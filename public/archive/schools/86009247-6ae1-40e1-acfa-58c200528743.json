@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "86009247-6ae1-40e1-acfa-58c200528743",
+  "name": "Newport Harbor",
+  "fullName": null,
+  "city": "Newport Beach",
+  "maxpreps": "https://www.maxpreps.com/ca/newport-beach/newport-harbor-sailors",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd2","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2025-26","competition":"cif-state","division":"gd2","seed":1,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"9ef67997-7f5d-4899-b500-2d0b5c758105","name":"Westview","seed":8,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

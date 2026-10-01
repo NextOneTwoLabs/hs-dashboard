@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "b4e357e5-333d-4314-9db8-27943591b45e",
+  "name": "Louisville",
+  "fullName": "Louisville Royals",
+  "city": "Woodland Hills",
+  "maxpreps": "https://www.maxpreps.com/ca/woodland-hills/louisville-royals",
+  "summary": {"appearances":1,"titles":1,"finals":1,"w":3,"l":0,"d":0},
+  "best": {"season":"2023-24","competition":"cif-socal","division":"gd4","result":"champion","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-socal","division":"gd4","seed":2,"rounds":3,"w":3,"l":0,"d":0,"gf":7,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"c24601db-aee8-4989-ba5d-bfbf0a91b927","name":"La Jolla Country Day","seed":7,"score":0},"gf":5,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2024-02-29","opp":{"id":"66065d76-3f29-4595-855b-8da285be58c6","name":"Monrovia","seed":3,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":2,"roundName":"Regional Final","date":"2024-03-02","opp":{"id":"59e38f88-dd08-4300-a8a6-680a6516ac0a","name":"Arroyo Grande","seed":1,"score":0},"gf":1,"ga":0,"res":"W","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"champion","depth":1.0}
+  ]
+}

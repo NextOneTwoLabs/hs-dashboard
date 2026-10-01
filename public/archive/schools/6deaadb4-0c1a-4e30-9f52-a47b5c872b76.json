@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "6deaadb4-0c1a-4e30-9f52-a47b5c872b76",
+  "name": "Petaluma",
+  "fullName": null,
+  "city": "Petaluma",
+  "maxpreps": "https://www.maxpreps.com/ca/petaluma/petaluma-trojans",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd4","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-norcal","division":"gd4","seed":4,"rounds":3,"w":1,"l":1,"d":0,"gf":2,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"01e250af-f9de-4e2b-8e1a-11cc0a1fd241","name":"Winters","seed":5,"score":0},"gf":2,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"be2fc7fb-ec14-4069-9c6d-f6083a2f9229","name":"Fresno Christian","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

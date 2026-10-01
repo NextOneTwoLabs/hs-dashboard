@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "aa2f89a2-0150-4223-89b4-ac73cbf343e9",
+  "name": "Granite Hills",
+  "fullName": null,
+  "city": "El Cajon",
+  "maxpreps": "https://www.maxpreps.com/ca/el-cajon/granite-hills-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2023-24","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-socal","division":"gd3","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"1fd5ff77-0482-4f19-a9c2-e03a6ef04ce8","name":"Granada Hills Charter","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

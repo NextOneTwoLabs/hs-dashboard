@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "47e98d21-4568-49d1-82aa-20cd03bf0302",
+  "name": "Sonoma Valley",
+  "fullName": null,
+  "city": "Sonoma",
+  "maxpreps": "https://www.maxpreps.com/ca/sonoma/sonoma-valley-dragons",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-norcal","division":"gd4","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"27d82a51-2b44-492e-b2cf-114730027de3","name":"Sacred Heart Prep","seed":3,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

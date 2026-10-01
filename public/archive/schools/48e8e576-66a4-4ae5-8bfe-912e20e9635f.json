@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "48e8e576-66a4-4ae5-8bfe-912e20e9635f",
+  "name": "Arvin",
+  "fullName": null,
+  "city": "Arvin",
+  "maxpreps": "https://www.maxpreps.com/ca/arvin/arvin-bears",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":1},
+  "best": {"season":"2018-19","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Regional Semi-Finals"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-socal","division":"gd5","seed":4,"rounds":3,"w":0,"l":1,"d":1,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"cb134f17-80c0-44ef-9e36-1e3dc29c2fdc","name":"Venice","seed":5,"score":0},"gf":0,"ga":0,"res":"D","pk":"W"},{"round":1,"roundName":"Regional Semi-Finals","date":"2019-02-28","opp":{"id":"000472c2-dee8-4be6-bcdd-c0ff8a4582aa","name":"South El Monte","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333},
+    {"season":"2020-21","competition":"cif-socal","division":"gd5","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"0595f25d-de4f-46fd-a019-41c8375e8eb2","name":"St. Bonaventure","seed":1,"score":3},"gf":0,"ga":3,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

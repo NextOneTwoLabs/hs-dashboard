@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "d69e2853-30b1-4411-9e4f-906a66267f6d",
+  "name": "Marshall",
+  "fullName": null,
+  "city": "Pasadena",
+  "maxpreps": "https://www.maxpreps.com/ca/pasadena/marshall-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2021-22","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-socal","division":"gd4","seed":3,"rounds":3,"w":1,"l":1,"d":0,"gf":11,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"1820e346-2f2e-4e49-84d1-d9eda0fa10c0","name":"Animo De La Hoya","seed":6,"score":0},"gf":10,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2022-03-03","opp":{"id":"a858d139-5648-40b3-8ff6-8d946185ab7b","name":"Hemet","seed":7,"score":3},"gf":1,"ga":3,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333}
+  ]
+}

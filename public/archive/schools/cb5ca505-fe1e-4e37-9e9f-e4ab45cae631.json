@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "cb5ca505-fe1e-4e37-9e9f-e4ab45cae631",
+  "name": "South Gate",
+  "fullName": null,
+  "city": "South Gate",
+  "maxpreps": "https://www.maxpreps.com/ca/south-gate/south-gate-rams",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":2,"d":0},
+  "best": {"season":"2022-23","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2021-22","competition":"cif-socal","division":"gd4","seed":5,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":6,"games":[{"round":0,"roundName":"Round I","date":"2022-03-01","opp":{"id":"6b0a43a2-6cd9-42fc-abf8-4b03221952e1","name":"Bakersfield Christian","seed":4,"score":6},"gf":0,"ga":6,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2022-23","competition":"cif-socal","division":"gd4","seed":6,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"6a4bb546-7266-4859-81e0-936887fa3c98","name":"Crean Lutheran","seed":3,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

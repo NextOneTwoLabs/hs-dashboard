@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "8f4af69b-eb93-4ca3-bf5a-5f3647ab92ae",
+  "name": "New West Charter",
+  "fullName": null,
+  "city": "Los Angeles",
+  "maxpreps": "https://www.maxpreps.com/ca/los-angeles/new-west-charter-eagles",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2018-19","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-socal","division":"gd3","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":7,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"1cc960d8-4724-43b3-9751-dabda19052df","name":"Flintridge Sacred Heart","seed":2,"score":7},"gf":0,"ga":7,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

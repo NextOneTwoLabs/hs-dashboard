@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "id": "6bff5f0d-d460-437a-be37-e4c1a2cee680",
+  "name": "Kingsburg",
+  "fullName": null,
+  "city": "Kingsburg",
+  "maxpreps": "https://www.maxpreps.com/ca/kingsburg/kingsburg-vikings",
+  "summary": {"appearances":3,"titles":0,"finals":0,"w":0,"l":2,"d":1},
+  "best": {"season":"2020-21","competition":"cif-socal","division":"gd3","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-socal","division":"gd4","seed":4,"rounds":3,"w":0,"l":0,"d":1,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"e29a06f4-38a4-44c6-8bb0-a23159d66f7d","name":"Westminster","seed":5,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2018-19","competition":"cif-norcal","division":"gd4","seed":4,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"05de9787-3f9c-4cd2-8026-0b658e736206","name":"Miramonte","seed":5,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2020-21","competition":"cif-socal","division":"gd3","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"0262ec1f-0f12-4b03-967a-fb18079af2ce","name":"Hanford","seed":2,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

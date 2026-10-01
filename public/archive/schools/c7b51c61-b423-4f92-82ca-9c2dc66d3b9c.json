@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "c7b51c61-b423-4f92-82ca-9c2dc66d3b9c",
+  "name": "Immaculate Heart",
+  "fullName": null,
+  "city": "Los Angeles",
+  "maxpreps": "https://www.maxpreps.com/ca/los-angeles/immaculate-heart-pandas",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2025-26","competition":"cif-state","division":"gd4","seed":2,"rounds":4,"w":0,"l":0,"d":1,"gf":0,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"300f459c-387d-4332-b654-5f0df27412b5","name":"Del Sol","seed":7,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

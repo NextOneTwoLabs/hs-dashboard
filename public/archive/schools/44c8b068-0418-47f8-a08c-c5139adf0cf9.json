@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "44c8b068-0418-47f8-a08c-c5139adf0cf9",
+  "name": "Birmingham",
+  "fullName": null,
+  "city": "Lake Balboa",
+  "maxpreps": "https://www.maxpreps.com/ca/lake-balboa/birmingham-patriots",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":0,"d":1},
+  "best": {"season":"2025-26","competition":"cif-state","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2025-26","competition":"cif-state","division":"gd4","seed":1,"rounds":4,"w":0,"l":0,"d":1,"gf":1,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"ba35330e-6e9a-4f9d-8867-86cd68fad308","name":"Segerstrom","seed":8,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

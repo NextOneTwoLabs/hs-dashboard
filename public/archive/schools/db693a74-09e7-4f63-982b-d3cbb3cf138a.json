@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "id": "db693a74-09e7-4f63-982b-d3cbb3cf138a",
+  "name": "Amador Valley",
+  "fullName": null,
+  "city": "Pleasanton",
+  "maxpreps": "https://www.maxpreps.com/ca/pleasanton/amador-valley-dons",
+  "summary": {"appearances":3,"titles":0,"finals":0,"w":1,"l":1,"d":2},
+  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd1","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-norcal","division":"gd1","seed":7,"rounds":3,"w":0,"l":0,"d":1,"gf":0,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"38af84a6-48a9-4953-804e-cad1cc07c0ef","name":"Del Oro","seed":2,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","competition":"cif-norcal","division":"gd1","seed":6,"rounds":3,"w":1,"l":1,"d":0,"gf":2,"ga":3,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"21c1edbb-4233-47ff-8f5a-70857a366328","name":"Rocklin","seed":3,"score":1},"gf":2,"ga":1,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"de6d3780-e8f6-4a2a-93f2-b5d89499f9b0","name":"Saint Francis","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
+    {"season":"2025-26","competition":"cif-state","division":"gd2","seed":5,"rounds":4,"w":0,"l":0,"d":1,"gf":0,"ga":0,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"0f63870a-34f3-4d5b-9dbf-653c8410f969","name":"Archbishop Mitty","seed":4,"score":0},"gf":0,"ga":0,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

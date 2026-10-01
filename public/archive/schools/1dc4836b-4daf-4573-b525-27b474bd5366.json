@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "1dc4836b-4daf-4573-b525-27b474bd5366",
+  "name": "St. Ignatius College Preparatory",
+  "fullName": null,
+  "city": "San Francisco",
+  "maxpreps": "https://www.maxpreps.com/ca/san-francisco/st-ignatius-college-preparatory-wildcats",
+  "summary": {"appearances":4,"titles":0,"finals":0,"w":1,"l":3,"d":1},
+  "best": {"season":"2024-25","competition":"cif-norcal","division":"gd2","result":"eliminated","reached":"Regional Semifinals"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-norcal","division":"gd1","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"288ca10d-8448-41e9-b26e-463df226b8c8","name":"Davis Sr.","seed":1,"score":1},"gf":0,"ga":1,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2022-23","competition":"cif-norcal","division":"gd2","seed":2,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2023-02-28","opp":{"id":"8ccdb557-16f2-41cd-a724-6b71bc221661","name":"Branson","seed":7,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","competition":"cif-norcal","division":"gd2","seed":7,"rounds":3,"w":1,"l":0,"d":1,"gf":2,"ga":1,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"bc645887-e6fa-4017-bc99-24f8baa38fd1","name":"Roseville","seed":2,"score":0},"gf":1,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semifinals","date":"2025-03-06","opp":{"id":"9f489fa8-a23a-4924-a2a0-5c5cff3c0fdc","name":"Marin Academy","seed":6,"score":1},"gf":1,"ga":1,"res":"D","pk":"L"}],"reachedRound":1,"reached":"Regional Semifinals","result":"eliminated","depth":0.333},
+    {"season":"2025-26","competition":"cif-state","division":"gd2","seed":6,"rounds":4,"w":0,"l":1,"d":0,"gf":0,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2026-03-03","opp":{"id":"ad47af1b-1b44-42d7-ac0e-a495ff09a7e7","name":"Cardinal Newman","seed":3,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

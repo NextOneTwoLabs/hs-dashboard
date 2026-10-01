@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "bba7b9af-bbdb-4c6e-bf2b-00bb7c5b1f3e",
+  "name": "Banning",
+  "fullName": null,
+  "city": "Wilmington",
+  "maxpreps": "https://www.maxpreps.com/ca/wilmington/banning-pilots",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2024-25","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2024-25","competition":"cif-socal","division":"gd4","seed":3,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"aea2601c-97bd-48a6-a581-d14a3af853f6","name":"Heritage","seed":6,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

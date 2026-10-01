@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "7826ff5b-bbb2-4469-99b7-6a217240afa8",
+  "name": "Bradshaw Christian",
+  "fullName": null,
+  "city": "Sacramento",
+  "maxpreps": "https://www.maxpreps.com/ca/sacramento/bradshaw-christian-the-pride",
+  "summary": {"appearances":1,"titles":0,"finals":1,"w":1,"l":1,"d":1},
+  "best": {"season":"2017-18","competition":"cif-norcal","division":"gd3","result":"runner-up","reached":"Regional Final"},
+  "appearances": [
+    {"season":"2017-18","competition":"cif-norcal","division":"gd3","seed":4,"rounds":3,"w":1,"l":1,"d":1,"gf":7,"ga":6,"games":[{"round":0,"roundName":"Round I","date":"2018-03-06","opp":{"id":"8e01c2fa-4888-483f-8d26-6a45518c1bd8","name":"Pleasant Valley","seed":5,"score":2},"gf":4,"ga":2,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2018-03-08","opp":{"id":"2993e4ff-72d9-4f83-b862-8db615e795aa","name":"Shasta","seed":1,"score":2},"gf":2,"ga":2,"res":"D","pk":"W"},{"round":2,"roundName":"Regional Final","date":"2018-03-10","opp":{"id":"ad47af1b-1b44-42d7-ac0e-a495ff09a7e7","name":"Cardinal Newman","seed":6,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":2,"reached":"Regional Final","result":"runner-up","depth":0.667}
+  ]
+}

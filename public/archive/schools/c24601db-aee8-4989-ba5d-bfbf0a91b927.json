@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "c24601db-aee8-4989-ba5d-bfbf0a91b927",
+  "name": "La Jolla Country Day",
+  "fullName": null,
+  "city": "La Jolla",
+  "maxpreps": "https://www.maxpreps.com/ca/la-jolla/la-jolla-country-day-torreys",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":0,"l":1,"d":0},
+  "best": {"season":"2023-24","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2023-24","competition":"cif-socal","division":"gd4","seed":7,"rounds":3,"w":0,"l":1,"d":0,"gf":0,"ga":5,"games":[{"round":0,"roundName":"Round I","date":"2024-02-27","opp":{"id":"b4e357e5-333d-4314-9db8-27943591b45e","name":"Louisville","seed":2,"score":5},"gf":0,"ga":5,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}

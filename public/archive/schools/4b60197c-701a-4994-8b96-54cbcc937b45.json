@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "id": "4b60197c-701a-4994-8b96-54cbcc937b45",
+  "name": "Elsinore",
+  "fullName": null,
+  "city": "Wildomar",
+  "maxpreps": "https://www.maxpreps.com/ca/wildomar/elsinore-tigers",
+  "summary": {"appearances":1,"titles":0,"finals":0,"w":1,"l":1,"d":0},
+  "best": {"season":"2020-21","competition":"cif-socal","division":"gd5","result":"eliminated","reached":"Regional Semi-Finals"},
+  "appearances": [
+    {"season":"2020-21","competition":"cif-socal","division":"gd5","seed":3,"rounds":3,"w":1,"l":1,"d":0,"gf":3,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2021-06-01","opp":{"id":"4583e694-a3ab-4aa8-89c0-1981c3cdc102","name":"Orange Glen","seed":6,"score":0},"gf":3,"ga":0,"res":"W","pk":null},{"round":1,"roundName":"Regional Semi-Finals","date":"2021-06-03","opp":{"id":"f56cf0be-7123-4d90-a325-49750478ae92","name":"Linfield Christian","seed":2,"score":2},"gf":0,"ga":2,"res":"L","pk":null}],"reachedRound":1,"reached":"Regional Semi-Finals","result":"eliminated","depth":0.333}
+  ]
+}

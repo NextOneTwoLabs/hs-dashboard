@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "id": "88b2f9f4-f69d-4365-a028-32cfab66524f",
+  "name": "San Diego",
+  "fullName": null,
+  "city": "San Diego",
+  "maxpreps": "https://www.maxpreps.com/ca/san-diego/san-diego-cavers",
+  "summary": {"appearances":2,"titles":0,"finals":0,"w":0,"l":1,"d":1},
+  "best": {"season":"2024-25","competition":"cif-socal","division":"gd4","result":"eliminated","reached":"Round I"},
+  "appearances": [
+    {"season":"2018-19","competition":"cif-socal","division":"gd3","seed":8,"rounds":3,"w":0,"l":1,"d":0,"gf":1,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2019-02-26","opp":{"id":"64f5e2e5-4387-45df-af04-54d68a9beeeb","name":"Oak Hills","seed":1,"score":2},"gf":1,"ga":2,"res":"L","pk":null}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0},
+    {"season":"2024-25","competition":"cif-socal","division":"gd4","seed":8,"rounds":3,"w":0,"l":0,"d":1,"gf":2,"ga":2,"games":[{"round":0,"roundName":"Round I","date":"2025-03-04","opp":{"id":"8724822c-7a6a-4375-a7a1-fb89b0fb25d4","name":"Sage Hill","seed":1,"score":2},"gf":2,"ga":2,"res":"D","pk":"L"}],"reachedRound":0,"reached":"Round I","result":"eliminated","depth":0.0}
+  ]
+}
