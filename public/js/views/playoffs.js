@@ -82,6 +82,7 @@ function bracketHtml(b, state) {
 }
 
 function metaLine(g) {
+  if (g.status === 'bye') return '<span>Bye</span>';
   if (g.status === 'unreported') return '<span>Result not reported</span>';
   if (g.status !== 'final') return '<span>Scheduled</span>';
   const parts = ['<span>Final</span>'];

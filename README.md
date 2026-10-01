@@ -46,8 +46,11 @@ Notes on the data:
 - **Seasons** are school years (`2025-26`), whether a state plays in the fall, winter or spring.
 - **Divisions** use each state's own names, e.g. "Conference 6A D1", "Class 7A", "1B/2B" or "Division 1". They are ordered largest class first, then D1, D2.
 - **Schools** are identified by their **MaxPreps school GUID**, which stays stable across seasons. Duplicates can be merged in `public/data/school-aliases.json`.
-- **Winners** come from MaxPreps' winner/loser markup, so games decided on **penalty kicks** have the correct winner (`decidedBy: "pk"`). In records they count as draws.
-- **Unreported games:** a game whose date had passed when it was fetched but has no result is marked `unreported`. Example: Texas 5A D1 2026, whose final stages were never scored on MaxPreps.
+- **Winners** come from MaxPreps' winner/loser markup or its "(W)" shootout mark, so games decided on **penalty kicks** have the correct winner (`decidedBy: "pk"`). In records they count as draws.
+  - Without a marker, unequal scores decide the game. A winner from the score alone never names a champion, so such a bracket keeps being refetched.
+  - Every main-bracket winner is checked against who actually plays in the next round (matched by school GUID; placement games excluded). That team wins over the markers and the score, `next` is pointed at its game, and derive prints a warning.
+- **Byes** (`status: "bye"`) come only from MaxPreps' `is-bye` marker. They are not games: no W/L, not in `played`, not in the results feed; school pages list them as "Bye".
+- **Unreported games:** a game whose date had passed when it was fetched but has no result is marked `unreported`. Example: Texas 5A D1 2026, whose final was never scored on MaxPreps. In a finished bracket (a champion, or nothing left to play) a school whose last game is unreported shows "Result not reported", never "Still alive".
 - **Gender:** `"genders": ["g"]` in `sources.json` limits crawling, derived output and the UI to girls.
 
 ## Commands

@@ -2,7 +2,15 @@ import { esc, schoolHref } from '../util.js';
 
 function teamRow(game, side, g) {
   const t = game[side];
-  if (!t) return `<div class="team-row tbd"><span class="seed"></span><span class="tname">TBD</span><span class="score"></span></div>`;
+  if (!t) {
+    const label = game.status === 'bye' ? 'Bye' : 'TBD';
+    return `<div class="team-row tbd"><span class="seed"></span><span class="tname">${label}</span><span class="score"></span></div>`;
+  }
+  if (game.status === 'bye') {
+    const id = t.id ?? t.schoolId;
+    const name = id ? `<a class="tname" href="${schoolHref(id, g)}" title="${esc(t.name)}">${esc(t.name)}</a>` : `<span class="tname">${esc(t.name)}</span>`;
+    return `<div class="team-row" data-school="${esc(id || '')}"><span class="seed">${esc(t.seed ?? '')}</span>${name}<span class="score"></span></div>`;
+  }
   const cls = game.winner ? (game.winner === side ? 'win' : 'lose') : '';
   const id = t.id ?? t.schoolId;
   const name = id ? `<a class="tname" href="${schoolHref(id, g)}" title="${esc(t.name)}">${esc(t.name)}</a>` : `<span class="tname">${esc(t.name)}</span>`;

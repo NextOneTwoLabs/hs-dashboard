@@ -49,7 +49,7 @@ export async function render({ state, statesIndex, controls, view, setState }) {
         ? '<span class="chip gold trophy">Champion</span>'
         : a.result === 'runner-up' ? '<span class="chip accent">Runner-up</span>' : esc(resultText(a));
       const games = a.games
-        .map((x) => `<li>${esc(x.roundName)} · ${esc(fmtDate(x.date))} · ${x.res ? `<span class="res-${x.res}">${x.res}</span>` : 'vs'} ${x.gf ?? ''}${x.gf != null ? '–' : ''}${x.ga ?? ''}${x.pk ? ` (PK ${x.pk === 'W' ? 'won' : 'lost'})` : ''}
+        .map((x) => x.res === 'BYE' ? `<li>${esc(x.roundName)} · Bye</li>` : `<li>${esc(x.roundName)} · ${esc(fmtDate(x.date))} · ${x.res ? `<span class="res-${x.res}">${x.res}</span>` : 'vs'} ${x.gf ?? ''}${x.gf != null ? '–' : ''}${x.ga ?? ''}${x.pk ? ` (PK ${x.pk === 'W' ? 'won' : 'lost'})` : ''}
           ${x.opp ? `${x.res ? 'vs' : ''} <a href="${schoolHref(x.opp.id, g)}">${esc(x.opp.name)}</a>${x.opp.seed ? ` <span class="muted">(${x.opp.seed})</span>` : ''}` : 'TBD'}</li>`)
         .join('');
       return `<tr><td class="num"><a href="${bracketHref(a.state, a.season, a.competition, a.division)}">${esc(a.season)}</a></td>

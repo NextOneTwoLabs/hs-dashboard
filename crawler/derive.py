@@ -51,8 +51,11 @@ def _bracket_state(games):
     return states.most_common(1)[0][0] if states else None
 
 
-def load_brackets(sources, links, warn=None):
-    """Yield normalized bracket dicts in registry order."""
+def load_brackets(sources, links, warn=None, errors=None):
+    """Yield normalized bracket dicts in registry order.
+
+    Problems that make a registered bracket disappear from the site are
+    appended to `errors` (so --check fails); parser notes go to `warn`."""
     genders = {"boys" if g == "b" else "girls" for g in sources.get("genders", ["b", "g"])}
     for season, scfg in sources["seasons"].items():
         for comp_id in scfg["competitions"]:
@@ -69,10 +72,16 @@ def load_brackets(sources, links, warn=None):
                 if meta["source"] == "maxpreps":
                     found = _bracket_state(parsed["games"])
                     if found and found != meta["state"]:
+                        msg = (f"skipped {season}/{comp_id}/{code}: wrong state, schools are in {found}, "
+                               f"expected {meta['state']}")
                         if warn:
-                            warn(f"skipped {season}/{comp_id}/{code}: schools are in {found}, "
-                                 f"expected {meta['state']}")
+                            warn(msg)
+                        if errors is not None:
+                            errors.append(msg)
                         continue
+                if warn:
+                    for note in parsed["warnings"]:
+                        warn(f"{season}/{comp_id}/{code}: {note}")
                 # A game whose date had passed when we fetched it, with both teams set
                 # but no result, was never reported by the source.
                 fetched = (div.get("fetchedAt") or "")[:10]
@@ -96,6 +105,7 @@ def load_brackets(sources, links, warn=None):
 
 
 def _outcome(game, side):
+    # Byes and unplayed games add nothing to a record.
     if game["status"] != "final":
         return None
     won = game["winner"] == side
@@ -110,7 +120,8 @@ def build_all(sources, check=False, export=False, warn=None):
     aliases = store.load_json(store.ALIASES, {}) or {}
     merge = aliases.get("merge", {})
     out = {}
-    brackets = list(load_brackets(sources, links, warn))
+    errors = []
+    brackets = list(load_brackets(sources, links, warn, errors))
 
     schools = {}
     games_by = {}            # (state, season) -> games
@@ -144,10 +155,12 @@ def build_all(sources, check=False, export=False, warn=None):
             g = finals[0]
             runner = _school_ref(g["bottom" if g["winner"] == "top" else "top"])
         played = sum(1 for g in b["games"] if g["status"] == "final")
+        # A bracket is finished once it has a champion or nothing is left to play.
+        finished = bool(b["champion"]) or not any(g["status"] == "scheduled" for g in main_games)
         dates = [r["date"] for r in b["rounds"] if r["date"]]
         comp_index[key]["divisions"].append({
             **b["division"],
-            "games": len(b["games"]), "played": played,
+            "games": sum(1 for g in b["games"] if g["status"] != "bye"), "played": played,
             "status": ("complete" if b["champion"]
                        else "unreported" if any(g["status"] == "unreported" for g in main_games)
                        and not any(g["status"] == "scheduled" for g in main_games)
@@ -158,6 +171,8 @@ def build_all(sources, check=False, export=False, warn=None):
         })
 
         for g in b["games"]:
+            if g["status"] == "bye":
+                continue  # not a game: the results feed skips it
             games_by.setdefault((st, season), []).append({
                 "id": g["id"], "state": st, "competition": comp, "division": code,
                 "divisionLabel": b["division"]["label"], "gender": b["division"]["gender"], "round": g["round"],
@@ -194,7 +209,8 @@ def build_all(sources, check=False, export=False, warn=None):
                        "roundName": rounds.get(g["round"], {}).get("name") if "place" not in g else "Third place",
                        "date": g["date"], "opp": _game_side(other, merge),
                        "gf": team["score"], "ga": other["score"] if other else None,
-                       "res": res[0] if res else None, "pk": res[1] if res else None}
+                       "res": "BYE" if g["status"] == "bye" else res[0] if res else None,
+                       "pk": res[1] if res else None}
                 if "place" in g:
                     row["place"] = g["place"]
                 app["games"].append(row)
@@ -208,13 +224,18 @@ def build_all(sources, check=False, export=False, warn=None):
                 schools[cid]["fullName"] = b["champion"]["fullName"]
 
         for app in per_school.values():
-            main = [r for r in app["games"] if "place" not in r] or app["games"]
+            # The team's last game: main bracket first, never a bye.
+            main = ([r for r in app["games"] if "place" not in r and r["res"] != "BYE"]
+                    or [r for r in app["games"] if r["res"] != "BYE"] or app["games"])
             last = main[-1]
             app["reachedRound"] = last["round"]
             app["reached"] = last["roundName"]
             won_last = last["res"] == "W" or last["pk"] == "W"
-            if last["res"] is None:
-                app["result"] = "alive"
+            if last["res"] is None or last["res"] == "BYE":
+                # Still playing, or (in a finished bracket) a result the source never reported.
+                app["result"] = "unreported" if finished else "alive"
+            elif last["round"] == last_round and not b["champion"]:
+                app["result"] = "unreported"
             elif last["round"] == last_round and won_last:
                 app["result"] = "champion"
             elif last["round"] == last_round:
@@ -322,7 +343,8 @@ def build_all(sources, check=False, export=False, warn=None):
         for b in brackets:
             files[store.EXPORT / b["season"] / f"{b['competition']}-{b['division']['code']}.csv"] = _csv(b)
 
-    changed = []
+    # Under --check a skipped bracket fails CI instead of silently vanishing from the site.
+    changed = list(errors) if check else []
     # Prune derived files that are no longer produced (e.g. a gender switched off).
     managed = [store.ARCHIVE / sub for sub in ("brackets", "schools", "seasons", "states")]
     if export:

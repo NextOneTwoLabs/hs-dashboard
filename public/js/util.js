@@ -16,6 +16,7 @@ export const RESULT_LABEL = {
   'runner-up': 'Runner-up',
   eliminated: 'Eliminated',
   alive: 'Still alive',
+  unreported: 'Result not reported',
 };
 
 export function resultText(app) {
