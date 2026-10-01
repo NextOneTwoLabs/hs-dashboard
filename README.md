@@ -51,6 +51,8 @@ Notes on the data:
   - Every main-bracket winner is checked against who actually plays in the next round (matched by school GUID; placement games excluded). That team wins over the markers and the score, `next` is pointed at its game, and derive prints a warning.
 - **Byes** (`status: "bye"`) come only from MaxPreps' `is-bye` marker. They are not games: no W/L, not in `played`, not in the results feed; school pages list them as "Bye".
 - **Unreported games:** a game whose date had passed when it was fetched but has no result is marked `unreported`. Example: Texas 5A D1 2026, whose final was never scored on MaxPreps. In a finished bracket (a champion, or nothing left to play) a school whose last game is unreported shows "Result not reported", never "Still alive".
+- **Refresh:** a MaxPreps list page is re-checked once a day (the 06:00 UTC run, inside the term) for brackets added later, even after it is `ok`. Matching is by bracket id: renames keep their code, dropped brackets are kept, a replaced bracket (old id gone) is re-pointed. A failed or blocked bracket keeps a `status` (`error` + `errorCode`, or `blocked`) and is retried only by that daily run; repeating the same failure writes nothing.
+- **Status:** `/api/v1/status` (`refresh-state.json`) and the footer's "Data updated" show when data last changed, not the last cron run. Quiet runs write nothing, so check run health on the GitHub Actions page.
 - **Gender:** `"genders": ["g"]` in `sources.json` limits crawling, derived output and the UI to girls.
 
 ## Commands

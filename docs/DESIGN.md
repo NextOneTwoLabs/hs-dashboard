@@ -66,7 +66,7 @@ public/archive/brackets/<season>/<division>.json         normalized bracket   (s
 public/archive/schools.json                              school directory     (schema:1)
 public/archive/schools/<schoolId>.json                   school history       (schema:1)
 public/archive/seasons/<season>/summary.json             champions, finalists, counts per division
-public/archive/refresh-state.json                        last run, requests, failures
+public/archive/refresh-state.json                        last run that changed something: requests, failures
 public/data/school-aliases.json                          manual merge/rename overrides
 export/<season>/<division>.csv                           human-readable export
 ```
@@ -122,7 +122,7 @@ export/<season>/<division>.csv                           human-readable export
 | Route | Returns |
 |---|---|
 | `GET /api/v1/catalog` | `sources.json` (seasons, competitions, divisions) |
-| `GET /api/v1/status` | `refresh-state.json` |
+| `GET /api/v1/status` | `refresh-state.json`. `updatedAt` is when data last changed (a crawl, a new failure, a budget stop), not the last cron run: quiet runs write nothing, so watch run health on the Actions page |
 | `GET /api/v1/seasons/{season}/summary` | champions and finalists for each division |
 | `GET /api/v1/seasons/{season}/competitions/{comp}/divisions/{code}/bracket` | normalized bracket |
 | `GET /api/v1/schools` | school directory, used for search |

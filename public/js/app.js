@@ -153,7 +153,7 @@ window.addEventListener('hashchange', render);
   render();
   api.status().then((s) => {
     if (s?.updatedAt) {
-      document.getElementById('status-line').textContent += ` Updated ${new Date(s.updatedAt).toLocaleString()}.`;
+      document.getElementById('status-line').textContent += ` Data updated ${new Date(s.updatedAt).toLocaleString()}.`;
     }
   }).catch(() => {});
 })();
