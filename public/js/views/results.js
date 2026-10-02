@@ -46,10 +46,10 @@ export async function render({ state, catalog, statesIndex, controls, view, head
         .sort((a, b) => a.division.localeCompare(b.division) || a.competition.localeCompare(b.competition))
         .map((g) => {
           const label = `${multiComp ? `${esc(short[g.competition] || '')} ` : ''}${esc(g.divisionLabel || g.division)}`;
-          const top = `<a href="${bracketHref(data.state, data.season, g.competition, g.division)}">${label}</a><span>${esc(g.roundName || '')}</span>`;
-          const meta = g.status === 'unreported' ? '<span>Result not reported</span>'
-            : g.decidedBy === 'pk' ? '<span>Final</span><span>Decided on PKs</span>' : '';
-          return matchCard(g, { g: (g.gender || 'girls')[0], top, meta });
+          // The shared card (#20 PR 4): competition · round in the header (the day is the section heading),
+          // status in the footer, and "View in bracket" to the game's round.
+          return matchCard(g, { g: (g.gender || 'girls')[0], head: `${label}${g.roundName ? ` · ${esc(g.roundName)}` : ''}`,
+            bracket: bracketHref(data.state, data.season, g.competition, g.division, g.round) });
         })
         .join('');
       return `<section class="day"><h3>${esc(date ? fmtLongDate(date) : 'Date TBD')}</h3><div class="cards">${cards}</div></section>`;

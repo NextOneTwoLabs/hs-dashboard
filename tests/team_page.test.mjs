@@ -86,7 +86,7 @@ test('4. Overview: latest playoff game and season summary first; no progression 
   assert.doesNotMatch(html, /class="chart"|<svg|How far they went/);
   await assert.rejects(access(new URL('public/js/components/chart.js', root)), 'the depth chart is gone');
   const latest = html.slice(html.indexOf('Latest playoff game'), html.indexOf('Season summary'));
-  assert.match(text(latest), /Regional Semifinals · Mar 5/);
+  assert.match(text(latest), /State · Division 1 · Regional Semifinals Mar 5/);
   assert.match(text(latest), /Los Gatos 1 .*Bishop O'Dowd 2/);
   const summary = text(html.slice(html.indexOf('Season summary'), html.indexOf('Playoff journey')));
   assert.match(summary, /Seed 3 Furthest round Regional Semifinals Playoff W-L-D 1-1-0/);
@@ -125,15 +125,16 @@ test('5. Playoff history: one compact table for all seasons, same names for the 
 test('6. Results: match cards name the PK winner, keep the draw, and tell missing results from scores', async () => {
   const pk = await open(`#tab=team&view=results&season=2023-24&school=${PK_SCHOOL}`);
   const card = pk.view.innerHTML.slice(pk.view.innerHTML.indexOf('Regional Semifinals') - 400);
-  assert.match(card, /<div class="team-row win"[\s\S]*?<span class="score">1<span class="pk" title="Won on penalty kicks">PK<span class="sr-only"> \(won on penalty kicks\)<\/span><\/span>/,
+  // #20 PR 4: the shared card says "PK win" (with the same hidden words) and notes the draw convention.
+  assert.match(card, /<div class="team-row win"[\s\S]*?<span class="score">1<span class="pk">PK win<span class="sr-only"> \(won on penalty kicks\)<\/span><\/span>/,
     'the PK tag says what it means to screen readers too');
-  assert.match(text(card), /Final · decided on PKs A draw in the playoff record/);
+  assert.match(text(card), /Final .*Level after full time, decided on penalty kicks · counts as a draw in playoff records/);
   const hist = await open(`#tab=team&view=history&school=${PK_SCHOOL}`);
   assert.match(text(hist.view.innerHTML), /2023-24 .* \d+-\d+-[1-9]/, 'the shootout is a D in the record');
   const unrep = await open(`#tab=team&view=results&season=2025-26&school=${UNREPORTED_SCHOOL}`);
-  assert.match(text(unrep.view.innerHTML), /State Finals · Apr 9 .* Result not reported/);
+  assert.match(text(unrep.view.innerHTML), /State Finals Apr 9 .* Result not reported/);
   const noScore = await open(`#tab=team&view=results&season=2025-26&school=${NO_SCORE_SCHOOL}`);
-  assert.match(text(noScore.view.innerHTML), /Final Score not reported/);
+  assert.match(text(noScore.view.innerHTML), /Final · score not reported/);
 });
 
 // #22 review B1: a school file's row has no status and `res` is null both for a game never reported and for
@@ -148,7 +149,7 @@ test('7. a live season: the next game is "Scheduled" (or "Opponent to be decided
     games: [game(0, 'First Round', '2026-11-01', { id: 'opp-a', name: 'Opp A', seed: 6 }, 2, 0, 'W'),
       game(1, 'Quarterfinals', '2099-11-08', opp, null, null, null)],
   });
-  for (const [opp, want] of [[{ id: 'opp-b', name: 'Opp B', seed: 2 }, /Scheduled/], [null, /Scheduled.*Opponent to be decided/]]) {
+  for (const [opp, want] of [[{ id: 'opp-b', name: 'Opp B', seed: 2 }, /Opp B .*Scheduled/], [null, /To be decided .*Scheduled/]]) {
     const a = live(opp);
     const ctx = { s, a, own: [a], comps: {}, catalog: null, g: 'g' };
     const ov = text(team.overviewHtml(ctx));
