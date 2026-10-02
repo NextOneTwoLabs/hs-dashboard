@@ -166,7 +166,8 @@ button { cursor: pointer; }
 }
 .controls .field { width: auto; }
 .controls select { flex: none; min-width: 120px; max-width: 280px; }
-.filter-term { margin-left: auto; font-size: 12px; color: var(--text-secondary); }
+.filter-term { margin-left: auto; font-size: 12px; color: var(--text-secondary); }   /* the season of play */
+.filter-hint { margin-left: auto; font-size: 12px; color: var(--text-secondary); }   /* a usage hint, e.g. the school list's */
 .field-label { font-size: 11px; font-weight: 600; color: var(--text-secondary); }
 .pill-row { display: flex; flex-wrap: wrap; gap: 6px; padding: 4px 16px 6px; }
 .pill {
@@ -435,7 +436,7 @@ table.history tbody th { background: none; position: static; font-size: 13px; co
   /* A long option (CIF NorCal Regional Championships) must not set the select's minimum width. */
   .controls select { flex: 1 1 0; width: 0; min-width: 0; max-width: none; min-height: 40px; }
   .controls .seg button { min-height: 40px; }
-  .filter-term { margin-left: 0; }
+  .filter-term, .filter-hint { margin-left: 0; }
   .content-header { padding: 14px 16px 0; }
   .content-header-row { flex-direction: column; }
   .content-header-right { justify-content: flex-start; }

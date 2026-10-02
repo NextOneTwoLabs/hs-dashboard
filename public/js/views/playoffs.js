@@ -74,9 +74,10 @@ function bracketHtml(b, state) {
   } else if (main.some((x) => x.status === 'unreported')) {
     banner = '<div class="card notice" style="margin-bottom:18px;padding:12px 16px;text-align:left">Some results in this bracket were never reported by the source, so it has no champion here.</div>';
   }
-  // Phones show one round at a time; the round pills only change what is shown, so they are buttons.
+  // Phones show one round at a time; the round pills only change what is shown, so they are buttons. Each has a
+  // stable id, so the pressed pill gets focus back after the re-render (app.js refocusId; #18 item 1).
   const switcher = `<div class="round-switch pill-row" role="group" aria-label="Round">${b.rounds
-    .map((r) => `<button type="button" class="pill" data-round="${r.index}" aria-pressed="${r.index === active}">${esc(shortRound(r.name))}</button>`)
+    .map((r) => `<button type="button" class="pill" id="round-${r.index}" data-round="${r.index}" aria-pressed="${r.index === active}">${esc(shortRound(r.name))}</button>`)
     .join('')}</div>`;
   const cols = b.rounds
     .map((r) => {

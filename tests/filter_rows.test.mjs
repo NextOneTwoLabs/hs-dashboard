@@ -111,3 +111,30 @@ test('6. #18: a filter select or toggle keeps focus after the re-render; the pan
   assert.match(shell, /toggle\.setAttribute\('aria-expanded', String\(open\)\);/);
   assert.match(shell, /e\.key === 'Escape' && filtersOpen\(\)\) \{ e\.preventDefault\(\); setFiltersOpen\(false, \{ restore: true \}\); \}/);
 });
+
+// #23 review B1: the bracket's round pills (named in #18 item 1) re-render the bracket through setState, so they
+// need ids for focus to come back to the pressed pill instead of falling to <body>.
+test('7. the bracket\'s round pills keep focus: each has a stable id that survives the re-render', async () => {
+  const pills = (els) => {
+    const html = els.map((e) => e.innerHTML).join('');
+    return [...html.matchAll(/<button type="button" class="pill"([^>]*) data-round="(\d+)" aria-pressed="(true|false)">/g)]
+      .map((m) => ({ id: m[1].match(/ id="([^"]+)"/)?.[1] ?? null, round: m[2], pressed: m[3] }));
+  };
+  const first = pills((await open('#tab=playoffs&st=CA&season=2024-25')).made);
+  assert.ok(first.length >= 3, `round pills rendered: ${first.length}`);
+  for (const p of first) assert.equal(p.id, `round-${p.round}`, `round ${p.round} has an id`);
+  assert.equal(new Set(first.map((p) => p.id)).size, first.length, 'ids are unique');
+  // Pressing round 0 re-renders with round=0 in the hash: the same ids are there, now with round 0 pressed.
+  const again = pills((await open('#tab=playoffs&st=CA&season=2024-25&round=0')).made);
+  assert.deepEqual(again.map((p) => p.id), first.map((p) => p.id));
+  assert.equal(again.find((p) => p.round === '0').pressed, 'true');
+  const src = await read('public/js/views/playoffs.js');
+  assert.match(src, /btn\.addEventListener\('click', \(\) => setState\(\{ round: btn\.dataset\.round \}, \{ replace: true \}\)\)/,
+    'a pill press goes through setState, which keeps the focused id (the pill is inside #view)');
+  // Non-blocking notes: Escape works with focus on the toggle too, and the school list's hint has its own class.
+  const shell = await read('public/js/shell.js');
+  assert.match(shell, /bar\.addEventListener\('keydown'/, 'Escape is handled on the whole filter bar, toggle included');
+  const list = await open('#tab=teams&view=list');
+  assert.match(list.controls.innerHTML, /<p class="filter-hint">Search by name or city in the box at the top\.<\/p>/);
+  assert.doesNotMatch(list.controls.innerHTML, /filter-term/);
+});

@@ -5,7 +5,6 @@ import { api } from './api.js';
 
 const bar = document.getElementById('filter-bar');
 const toggle = document.getElementById('filter-toggle');
-const panel = document.getElementById('controls');
 
 export const filtersOpen = () => bar.classList.contains('open');
 
@@ -17,8 +16,8 @@ export function setFiltersOpen(open, { restore = false } = {}) {
 
 // Focus stays on the toggle when the panel opens or closes (a disclosure, not a dialog).
 toggle.addEventListener('click', () => setFiltersOpen(!filtersOpen()));
-// Escape inside the open panel closes it and returns focus to the toggle.
-panel.addEventListener('keydown', (e) => {
+// Escape on the toggle or inside the open panel closes it and returns focus to the toggle.
+bar.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && filtersOpen()) { e.preventDefault(); setFiltersOpen(false, { restore: true }); }
 });
 

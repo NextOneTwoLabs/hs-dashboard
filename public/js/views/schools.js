@@ -27,7 +27,7 @@ export async function render({ state, statesIndex, controls, view, head, setStat
   let q = state.q || '';
   // The filter row (#20 PR 3): the state; the name filter is the header search box.
   controls.innerHTML = stateSelect(statesIndex, st, { all: true })
-    + '<p class="filter-term">Search by name or city in the box at the top.</p>';
+    + '<p class="filter-hint">Search by name or city in the box at the top.</p>';
   bindFilters(controls, setState, { patch: (key, value) => listPatch(q)(key, value) });
   setHead(head, { crumbs: [['Teams', '#tab=teams'], ['Schools']], title: 'Schools' });
   view.innerHTML = '<div class="card notice">Loading schools…</div>';
