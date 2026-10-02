@@ -5,7 +5,7 @@ import { esc } from '../util.js';
 export async function render({ statesIndex, controls, view, head }) {
   controls.innerHTML = '';   // nothing to filter on About
   const covered = statesIndex.states.filter((s) => s.latestSeason);
-  setHead(head, { crumbs: [['All states', '#tab=teams'], ['About the data']], title: 'About the data',
+  setHead(head, { crumbs: [['All states', '#tab=schools'], ['About the data']], title: 'About the data',
     subtitle: `US high school girls soccer state championships · ${covered.length} states so far` });
   const list = covered.map((s) => `<li><b>${esc(s.name)}</b>: ${esc(s.associationName || s.association)} (${esc(s.association)}), ${esc(s.seasons.join(', '))}</li>`).join('');
   view.innerHTML = `<div class="card card-pad prose">

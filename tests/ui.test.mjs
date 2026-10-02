@@ -30,8 +30,9 @@ function open(hash) {
   return raw;
 }
 
-// #20 renamed the tabs (states/schools -> teams, school -> team, champions -> playoffs&view=champions); the
-// old names still open the same content. The full old-links table is in nav_shell.test.mjs.
+// #20 renamed the tabs (states/schools -> teams, school -> team, champions -> playoffs&view=champions) and #26
+// named them Schools / School again (teams -> schools, team -> school); every old name still opens the same
+// content. The full old-links table is in nav_shell.test.mjs.
 test('old links still open the same view and state', () => {
   const school = '000472c2-dee8-4be6-bcdd-c0ff8a4582aa';
   const cases = [
@@ -40,14 +41,17 @@ test('old links still open the same view and state', () => {
     ['#tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=5a-d1', { tab: 'playoffs', st: 'TX', comp: 'tx-uil', div: '5a-d1' }],
     ['#tab=results&st=TX&show=upcoming', { tab: 'results', st: 'TX', show: 'upcoming' }],
     ['#tab=results&st=GA&season=2025-26&show=results', { tab: 'results', st: 'GA', season: '2025-26', show: 'results' }],
-    ['#tab=schools&q=lake', { tab: 'teams', q: 'lake' }],
-    ['#tab=schools&st=WA&q=east', { tab: 'teams', st: 'WA', q: 'east' }],
-    [`#tab=school&school=${school}`, { tab: 'team', school }],
-    [`#school=${school}`, { tab: 'team', school }],
-    ['', { tab: 'teams' }],
-    ['#tab=bogus', { tab: 'teams' }],
+    ['#tab=schools&q=lake', { tab: 'schools', q: 'lake' }],
+    ['#tab=teams&q=lake', { tab: 'schools', q: 'lake' }],
+    ['#tab=schools&st=WA&q=east', { tab: 'schools', st: 'WA', q: 'east' }],
+    [`#tab=school&school=${school}`, { tab: 'school', school }],
+    [`#tab=team&school=${school}`, { tab: 'school', school }],
+    [`#school=${school}`, { tab: 'school', school }],
+    ['', { tab: 'schools' }],
+    ['#tab=bogus', { tab: 'schools' }],
     ['#tab=bogus&comp=tx-uil', { tab: 'playoffs', st: 'TX', comp: 'tx-uil' }],
-    ['#tab=school', { tab: 'teams', view: 'list' }],
+    ['#tab=school', { tab: 'schools', view: 'list' }],
+    ['#tab=team', { tab: 'schools', view: 'list' }],
     ['#tab=about', { tab: 'about' }],
     ['#tab=champions&st=pa', { tab: 'playoffs', view: 'champions', st: 'PA' }],
   ];
@@ -62,15 +66,15 @@ test('filters keep writing the same hash keys (show, q) and nav links keep conte
   assert.match(filters.showSelect(results.show), /<option value="upcoming" selected>Upcoming<\/option>/);
   assert.deepEqual(filters.patchFor('show', ''), { show: null }, '"All games" drops show');
   assert.deepEqual(filters.patchFor('show', 'results'), { show: 'results' });
-  assert.equal(listHref({ st: 'TX', q: 'lake' }), '#tab=teams&st=TX&q=lake');
-  assert.equal(listHref(), '#tab=teams&view=list');
+  assert.equal(listHref({ st: 'TX', q: 'lake' }), '#tab=schools&st=TX&q=lake');
+  assert.equal(listHref(), '#tab=schools&view=list');
   assert.equal(navHref('playoffs', { st: 'TX', season: '2025-26', g: 'g' }), '#tab=playoffs&st=TX&season=2025-26&g=g');
   assert.equal(navHref('results', { st: 'TX', season: '2025-26', g: 'g' }), '#tab=results&st=TX&season=2025-26&g=g');
-  assert.equal(navHref('teams', { st: 'TX' }), '#tab=teams');
+  assert.equal(navHref('schools', { st: 'TX' }), '#tab=schools');
   assert.equal(hrefFor({ tab: 'playoffs', view: 'champions', st: 'TX' }), '#tab=playoffs&view=champions&st=TX');
-  assert.equal(sectionOf('team'), 'teams');
+  assert.equal(sectionOf('school'), 'schools');
   assert.equal(sectionOf('about'), null);
-  assert.deepEqual(MAIN_NAV.map(([t]) => t), ['teams', 'results', 'playoffs']);
+  assert.deepEqual(MAIN_NAV.map(([t]) => t), ['schools', 'results', 'playoffs']);
   for (const [t] of MAIN_NAV) assert.equal(resolveTab({ tab: t }).tab, t);
 });
 
@@ -122,8 +126,8 @@ test('the filter toggle, tabs and page header use link and ARIA semantics', asyn
   assert.match(html, /id="filter-toggle"[^>]*aria-expanded="false"[^>]*aria-controls="controls"/);
   assert.match(html, /viewport-fit=cover/);
   assert.match(filters.termButtons(statesIndex, 'fall'), /<button type="button" id="f-term-fall" data-term="fall" aria-pressed="true">Fall<\/button>/);
-  const head = pageHeadHtml({ crumbs: [['All states', '#tab=teams'], ['Texas', '#tab=playoffs&st=TX'], ['2025-26']], title: '6A D1', subtitle: 'UIL' });
-  assert.match(head, /<a href="#tab=teams">All states<\/a>.*<span class="breadcrumb-current" aria-current="page">2025-26<\/span>/s);
+  const head = pageHeadHtml({ crumbs: [['All states', '#tab=schools'], ['Texas', '#tab=playoffs&st=TX'], ['2025-26']], title: '6A D1', subtitle: 'UIL' });
+  assert.match(head, /<a href="#tab=schools">All states<\/a>.*<span class="breadcrumb-current" aria-current="page">2025-26<\/span>/s);
   assert.match(head, /<h1 class="content-title" tabindex="-1">6A D1<\/h1>/);
   const css = await read('public/css/app.css');
   assert.match(css, /env\(safe-area-inset-bottom\)/);

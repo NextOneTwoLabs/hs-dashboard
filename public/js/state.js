@@ -1,5 +1,5 @@
 // Hash deep links: #tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=6a-d1
-// `view` is a sub-page of a tab (#20): teams&view=list, playoffs&view=champions.
+// `view` is a sub-page of a tab (#20): schools&view=list, playoffs&view=champions, school&view=history.
 export const KEYS = ['tab', 'view', 'st', 'season', 'comp', 'div', 'g', 'school', 'show', 'round', 'q'];
 
 export function readHash() {

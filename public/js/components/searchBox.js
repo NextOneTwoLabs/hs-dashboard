@@ -1,11 +1,12 @@
-// The one search box, in the header (#13): an ARIA 1.2 editable combobox with list autocomplete.
-// The box (role=combobox) owns a listbox of options; the active option is named by
-// aria-activedescendant and has aria-selected="true". The hint is the box's aria-describedby; the
-// single role=status region announces counts after a pause in typing. Matching lives in search.js.
+// The one search box (#13), on the Schools page since #26 (the #school-search band in index.html, shown on the
+// landing and the list; this module owns it and no view writes into it). An ARIA 1.2 editable combobox with list
+// autocomplete: the box (role=combobox) owns a listbox of options; the active option is named by
+// aria-activedescendant and has aria-selected="true". The hint is the box's aria-describedby; the single
+// role=status region announces counts after a pause in typing. Matching lives in search.js.
 import { api } from '../api.js';
 import { buildIndex, enterTarget, keyStep, statusText, suggest, target } from '../search.js';
 import { readHash } from '../state.js';
-import { pageOf, resolveTab } from '../nav.js';
+import { boxTextAfter, hasSchoolSearch, pageOf, resolveTab, slashAction } from '../nav.js';
 import { optionId, panelHtml } from './searchPanel.js';
 
 const PHONE = matchMedia('(max-width: 768px)');
@@ -21,9 +22,9 @@ export function initSearch({ getStatesIndex }) {
   let st = { open: false, active: -1 };
   let timer = null;
   let titleFocus = false;
-  let lastList = false;
+  let focusAfterRender = false;   // "/" from another page: focus the box once Schools has rendered (#26)
 
-  // The school list (Teams with st/q/view=list, #20) is where the box filters the table.
+  // The school list (Schools with st/q/view=list) is where the box filters the table.
   const onList = () => pageOf(resolveTab(readHash())) === 'schools';
   const empty = () => ({ rows: [], cities: [], states: [] });
 
@@ -103,10 +104,12 @@ export function initSearch({ getStatesIndex }) {
     go(t);
   }
 
-  // The Teams landing's example chips (#20 PR 5) use this one box, as its own chips do: fill it, focus it and
-  // show the suggestions. There is no second search box on the page.
-  window.addEventListener('hs-search-fill', async (e) => {
-    choose({ kind: 'chip', text: String(e.detail || '') });
+  // The landing's example chips, under the box (#26): fill it, focus it and show the suggestions, as the panel's
+  // own chips do.
+  document.getElementById('school-search-chips')?.addEventListener('click', async (e) => {
+    const chip = e.target.closest('[data-fill]');
+    if (!chip) return;
+    choose({ kind: 'chip', text: chip.dataset.fill });
     await ensureIndex();
     if (document.activeElement === input) { st = { open: true, active: -1 }; draw(); announce(); }
   });
@@ -116,6 +119,10 @@ export function initSearch({ getStatesIndex }) {
   input.addEventListener('focus', () => document.body.classList.add('search-focus'));
   input.addEventListener('blur', () => document.body.classList.remove('search-focus'));
   input.addEventListener('focus', async () => {
+    // Phones: bring the band to the top of the content column, so the suggestions open into the space above the
+    // on-screen keyboard (the panel's height is --vvh minus the box's bottom edge, app.css).
+    if (PHONE.matches) document.getElementById('school-search')?.scrollIntoView?.({ block: 'start' });
+    sizePanel();
     await ensureIndex();
     st = { open: true, active: -1 };
     draw();
@@ -164,25 +171,35 @@ export function initSearch({ getStatesIndex }) {
     emitQuery();
     input.focus();
   });
+  // "/" (#26): on a Schools page it focuses the box; elsewhere it opens Schools, and the box gets focus once that
+  // page has rendered (hs-rendered, which app.js sends before its title-focus step). nav.js slashAction ignores
+  // it while typing in a field and with Ctrl, Meta or Alt.
   document.addEventListener('keydown', (e) => {
-    if (e.key === '/' && !e.target.closest('input, select, textarea')) { e.preventDefault(); input.focus(); }
+    const act = slashAction(resolveTab(readHash()), e);
+    if (!act) return;
+    e.preventDefault();
+    if (act.hash) { focusAfterRender = true; location.hash = act.hash; } else { input.focus(); }
   });
-  // After each page render: on the school list the box shows q=; leaving it clears it (q drops out of the
-  // next tab link, as before). A school chosen from search focuses the new page's title.
+  // After each page render: leaving Schools clears the box; on the list it shows q= (unless you're typing in it);
+  // within Schools (landing ↔ list) it keeps your text (nav.js boxTextAfter). A school chosen from search focuses
+  // the new page's title; "/" from another page focuses the box.
   window.addEventListener('hs-rendered', () => {
-    const now = onList();
-    if (now) {
-      if (document.activeElement !== input) input.value = readHash().q || '';
-    } else if (lastList) {
-      input.value = '';   // leaving the list drops its filter text
+    const state = resolveTab(readHash());
+    input.value = boxTextAfter({ state, focused: document.activeElement === input, text: input.value });
+    if (focusAfterRender) {
+      focusAfterRender = false;
+      if (hasSchoolSearch(state)) input.focus({ preventScroll: true });
     }
-    lastList = now;
     if (titleFocus) { titleFocus = false; focusTitle(); }
   });
-  // Phones: size the panel from the visual viewport, so it stays above the on-screen keyboard.
+  // Phones: size the panel from the visual viewport and the box's position, so it stays above the keyboard.
+  function sizePanel() {
+    const bottom = Math.round(input.getBoundingClientRect?.().bottom || 0);
+    document.documentElement.style.setProperty('--qpanel-top', `${bottom}px`);
+  }
   const vv = window.visualViewport;
   if (vv) {
-    const size = () => document.documentElement.style.setProperty('--vvh', `${Math.round(vv.height)}px`);
+    const size = () => { document.documentElement.style.setProperty('--vvh', `${Math.round(vv.height)}px`); sizePanel(); };
     vv.addEventListener('resize', size);
     size();
   }

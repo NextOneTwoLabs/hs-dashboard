@@ -93,19 +93,19 @@ test('the Schools table keeps substring matching for q= (old links)', () => {
   assert.equal(rows('LAKE').length, rows('lake').length);
 });
 
-// #20: a school opens its team page; a city and "All N" open the school list under Teams.
+// #20, #26: a school opens its school page; a city and "All N" open the school list under Schools.
 test('targets: what choosing an option or Enter does on each view', () => {
   const mat = s.suggest(idx, 'mat');
-  assert.deepEqual(s.target(mat.items[0]), { hash: '#tab=team&school=2b6b45d3-4465-4750-ba48-a273b674e37c', focusTitle: true });
+  assert.deepEqual(s.target(mat.items[0]), { hash: '#tab=school&school=2b6b45d3-4465-4750-ba48-a273b674e37c', focusTitle: true });
   assert.deepEqual(s.target(s.suggest(idx, 'Texas').items[0]), { hash: '#tab=playoffs&st=TX' });
   assert.deepEqual(s.target(s.suggest(idx, 'UIL').items[0]), { hash: '#tab=playoffs&st=TX' });
-  assert.deepEqual(s.target(s.suggest(idx, 'san antonio').items[0]), { hash: '#tab=teams&q=San%20Antonio' });
-  assert.deepEqual(s.target(mat.items.at(-1)), { hash: '#tab=teams&q=mat' });
+  assert.deepEqual(s.target(s.suggest(idx, 'san antonio').items[0]), { hash: '#tab=schools&q=San%20Antonio' });
+  assert.deepEqual(s.target(mat.items.at(-1)), { hash: '#tab=schools&q=mat' });
   assert.deepEqual(s.target({ kind: 'chip', text: 'Texas' }), { fill: 'Texas' });
   assert.deepEqual(s.enterTarget(mat, { list: true }), { stay: true });
   assert.deepEqual(s.enterTarget(mat, { list: false }), s.target(mat.items[0]));
-  assert.deepEqual(s.enterTarget(s.suggest(idx, 'san antonio')), { hash: '#tab=teams&q=San%20Antonio' });
-  assert.deepEqual(s.enterTarget(s.suggest(idx, 'ake')), { hash: '#tab=teams&q=ake' });
+  assert.deepEqual(s.enterTarget(s.suggest(idx, 'san antonio')), { hash: '#tab=schools&q=San%20Antonio' });
+  assert.deepEqual(s.enterTarget(s.suggest(idx, 'ake')), { hash: '#tab=schools&q=ake' });
   assert.equal(s.enterTarget(s.suggest(idx, 'zzzz')), null);
   assert.equal(s.enterTarget(s.suggest(idx, '')), null);
   assert.match(s.statusText(s.suggest(idx, 'ake'), 'ake', { list: true }), /^59 schools match · Enter keeps the table$/);

@@ -163,7 +163,7 @@ const initials = (name) => name.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).
 
 export async function render({ state, statesIndex, controls, view, head, setState }) {
   controls.innerHTML = '';   // no statewide filters on a team page: the filter row hides (app.js)
-  setHead(head, { crumbs: [['Teams', '#tab=teams'], ['Team']], title: 'Team' });
+  setHead(head, { crumbs: [['Schools', '#tab=schools'], ['School']], title: 'School' });
   view.innerHTML = '<div class="card notice">Loading team…</div>';
   let s;
   try {
@@ -183,7 +183,7 @@ export async function render({ state, statesIndex, controls, view, head, setStat
   const fav = favorites().some((f) => f.id === s.id);
   const stateName = statesIndex.states.find((x) => x.code === s.state)?.name || s.state;
   setHead(head, {
-    crumbs: [['Teams', '#tab=teams'], [stateName, listHref({ st: s.state })], [s.name]],
+    crumbs: [['Schools', '#tab=schools'], [stateName, listHref({ st: s.state })], [s.name]],
     lead: `<span class="crest">${esc(initials(s.name))}</span>`,
     title: s.fullName || s.name,
     subtitle: esc(identityLine(s, a, comps)),

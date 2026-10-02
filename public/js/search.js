@@ -67,7 +67,7 @@ export function matchScore(p, q) {
 }
 
 // The Schools table keeps today's meaning of q= (#13 build item 1): a substring of the name or the city,
-// case-insensitive, so q=ake still lists "Lake ..." schools (old Schools links open this list under Teams, #20).
+// case-insensitive, so q=ake still lists "Lake ..." schools (old and new Schools links open this list).
 export function tableMatch(row, q) {
   const needle = String(q ?? '').trim().toLowerCase();
   if (!needle) return true;
@@ -138,10 +138,10 @@ export function suggest(idx, raw, { phone = false } = {}) {
 // Where choosing an item goes: a hash, or a chip's text to search for.
 export function target(item) {
   switch (item.kind) {
-    case 'school': return { hash: `#tab=team&school=${encodeURIComponent(item.row.id)}`, focusTitle: true };
+    case 'school': return { hash: `#tab=school&school=${encodeURIComponent(item.row.id)}`, focusTitle: true };
     case 'state': return { hash: `#tab=playoffs&st=${item.state.code}` };
-    case 'city': return { hash: `#tab=teams&q=${encodeURIComponent(item.city.city)}` };
-    case 'all': return { hash: `#tab=teams&q=${encodeURIComponent(item.q)}` };
+    case 'city': return { hash: `#tab=schools&q=${encodeURIComponent(item.city.city)}` };
+    case 'all': return { hash: `#tab=schools&q=${encodeURIComponent(item.q)}` };
     case 'chip': return { fill: item.text };
     default: return null;
   }
@@ -149,7 +149,7 @@ export function target(item) {
 
 // Enter with no active option (collegedash's rule, on our views): on the school list the filtered table stays;
 // elsewhere the first school opens, or the first place when the query names only places, or the list with q.
-// `list`: the school list (Teams with st/q, nav.js pageOf) is the page now open.
+// `list`: the school list (Schools with st/q, nav.js pageOf) is the page now open.
 export function enterTarget(result, { list = false } = {}) {
   if (result.mode !== 'list') return null;
   if (list) return { stay: true };

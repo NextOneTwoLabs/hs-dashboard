@@ -21,20 +21,14 @@
     <div class="header-left">
       <a class="wordmark" href="https://www.nextonetwo.com"><img src="/assets/logo.svg" alt="" width="32" height="32">next<span class="accent">one</span>two</a>
       <div class="header-divider" aria-hidden="true"></div>
-      <a class="section-label" href="#tab=teams">High School Girls Soccer</a>
+      <a class="section-label" href="#tab=schools">High School Girls Soccer</a>
     </div>
     <!-- The Main nav (#20): here on wider screens, the bottom bar on phones; only one is displayed (app.js fills both). -->
     <nav class="header-nav" aria-label="Main" id="main-nav">
-      <a class="main-nav-link" href="#tab=teams"><span>Teams</span></a>
+      <a class="main-nav-link" href="#tab=schools"><span>Schools</span></a>
       <a class="main-nav-link" href="#tab=results"><span>Results</span></a>
       <a class="main-nav-link" href="#tab=playoffs"><span>Playoffs</span></a>
     </nav>
-    <div class="header-search search" id="search" role="search">
-      <input type="search" class="search-input" id="search-input" role="combobox" aria-label="Search schools, cities, states" aria-autocomplete="list" aria-controls="search-list" aria-expanded="false" aria-describedby="search-hint" placeholder="School, city or state…  /" autocomplete="off" spellcheck="false" enterkeyhint="search">
-      <span class="sr-only" id="search-hint">Type a school, a city, a state or an association. Down arrow for suggestions.</span>
-      <div class="qpanel" id="search-panel" hidden><div role="listbox" id="search-list" aria-label="Suggestions" class="qlist"></div></div>
-      <span class="sr-only" id="search-status" role="status"></span>
-    </div>
     <div class="header-right">
       <span class="observed-top" id="data-updated"></span>
       <a class="header-link" href="#tab=about">About the data</a>
@@ -48,9 +42,30 @@
     <div class="main" id="main">
       <div class="content-header">
         <div class="content-header-row" id="page-head"></div>
-        <!-- Playoffs › Brackets · Champions, or a team's Overview · Results · Playoff history (app.js sets the label). -->
+        <!-- Playoffs › Brackets · Champions, or a school's Overview · Results · Playoff history (app.js sets the label). -->
         <nav class="view-tabs" aria-label="Playoffs" id="tabs" hidden></nav>
       </div>
+      <!-- The Schools search (#26): shown on the Schools landing and list only (app.js), owned by
+           components/searchBox.js. No view writes into it, so typed text and focus survive landing → list. -->
+      <section class="school-search" id="school-search" aria-labelledby="find-h" hidden>
+        <div class="card school-search-card">
+          <h2 class="school-search-h" id="find-h">Find a school</h2>
+          <p class="school-search-lead">Type a school's name, a city, a state or an association.</p>
+          <div class="search" id="search" role="search">
+            <input type="search" class="search-input" id="search-input" role="combobox" aria-label="Search schools, cities, states" aria-autocomplete="list" aria-controls="search-list" aria-expanded="false" aria-describedby="search-hint" placeholder="School, city or state…" autocomplete="off" spellcheck="false" enterkeyhint="search">
+            <span class="search-kbd" aria-hidden="true">/</span>
+            <span class="sr-only" id="search-hint">Type a school, a city, a state or an association. Down arrow for suggestions.</span>
+            <div class="qpanel" id="search-panel" hidden><div role="listbox" id="search-list" aria-label="Suggestions" class="qlist"></div></div>
+            <span class="sr-only" id="search-status" role="status"></span>
+          </div>
+          <div class="chips school-search-chips" id="school-search-chips" role="group" aria-label="Example searches">
+            <button type="button" class="chip" data-fill="Los Gatos">Los Gatos</button>
+            <button type="button" class="chip" data-fill="Mater Dei">Mater Dei</button>
+            <button type="button" class="chip" data-fill="San Antonio">San Antonio</button>
+            <button type="button" class="chip" data-fill="Texas">Texas</button>
+          </div>
+        </div>
+      </section>
       <!-- The filter row (#20 PR 3), above the content it filters. Phones: a "Filters" disclosure with a summary. -->
       <div class="filter-bar" id="filter-bar" hidden>
         <button class="filter-toggle" id="filter-toggle" type="button" aria-expanded="false" aria-controls="controls">
@@ -67,7 +82,7 @@
     </div>
   </div>
   <nav class="bottom-nav" aria-label="Main" id="bottom-nav">
-    <a class="bottom-nav-link" href="#tab=teams"><span>Teams</span></a>
+    <a class="bottom-nav-link" href="#tab=schools"><span>Schools</span></a>
     <a class="bottom-nav-link" href="#tab=results"><span>Results</span></a>
     <a class="bottom-nav-link" href="#tab=playoffs"><span>Playoffs</span></a>
   </nav>

@@ -11,7 +11,7 @@ export async function render({ state, catalog, statesIndex, controls, view, head
   bindFilters(controls, setState);
   bindControls(controls, setState);
   setHead(head, {
-    crumbs: [['All states', '#tab=teams'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], ['Champions']],
+    crumbs: [['All states', '#tab=schools'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], ['Champions']],
     title: `${catalog.name} champions`,
     subtitle: `${esc(catalog.associationName)} (${esc(catalog.association)})`,
   });

@@ -7,14 +7,17 @@ import * as champions from './views/champions.js';
 import * as schools from './views/schools.js';
 import * as team from './views/team.js';
 import * as about from './views/about.js';
-import { canonicalHash, focusTitleAfter, hasSubNav, mainNavHtml, needsCatalog, pageOf, refocusId, resolveTab, subNavHtml,
-  subNavLabel } from './nav.js';
+import { canonicalHash, focusTitleAfter, hasSchoolSearch, hasSubNav, mainNavHtml, needsCatalog, pageOf, refocusId, resolveTab,
+  subNavHtml, subNavLabel } from './nav.js';
 import { initSearch } from './components/searchBox.js';
 import { summaryOf } from './components/filters.js';
 import { setFiltersOpen } from './shell.js';
 
-// Page modules by pageOf(): until #20's new views land, Teams renders today's views (see nav.js).
+// Page modules by pageOf() (see nav.js).
 const VIEWS = { landing, playoffs, results, champions, schools, team, about };
+// The Schools search band (#26): shown on the Schools landing and list only; its chips on the landing only.
+const schoolSearch = document.getElementById('school-search');
+const searchChips = document.getElementById('school-search-chips');
 const head = document.getElementById('page-head');
 const controls = document.getElementById('controls');
 const view = document.getElementById('view');
@@ -72,7 +75,7 @@ async function render(cause = 'control', { keep = null } = {}) {
     raw = normalize(raw, catalog);
   }
   state = raw;
-  // The Main nav (header and phone bottom bar) and the sub-nav (Playoffs, or a team's): one aria-current="page"
+  // The Main nav (header and phone bottom bar) and the sub-nav (Playoffs, or a school's): one aria-current="page"
   // per route.
   mainNav.innerHTML = mainNavHtml(state);
   bottomNav.innerHTML = mainNavHtml(state, { cls: 'bottom-nav-link' });
@@ -81,9 +84,12 @@ async function render(cause = 'control', { keep = null } = {}) {
   subNav.hidden = !hasSubNav(state);
   // Navigating closes the phone filter panel; changing a filter inside it keeps it open.
   if (cause === 'hashchange') setFiltersOpen(false);
+  // The Schools search: shown before the view renders, so "/" and the search module can focus it (#26).
+  schoolSearch.hidden = !hasSchoolSearch(state);
+  searchChips.hidden = pageOf(state) !== 'landing';
   const stateName = catalog ? ` · ${catalog.name}` : '';
-  document.title = state.tab === 'team' || state.tab === 'teams'
-    ? 'Teams · High School Girls Soccer' : `High School Girls Soccer${stateName}`;
+  document.title = state.tab === 'school' || state.tab === 'schools'
+    ? 'Schools · High School Girls Soccer' : `High School Girls Soccer${stateName}`;
   try {
     await VIEWS[pageOf(state)].render({ state, catalog, statesIndex, controls, view, head, setState });
   } catch (err) {
@@ -95,7 +101,9 @@ async function render(cause = 'control', { keep = null } = {}) {
   if (seq === renderSeq) {
     syncFilters();
     if (cause !== 'control') document.getElementById('main').scrollTo({ top: 0 }); // the content column scrolls
-    window.dispatchEvent(new CustomEvent('hs-rendered'));  // the header search syncs its box (#13)
+    // The Schools search syncs its box, and after "/" focuses it (#13, #26). This runs BEFORE the title-focus step,
+    // which then sees the box focused and leaves focus there.
+    window.dispatchEvent(new CustomEvent('hs-rendered'));
     // The view is not an aria-live region (#11): after navigation, focus moves to the page title, which a
     // screen reader then reads, instead of the whole page being announced.
     if (focusTitleAfter({ cause, searchFocused: document.activeElement?.id === 'search-input' })) {
@@ -117,7 +125,7 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
   try { localStorage.setItem('hs-theme', next); } catch { /* ignore */ }
 });
 
-// ----- The one search box, in the header (#13): components/searchBox.js -----
+// ----- The one search box (#13), on the Schools page since #26: components/searchBox.js -----
 initSearch({ getStatesIndex: () => statesIndex });
 
 // ----- Boot -----

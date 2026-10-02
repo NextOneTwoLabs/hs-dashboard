@@ -23,17 +23,18 @@ let listener = null;   // the current render's hs-query handler
 
 export async function render({ state, statesIndex, controls, view, head, setState }) {
   const st = state.st || '';
-  // The filter is the header search box (#13): it writes q= here, and the table keeps substring matching.
+  // The name filter is the Schools search box above this page (#26): it writes q= here, and the table keeps
+  // substring matching.
   let q = state.q || '';
-  // The filter row (#20 PR 3): the state; the name filter is the header search box.
-  controls.innerHTML = stateSelect(statesIndex, st, { all: true })
-    + '<p class="filter-hint">Search by name or city in the box at the top.</p>';
+  // The filter row (#20 PR 3): the state.
+  controls.innerHTML = stateSelect(statesIndex, st, { all: true });
   bindFilters(controls, setState, { patch: (key, value) => listPatch(q)(key, value) });
-  setHead(head, { crumbs: [['Teams', '#tab=teams'], ['Schools']], title: 'Schools' });
+  const crumbs = () => [['Schools', '#tab=schools'], [statesIndex.states.find((s) => s.code === st)?.name || 'All schools']];
+  setHead(head, { crumbs: crumbs(), title: 'Schools' });
   view.innerHTML = '<div class="card notice">Loading schools…</div>';
   let data = null;
   let draw = () => {};
-  // Typing in the header box while this view is open (components/searchBox.js). The listener is in place before
+  // Typing in the Schools search box while this view is open (components/searchBox.js). The listener is in place before
   // the list loads, so text typed while it loads is kept and applied when it arrives (#15 item 3).
   const onQuery = (e) => {
     if (pageOf(resolveTab(readHash())) !== 'schools') { window.removeEventListener('hs-query', onQuery); return; }
@@ -69,7 +70,7 @@ export async function render({ state, statesIndex, controls, view, head, setStat
       <td>${esc(s.state)}</td><td class="n">${s.apps}</td><td class="n">${s.titles || ''}</td><td class="num">${esc(s.last)}</td></tr>`).join('');
     const more = rows.length > 500 ? `<p class="muted" style="margin-top:10px;font-size:12px">Showing the first 500. Filter by state or name to narrow the list.</p>` : '';
     const stName = statesIndex.states.find((s) => s.code === st)?.name;
-    setHead(head, { crumbs: [['Teams', '#tab=teams'], ['Schools']], title: stName ? `${stName} schools` : 'Schools',
+    setHead(head, { crumbs: crumbs(), title: stName ? `${stName} schools` : 'Schools',
       subtitle: `${rows.length.toLocaleString()} of ${data.count.toLocaleString()} schools with a state playoff appearance · ${covered} states covered`
         + (q.trim() ? ` · matching “${esc(q.trim())}” <button type="button" class="clear-search" data-clear-search>Clear search</button>` : '') });
     view.innerHTML = `${favs.length ? `<div class="fav-list"><span class="muted">Following:</span>${favs.map((f) => `<a class="chip accent" href="${schoolHref(f.id)}">★ ${esc(f.name)}</a>`).join('')}</div>` : ''}
