@@ -2,7 +2,9 @@ import json
 import unittest
 from pathlib import Path
 
-from crawler import api_routes, fetch, store
+from api import routes as api_routes   # #8 PR 3: was crawler/api_routes.py
+from build_lib import store
+from collect import fetch
 
 CASES = json.loads((Path(__file__).parent / "routes.json").read_text(encoding="utf-8"))
 
@@ -35,7 +37,7 @@ class LiveDetection(unittest.TestCase):
 
     def live(self, season, comp, day):
         import datetime as dt
-        from crawler import hs
+        from collect import refresh as hs
         sources = store.load_json(store.SOURCES)
         links = store.load_json(store.LINKS)
         cfg = sources["seasons"][season]["competitions"][comp]

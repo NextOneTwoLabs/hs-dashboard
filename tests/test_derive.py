@@ -6,7 +6,8 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from crawler import derive, store
+import build as derive   # #8 PR 3: was crawler/derive.py
+from build_lib import store
 
 FIX = Path(__file__).parent / "fixtures" / "html"
 FETCHED = "2026-10-01T20:00:00Z"

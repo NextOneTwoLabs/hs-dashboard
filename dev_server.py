@@ -1,6 +1,6 @@
 """Local offline server: the page plus the same /api/v1 routes as worker.js.
 
-  python dev_server.py [--port 8787]
+  python dev_server.py [--port 8787]      (or: python hsdash.py serve [--port 8787])
 """
 import argparse
 import hashlib
@@ -10,7 +10,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-from crawler.api_routes import cache_policy, resolve
+from api.routes import cache_policy, resolve   # the route table's Python twin (#8 PR 3: was crawler/api_routes.py)
 
 PUBLIC = Path(__file__).resolve().parent / "public"
 
@@ -75,10 +75,10 @@ class Handler(BaseHTTPRequestHandler):
         pass
 
 
-def main():
+def main(argv=None):
     p = argparse.ArgumentParser()
     p.add_argument("--port", type=int, default=8787)
-    args = p.parse_args()
+    args = p.parse_args(argv)
     print(f"serving http://localhost:{args.port}")
     ThreadingHTTPServer(("127.0.0.1", args.port), Handler).serve_forever()
 

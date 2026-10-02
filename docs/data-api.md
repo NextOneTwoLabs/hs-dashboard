@@ -9,7 +9,8 @@ The code lives in:
 - `api/data-api.mjs`: the API handler (the envelope, errors, rate limit and headers);
 - `api/data-reader.mjs`: the storage adapter (reads the published files, forwarding only `If-None-Match`);
 - `worker.js`: the Cloudflare Worker, which sends `/api/*` to the handler and blocks raw data paths;
-- `crawler/api_routes.py`: the Python twin used by `dev_server.py` and the Python tests;
+- `api/routes.py`: the Python twin used by `dev_server.py` and the Python tests (moved from `crawler/api_routes.py`
+  in #8 PR 3);
 - `tests/routes.json`: the golden cases both twins are checked against;
 - `wrangler.toml`: the rate-limit bindings.
 
@@ -108,5 +109,5 @@ The active season is `activeSeason` in `sources.json`. If it can't be read, ever
 
 ## The local dev server
 
-`python dev_server.py` serves the same routes through `crawler/api_routes.py`, with the same envelope, errors,
+`python hsdash.py serve` (or `python dev_server.py`) serves the same routes through `api/routes.py`, with the same envelope, errors,
 `ETag`/304 and cache policy. It sends no `Access-Control-Allow-Origin` and has no rate limit.

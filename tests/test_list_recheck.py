@@ -16,8 +16,10 @@ from email.message import Message
 from pathlib import Path
 from unittest import mock
 
-from crawler import hs, maxpreps, store
-from crawler.fetch import Blocked, BudgetExhausted, NotFound
+from build_lib import store
+from collect import maxpreps
+from collect import refresh as hs   # #8 PR 3: was crawler/hs.py
+from collect.fetch import Blocked, BudgetExhausted, NotFound
 try:
     from test_refresh import SOURCES, runs_on          # unittest discover -s tests
 except ImportError:
