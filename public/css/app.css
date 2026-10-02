@@ -35,7 +35,6 @@
   --shadow-sm: 0 1px 2px rgba(17, 24, 39, 0.05);
   --shadow-md: 0 4px 12px rgba(17, 24, 39, 0.08);
   --shadow-lg: 0 8px 24px rgba(17, 24, 39, 0.14);
-  --chart-grid: #e8ebef;
   color-scheme: light;
 }
 [data-theme="dark"] {
@@ -62,7 +61,6 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
-  --chart-grid: #262b35;
   color-scheme: dark;
 }
 
@@ -218,7 +216,7 @@ select:hover { border-color: var(--accent-text); }
 .main { flex: 1; min-width: 0; overflow-y: auto; display: flex; flex-direction: column; }
 .content-header { display: flex; flex-direction: column; padding: 18px 28px 0; background: var(--bg-surface); border-bottom: 1px solid var(--border); }
 .content-header-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding-bottom: 14px; }
-.content-header-main { min-width: 0; }
+.content-header-main { min-width: 0; flex: 1 1 auto; }
 .breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; flex-wrap: wrap; }
 .breadcrumb a { color: var(--text-secondary); }
 .breadcrumb a:hover { color: var(--accent-text); text-decoration: none; }
@@ -335,25 +333,63 @@ table.data td.n, table.data th.n { text-align: right; font-variant-numeric: tabu
 .cell-runner { font-size: 12px; color: var(--text-secondary); }
 .cell-empty { color: var(--text-muted); }
 
-/* ===== School page ===== */
+/* ===== Team page (#20 PR 2): identity, Overview · Results · Playoff history, no sidebar ===== */
+body.no-sidebar #sidebar, body.no-sidebar #sidebar-toggle { display: none; }
+.content-header-lead { flex: none; }
+.crest {
+  display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: var(--radius-md);
+  background: var(--accent-surface); color: var(--accent-text); font-size: 18px; font-weight: 800; letter-spacing: -0.3px;
+}
 .star-btn { border: 1px solid var(--border); background: var(--bg-surface); border-radius: var(--radius-sm); height: 34px; padding: 0 12px; font-weight: 600; white-space: nowrap; }
 .star-btn[aria-pressed="true"] { color: var(--gold); border-color: var(--gold); }
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-top: 16px; }
-.stat { background: var(--bg-surface-alt); border-radius: var(--radius-md); padding: 12px 14px; }
-.stat .v { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
-.stat .k { font-size: 12px; color: var(--text-secondary); }
-.chart { position: relative; }
-.chart svg { display: block; width: 100%; height: auto; }
-.chart .tip {
-  position: absolute; pointer-events: none; background: var(--bg-surface); border: 1px solid var(--border);
-  border-radius: var(--radius-sm); box-shadow: var(--shadow-md); padding: 6px 9px; font-size: 12px; white-space: nowrap;
-  transform: translate(-50%, calc(-100% - 10px));
+.follow-note { font-size: 12px; font-weight: 500; color: var(--text-secondary); }
+.team-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.section-h { font-size: 16px; font-weight: 700; }
+.team-season { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-secondary); }
+.team-season select { height: 34px; padding: 0 8px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-surface); }
+/* Overview: DOM order is the reading order (latest, summary, journey, recent); two columns on wide screens. */
+.team-overview {
+  display: grid; gap: 16px; align-items: start; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  grid-template-areas: "latest summary" "journey recent";
 }
-.games-list { list-style: none; font-size: 12px; color: var(--text-secondary); }
-.games-list li { padding: 2px 0; }
-.res-W { color: var(--text-primary); font-weight: 600; }
-.res-L { color: var(--danger-text); font-weight: 600; }
-.res-D { color: var(--text-secondary); font-weight: 600; }
+.ov-latest { grid-area: latest; } .ov-summary { grid-area: summary; } .ov-journey { grid-area: journey; } .ov-recent { grid-area: recent; }
+.panel-title { font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 12px; }
+.team-overview .match::before, .team-overview .match::after { display: none; }   /* no bracket connectors */
+.summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.summary dt { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--text-secondary); }
+.summary dd { font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; margin-top: 2px; }
+.summary dd.word { font-size: 15px; line-height: 1.3; padding-top: 4px; }
+.note { font-size: 12px; color: var(--text-secondary); margin-top: 12px; }
+.journey { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.journey .step { display: flex; flex-direction: column; gap: 2px; padding: 8px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 12px; }
+.journey .step b { font-size: 13px; color: var(--text-primary); }
+.journey .step.win { border-color: var(--good); }
+.journey .step.loss { border-color: var(--danger-text); }
+.recent { list-style: none; }
+.recent li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; padding: 7px 0; border-bottom: 1px solid var(--border-light); }
+.recent li:last-child { border-bottom: none; }
+.recent-meta { margin-left: auto; font-size: 12px; }
+.res { display: inline-flex; justify-content: center; min-width: 22px; padding: 1px 6px; border: 1px solid var(--border); border-radius: 999px; font-size: 11px; font-weight: 700; }
+.res-W { color: var(--good-text); border-color: var(--good); }
+.res-L { color: var(--danger-text); border-color: var(--danger-text); }
+.res-D { color: var(--text-secondary); }
+/* Playoff history: a compact table (caption, th scope); stacked label/value rows on narrow screens. */
+table.history caption { caption-side: top; text-align: left; padding: 10px 12px; font-size: 12px; color: var(--text-secondary); }
+table.history tbody th { background: none; position: static; font-size: 13px; color: var(--text-primary); }
+@media (max-width: 960px) {
+  .team-overview { grid-template-columns: minmax(0, 1fr); grid-template-areas: none; }
+  .team-overview > * { grid-area: auto; }
+}
+@media (max-width: 560px) {
+  table.history thead { display: none; }
+  table.history, table.history tbody, table.history tr { display: block; width: 100%; }
+  table.history caption { display: block; }
+  table.history tr { padding: 6px 0; border-bottom: 1px solid var(--border); }
+  table.history tbody th, table.history td { display: flex; justify-content: space-between; gap: 12px; border: none; padding: 4px 12px; text-align: right; }
+  table.history tbody th::before, table.history td::before { content: attr(data-label); font-size: 12px; font-weight: 600; color: var(--text-secondary); text-align: left; }
+  .summary dd { font-size: 17px; }
+}
+@media (max-width: 400px) { .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .fav-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 
 /* ===== Phone (collegedash 768 px rules: two-row header, drawer, sticky "Show" bar) ===== */

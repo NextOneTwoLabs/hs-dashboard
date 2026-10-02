@@ -59,10 +59,10 @@ test('2. "Data updated" is shown once: the header, or the footer on narrow scree
 test('3. the view is not an aria-live region; navigation moves focus to the page title', async () => {
   const html = await read('public/index.html');
   assert.doesNotMatch(html.match(/<div class="content-body" id="view"[^>]*>/)[0], /aria-live/);
-  // Navigation (a link, the tabs, Back) moves focus to the title; an in-page control or the first load does not.
+  // Navigation (a link, a nav link, Back) moves focus to the title; an in-page control or the first load does not.
+  // (Nav links are plain hash links since #20, so the old 'tab' cause is gone.)
   const f = nav.focusTitleAfter;
   assert.equal(f({ cause: 'hashchange' }), true);
-  assert.equal(f({ cause: 'tab' }), true);
   assert.equal(f({ cause: 'boot' }), false);
   assert.equal(f({ cause: 'control' }), false);
   assert.equal(f({ cause: 'hashchange', searchFocused: true }), false, 'typing in the header search keeps focus');
