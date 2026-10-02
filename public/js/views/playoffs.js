@@ -3,7 +3,7 @@ import { bindControls, genderSeg } from '../components/controls.js';
 import { bindFilters, compSelect, divisionSelect, seasonSelect, stateSelect, termNote } from '../components/filters.js';
 import { bindHighlight, matchCard } from '../components/match.js';
 import { setHead } from '../components/pageHeader.js';
-import { hrefFor } from '../nav.js';
+import { eventsHref } from '../nav.js';
 import { esc, fmtDate, schoolHref } from '../util.js';
 
 export async function render({ state, catalog, statesIndex, controls, view, head, setState }) {
@@ -22,7 +22,8 @@ export async function render({ state, catalog, statesIndex, controls, view, head
   bindFilters(controls, setState);
   bindControls(controls, setState);
 
-  const crumbs = [['All states', '#tab=schools'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], [state.season]];
+  // An event's page (#30): Events › its state's events › the school year.
+  const crumbs = [['Events', '#tab=events'], [catalog.name, eventsHref('events', { st: state.st })], [state.season]];
   if (!comp) {
     setHead(head, { crumbs, title: `${catalog.name} brackets` });
     view.innerHTML = `<div class="card notice">${esc(season?.note || 'No brackets for this season.')}</div>`;

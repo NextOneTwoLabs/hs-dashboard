@@ -7,6 +7,7 @@ import * as champions from './views/champions.js';
 import * as schools from './views/schools.js';
 import * as team from './views/team.js';
 import * as about from './views/about.js';
+import * as events from './views/events.js';
 import { canonicalHash, focusTitleAfter, hasSchoolSearch, hasSubNav, mainNavHtml, needsCatalog, pageOf, refocusId, resolveTab,
   subNavHtml, subNavLabel } from './nav.js';
 import { initSearch } from './components/searchBox.js';
@@ -14,7 +15,7 @@ import { summaryOf } from './components/filters.js';
 import { setFiltersOpen } from './shell.js';
 
 // Page modules by pageOf() (see nav.js).
-const VIEWS = { landing, playoffs, results, champions, schools, team, about };
+const VIEWS = { landing, events, playoffs, results, champions, schools, team, about };
 // The Schools search band (#26): shown on the Schools landing and list only; its chips on the landing only.
 const schoolSearch = document.getElementById('school-search');
 const searchChips = document.getElementById('school-search-chips');
@@ -56,14 +57,15 @@ new MutationObserver(syncFilters).observe(controls, { childList: true, subtree: 
 async function render(cause = 'control', { keep = null } = {}) {
   const seq = ++renderSeq;
   const hash = readHash();
-  // Old links (Schools, School, States, Champions; nav.js migrate) open their new route; replaceState, so Back
-  // has no extra entry.
+  // Old links (Teams, States, Results, Playoffs, Champions…; nav.js migrate) open their new route; replaceState,
+  // so Back has no extra entry.
   const fixed = canonicalHash(hash);
   if (fixed) history.replaceState(null, '', fixed);
   let raw = resolveTab(hash);
   let catalog = null;
-  // Results and Playoffs (Brackets, Champions) show one state at a time and need its catalog.
-  if (needsCatalog(raw.tab)) {
+  // An event, All games and Champions show one state at a time and need its catalog (the event cards read every
+  // state's catalog themselves).
+  if (needsCatalog(raw)) {
     raw = resolveState(raw, statesIndex);
     try {
       catalog = await api.stateCatalog(raw.st);
@@ -75,7 +77,7 @@ async function render(cause = 'control', { keep = null } = {}) {
     raw = normalize(raw, catalog);
   }
   state = raw;
-  // The Main nav (header and phone bottom bar) and the sub-nav (Playoffs, or a school's): one aria-current="page"
+  // The Main nav (header and phone bottom bar) and the sub-nav (Events', or a school's): one aria-current="page"
   // per route.
   mainNav.innerHTML = mainNavHtml(state);
   bottomNav.innerHTML = mainNavHtml(state, { cls: 'bottom-nav-link' });
@@ -88,8 +90,8 @@ async function render(cause = 'control', { keep = null } = {}) {
   schoolSearch.hidden = !hasSchoolSearch(state);
   searchChips.hidden = pageOf(state) !== 'landing';
   const stateName = catalog ? ` · ${catalog.name}` : '';
-  document.title = state.tab === 'school' || state.tab === 'schools'
-    ? 'Schools · High School Girls Soccer' : `High School Girls Soccer${stateName}`;
+  document.title = state.tab === 'school' || state.tab === 'schools' ? 'Schools · High School Girls Soccer'
+    : state.tab === 'events' && !state.view ? 'Events · High School Girls Soccer' : `High School Girls Soccer${stateName}`;
   try {
     await VIEWS[pageOf(state)].render({ state, catalog, statesIndex, controls, view, head, setState });
   } catch (err) {

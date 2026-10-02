@@ -60,7 +60,7 @@ export async function open(hash) {
   location.hash = hash;
   let state = nav.resolveTab(readHash());
   let catalog = null;
-  if (nav.needsCatalog(state.tab)) {
+  if (nav.needsCatalog(state)) {   // takes the resolved state since #30
     state = resolveState(state, statesIndex);
     catalog = await api.stateCatalog(state.st);
     state = normalize(state, catalog);

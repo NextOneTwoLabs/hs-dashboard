@@ -31,10 +31,10 @@ test('1. the header has no search; the Schools search band sits in #main between
     assert.equal((html.match(new RegExp(`id="${id}"`, 'g')) || []).length, 1, `one #${id}`);
     assert.match(band, new RegExp(`id="${id}"`), `#${id} is in the band`);
   }
-  assert.match(band, /<input type="search" class="search-input" id="search-input" role="combobox"[^>]*aria-controls="search-list" aria-expanded="false" aria-describedby="search-hint"[^>]*placeholder="School, city or state…"/);
+  assert.match(band, /<input type="search" class="search-input" id="search-input" role="combobox"[^>]*aria-controls="search-list" aria-expanded="false" aria-describedby="search-hint"[^>]*placeholder="School name or city…"/);   // schools only (#30)
   assert.match(band, /<span class="search-kbd" aria-hidden="true">\/<\/span>/);
   assert.deepEqual([...band.matchAll(/<button type="button" class="chip" data-fill="([^"]+)">/g)].map((m) => m[1]),
-    ['Los Gatos', 'Mater Dei', 'San Antonio', 'Texas']);
+    ['Los Gatos', 'Mater Dei', 'Lakeland', 'Southlake Carroll'], 'school names only (#30: "search in schools is to find schools")');
   // The labels say Schools everywhere.
   assert.match(html, /<a class="main-nav-link" href="#tab=schools"><span>Schools<\/span><\/a>/);
   assert.match(html, /<a class="bottom-nav-link" href="#tab=schools"><span>Schools<\/span><\/a>/);
@@ -45,7 +45,8 @@ test('1. the header has no search; the Schools search band sits in #main between
 test('2. no view writes into the band: views never touch the document, the box or its ids', async () => {
   for (const page of nav.PAGES) {
     const src = (await read(`public/js/views/${page}.js`)).replace(/^\s*\/\/.*$/gm, '');   // code, not comments
-    assert.doesNotMatch(src, /school-search|search-input|search-panel|search-status|hs-search-fill/, `${page}.js`);
+    // The band's ids and classes (the Events band's own `event-search` and its `.search-input` look are fine).
+    assert.doesNotMatch(src, /school-search|id="search-|#search-(input|panel|status)|'search-(input|panel|status)'|hs-search-fill/, `${page}.js`);
     assert.doesNotMatch(src, /\bdocument\./, `${page}.js writes only its head, controls and view`);
   }
   const app = await read('public/js/app.js');
@@ -77,21 +78,21 @@ test('3. CSS: a 56 px phone header, nothing tied to the old 112 px, no fixed pan
 test('4. nav.js: the band\'s pages, the "/" shortcut and the box\'s text after a render', () => {
   const st = (hash) => nav.resolveTab(Object.fromEntries(new URLSearchParams(hash.slice(1))));
   for (const h of ['#tab=schools', '#tab=schools&view=list', '#tab=schools&q=ake', '#tab=schools&st=TX']) assert.equal(nav.hasSchoolSearch(st(h)), true, h);
-  for (const h of [`#tab=school&school=${LOS_GATOS}`, '#tab=results', '#tab=playoffs', '#tab=about']) assert.equal(nav.hasSchoolSearch(st(h)), false, h);
+  for (const h of [`#tab=school&school=${LOS_GATOS}`, '#tab=events&view=games', '#tab=events', '#tab=event', '#tab=about']) assert.equal(nav.hasSchoolSearch(st(h)), false, h);
   const body = { closest: () => null };
   const field = (tag) => ({ closest: (sel) => (sel.split(',').map((s) => s.trim()).includes(tag) ? {} : null) });
   const key = (k, extra = {}) => ({ key: k, target: body, ...extra });
-  assert.deepEqual(nav.slashAction(st('#tab=results'), key('/')), { hash: '#tab=schools', focus: true });
+  assert.deepEqual(nav.slashAction(st('#tab=events&view=games'), key('/')), { hash: '#tab=schools', focus: true });
   assert.deepEqual(nav.slashAction(st('#tab=schools&q=ake'), key('/')), { focus: true });
   assert.deepEqual(nav.slashAction(st('#tab=schools'), key('/', { shiftKey: true })), { focus: true }, 'layouts where "/" needs Shift');
-  for (const mod of ['ctrlKey', 'metaKey', 'altKey']) assert.equal(nav.slashAction(st('#tab=results'), key('/', { [mod]: true })), null, mod);
-  for (const tag of ['input', 'select', 'textarea']) assert.equal(nav.slashAction(st('#tab=results'), key('/', { target: field(tag) })), null, tag);
-  assert.equal(nav.slashAction(st('#tab=results'), key('/', { target: { isContentEditable: true, closest: () => null } })), null);
-  assert.equal(nav.slashAction(st('#tab=results'), key('?')), null);
-  assert.equal(nav.slashAction(st('#tab=results'), { key: 'Divide', code: 'NumpadDivide', target: body }), null);
+  for (const mod of ['ctrlKey', 'metaKey', 'altKey']) assert.equal(nav.slashAction(st('#tab=events&view=games'), key('/', { [mod]: true })), null, mod);
+  for (const tag of ['input', 'select', 'textarea']) assert.equal(nav.slashAction(st('#tab=events&view=games'), key('/', { target: field(tag) })), null, tag);
+  assert.equal(nav.slashAction(st('#tab=events&view=games'), key('/', { target: { isContentEditable: true, closest: () => null } })), null);
+  assert.equal(nav.slashAction(st('#tab=events&view=games'), key('?')), null);
+  assert.equal(nav.slashAction(st('#tab=events&view=games'), { key: 'Divide', code: 'NumpadDivide', target: body }), null);
   // Leaving Schools clears the box; the list shows q= unless you are typing; the landing keeps your text.
   const after = (hash, focused, text) => nav.boxTextAfter({ state: st(hash), focused, text });
-  assert.equal(after('#tab=results', true, 'mat'), '');
+  assert.equal(after('#tab=events&view=games', true, 'mat'), '');
   assert.equal(after(`#tab=school&school=${LOS_GATOS}`, false, 'mat'), '');
   assert.equal(after('#tab=schools&q=mat', false, 'whatever'), 'mat', 'the list after Back shows its q');
   assert.equal(after('#tab=schools&view=list', false, 'mat'), '', 'the whole list: an empty box');
@@ -177,7 +178,7 @@ globalThis.document = {
 globalThis.MutationObserver = class { observe() {} };
 // Hash history: setting location.hash (a link) adds an entry and fires hashchange in a later task;
 // pushState/replaceState change it silently; back() fires hashchange.
-const entries = ['#tab=results&st=TX'];
+const entries = ['#tab=events&view=games&st=TX'];
 let hash = entries[0];
 const fireHashchange = () => setImmediate(() => window.dispatchEvent(new Event('hashchange')));
 globalThis.location = {
@@ -226,7 +227,7 @@ const boot = () => (booted ??= (async () => { const p = rendered(); await import
 
 test('5. "/" from Results opens Schools and leaves focus in the box (not on the page title)', async () => {
   await boot();
-  assert.equal(h1(), 'Texas results', 'booted on Results');
+  assert.equal(h1(), 'Texas games', 'booted on Events › All games (was Results)');
   assert.equal(band.hidden, true, 'no search band on Results');
   const p = rendered();
   const ev = press('/');
@@ -251,7 +252,7 @@ test('5. "/" from Results opens Schools and leaves focus in the box (not on the 
 
 test('6. "/" with Ctrl, Meta or Alt, or while typing in a field, does nothing', async () => {
   await boot();
-  await go('#tab=results&st=TX');
+  await go('#tab=events&view=games&st=TX');
   const before = location.hash;
   for (const mod of ['ctrlKey', 'metaKey', 'altKey']) {
     assert.equal(press('/', { [mod]: true }, body).defaultPrevented, false, mod);
@@ -297,7 +298,7 @@ test('7. landing → list: the text, the focus and the box stay; the table shows
 
 test('8. the keyboard path: "/" from Results → "mat" → Enter → Mater Dei → Back', async () => {
   await boot();
-  await go('#tab=results&st=TX');
+  await go('#tab=events&view=games&st=TX');
   let p = rendered();
   press('/', {}, body);
   await p;
@@ -337,7 +338,7 @@ test('9. the box clears when leaving Schools and shows q= when Back returns to t
   input.value = 'xyz';
   input.fire('input');
   input.blur();   // clicking a nav link moves focus off the box
-  await go('#tab=results');
+  await go('#tab=events&view=games');
   assert.equal(input.value, '', 'leaving Schools clears it');
   await go('#tab=schools');
   assert.equal(input.value, '', 'Schools via the nav starts empty');
@@ -376,7 +377,10 @@ test('11. every old link opens its route through app.js, rewritten in place (no 
     [`#school=${LOS_GATOS}`, `#tab=school&school=${LOS_GATOS}`, 'Los Gatos'],
     ['#tab=states', '#tab=schools', 'Schools'],
     ['#tab=states&st=TX', '#tab=schools&st=TX', 'Texas schools'],
-    ['#tab=champions&st=PA', '#tab=playoffs&view=champions&st=PA', null],
+    ['#tab=champions&st=PA', '#tab=events&view=champions&st=PA', 'Pennsylvania champions'],
+    ['#tab=results&st=TX', '#tab=events&view=games&st=TX', 'Texas games'],
+    ['#tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=5a-d1', '#tab=event&st=TX&season=2025-26&comp=tx-uil&div=5a-d1', 'Conference 5A D1'],
+    ['#tab=playoffs&st=TX', '#tab=events&st=TX', 'Events'],
     ['#tab=bogus', '#tab=schools', 'Schools'],
   ];
   for (const [old, now, heading] of cases) {

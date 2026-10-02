@@ -4,7 +4,7 @@
 // st/q/view=list the Schools tab is the school list instead (views/schools.js).
 import { termButtons } from '../components/filters.js';
 import { setHead } from '../components/pageHeader.js';
-import { hrefFor, listHref, teamHref } from '../nav.js';
+import { eventsHref, listHref, teamHref } from '../nav.js';
 import { bracketCount, esc, favorites, isLive } from '../util.js';
 
 const TERM = { fall: 'Fall', winter: 'Winter', spring: 'Spring' };
@@ -30,7 +30,7 @@ export function stateCardHtml(s) {
       <h3><a href="${esc(listHref({ st: s.code }))}">${esc(s.name)}</a>${live ? ' <span class="badge live"><span aria-hidden="true">● </span>Live</span>' : ''}</h3>
       <p class="muted">${esc(s.association)} · ${esc(s.terms.map((t) => TERM[t] || t).join(' and '))} season</p>
       <p class="muted">${s.schools.toLocaleString()} schools in playoff records · ${n} bracket${n === 1 ? '' : 's'} in ${esc(s.latestSeason)}</p>
-      <p class="state-links"><a href="${esc(listHref({ st: s.code }))}">Schools</a><a href="${esc(hrefFor({ tab: 'playoffs', st: s.code }))}">Brackets</a><a href="${esc(hrefFor({ tab: 'playoffs', view: 'champions', st: s.code }))}">Champions</a><a href="${esc(hrefFor({ tab: 'results', st: s.code }))}">Results</a></p>
+      <p class="state-links"><a href="${esc(listHref({ st: s.code }))}">Schools</a><a href="${esc(eventsHref('events', { st: s.code }))}">Events</a><a href="${esc(eventsHref('champions', { st: s.code }))}">Champions</a><a href="${esc(eventsHref('games', { st: s.code }))}">Games</a></p>
     </article>`;
 }
 

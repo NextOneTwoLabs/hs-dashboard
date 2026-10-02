@@ -30,9 +30,9 @@ export const schoolHref = (id, g) => `#tab=school&school=${encodeURIComponent(id
 // Brackets in a state's latest season, from states.json.
 export const bracketCount = (row) => (row.latest || []).reduce((t, c) => t + c.divisions.length, 0);
 
-// A bracket, optionally opened at one round (a match card's "View in bracket", #20 PR 4).
+// A bracket (an event's page since #30), optionally opened at one round (a match card's "View in bracket").
 export const bracketHref = (st, season, comp, div, round = null) =>
-  `#tab=playoffs&st=${st}&season=${season}&comp=${comp}${div ? `&div=${div}` : ''}${round != null ? `&round=${round}` : ''}`;
+  `#tab=event&st=${st}&season=${season}&comp=${comp}${div ? `&div=${div}` : ''}${round != null ? `&round=${round}` : ''}`;
 
 // A division is live while it is unfinished and today is near its dates.
 // Today as YYYY-MM-DD in the viewer's local time zone. Game dates are local calendar dates, so the UTC date

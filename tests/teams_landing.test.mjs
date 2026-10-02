@@ -35,7 +35,9 @@ test('1. the Schools landing: followed schools and how they are kept, browse by 
   // Browse by state: one card per covered state; every number says what it counts.
   const cards = html.split('<article class="card state-card">').slice(1);
   assert.equal(cards.length, 6);
-  assert.match(text(cards[0]), /California CIF · Winter season 335 schools in playoff records · 5 brackets in 2025-26 Schools Brackets Champions Results/);
+  assert.match(text(cards[0]), /California CIF · Winter season 335 schools in playoff records · 5 brackets in 2025-26 Schools Events Champions Games/);
+  // #30: a state card's links open that state under Events (written in the new form at the source).
+  assert.match(cards[0], /<a href="#tab=events&amp;st=CA">Events<\/a><a href="#tab=events&amp;view=champions&amp;st=CA">Champions<\/a><a href="#tab=events&amp;view=games&amp;st=CA">Games<\/a>/);
   assert.match(cards[0], /<h3><a href="#tab=schools&amp;st=CA">California<\/a>/, 'a state opens its school list');
   assert.match(empty.head.innerHTML, /href="#tab=schools&view=list">All 1,337 schools/);
   // The q/st list is unchanged.
@@ -98,8 +100,8 @@ test('5. the viewer\'s local date, not UTC, decides "Awaiting result" and "Live"
 test('6. a linked round is marked, and scrolled into view, on wider screens', async () => {
   const marked = (made) => [...made.map((e) => e.innerHTML).join('').matchAll(/<section class="round([^"]*)" aria-label="([^"]+)">/g)]
     .filter((m) => m[1].includes('picked')).map((m) => m[2]);
-  assert.deepEqual(marked((await open('#tab=playoffs&st=CA&season=2025-26&comp=ca-cif-state&div=gd1&round=1')).made), ['Regional Semifinals']);
-  assert.deepEqual(marked((await open('#tab=playoffs&st=CA&season=2025-26&comp=ca-cif-state&div=gd1')).made), [], 'no round in the link, none marked');
+  assert.deepEqual(marked((await open('#tab=event&st=CA&season=2025-26&comp=ca-cif-state&div=gd1&round=1')).made), ['Regional Semifinals']);
+  assert.deepEqual(marked((await open('#tab=event&st=CA&season=2025-26&comp=ca-cif-state&div=gd1')).made), [], 'no round in the link, none marked');
   const src = await read('public/js/views/playoffs.js');
   assert.match(src, /if \(!matchMedia\('\(max-width: 768px\)'\)\.matches\) host\.querySelector\('\.round\.picked'\)\?\.scrollIntoView\(/);
   const css = await read('public/css/app.css');

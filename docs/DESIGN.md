@@ -158,13 +158,24 @@ export/<season>/<division>.csv                           human-readable export
      - An "at a glance" card: best finish, titles, appearances.
      - The playoff path for this season, a history table, and a finishing-round SVG chart.
      - A follow star (`localStorage`).
-- **Routes since #20 (names since #26):** the Main nav is Schools · Results · Playoffs (header nav; a bottom bar on
-  phones).
+- **Routes since #20 (names since #26, Events since #30):** the Main nav is Schools · Events (header nav; a two-item
+  bottom bar on phones).
   - `#tab=schools` (the landing; the school list with `st`, `q` or `view=list`), `#tab=school&school=<id>`,
-    `#tab=results`, `#tab=playoffs` (`view=champions` for Champions) and `#tab=about`.
-  - Older links still open the same content; `public/js/nav.js` maps them (replaceState, no extra Back entry): the
-    #21–#25 `tab=teams` / `tab=team`, and the pre-#20 States, Champions and `#school=<id>`. A pre-#20 bare
-    `#tab=schools` now opens the landing, which links to the whole list.
+    `#tab=events` (the event cards; `st`, `season`, `show=live|upcoming|complete`, `q`, `school`),
+    `#tab=events&view=games` (All games, was Results; `show=results|upcoming`), `#tab=events&view=champions`,
+    `#tab=event&st&season&comp&div[&round]` (an event's bracket, was Playoffs; a missing `comp`/`div` is filled from
+    the state catalog) and `#tab=about`. Events' pages share a sub-nav, Events · All games · Champions.
+  - Older links still open the same content in one step; `public/js/nav.js` maps them (replaceState, no extra Back
+    entry): the #21–#25 `tab=teams` / `tab=team`, the pre-#20 States, Champions and `#school=<id>`, and since #30
+    `tab=results` (→ All games), `tab=playoffs` with a competition or division (→ the event) or without (→ the Events
+    landing for that state: an intended change, it was the state's default bracket) and `playoffs&view=champions`.
+    A pre-#20 bare `#tab=schools` now opens the landing, which links to the whole list. `round` is kept on an event
+    only, `show` only where the page has it.
+  - The Events landing (`views/events.js`) reads `/api/v1/catalog` once: one card per division tournament in the
+    chosen school year (newest by default), grouped by state, with State, School year, Status and Season of play
+    filters and a "Find an event" box. Typing filters the cards with no request; schools are suggested from
+    `/search-index` (once), and only picking one loads its file (Kongming B1 on #30).
+  - The Schools search suggests schools only since #30 (owner: "search in schools is to find schools").
   - A school page (`views/team.js`) has its own nav, Overview · Results · Playoff history (`view=results|history`), and no
     statewide sidebar. The playoff history is a table (season, competition, seed, furthest round, playoff W-L-D);
     the finishing-round SVG chart above is retired.

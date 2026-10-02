@@ -156,16 +156,17 @@ button { cursor: pointer; }
 
 /* ===== The Schools search (#26): a band under the Schools page header, on the landing and the list ===== */
 .school-search { padding: 14px 28px 0; }
-.school-search-card { padding: 16px 18px; }
-.school-search-h { font-size: 18px; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 4px; }
-.school-search-lead { font-size: 13px; color: var(--text-secondary); margin-bottom: 10px; }
-.school-search .search { position: relative; max-width: 640px; }
-.school-search .search-input { height: 44px; font-size: 15px; padding-left: 38px; background-position: 12px center; }
+/* The Events landing's "Find an event" band (#30, views/events.js) has the same look, under its own classes. */
+.school-search-card, .event-search-card { padding: 16px 18px; }
+.school-search-h, .event-search-h { font-size: 18px; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 4px; }
+.school-search-lead, .event-search-lead { font-size: 13px; color: var(--text-secondary); margin-bottom: 10px; }
+.school-search .search, .event-search .search { position: relative; max-width: 640px; }
+.school-search .search-input, .event-search .search-input { height: 44px; font-size: 15px; padding-left: 38px; background-position: 12px center; }
 .search-kbd { position: absolute; right: 10px; top: 12px; font-size: 12px; line-height: 18px; color: var(--text-secondary); border: 1px solid var(--border); border-radius: 4px; padding: 0 6px; pointer-events: none; }
 .search-input:focus ~ .search-kbd { display: none; }
-.school-search-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.school-search-chips .chip { height: 34px; padding: 0 14px; font-size: 13px; color: var(--text-primary); background: var(--bg-surface); border: 1px solid var(--border); cursor: pointer; }
-.school-search-chips .chip:hover { border-color: var(--accent); color: var(--accent-text); }
+.school-search-chips, .event-search-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.school-search-chips .chip, .event-search-chips .chip { height: 34px; padding: 0 14px; font-size: 13px; color: var(--text-primary); background: var(--bg-surface); border: 1px solid var(--border); cursor: pointer; }
+.school-search-chips .chip:hover, .event-search-chips .chip:hover { border-color: var(--accent); color: var(--accent-text); }
 
 /* ===== Layout and the filter row (#20 PR 3: the statewide sidebar is gone) ===== */
 .layout { display: flex; height: 100vh; padding-top: var(--header-height); }
@@ -266,6 +267,23 @@ select:hover { border-color: var(--accent-text); }
 .state-card p { font-size: 12px; margin-top: 2px; }
 .state-links { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 10px !important; font-weight: 600; }
 .state-links a { white-space: nowrap; }
+/* The Events landing (#30): the Schools landing's band, filters and card grid; one card per division tournament. */
+.content-body .event-search { padding: 0 0 18px; }
+.event-schools-h { font-size: 12px; color: var(--text-secondary); margin: 12px 0 6px; }
+.event-schools-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
+.event-schools-list .chip, .event-picked .chip { height: 34px; padding: 0 12px; font-size: 13px; color: var(--text-primary); background: var(--bg-surface); border: 1px solid var(--border); cursor: pointer; }
+.event-schools-list .chip:hover, .event-picked .chip:hover { border-color: var(--accent); color: var(--accent-text); }
+.event-picked { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; margin: 0 0 8px; }
+.browse-tools { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.browse-tools .field { flex-wrap: wrap; }
+.event-state { margin: 18px 0 8px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.event-state-group:first-child .event-state { margin-top: 4px; }
+.event-state h3 { font-size: 15px; }
+.event-state .muted { font-size: 12px; }
+.event-card .event-meta { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
+.event-card .event-champ { margin-top: 8px !important; color: var(--text-secondary); }
+.event-card .event-champ a { font-weight: 700; color: var(--text-primary); }
+.event-card .event-champ .trophy { color: var(--gold); font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: .05em; margin-right: 4px; }
 @media (max-width: 960px) { .landing-top { grid-template-columns: minmax(0, 1fr); } }
 .prose { max-width: 820px; line-height: 1.6; }
 .prose h2 { font-size: 15px; margin: 18px 0 6px; }
@@ -413,7 +431,7 @@ table.history tbody th { background: none; position: static; font-size: 13px; co
   .header-divider { display: block; }
   .section-label { display: inline; }
   .bottom-nav {
-    display: grid; grid-template-columns: repeat(3, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    display: grid; grid-template-columns: repeat(2, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;   /* Schools · Events (#30) */
     height: var(--bottom-nav-h); padding-bottom: env(safe-area-inset-bottom);
     background: var(--bg-header); border-top: 1px solid var(--border);
   }
