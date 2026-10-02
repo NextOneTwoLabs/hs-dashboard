@@ -48,14 +48,29 @@ export function teamGame(s, a, x) {
   const opp = x.opp ? { id: x.opp.id, name: x.opp.name, seed: x.opp.seed, score: x.ga } : null;
   const won = x.res === 'W' || (x.res === 'D' && x.pk === 'W');
   const lost = x.res === 'L' || (x.res === 'D' && x.pk === 'L');
-  return { status: x.res == null ? 'unreported' : 'final', top: me, bottom: opp,
+  return { status: rowStatus(a, x), top: me, bottom: opp,
     winner: won ? 'top' : lost ? 'bottom' : null, decidedBy: x.pk ? 'pk' : null };
 }
 
-// The card's footer: Final, a PK decision (a draw in the record), a missing score or result, a bye.
-export function gameMeta(x) {
-  if (x.res === 'BYE') return '<span>Bye</span>';
-  if (x.res == null) return '<span>Result not reported</span>';
+// A school file's game row has no status, and `res` is null both for a game never reported and for one not
+// played yet (crawler/derive.py writes `res` for final games only). The appearance tells them apart: while the
+// team is still alive, its last row without a result is the next game; any other one was never reported.
+export function rowStatus(a, x) {
+  if (x.res === 'BYE') return 'bye';
+  if (x.res != null) return 'final';
+  if (a.result === 'alive') {
+    const open = a.games.filter((r) => r.res == null);
+    if (open.at(-1) === x) return 'scheduled';
+  }
+  return 'unreported';
+}
+
+// The card's footer: Final, a PK decision (a draw in the record), a missing score or result, a bye, next game.
+export function gameMeta(a, x) {
+  const status = rowStatus(a, x);
+  if (status === 'bye') return '<span>Bye</span>';
+  if (status === 'scheduled') return `<span>Scheduled</span>${x.opp ? '' : '<span>Opponent to be decided</span>'}`;
+  if (status === 'unreported') return '<span>Result not reported</span>';
   if (x.gf == null) return '<span>Final</span><span>Score not reported</span>';
   if (x.pk) return '<span>Final · decided on PKs</span><span>A draw in the playoff record</span>';
   return '<span>Final</span>';
@@ -65,15 +80,17 @@ export function gameCardHtml(s, a, x, comps, g) {
   const short = compShort(a, comps);
   const top = `<a href="${bracketHref(a.state, a.season, a.competition, a.division)}">${esc(short ? `${short} · ` : '')}${esc(a.divisionLabel)}</a>`
     + `<span>${esc(x.roundName)}${x.date ? ` · ${esc(fmtDate(x.date))}` : ''}</span>`;
-  return matchCard(teamGame(s, a, x), { top, meta: gameMeta(x), g });
+  return matchCard(teamGame(s, a, x), { top, meta: gameMeta(a, x), g });
 }
 
 // One step of the playoff journey, from this team's side.
-export function stepText(x) {
+export function stepText(a, x) {
   const opp = x.opp ? ` v ${x.opp.name}` : '';
   const score = x.gf != null ? ` ${x.gf}–${x.ga}` : '';
-  if (x.res === 'BYE') return 'Bye';
-  if (x.res == null) return `${opp.trim()} · result not reported`;
+  const status = rowStatus(a, x);
+  if (status === 'bye') return 'Bye';
+  if (status === 'scheduled') return x.opp ? `Scheduled${opp}` : 'Scheduled · opponent to be decided';
+  if (status === 'unreported') return `${opp.trim()} · result not reported`;
   if (x.res === 'D') return `${x.pk === 'W' ? 'Won' : x.pk === 'L' ? 'Lost' : 'Drew'} on PKs${score}${opp}`;
   return `${x.res === 'W' ? 'Won' : 'Lost'}${score || ' (score not reported)'}${opp}`;
 }
@@ -84,15 +101,18 @@ export function overviewHtml({ s, a, own, comps, g }) {
   const games = played(a);
   const latest = games.at(-1) || a.games.at(-1);
   const latestCard = latest ? gameCardHtml(s, a, latest, comps, g) : '<p class="muted">No games on record.</p>';
-  const steps = a.games.map((x) => `<li class="step ${stepClass(x)}"><b>${esc(x.roundName)}</b><span>${esc(stepText(x))}</span></li>`).join('')
+  const steps = a.games.map((x) => `<li class="step ${stepClass(x)}"><b>${esc(x.roundName)}</b><span>${esc(stepText(a, x))}</span></li>`).join('')
     + `<li class="step end"><b>${esc(a.result === 'champion' ? 'Champion' : a.result === 'runner-up' ? 'Runner-up' : 'Finish')}</b><span>${esc(resultText(a))}</span></li>`;
   const recent = own.flatMap((ap) => played(ap).map((x) => ({ ap, x })))
     .sort((p, q) => String(q.x.date).localeCompare(String(p.x.date))).slice(0, 5)
     .map(({ ap, x }) => {
       const res = x.res === 'D' ? 'D' : x.res || '–';
-      const opp = x.opp ? `<a href="${esc(teamHref(x.opp.id, { g }))}">${esc(x.opp.name)}</a>` : 'TBD';
+      const opp = x.opp ? `<a href="${esc(teamHref(x.opp.id, { g }))}">${esc(x.opp.name)}</a>` : 'opponent to be decided';
+      const status = rowStatus(ap, x);
+      const what = status === 'scheduled' ? 'Scheduled · ' : status === 'unreported' ? 'Result not reported · '
+        : x.gf != null ? `${x.gf}–${x.ga}${x.pk ? ` (PK ${x.pk === 'W' ? 'won' : 'lost'})` : ''} · ` : '';
       return `<li><span class="res res-${esc(res)}">${esc(res)}</span><span class="recent-opp">v ${opp}</span>`
-        + `<span class="muted recent-meta">${x.gf != null ? `${x.gf}–${x.ga}${x.pk ? ` (PK ${x.pk === 'W' ? 'won' : 'lost'})` : ''} · ` : ''}${esc(fmtDate(x.date))} · ${esc(ap.season)}</span></li>`;
+        + `<span class="muted recent-meta">${esc(what)}${esc(fmtDate(x.date))} · ${esc(ap.season)}</span></li>`;
     }).join('');
   return `<div class="team-overview">
     <section class="card card-pad ov-latest" aria-labelledby="ov-latest-h"><h2 class="panel-title" id="ov-latest-h">Latest playoff game</h2>${latestCard}</section>

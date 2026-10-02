@@ -14,7 +14,9 @@ function teamRow(game, side, g) {
   const cls = game.winner ? (game.winner === side ? 'win' : 'lose') : '';
   const id = t.id ?? t.schoolId;
   const name = id ? `<a class="tname" href="${schoolHref(id, g)}" title="${esc(t.name)}">${esc(t.name)}</a>` : `<span class="tname">${esc(t.name)}</span>`;
-  const pk = game.decidedBy === 'pk' && game.winner === side ? '<span class="pk" title="Won on penalty kicks">PK</span>' : '';
+  // `title` isn't reliably announced, so the meaning is also visually hidden text (#22 review).
+  const pk = game.decidedBy === 'pk' && game.winner === side
+    ? '<span class="pk" title="Won on penalty kicks">PK<span class="sr-only"> (won on penalty kicks)</span></span>' : '';
   const score = t.score ?? (game.status === 'final' && game.winner === side ? 'W' : '');
   return `<div class="team-row ${cls}" data-school="${esc(id || '')}">
     <span class="seed">${esc(t.seed ?? '')}</span>${name}<span class="score">${esc(score)}${pk}</span></div>`;

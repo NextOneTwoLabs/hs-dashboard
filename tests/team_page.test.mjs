@@ -130,7 +130,8 @@ test('5. Playoff history: one compact table for all seasons, same names for the 
 test('6. Results: match cards name the PK winner, keep the draw, and tell missing results from scores', async () => {
   const pk = await open(`#tab=team&view=results&season=2023-24&school=${PK_SCHOOL}`);
   const card = pk.view.innerHTML.slice(pk.view.innerHTML.indexOf('Regional Semifinals') - 400);
-  assert.match(card, /<div class="team-row win"[\s\S]*?<span class="score">1<span class="pk" title="Won on penalty kicks">PK<\/span>/);
+  assert.match(card, /<div class="team-row win"[\s\S]*?<span class="score">1<span class="pk" title="Won on penalty kicks">PK<span class="sr-only"> \(won on penalty kicks\)<\/span><\/span>/,
+    'the PK tag says what it means to screen readers too');
   assert.match(text(card), /Final · decided on PKs A draw in the playoff record/);
   const hist = await open(`#tab=team&view=history&school=${PK_SCHOOL}`);
   assert.match(text(hist.view.innerHTML), /2023-24 .* \d+-\d+-[1-9]/, 'the shootout is a D in the record');
@@ -140,7 +141,43 @@ test('6. Results: match cards name the PK winner, keep the draw, and tell missin
   assert.match(text(noScore.view.innerHTML), /Final Score not reported/);
 });
 
-test('7. #21 notes: the old "tab" focus cause is gone', () => {
+// #22 review B1: a school file's row has no status and `res` is null both for a game never reported and for
+// one not played yet. While the team is alive, its last open row is the next game.
+test('7. a live season: the next game is "Scheduled" (or "Opponent to be decided"), not "Result not reported"', async () => {
+  const team = (await import('../public/js/views/team.js'));
+  const s = { id: 'synthetic-team', name: 'Synthetic', city: 'Town', state: 'PA' };
+  const game = (round, roundName, date, opp, gf, ga, res) => ({ round, roundName, date, opp, gf, ga, res, pk: null });
+  const live = (opp) => ({
+    season: '2026-27', state: 'PA', competition: 'pa-piaa', division: '2a', divisionLabel: 'Class 2A', gender: 'girls',
+    seed: 3, result: 'alive', reached: 'Quarterfinals', w: 1, l: 0, d: 0,
+    games: [game(0, 'First Round', '2026-11-01', { id: 'opp-a', name: 'Opp A', seed: 6 }, 2, 0, 'W'),
+      game(1, 'Quarterfinals', '2099-11-08', opp, null, null, null)],
+  });
+  for (const [opp, want] of [[{ id: 'opp-b', name: 'Opp B', seed: 2 }, /Scheduled/], [null, /Scheduled.*Opponent to be decided/]]) {
+    const a = live(opp);
+    const ctx = { s, a, own: [a], comps: {}, catalog: null, g: 'g' };
+    const ov = text(team.overviewHtml(ctx));
+    const latest = ov.slice(ov.indexOf('Latest playoff game'), ov.indexOf('Season summary'));
+    assert.match(latest, want, 'latest playoff game card');
+    assert.doesNotMatch(ov, /result not reported/i, 'nowhere on Overview');
+    assert.match(ov, opp ? /Quarterfinals Scheduled v Opp B/ : /Quarterfinals Scheduled · opponent to be decided/, 'journey');
+    assert.match(ov, /Scheduled · Nov 8 · 2026-27/, 'recent games');
+    const res = text(team.resultsHtml(ctx));
+    assert.match(res, want, 'Results');
+    assert.doesNotMatch(res, /Result not reported/);
+    assert.equal(team.rowStatus(a, a.games[1]), 'scheduled');
+  }
+  // The same open row in a finished bracket, or an earlier open row in a live one, was never reported.
+  const done = { ...live({ id: 'opp-b', name: 'Opp B', seed: 2 }), result: 'unreported' };
+  assert.match(text(team.resultsHtml({ s, a: done, own: [done], comps: {}, g: 'g' })), /Result not reported/);
+  assert.doesNotMatch(text(team.resultsHtml({ s, a: done, own: [done], comps: {}, g: 'g' })), /Scheduled/);
+  const twoOpen = live({ id: 'opp-b', name: 'Opp B', seed: 2 });
+  twoOpen.games[0] = game(0, 'First Round', '2026-11-01', { id: 'opp-a', name: 'Opp A', seed: 6 }, null, null, null);
+  assert.equal(team.rowStatus(twoOpen, twoOpen.games[0]), 'unreported');
+  assert.equal(team.rowStatus(twoOpen, twoOpen.games[1]), 'scheduled');
+});
+
+test('8. #21 notes: the old "tab" focus cause is gone', () => {
   assert.equal(nav.focusTitleAfter({ cause: 'tab' }), false);
   assert.equal(nav.focusTitleAfter({ cause: 'hashchange' }), true);
 });
