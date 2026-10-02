@@ -28,22 +28,22 @@ test('1. the statewide sidebar is gone; a filter row sits above the content it f
   assert.match(phone, /\.controls select \{ flex: 1 1 0; width: 0; min-width: 0;/, 'a long option cannot widen the panel');
 });
 
-test('2. An event (was Playoffs, #30): state, school year, championship and division; the season of play as text', async () => {
-  const { controls } = await open('#tab=event&st=CA&season=2024-25');
-  const html = controls.innerHTML;
-  assert.equal(selected(html, 'f-st'), 'CA');
+// #30 PR 2: an event's championship, divisions and school year are on its page (tests/event_page.test.mjs has
+// the rest); the filter row keeps only the gender toggle, shown when a state covers both.
+test('2. An event (was Playoffs, #30): championship, divisions and school year on the page; an empty filter row', async () => {
+  const { controls, view } = await open('#tab=event&st=CA&season=2024-25');
+  assert.equal(controls.innerHTML, '', 'girls only: nothing in the filter row, so it hides');
+  const html = view.innerHTML;
   assert.equal(labelOf(html, 'f-season'), 'School year');
   assert.equal(selected(html, 'f-season'), '2024-25');
   assert.equal(labelOf(html, 'f-comp'), 'Championship');
   assert.equal(selected(html, 'f-comp'), 'ca-cif-norcal');
   assert.match(html, /<option value="ca-cif-socal">CIF SoCal Regional Championships<\/option>/);
-  assert.equal(selected(html, 'f-div'), 'gd1');
-  assert.match(html, /<p class="filter-term">Winter season<\/p>/, 'the season of play, apart from the school year');
-  assert.doesNotMatch(html, /pill|aria-label=|>\d+</, 'no pills and no unexplained counts');
+  assert.match(html, /<a class="pill" href="[^"]*div=gd1[^"]*" aria-current="true">D1<\/a>/);
+  assert.doesNotMatch(html, /id="f-st"|id="f-div"/, 'the state comes from the breadcrumb; divisions are links');
   const one = await open('#tab=event&st=CA&season=2025-26');
-  assert.doesNotMatch(one.controls.innerHTML, /id="f-comp"/, 'no championship select when the year has one');
-  const fall = await open('#tab=event&st=PA');
-  assert.match(fall.controls.innerHTML, /<p class="filter-term">Fall season<\/p>/);
+  assert.doesNotMatch(one.view.innerHTML, /id="f-comp"/, 'no championship select when the year has one');
+  assert.match(one.view.innerHTML, /<span class="field-label event-comp-name">CIF State Championships<\/span>/);
 });
 
 test('3. All games (was Results), Champions, the school list and Schools each filter with their own row', async () => {
@@ -77,18 +77,18 @@ test('4. a change resets what depends on it, so old links and new choices land o
   assert.deepEqual(filters.patchFor('comp', 'ca-cif-socal'), { comp: 'ca-cif-socal', div: null });
   assert.deepEqual(filters.patchFor('div', 'gd2'), { div: 'gd2' });
   assert.deepEqual(filters.patchFor('g', 'b'), { g: 'b', comp: null, div: null });
-  // Old deep links still select the right options (st, season, comp, div keep their meaning).
-  const ca = await open('#tab=event&season=2025-26&comp=cif-state&div=gd1');
-  assert.deepEqual(['f-st', 'f-season', 'f-div'].map((id) => selected(ca.controls.innerHTML, id)), ['CA', '2025-26', 'gd1']);
+  // Old deep links still select the right event (st, season, comp, div keep their meaning).
+  const ca = await open('#tab=playoffs&season=2025-26&comp=cif-state&div=gd1');
+  assert.deepEqual([ca.state.st, selected(ca.view.innerHTML, 'f-season'), ca.state.div], ['CA', '2025-26', 'gd1']);
   const tx = await open('#tab=event&st=TX&season=2025-26&comp=tx-uil&div=5a-d1');
-  assert.equal(selected(tx.controls.innerHTML, 'f-div'), '5a-d1');
+  assert.match(tx.view.innerHTML, /div=5a-d1[^"]*" aria-current="true">Conference 5A D1</);
 });
 
 test('5. phones: the "Filters" toggle summarises the selection', async () => {
-  const { controls } = await open('#tab=event&st=CA&season=2024-25');
-  assert.equal(filters.summaryOf(controls.innerHTML), 'California · 2024-25 · CIF NorCal Regional Championships · Division 1');
+  const { controls } = await open('#tab=events&view=games&st=CA&season=2024-25');
+  assert.equal(filters.summaryOf(controls.innerHTML), 'California · 2024-25 · All games');
   // The same HTML read back from the DOM writes selected="".
-  assert.equal(filters.summaryOf(controls.innerHTML.replace(/ selected>/g, ' selected="">')), 'California · 2024-25 · CIF NorCal Regional Championships · Division 1');
+  assert.equal(filters.summaryOf(controls.innerHTML.replace(/ selected>/g, ' selected="">')), 'California · 2024-25 · All games');
   assert.equal(filters.summaryOf(filters.termButtons({ states: [{ latestSeason: 'x', terms: ['fall'] }] }, 'fall')), 'Fall', 'a pressed toggle');
   assert.equal(filters.summaryOf((await open('#tab=events&view=games&st=TX&show=upcoming')).controls.innerHTML), 'Texas · 2025-26 · Upcoming');
   const app = await read('public/js/app.js');
@@ -103,8 +103,10 @@ test('6. #18: a filter select or toggle keeps focus after the re-render; the pan
   assert.match(app, /const again = refocusId\(\{ cause, keep \}\);/);
   assert.match(app, /if \(cause === 'hashchange'\) setFiltersOpen\(false\);/, 'navigating closes the phone panel; a filter change keeps it open');
   // Every control has an id to come back to.
-  const { controls } = await open('#tab=event&st=CA&season=2024-25');
-  assert.deepEqual([...controls.innerHTML.matchAll(/<select id="([^"]+)"/g)].map((m) => m[1]), ['f-st', 'f-season', 'f-comp', 'f-div']);
+  const { controls } = await open('#tab=events&view=games&st=CA&season=2024-25');
+  assert.deepEqual([...controls.innerHTML.matchAll(/<select id="([^"]+)"/g)].map((m) => m[1]), ['f-st', 'f-season', 'f-show']);
+  const ev = await open('#tab=event&st=CA&season=2024-25');   // an event's selects are in #view, which keeps focus too
+  assert.deepEqual([...ev.view.innerHTML.matchAll(/<select id="([^"]+)"/g)].map((m) => m[1]), ['f-comp', 'f-season']);
   assert.match((await import('../public/js/components/controls.js')).segmented('g', 'g', [['b', 'Boys'], ['g', 'Girls']], 'Gender'),
     /<button type="button" id="f-g-g" data-set-g="g" aria-pressed="true">Girls<\/button>/);
   const states = await read('public/js/views/landing.js');   // the Schools landing (#20 PR 5, #26; was states.js)

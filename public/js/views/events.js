@@ -12,7 +12,7 @@
 import { api, errorHtml } from '../api.js';
 import { termButtons } from '../components/filters.js';
 import { setHead } from '../components/pageHeader.js';
-import { eventHref, eventsHref } from '../nav.js';
+import { eventHref } from '../nav.js';
 import { buildIndex, suggest } from '../search.js';
 import { esc, fmtDate, isLive, schoolHref } from '../util.js';
 
@@ -95,7 +95,7 @@ export function eventCardHtml(state, ev, season) {
       <p class="muted">${esc(comp.label)} · ${esc(TERM[comp.term] || '')} ${esc(season)}</p>
       <p class="muted event-meta">${badge}<span>${esc(dates)} · ${div.played} of ${div.games} games</span></p>
       ${champ}
-      <p class="state-links"><a href="${esc(href)}">Bracket</a><a href="${esc(eventsHref('games', { st: state.code, season }))}" aria-label="${esc(state.name)} games, ${esc(season)}">Games</a></p>
+      <p class="state-links"><a href="${esc(href)}">Bracket</a><a href="${esc(eventHref({ st: state.code, season, comp: comp.id, div: div.code, view: 'games' }))}">Games</a></p>
     </article>`;
 }
 
