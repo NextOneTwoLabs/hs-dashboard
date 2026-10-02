@@ -38,10 +38,10 @@ jobs:
         if: github.event.schedule == '0 9 * * 1'
         run: |
           season=$(python -c "import json; print(json.load(open('public/data/sources.json'))['activeSeason'])")
-          python -m crawler.hs --discover "$season"
+          python hsdash.py discover "$season"
       - name: Crawl
         if: github.event.schedule != '0 9 * * 1'
-        run: python -m crawler.hs --${{ inputs.mode || 'refresh' }} --export
+        run: python hsdash.py ${{ inputs.mode || 'refresh' }} --export
       - name: Commit changes
         run: |
           git config user.name "hs-dashboard-bot"

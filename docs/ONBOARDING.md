@@ -57,7 +57,7 @@ games and school GUIDs all came through unchanged.
 - **Raw storage:** stays at one trimmed file per bracket. Mascot images and other markup are stripped to keep it around 15 KB, which keeps a full backfill near 40 MB.
 
 ### Discovery
-- **Discovery command:** a new `crawler.hs --discover <season>` reads the three MaxPreps index pages for that school year and writes **candidate** tournaments to `archive/discovered/<season>.json`.
+- **Discovery command:** a new `crawler.hs --discover <season>` (since #8 PR 3: `python hsdash.py discover <season>`) reads the three MaxPreps index pages for that school year and writes **candidate** tournaments to `archive/discovered/<season>.json`.
   - Each candidate records the title, the MaxPreps ID and a guessed state, taken from the title and from the school paths (`/tx/...`) in its first bracket.
 - **Registry:** I review the candidates and add the approved ones to `sources.json` as `states.<ST>.seasons.<season>.tournament = <MaxPreps id>`.
   - Nothing is crawled until it's in the registry, the same rule California follows today.

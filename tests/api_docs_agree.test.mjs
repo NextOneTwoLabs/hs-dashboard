@@ -1,7 +1,8 @@
-// docs/data-api.md, the two route tables (api/routes.mjs and crawler/api_routes.py), tests/routes.json, worker.js and
+// docs/data-api.md, the two route tables (api/routes.mjs and api/routes.py), tests/routes.json, worker.js and
 // wrangler.toml say the same thing (#8 PR 1, modelled on collegedash's tests/api_docs_agree.test.mjs).
+// #8 PR 3 moved the Python twin from crawler/api_routes.py to api/routes.py.
 //
-//     node --test tests/api_docs_agree.test.mjs
+//     node --test tests/api_docs_agree.test.mjs        (PYTHON=python3.12 to choose the interpreter)
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -19,7 +20,7 @@ const DOCS = process.env.API_DOCS_PATH
 const WORKER = ['worker.js', 'api/data-api.mjs', 'api/data-reader.mjs'].map(read).join('\n');
 const TOML = read('wrangler.toml');
 const ROUTES_MJS = read('api/routes.mjs');
-const ROUTES_PY = read('crawler/api_routes.py');
+const ROUTES_PY = read('api/routes.py');
 const GOLDEN = JSON.parse(read('tests/routes.json'));
 
 // The rows of the markdown table under a "## Heading".
@@ -36,16 +37,40 @@ const SAMPLE = { season: '2025-26', ST: 'TX', comp: 'tx-uil', div: '6a-d1', id: 
 const fill = (tpl) => tpl.replace(/\{(\w+)\}/g, (_, k) => SAMPLE[k]);
 const DOC_ROUTES = table('Routes').map(([route, file, cached]) => ({ route: code(route)[0], file: code(file)[0], cached: cached === 'yes' }));
 
-// The Python twin, asked through the same function dev_server.py uses.
+// The Python twin, asked through the same function dev_server.py uses. As in CI's Python step, tests/netguard is on
+// PYTHONPATH (it blocks sockets), and PYTHON chooses the interpreter (default: python).
+const PYTHON = process.env.PYTHON || 'python';
+const pyEnv = () => {
+  const guard = fileURLToPath(new URL('tests/netguard', root));
+  const sep = process.platform === 'win32' ? ';' : ':';
+  return { ...process.env, PYTHONPATH: process.env.PYTHONPATH ? `${guard}${sep}${process.env.PYTHONPATH}` : guard };
+};
 function pyResolve(cases) {
-  const out = execFileSync('python', ['-c', [
+  const out = execFileSync(PYTHON, ['-c', [
     'import json, sys',
-    'from crawler import api_routes',
+    'from api import routes as api_routes',
     'cases = json.load(sys.stdin)',
     'print(json.dumps([api_routes.resolve(m, p) for m, p in cases["resolve"]] + [api_routes.cache_policy(s, a) for s, a in cases["cache"]]))',
-  ].join('\n')], { cwd: fileURLToPath(root), input: JSON.stringify(cases), encoding: 'utf8' });
+  ].join('\n')], { cwd: fileURLToPath(root), input: JSON.stringify(cases), encoding: 'utf8', env: pyEnv() });
   return JSON.parse(out);
 }
+
+test('the Python twin is api/routes.py, run under netguard with the chosen interpreter', () => {
+  const env = pyEnv();
+  assert.match(env.PYTHONPATH, /tests[\\/]netguard/);
+  // sitecustomize from tests/netguard is loaded: a socket connect is refused inside the child.
+  const out = execFileSync(PYTHON, ['-c', [
+    'import socket, api.routes',
+    'try:',
+    '    socket.create_connection(("203.0.113.1", 80), timeout=1)',   // a reserved literal IP: no DNS lookup
+    '    print("open")',
+    'except Exception as e:',
+    '    print("blocked", type(e).__name__)',
+    'print(api.routes.__file__.replace("\\\\", "/").split("/")[-2:])',
+  ].join('\n')], { cwd: fileURLToPath(root), encoding: 'utf8', env });
+  assert.match(out, /^blocked /m, 'tests/netguard blocks the network for the Python twin');
+  assert.match(out, /\['api', 'routes\.py'\]/);
+});
 
 test('every documented route resolves to its documented file, in both twins', () => {
   assert.ok(DOC_ROUTES.length >= 10);
@@ -54,7 +79,7 @@ test('every documented route resolves to its documented file, in both twins', ()
     const path = fill(r.route);
     const want = { status: 200, asset: fill(r.file), season: r.cached ? SAMPLE.season : null };
     assert.deepEqual(resolve('GET', path), want, `${r.route} (api/routes.mjs)`);
-    assert.deepEqual(py[i], want, `${r.route} (crawler/api_routes.py)`);
+    assert.deepEqual(py[i], want, `${r.route} (api/routes.py)`);
     assert.equal(resolve('HEAD', path).status, 200, `${r.route} answers HEAD`);
   });
 });
@@ -64,7 +89,7 @@ test('no route exists in code or golden cases that the docs leave out', () => {
   const block = ROUTES_PY.slice(ROUTES_PY.indexOf('_ROUTES = ['), ROUTES_PY.indexOf('\n]\n'));
   const inPy = (block.match(/re\.compile\(/g) || []).length;
   assert.equal(inMjs, DOC_ROUTES.length, 'api/routes.mjs has as many routes as the docs');
-  assert.equal(inPy, DOC_ROUTES.length, 'crawler/api_routes.py has as many routes as the docs');
+  assert.equal(inPy, DOC_ROUTES.length, 'api/routes.py has as many routes as the docs');
   const patterns = DOC_ROUTES.map((r) => ({ ...r, re: new RegExp(`^${r.route.replace(/\{\w+\}/g, '[^/]+')}$`) }));
   for (const c of GOLDEN.routes.filter((x) => x.status === 200)) {
     const row = patterns.find((p) => p.re.test(c.path));

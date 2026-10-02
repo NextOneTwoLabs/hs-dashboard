@@ -1,4 +1,6 @@
-"""Build every served file under public/archive from archive/raw.
+"""Build every served file under public/archive from archive/raw (#8 PR 3: was crawler/derive.py).
+
+Run it as `python hsdash.py build [--check] [--export]` (the old `python -m crawler.hs --derive` still works).
 
 Pure function of (sources.json, archive/links.json, archive/raw/**, school
 aliases): no network and no wall-clock timestamps, so CI can rebuild it and
@@ -22,7 +24,8 @@ import re
 import sys
 from collections import Counter
 
-from . import divisions, maxpreps, store
+from build_lib import divisions, store
+from collect import maxpreps   # the bracket-page parser: the build reads raw MaxPreps views
 
 SCHEMA = 1
 _HEADER = re.compile(r"^(?:<!--.*?-->\s*)+", re.S)

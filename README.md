@@ -21,13 +21,16 @@ Design notes are in [docs/DESIGN.md](docs/DESIGN.md).
 
 ```
 public/data/sources.json      registry: states, competitions, seasons -> CIF paths / MaxPreps tournament ids
-crawler/                      hs.py (CLI), cif.py + maxpreps.py (parsers), divisions.py, discover.py, derive.py
+hsdash.py                     the CLI: refresh, backfill, season, discover, build, serve
+collect/                      refresh.py (live detection, crawler), fetch.py, cif.py + maxpreps.py (parsers), discover.py
+build.py, build_lib/          the offline build (public/archive and export/ from archive/raw); store.py, divisions.py
+crawler/hs.py                 deprecated shim: `python -m crawler.hs --…` still works (same engine)
 archive/links.json            discovered division pages -> MaxPreps bracket URLs, fetch status
 archive/raw/<season>/<comp>/<div>.html   trimmed MaxPreps bracket markup (provenance; never served)
 archive/discovered/<season>.json         MaxPreps tournament candidates for review (--discover)
 public/archive/               derived, served via /api/v1
 export/<season>/*.csv         human-readable exports
-api/routes.mjs, worker.js     Cloudflare Worker (route table twin: crawler/api_routes.py)
+api/routes.mjs, worker.js     Cloudflare Worker (route table twin: api/routes.py)
 public/index.html, js/, css/  UI (ES modules, no bundler)
 tests/                        parser fixtures, golden routes, worker contract tests
 ```
@@ -58,23 +61,27 @@ Notes on the data:
 ## Commands
 
 ```bash
-python -m crawler.hs --refresh            # crawl competitions that are live today (no-op otherwise)
-python -m crawler.hs --backfill           # crawl every registry season not yet complete
-python -m crawler.hs --season 2025-26     # one season (add --state TX for one state)
-python -m crawler.hs --discover 2026-27   # list MaxPreps tournaments for review (3 requests)
-python -m crawler.hs --derive --export    # rebuild public/archive and export/ from raw (offline)
-python -m crawler.hs --derive --check     # drift check (CI)
-python dev_server.py                      # http://localhost:8787, same /api/v1 as the Worker
+python hsdash.py refresh                  # crawl competitions that are live today (no-op otherwise)
+python hsdash.py backfill                 # crawl every registry season not yet complete
+python hsdash.py season 2025-26           # one season (add --state TX for one state)
+python hsdash.py discover 2026-27         # list MaxPreps tournaments for review (3 requests)
+python hsdash.py build --export           # rebuild public/archive and export/ from raw (offline)
+python hsdash.py build --check            # drift check (CI)
+python hsdash.py serve                    # http://localhost:8787, same /api/v1 as the Worker (dev_server.py)
 PYTHONPATH=tests/netguard python -m unittest discover -s tests -p 'test_*.py'
 node --test "tests/*.test.mjs"
 npx wrangler dev                          # Worker locally
 ```
 
+The old `python -m crawler.hs --refresh/--backfill/--season/--discover/--derive/--check/--export` commands still work:
+`crawler/hs.py` is a shim over the same engine until #8's last PR, and `tests/test_cli.py` checks both give
+byte-identical output.
+
 ## Adding a state
 
-1. Run `python -m crawler.hs --discover <season>` and find the state association's tournament in `archive/discovered/<season>.json`.
+1. Run `python hsdash.py discover <season>` and find the state association's tournament in `archive/discovered/<season>.json`.
 2. Add the state to `states`, a `<st>-<association>` competition with `"source": "maxpreps"` and its `term`, and the season entry `{ "tournament": "<id>", "list": "<list url>" }` to `public/data/sources.json`.
-3. Run `python -m crawler.hs --season <season> --state <ST> --export`, then check the brackets on the dev server.
+3. Run `python hsdash.py season <season> --state <ST> --export`, then check the brackets on the dev server.
 
 ## Fetching policy
 

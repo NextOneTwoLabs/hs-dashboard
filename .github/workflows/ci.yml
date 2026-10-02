@@ -23,4 +23,4 @@ jobs:
       - name: Worker contract tests
         run: node --test "tests/*.test.mjs"
       - name: Derived files are up to date
-        run: python -m crawler.hs --derive --check --export
+        run: python hsdash.py build --check --export

@@ -6,7 +6,9 @@ tournaments to public/data/sources.json.
 """
 import re
 
-from . import maxpreps, store
+from build_lib import store
+
+from . import maxpreps
 
 # State association acronyms as they appear in MaxPreps titles.
 ASSOCIATIONS = {

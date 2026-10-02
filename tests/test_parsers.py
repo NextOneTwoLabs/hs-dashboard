@@ -2,7 +2,8 @@ import re
 import unittest
 from pathlib import Path
 
-from crawler import cif, discover, divisions, maxpreps
+from build_lib import divisions
+from collect import cif, discover, maxpreps   # #8 PR 3: were crawler/*
 
 FIX = Path(__file__).parent / "fixtures" / "html"
 BASE = "https://www.cifstate.org/sports/soccer/"

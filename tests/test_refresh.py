@@ -9,8 +9,9 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from crawler import hs, store
-from crawler.fetch import NotFound
+from build_lib import store
+from collect import refresh as hs   # #8 PR 3: was crawler/hs.py
+from collect.fetch import NotFound
 
 ROOT = Path(__file__).parent.parent
 SOURCES = json.loads((ROOT / "public" / "data" / "sources.json").read_text(encoding="utf-8"))

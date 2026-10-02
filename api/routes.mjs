@@ -1,5 +1,5 @@
 // /api/v1 route table: maps a request path to one archived JSON asset.
-// Twin of crawler/api_routes.py; both are checked against tests/routes.json.
+// Twin of api/routes.py (moved from crawler/api_routes.py in #8 PR 3); both are checked against tests/routes.json.
 
 const ID = '([^/]+)';
 
