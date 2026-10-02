@@ -6,7 +6,9 @@ route, rule or limit that changes in one place and not the others fails CI.
 
 The code lives in:
 - `api/routes.mjs`: the route table, the parameter rules and the cache policy;
-- `worker.js`: the Cloudflare Worker that serves the API in production;
+- `api/data-api.mjs`: the API handler (the envelope, errors, rate limit and headers);
+- `api/data-reader.mjs`: the storage adapter (reads the published files, forwarding only `If-None-Match`);
+- `worker.js`: the Cloudflare Worker, which sends `/api/*` to the handler and blocks raw data paths;
 - `crawler/api_routes.py`: the Python twin used by `dev_server.py` and the Python tests;
 - `tests/routes.json`: the golden cases both twins are checked against;
 - `wrangler.toml`: the rate-limit bindings.
