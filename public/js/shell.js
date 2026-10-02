@@ -79,7 +79,9 @@ sync();
 
 api.status().then((s) => {
   if (s?.updatedAt) {
-    document.getElementById('data-updated').textContent =
-      `Data updated ${new Date(s.updatedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`;
+    // One text, two places: the header, or (CSS, narrow screens) the footer; never both visible (#11).
+    const text = `Data updated ${new Date(s.updatedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`;
+    document.getElementById('data-updated').textContent = text;
+    document.getElementById('data-updated-foot').textContent = `${text}.`;
   }
 }).catch(() => {});

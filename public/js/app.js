@@ -7,7 +7,7 @@ import * as champions from './views/champions.js';
 import * as schools from './views/schools.js';
 import * as school from './views/school.js';
 import * as about from './views/about.js';
-import { activeTab, resolveTab, tabHref } from './nav.js';
+import { activeTab, focusTitleAfter, resolveTab, tabHref } from './nav.js';
 import { initSearch } from './components/searchBox.js';
 import './shell.js';
 
@@ -30,7 +30,9 @@ function setState(patch, { replace = false, silent = false } = {}) {
   if (!silent) render();
 }
 
-async function render() {
+// cause: 'hashchange' (a link, Back/Forward), 'tab' (a view tab), 'boot' (first load) or 'control' (an in-page
+// control such as the season select or round pills). Only navigation moves focus to the new page's title (#11).
+async function render(cause = 'control') {
   const seq = ++renderSeq;
   let raw = resolveTab(readHash());
   let catalog = null;
@@ -65,6 +67,12 @@ async function render() {
   if (seq === renderSeq) {
     document.getElementById('main').scrollTo({ top: 0 }); // the content column scrolls, not the window
     window.dispatchEvent(new CustomEvent('hs-rendered'));  // the header search syncs its box (#13)
+    // The view is not an aria-live region (#11): after navigation, focus moves to the page title, which a
+    // screen reader then reads, instead of the whole page being announced.
+    if (focusTitleAfter({ cause, searchFocused: document.activeElement?.id === 'search-input',
+      drawerOpen: document.getElementById('layout').classList.contains('drawer') })) {
+      document.querySelector('.content-title')?.focus({ preventScroll: true });
+    }
   }
 }
 
@@ -81,7 +89,7 @@ document.getElementById('tabs').addEventListener('click', (e) => {
   const { st, season, g } = state;
   state = tab === 'states' ? { tab } : tab === 'schools' ? { tab, st } : { tab, st, season, g };
   writeHash(state);
-  render();
+  render('tab');
 });
 
 // ----- Theme -----
@@ -95,7 +103,7 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
 initSearch({ getStatesIndex: () => statesIndex });
 
 // ----- Boot -----
-window.addEventListener('hashchange', render);
+window.addEventListener('hashchange', () => render('hashchange'));
 (async function boot() {
   try {
     statesIndex = await api.states();
@@ -106,10 +114,6 @@ window.addEventListener('hashchange', render);
   const covered = statesIndex.states.filter((s) => s.latestSeason);
   document.getElementById('status-line').textContent =
     `Coverage: ${covered.length} states (${covered.map((s) => s.code).join(', ')}), more coming. Brackets from state associations via MaxPreps.`;
-  render();
-  api.status().then((s) => {
-    if (s?.updatedAt) {
-      document.getElementById('status-line').textContent += ` Data updated ${new Date(s.updatedAt).toLocaleString()}.`;
-    }
-  }).catch(() => {});
+  render('boot');
+  // "Data updated" is written once, by shell.js (header, or footer on narrow screens; #11).
 })();

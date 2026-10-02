@@ -21,6 +21,14 @@ export function resolveTab(raw) {
 // The tab a view highlights (a school page belongs to Schools; About to none).
 export const activeTab = (tab) => (tab === 'school' ? 'schools' : tab);
 
+// Whether a finished render should move focus to the page title (#11). Navigation does (a link, Back/Forward,
+// a view tab); the first load and in-page controls don't, nor does a render while the user types in the header
+// search or works in the phone's filter drawer.
+export function focusTitleAfter({ cause, searchFocused = false, drawerOpen = false } = {}) {
+  if (searchFocused || drawerOpen) return false;
+  return cause === 'hashchange' || cause === 'tab';
+}
+
 export function hrefFor(state) {
   const params = new URLSearchParams();
   for (const k of KEYS) if (state[k]) params.set(k, state[k]);
