@@ -1,11 +1,9 @@
 import { setHead } from '../components/pageHeader.js';
-import { statePills } from '../components/sidebar.js';
-import { hrefFor } from '../nav.js';
 import { esc } from '../util.js';
 
 // "About the data": a static page (UI only), from the README's notes on the data.
 export async function render({ statesIndex, controls, view, head }) {
-  controls.innerHTML = statePills(statesIndex, null, (code) => hrefFor({ tab: 'playoffs', st: code }));
+  controls.innerHTML = '';   // nothing to filter on About
   const covered = statesIndex.states.filter((s) => s.latestSeason);
   setHead(head, { crumbs: [['All states', '#tab=teams'], ['About the data']], title: 'About the data',
     subtitle: `US high school girls soccer state championships · ${covered.length} states so far` });

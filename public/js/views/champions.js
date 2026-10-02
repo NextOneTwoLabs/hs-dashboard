@@ -1,13 +1,14 @@
 import { bindControls, genderSeg } from '../components/controls.js';
+import { bindFilters, stateSelect, termNote } from '../components/filters.js';
 import { setHead } from '../components/pageHeader.js';
-import { statePills } from '../components/sidebar.js';
 import { hrefFor } from '../nav.js';
 import { bracketHref, esc, schoolHref } from '../util.js';
 
 // Season-by-season grid of a state's champions, one column per division.
 export async function render({ state, catalog, statesIndex, controls, view, head, setState }) {
-  controls.innerHTML = statePills(statesIndex, state.st, (code) => hrefFor({ tab: 'playoffs', view: 'champions', st: code, g: state.g }))
-    + genderSeg(state.g, catalog);
+  // The filter row (#20 PR 3): every school year is in the grid, so only the state (and gender) filter it.
+  controls.innerHTML = stateSelect(statesIndex, state.st) + genderSeg(state.g, catalog) + termNote(statesIndex, state.st);
+  bindFilters(controls, setState);
   bindControls(controls, setState);
   setHead(head, {
     crumbs: [['All states', '#tab=teams'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], ['Champions']],

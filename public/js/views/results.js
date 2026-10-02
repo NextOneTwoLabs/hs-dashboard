@@ -1,19 +1,22 @@
 import { api, errorHtml } from '../api.js';
-import { bindControls, genderSeg, seasonSelect } from '../components/controls.js';
+import { bindControls, genderSeg } from '../components/controls.js';
+import { bindFilters, seasonSelect, showSelect, stateSelect, termNote } from '../components/filters.js';
 import { bindHighlight, matchCard } from '../components/match.js';
 import { setHead } from '../components/pageHeader.js';
-import { showPills, statePills } from '../components/sidebar.js';
 import { hrefFor } from '../nav.js';
 import { bracketHref, esc, fmtLongDate } from '../util.js';
 
 export async function render({ state, catalog, statesIndex, controls, view, head, setState }) {
   const show = state.show || 'all';
+  // The filter row (#20 PR 3): state, school year, which games; the season of play as text.
   controls.innerHTML = [
-    statePills(statesIndex, state.st, (code) => hrefFor({ tab: 'results', st: code, g: state.g, show: state.show })),
-    `<div class="browse-row">${seasonSelect(catalog, state.season)}</div>`,
-    showPills(state),
+    stateSelect(statesIndex, state.st),
+    seasonSelect(catalog, state.season),
+    showSelect(state.show),
     genderSeg(state.g, catalog),
+    termNote(statesIndex, state.st),
   ].join('');
+  bindFilters(controls, setState);
   bindControls(controls, setState);
   const crumbs = [['All states', '#tab=teams'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], [`${state.season} results`]];
   setHead(head, { crumbs, title: `${catalog.name} results`, subtitle: `${esc(catalog.association)} · ${esc(state.season)}` });

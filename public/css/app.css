@@ -2,7 +2,6 @@
 :root {
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --header-height: 60px;
-  --sidebar-width: 280px;
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
@@ -93,12 +92,6 @@ button { cursor: pointer; }
   background: var(--bg-header); border-bottom: 1px solid var(--border);
 }
 .header-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
-.hamburger {
-  display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; padding: 0;
-  background: none; border: 1px solid transparent; border-radius: var(--radius-sm); color: var(--text-secondary);
-}
-.hamburger:hover { background: var(--bg-surface-alt); color: var(--text-primary); }
-.hamburger svg { width: 20px; height: 20px; }
 .wordmark { display: inline-flex; align-items: center; font-size: 21px; font-weight: 800; letter-spacing: -0.6px; line-height: 1; color: var(--text-primary); white-space: nowrap; }
 .wordmark img { width: 32px; height: 32px; margin-right: 10px; }
 .wordmark:hover { text-decoration: none; }
@@ -162,18 +155,20 @@ button { cursor: pointer; }
 @media (max-width: 1180px) { .main-nav-link svg { display: none; } .main-nav-link { padding: 0 8px; } }
 @media (max-width: 1024px) { .header-right .header-link { display: none; } .header-search { margin: 0 10px; } .header-nav { margin-left: 4px; } }
 
-/* ===== Layout and sidebar (collegedash .layout / .sidebar / .pill) ===== */
+/* ===== Layout and the filter row (#20 PR 3: the statewide sidebar is gone) ===== */
 .layout { display: flex; height: 100vh; padding-top: var(--header-height); }
-.sidebar-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.4); z-index: 49; }
-.sidebar {
-  width: var(--sidebar-width); min-width: var(--sidebar-width); background: var(--bg-surface); border-right: 1px solid var(--border);
-  overflow-y: auto; display: flex; flex-direction: column; padding: 8px 0 0; z-index: 50; transition: transform var(--transition-med);
+/* Filters in a row above the content they filter. Wider screens: the row; phones: a "Filters" disclosure. */
+.filter-bar { padding: 14px 28px 0; }
+.filter-toggle { display: none; }
+.controls {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 10px 14px;
+  background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md);
 }
-.layout.collapsed .sidebar { display: none; }
-.controls { display: flex; flex-direction: column; padding-bottom: 12px; }
-.browse-label { font-size: 11px; font-weight: 600; color: var(--text-secondary); padding: 10px 16px 4px; }
-.browse-label label { font: inherit; color: inherit; }
-.browse-row { display: flex; align-items: center; gap: 10px; padding: 6px 16px 4px; }
+.controls .field { width: auto; }
+.controls select { flex: none; min-width: 120px; max-width: 280px; }
+.filter-term { margin-left: auto; font-size: 12px; color: var(--text-secondary); }   /* the season of play */
+.filter-hint { margin-left: auto; font-size: 12px; color: var(--text-secondary); }   /* a usage hint, e.g. the school list's */
+.field-label { font-size: 11px; font-weight: 600; color: var(--text-secondary); }
 .pill-row { display: flex; flex-wrap: wrap; gap: 6px; padding: 4px 16px 6px; }
 .pill {
   display: inline-flex; align-items: center; padding: 6px 12px; font-size: 12px; font-weight: 600; line-height: 1.25;
@@ -182,28 +177,17 @@ button { cursor: pointer; }
 }
 .pill:hover { border-color: var(--accent); color: var(--accent-text); text-decoration: none; }
 .pill[aria-current="true"], .pill[aria-pressed="true"] { background: var(--accent); color: var(--accent-contrast); border-color: var(--accent); }
-/* Counts: full opacity on a token that meets 4.5:1 in both themes (tests/ui.test.mjs checks it). */
-.pill .pill-sub { font-size: 11px; font-weight: 500; color: var(--text-secondary); margin-left: 5px; }
-.pill[aria-current="true"] .pill-sub, .pill[aria-pressed="true"] .pill-sub { color: inherit; }
-.side-note { padding: 8px 16px 4px; font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
-.side-empty { font-size: 12px; color: var(--text-secondary); }
-.field { display: flex; align-items: center; gap: 10px; width: 100%; }
-.field > label { font-size: 11px; font-weight: 600; color: var(--text-secondary); min-width: 52px; }
-.controls > .field { padding: 10px 16px 4px; }
+.field { display: flex; align-items: center; gap: 8px; }
+.field > label { font-size: 11px; font-weight: 600; color: var(--text-secondary); }
 select {
   flex: 1; min-width: 0; height: 34px; padding: 0 10px; font-size: 13px; color: var(--text-primary);
   background: var(--bg-body); border: 1px solid var(--border); border-radius: 8px; cursor: pointer;
 }
 select:hover { border-color: var(--accent-text); }
-.text-input {
-  width: 100%; height: 34px; padding: 0 10px; border: 1px solid var(--border); border-radius: 8px;
-  background: var(--bg-body); color: var(--text-primary);
-}
 .seg { display: inline-flex; border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; }
 .seg button { height: 30px; padding: 0 12px; border: 0; background: var(--bg-surface); color: var(--text-secondary); font-weight: 500; }
 .seg button + button { border-left: 1px solid var(--border); }
 .seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-contrast); }
-.drawer-show { display: none; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 14px;
   border-radius: 8px; border: 1px solid var(--border); background: var(--bg-surface); font-weight: 600; font-size: 13px; color: var(--text-primary);
@@ -272,7 +256,8 @@ select:hover { border-color: var(--accent-text); }
 .champ-list .d { color: var(--text-secondary); white-space: nowrap; }
 .champ-list .c { font-weight: 600; text-align: right; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .champ-list .c a { color: var(--text-primary); }
-.pcard .foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 16px; border-top: 1px solid var(--border-light); font-size: 12px; font-weight: 600; }
+.pcard .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 8px; padding: 8px 16px; border-top: 1px solid var(--border-light); font-size: 12px; font-weight: 600; }
+.pcard .foot a { white-space: nowrap; }
 .prose { max-width: 820px; line-height: 1.6; }
 .prose h2 { font-size: 15px; margin: 18px 0 6px; }
 .prose h2:first-child { margin-top: 0; }
@@ -333,8 +318,7 @@ table.data td.n, table.data th.n { text-align: right; font-variant-numeric: tabu
 .cell-runner { font-size: 12px; color: var(--text-secondary); }
 .cell-empty { color: var(--text-muted); }
 
-/* ===== Team page (#20 PR 2): identity, Overview · Results · Playoff history, no sidebar ===== */
-body.no-sidebar #sidebar, body.no-sidebar #sidebar-toggle { display: none; }
+/* ===== Team page (#20 PR 2): identity, Overview · Results · Playoff history, no statewide filters ===== */
 .content-header-lead { flex: none; }
 .crest {
   display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: var(--radius-md);
@@ -392,7 +376,7 @@ table.history tbody th { background: none; position: static; font-size: 13px; co
 @media (max-width: 400px) { .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .fav-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 
-/* ===== Phone (collegedash 768 px rules: two-row header, drawer, sticky "Show" bar) ===== */
+/* ===== Phone (collegedash 768 px rules: two-row header, bottom nav, filter disclosure) ===== */
 /* "Data updated" is shown once (#11): in the header, or in the footer where the header has no room for it. */
 .footer-updated { display: none; }
 @media (max-width: 1100px) { .observed-top { display: none; } .footer-updated { display: inline; } }
@@ -433,20 +417,34 @@ table.history tbody th { background: none; position: static; font-size: 13px; co
   .wordmark { font-size: 18px; }
   .wordmark img { width: 26px; height: 26px; margin-right: 8px; }
   .section-label { font-size: 13px; overflow: hidden; text-overflow: ellipsis; }
-  .sidebar {
-    position: fixed; top: var(--header-height); left: 0; bottom: var(--bottom-nav-h); width: min(320px, 88vw); min-width: 0;
-    transform: translateX(-100%); visibility: hidden; transition: transform var(--transition-med), visibility 0s var(--transition-med);
-  }
-  .layout.drawer .sidebar { transform: translateX(0); visibility: visible; box-shadow: var(--shadow-lg); transition: transform var(--transition-med); }
-  .layout.collapsed .sidebar { display: flex; }
   .pill { min-height: 36px; }
-  .controls { padding-bottom: 8px; }
-  .drawer-show {
-    display: block; position: sticky; bottom: 0; margin-top: auto; background: var(--bg-surface); border-top: 1px solid var(--border);
-    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  /* The filter row as a disclosure: a "Filters" button with the current selection, opening the panel below it. */
+  .filter-bar { padding: 12px 16px 0; }
+  .filter-toggle {
+    display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 8px 12px; text-align: left;
+    background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); color: var(--text-primary);
   }
-  .drawer-show .btn { width: 100%; height: 44px; font-size: 14px; }
-  body.no-scroll .main { overflow: hidden; }
+  .filter-toggle::after { content: "▾"; margin-left: auto; color: var(--text-secondary); }
+  .filter-bar.open .filter-toggle::after { content: "▴"; }
+  .filter-toggle-label { font-weight: 700; font-size: 13px; flex: none; }
+  .filter-summary { min-width: 0; font-size: 13px; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .filter-bar:not(.open) .controls { display: none; }
+  .filter-bar.open .filter-toggle { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+  .controls { flex-direction: column; align-items: stretch; gap: 10px; border-top: none; border-top-left-radius: 0; border-top-right-radius: 0; }
+  .controls .field { min-width: 0; }
+  .controls .field > label, .controls .field-label { flex: 0 0 92px; }   /* one column of labels, selects aligned */
+  /* A long option (CIF NorCal Regional Championships) must not set the select's minimum width. */
+  .controls select { flex: 1 1 0; width: 0; min-width: 0; max-width: none; min-height: 40px; }
+  .controls .seg button { min-height: 40px; }
+  /* A toggle group (season of play, gender) stacks under its label and spreads its buttons over the full width,
+     wrapping if it must: at 320 px four buttons beside a 92 px label column cut "Spring" off (#23 review B2). */
+  .controls .seg-field { flex-direction: column; align-items: stretch; gap: 6px; }
+  .controls .seg-field .field-label { flex: none; }
+  .controls .seg { display: flex; flex-wrap: wrap; overflow: visible; }
+  .controls .seg button { flex: 1 1 auto; padding: 0 8px; }
+  .controls .seg button:first-child { border-radius: 5px 0 0 5px; }   /* no clip, so the ends keep the corners */
+  .controls .seg button:last-child { border-radius: 0 5px 5px 0; }
+  .filter-term, .filter-hint { margin-left: 0; }
   .content-header { padding: 14px 16px 0; }
   .content-header-row { flex-direction: column; }
   .content-header-right { justify-content: flex-start; }
@@ -465,4 +463,4 @@ table.history tbody th { background: none; position: static; font-size: 13px; co
 @media (max-width: 400px) { .header-left { gap: 6px; } .wordmark { font-size: 17px; } }
 @media (max-width: 359px) { .header-divider, .section-label { display: none; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-@media print { .header, .sidebar, .view-tabs, .bottom-nav { display: none; } body { overflow: auto; height: auto; } .layout { height: auto; padding: 0; } }
+@media print { .header, .filter-bar, .view-tabs, .bottom-nav { display: none; } body { overflow: auto; height: auto; } .layout { height: auto; padding: 0; } }

@@ -80,16 +80,17 @@ export const sectionOf = (tab) => (tab === 'team' ? 'teams' : MAIN_NAV.some(([k]
 export const hasSubNav = (state) => state.tab === 'playoffs' || state.tab === 'team';
 export const subNavLabel = (state) => (state.tab === 'team' ? 'Team' : 'Playoffs');
 
-// A team page has no statewide filter sidebar (#20): it is the team's home, not a filtered state view.
-export const hasSidebar = (state) => state.tab !== 'team';
-
 // Whether a finished render should move focus to the page title (#11). Navigation does (a link, a nav link,
-// Back/Forward); the first load and in-page controls don't, nor does a render while the user types in the
-// header search or works in the phone's filter drawer.
-export function focusTitleAfter({ cause, searchFocused = false, drawerOpen = false } = {}) {
-  if (searchFocused || drawerOpen) return false;
+// Back/Forward); the first load and in-page controls (the filter row, #20 PR 3) don't, nor does a render while
+// the user types in the header search.
+export function focusTitleAfter({ cause, searchFocused = false } = {}) {
+  if (searchFocused) return false;
   return cause === 'hashchange';
 }
+
+// After an in-page control's re-render, the control to focus again: the same id, if it is still on the page
+// (#18 items 1 and 2: a filter select or toggle button keeps focus instead of falling back to the body).
+export const refocusId = ({ cause, keep }) => (cause === 'control' && keep ? keep : null);
 
 export function hrefFor(state) {
   const params = new URLSearchParams();

@@ -1,7 +1,7 @@
 import { api, errorHtml } from '../api.js';
+import { bindFilters, stateSelect } from '../components/filters.js';
 import { setHead } from '../components/pageHeader.js';
-import { statePills } from '../components/sidebar.js';
-import { listHref, pageOf, resolveTab } from '../nav.js';
+import { pageOf, resolveTab } from '../nav.js';
 import { tableMatch } from '../search.js';
 import { readHash } from '../state.js';
 import { esc, favorites, schoolHref } from '../util.js';
@@ -15,16 +15,20 @@ const COLS = [
   { key: 'last', label: 'Last appearance', type: 'text' },
 ];
 let sort = { key: 'titles', dir: -1 };
+
+// The list's state select: a new state keeps the name filter (`q`); with neither, the hash says view=list, so
+// the whole list survives a refresh.
+export const listPatch = (q) => (key, value) => ({ st: value || null, view: value || q ? null : 'list' });
 let listener = null;   // the current render's hs-query handler
 
 export async function render({ state, statesIndex, controls, view, head, setState }) {
   const st = state.st || '';
   // The filter is the header search box (#13): it writes q= here, and the table keeps substring matching.
   let q = state.q || '';
-  // State pills keep the name filter (`q`), so filtered links stay filtered.
-  controls.innerHTML = statePills(statesIndex, st, (code) => listHref({ st: code, q: state.q }),
-    { all: listHref({ q: state.q }), count: 'schools' })
-    + '<p class="side-note">Search by name or city in the box at the top.</p>';
+  // The filter row (#20 PR 3): the state; the name filter is the header search box.
+  controls.innerHTML = stateSelect(statesIndex, st, { all: true })
+    + '<p class="filter-hint">Search by name or city in the box at the top.</p>';
+  bindFilters(controls, setState, { patch: (key, value) => listPatch(q)(key, value) });
   setHead(head, { crumbs: [['Teams', '#tab=teams'], ['Schools']], title: 'Schools' });
   view.innerHTML = '<div class="card notice">Loading schools…</div>';
   let data;
@@ -69,11 +73,6 @@ export async function render({ state, statesIndex, controls, view, head, setStat
     q = e.detail || '';
     // With no state and no name this is the whole list (view=list), so a refresh keeps the list.
     setState({ q: q || null, view: q || st ? null : 'list' }, { replace: true, silent: true });
-    // Keep the state pills' links carrying the current filter.
-    controls.querySelectorAll('a.pill').forEach((a) => {
-      const p = new URLSearchParams(a.getAttribute('href').slice(1));
-      a.setAttribute('href', listHref({ st: p.get('st'), q }));
-    });
     draw();
   };
   window.removeEventListener('hs-query', listener);

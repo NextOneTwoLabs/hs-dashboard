@@ -9,36 +9,35 @@ globalThis.location = { hash: '' };
 const root = new URL('../', import.meta.url);
 const read = (p) => readFile(new URL(p, root), 'utf8');
 const json = async (p) => JSON.parse(await read(p));
-const sidebar = await import('../public/js/components/sidebar.js');
+const filters = await import('../public/js/components/filters.js');
 const nav = await import('../public/js/nav.js');
 const { normalize } = await import('../public/js/state.js');
 const statesIndex = await json('public/archive/states.json');
 
-// Every pill's accessible name starts with its visible text (WCAG 2.5.3, Label in Name).
-function pills(html) {
-  return [...html.matchAll(/<(a|button) [^>]*class="pill"[^>]*aria-label="([^"]*)"[^>]*>(.*?)<\/\1>/g)]
-    .map((m) => ({ name: m[2], visible: m[3].replace(/<span class="pill-sub"[^>]*>.*?<\/span>/, '').replace(/<[^>]+>/g, '') }));
-}
-
-test('1. pill accessible names start with the visible text', async () => {
-  const html = [];
-  html.push(sidebar.statePills(statesIndex, 'TX', (c) => `#tab=playoffs&st=${c}`));
-  html.push(sidebar.statePills(statesIndex, null, (c) => `#tab=schools&st=${c}`, { all: '#tab=schools', count: 'schools' }));
-  html.push(sidebar.termPills(statesIndex, 'fall'));
+// #20 PR 3 replaced the sidebar pills (whose names #11 fixed) with filter selects and toggle buttons. Each
+// select is named by its visible <label for>, each button by its own text: Label in Name holds by construction.
+test('1. every filter control is named by its visible label', async () => {
+  const html = [filters.stateSelect(statesIndex, 'TX'), filters.stateSelect(statesIndex, null, { all: true }),
+    filters.termButtons(statesIndex, 'fall'), filters.showSelect('')];
   for (const s of statesIndex.states.filter((x) => x.latestSeason)) {
     const catalog = await json(`public/archive/states/${s.code}/catalog.json`);
     for (const season of catalog.seasons.filter((x) => x.competitions.length)) {
       const st = normalize({ st: s.code, season: season.season }, catalog);
-      html.push(sidebar.compPills(season, st), sidebar.showPills(st));
-      for (const comp of season.competitions) html.push(sidebar.divisionPills(comp, { ...st, comp: comp.id }));
+      html.push(filters.seasonSelect(catalog, st.season), filters.compSelect(season, st.comp));
+      for (const comp of season.competitions) html.push(filters.divisionSelect(comp, { ...st, comp: comp.id }));
     }
   }
-  const all = pills(html.join(''));
-  assert.ok(all.length > 50);
-  for (const p of all) assert.ok(p.name.startsWith(p.visible), `"${p.name}" starts with "${p.visible}"`);
-  const tx = pills(html[0]).find((p) => p.visible === 'TX');
-  assert.equal(tx.name, 'TX, Texas, 6 brackets in 2025-26');
-  assert.equal(pills(html[1]).find((p) => p.visible === 'TX').name, 'TX, Texas, 384 schools');
+  const all = html.join('');
+  const selects = [...all.matchAll(/<label for="([^"]+)">([^<]+)<\/label><select id="([^"]+)"/g)];
+  assert.ok(selects.length > 30);
+  for (const [, forId, label, id] of selects) {
+    assert.equal(forId, id, `${label}: the label points at its select`);
+    assert.ok(label.trim(), 'a visible label');
+  }
+  assert.equal((all.match(/<select /g) || []).length, selects.length, 'no select without a label');
+  assert.doesNotMatch(all, /aria-label=/, 'no hidden names that differ from the visible text');
+  assert.doesNotMatch(all, /pill-sub|>\d+</, 'no unexplained counts');
+  assert.match(all, /<label for="f-season">School year<\/label>/);
 });
 
 test('2. "Data updated" is shown once: the header, or the footer on narrow screens, never both', async () => {
@@ -66,7 +65,9 @@ test('3. the view is not an aria-live region; navigation moves focus to the page
   assert.equal(f({ cause: 'boot' }), false);
   assert.equal(f({ cause: 'control' }), false);
   assert.equal(f({ cause: 'hashchange', searchFocused: true }), false, 'typing in the header search keeps focus');
-  assert.equal(f({ cause: 'hashchange', drawerOpen: true }), false, 'a phone drawer keeps focus');
+  // #20 PR 3: the phone drawer is gone; a filter change is an in-page control, and focus returns to it.
+  assert.equal(nav.refocusId({ cause: 'control', keep: 'f-season' }), 'f-season');
+  assert.equal(nav.refocusId({ cause: 'hashchange', keep: 'f-season' }), null);
   const app = await read('public/js/app.js');
   assert.match(app, /focusTitleAfter\(/);
   assert.match(app, /\.content-title/);

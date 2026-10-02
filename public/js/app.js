@@ -7,10 +7,11 @@ import * as champions from './views/champions.js';
 import * as schools from './views/schools.js';
 import * as team from './views/team.js';
 import * as about from './views/about.js';
-import { canonicalHash, focusTitleAfter, hasSidebar, hasSubNav, mainNavHtml, needsCatalog, pageOf, resolveTab, subNavHtml,
+import { canonicalHash, focusTitleAfter, hasSubNav, mainNavHtml, needsCatalog, pageOf, refocusId, resolveTab, subNavHtml,
   subNavLabel } from './nav.js';
 import { initSearch } from './components/searchBox.js';
-import { closeDrawer } from './shell.js';
+import { summaryOf } from './components/filters.js';
+import { setFiltersOpen } from './shell.js';
 
 // Page modules by pageOf(): until #20's new views land, Teams renders today's views (see nav.js).
 const VIEWS = { states, playoffs, results, champions, schools, team, about };
@@ -20,22 +21,36 @@ const view = document.getElementById('view');
 const mainNav = document.getElementById('main-nav');
 const bottomNav = document.getElementById('bottom-nav');
 const subNav = document.getElementById('tabs');
+const filterBar = document.getElementById('filter-bar');
+const filterSummary = document.getElementById('filter-summary');
 let statesIndex = null;
 let state = {};
 let renderSeq = 0;
 
 function setState(patch, { replace = false, silent = false } = {}) {
+  // The control that made the change (a filter select or toggle, the team season select) keeps focus (#18).
+  const keep = document.activeElement?.closest?.('#filter-bar, #view') ? document.activeElement.id || null : null;
   const next = { ...state, ...patch };
   for (const k of Object.keys(next)) if (next[k] == null) delete next[k];
   if ('season' in patch || 'g' in patch || 'comp' in patch || 'div' in patch || 'st' in patch) delete next.round;
   state = next;
   writeHash(state, { replace });
-  if (!silent) render();
+  if (!silent) render('control', { keep });
 }
 
+// The filter row: hidden when a page has nothing to filter; on phones its toggle summarises the selection.
+function syncFilters() {
+  filterBar.hidden = !controls.innerHTML.trim();
+  filterSummary.textContent = summaryOf(controls.innerHTML);
+}
+// Pages write their row before they fetch, and some redraw it themselves (the landing's term filter), so the
+// row follows its own content rather than the end of a render.
+new MutationObserver(syncFilters).observe(controls, { childList: true, subtree: true });
+
 // cause: 'hashchange' (a link, a Main nav link, Back/Forward), 'boot' (first load) or 'control' (an in-page
-// control such as the season select or round pills). Only navigation moves focus to the new page's title (#11).
-async function render(cause = 'control') {
+// control such as a filter select or the round pills). Only navigation moves focus to the new page's title (#11);
+// after a control, focus returns to that control (`keep`, its id).
+async function render(cause = 'control', { keep = null } = {}) {
   const seq = ++renderSeq;
   const hash = readHash();
   // Old links (Schools, School, States, Champions; nav.js migrate) open their new route; replaceState, so Back
@@ -64,10 +79,8 @@ async function render(cause = 'control') {
   subNav.innerHTML = subNavHtml(state);
   subNav.setAttribute('aria-label', subNavLabel(state));
   subNav.hidden = !hasSubNav(state);
-  // A team page has no statewide sidebar (#20): hide it and its toggle, and close the phone drawer if open.
-  const sidebar = hasSidebar(state);
-  document.body.classList.toggle('no-sidebar', !sidebar);
-  if (!sidebar) closeDrawer({ restore: false });
+  // Navigating closes the phone filter panel; changing a filter inside it keeps it open.
+  if (cause === 'hashchange') setFiltersOpen(false);
   const stateName = catalog ? ` · ${catalog.name}` : '';
   document.title = state.tab === 'team' || state.tab === 'teams'
     ? 'Teams · High School Girls Soccer' : `High School Girls Soccer${stateName}`;
@@ -80,14 +93,16 @@ async function render(cause = 'control') {
     }
   }
   if (seq === renderSeq) {
-    document.getElementById('main').scrollTo({ top: 0 }); // the content column scrolls, not the window
+    syncFilters();
+    if (cause !== 'control') document.getElementById('main').scrollTo({ top: 0 }); // the content column scrolls
     window.dispatchEvent(new CustomEvent('hs-rendered'));  // the header search syncs its box (#13)
     // The view is not an aria-live region (#11): after navigation, focus moves to the page title, which a
     // screen reader then reads, instead of the whole page being announced.
-    if (focusTitleAfter({ cause, searchFocused: document.activeElement?.id === 'search-input',
-      drawerOpen: document.getElementById('layout').classList.contains('drawer') })) {
+    if (focusTitleAfter({ cause, searchFocused: document.activeElement?.id === 'search-input' })) {
       document.querySelector('.content-title')?.focus({ preventScroll: true });
     }
+    const again = refocusId({ cause, keep });
+    if (again && document.activeElement?.id !== again) document.getElementById(again)?.focus({ preventScroll: true });
   }
 }
 

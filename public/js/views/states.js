@@ -1,7 +1,7 @@
+import { termButtons } from '../components/filters.js';
 import { setHead } from '../components/pageHeader.js';
-import { bracketCount, statePills, termPills } from '../components/sidebar.js';
 import { hrefFor, listHref } from '../nav.js';
-import { bracketHref, esc, fmtDate, isLive, schoolHref } from '../util.js';
+import { bracketCount, bracketHref, esc, fmtDate, isLive, schoolHref } from '../util.js';
 
 const TERM = { fall: 'Fall', winter: 'Winter', spring: 'Spring' };
 let term = '';   // the season-of-play filter only filters this page, so it is not in the hash
@@ -9,15 +9,17 @@ let term = '';   // the season-of-play filter only filters this page, so it is n
 // US overview: one card per covered state (collegedash card, neutral band) with its latest champions.
 export async function render({ statesIndex, controls, view, head }) {
   const covered = statesIndex.states.filter((s) => s.latestSeason);
-  const draw = () => {
+  const draw = (focusId = null) => {
     const list = covered.filter((s) => !term || s.terms.includes(term));
     const schools = list.reduce((t, s) => t + s.schools, 0);
     const seasons = [...new Set(list.map((s) => s.latestSeason))].sort().reverse();
-    // A state pill opens that state's brackets (owner decision on #5).
-    controls.innerHTML = termPills(statesIndex, term)
-      + statePills(statesIndex, null, (code) => hrefFor({ tab: 'playoffs', st: code }), { all: hrefFor({ tab: 'teams' }) })
-      + '<p class="side-note">Counts are brackets in each state\'s latest season. A state opens its brackets.</p>';
-    controls.querySelectorAll('[data-term]').forEach((b) => b.addEventListener('click', () => { term = b.dataset.term; draw(); }));
+    // The filter row (#20 PR 3): the season of play only; each state card links to its schools and brackets.
+    controls.innerHTML = termButtons(statesIndex, term);
+    controls.querySelectorAll('[data-term]').forEach((b) => b.addEventListener('click', () => {
+      term = b.dataset.term;
+      draw(b.id);   // the pressed button keeps focus after the row re-renders (#18 item 2)
+    }));
+    if (focusId) controls.querySelector(`#${focusId}`)?.focus();
     setHead(head, {
       crumbs: [['Teams']],
       title: 'State championships',
@@ -42,7 +44,7 @@ function card(s) {
   const n = bracketCount(s);
   return `<article class="card pcard">
     <div class="band"><h2><a href="${hrefFor({ tab: 'playoffs', st: s.code })}">${esc(s.name)}</a><span class="nick">${esc(s.associationName || s.association)}</span></h2>
-      <span class="badges"><span class="badge">${esc(s.terms.map((t) => TERM[t] || t).join(', '))} · ${esc(s.association)}</span>${live ? '<span class="badge live"><span aria-hidden="true">● </span>Live</span>' : ''}</span></div>
+      <span class="badges"><span class="badge">${esc(s.terms.map((t) => TERM[t] || t).join(' and '))} season · ${esc(s.association)}</span>${live ? '<span class="badge live"><span aria-hidden="true">● </span>Live</span>' : ''}</span></div>
     <div class="stripe" aria-hidden="true"></div>
     <div class="body">
       <div class="meta">${esc(s.latestSeason)} champions</div>

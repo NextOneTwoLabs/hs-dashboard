@@ -1,5 +1,5 @@
 // A team's page (#20 PR 2): the team's home, with its own nav (Overview · Results · Playoff history, in the
-// content header's sub-nav) and no statewide filter sidebar. Every record here is a playoff record: the source
+// content header's sub-nav) and no statewide filters. Every record here is a playoff record: the source
 // is state championship brackets, so there are no league standings or regular-season games.
 // The markup is built by pure functions (exported for tests); render() fetches and binds.
 import { api, errorHtml } from '../api.js';
@@ -166,7 +166,7 @@ export function historyHtml({ s, own, comps, catalog, g }) {
 const initials = (name) => name.split(/\s+/).filter((w) => /^[A-Za-z]/.test(w)).slice(0, 2).map((w) => w[0].toUpperCase()).join('');
 
 export async function render({ state, statesIndex, controls, view, head, setState }) {
-  controls.innerHTML = '';   // no statewide sidebar on a team page (nav.js hasSidebar)
+  controls.innerHTML = '';   // no statewide filters on a team page: the filter row hides (app.js)
   setHead(head, { crumbs: [['Teams', '#tab=teams'], ['Team']], title: 'Team' });
   view.innerHTML = '<div class="card notice">Loading team…</div>';
   let s;

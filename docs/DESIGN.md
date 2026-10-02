@@ -159,6 +159,9 @@ export/<season>/<division>.csv                           human-readable export
   - A team page (`views/team.js`) has its own nav, Overview · Results · Playoff history (`view=results|history`), and no
     statewide sidebar. The playoff history is a table (season, competition, seed, furthest round, playoff W-L-D);
     the finishing-round SVG chart above is retired.
+  - Filters are a row of selects above the content (`components/filters.js`): state, school year, championship,
+    division and Results' "show", with the season of play (Fall / Winter / Spring) as text. On phones the row is a
+    "Filters" disclosure with a summary. The statewide sidebar and its phone drawer are gone; hash keys are unchanged.
 - **Reused from ECNL:**
   - The light/dark CSS token set.
   - The column-definition table renderer (sortable).

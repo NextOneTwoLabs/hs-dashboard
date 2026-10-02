@@ -16,21 +16,16 @@ test('1. search → Los Gatos opens the team page, with no statewide sidebar', a
   location.hash = `#tab=school&school=${LOS_GATOS}`;   // the old link, and the search target's route
   const state = nav.resolveTab(readHash());
   assert.equal(nav.pageOf(state), 'team');
-  assert.equal(nav.hasSidebar(state), false);
-  for (const hash of ['#tab=teams', '#tab=teams&q=ake', '#tab=results&st=CA', '#tab=playoffs&st=CA']) {
-    location.hash = hash;
-    assert.equal(nav.hasSidebar(nav.resolveTab(readHash())), true, hash);
-  }
+  // #20 PR 3 removed the statewide sidebar everywhere; a team page writes no filters, so its row is hidden.
   for (const view of [null, 'results', 'history']) {
     const { controls, view: v, head } = await open(team(view));
-    assert.equal(controls.innerHTML, '', `${view}: no sidebar controls`);
-    assert.doesNotMatch(v.innerHTML + head.innerHTML, /class="pill"/, `${view}: no state pills`);
+    assert.equal(controls.innerHTML, '', `${view}: no statewide filters`);
+    assert.doesNotMatch(v.innerHTML + head.innerHTML, /class="pill"|id="f-st"/, `${view}: no state filter`);
   }
   const app = await read('public/js/app.js');
-  assert.match(app, /document\.body\.classList\.toggle\('no-sidebar', !sidebar\);/);
-  assert.match(app, /if \(!sidebar\) closeDrawer\(\{ restore: false \}\);/);
-  const css = await read('public/css/app.css');
-  assert.match(css, /body\.no-sidebar #sidebar, body\.no-sidebar #sidebar-toggle \{ display: none; \}/);
+  assert.match(app, /filterBar\.hidden = !controls\.innerHTML\.trim\(\);/);
+  const html = await read('public/index.html');
+  assert.doesNotMatch(html, /id="sidebar"/);
   await assert.rejects(access(new URL('public/js/views/school.js', root)), 'the old school page is gone');
 });
 
