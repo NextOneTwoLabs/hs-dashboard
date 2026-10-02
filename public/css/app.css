@@ -88,7 +88,7 @@ button { cursor: pointer; }
 .header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   height: var(--header-height); padding: 0 20px;
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center;   /* logo · label · nav on the left, the right group pushed right (#26) */
   background: var(--bg-header); border-bottom: 1px solid var(--border);
 }
 .header-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
@@ -99,7 +99,6 @@ button { cursor: pointer; }
 .header-divider { width: 1px; height: 24px; background: var(--border); }
 .section-label { font-size: 14px; font-weight: 600; color: var(--text-secondary); white-space: nowrap; }
 .section-label:hover { color: var(--accent-text); text-decoration: none; }
-.header-search { position: relative; flex: 1 1 auto; min-width: 0; max-width: 520px; margin: 0 16px; }
 .search-input {
   width: 100%; height: 38px; padding: 8px 12px 8px 34px; font-size: 13px;
   border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary);
@@ -107,7 +106,7 @@ button { cursor: pointer; }
 }
 .search-input::placeholder { color: var(--text-secondary); }
 .search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); outline: none; }
-/* Header search panel (#13; collegedash .qpanel / .qopt): help text, then the listbox. No match highlighting. */
+/* The search panel (#13; collegedash .qpanel / .qopt), under the box: help text, then the listbox. */
 .qpanel {
   position: absolute; top: calc(100% + 4px); left: 0; right: 0; z-index: 120; display: flex; flex-direction: column;
   max-height: min(70vh, 520px); background: var(--bg-surface); border: 1px solid var(--border);
@@ -130,7 +129,7 @@ button { cursor: pointer; }
 .qfoot { display: flex; justify-content: space-between; gap: 12px; padding: 6px 12px 8px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-secondary); }
 .qfoot kbd { font: inherit; font-size: 11px; padding: 1px 5px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-surface-alt); }
 .clear-search { padding: 0; border: none; background: none; font: inherit; color: var(--accent-text); text-decoration: underline; cursor: pointer; }
-.header-right { display: flex; align-items: center; gap: 14px; }
+.header-right { display: flex; align-items: center; gap: 14px; margin-left: auto; }
 .observed-top { font-size: 13px; font-weight: 500; color: var(--text-secondary); white-space: nowrap; }
 .header-link { font-size: 13px; font-weight: 600; color: var(--accent-text); white-space: nowrap; }
 .theme-toggle {
@@ -139,9 +138,9 @@ button { cursor: pointer; }
 }
 .theme-toggle:hover { background: var(--bg-surface-alt); }
 
-/* ===== Main nav (#20): Teams · Results · Playoffs. The header nav on wider screens, the bottom bar on phones;
+/* ===== Main nav (#20): Schools · Results · Playoffs. The header nav on wider screens, the bottom bar on phones;
    only one is displayed at a time (the other is display:none), so there is one Main landmark in use. ===== */
-.header-nav { display: flex; align-items: center; gap: 2px; flex: none; margin-left: 12px; }
+.header-nav { display: flex; align-items: center; gap: 2px; flex: none; margin-left: 20px; }
 .main-nav-link {
   display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 10px; border-radius: var(--radius-sm);
   font-size: 14px; font-weight: 600; color: var(--text-secondary); white-space: nowrap;
@@ -150,10 +149,23 @@ button { cursor: pointer; }
 .main-nav-link:hover { color: var(--text-primary); background: var(--bg-surface-alt); text-decoration: none; }
 .main-nav-link[aria-current] { color: var(--accent-text); background: var(--accent-surface); }
 .bottom-nav { display: none; }
-/* Room for the search box: the product label goes first, then icons, then the header "About" link (it is in the footer). */
-@media (max-width: 1360px) { .header-divider, .section-label { display: none; } }
+/* With no search box in the header (#26) there is room: nav icons go below 1181 px, the product label below 861 px;
+   "About the data" stays down to 769 px (phones keep it in the footer). */
 @media (max-width: 1180px) { .main-nav-link svg { display: none; } .main-nav-link { padding: 0 8px; } }
-@media (max-width: 1024px) { .header-right .header-link { display: none; } .header-search { margin: 0 10px; } .header-nav { margin-left: 4px; } }
+@media (max-width: 860px) { .header-divider, .section-label { display: none; } .header-nav { margin-left: 8px; } }
+
+/* ===== The Schools search (#26): a band under the Schools page header, on the landing and the list ===== */
+.school-search { padding: 14px 28px 0; }
+.school-search-card { padding: 16px 18px; }
+.school-search-h { font-size: 18px; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 4px; }
+.school-search-lead { font-size: 13px; color: var(--text-secondary); margin-bottom: 10px; }
+.school-search .search { position: relative; max-width: 640px; }
+.school-search .search-input { height: 44px; font-size: 15px; padding-left: 38px; background-position: 12px center; }
+.search-kbd { position: absolute; right: 10px; top: 12px; font-size: 12px; line-height: 18px; color: var(--text-secondary); border: 1px solid var(--border); border-radius: 4px; padding: 0 6px; pointer-events: none; }
+.search-input:focus ~ .search-kbd { display: none; }
+.school-search-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.school-search-chips .chip { height: 34px; padding: 0 14px; font-size: 13px; color: var(--text-primary); background: var(--bg-surface); border: 1px solid var(--border); cursor: pointer; }
+.school-search-chips .chip:hover { border-color: var(--accent); color: var(--accent-text); }
 
 /* ===== Layout and the filter row (#20 PR 3: the statewide sidebar is gone) ===== */
 .layout { display: flex; height: 100vh; padding-top: var(--header-height); }
@@ -167,7 +179,6 @@ button { cursor: pointer; }
 .controls .field { width: auto; }
 .controls select { flex: none; min-width: 120px; max-width: 280px; }
 .filter-term { margin-left: auto; font-size: 12px; color: var(--text-secondary); }   /* the season of play */
-.filter-hint { margin-left: auto; font-size: 12px; color: var(--text-secondary); }   /* a usage hint, e.g. the school list's */
 .field-label { font-size: 11px; font-weight: 600; color: var(--text-secondary); }
 .pill-row { display: flex; flex-wrap: wrap; gap: 6px; padding: 4px 16px 6px; }
 .pill {
@@ -390,12 +401,13 @@ table.history tbody th { background: none; position: static; font-size: 13px; co
 @media (max-width: 400px) { .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .fav-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 
-/* ===== Phone (collegedash 768 px rules: two-row header, bottom nav, filter disclosure) ===== */
+/* ===== Phone (768 px and below: a one-row header, bottom nav, filter disclosure) ===== */
 /* "Data updated" is shown once (#11): in the header, or in the footer where the header has no room for it. */
 .footer-updated { display: none; }
 @media (max-width: 1100px) { .observed-top { display: none; } .footer-updated { display: inline; } }
 @media (max-width: 768px) {
-  :root { --header-height: 112px; --bottom-nav-h: calc(56px + env(safe-area-inset-bottom)); }
+  /* One 56 px row (logo · label · theme) since the search left the header (#26); it was two rows (112 px). */
+  :root { --header-height: 56px; --bottom-nav-h: calc(56px + env(safe-area-inset-bottom)); }
   /* Main nav: the bottom bar replaces the header nav. The phone header has room for the product label again. */
   .header-nav { display: none; }
   .header-divider { display: block; }
@@ -413,19 +425,21 @@ table.history tbody th { background: none; position: static; font-size: 13px; co
   .bottom-nav-link:hover { text-decoration: none; color: var(--text-primary); }
   .bottom-nav-link[aria-current] { color: var(--accent-text); }
   .bottom-nav-link[aria-current] svg { stroke-width: 2.2; }
-  /* While the header search has focus the bar hides: a fixed bar rides above the iOS keyboard and would cover
+  /* While the Schools search has focus the bar hides: a fixed bar rides above the iOS keyboard and would cover
      the suggestions. :has() where supported; body.search-focus (components/searchBox.js) as the fallback. */
   body:has(#search-input:focus) .bottom-nav, body.search-focus .bottom-nav { display: none; }
   .layout { padding-bottom: var(--bottom-nav-h); }
-  .header { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: 52px 52px; column-gap: 8px; align-items: center; padding: 0 12px; }
-  .header-search { grid-row: 2; grid-column: 1 / -1; max-width: none; margin: 0; }
+  .header { padding: 0 12px; gap: 8px; }
+  .header-left { flex: 1 1 auto; }
+  .header-right { flex: none; }
+  .school-search { padding: 12px 16px 0; }
   .search-input { font-size: 16px; }   /* iOS does not zoom on focus */
-  /* Full width under the header, and above the on-screen keyboard: --vvh is visualViewport.height
-     (components/searchBox.js); dvh is the fallback, vh the last resort. */
-  .qpanel { position: fixed; left: 12px; right: 12px; top: calc(var(--header-height) - 6px);
-    max-height: calc(60vh); max-height: calc(60dvh); max-height: calc(var(--vvh, 100dvh) - var(--header-height) - 16px); }
+  .search-kbd { display: none; }
+  /* The panel opens under the box. Its height is the visual viewport (--vvh, components/searchBox.js) above the
+     on-screen keyboard, minus the box's bottom edge (--qpanel-top, set when the box takes focus); dvh and vh are
+     the fallbacks. */
+  .qpanel { max-height: 60vh; max-height: 60dvh; max-height: max(160px, calc(var(--vvh, 100dvh) - var(--qpanel-top, 200px) - 12px)); }
   .qfoot { display: none; }
-  .header-right { grid-row: 1; grid-column: 2; }
   .header-link { display: none; }
   .header-left { gap: 8px; }
   .wordmark { font-size: 18px; }
@@ -458,7 +472,7 @@ table.history tbody th { background: none; position: static; font-size: 13px; co
   .controls .seg button { flex: 1 1 auto; padding: 0 8px; }
   .controls .seg button:first-child { border-radius: 5px 0 0 5px; }   /* no clip, so the ends keep the corners */
   .controls .seg button:last-child { border-radius: 0 5px 5px 0; }
-  .filter-term, .filter-hint { margin-left: 0; }
+  .filter-term { margin-left: 0; }
   .content-header { padding: 14px 16px 0; }
   .content-header-row { flex-direction: column; }
   .content-header-right { justify-content: flex-start; }

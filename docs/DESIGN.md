@@ -156,11 +156,14 @@ export/<season>/<division>.csv                           human-readable export
      - An "at a glance" card: best finish, titles, appearances.
      - The playoff path for this season, a history table, and a finishing-round SVG chart.
      - A follow star (`localStorage`).
-- **Routes since #20:** the Main nav is Teams · Results · Playoffs (header nav; a bottom bar on phones).
-  - `#tab=teams` (the school list with `st`, `q` or `view=list`), `#tab=team&school=<id>`, `#tab=results`,
-    `#tab=playoffs` (`view=champions` for Champions) and `#tab=about`.
-  - The old Schools, School, States and Champions links (and `#school=<id>`) still open the same content; `public/js/nav.js` maps them.
-  - A team page (`views/team.js`) has its own nav, Overview · Results · Playoff history (`view=results|history`), and no
+- **Routes since #20 (names since #26):** the Main nav is Schools · Results · Playoffs (header nav; a bottom bar on
+  phones).
+  - `#tab=schools` (the landing; the school list with `st`, `q` or `view=list`), `#tab=school&school=<id>`,
+    `#tab=results`, `#tab=playoffs` (`view=champions` for Champions) and `#tab=about`.
+  - Older links still open the same content; `public/js/nav.js` maps them (replaceState, no extra Back entry): the
+    #21–#25 `tab=teams` / `tab=team`, and the pre-#20 States, Champions and `#school=<id>`. A pre-#20 bare
+    `#tab=schools` now opens the landing, which links to the whole list.
+  - A school page (`views/team.js`) has its own nav, Overview · Results · Playoff history (`view=results|history`), and no
     statewide sidebar. The playoff history is a table (season, competition, seed, furthest round, playoff W-L-D);
     the finishing-round SVG chart above is retired.
   - Filters are a row of selects above the content (`components/filters.js`): state, school year, championship,
@@ -169,8 +172,13 @@ export/<season>/<division>.csv                           human-readable export
   - One match card everywhere (`components/match.js`): competition · round and the date in the header, team links,
     a "PK win" tag, the status (Final, Result not reported, Scheduled, Awaiting result, Bye), "Match details" and
     "View in bracket" (at the game's round), and a note that a PK game counts as a draw in playoff records.
-  - The Teams landing (`views/landing.js`): "Find a team" (example chips fill the one header search), "Followed
-    teams" (saved in this browser only, and it says so) and "Browse by state" with a season-of-play toggle.
+  - The Schools landing (`views/landing.js`): "Followed schools" (saved in this browser only, and it says so) and
+    "Browse by state" with a season-of-play toggle.
+  - The one search box (#26) is on the Schools page, not in the header: `#school-search` in `index.html`, between the
+    page head and the filter row, shown on the landing ("Find a school", with example chips) and the list (where it
+    filters the table). `components/searchBox.js` owns it and no view writes into it, so typed text and focus
+    survive landing → list. Leaving Schools clears it. "/" focuses it, or opens Schools and then focuses it
+    (ignored while typing in a field and with Ctrl, Meta or Alt). The phone header is one 56 px row.
 - **Reused from ECNL:**
   - The light/dark CSS token set.
   - The column-definition table renderer (sortable).

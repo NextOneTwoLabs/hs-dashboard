@@ -22,7 +22,7 @@ export async function render({ state, catalog, statesIndex, controls, view, head
   bindFilters(controls, setState);
   bindControls(controls, setState);
 
-  const crumbs = [['All states', '#tab=teams'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], [state.season]];
+  const crumbs = [['All states', '#tab=schools'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], [state.season]];
   if (!comp) {
     setHead(head, { crumbs, title: `${catalog.name} brackets` });
     view.innerHTML = `<div class="card notice">${esc(season?.note || 'No brackets for this season.')}</div>`;

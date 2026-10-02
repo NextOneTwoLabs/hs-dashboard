@@ -6,14 +6,14 @@ import assert from 'node:assert/strict';
 import { access } from 'node:fs/promises';
 import { LOS_GATOS, nav, open, read, readHash, root } from './helpers/views.mjs';
 
-const team = (view = null, extra = '') => `#tab=team${view ? `&view=${view}` : ''}&school=${LOS_GATOS}${extra}`;
+const team = (view = null, extra = '') => `#tab=school${view ? `&view=${view}` : ''}&school=${LOS_GATOS}${extra}`;
 const PK_SCHOOL = '01e250af-f9de-4e2b-8e1a-11cc0a1fd241';         // 2023-24: drew 1–1 with Lowell, won on PKs
 const UNREPORTED_SCHOOL = '0e9106ab-0712-45d0-81e4-5b3a74c060e2';  // 2025-26: a State Final with no result
 const NO_SCORE_SCHOOL = '18c40063-4e26-4c6e-90db-b7919e0be74f';    // 2025-26: lost to London, score not reported
 const text = (html) => html.replace(/<[^>]+>/g, ' ').replace(/&#39;/g, "'").replace(/&amp;/g, '&').replace(/\s+/g, ' ');
 
 test('1. search → Los Gatos opens the team page, with no statewide sidebar', async () => {
-  location.hash = `#tab=school&school=${LOS_GATOS}`;   // the old link, and the search target's route
+  location.hash = `#tab=team&school=${LOS_GATOS}`;   // the #20–#25 link; #tab=school is the search target's route
   const state = nav.resolveTab(readHash());
   assert.equal(nav.pageOf(state), 'team');
   // #20 PR 3 removed the statewide sidebar everywhere; a team page writes no filters, so its row is hidden.
@@ -33,7 +33,7 @@ test('2. an unmistakable identity: name, place, sport, the season\'s competition
   const { head } = await open(team());
   assert.match(head.innerHTML, /<h1 class="content-title" tabindex="-1">Los Gatos<\/h1>/);
   assert.match(text(head.innerHTML), /Los Gatos, CA · Girls soccer · 2025-26: CIF State Championships, Division 1 \(seed 3\)/);
-  assert.match(text(head.innerHTML), /Teams › California › Los Gatos/);
+  assert.match(text(head.innerHTML), /Schools › California › Los Gatos/);
   assert.match(head.innerHTML, /<span class="crest">LG<\/span>/);
   assert.match(head.innerHTML, /id="fav" type="button" aria-pressed="false" aria-describedby="fav-note">☆ Follow</);
   assert.match(head.innerHTML, /id="fav-note">Saved in this browser only</);
@@ -44,7 +44,7 @@ test('2. an unmistakable identity: name, place, sport, the season\'s competition
 test('3. the team nav keeps the school, program and season; it is distinct from the Main nav', async () => {
   location.hash = team('results', '&season=2023-24&g=g');
   const state = nav.resolveTab(readHash());
-  assert.equal(nav.subNavLabel(state), 'Team');
+  assert.equal(nav.subNavLabel(state), 'School');
   const sub = nav.subNavHtml(state);
   const links = [...sub.matchAll(/<a class="view-tab" href="([^"]+)"( aria-current="page")?>([^<]+)<\/a>/g)];
   assert.deepEqual(links.map((m) => m[3]), ['Overview', 'Results', 'Playoff history']);
@@ -57,7 +57,7 @@ test('3. the team nav keeps the school, program and season; it is distinct from 
   }
   // The Main nav marks the section, the team nav the page: one aria-current="page".
   const main = nav.mainNavHtml(state);
-  assert.match(main, /aria-current="true">(?:<svg[\s\S]*?<\/svg>)?<span>Teams</);
+  assert.match(main, /aria-current="true">(?:<svg[\s\S]*?<\/svg>)?<span>Schools</);
   assert.doesNotMatch(main, /aria-current="page"/);
   // Refresh and Back render from the hash alone: the season and tab come back.
   const cases = [
@@ -112,7 +112,7 @@ test('5. Playoff history: one compact table for all seasons, same names for the 
     '2025-26 CIF State Championships · Division 1 3 Regional Semifinals (lost) 1-1-0',
     '2023-24 CIF NorCal Regional Championships · Division 3 2 Regional Semifinals (lost) 1-1-0',
   ]);
-  assert.match(html, new RegExp(`href="#tab=team&amp;season=2023-24&amp;g=g&amp;school=${LOS_GATOS}"`), 'a season opens that season\'s Overview');
+  assert.match(html, new RegExp(`href="#tab=school&amp;season=2023-24&amp;g=g&amp;school=${LOS_GATOS}"`), 'a season opens that season\'s Overview');
   const notes = text(html);
   assert.match(notes, /No recorded appearance in 2024-25, 2022-23, 2021-22, 2020-21, 2019-20, 2018-19, 2017-18\./);
   assert.match(notes, /not that the team didn't play/);
@@ -123,17 +123,17 @@ test('5. Playoff history: one compact table for all seasons, same names for the 
 });
 
 test('6. Results: match cards name the PK winner, keep the draw, and tell missing results from scores', async () => {
-  const pk = await open(`#tab=team&view=results&season=2023-24&school=${PK_SCHOOL}`);
+  const pk = await open(`#tab=school&view=results&season=2023-24&school=${PK_SCHOOL}`);
   const card = pk.view.innerHTML.slice(pk.view.innerHTML.indexOf('Regional Semifinals') - 400);
   // #20 PR 4: the shared card says "PK win" (with the same hidden words) and notes the draw convention.
   assert.match(card, /<div class="team-row win"[\s\S]*?<span class="score">1<span class="pk">PK win<span class="sr-only"> \(won on penalty kicks\)<\/span><\/span>/,
     'the PK tag says what it means to screen readers too');
   assert.match(text(card), /Final .*Level after full time, decided on penalty kicks · counts as a draw in playoff records/);
-  const hist = await open(`#tab=team&view=history&school=${PK_SCHOOL}`);
+  const hist = await open(`#tab=school&view=history&school=${PK_SCHOOL}`);
   assert.match(text(hist.view.innerHTML), /2023-24 .* \d+-\d+-[1-9]/, 'the shootout is a D in the record');
-  const unrep = await open(`#tab=team&view=results&season=2025-26&school=${UNREPORTED_SCHOOL}`);
+  const unrep = await open(`#tab=school&view=results&season=2025-26&school=${UNREPORTED_SCHOOL}`);
   assert.match(text(unrep.view.innerHTML), /State Finals Apr 9 .* Result not reported/);
-  const noScore = await open(`#tab=team&view=results&season=2025-26&school=${NO_SCORE_SCHOOL}`);
+  const noScore = await open(`#tab=school&view=results&season=2025-26&school=${NO_SCORE_SCHOOL}`);
   assert.match(text(noScore.view.innerHTML), /Final · score not reported/);
 });
 

@@ -30,8 +30,8 @@ test('2. one card: header, team links, winner, PK win (with hidden words), note,
   };
   const html = card.matchCard(game, { head: 'NorCal · Division 5 · Regional Semifinals', date: 'Feb 29', g: 'g', bracket: '#tab=playoffs&round=1' });
   assert.match(html, /<div class="match-top"><span class="match-head">NorCal · Division 5 · Regional Semifinals<\/span><span class="match-date">Feb 29<\/span><\/div>/);
-  assert.match(html, /<div class="team-row win" data-school="aaa-111">[\s\S]*?href="#tab=team&school=aaa-111&g=g"[\s\S]*?<span class="score">1<span class="pk">PK win<span class="sr-only"> \(won on penalty kicks\)<\/span><\/span>/);
-  assert.match(html, /<div class="team-row lose" data-school="bbb-222">[\s\S]*?href="#tab=team&school=bbb-222&g=g"/, 'the opponent links to its team page');
+  assert.match(html, /<div class="team-row win" data-school="aaa-111">[\s\S]*?href="#tab=school&school=aaa-111&g=g"[\s\S]*?<span class="score">1<span class="pk">PK win<span class="sr-only"> \(won on penalty kicks\)<\/span><\/span>/);
+  assert.match(html, /<div class="team-row lose" data-school="bbb-222">[\s\S]*?href="#tab=school&school=bbb-222&g=g"/, 'the opponent links to its school page');
   assert.match(html, /<span class="match-status status-final">Final<\/span>/);
   assert.match(html, /<a href="https:\/\/www\.maxpreps\.com\/x\/match\/y" rel="noopener" target="_blank">Match details <span aria-hidden="true">↗<\/span><\/a>/);
   assert.match(html, /<a href="#tab=playoffs&amp;round=1">View in bracket <span aria-hidden="true">→<\/span><\/a>/);
@@ -75,13 +75,13 @@ test('4. brackets: compact cards with the MaxPreps match page, and no link back 
 });
 
 test('5. a team\'s cards: competition · division · round, the date, and its bracket at that round', async () => {
-  const { view } = await open(`#tab=team&view=results&school=${LOS_GATOS}`);
+  const { view } = await open(`#tab=school&view=results&school=${LOS_GATOS}`);
   const list = cards(view.innerHTML);
   assert.equal(list.length, 2);
   assert.match(list[0], /<span class="match-head">State · Division 1 · Regional Semifinals<\/span><span class="match-date">Mar 5<\/span>/);
   assert.match(list[0], /href="#tab=playoffs&amp;st=CA&amp;season=2025-26&amp;comp=ca-cif-state&amp;div=gd1&amp;round=1">View in bracket/);
   assert.match(list[1], /&amp;round=0">View in bracket/);
-  assert.match(list[0], /href="#tab=team&school=[^"]+&g=g" title="Bishop O&#39;Dowd"/, 'the opponent links to its team page');
+  assert.match(list[0], /href="#tab=school&school=[^"]+&g=g" title="Bishop O&#39;Dowd"/, 'the opponent links to its school page');
 });
 
 // #22 review notes, taken in PR 4: "Scheduled" only for the appearance's last row; a past-dated open row in a

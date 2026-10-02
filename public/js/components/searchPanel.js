@@ -1,4 +1,4 @@
-// The header search panel's HTML (#13): help text outside the listbox, then the listbox of options.
+// The Schools search panel's HTML (#13; in the header until #26): help text outside the listbox, then the listbox of options.
 // Pure (no DOM), so tests can check the markup. Every actionable row is a role="option".
 import { esc } from '../util.js';
 import { HINT, optionText, scopeText } from '../search.js';

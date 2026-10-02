@@ -18,7 +18,7 @@ export async function render({ state, catalog, statesIndex, controls, view, head
   ].join('');
   bindFilters(controls, setState);
   bindControls(controls, setState);
-  const crumbs = [['All states', '#tab=teams'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], [`${state.season} results`]];
+  const crumbs = [['All states', '#tab=schools'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], [`${state.season} results`]];
   setHead(head, { crumbs, title: `${catalog.name} results`, subtitle: `${esc(catalog.association)} · ${esc(state.season)}` });
   view.innerHTML = '<div class="card notice">Loading games…</div>';
 

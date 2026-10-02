@@ -1,5 +1,5 @@
-// #20 PR 5: the Teams landing (find a team through the one header search, followed teams with how they are
-// kept, browse by state), #15 search items 1–3, the viewer's local date, and a linked bracket round on desktop.
+// #20 PR 5: the Teams landing, "Schools" since #26 (followed schools with how they are kept, browse by state;
+// the search moved into the page in #26, tests/schools_search.test.mjs), #15 search items 1–3, the viewer's local date, and a linked bracket round on desktop.
 // Offline: the shared view harness. The time zone is fixed so the local-date test means the same everywhere.
 process.env.TZ = 'America/Los_Angeles';
 import { test } from 'node:test';
@@ -15,40 +15,37 @@ const idx = s.buildIndex(await json('public/archive/search-index.json'), await j
 const names = (q) => s.suggest(idx, q).items.filter((it) => it.kind === 'school').map((it) => it.row.name);
 const text = (html) => html.replace(/<[^>]+>/g, ' ').replace(/&#39;/g, "'").replace(/&amp;/g, '&').replace(/\s+/g, ' ');
 
-test('1. the Teams landing: find a team (no second box), followed teams and how they are kept, browse by state', async () => {
-  location.hash = '#tab=teams';
+// Since #26 the page is "Schools" and its search (with the chips) is the #school-search band above the view
+// (tests/schools_search.test.mjs); the view keeps followed schools and browse by state.
+test('1. the Schools landing: followed schools and how they are kept, browse by state', async () => {
+  location.hash = '#tab=schools';
   assert.equal(nav.pageOf(nav.resolveTab(readHash())), 'landing');
   localStorage.removeItem('hs-favorites');
-  const empty = await open('#tab=teams');
-  assert.match(empty.head.innerHTML, /<h1 class="content-title" tabindex="-1">Teams<\/h1>/);
-  assert.match(empty.head.innerHTML, /Find a girls soccer team and its playoff record\./);
+  const empty = await open('#tab=schools');
+  assert.match(empty.head.innerHTML, /<h1 class="content-title" tabindex="-1">Schools<\/h1>/);
+  assert.match(empty.head.innerHTML, /Find a girls soccer program and its playoff record\./);
   const html = empty.view.innerHTML;
-  assert.match(html, /<h2 class="landing-h" id="find-h">Find a team<\/h2>/);
-  assert.deepEqual([...html.matchAll(/<button type="button" class="chip" data-fill="([^"]+)">/g)].map((m) => m[1]),
-    ['Los Gatos', 'Mater Dei', 'San Antonio', 'Texas']);
-  assert.doesNotMatch(html, /<input/, 'the chips use the header search; there is no second search box');
-  assert.match(html, /<h2 class="landing-h" id="followed-h">Followed teams<\/h2><p class="muted">No followed teams yet\.<\/p>/);
-  assert.match(text(html), /Followed teams are saved in this browser only\. Clearing site data, private browsing or another device starts empty\. Use ☆ Follow on any team page\./);
+  assert.doesNotMatch(html, /<input|data-fill|id="find-h"/, 'the search and its chips are not in the view');
+  assert.match(html, /<h2 class="landing-h" id="followed-h">Followed schools<\/h2><p class="muted">No followed schools yet\.<\/p>/);
+  assert.match(text(html), /Followed schools are saved in this browser only\. Clearing site data, private browsing or another device starts empty\. Use ☆ Follow on any school page\./);
   localStorage.setItem('hs-favorites', JSON.stringify([{ id: 'bdb0b593-ef7f-4c69-8c2a-e0a48c934ca7', name: 'Los Gatos' }]));
-  const followed = (await open('#tab=teams')).view.innerHTML;
-  assert.match(followed, /<a href="#tab=team&amp;school=bdb0b593-ef7f-4c69-8c2a-e0a48c934ca7"><span class="crest crest-sm" aria-hidden="true">LG<\/span>Los Gatos<\/a>/);
+  const followed = (await open('#tab=schools')).view.innerHTML;
+  assert.match(followed, /<a href="#tab=school&amp;school=bdb0b593-ef7f-4c69-8c2a-e0a48c934ca7"><span class="crest crest-sm" aria-hidden="true">LG<\/span>Los Gatos<\/a>/);
   localStorage.removeItem('hs-favorites');
   // Browse by state: one card per covered state; every number says what it counts.
   const cards = html.split('<article class="card state-card">').slice(1);
   assert.equal(cards.length, 6);
   assert.match(text(cards[0]), /California CIF · Winter season 335 schools in playoff records · 5 brackets in 2025-26 Schools Brackets Champions Results/);
-  assert.match(cards[0], /<h3><a href="#tab=teams&amp;st=CA">California<\/a>/, 'a state opens its school list');
-  assert.match(empty.head.innerHTML, /href="#tab=teams&view=list">All 1,337 schools/);
+  assert.match(cards[0], /<h3><a href="#tab=schools&amp;st=CA">California<\/a>/, 'a state opens its school list');
+  assert.match(empty.head.innerHTML, /href="#tab=schools&view=list">All 1,337 schools/);
   // The q/st list is unchanged.
-  for (const hash of ['#tab=teams&q=ake', '#tab=teams&st=TX', '#tab=teams&view=list']) {
+  for (const hash of ['#tab=schools&q=ake', '#tab=schools&st=TX', '#tab=schools&view=list']) {
     location.hash = hash;
     assert.equal(nav.pageOf(nav.resolveTab(readHash())), 'schools', hash);
   }
-  // The chips fill the one header search box.
+  // The landing no longer drives the box through an event: the chips live in the band, beside the box.
   const landing = await read('public/js/views/landing.js');
-  assert.match(landing, /window\.dispatchEvent\(new CustomEvent\('hs-search-fill', \{ detail: b\.dataset\.fill \}\)\)/);
-  const box = await read('public/js/components/searchBox.js');
-  assert.match(box, /window\.addEventListener\('hs-search-fill', async \(e\) => \{\s*choose\(\{ kind: 'chip', text: String\(e\.detail \|\| ''\) \}\);/);
+  assert.doesNotMatch(landing, /hs-search-fill|data-fill/);
 });
 
 test('2. #15 item 1: St/Saint and Mt/Mount are aliases for whole words only', () => {
@@ -74,14 +71,14 @@ test('3. #15 item 2: a punctuation-exact match ranks above names that only share
 });
 
 test('4. #15 item 3: text typed while the school list loads is applied when it arrives', async () => {
-  location.hash = '#tab=teams&view=list';
+  location.hash = '#tab=schools&view=list';
   const ctx = { state: nav.resolveTab(readHash()), statesIndex: await json('public/archive/states.json'),
     controls: el(), view: el(), head: el(), setState: () => {} };
   const rendering = VIEWS.schools.render(ctx);
   window.dispatchEvent(new CustomEvent('hs-query', { detail: 'ake' }));   // before the list has loaded
   await rendering;
   assert.match(ctx.head.innerHTML, /59 of 1,337 schools .* matching “ake”/);
-  assert.equal((ctx.view.innerHTML.match(/<tr><td><a href="#tab=team&school=/g) || []).length, 59);
+  assert.equal((ctx.view.innerHTML.match(/<tr><td><a href="#tab=school&school=/g) || []).length, 59);
 });
 
 test('5. the viewer\'s local date, not UTC, decides "Awaiting result" and "Live"', async () => {

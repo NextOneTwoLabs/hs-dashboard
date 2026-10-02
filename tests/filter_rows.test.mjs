@@ -46,16 +46,16 @@ test('2. Playoffs: state, school year, championship and division; the season of 
   assert.match(fall.controls.innerHTML, /<p class="filter-term">Fall season<\/p>/);
 });
 
-test('3. Results, Champions, the school list and Teams each filter with their own row', async () => {
+test('3. Results, Champions, the school list and Schools each filter with their own row', async () => {
   const res = await open('#tab=results&st=TX&show=upcoming');
   assert.deepEqual(['f-st', 'f-season', 'f-show'].map((id) => selected(res.controls.innerHTML, id)), ['TX', '2025-26', 'upcoming']);
   const champs = await open('#tab=playoffs&view=champions&st=PA');
   assert.equal(selected(champs.controls.innerHTML, 'f-st'), 'PA');
   assert.doesNotMatch(champs.controls.innerHTML, /id="f-season"/, 'every school year is in the champions grid');
-  const list = await open('#tab=teams&st=WA&q=east');
+  const list = await open('#tab=schools&st=WA&q=east');
   assert.equal(selected(list.controls.innerHTML, 'f-st'), 'WA');
   assert.match(list.controls.innerHTML, /<option value="">All states<\/option>/);
-  const all = await open('#tab=teams&view=list');
+  const all = await open('#tab=schools&view=list');
   assert.equal(selected(all.controls.innerHTML, 'f-st'), '');
   // The list's state select keeps the name filter, and the whole list stays the whole list.
   assert.deepEqual(schools.listPatch('ake')('st', 'TX'), { st: 'TX', view: null });
@@ -63,7 +63,7 @@ test('3. Results, Champions, the school list and Teams each filter with their ow
   assert.deepEqual(schools.listPatch('')('st', ''), { st: null, view: 'list' });
   // #20 PR 5: the landing's season-of-play toggle filters only the state cards, so it moved beside them (the
   // "Browse by state" heading) and the page's filter row is empty and hidden.
-  const landing = await open('#tab=teams');
+  const landing = await open('#tab=schools');
   assert.equal(landing.controls.innerHTML, '');
   assert.match(landing.view.innerHTML, /<div class="landing-browse-row"><h2 class="section-h" id="browse-h">Browse by state<\/h2><div class="field seg-field"><span class="field-label" id="f-term-label">Season of play<\/span>/);
   assert.match(landing.view.innerHTML, /<button type="button" id="f-term-all" data-term="" aria-pressed="true">All<\/button>/);
@@ -107,7 +107,7 @@ test('6. #18: a filter select or toggle keeps focus after the re-render; the pan
   assert.deepEqual([...controls.innerHTML.matchAll(/<select id="([^"]+)"/g)].map((m) => m[1]), ['f-st', 'f-season', 'f-comp', 'f-div']);
   assert.match((await import('../public/js/components/controls.js')).segmented('g', 'g', [['b', 'Boys'], ['g', 'Girls']], 'Gender'),
     /<button type="button" id="f-g-g" data-set-g="g" aria-pressed="true">Girls<\/button>/);
-  const states = await read('public/js/views/landing.js');   // the Teams landing (#20 PR 5; was states.js)
+  const states = await read('public/js/views/landing.js');   // the Schools landing (#20 PR 5, #26; was states.js)
   assert.match(states, /draw\(b\.id\);/, 'the landing\'s season-of-play buttons redraw and refocus themselves');
   const shell = await read('public/js/shell.js');
   assert.match(shell, /toggle\.setAttribute\('aria-expanded', String\(open\)\);/);
@@ -133,18 +133,19 @@ test('7. the bracket\'s round pills keep focus: each has a stable id that surviv
   const src = await read('public/js/views/playoffs.js');
   assert.match(src, /btn\.addEventListener\('click', \(\) => setState\(\{ round: btn\.dataset\.round \}, \{ replace: true \}\)\)/,
     'a pill press goes through setState, which keeps the focused id (the pill is inside #view)');
-  // Non-blocking notes: Escape works with focus on the toggle too, and the school list's hint has its own class.
+  // Non-blocking notes: Escape works with focus on the toggle too. Since #26 the school list's row has no "box at
+  // the top" hint: the box is right above it, in the Schools search band.
   const shell = await read('public/js/shell.js');
   assert.match(shell, /bar\.addEventListener\('keydown'/, 'Escape is handled on the whole filter bar, toggle included');
-  const list = await open('#tab=teams&view=list');
-  assert.match(list.controls.innerHTML, /<p class="filter-hint">Search by name or city in the box at the top\.<\/p>/);
+  const list = await open('#tab=schools&view=list');
+  assert.doesNotMatch(list.controls.innerHTML, /filter-hint|box at the top/);
   assert.doesNotMatch(list.controls.innerHTML, /filter-term/);
 });
 
 // #23 review B2: at 320 px the landing's four "Season of play" buttons beside the 92 px label column ran past the
 // panel (Spring at 289–358 against an edge at 304) and `.seg { overflow: hidden }` cut it to "Sp".
 test('8. phones: a toggle group stacks under its label and wraps, so no button is cut off', async () => {
-  const landing = await open('#tab=teams');   // the toggle is beside the state cards since #20 PR 5
+  const landing = await open('#tab=schools');   // the toggle is beside the state cards since #20 PR 5
   assert.match(landing.view.innerHTML, /<div class="field seg-field"><span class="field-label" id="f-term-label">Season of play<\/span><div class="seg"/);
   const { segmented } = await import('../public/js/components/controls.js');
   assert.match(segmented('g', 'g', [['b', 'Boys'], ['g', 'Girls']], 'Gender'), /^<div class="field seg-field">/, 'the gender toggle too');

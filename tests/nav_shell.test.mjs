@@ -8,24 +8,37 @@ import { ERRORS, LOS_GATOS, api, nav, open, read, readHash, root } from './helpe
 
 const { tableMatch, target } = await import('../public/js/search.js');
 
+// #26 (owner: hash option A): tab=schools / tab=school are canonical; every older form still opens its content.
 test('old links open their new route (and replaceState rewrites them)', () => {
   const cases = [
     // [old hash, expected subset of the resolved route, the page that renders it]
-    ['#tab=states', { tab: 'teams', view: undefined, st: undefined }, 'landing'],   // the Teams landing (#20 PR 5)
-    ['#tab=states&st=TX', { tab: 'teams', st: 'TX' }, 'schools'],          // intended: that state's school list
-    ['#tab=schools', { tab: 'teams', view: 'list' }, 'schools'],            // the full list stays reachable
-    ['#tab=schools&q=ake', { tab: 'teams', q: 'ake', view: undefined }, 'schools'],
-    ['#tab=schools&st=WA&q=east', { tab: 'teams', st: 'WA', q: 'east' }, 'schools'],
-    [`#tab=school&school=${LOS_GATOS}&g=g`, { tab: 'team', school: LOS_GATOS, g: 'g' }, 'team'],
-    [`#school=${LOS_GATOS}`, { tab: 'team', school: LOS_GATOS }, 'team'],
-    ['#tab=school', { tab: 'teams', view: 'list' }, 'schools'],
+    // #21–#25 links (tab=teams / tab=team), with every parameter they could carry
+    ['#tab=teams', { tab: 'schools', view: undefined, st: undefined }, 'landing'],
+    ['#tab=teams&view=list', { tab: 'schools', view: 'list' }, 'schools'],
+    ['#tab=teams&st=TX', { tab: 'schools', st: 'TX' }, 'schools'],
+    ['#tab=teams&q=ake', { tab: 'schools', q: 'ake', view: undefined }, 'schools'],
+    ['#tab=teams&st=WA&q=east', { tab: 'schools', st: 'WA', q: 'east' }, 'schools'],
+    [`#tab=team&school=${LOS_GATOS}`, { tab: 'school', school: LOS_GATOS, view: undefined }, 'team'],
+    [`#tab=team&view=results&school=${LOS_GATOS}`, { tab: 'school', view: 'results', school: LOS_GATOS }, 'team'],
+    [`#tab=team&view=history&season=2023-24&g=g&school=${LOS_GATOS}`, { tab: 'school', view: 'history', season: '2023-24', g: 'g', school: LOS_GATOS }, 'team'],
+    ['#tab=team', { tab: 'schools', view: 'list' }, 'schools'],                 // a team link with no school
+    // Pre-#20 links: native again, except the bare #tab=schools (the intended difference: now the landing)
+    ['#tab=schools', { tab: 'schools', view: undefined }, 'landing'],
+    ['#tab=schools&q=ake', { tab: 'schools', q: 'ake', view: undefined }, 'schools'],
+    ['#tab=schools&st=WA&q=east', { tab: 'schools', st: 'WA', q: 'east' }, 'schools'],
+    [`#tab=school&school=${LOS_GATOS}&g=g`, { tab: 'school', school: LOS_GATOS, g: 'g' }, 'team'],
+    [`#school=${LOS_GATOS}`, { tab: 'school', school: LOS_GATOS }, 'team'],
+    [`#school=${LOS_GATOS}&g=g`, { tab: 'school', school: LOS_GATOS, g: 'g' }, 'team'],
+    ['#tab=school', { tab: 'schools', view: 'list' }, 'schools'],               // a school link with no school
+    ['#tab=states', { tab: 'schools', view: undefined, st: undefined }, 'landing'],
+    ['#tab=states&st=TX', { tab: 'schools', st: 'TX' }, 'schools'],          // that state's school list (since #21)
     ['#tab=champions&st=PA', { tab: 'playoffs', view: 'champions', st: 'PA' }, 'champions'],
     ['#tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=5a-d1', { tab: 'playoffs', view: undefined, div: '5a-d1' }, 'playoffs'],
     ['#tab=playoffs&view=bogus&st=TX', { tab: 'playoffs', view: undefined }, 'playoffs'],   // no view: Brackets
     ['#tab=results&st=TX&show=upcoming', { tab: 'results', show: 'upcoming' }, 'results'],
     ['#tab=about', { tab: 'about' }, 'about'],
-    ['', { tab: 'teams' }, 'landing'],
-    ['#tab=bogus', { tab: 'teams' }, 'landing'],
+    ['', { tab: 'schools' }, 'landing'],
+    ['#tab=bogus', { tab: 'schools' }, 'landing'],
     ['#tab=bogus&comp=tx-uil', { tab: 'playoffs', comp: 'tx-uil' }, 'playoffs'],
   ];
   for (const [hash, want, page] of cases) {
@@ -36,14 +49,18 @@ test('old links open their new route (and replaceState rewrites them)', () => {
     assert.equal(nav.pageOf(got), page, `${hash || '(empty)'}: page`);
   }
   const canon = (hash) => { location.hash = hash; return nav.canonicalHash(readHash()); };
-  assert.equal(canon('#tab=schools&q=ake'), '#tab=teams&q=ake');
-  assert.equal(canon('#tab=schools'), '#tab=teams&view=list');
-  assert.equal(canon(`#school=${LOS_GATOS}`), `#tab=team&school=${LOS_GATOS}`);
-  assert.equal(canon(`#tab=school&school=${LOS_GATOS}&g=g`), `#tab=team&g=g&school=${LOS_GATOS}`);
+  assert.equal(canon('#tab=teams&q=ake'), '#tab=schools&q=ake');
+  assert.equal(canon('#tab=teams&view=list'), '#tab=schools&view=list');
+  assert.equal(canon('#tab=teams'), '#tab=schools');
+  assert.equal(canon(`#tab=team&view=history&season=2023-24&g=g&school=${LOS_GATOS}`), `#tab=school&view=history&season=2023-24&g=g&school=${LOS_GATOS}`);
+  assert.equal(canon('#tab=team'), '#tab=schools&view=list');
+  assert.equal(canon('#tab=school'), '#tab=schools&view=list');
+  assert.equal(canon(`#school=${LOS_GATOS}`), `#tab=school&school=${LOS_GATOS}`);
   assert.equal(canon('#tab=champions&st=PA'), '#tab=playoffs&view=champions&st=PA');
-  assert.equal(canon('#tab=states&st=TX'), '#tab=teams&st=TX');
+  assert.equal(canon('#tab=states&st=TX'), '#tab=schools&st=TX');
   // New-form links, and the home page with no hash, are left alone (no replaceState).
-  for (const hash of ['', '#tab=teams', '#tab=teams&q=ake', '#tab=playoffs&st=TX&season=2025-26', '#tab=about', `#tab=team&school=${LOS_GATOS}`]) {
+  for (const hash of ['', '#tab=schools', '#tab=schools&q=ake', '#tab=schools&view=list', '#tab=playoffs&st=TX&season=2025-26',
+    '#tab=about', `#tab=school&school=${LOS_GATOS}`, `#tab=school&g=g&school=${LOS_GATOS}`]) {
     assert.equal(canon(hash), null, hash);
   }
 });
@@ -64,21 +81,21 @@ test('q=ake still lists "Lake…" schools, with the table count (old and new lin
   for (const hash of ['#tab=schools&q=ake', '#tab=teams&q=ake']) {
     const { view, head } = await open(hash);
     assert.match(view.innerHTML, />Lake [^<]+<\/a>/, `${hash}: a Lake… school`);
-    assert.equal((view.innerHTML.match(/<tr><td><a href="#tab=team&school=/g) || []).length, want, `${hash}: rows`);
+    assert.equal((view.innerHTML.match(/<tr><td><a href="#tab=school&school=/g) || []).length, want, `${hash}: rows`);
     assert.match(head.innerHTML, new RegExp(`${want} of 1,337 schools`));
   }
-  // The header search's city and "All N" options open the same list.
+  // The search's city and "All N" options open the same list.
   const city = target({ kind: 'city', city: { city: 'San Antonio' } }).hash;
   const all = target({ kind: 'all', n: want, q: 'ake' }).hash;
-  assert.equal(city, '#tab=teams&q=San%20Antonio');
-  assert.equal(all, '#tab=teams&q=ake');
+  assert.equal(city, '#tab=schools&q=San%20Antonio');
+  assert.equal(all, '#tab=schools&q=ake');
   for (const hash of [city, all]) { location.hash = hash; assert.equal(nav.pageOf(nav.resolveTab(readHash())), 'schools'); }
-  assert.equal(target({ kind: 'school', row: { id: LOS_GATOS } }).hash, `#tab=team&school=${LOS_GATOS}`);
+  assert.equal(target({ kind: 'school', row: { id: LOS_GATOS } }).hash, `#tab=school&school=${LOS_GATOS}`);
 });
 
 test('every tab (VIEW_IDS) and every page renders: no throw, a heading, no error state', async () => {
   const routes = [
-    '#tab=teams', '#tab=teams&view=list', '#tab=teams&st=TX', `#tab=team&school=${LOS_GATOS}`,
+    '#tab=schools', '#tab=schools&view=list', '#tab=schools&st=TX', `#tab=school&school=${LOS_GATOS}`,
     '#tab=results&st=CA', '#tab=playoffs&st=CA', '#tab=playoffs&view=champions&st=CA', '#tab=about',
   ];
   const tabs = new Set();
@@ -95,12 +112,12 @@ test('every tab (VIEW_IDS) and every page renders: no throw, a heading, no error
   assert.deepEqual([...pages].sort(), [...nav.PAGES].sort(), 'every page module is covered');
 });
 
-// Scope: the Main nav and the sub-nav (Playoffs, or a team's). The breadcrumb's last item also carries
+// Scope: the Main nav and the sub-nav (Playoffs, or a school's). The breadcrumb's last item also carries
 // aria-current="page" on purpose (WAI-ARIA breadcrumb pattern, its own <nav>); it is outside this check.
 test('one aria-current="page" per route across the Main nav and the sub-nav', async () => {
   const cases = [
-    ['#tab=teams', 'Teams', null], ['#tab=teams&q=ake', 'Teams', null], [`#tab=team&school=${LOS_GATOS}`, 'Teams', 'Overview'],
-    [`#tab=team&view=results&school=${LOS_GATOS}`, 'Teams', 'Results'], [`#tab=team&view=history&school=${LOS_GATOS}`, 'Teams', 'Playoff history'],
+    ['#tab=schools', 'Schools', null], ['#tab=schools&q=ake', 'Schools', null], [`#tab=school&school=${LOS_GATOS}`, 'Schools', 'Overview'],
+    [`#tab=school&view=results&school=${LOS_GATOS}`, 'Schools', 'Results'], [`#tab=school&view=history&school=${LOS_GATOS}`, 'Schools', 'Playoff history'],
     ['#tab=results&st=CA', 'Results', null], ['#tab=playoffs&st=CA', 'Playoffs', 'Brackets'],
     ['#tab=playoffs&view=champions&st=CA', 'Playoffs', 'Champions'], ['#tab=about', null, null],
   ];
@@ -115,14 +132,14 @@ test('one aria-current="page" per route across the Main nav and the sub-nav', as
     assert.deepEqual(pages, [sub || section], `${hash}: exactly one current page`);
     // On a page with a sub-nav, the Main item marks the current section instead.
     assert.deepEqual(current(main, 'true'), sub ? [section] : [], `${hash}: section`);
-    assert.equal((main.match(/<a /g) || []).length, 3, 'Teams · Results · Playoffs (no Standings: owner, option B)');
-    assert.doesNotMatch(main, /Standings/);
+    assert.equal((main.match(/<a /g) || []).length, 3, 'Schools · Results · Playoffs (no Standings: owner, option B)');
+    assert.doesNotMatch(main, /Standings|Teams/);
   }
-  // Main nav links keep context; Teams starts fresh.
+  // Main nav links keep context; Schools starts fresh.
   location.hash = '#tab=results&st=TX&season=2025-26&g=g';
   const r = nav.mainNavHtml(nav.resolveTab(readHash()));
   assert.match(r, /href="#tab=playoffs&amp;st=TX&amp;season=2025-26&amp;g=g"/);
-  assert.match(r, /href="#tab=teams"/);
+  assert.match(r, /href="#tab=schools"/);
   location.hash = '#tab=playoffs&st=TX&season=2025-26&g=g';
   assert.match(nav.subNavHtml(nav.resolveTab(readHash())), /href="#tab=playoffs&amp;view=champions&amp;st=TX&amp;season=2025-26&amp;g=g"/);
   // Both Main navs are labelled "Main", the sub-nav "Playoffs", and app.js fills each from the same helpers.
@@ -146,7 +163,8 @@ test('internal links use the new routes: no old tab names outside the old-link m
   };
   await walk('public/js/');
   assert.ok(files.length > 15);
-  const OLD = /tab=(states|schools|school|champions)(?![\w-])|tab:\s*'(states|schools|school|champions)'/;
+  // Since #26 the old names are teams/team (#21–#25) besides states/champions; schools/school are canonical again.
+  const OLD = /tab=(states|teams|team|champions)(?![\w-])|tab:\s*'(states|teams|team|champions)'/;
   for (const f of files) {
     (await read(f)).split('\n').forEach((line, i) => assert.doesNotMatch(line, OLD, `${f}:${i + 1}`));
   }
