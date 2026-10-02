@@ -206,6 +206,15 @@ test('events: specific words only, state codes in capitals, Georgia\'s classes, 
   assert.deepEqual(s.optionText(cif.items[0]), { name: 'State · Division 1', line: 'CIF State Championships · California · 2025-26' });
   assert.deepEqual(s.enterTarget(cif), { hash: '#tab=event&st=CA&season=2025-26&comp=ca-cif-state&div=gd1', focusTitle: true });
   assert.deepEqual(s.enterTarget(cif, { list: true }), s.enterTarget(cif), 'on the school list too: no school matches, so the event opens');
+  // Kongming (#35): on the school list, when the first option is a school or "All N matching", Enter stays on the
+  // table, even with an Events group below it; an event never opens from there.
+  for (const [q, first] of [['Class A', 'school'], ['CIF', 'all'], ['UIL', 'all'], ['mat', 'school']]) {
+    const r = s.suggest(idx, q);
+    assert.equal(r.items[0].kind, first, `${q}: the first option is a ${first}`);
+    if (q !== 'mat') assert.ok(r.items.some((it) => EVENT_KINDS.has(it.kind)), `${q}: with an Events group below`);
+    assert.deepEqual(s.enterTarget(r, { list: true }), { stay: true }, `${q}: Enter on the list keeps the table`);
+    assert.notEqual(s.enterTarget(r).hash?.startsWith('#tab=event'), true, `${q}: off the list, Enter opens the first option, not an event`);
+  }
   assert.equal(s.statusText(cif, 'CIF D1'), '1 event · Enter opens State · Division 1');
   assert.match(s.statusText(s.suggest(idx, 'UIL'), 'UIL'), /, 6 events · /, 'a state\'s row counts its events');
   // Without the catalog, schools still work and there is no Events group.
