@@ -1,7 +1,6 @@
-// The Schools landing (#20 PR 5; "Schools" and the search on this page since #26): return to followed schools
-// and browse by state. The "Find a school" search band above this page is index.html's #school-search, owned by
-// components/searchBox.js: no view writes into it, so typed text and focus survive the move to the list. With
-// st/q/view=list the Schools tab is the school list instead (views/schools.js).
+// The Schools landing (#20 PR 5; "Schools" since #26): return to followed schools and browse by state. The search
+// is the header box on every page (#31; components/searchBox.js), so this page has no band of its own. With
+// st/q/city/view=list the Schools tab is the school list instead (views/schools.js).
 import { termButtons } from '../components/filters.js';
 import { setHead } from '../components/pageHeader.js';
 import { eventsHref, listHref, teamHref } from '../nav.js';

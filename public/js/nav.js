@@ -71,26 +71,29 @@ export function resolveTab(raw) {
   if (out.view && !(VIEW_VALUES[out.tab] || []).includes(out.view)) delete out.view;
   if (out.round != null && out.tab !== 'event') delete out.round;
   if (out.show && !showValuesOf(out).includes(out.show)) delete out.show;
+  // `city` (#31) is the school list of one city, so it needs the list and its state (a city name repeats across
+  // states); anywhere else it is dropped.
+  if (out.city && !(out.tab === 'schools' && out.st)) delete out.city;
   return out;
 }
 
-// The Schools search (#26) lives on the Schools page only: the landing and the list, never a school's page.
-export const hasSchoolSearch = (state) => state.tab === 'schools';
+// The Schools landing and the school list: the pages between which the header box keeps what you typed.
+export const onSchoolsPages = (state) => state.tab === 'schools';
 
-// The "/" shortcut (#26): on a Schools page it focuses the box; anywhere else it opens Schools and then
-// focuses the box. Not while typing in a field, and not with Ctrl, Meta or Alt (browser and OS shortcuts).
-// `e.key === '/'` matches layouts where "/" needs Shift. Returns null when the key isn't the shortcut.
+// The "/" shortcut: the box is in the header on every page since #31, so "/" focuses it in place (on phones it
+// opens the search bar first). Not while typing in a field, and not with Ctrl, Meta or Alt (browser and OS
+// shortcuts). `e.key === '/'` matches layouts where "/" needs Shift. Returns null when the key isn't the shortcut.
 export function slashAction(state, e) {
   if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return null;
   const t = e.target;
   if (t && (t.isContentEditable || t.closest?.('input, select, textarea, [contenteditable]'))) return null;
-  return hasSchoolSearch(state) ? { focus: true } : { hash: '#tab=schools', focus: true };
+  return { focus: true };
 }
 
-// The box's text after a render: leaving Schools clears it; on the list it shows q= unless you're typing in it;
-// within Schools (landing ↔ list) it keeps what you typed.
+// The box's text after a render (Kongming, #31 v4): any navigation clears it, except between the Schools landing
+// and the list, where it keeps what you typed; on the list it shows q= unless you're typing in it.
 export function boxTextAfter({ state, focused, text }) {
-  if (!hasSchoolSearch(state)) return '';
+  if (!onSchoolsPages(state)) return '';
   if (pageOf(state) === 'schools' && !focused) return state.q || '';
   return text;
 }

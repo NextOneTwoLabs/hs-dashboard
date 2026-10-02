@@ -16,12 +16,13 @@ const schoolsDir = await json('public/archive/schools.json');
 const idx = s.buildIndex(searchIndex, statesIndex);
 
 const kinds = (r) => r.items.map((it) => it.kind);
-const names = (r, kind = 'school') => r.items.filter((it) => it.kind === kind).map((it) => s.optionText(it).name);
+// Name matches only (a state's "top" schools and a city's schools carry `why`).
+const names = (r, kind = 'school') => r.items.filter((it) => it.kind === kind && !it.why).map((it) => s.optionText(it).name);
 
 test('ranking: exact > prefix > every word a prefix, with a fixed tie-break', () => {
   const mat = s.suggest(idx, 'mat');
   assert.deepEqual(names(mat), ['Mater Dei', 'Mater Dei Catholic', 'Mater Lakes Academy']);
-  assert.deepEqual(kinds(mat), ['school', 'school', 'school', 'all'], '#30: schools only, no city (Mattawa, WA) option');
+  assert.deepEqual(kinds(mat), ['school', 'school', 'school', 'school', 'city', 'all'], '#31: then Mattawa, WA (prefix "mat") and its school');
   const lake = s.suggest(idx, 'lake');
   assert.equal(lake.items.filter((it) => it.kind === 'school').length, s.SCHOOLS_MAX);
   assert.ok(names(lake).every((n) => n.startsWith('Lake ')), 'prefix matches come first');
@@ -49,26 +50,94 @@ test('one normalisation rule: punctuation, accents, St/Saint and Mt/Mount', () =
   assert.deepEqual(s.chunksOf('P.K. Yonge'), ['pk', 'yonge']);
 });
 
-// #30, owner: "search in schools is to find schools". No state, association or city options: the search never
-// leads anywhere but a school or the school list. A city's schools are the "All N schools matching" row.
-test('schools only: no state, association or city option, and nothing outside Schools', () => {
-  const ALLOWED = new Set(['school', 'all', 'chip']);
-  for (const q of ['Texas', 'TX', 'tx', 'UIL', 'CIF', 'tex', 'san antonio', 'St Petersburg', 'mat', 'lake', 's', 'zzzz', '']) {
+// #31 (owner: "the search box could accept the names and states and cities"; plan v2 + Kongming's notes): every
+// option is a school or a list of schools, and every target is in Schools (#30: "search in schools is to find
+// schools").
+test('every option is a school or a list of schools, and stays in Schools', () => {
+  const ALLOWED = new Set(['school', 'state', 'city', 'all', 'chip']);
+  for (const q of ['Texas', 'TX', 'tx', 'UIL', 'CIF', 'tex', 'san antonio', 'St Petersburg', 'mat', 'lake', 's', 'zzzz', '',
+    'Austin TX', 'Lincoln CA', 'Washington', 'ca', 'pa']) {
     const r = s.suggest(idx, q);
     for (const it of r.items) {
       assert.ok(ALLOWED.has(it.kind), `${q}: a ${it.kind} option`);
       const t = s.target(it);
-      if (t.hash) assert.match(t.hash, /^#tab=(school&school=|schools&q=)/, `${q}: ${t.hash} stays in Schools`);
+      if (t.hash) assert.match(t.hash, /^#tab=(school&school=|schools&(st=[A-Z]{2}(&city=[^&]+)?$|(st=[A-Z]{2}&)?q=))/, `${q}: ${t.hash} stays in Schools`);
     }
-    const e = s.enterTarget(r);
-    if (e?.hash) assert.match(e.hash, /^#tab=(school&school=|schools&q=)/, `${q}: Enter stays in Schools`);
+    assert.ok(r.items.filter((it) => it.kind === 'state').length <= 1, `${q}: one state row at most`);
+    assert.ok(r.items.filter((it) => it.kind === 'school').length <= s.SCHOOLS_MAX, `${q}: ${s.SCHOOLS_MAX} schools at most`);
+    assert.ok(r.items.filter((it) => it.kind === 'city').length <= s.CITIES_MAX, `${q}: ${s.CITIES_MAX} cities at most`);
   }
-  assert.equal(s.suggest(idx, 'Texas').mode, 'nomatch', 'no school is named Texas');
+});
+
+test('states: "Texas", "TX" and "tx" open the Texas list first, then its top 3 schools', () => {
+  for (const q of ['Texas', 'texas', 'TX', 'tx']) {
+    const r = s.suggest(idx, q);
+    assert.deepEqual(kinds(r), ['state', 'school', 'school', 'school'], q);
+    assert.equal(r.items[0].n, 384);
+    assert.deepEqual(s.target(r.items[0]), { hash: '#tab=schools&st=TX' });
+    assert.deepEqual(r.items.slice(1).map((it) => [it.row.name, it.why]), [['Celina', 'top'], ['Kingwood', 'top'], ['Lake Creek', 'top']], q);
+    assert.deepEqual(s.enterTarget(r), { hash: '#tab=schools&st=TX' }, `${q}: Enter opens the list`);
+  }
+  // Kongming: "California" is a state and a school; "Washington" a state, schools and a city (Washington, GA).
+  assert.deepEqual(s.suggest(idx, 'California').items.map((it) => it.kind === 'school' ? it.row.name : it.kind), ['state', 'California']);
+  const wa = s.suggest(idx, 'Washington');
+  assert.equal(wa.items[0].kind, 'state');
+  assert.equal(wa.items[0].state.code, 'WA');
+  assert.deepEqual(names(wa), ['Washington', 'Washington Union', 'Washington-Wilkes']);
+  assert.deepEqual(wa.items.filter((it) => it.kind === 'city').map((it) => [it.city, it.state, it.n]), [['Washington', 'GA', 1]]);
+  // A lowercase code that starts names ("pa", "ca"): the names first, then the state row, so Enter opens the name.
+  for (const [q, code] of [['pa', 'PA'], ['ca', 'CA']]) {
+    const r = s.suggest(idx, q);
+    assert.equal(r.items[0].kind, 'school', q);
+    assert.equal(r.items.at(-1).kind, 'state', q);
+    assert.equal(r.items.at(-1).state.code, code);
+    assert.equal(s.enterTarget(r).focusTitle, true, `${q}: Enter opens the first school`);
+  }
+  assert.equal(s.suggest(idx, 'PA').items[0].kind, 'state', 'in capitals the code is the state');
+});
+
+test('cities: one row per city (exact count), the city\'s schools, and "All N" only when it adds something', () => {
+  const lake = s.suggest(idx, 'Lakeland');
+  assert.deepEqual(lake.items.map((it) => it.kind === 'school' ? it.row.name : `${it.kind}:${it.city || it.q}${it.state ? `,${it.state}` : ''}:${it.n}`),
+    ['Lakeland Christian', 'city:Lakeland,FL:5', 'city:Lakeland,GA:1', 'all:Lakeland:6']);
+  assert.deepEqual(s.target(lake.items[1]), { hash: '#tab=schools&st=FL&city=Lakeland' });
+  const austin = s.suggest(idx, 'Austin');
+  assert.deepEqual(names(austin), ['Austin', 'Fort Bend Austin', 'Liberal Arts & Science Academy - Austin']);
+  assert.deepEqual(austin.items.filter((it) => it.why === 'city').map((it) => it.row.name), ['Anderson', 'Lake Travis', 'McCallum']);
+  assert.deepEqual(austin.items.filter((it) => it.kind === 'city').map((it) => it.n), [9]);
+  assert.equal(austin.items.at(-1).kind, 'all');
+  assert.equal(austin.items.at(-1).n, 10);
+  // A city alone: its list first, then its schools; no "All N" that repeats the city's count.
   const sa = s.suggest(idx, 'san antonio');
-  assert.deepEqual(kinds(sa), ['all'], 'a city: its schools in the list');
+  assert.equal(sa.items[0].kind, 'city');
   assert.equal(sa.items[0].n, 17);
-  assert.deepEqual(s.enterTarget(sa), { hash: '#tab=schools&q=san%20antonio' });
-  for (const kind of ['state', 'city']) assert.equal(s.target({ kind, state: { code: 'TX' }, city: { city: 'Austin' } }), null, kind);
+  assert.deepEqual(s.enterTarget(sa), { hash: '#tab=schools&st=TX&city=San%20Antonio' });
+  assert.ok(!sa.items.some((it) => it.kind === 'all'));
+  // Row counts equal the rows the list shows: the same comparison (search.js cityMatch) on schools.json.
+  for (const q of ['Lakeland', 'Austin', 'san antonio', 'Washington', 'Lincoln CA', 'mat']) {
+    for (const it of s.suggest(idx, q).items.filter((x) => x.kind === 'city')) {
+      assert.equal(schoolsDir.schools.filter((r) => s.cityMatch(r, it.state, it.city)).length, it.n, `${q}: ${it.city}, ${it.state}`);
+    }
+  }
+  for (const st of statesIndex.states.filter((x) => x.latestSeason)) {
+    const row = s.suggest(idx, st.name).items[0];
+    assert.equal(schoolsDir.schools.filter((r) => r.state === st.code).length, row.n, `${st.name}: the state row's count is the list's`);
+  }
+});
+
+test('a trailing state narrows the rest, and adds to (never hides) full-name matches', () => {
+  const atx = s.suggest(idx, 'Austin TX');
+  assert.deepEqual(atx.items.filter((it) => it.kind === 'city').map((it) => [it.city, it.state]), [['Austin', 'TX']]);
+  assert.deepEqual(s.target(atx.items.at(-1)), { hash: '#tab=schools&st=TX&q=Austin' });
+  const lin = s.suggest(idx, 'Lincoln CA');
+  assert.deepEqual(lin.items.filter((it) => it.kind === 'school' && !it.why).map((it) => `${it.row.name}, ${it.row.city}`),
+    ['Lincoln, San Diego', 'Lincoln, Stockton', 'Lincoln, Lincoln']);
+  assert.deepEqual(lin.items.filter((it) => it.kind === 'city').map((it) => [it.city, it.n]), [['Lincoln', 2]]);
+  // Synthetic: a school whose name holds a state word but sits in another state is still found by its full name.
+  const synthetic = s.buildIndex({ fields: ['id', 'name', 'city', 'state', 'apps', 'titles'],
+    rows: [['x-1', 'South Florida Prep', 'Atlanta', 'GA', 1, 0], ['x-2', 'South Fork', 'Stuart', 'FL', 1, 0]] }, statesIndex);
+  const sf = s.suggest(synthetic, 'south florida');
+  assert.deepEqual(sf.items.filter((it) => it.kind === 'school').map((it) => it.row.name), ['South Florida Prep', 'South Fork']);
 });
 
 test('short queries: at most 6 schools plus "All N"', () => {
@@ -108,8 +177,10 @@ test('targets: what choosing an option or Enter does on each view', () => {
   assert.deepEqual(s.target({ kind: 'chip', text: 'Lakeland' }), { fill: 'Lakeland' });
   assert.deepEqual(s.enterTarget(mat, { list: true }), { stay: true });
   assert.deepEqual(s.enterTarget(mat, { list: false }), s.target(mat.items[0]));
-  assert.deepEqual(s.enterTarget(s.suggest(idx, 'san antonio')), { hash: '#tab=schools&q=san%20antonio' });
+  assert.deepEqual(s.enterTarget(s.suggest(idx, 'san antonio')), { hash: '#tab=schools&st=TX&city=San%20Antonio' });
   assert.deepEqual(s.enterTarget(s.suggest(idx, 'ake')), { hash: '#tab=schools&q=ake' });
+  // On the list, Enter keeps the table, unless the first option is a state's or a city's list.
+  assert.deepEqual(s.enterTarget(s.suggest(idx, 'Texas'), { list: true }), { hash: '#tab=schools&st=TX' });
   assert.equal(s.enterTarget(s.suggest(idx, 'zzzz')), null);
   assert.equal(s.enterTarget(s.suggest(idx, '')), null);
   assert.match(s.statusText(s.suggest(idx, 'ake'), 'ake', { list: true }), /^59 schools match · Enter keeps the table$/);
@@ -127,6 +198,12 @@ test('keyboard steps (ARIA 1.2 combobox)', () => {
   assert.deepEqual(k({ open: true, active: -1 }, 'Enter'), { open: false, active: -1, action: 'enter' });
   assert.deepEqual(k({ open: true, active: 1 }, 'Escape'), { open: false, active: -1 });
   assert.deepEqual(k({ open: false, active: -1 }, 'Escape'), { open: false, active: -1, action: 'clear' });
+  // #31 v4.1 (Kongming B1), the phone bar: Escape closes the list, then clears the text, then closes the bar.
+  assert.deepEqual(k({ open: true, active: 1 }, 'Escape', { bar: true, empty: false }), { open: false, active: -1 }, '1. the list');
+  assert.deepEqual(k({ open: false, active: -1 }, 'Escape', { bar: true, empty: false }), { open: false, active: -1, action: 'clear' }, '2. the text');
+  assert.deepEqual(k({ open: false, active: -1 }, 'Escape', { bar: true, empty: true }), { open: false, active: -1, action: 'closeBar' }, '3. the bar');
+  assert.deepEqual(k({ open: true, active: -1 }, 'Escape', { bar: true, empty: true }), { open: false, active: -1 }, 'the list first, even when empty');
+  assert.deepEqual(k({ open: false, active: -1 }, 'Escape', { bar: false, empty: true }), { open: false, active: -1, action: 'clear' }, 'desktop: never the bar');
   assert.deepEqual(k({ open: true, active: 1 }, 'Tab'), { open: false, active: -1 });
   assert.deepEqual(k({ open: false, active: -1 }, 'ArrowDown', {}, 0), { open: false, active: -1 });
 });

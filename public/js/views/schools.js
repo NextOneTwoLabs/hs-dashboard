@@ -1,8 +1,8 @@
 import { api, errorHtml } from '../api.js';
 import { bindFilters, stateSelect } from '../components/filters.js';
 import { setHead } from '../components/pageHeader.js';
-import { pageOf, resolveTab } from '../nav.js';
-import { tableMatch } from '../search.js';
+import { listHref, pageOf, resolveTab } from '../nav.js';
+import { cityMatch, tableMatch } from '../search.js';
 import { readHash } from '../state.js';
 import { esc, favorites, schoolHref } from '../util.js';
 
@@ -26,10 +26,14 @@ export async function render({ state, statesIndex, controls, view, head, setStat
   // The name filter is the Schools search box above this page (#26): it writes q= here, and the table keeps
   // substring matching.
   let q = state.q || '';
-  // The filter row (#20 PR 3): the state.
+  let city = state.city || '';   // one city's schools (#31: the search's city rows), within `st`
+  // The filter row (#20 PR 3): the state. A new state drops the city.
   controls.innerHTML = stateSelect(statesIndex, st, { all: true });
-  bindFilters(controls, setState, { patch: (key, value) => listPatch(q)(key, value) });
-  const crumbs = () => [['Schools', '#tab=schools'], [statesIndex.states.find((s) => s.code === st)?.name || 'All schools']];
+  bindFilters(controls, setState, { patch: (key, value) => ({ ...listPatch(q)(key, value), city: null }) });
+  const stateName = statesIndex.states.find((s) => s.code === st)?.name;
+  const crumbs = () => (city
+    ? [['Schools', '#tab=schools'], [stateName, listHref({ st })], [city]]
+    : [['Schools', '#tab=schools'], [stateName || 'All schools']]);
   setHead(head, { crumbs: crumbs(), title: 'Schools' });
   view.innerHTML = '<div class="card notice">Loading schools…</div>';
   let data = null;
@@ -39,8 +43,10 @@ export async function render({ state, statesIndex, controls, view, head, setStat
   const onQuery = (e) => {
     if (pageOf(resolveTab(readHash())) !== 'schools') { window.removeEventListener('hs-query', onQuery); return; }
     q = e.detail || '';
-    // With no state and no name this is the whole list (view=list), so a refresh keeps the list.
-    setState({ q: q || null, view: q || st ? null : 'list' }, { replace: true, silent: true });
+    // Typing on a city's list starts a name search in the state (Kongming, #31): the city goes, so the box shows
+    // what the table filters by. With no state and no name this is the whole list (view=list).
+    city = '';
+    setState({ q: q || null, city: null, view: q || st ? null : 'list' }, { replace: true, silent: true });
     if (data) draw();
   };
   window.removeEventListener('hs-query', listener);
@@ -57,6 +63,7 @@ export async function render({ state, statesIndex, controls, view, head, setStat
   draw = () => {
     const rows = data.schools
       .filter((s) => !st || s.state === st)
+      .filter((s) => !city || cityMatch(s, st, city))   // the search's city rows use the same comparison (#31)
       .filter((s) => tableMatch(s, q))
       .sort((a, b) => {
         const col = COLS.find((c) => c.key === sort.key);
@@ -70,7 +77,8 @@ export async function render({ state, statesIndex, controls, view, head, setStat
       <td>${esc(s.state)}</td><td class="n">${s.apps}</td><td class="n">${s.titles || ''}</td><td class="num">${esc(s.last)}</td></tr>`).join('');
     const more = rows.length > 500 ? `<p class="muted" style="margin-top:10px;font-size:12px">Showing the first 500. Filter by state or name to narrow the list.</p>` : '';
     const stName = statesIndex.states.find((s) => s.code === st)?.name;
-    setHead(head, { crumbs: crumbs(), title: stName ? `${stName} schools` : 'Schools',
+    const cityName = city ? (rows[0]?.city || city) : '';
+    setHead(head, { crumbs: crumbs(), title: cityName ? `${cityName}, ${st} schools` : stName ? `${stName} schools` : 'Schools',
       subtitle: `${rows.length.toLocaleString()} of ${data.count.toLocaleString()} schools with a state playoff appearance · ${covered} states covered`
         + (q.trim() ? ` · matching “${esc(q.trim())}” <button type="button" class="clear-search" data-clear-search>Clear search</button>` : '') });
     view.innerHTML = `${favs.length ? `<div class="fav-list"><span class="muted">Following:</span>${favs.map((f) => `<a class="chip accent" href="${schoolHref(f.id)}">★ ${esc(f.name)}</a>`).join('')}</div>` : ''}
