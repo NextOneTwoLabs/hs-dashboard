@@ -156,6 +156,9 @@ export/<season>/<division>.csv                           human-readable export
   - `#tab=teams` (the school list with `st`, `q` or `view=list`), `#tab=team&school=<id>`, `#tab=results`,
     `#tab=playoffs` (`view=champions` for Champions) and `#tab=about`.
   - The old Schools, School, States and Champions links (and `#school=<id>`) still open the same content; `public/js/nav.js` maps them.
+  - A team page (`views/team.js`) has its own nav, Overview · Results · Playoff history (`view=results|history`), and no
+    statewide sidebar. The playoff history is a table (season, competition, seed, furthest round, playoff W-L-D);
+    the finishing-round SVG chart above is retired.
 - **Reused from ECNL:**
   - The light/dark CSS token set.
   - The column-definition table renderer (sortable).

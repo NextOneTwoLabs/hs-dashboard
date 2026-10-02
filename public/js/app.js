@@ -5,14 +5,15 @@ import * as playoffs from './views/playoffs.js';
 import * as results from './views/results.js';
 import * as champions from './views/champions.js';
 import * as schools from './views/schools.js';
-import * as school from './views/school.js';
+import * as team from './views/team.js';
 import * as about from './views/about.js';
-import { canonicalHash, focusTitleAfter, hasSubNav, mainNavHtml, needsCatalog, pageOf, resolveTab, subNavHtml } from './nav.js';
+import { canonicalHash, focusTitleAfter, hasSidebar, hasSubNav, mainNavHtml, needsCatalog, pageOf, resolveTab, subNavHtml,
+  subNavLabel } from './nav.js';
 import { initSearch } from './components/searchBox.js';
-import './shell.js';
+import { closeDrawer } from './shell.js';
 
-// Page modules by pageOf(): until #20's new views land, the new tabs render these (see nav.js).
-const VIEWS = { states, playoffs, results, champions, schools, school, about };
+// Page modules by pageOf(): until #20's new views land, Teams renders today's views (see nav.js).
+const VIEWS = { states, playoffs, results, champions, schools, team, about };
 const head = document.getElementById('page-head');
 const controls = document.getElementById('controls');
 const view = document.getElementById('view');
@@ -56,11 +57,17 @@ async function render(cause = 'control') {
     raw = normalize(raw, catalog);
   }
   state = raw;
-  // The Main nav (header and phone bottom bar) and the Playoffs sub-nav: one aria-current="page" per route.
+  // The Main nav (header and phone bottom bar) and the sub-nav (Playoffs, or a team's): one aria-current="page"
+  // per route.
   mainNav.innerHTML = mainNavHtml(state);
   bottomNav.innerHTML = mainNavHtml(state, { cls: 'bottom-nav-link' });
   subNav.innerHTML = subNavHtml(state);
+  subNav.setAttribute('aria-label', subNavLabel(state));
   subNav.hidden = !hasSubNav(state);
+  // A team page has no statewide sidebar (#20): hide it and its toggle, and close the phone drawer if open.
+  const sidebar = hasSidebar(state);
+  document.body.classList.toggle('no-sidebar', !sidebar);
+  if (!sidebar) closeDrawer({ restore: false });
   const stateName = catalog ? ` · ${catalog.name}` : '';
   document.title = state.tab === 'team' || state.tab === 'teams'
     ? 'Teams · High School Girls Soccer' : `High School Girls Soccer${stateName}`;

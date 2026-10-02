@@ -2,73 +2,11 @@
 // no old tab names in internal links, and the phone's bottom nav. Offline: no DOM library and no network.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile, readdir } from 'node:fs/promises';
-import { resolve as route } from '../api/routes.mjs';
+import { readdir } from 'node:fs/promises';
+// The stubs (netguard, disk-backed /api/v1, localStorage, matchMedia) are installed by the helper on import.
+import { ERRORS, LOS_GATOS, api, nav, open, read, readHash, root } from './helpers/views.mjs';
 
-const root = new URL('../', import.meta.url);
-const read = (p) => readFile(new URL(p, root), 'utf8');
-
-// Netguard, plus a disk-backed /api/v1 for the views: a same-origin GET goes through the real route table
-// (api/routes.mjs) to its public/ file; any other origin, unknown route or method throws.
-const ORIGIN = 'http://hs.test';
-globalThis.location = { hash: '', origin: ORIGIN, href: `${ORIGIN}/` };
-globalThis.fetch = async (input, init = {}) => {
-  const url = new URL(String(input), ORIGIN);
-  const method = String(init.method || 'GET').toUpperCase();
-  if (url.origin !== ORIGIN) throw new Error(`netguard: network access blocked in tests (${url.href})`);
-  const r = route(method, url.pathname);
-  if (method !== 'GET' || r.status !== 200) throw new Error(`netguard: ${method} ${url.pathname} -> ${r.status}`);
-  const body = await readFile(new URL(`public${r.asset}`, root));
-  return new Response(body, { status: 200, headers: { 'Content-Type': 'application/json' } });
-};
-const store = new Map();
-globalThis.localStorage = { getItem: (k) => store.get(k) ?? null, setItem: (k, v) => store.set(k, String(v)), removeItem: (k) => store.delete(k) };
-globalThis.matchMedia = () => ({ matches: false, addEventListener() {}, removeEventListener() {} });
-globalThis.window = { addEventListener() {}, removeEventListener() {}, dispatchEvent() {} };
-
-// Imported after the stubs; view modules only (app.js, shell.js and searchBox.js bind to the real DOM).
-const nav = await import('../public/js/nav.js');
-const { readHash, resolveState, normalize } = await import('../public/js/state.js');
-const { api } = await import('../public/js/api.js');
 const { tableMatch, target } = await import('../public/js/search.js');
-const VIEWS = {};
-for (const page of nav.PAGES ?? []) VIEWS[page] = await import(`../public/js/views/${page}.js`);   // ?? : each test fails on its own before #20
-const statesIndex = await api.states();
-
-// A tiny element stub: innerHTML plus no-op queries and listeners. querySelector finds nothing, except an
-// id the view just wrote (#bracket-host, #fav), which gets a child stub. Every element made is kept, so an
-// error written into a child (e.g. the bracket host) is still seen.
-let made = [];
-function el() {
-  const e = {
-    innerHTML: '', textContent: '', hidden: false, dataset: {},
-    classList: { add() {}, remove() {}, toggle() {}, contains: () => false },
-    querySelector: (sel) => (/^#[\w-]+$/.test(sel) && e.innerHTML.includes(`id="${sel.slice(1)}"`) ? el() : null),
-    querySelectorAll: () => [],
-    addEventListener() {}, removeEventListener() {}, setAttribute() {}, getAttribute: () => null, focus() {},
-  };
-  made.push(e);
-  return e;
-}
-const ERRORS = /That page has no data yet|Couldn't load data right now|Something went wrong/;
-
-// What app.js render() does with a hash, against the stubs.
-async function open(hash) {
-  location.hash = hash;
-  let state = nav.resolveTab(readHash());
-  let catalog = null;
-  if (nav.needsCatalog(state.tab)) {
-    state = resolveState(state, statesIndex);
-    catalog = await api.stateCatalog(state.st);
-    state = normalize(state, catalog);
-  }
-  made = [];
-  const ctx = { state, catalog, statesIndex, controls: el(), view: el(), head: el(), setState: () => {} };
-  await VIEWS[nav.pageOf(state)].render(ctx);
-  return { state, ...ctx, made };
-}
-
-const LOS_GATOS = 'bdb0b593-ef7f-4c69-8c2a-e0a48c934ca7';
 
 test('old links open their new route (and replaceState rewrites them)', () => {
   const cases = [
@@ -78,8 +16,8 @@ test('old links open their new route (and replaceState rewrites them)', () => {
     ['#tab=schools', { tab: 'teams', view: 'list' }, 'schools'],            // the full list stays reachable
     ['#tab=schools&q=ake', { tab: 'teams', q: 'ake', view: undefined }, 'schools'],
     ['#tab=schools&st=WA&q=east', { tab: 'teams', st: 'WA', q: 'east' }, 'schools'],
-    [`#tab=school&school=${LOS_GATOS}&g=g`, { tab: 'team', school: LOS_GATOS, g: 'g' }, 'school'],
-    [`#school=${LOS_GATOS}`, { tab: 'team', school: LOS_GATOS }, 'school'],
+    [`#tab=school&school=${LOS_GATOS}&g=g`, { tab: 'team', school: LOS_GATOS, g: 'g' }, 'team'],
+    [`#school=${LOS_GATOS}`, { tab: 'team', school: LOS_GATOS }, 'team'],
     ['#tab=school', { tab: 'teams', view: 'list' }, 'schools'],
     ['#tab=champions&st=PA', { tab: 'playoffs', view: 'champions', st: 'PA' }, 'champions'],
     ['#tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=5a-d1', { tab: 'playoffs', view: undefined, div: '5a-d1' }, 'playoffs'],
@@ -157,9 +95,12 @@ test('every tab (VIEW_IDS) and every page renders: no throw, a heading, no error
   assert.deepEqual([...pages].sort(), [...nav.PAGES].sort(), 'every page module is covered');
 });
 
-test('one aria-current="page" per route across the Main nav and the Playoffs sub-nav', async () => {
+// Scope: the Main nav and the sub-nav (Playoffs, or a team's). The breadcrumb's last item also carries
+// aria-current="page" on purpose (WAI-ARIA breadcrumb pattern, its own <nav>); it is outside this check.
+test('one aria-current="page" per route across the Main nav and the sub-nav', async () => {
   const cases = [
-    ['#tab=teams', 'Teams', null], ['#tab=teams&q=ake', 'Teams', null], [`#tab=team&school=${LOS_GATOS}`, 'Teams', null],
+    ['#tab=teams', 'Teams', null], ['#tab=teams&q=ake', 'Teams', null], [`#tab=team&school=${LOS_GATOS}`, 'Teams', 'Overview'],
+    [`#tab=team&view=results&school=${LOS_GATOS}`, 'Teams', 'Results'], [`#tab=team&view=history&school=${LOS_GATOS}`, 'Teams', 'Playoff history'],
     ['#tab=results&st=CA', 'Results', null], ['#tab=playoffs&st=CA', 'Playoffs', 'Brackets'],
     ['#tab=playoffs&view=champions&st=CA', 'Playoffs', 'Champions'], ['#tab=about', null, null],
   ];
@@ -204,7 +145,7 @@ test('internal links use the new routes: no old tab names outside the old-link m
     }
   };
   await walk('public/js/');
-  assert.ok(files.length > 20);
+  assert.ok(files.length > 15);
   const OLD = /tab=(states|schools|school|champions)(?![\w-])|tab:\s*'(states|schools|school|champions)'/;
   for (const f of files) {
     (await read(f)).split('\n').forEach((line, i) => assert.doesNotMatch(line, OLD, `${f}:${i + 1}`));

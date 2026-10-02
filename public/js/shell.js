@@ -16,7 +16,7 @@ let lastFocus = null;
 
 // The drawer's "Show …" button, by page (nav.js pageOf).
 const DONE = { states: 'Show states', playoffs: 'Show bracket', results: 'Show results', champions: 'Show champions',
-  schools: 'Show schools', school: 'Show school', about: 'Close filters' };
+  schools: 'Show schools', about: 'Close filters' };   // a team page has no sidebar (nav.js hasSidebar)
 
 function drawerOpen() { return layout.classList.contains('drawer'); }
 
