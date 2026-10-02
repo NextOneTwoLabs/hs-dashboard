@@ -5,7 +5,7 @@ import { HINT, optionText, scopeText } from '../search.js';
 
 export const optionId = (i) => `search-opt-${i}`;
 
-const GROUPS = { school: 'Schools', state: 'Places', city: 'Places', all: 'All matches', chip: 'Examples' };
+const GROUPS = { school: 'Schools', all: 'All matches', chip: 'Examples' };   // schools only since #30
 
 export function panelHtml(result, { active = -1, raw = '', idx = null, statesIndex, phone = false } = {}) {
   let help = '';
@@ -14,7 +14,7 @@ export function panelHtml(result, { active = -1, raw = '', idx = null, statesInd
       ? `<p class="qhelp-scope">${esc(scopeText(idx, statesIndex, { phone: true }))}</p>`
       : `<p class="qhelp-scope">${esc(scopeText(idx, statesIndex))}</p><p>${esc(HINT)} For example:</p>`;
   } else if (result.mode === 'nomatch') {
-    help = `<p class="qhelp-scope">No school matches “${esc(String(raw).trim())}”.</p><p>Try the start of a school's name, a city, a full state name, or a state code in capitals (TX):</p>`;
+    help = `<p class="qhelp-scope">No school matches “${esc(String(raw).trim())}”.</p><p>Try the start of a school's name, or its city:</p>`;
   }
   const parts = [];
   let open = null;
@@ -36,7 +36,7 @@ export function panelHtml(result, { active = -1, raw = '', idx = null, statesInd
   });
   if (open) parts.push('</div>');
   const foot = !phone && result.mode !== 'list'
-    ? '<div class="qfoot" aria-hidden="true"><span><kbd>↑</kbd> <kbd>↓</kbd> move · <kbd>Enter</kbd> open · <kbd>Esc</kbd> close</span><span>Name, city, state or association</span></div>'
+    ? '<div class="qfoot" aria-hidden="true"><span><kbd>↑</kbd> <kbd>↓</kbd> move · <kbd>Enter</kbd> open · <kbd>Esc</kbd> close</span><span>School name or city</span></div>'
     : '';
   return `${help ? `<div class="qhelp">${help}</div>` : ''}<div role="listbox" id="search-list" aria-label="Suggestions" class="qlist">${parts.join('')}</div>${foot}`;
 }

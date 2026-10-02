@@ -1,7 +1,7 @@
 import { bindControls, genderSeg } from '../components/controls.js';
 import { bindFilters, stateSelect, termNote } from '../components/filters.js';
 import { setHead } from '../components/pageHeader.js';
-import { hrefFor } from '../nav.js';
+import { eventsHref } from '../nav.js';
 import { bracketHref, esc, schoolHref } from '../util.js';
 
 // Season-by-season grid of a state's champions, one column per division.
@@ -11,7 +11,7 @@ export async function render({ state, catalog, statesIndex, controls, view, head
   bindFilters(controls, setState);
   bindControls(controls, setState);
   setHead(head, {
-    crumbs: [['All states', '#tab=schools'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], ['Champions']],
+    crumbs: [['Events', '#tab=events'], [catalog.name, eventsHref('events', { st: state.st })], ['Champions']],   // #30
     title: `${catalog.name} champions`,
     subtitle: `${esc(catalog.associationName)} (${esc(catalog.association)})`,
   });

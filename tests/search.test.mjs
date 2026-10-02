@@ -21,7 +21,7 @@ const names = (r, kind = 'school') => r.items.filter((it) => it.kind === kind).m
 test('ranking: exact > prefix > every word a prefix, with a fixed tie-break', () => {
   const mat = s.suggest(idx, 'mat');
   assert.deepEqual(names(mat), ['Mater Dei', 'Mater Dei Catholic', 'Mater Lakes Academy']);
-  assert.deepEqual(names(mat, 'city'), ['Mattawa, WA']);
+  assert.deepEqual(kinds(mat), ['school', 'school', 'school', 'all'], '#30: schools only, no city (Mattawa, WA) option');
   const lake = s.suggest(idx, 'lake');
   assert.equal(lake.items.filter((it) => it.kind === 'school').length, s.SCHOOLS_MAX);
   assert.ok(names(lake).every((n) => n.startsWith('Lake ')), 'prefix matches come first');
@@ -43,32 +43,39 @@ test('one normalisation rule: punctuation, accents, St/Saint and Mt/Mount', () =
   for (const q of ['mt zion', 'mt. zion', 'mount zion']) assert.deepEqual(names(s.suggest(idx, q)), ['Mt. Zion', 'Mt. Zion'], q);
   const pete = s.suggest(idx, 'St. Petersburg');
   assert.deepEqual(names(pete), ['St. Petersburg', 'St. Petersburg Catholic']);
-  assert.deepEqual(names(pete, 'city'), ['St Petersburg, FL']);
   assert.deepEqual(names(s.suggest(idx, 'saint petersburg')), ['St. Petersburg', 'St. Petersburg Catholic']);
   assert.equal(s.normalize('Écija'), 'ecija');
   assert.deepEqual(s.wordsOf("Washington-Wilkes O'Connor"), ['washington', 'wilkes', 'o', 'connor']);
   assert.deepEqual(s.chunksOf('P.K. Yonge'), ['pk', 'yonge']);
 });
 
-test('places: whole state names, codes in capitals, associations, cities', () => {
-  assert.deepEqual(kinds(s.suggest(idx, 'Texas')), ['state']);
-  assert.deepEqual(kinds(s.suggest(idx, 'TX')), ['state']);
-  assert.equal(s.suggest(idx, 'tx').mode, 'nomatch', 'a code counts only in capitals');
-  assert.equal(names(s.suggest(idx, 'UIL'), 'state')[0], 'Texas');
-  assert.equal(names(s.suggest(idx, 'tex'), 'state').length, 0, 'a partial state name is not a place');
+// #30, owner: "search in schools is to find schools". No state, association or city options: the search never
+// leads anywhere but a school or the school list. A city's schools are the "All N schools matching" row.
+test('schools only: no state, association or city option, and nothing outside Schools', () => {
+  const ALLOWED = new Set(['school', 'all', 'chip']);
+  for (const q of ['Texas', 'TX', 'tx', 'UIL', 'CIF', 'tex', 'san antonio', 'St Petersburg', 'mat', 'lake', 's', 'zzzz', '']) {
+    const r = s.suggest(idx, q);
+    for (const it of r.items) {
+      assert.ok(ALLOWED.has(it.kind), `${q}: a ${it.kind} option`);
+      const t = s.target(it);
+      if (t.hash) assert.match(t.hash, /^#tab=(school&school=|schools&q=)/, `${q}: ${t.hash} stays in Schools`);
+    }
+    const e = s.enterTarget(r);
+    if (e?.hash) assert.match(e.hash, /^#tab=(school&school=|schools&q=)/, `${q}: Enter stays in Schools`);
+  }
+  assert.equal(s.suggest(idx, 'Texas').mode, 'nomatch', 'no school is named Texas');
   const sa = s.suggest(idx, 'san antonio');
-  assert.deepEqual(names(sa, 'city'), ['San Antonio, TX']);
-  assert.match(s.optionText(sa.items[0]).line, /^17 schools/);
+  assert.deepEqual(kinds(sa), ['all'], 'a city: its schools in the list');
+  assert.equal(sa.items[0].n, 17);
+  assert.deepEqual(s.enterTarget(sa), { hash: '#tab=schools&q=san%20antonio' });
+  for (const kind of ['state', 'city']) assert.equal(s.target({ kind, state: { code: 'TX' }, city: { city: 'Austin' } }), null, kind);
 });
 
-test('short queries: at most 6 schools plus "All N", and no place from one letter', () => {
+test('short queries: at most 6 schools plus "All N"', () => {
   const r = s.suggest(idx, 's');
   assert.equal(r.items.filter((it) => it.kind === 'school').length, 6);
   assert.deepEqual(kinds(r).slice(6), ['all']);
   assert.ok(r.items.at(-1).n > 6);
-  for (const one of ['s', 'S', 't', 'T']) {
-    assert.equal(s.suggest(idx, one).items.filter((it) => it.kind === 'state' || it.kind === 'city').length, 0, one);
-  }
 });
 
 test('chips and the no-match panel', () => {
@@ -93,18 +100,15 @@ test('the Schools table keeps substring matching for q= (old links)', () => {
   assert.equal(rows('LAKE').length, rows('lake').length);
 });
 
-// #20, #26: a school opens its school page; a city and "All N" open the school list under Schools.
+// #20, #26, #30: a school opens its school page; "All N" opens the school list under Schools.
 test('targets: what choosing an option or Enter does on each view', () => {
   const mat = s.suggest(idx, 'mat');
   assert.deepEqual(s.target(mat.items[0]), { hash: '#tab=school&school=2b6b45d3-4465-4750-ba48-a273b674e37c', focusTitle: true });
-  assert.deepEqual(s.target(s.suggest(idx, 'Texas').items[0]), { hash: '#tab=playoffs&st=TX' });
-  assert.deepEqual(s.target(s.suggest(idx, 'UIL').items[0]), { hash: '#tab=playoffs&st=TX' });
-  assert.deepEqual(s.target(s.suggest(idx, 'san antonio').items[0]), { hash: '#tab=schools&q=San%20Antonio' });
   assert.deepEqual(s.target(mat.items.at(-1)), { hash: '#tab=schools&q=mat' });
-  assert.deepEqual(s.target({ kind: 'chip', text: 'Texas' }), { fill: 'Texas' });
+  assert.deepEqual(s.target({ kind: 'chip', text: 'Lakeland' }), { fill: 'Lakeland' });
   assert.deepEqual(s.enterTarget(mat, { list: true }), { stay: true });
   assert.deepEqual(s.enterTarget(mat, { list: false }), s.target(mat.items[0]));
-  assert.deepEqual(s.enterTarget(s.suggest(idx, 'san antonio')), { hash: '#tab=schools&q=San%20Antonio' });
+  assert.deepEqual(s.enterTarget(s.suggest(idx, 'san antonio')), { hash: '#tab=schools&q=san%20antonio' });
   assert.deepEqual(s.enterTarget(s.suggest(idx, 'ake')), { hash: '#tab=schools&q=ake' });
   assert.equal(s.enterTarget(s.suggest(idx, 'zzzz')), null);
   assert.equal(s.enterTarget(s.suggest(idx, '')), null);
@@ -136,7 +140,7 @@ test('the panel markup: combobox, listbox options with aria-selected, one status
   assert.equal(opts.length, r.items.length, 'every actionable row, "All N" included, is an option');
   assert.deepEqual(opts.map((m) => m[2]), r.items.map((_, i) => String(i === 1)));
   assert.match(html, /role="group" aria-label="Schools"/);
-  assert.match(html, /role="group" aria-label="Places"/);
+  assert.doesNotMatch(html, /aria-label="Places"/, '#30: no places group');
   assert.doesNotMatch(html, /<mark/, 'no highlighting (owner decision)');
   assert.match(html, /Mater Dei<\/span><span class="sr-only">, <\/span><span class="qopt-sub">Santa Ana, CA/);
   const help = panelHtml(s.suggest(idx, ''), { active: -1, raw: '', idx, statesIndex });

@@ -1,6 +1,8 @@
-// Header search (#13): matching, ranking and suggestions, as pure functions (no DOM, no fetch).
-// Modelled on collegedash's header search: word-prefix matching ranked exact > prefix > every word
-// a prefix > initials, a "place" line for whole state names, codes and cities, and example chips.
+// The Schools search (#13; on the Schools page since #26): matching, ranking and suggestions, as pure functions
+// (no DOM, no fetch). Modelled on collegedash's header search: word-prefix matching ranked exact > prefix > every
+// word a prefix > initials, and example chips. Since #30 it suggests schools only (owner: "search in schools is
+// to find schools"): no state, association or city options, so it never leads to another page; a city still
+// finds its schools through the "All N schools matching" row, which opens the school list.
 // Data: the rows of /api/v1/search-index (id, name, city, state, apps, titles) and states.json.
 
 // One normalisation rule for names, cities and queries: NFKD, strip diacritics, lowercase, split on
@@ -76,22 +78,8 @@ export function tableMatch(row, q) {
 
 export function buildIndex(searchIndex, statesIndex) {
   const rows = searchIndex.rows.map((r) => Object.fromEntries(searchIndex.fields.map((f, i) => [f, r[i]])));
-  for (const r of rows) {
-    r._name = prepare(r.name);
-    r._city = prepare(r.city || '');
-  }
-  const cities = new Map();
-  for (const r of rows) {
-    if (!r.city) continue;
-    const key = `${r._city.canon}|${r.state}`;
-    if (!cities.has(key)) cities.set(key, { city: r.city, state: r.state, n: 0, _p: r._city });
-    cities.get(key).n += 1;
-  }
-  const states = statesIndex.states.filter((s) => s.latestSeason).map((s) => ({
-    code: s.code, name: s.name, association: s.association, associationName: s.associationName,
-    _name: prepare(s.name).canon, _assoc: prepare(s.association).canon, schools: s.schools,
-  }));
-  return { rows, cities: [...cities.values()], states };
+  for (const r of rows) r._name = prepare(r.name);
+  return { rows };
 }
 
 // Fixed order for equal scores: appearances, then name, state and id, so duplicate names never reorder.
@@ -99,48 +87,28 @@ const byRank = (a, b) => b.score - a.score || b.row.apps - a.row.apps || a.row.n
   || a.row.state.localeCompare(b.row.state) || a.row.id.localeCompare(b.row.id);
 
 export const SCHOOLS_MAX = 6;
-export const PLACES_MAX = 3;
-export const CHIPS = ['Mater Dei', 'Texas', 'San Antonio', 'Lakeland', 'UIL'];
-export const PHONE_CHIPS = ['Mater Dei', 'Texas', 'San Antonio'];
-export const NOMATCH_CHIPS = ['Mater Dei', 'Texas'];
-
-// A state is offered only for a whole state name, its code typed in capitals ("TX", never "tx" or "T"),
-// or its association's name ("UIL"). A city is offered by word prefix from 3 letters, otherwise only exactly.
-function placeHits(idx, q) {
-  const states = idx.states.filter((s) => (q.canon && (s._name === q.canon || s._assoc === q.canon))
-    || (/^[A-Z]{2}$/.test(q.typed) && s.code === q.typed));
-  const long = q.joined.length >= 3;
-  const cities = idx.cities
-    .map((c) => ({ c, score: c._p.canon === q.canon ? 100 : long ? matchScore(c._p, q) : 0 }))
-    .filter((x) => x.score)
-    .sort((a, b) => b.score - a.score || b.c.n - a.c.n || a.c.city.localeCompare(b.c.city) || a.c.state.localeCompare(b.c.state))
-    .map((x) => x.c);
-  return { states, cities };
-}
+// Example searches are school names (#30: the search finds schools).
+export const CHIPS = ['Mater Dei', 'Los Gatos', 'Lakeland', 'Southlake Carroll', 'St. Pius X'];
+export const PHONE_CHIPS = ['Mater Dei', 'Los Gatos', 'Lakeland'];
+export const NOMATCH_CHIPS = ['Mater Dei', 'Los Gatos'];
 
 // -> { mode: 'help'|'list'|'nomatch', items: [...], schools: n matched by name, table: n rows the Schools table shows }
-// items: { kind: 'chip', text } | { kind: 'school', row } | { kind: 'state', state } | { kind: 'city', city } | { kind: 'all', n, q }
+// items: { kind: 'chip', text } | { kind: 'school', row } | { kind: 'all', n, q }   (schools only since #30)
 export function suggest(idx, raw, { phone = false } = {}) {
   const q = parseQuery(raw);
   if (!q.words.length) return { mode: 'help', items: (phone ? PHONE_CHIPS : CHIPS).map((text) => ({ kind: 'chip', text })), schools: 0, table: 0 };
   const hits = idx.rows.map((row) => ({ row, score: matchScore(row._name, q) })).filter((h) => h.score).sort(byRank);
-  const { states, cities } = placeHits(idx, q);
   const table = idx.rows.filter((r) => tableMatch(r, q.typed)).length;
   const items = hits.slice(0, SCHOOLS_MAX).map((h) => ({ kind: 'school', row: h.row }));
-  items.push(...states.map((state) => ({ kind: 'state', state })));
-  items.push(...cities.slice(0, PLACES_MAX).map((city) => ({ kind: 'city', city })));
-  const shown = items.filter((it) => it.kind === 'school').length;
-  if (table > shown) items.push({ kind: 'all', n: table, q: q.typed });
+  if (table > items.length) items.push({ kind: 'all', n: table, q: q.typed });
   if (!items.length) return { mode: 'nomatch', items: NOMATCH_CHIPS.map((text) => ({ kind: 'chip', text })), schools: 0, table: 0 };
   return { mode: 'list', items, schools: hits.length, table };
 }
 
-// Where choosing an item goes: a hash, or a chip's text to search for.
+// Where choosing an item goes: a school's page, the school list, or a chip's text to search for.
 export function target(item) {
   switch (item.kind) {
     case 'school': return { hash: `#tab=school&school=${encodeURIComponent(item.row.id)}`, focusTitle: true };
-    case 'state': return { hash: `#tab=playoffs&st=${item.state.code}` };
-    case 'city': return { hash: `#tab=schools&q=${encodeURIComponent(item.city.city)}` };
     case 'all': return { hash: `#tab=schools&q=${encodeURIComponent(item.q)}` };
     case 'chip': return { fill: item.text };
     default: return null;
@@ -148,15 +116,13 @@ export function target(item) {
 }
 
 // Enter with no active option (collegedash's rule, on our views): on the school list the filtered table stays;
-// elsewhere the first school opens, or the first place when the query names only places, or the list with q.
+// elsewhere the first school opens, or the list with q when no name matches (e.g. a city's schools).
 // `list`: the school list (Schools with st/q, nav.js pageOf) is the page now open.
 export function enterTarget(result, { list = false } = {}) {
   if (result.mode !== 'list') return null;
   if (list) return { stay: true };
   const first = result.items.find((it) => it.kind === 'school');
   if (first) return target(first);
-  const place = result.items.find((it) => it.kind === 'state' || it.kind === 'city');
-  if (place) return target(place);
   const all = result.items.find((it) => it.kind === 'all');
   return all ? target(all) : null;
 }
@@ -196,8 +162,6 @@ export function optionText(item) {
         r.titles ? `${r.titles} title${r.titles === 1 ? '' : 's'}` : ''].filter(Boolean).join(' · ');
       return { name: r.name, line };
     }
-    case 'state': return { name: item.state.name, line: `${item.state.association} brackets · ${item.state.schools.toLocaleString('en-US')} schools` };
-    case 'city': return { name: `${item.city.city}, ${item.city.state}`, line: `${item.city.n} school${item.city.n === 1 ? '' : 's'} in this city` };
     case 'all': return { name: `All ${item.n.toLocaleString('en-US')} school${item.n === 1 ? '' : 's'} matching “${item.q}” →`, line: 'Opens Schools' };
     case 'chip': return { name: item.text, line: '' };
     default: return { name: '', line: '' };
@@ -209,13 +173,10 @@ export function statusText(result, raw, { list = false } = {}) {
   if (list && result.mode === 'list') return `${result.table.toLocaleString('en-US')} schools match · Enter keeps the table`;
   if (result.mode === 'help') return '';
   if (result.mode === 'nomatch') return `No school matches “${String(raw).trim()}”`;
-  const places = result.items.filter((it) => it.kind === 'state' || it.kind === 'city').length;
-  const bits = [];
-  if (result.schools) bits.push(`${result.schools} school${result.schools === 1 ? '' : 's'}`);
-  if (places) bits.push(`${places} place${places === 1 ? '' : 's'}`);
   const first = result.items.find((it) => it.kind === 'school') || result.items.find((it) => it.kind !== 'chip');
   const opens = !first ? '' : first.kind === 'all' ? ` · Enter shows them in Schools` : ` · Enter opens ${optionText(first).name}`;
-  return `${bits.join(' and ') || `${result.table.toLocaleString('en-US')} school${result.table === 1 ? '' : 's'}`}${opens}`;
+  const n = result.schools || result.table;
+  return `${n.toLocaleString('en-US')} school${n === 1 ? '' : 's'}${opens}`;
 }
 
 export function scopeText(idx, statesIndex, { phone = false } = {}) {
@@ -224,4 +185,4 @@ export function scopeText(idx, statesIndex, { phone = false } = {}) {
   if (phone) return `${n} schools in ${covered.length} states. Try:`;
   return `Every school with a state playoff appearance: ${n} in ${covered.length} states (${covered.map((s) => s.code).join(', ')}).`;
 }
-export const HINT = 'Type a school, a city, a state or an association.';
+export const HINT = "Type a school's name, or its city for the school list.";

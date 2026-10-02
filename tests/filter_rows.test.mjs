@@ -28,8 +28,8 @@ test('1. the statewide sidebar is gone; a filter row sits above the content it f
   assert.match(phone, /\.controls select \{ flex: 1 1 0; width: 0; min-width: 0;/, 'a long option cannot widen the panel');
 });
 
-test('2. Playoffs: state, school year, championship and division; the season of play as text', async () => {
-  const { controls } = await open('#tab=playoffs&st=CA&season=2024-25');
+test('2. An event (was Playoffs, #30): state, school year, championship and division; the season of play as text', async () => {
+  const { controls } = await open('#tab=event&st=CA&season=2024-25');
   const html = controls.innerHTML;
   assert.equal(selected(html, 'f-st'), 'CA');
   assert.equal(labelOf(html, 'f-season'), 'School year');
@@ -40,16 +40,16 @@ test('2. Playoffs: state, school year, championship and division; the season of 
   assert.equal(selected(html, 'f-div'), 'gd1');
   assert.match(html, /<p class="filter-term">Winter season<\/p>/, 'the season of play, apart from the school year');
   assert.doesNotMatch(html, /pill|aria-label=|>\d+</, 'no pills and no unexplained counts');
-  const one = await open('#tab=playoffs&st=CA&season=2025-26');
+  const one = await open('#tab=event&st=CA&season=2025-26');
   assert.doesNotMatch(one.controls.innerHTML, /id="f-comp"/, 'no championship select when the year has one');
-  const fall = await open('#tab=playoffs&st=PA');
+  const fall = await open('#tab=event&st=PA');
   assert.match(fall.controls.innerHTML, /<p class="filter-term">Fall season<\/p>/);
 });
 
-test('3. Results, Champions, the school list and Schools each filter with their own row', async () => {
-  const res = await open('#tab=results&st=TX&show=upcoming');
+test('3. All games (was Results), Champions, the school list and Schools each filter with their own row', async () => {
+  const res = await open('#tab=events&view=games&st=TX&show=upcoming');
   assert.deepEqual(['f-st', 'f-season', 'f-show'].map((id) => selected(res.controls.innerHTML, id)), ['TX', '2025-26', 'upcoming']);
-  const champs = await open('#tab=playoffs&view=champions&st=PA');
+  const champs = await open('#tab=events&view=champions&st=PA');
   assert.equal(selected(champs.controls.innerHTML, 'f-st'), 'PA');
   assert.doesNotMatch(champs.controls.innerHTML, /id="f-season"/, 'every school year is in the champions grid');
   const list = await open('#tab=schools&st=WA&q=east');
@@ -78,19 +78,19 @@ test('4. a change resets what depends on it, so old links and new choices land o
   assert.deepEqual(filters.patchFor('div', 'gd2'), { div: 'gd2' });
   assert.deepEqual(filters.patchFor('g', 'b'), { g: 'b', comp: null, div: null });
   // Old deep links still select the right options (st, season, comp, div keep their meaning).
-  const ca = await open('#tab=playoffs&season=2025-26&comp=cif-state&div=gd1');
+  const ca = await open('#tab=event&season=2025-26&comp=cif-state&div=gd1');
   assert.deepEqual(['f-st', 'f-season', 'f-div'].map((id) => selected(ca.controls.innerHTML, id)), ['CA', '2025-26', 'gd1']);
-  const tx = await open('#tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=5a-d1');
+  const tx = await open('#tab=event&st=TX&season=2025-26&comp=tx-uil&div=5a-d1');
   assert.equal(selected(tx.controls.innerHTML, 'f-div'), '5a-d1');
 });
 
 test('5. phones: the "Filters" toggle summarises the selection', async () => {
-  const { controls } = await open('#tab=playoffs&st=CA&season=2024-25');
+  const { controls } = await open('#tab=event&st=CA&season=2024-25');
   assert.equal(filters.summaryOf(controls.innerHTML), 'California · 2024-25 · CIF NorCal Regional Championships · Division 1');
   // The same HTML read back from the DOM writes selected="".
   assert.equal(filters.summaryOf(controls.innerHTML.replace(/ selected>/g, ' selected="">')), 'California · 2024-25 · CIF NorCal Regional Championships · Division 1');
   assert.equal(filters.summaryOf(filters.termButtons({ states: [{ latestSeason: 'x', terms: ['fall'] }] }, 'fall')), 'Fall', 'a pressed toggle');
-  assert.equal(filters.summaryOf((await open('#tab=results&st=TX&show=upcoming')).controls.innerHTML), 'Texas · 2025-26 · Upcoming');
+  assert.equal(filters.summaryOf((await open('#tab=events&view=games&st=TX&show=upcoming')).controls.innerHTML), 'Texas · 2025-26 · Upcoming');
   const app = await read('public/js/app.js');
   assert.match(app, /filterSummary\.textContent = summaryOf\(controls\.innerHTML\);/);
   assert.match(app, /new MutationObserver\(syncFilters\)\.observe\(controls/);
@@ -103,7 +103,7 @@ test('6. #18: a filter select or toggle keeps focus after the re-render; the pan
   assert.match(app, /const again = refocusId\(\{ cause, keep \}\);/);
   assert.match(app, /if \(cause === 'hashchange'\) setFiltersOpen\(false\);/, 'navigating closes the phone panel; a filter change keeps it open');
   // Every control has an id to come back to.
-  const { controls } = await open('#tab=playoffs&st=CA&season=2024-25');
+  const { controls } = await open('#tab=event&st=CA&season=2024-25');
   assert.deepEqual([...controls.innerHTML.matchAll(/<select id="([^"]+)"/g)].map((m) => m[1]), ['f-st', 'f-season', 'f-comp', 'f-div']);
   assert.match((await import('../public/js/components/controls.js')).segmented('g', 'g', [['b', 'Boys'], ['g', 'Girls']], 'Gender'),
     /<button type="button" id="f-g-g" data-set-g="g" aria-pressed="true">Girls<\/button>/);
@@ -122,12 +122,12 @@ test('7. the bracket\'s round pills keep focus: each has a stable id that surviv
     return [...html.matchAll(/<button type="button" class="pill"([^>]*) data-round="(\d+)" aria-pressed="(true|false)">/g)]
       .map((m) => ({ id: m[1].match(/ id="([^"]+)"/)?.[1] ?? null, round: m[2], pressed: m[3] }));
   };
-  const first = pills((await open('#tab=playoffs&st=CA&season=2024-25')).made);
+  const first = pills((await open('#tab=event&st=CA&season=2024-25')).made);
   assert.ok(first.length >= 3, `round pills rendered: ${first.length}`);
   for (const p of first) assert.equal(p.id, `round-${p.round}`, `round ${p.round} has an id`);
   assert.equal(new Set(first.map((p) => p.id)).size, first.length, 'ids are unique');
   // Pressing round 0 re-renders with round=0 in the hash: the same ids are there, now with round 0 pressed.
-  const again = pills((await open('#tab=playoffs&st=CA&season=2024-25&round=0')).made);
+  const again = pills((await open('#tab=event&st=CA&season=2024-25&round=0')).made);
   assert.deepEqual(again.map((p) => p.id), first.map((p) => p.id));
   assert.equal(again.find((p) => p.round === '0').pressed, 'true');
   const src = await read('public/js/views/playoffs.js');

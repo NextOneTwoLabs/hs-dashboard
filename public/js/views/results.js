@@ -3,7 +3,7 @@ import { bindControls, genderSeg } from '../components/controls.js';
 import { bindFilters, seasonSelect, showSelect, stateSelect, termNote } from '../components/filters.js';
 import { bindHighlight, matchCard } from '../components/match.js';
 import { setHead } from '../components/pageHeader.js';
-import { hrefFor } from '../nav.js';
+import { eventsHref } from '../nav.js';
 import { bracketHref, esc, fmtLongDate } from '../util.js';
 
 export async function render({ state, catalog, statesIndex, controls, view, head, setState }) {
@@ -18,8 +18,9 @@ export async function render({ state, catalog, statesIndex, controls, view, head
   ].join('');
   bindFilters(controls, setState);
   bindControls(controls, setState);
-  const crumbs = [['All states', '#tab=schools'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], [`${state.season} results`]];
-  setHead(head, { crumbs, title: `${catalog.name} results`, subtitle: `${esc(catalog.association)} · ${esc(state.season)}` });
+  // Events › All games (#30; was Results): Events › the state's events › the school year's games.
+  const crumbs = [['Events', '#tab=events'], [catalog.name, eventsHref('events', { st: state.st })], [`${state.season} games`]];
+  setHead(head, { crumbs, title: `${catalog.name} games`, subtitle: `${esc(catalog.association)} · ${esc(state.season)}` });
   view.innerHTML = '<div class="card notice">Loading games…</div>';
 
   let data;
@@ -55,7 +56,7 @@ export async function render({ state, catalog, statesIndex, controls, view, head
       return `<section class="day"><h3>${esc(date ? fmtLongDate(date) : 'Date TBD')}</h3><div class="cards">${cards}</div></section>`;
     })
     .join('');
-  setHead(head, { crumbs, title: `${catalog.name} results`,
+  setHead(head, { crumbs, title: `${catalog.name} games`,
     subtitle: `${esc(catalog.association)} · ${esc(data.season)} · ${games.length} games` });
   view.innerHTML = html || '<div class="card notice">No games match these filters.</div>';
   bindHighlight(view);

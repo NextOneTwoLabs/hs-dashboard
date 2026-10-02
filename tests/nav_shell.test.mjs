@@ -32,14 +32,31 @@ test('old links open their new route (and replaceState rewrites them)', () => {
     ['#tab=school', { tab: 'schools', view: 'list' }, 'schools'],               // a school link with no school
     ['#tab=states', { tab: 'schools', view: undefined, st: undefined }, 'landing'],
     ['#tab=states&st=TX', { tab: 'schools', st: 'TX' }, 'schools'],          // that state's school list (since #21)
-    ['#tab=champions&st=PA', { tab: 'playoffs', view: 'champions', st: 'PA' }, 'champions'],
-    ['#tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=5a-d1', { tab: 'playoffs', view: undefined, div: '5a-d1' }, 'playoffs'],
-    ['#tab=playoffs&view=bogus&st=TX', { tab: 'playoffs', view: undefined }, 'playoffs'],   // no view: Brackets
-    ['#tab=results&st=TX&show=upcoming', { tab: 'results', show: 'upcoming' }, 'results'],
+    // #30: Results, Playoffs and Champions live under Events (one step each, no old name to another old name)
+    ['#tab=champions&st=PA', { tab: 'events', view: 'champions', st: 'PA' }, 'champions'],
+    ['#tab=playoffs&view=champions&st=PA', { tab: 'events', view: 'champions', st: 'PA' }, 'champions'],
+    ['#tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=5a-d1', { tab: 'event', view: undefined, comp: 'tx-uil', div: '5a-d1' }, 'playoffs'],
+    ['#tab=playoffs&st=CA&season=2025-26&comp=ca-cif-state&div=gd1&round=1', { tab: 'event', div: 'gd1', round: '1' }, 'playoffs'],
+    ['#tab=playoffs&st=CA&season=2024-25&comp=ca-cif-norcal', { tab: 'event', comp: 'ca-cif-norcal', div: undefined }, 'playoffs'],
+    ['#tab=playoffs&view=bogus&st=TX', { tab: 'events', view: undefined, st: 'TX' }, 'events'],   // no comp: the Events landing
+    ['#tab=playoffs&st=TX&season=2024-25', { tab: 'events', st: 'TX', season: '2024-25' }, 'events'],
+    ['#tab=playoffs', { tab: 'events', st: undefined }, 'events'],
+    ['#tab=results&st=TX&show=upcoming', { tab: 'events', view: 'games', show: 'upcoming' }, 'results'],
+    ['#tab=results&st=GA&season=2025-26&show=results&g=g', { tab: 'events', view: 'games', season: '2025-26', show: 'results', g: 'g' }, 'results'],
     ['#tab=about', { tab: 'about' }, 'about'],
     ['', { tab: 'schools' }, 'landing'],
     ['#tab=bogus', { tab: 'schools' }, 'landing'],
-    ['#tab=bogus&comp=tx-uil', { tab: 'playoffs', comp: 'tx-uil' }, 'playoffs'],
+    ['#tab=bogus&comp=tx-uil', { tab: 'event', comp: 'tx-uil' }, 'playoffs'],
+    // An event with no championship or division: normalize (state.js) fills both from the state catalog.
+    ['#tab=event', { tab: 'event', comp: undefined, div: undefined }, 'playoffs'],
+    // round belongs to an event's bracket, show to the Events landing and All games (Kongming, plan v2)
+    ['#tab=events&round=2', { tab: 'events', round: undefined }, 'events'],
+    ['#tab=results&st=TX&round=2', { tab: 'events', view: 'games', round: undefined }, 'results'],
+    ['#tab=events&show=results', { tab: 'events', show: undefined }, 'events'],
+    ['#tab=events&show=live', { tab: 'events', show: 'live' }, 'events'],
+    ['#tab=events&view=games&show=complete', { tab: 'events', view: 'games', show: undefined }, 'results'],
+    ['#tab=events&view=champions&show=upcoming', { tab: 'events', view: 'champions', show: undefined }, 'champions'],
+    ['#tab=event&st=CA&comp=ca-cif-state&div=gd1&show=upcoming', { tab: 'event', show: undefined }, 'playoffs'],
   ];
   for (const [hash, want, page] of cases) {
     location.hash = hash;
@@ -56,12 +73,38 @@ test('old links open their new route (and replaceState rewrites them)', () => {
   assert.equal(canon('#tab=team'), '#tab=schools&view=list');
   assert.equal(canon('#tab=school'), '#tab=schools&view=list');
   assert.equal(canon(`#school=${LOS_GATOS}`), `#tab=school&school=${LOS_GATOS}`);
-  assert.equal(canon('#tab=champions&st=PA'), '#tab=playoffs&view=champions&st=PA');
+  assert.equal(canon('#tab=champions&st=PA'), '#tab=events&view=champions&st=PA');
   assert.equal(canon('#tab=states&st=TX'), '#tab=schools&st=TX');
+  assert.equal(canon('#tab=results&st=TX&show=upcoming'), '#tab=events&view=games&st=TX&show=upcoming');
+  assert.equal(canon('#tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=5a-d1'), '#tab=event&st=TX&season=2025-26&comp=tx-uil&div=5a-d1');
+  assert.equal(canon('#tab=playoffs&st=CA&season=2024-25&comp=ca-cif-norcal'), '#tab=event&st=CA&season=2024-25&comp=ca-cif-norcal',
+    'a competition with no division keeps the competition (normalize fills the division)');
+  assert.equal(canon('#tab=playoffs&st=TX'), '#tab=events&st=TX');
+  assert.equal(canon('#tab=events&show=results'), '#tab=events');
   // New-form links, and the home page with no hash, are left alone (no replaceState).
-  for (const hash of ['', '#tab=schools', '#tab=schools&q=ake', '#tab=schools&view=list', '#tab=playoffs&st=TX&season=2025-26',
+  for (const hash of ['', '#tab=schools', '#tab=schools&q=ake', '#tab=schools&view=list', '#tab=events', '#tab=events&st=TX&show=live',
+    '#tab=events&view=games&st=TX&season=2025-26&show=upcoming', '#tab=events&view=champions&st=PA', '#tab=event',
+    '#tab=event&st=TX&season=2025-26&comp=tx-uil&div=5a-d1&round=2',
     '#tab=about', `#tab=school&school=${LOS_GATOS}`, `#tab=school&g=g&school=${LOS_GATOS}`]) {
     assert.equal(canon(hash), null, hash);
+  }
+});
+
+// Kongming (#30 plan v2): the old-link map is one step and one way, so resolving twice changes nothing and the
+// canonical hash of a resolved link is itself.
+test('old links resolve in one step: resolveTab is idempotent and the canonical hash is stable', () => {
+  const old = ['#tab=champions', '#tab=champions&st=PA', '#tab=playoffs&view=champions&st=CA', '#tab=results',
+    '#tab=results&st=TX&show=upcoming&g=g', '#tab=playoffs&st=CA&season=2025-26&comp=ca-cif-state&div=gd1&round=1',
+    '#tab=playoffs&st=CA&season=2024-25&comp=ca-cif-norcal', '#tab=playoffs&st=TX', '#tab=playoffs', '#tab=bogus&comp=tx-uil',
+    '#tab=event', '#tab=teams&q=ake', `#tab=team&view=history&school=${LOS_GATOS}`, '#tab=states&st=TX', `#school=${LOS_GATOS}`,
+    '#tab=events&show=results&round=3', '#tab=events&view=nope'];
+  for (const hash of old) {
+    location.hash = hash;
+    const once = nav.resolveTab(readHash());
+    assert.deepEqual(nav.resolveTab(once), once, `${hash}: resolving twice changes nothing`);
+    assert.ok(nav.VIEW_IDS.includes(once.tab), `${hash}: lands on a real tab (${once.tab})`);
+    location.hash = nav.hrefFor(once);
+    assert.equal(nav.canonicalHash(readHash()), null, `${hash}: its canonical form is canonical`);
   }
 });
 
@@ -71,7 +114,7 @@ test('app.js rewrites old links with history.replaceState and renders pages thro
   assert.match(app, /VIEWS\[pageOf\(state\)\]\.render\(/);
   const keys = app.match(/const VIEWS = \{([^}]*)\}/)[1].split(',').map((k) => k.trim()).sort();
   assert.deepEqual(keys, [...nav.PAGES].sort(), 'app.js has a module for every page');
-  assert.match(app, /needsCatalog\(raw\.tab\)/);
+  assert.match(app, /needsCatalog\(raw\)/);
 });
 
 test('q=ake still lists "Lake…" schools, with the table count (old and new links, and the search targets)', async () => {
@@ -84,19 +127,19 @@ test('q=ake still lists "Lake…" schools, with the table count (old and new lin
     assert.equal((view.innerHTML.match(/<tr><td><a href="#tab=school&school=/g) || []).length, want, `${hash}: rows`);
     assert.match(head.innerHTML, new RegExp(`${want} of 1,337 schools`));
   }
-  // The search's city and "All N" options open the same list.
-  const city = target({ kind: 'city', city: { city: 'San Antonio' } }).hash;
+  // The search's "All N" option opens the same list (since #30 the search has no city or state options).
   const all = target({ kind: 'all', n: want, q: 'ake' }).hash;
-  assert.equal(city, '#tab=schools&q=San%20Antonio');
   assert.equal(all, '#tab=schools&q=ake');
-  for (const hash of [city, all]) { location.hash = hash; assert.equal(nav.pageOf(nav.resolveTab(readHash())), 'schools'); }
+  location.hash = all;
+  assert.equal(nav.pageOf(nav.resolveTab(readHash())), 'schools');
+  assert.equal(target({ kind: 'city', city: { city: 'San Antonio' } }), null);
   assert.equal(target({ kind: 'school', row: { id: LOS_GATOS } }).hash, `#tab=school&school=${LOS_GATOS}`);
 });
 
 test('every tab (VIEW_IDS) and every page renders: no throw, a heading, no error state', async () => {
   const routes = [
     '#tab=schools', '#tab=schools&view=list', '#tab=schools&st=TX', `#tab=school&school=${LOS_GATOS}`,
-    '#tab=results&st=CA', '#tab=playoffs&st=CA', '#tab=playoffs&view=champions&st=CA', '#tab=about',
+    '#tab=events', '#tab=events&view=games&st=CA', '#tab=event&st=CA', '#tab=events&view=champions&st=CA', '#tab=about',
   ];
   const tabs = new Set();
   const pages = new Set();
@@ -112,14 +155,14 @@ test('every tab (VIEW_IDS) and every page renders: no throw, a heading, no error
   assert.deepEqual([...pages].sort(), [...nav.PAGES].sort(), 'every page module is covered');
 });
 
-// Scope: the Main nav and the sub-nav (Playoffs, or a school's). The breadcrumb's last item also carries
+// Scope: the Main nav and the sub-nav (Events', or a school's). The breadcrumb's last item also carries
 // aria-current="page" on purpose (WAI-ARIA breadcrumb pattern, its own <nav>); it is outside this check.
 test('one aria-current="page" per route across the Main nav and the sub-nav', async () => {
   const cases = [
     ['#tab=schools', 'Schools', null], ['#tab=schools&q=ake', 'Schools', null], [`#tab=school&school=${LOS_GATOS}`, 'Schools', 'Overview'],
     [`#tab=school&view=results&school=${LOS_GATOS}`, 'Schools', 'Results'], [`#tab=school&view=history&school=${LOS_GATOS}`, 'Schools', 'Playoff history'],
-    ['#tab=results&st=CA', 'Results', null], ['#tab=playoffs&st=CA', 'Playoffs', 'Brackets'],
-    ['#tab=playoffs&view=champions&st=CA', 'Playoffs', 'Champions'], ['#tab=about', null, null],
+    ['#tab=events', 'Events', 'Events'], ['#tab=events&view=games&st=CA', 'Events', 'All games'],
+    ['#tab=events&view=champions&st=CA', 'Events', 'Champions'], ['#tab=event&st=CA', 'Events', null], ['#tab=about', null, null],
   ];
   const current = (html, value) => [...html.matchAll(new RegExp(`aria-current="${value}">(?:<svg[\\s\\S]*?</svg>)?(?:<span>)?([^<]+)`, 'g'))].map((m) => m[1]);
   for (const [hash, section, sub] of cases) {
@@ -132,21 +175,25 @@ test('one aria-current="page" per route across the Main nav and the sub-nav', as
     assert.deepEqual(pages, [sub || section], `${hash}: exactly one current page`);
     // On a page with a sub-nav, the Main item marks the current section instead.
     assert.deepEqual(current(main, 'true'), sub ? [section] : [], `${hash}: section`);
-    assert.equal((main.match(/<a /g) || []).length, 3, 'Schools · Results · Playoffs (no Standings: owner, option B)');
-    assert.doesNotMatch(main, /Standings|Teams/);
+    assert.equal((main.match(/<a /g) || []).length, 2, 'Schools · Events (#30: "two views: Schools and Events")');
+    assert.doesNotMatch(main, /Standings|Teams|Results|Playoffs/);
   }
-  // Main nav links keep context; Schools starts fresh.
-  location.hash = '#tab=results&st=TX&season=2025-26&g=g';
+  // Main nav links open their section fresh; Events' sub-nav keeps the state, season and gender.
+  location.hash = '#tab=events&view=games&st=TX&season=2025-26&g=g';
   const r = nav.mainNavHtml(nav.resolveTab(readHash()));
-  assert.match(r, /href="#tab=playoffs&amp;st=TX&amp;season=2025-26&amp;g=g"/);
+  assert.match(r, /href="#tab=events"/);
   assert.match(r, /href="#tab=schools"/);
-  location.hash = '#tab=playoffs&st=TX&season=2025-26&g=g';
-  assert.match(nav.subNavHtml(nav.resolveTab(readHash())), /href="#tab=playoffs&amp;view=champions&amp;st=TX&amp;season=2025-26&amp;g=g"/);
-  // Both Main navs are labelled "Main", the sub-nav "Playoffs", and app.js fills each from the same helpers.
+  const sub = nav.subNavHtml(nav.resolveTab(readHash()));
+  assert.match(sub, /href="#tab=events&amp;st=TX&amp;season=2025-26&amp;g=g">Events</);
+  assert.match(sub, /href="#tab=events&amp;view=games&amp;st=TX&amp;season=2025-26&amp;g=g" aria-current="page">All games</);
+  assert.match(sub, /href="#tab=events&amp;view=champions&amp;st=TX&amp;g=g">Champions</);
+  assert.equal(nav.subNavLabel(nav.resolveTab(readHash())), 'Events');
+  // Both Main navs are labelled "Main", the sub-nav "Events", and app.js fills each from the same helpers.
   const html = await read('public/index.html');
   assert.match(html, /<nav class="header-nav" aria-label="Main" id="main-nav">/);
   assert.match(html, /<nav class="bottom-nav" aria-label="Main" id="bottom-nav">/);
-  assert.match(html, /<nav class="view-tabs" aria-label="Playoffs" id="tabs" hidden>/);
+  assert.match(html, /<nav class="view-tabs" aria-label="Events" id="tabs" hidden>/);
+  assert.equal((html.match(/class="bottom-nav-link"/g) || []).length, 2);
   const app = await read('public/js/app.js');
   assert.match(app, /mainNav\.innerHTML = mainNavHtml\(state\);/);
   assert.match(app, /bottomNav\.innerHTML = mainNavHtml\(state, \{ cls: 'bottom-nav-link' \}\);/);
@@ -164,7 +211,8 @@ test('internal links use the new routes: no old tab names outside the old-link m
   await walk('public/js/');
   assert.ok(files.length > 15);
   // Since #26 the old names are teams/team (#21–#25) besides states/champions; schools/school are canonical again.
-  const OLD = /tab=(states|teams|team|champions)(?![\w-])|tab:\s*'(states|teams|team|champions)'/;
+  // Since #30 results/playoffs are old too: links are written in their Events form at the source (Kongming).
+  const OLD = /tab=(states|teams|team|champions|results|playoffs)(?![\w-])|tab:\s*'(states|teams|team|champions|results|playoffs)'/;
   for (const f of files) {
     (await read(f)).split('\n').forEach((line, i) => assert.doesNotMatch(line, OLD, `${f}:${i + 1}`));
   }

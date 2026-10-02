@@ -23,6 +23,7 @@ export function fetchJSON(path) {
 
 export const api = {
   status: () => fetchJSON('/status'),
+  catalog: () => fetchJSON('/catalog'),   // every state's events in one file (the Events landing, #30)
   states: () => fetchJSON('/states'),
   stateCatalog: (st) => fetchJSON(`/states/${st}/catalog`),
   stateGames: (st, season) => fetchJSON(`/states/${st}/seasons/${season}/games`),

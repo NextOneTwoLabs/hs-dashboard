@@ -2,29 +2,41 @@
 import { KEYS } from './state.js';
 import { esc } from './util.js';
 
-// Tabs (#20, renamed in #26): three Main destinations, a school's page (part of Schools) and About.
-export const VIEW_IDS = ['schools', 'school', 'results', 'playoffs', 'about'];
+// Tabs (#20, renamed in #26, #30): two Main destinations, each with its pages (a school, an event), and About.
+export const VIEW_IDS = ['schools', 'school', 'events', 'event', 'about'];
 
-// The Main nav, in the header (wider screens) and the bottom bar (phones). Standings is left out for now
-// (owner decision on #20, option B); "Schools" was "Teams" until #26 (owner: rename "teams" to "Schools").
-export const MAIN_NAV = [['schools', 'Schools'], ['results', 'Results'], ['playoffs', 'Playoffs']];
+// The Main nav, in the header (wider screens) and the bottom bar (phones). Since #30 (owner: "two views: Schools
+// and Events") Results and Playoffs live under Events: an event's page holds its bracket, and All games and
+// Champions are Events' sub-pages.
+export const MAIN_NAV = [['schools', 'Schools'], ['events', 'Events']];
 
-// Playoffs has two sub-pages; Brackets is the default and is not written to the hash.
-export const PLAYOFF_VIEWS = [['brackets', 'Brackets'], ['champions', 'Champions']];
+// Events has three sub-pages (#30 plan v2): the event cards (the default, not written to the hash), every game of
+// a state's season (was Results) and the champions grid (was Playoffs › Champions).
+export const EVENTS_VIEWS = [['events', 'Events'], ['games', 'All games'], ['champions', 'Champions']];
 
 // A school's page has three (#20 PR 2); Overview is the default and is not written to the hash.
 export const TEAM_VIEWS = [['overview', 'Overview'], ['results', 'Results'], ['history', 'Playoff history']];
 
 // The `view` values each tab accepts; anything else is dropped.
-const VIEW_VALUES = { schools: ['list'], school: ['results', 'history'], playoffs: ['champions'] };
+const VIEW_VALUES = { schools: ['list'], school: ['results', 'history'], events: ['games', 'champions'] };
 
-// Old hashes in their current names (#26 option A: tab=schools / tab=school, with every old link kept):
+// The `show` values each page accepts (#30 plan v2): the event cards filter by status, All games by finished or
+// upcoming; anywhere else `show` is dropped, so e.g. events&show=results can't render an empty landing.
+const SHOW_VALUES = { events: ['live', 'upcoming', 'complete'], games: ['results', 'upcoming'] };
+const showValuesOf = (out) => (out.tab !== 'events' ? [] : out.view === 'games' ? SHOW_VALUES.games
+  : out.view ? [] : SHOW_VALUES.events);
+
+// Old hashes in their current names, in one step (no old name maps to another old name):
 //   #tab=teams[&st][&q][&view=list]           -> #tab=schools[…]          (#21–#25 links; the same parameters)
 //   #tab=team&school=ID[&view][&season][&g]   -> #tab=school&school=ID[…]
 //   #tab=states            -> #tab=schools               (the landing)
 //   #tab=states&st=XX      -> #tab=schools&st=XX         (that state's school list, as since #21)
-//   #tab=champions&st=XX   -> #tab=playoffs&view=champions&st=XX
 //   #school=ID             -> #tab=school&school=ID      (g= carries over)
+//   #tab=results[&st][&season][&show][&g]     -> #tab=events&view=games[…]   (#30: All games)
+//   #tab=champions[&st] and #tab=playoffs&view=champions[&st]  -> #tab=events&view=champions[…]
+//   #tab=playoffs…&comp[&div][&round]         -> #tab=event…   (a bracket; a missing div is filled by normalize)
+//   #tab=playoffs[&st][&season]  (no comp)    -> #tab=events[…] (the Events landing for that state; #30: it was
+//                                                that state's default bracket)
 // Pre-#20 #tab=schools[&st][&q] and #tab=school&school=ID are native again. One intended difference (owner,
 // #26): a pre-#20 bare #tab=schools (then the full list) opens the landing; the full list is &view=list.
 export function migrate(raw) {
@@ -33,19 +45,29 @@ export function migrate(raw) {
   switch (out.tab) {
     case 'teams': case 'states': out.tab = 'schools'; break;
     case 'team': out.tab = 'school'; break;
-    case 'champions': out.tab = 'playoffs'; out.view = 'champions'; break;
+    case 'results': out.tab = 'events'; out.view = 'games'; break;
+    case 'champions': out.tab = 'events'; out.view = 'champions'; break;
+    case 'playoffs':
+      if (out.view === 'champions') out.tab = 'events';
+      else if (out.comp || out.div) { out.tab = 'event'; delete out.view; }
+      else { out.tab = 'events'; delete out.view; }
+      break;
     default: break;
   }
   return out;
 }
 
-// An unknown or missing tab opens Schools, or Playoffs when the link names a competition; a school's page needs
-// a school (without one it opens the school list).
+// An unknown or missing tab opens Schools, or an event when the link names a competition; a school's page needs
+// a school (without one it opens the school list). An event with no competition or division is filled in from
+// the state catalog (state.js normalize), as Playoffs was. `round` belongs to an event's bracket only, `show` to
+// the pages above.
 export function resolveTab(raw) {
   const out = migrate(raw);
-  if (!out.tab || !VIEW_IDS.includes(out.tab)) out.tab = out.comp ? 'playoffs' : 'schools';
+  if (!out.tab || !VIEW_IDS.includes(out.tab)) out.tab = out.comp ? 'event' : 'schools';
   if (out.tab === 'school' && !out.school) { out.tab = 'schools'; out.view = 'list'; }
   if (out.view && !(VIEW_VALUES[out.tab] || []).includes(out.view)) delete out.view;
+  if (out.round != null && out.tab !== 'event') delete out.round;
+  if (out.show && !showValuesOf(out).includes(out.show)) delete out.show;
   return out;
 }
 
@@ -79,29 +101,34 @@ export function canonicalHash(raw) {
 }
 
 // Page modules (public/js/views/<page>.js) and the tabs that show one state at a time with its catalog.
-export const PAGES = ['landing', 'schools', 'team', 'playoffs', 'champions', 'results', 'about'];
-export const needsCatalog = (tab) => tab === 'playoffs' || tab === 'results';
+export const PAGES = ['landing', 'schools', 'team', 'events', 'playoffs', 'champions', 'results', 'about'];
+// An event and Events' All games and Champions show one state at a time with its catalog; the event cards read
+// every state's catalog (/api/v1/catalog) themselves.
+export const needsCatalog = (state) => state.tab === 'event' || (state.tab === 'events' && !!state.view);
 
 // The page module that renders a resolved state: Schools is the landing (views/landing.js), or the school list
-// with st/q/view=list (views/schools.js); a school has its own page (views/team.js); Playoffs › Champions is the
-// grid.
+// with st/q/view=list (views/schools.js); a school has its own page (views/team.js). Events is the event cards
+// (views/events.js); All games and Champions keep their views (results.js, champions.js); an event is its bracket
+// (views/playoffs.js).
 export function pageOf(state) {
   switch (state.tab) {
     case 'schools': return state.st || state.q || state.view === 'list' ? 'schools' : 'landing';
     case 'school': return 'team';
-    case 'playoffs': return state.view === 'champions' ? 'champions' : 'playoffs';
+    case 'events': return state.view === 'games' ? 'results' : state.view === 'champions' ? 'champions' : 'events';
+    case 'event': return 'playoffs';
     default: return state.tab;
   }
 }
 
 // The Main destination a tab belongs to (About belongs to none).
-export const sectionOf = (tab) => (tab === 'school' ? 'schools' : MAIN_NAV.some(([k]) => k === tab) ? tab : null);
+export const sectionOf = (tab) => (tab === 'school' ? 'schools' : tab === 'event' ? 'events'
+  : MAIN_NAV.some(([k]) => k === tab) ? tab : null);
 
-// Pages with their own sub-navigation (Playoffs › Brackets · Champions; a school's Overview · Results · Playoff
-// history): there the sub-nav item is the current page and the Main item is aria-current="true" (the current
-// section), so a route has exactly one aria-current="page".
-export const hasSubNav = (state) => state.tab === 'playoffs' || state.tab === 'school';
-export const subNavLabel = (state) => (state.tab === 'school' ? 'School' : 'Playoffs');
+// Pages with their own sub-navigation (Events › Events · All games · Champions; a school's Overview · Results ·
+// Playoff history): there the sub-nav item is the current page and the Main item is aria-current="true" (the
+// current section), so a route has exactly one aria-current="page".
+export const hasSubNav = (state) => state.tab === 'events' || state.tab === 'school';
+export const subNavLabel = (state) => (state.tab === 'school' ? 'School' : 'Events');
 
 // Whether a finished render should move focus to the page title (#11). Navigation does (a link, a nav link,
 // Back/Forward); the first load and in-page controls (the filter row, #20 PR 3) don't, nor does a render while
@@ -124,16 +151,21 @@ export function hrefFor(state) {
 // The school list: filtered by state and/or name, or the whole list.
 export const listHref = ({ st, q } = {}) => hrefFor({ tab: 'schools', view: st || q ? null : 'list', st, q });
 
-// A Main nav link keeps the state, season and gender that make sense for it.
-export function navHref(key, { st, season, g } = {}) {
-  if (key === 'schools') return hrefFor({ tab: 'schools' });
-  return hrefFor({ tab: key, st, season, g });
+// A Main nav link opens its section's first page, fresh (Schools since #26, Events since #30).
+export function navHref(key) {
+  return hrefFor({ tab: key });
+}
+
+// Events' own pages: the event cards, All games and Champions keep the state, season and gender they make
+// sense with.
+export function eventsHref(view, { st, season, g } = {}) {
+  if (view === 'champions') return hrefFor({ tab: 'events', view, st, g });
+  return hrefFor({ tab: 'events', view: view === 'events' ? null : view, st, season, g });
 }
 
 const ICON = {
   schools: '<path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/>',   // a schoolhouse (#26)
-  results: '<rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
-  playoffs: '<path d="M4 5h4v5H4zM4 14h4v5H4zM8 7.5h4v9H8M12 12h4M16 9.5h4v5h-4z"/>',
+  events: '<path d="M4 5h4v5H4zM4 14h4v5H4zM8 7.5h4v9H8M12 12h4M16 9.5h4v5h-4z"/>',   // a bracket
 };
 const icon = (key) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[key]}</svg>`;
 
@@ -141,7 +173,7 @@ const icon = (key) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor
 export function mainNavHtml(state, { cls = 'main-nav-link' } = {}) {
   const here = sectionOf(state.tab);
   const current = hasSubNav(state) ? 'true' : 'page';
-  return MAIN_NAV.map(([key, label]) => `<a class="${cls}" href="${esc(navHref(key, state))}"${key === here ? ` aria-current="${current}"` : ''}>`
+  return MAIN_NAV.map(([key, label]) => `<a class="${cls}" href="${esc(navHref(key))}"${key === here ? ` aria-current="${current}"` : ''}>`
     + `${icon(key)}<span>${label}</span></a>`).join('');
 }
 
@@ -150,7 +182,12 @@ export function mainNavHtml(state, { cls = 'main-nav-link' } = {}) {
 export const teamHref = (school, { view = null, season = null, g = null } = {}) =>
   hrefFor({ tab: 'school', view: view === 'overview' ? null : view, school, season, g });
 
-// Playoffs › Brackets · Champions, or a school's Overview · Results · Playoff history. Empty on other pages.
+// An event's page: one division's tournament in one school year (#30). A missing division (or competition) is
+// filled in from the state catalog by normalize, as Playoffs did.
+export const eventHref = ({ st, season, comp, div, round = null, g = null }) =>
+  hrefFor({ tab: 'event', st, season, comp, div, round: round == null ? null : String(round), g });
+
+// Events › Events · All games · Champions, or a school's Overview · Results · Playoff history. Empty elsewhere.
 export function subNavHtml(state) {
   if (!hasSubNav(state)) return '';
   const { st, season, g } = state;
@@ -159,9 +196,7 @@ export function subNavHtml(state) {
     return TEAM_VIEWS.map(([key, label]) => `<a class="view-tab" href="${esc(teamHref(state.school, { view: key, season, g }))}"`
       + `${key === now ? ' aria-current="page"' : ''}>${label}</a>`).join('');
   }
-  const now = state.view === 'champions' ? 'champions' : 'brackets';
-  return PLAYOFF_VIEWS.map(([key, label]) => {
-    const href = hrefFor({ tab: 'playoffs', view: key === 'brackets' ? null : key, st, season, g });
-    return `<a class="view-tab" href="${esc(href)}"${key === now ? ' aria-current="page"' : ''}>${label}</a>`;
-  }).join('');
+  const now = state.view || 'events';
+  return EVENTS_VIEWS.map(([key, label]) => `<a class="view-tab" href="${esc(eventsHref(key, { st, season, g }))}"`
+    + `${key === now ? ' aria-current="page"' : ''}>${label}</a>`).join('');
 }
