@@ -1,0 +1,10 @@
+{
+  "why": "A row has exactly the six values `fields` names, in that order.",
+  "errorAt": "$.rows[0]",
+  "fix": {"at": "/rows/0", "value": ["aaa-111", "Alpha", "Austin", "TX", 1, 0]},
+  "document": {
+    "schema": 1,
+    "fields": ["id", "name", "city", "state", "apps", "titles"],
+    "rows": [["aaa-111", "Alpha", "Austin", "TX", 1, 0, "2025-26"]]
+  }
+}

@@ -108,8 +108,10 @@ export/<season>/<division>.csv                           human-readable export
 ### Crawler (`crawler/`, Python 3.12, stdlib only)
 - **Since #8 PR 3** the code lives in `collect/` (fetch, parsers, discovery, and `refresh.py`, which was `hs.py`),
   `build.py` (was `derive.py`) with `build_lib/` (`store.py`, `divisions.py`), and `api/routes.py` (was
-  `crawler/api_routes.py`). The CLI is `python hsdash.py refresh|backfill|season|discover|build|serve`; `crawler/hs.py`
-  is a shim, so the `hs.py --…` commands below still work.
+  `crawler/api_routes.py`). The CLI is `python hsdash.py refresh|backfill|season|discover|build|validate|serve`;
+  `crawler/hs.py` is a shim, so the `hs.py --…` commands below still work.
+- **Since #8 PR 4** `schema/*.schema.json` pins every published file's shape, and `hsdash.py validate` (`build_lib/validate.py`)
+  checks them plus cross-checks (see `docs/data-api.md`). `jsonschema` is a dev and CI dependency only.
 - **Commands:**
   - `hs.py --refresh`: fetches only competitions whose window is open, and skips quickly otherwise.
   - `--season 2024-25`: backfill.

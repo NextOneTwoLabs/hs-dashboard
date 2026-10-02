@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hs-dashboard.local/schema/state-catalog.schema.json",
+  "title": "One state's catalog (public/archive/states/<ST>/catalog.json)",
+  "description": "/api/v1/states/{ST}/catalog: seasons (newest first) -> competitions -> divisions, with status, champion and runner-up. hsdash.py validate also checks every division against its bracket (game counts, status, champion, runner-up and dates) and that catalog.json carries the same competitions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "state", "name", "association", "associationName", "activeSeason", "latestSeason", "genders", "seasons"],
+  "properties": {
+    "schema": {"$ref": "common.schema.json#/$defs/schemaVersion1"},
+    "state": {"$ref": "common.schema.json#/$defs/state"},
+    "name": {"$ref": "common.schema.json#/$defs/name"},
+    "association": {"$ref": "common.schema.json#/$defs/name"},
+    "associationName": {"$ref": "common.schema.json#/$defs/name"},
+    "activeSeason": {"$ref": "common.schema.json#/$defs/season"},
+    "latestSeason": {"anyOf": [{"$ref": "common.schema.json#/$defs/season"}, {"type": "null"}]},
+    "genders": {"$ref": "common.schema.json#/$defs/genderCodes"},
+    "seasons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["season", "note", "competitions"],
+        "properties": {
+          "season": {"$ref": "common.schema.json#/$defs/season"},
+          "note": {"type": ["string", "null"], "minLength": 1},
+          "competitions": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/catalogCompetition"}}
+        }
+      }
+    }
+  }
+}

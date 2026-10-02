@@ -1,0 +1,14 @@
+{
+  "why": "catalog.json is schema 2 (the state catalogs are schema 1).",
+  "errorAt": "$.schema",
+  "fix": {"at": "/schema", "value": 2},
+  "document": {
+    "schema": 1,
+    "activeSeason": "2026-27",
+    "latestSeason": "2025-26",
+    "genders": ["g"],
+    "states": {"TX": {"name": "Texas", "association": "UIL", "associationName": "University Interscholastic League"}},
+    "competitions": {"tx-uil": {"state": "TX", "term": "winter", "gender": "girls", "label": "UIL State Championships", "short": "State"}},
+    "seasons": [{"season": "2025-26", "notes": {}, "competitions": []}]
+  }
+}

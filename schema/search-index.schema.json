@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hs-dashboard.local/schema/search-index.schema.json",
+  "title": "The compact search index (public/archive/search-index.json)",
+  "description": "/api/v1/search-index: one row per school, its values in the order of `fields`. hsdash.py validate also checks that the rows are the directory's (schools.json) in the same order.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "fields", "rows"],
+  "properties": {
+    "schema": {"$ref": "common.schema.json#/$defs/schemaVersion1"},
+    "fields": {"const": ["id", "name", "city", "state", "apps", "titles"]},
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          {"$ref": "common.schema.json#/$defs/schoolId"},
+          {"$ref": "common.schema.json#/$defs/name"},
+          {"type": ["string", "null"]},
+          {"$ref": "common.schema.json#/$defs/state"},
+          {"type": "integer", "minimum": 1},
+          {"$ref": "common.schema.json#/$defs/count"}
+        ],
+        "minItems": 6,
+        "items": false
+      }
+    }
+  }
+}

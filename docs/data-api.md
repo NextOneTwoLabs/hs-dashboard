@@ -50,6 +50,30 @@ What each returns:
   for a season.
 - **`…/bracket`:** one normalized bracket.
 
+## Schemas
+
+Since #8 PR 4, each published file's shape is pinned by a JSON Schema (Draft 2020-12) in `schema/`. Shared
+definitions are in `common.schema.json`.
+
+| Schema | Files |
+|---|---|
+| `catalog` | `catalog.json` |
+| `status` | `refresh-state.json` |
+| `sources` | `/data/sources.json` |
+| `states` | `states.json` |
+| `search-index` | `search-index.json` |
+| `schools` | `schools.json`, `states/{ST}/schools.json` |
+| `school` | `schools/{id}.json` |
+| `state-catalog` | `states/{ST}/catalog.json` |
+| `games` | `states/{ST}/seasons/{season}/games.json`, `seasons/{season}/games.json` |
+| `bracket` | `brackets/{season}/{comp}/{div}.json` |
+
+`python hsdash.py validate` checks every file against its schema, plus cross-checks a schema can't express: paths
+agree with content, every `next` is a later game in the same bracket, the champion won the final, the catalogs'
+counts and champions are their brackets', directories and the search index add up, and every school a game names
+has a file. `--fresh` does the same on a build written to a temp directory. CI runs both. It needs
+`requirements-dev.txt` (`jsonschema`, pinned); the crawler and the build stay stdlib-only.
+
 ## Parameters
 
 A parameter that breaks its rule is answered **400** with the error below, before any file is read.

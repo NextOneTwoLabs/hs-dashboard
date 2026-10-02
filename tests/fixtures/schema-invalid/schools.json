@@ -1,0 +1,13 @@
+{
+  "why": "A directory row's gender is the one-letter code (b, g), not the word.",
+  "errorAt": "$.schools[0].gender[0]",
+  "fix": {"at": "/schools/0/gender/0", "value": "g"},
+  "document": {
+    "schema": 1,
+    "state": "TX",
+    "count": 1,
+    "schools": [
+      {"id": "aaa-111", "name": "Alpha", "city": "Austin", "state": "TX", "gender": ["girls"], "apps": 1, "titles": 0, "last": "2025-26"}
+    ]
+  }
+}

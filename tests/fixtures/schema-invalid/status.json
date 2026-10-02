@@ -1,0 +1,17 @@
+{
+  "why": "A crawl's mode is refresh, backfill or season.",
+  "errorAt": "$.mode",
+  "fix": {"at": "/mode", "value": "refresh"},
+  "document": {
+    "schema": 1,
+    "updatedAt": "2026-10-01T17:03:51Z",
+    "mode": "nightly",
+    "requests": 3,
+    "blocked": false,
+    "budgetExhausted": false,
+    "recheckSkipped": 0,
+    "crawled": ["2025-26/tx-uil/6a-d1"],
+    "failed": [{"url": "https://www.maxpreps.com/tournament/x.htm", "status": 503}],
+    "durationSeconds": 12.5
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hs-dashboard.local/schema/games.schema.json",
+  "title": "A season's games feed (public/archive/states/<ST>/seasons/<season>/games.json and seasons/<season>/games.json)",
+  "description": "/api/v1/states/{ST}/seasons/{season}/games (with `state`) and /api/v1/seasons/{season}/games (every state, no `state`). Byes are not games and are left out. hsdash.py validate checks every game against its bracket and that the all-states feed is the union of the state feeds.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "season", "games"],
+  "properties": {
+    "schema": {"$ref": "common.schema.json#/$defs/schemaVersion1"},
+    "state": {"$ref": "common.schema.json#/$defs/state"},
+    "season": {"$ref": "common.schema.json#/$defs/season"},
+    "games": {"type": "array", "items": {"$ref": "#/$defs/game"}}
+  },
+  "$defs": {
+    "game": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "state", "competition", "division", "divisionLabel", "gender", "round", "roundName", "date",
+                   "status", "decidedBy", "winner", "top", "bottom"],
+      "properties": {
+        "id": {"type": ["string", "null"], "minLength": 1},
+        "state": {"$ref": "common.schema.json#/$defs/state"},
+        "competition": {"$ref": "common.schema.json#/$defs/competitionId"},
+        "division": {"$ref": "common.schema.json#/$defs/divisionCode"},
+        "divisionLabel": {"$ref": "common.schema.json#/$defs/name"},
+        "gender": {"$ref": "common.schema.json#/$defs/gender"},
+        "round": {"$ref": "common.schema.json#/$defs/count"},
+        "roundName": {"type": ["string", "null"]},
+        "date": {"$ref": "common.schema.json#/$defs/dateOrNull"},
+        "status": {"enum": ["scheduled", "final", "unreported"]},
+        "decidedBy": {"$ref": "common.schema.json#/$defs/decidedBy"},
+        "winner": {"anyOf": [{"$ref": "common.schema.json#/$defs/side"}, {"type": "null"}]},
+        "top": {"$ref": "common.schema.json#/$defs/gameSideOrNull"},
+        "bottom": {"$ref": "common.schema.json#/$defs/gameSideOrNull"}
+      }
+    }
+  }
+}

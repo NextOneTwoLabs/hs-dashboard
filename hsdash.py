@@ -11,6 +11,10 @@
   python hsdash.py build [--check] [--export]
                                           rebuild public/archive (and export/) from archive/raw, offline;
                                           --check fails if the committed files are stale (CI)
+  python hsdash.py validate [--fresh | --archive DIR]
+                                          check the published files against schema/*.schema.json, plus
+                                          cross-checks (#8 PR 4); --fresh validates a build written to a temp
+                                          directory. Needs requirements-dev.txt (jsonschema), unlike the rest
   python hsdash.py serve [--port 8787]    the local offline server (dev_server.py)
 
 Every crawl ends with a build, as before. The old `python -m crawler.hs --…` commands still work through a
@@ -66,6 +70,10 @@ def parser():
     c = sub.add_parser("build", help="rebuild public/archive from archive/raw (offline)")
     c.add_argument("--check", action="store_true", help="fail if the committed files are stale")
     c.add_argument("--export", action="store_true", help="also write the CSV exports")
+    c = sub.add_parser("validate", help="check the published files against their schemas, plus cross-checks")
+    where = c.add_mutually_exclusive_group()
+    where.add_argument("--fresh", action="store_true", help="validate a build written to a temp directory")
+    where.add_argument("--archive", help="validate this directory instead of public/archive")
     c = sub.add_parser("serve", help="the local offline server")
     c.add_argument("--port", type=int, default=8787)
     return p
@@ -76,6 +84,9 @@ def main(argv=None):
     if args.cmd == "serve":
         import dev_server
         return dev_server.main(["--port", str(args.port)])
+    if args.cmd == "validate":
+        from build_lib import validate
+        return validate.main(["--fresh"] if args.fresh else ["--archive", args.archive] if args.archive else [])
     from collect.refresh import main as engine
     return engine(legacy_argv(args))
 

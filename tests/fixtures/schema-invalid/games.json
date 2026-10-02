@@ -1,0 +1,16 @@
+{
+  "why": "Byes are not games: the feed leaves them out.",
+  "errorAt": "$.games[0].status",
+  "fix": {"at": "/games/0/status", "value": "final"},
+  "document": {
+    "schema": 1,
+    "state": "TX",
+    "season": "2025-26",
+    "games": [
+      {"id": "g1", "state": "TX", "competition": "tx-uil", "division": "6a-d1", "divisionLabel": "Conference 6A D1",
+       "gender": "girls", "round": 0, "roundName": "Bi-District", "date": "2026-03-19", "status": "bye",
+       "decidedBy": null, "winner": "top",
+       "top": {"id": "aaa-111", "name": "Alpha", "seed": 1, "score": null}, "bottom": null}
+    ]
+  }
+}

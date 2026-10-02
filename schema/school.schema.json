@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hs-dashboard.local/schema/school.schema.json",
+  "title": "One school's playoff appearances (public/archive/schools/<id>.json)",
+  "description": "/api/v1/schools/{id}. hsdash.py validate also checks that the file name is the id, the summary adds up from the appearances, and every appearance is in its bracket.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "name", "fullName", "city", "state", "maxpreps", "summary", "best", "appearances"],
+  "properties": {
+    "schema": {"$ref": "common.schema.json#/$defs/schemaVersion1"},
+    "id": {"$ref": "common.schema.json#/$defs/schoolId"},
+    "name": {"$ref": "common.schema.json#/$defs/name"},
+    "fullName": {"type": ["string", "null"], "minLength": 1},
+    "city": {"type": ["string", "null"]},
+    "state": {"$ref": "common.schema.json#/$defs/state"},
+    "maxpreps": {"$ref": "common.schema.json#/$defs/urlOrNull"},
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["appearances", "titles", "finals", "w", "l", "d"],
+      "properties": {
+        "appearances": {"type": "integer", "minimum": 1},
+        "titles": {"$ref": "common.schema.json#/$defs/count"},
+        "finals": {"$ref": "common.schema.json#/$defs/count"},
+        "w": {"$ref": "common.schema.json#/$defs/count"},
+        "l": {"$ref": "common.schema.json#/$defs/count"},
+        "d": {"$ref": "common.schema.json#/$defs/count"}
+      }
+    },
+    "best": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["season", "competition", "division", "divisionLabel", "result", "reached"],
+      "properties": {
+        "season": {"$ref": "common.schema.json#/$defs/season"},
+        "competition": {"$ref": "common.schema.json#/$defs/competitionId"},
+        "division": {"$ref": "common.schema.json#/$defs/divisionCode"},
+        "divisionLabel": {"$ref": "common.schema.json#/$defs/name"},
+        "result": {"$ref": "common.schema.json#/$defs/appearanceResult"},
+        "reached": {"type": ["string", "null"]}
+      }
+    },
+    "appearances": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/appearance"}}
+  },
+  "$defs": {
+    "appearance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["season", "state", "competition", "division", "divisionLabel", "gender", "seed", "rounds", "w", "l", "d",
+                   "gf", "ga", "games", "reachedRound", "reached", "result", "depth"],
+      "properties": {
+        "season": {"$ref": "common.schema.json#/$defs/season"},
+        "state": {"$ref": "common.schema.json#/$defs/state"},
+        "competition": {"$ref": "common.schema.json#/$defs/competitionId"},
+        "division": {"$ref": "common.schema.json#/$defs/divisionCode"},
+        "divisionLabel": {"$ref": "common.schema.json#/$defs/name"},
+        "gender": {"$ref": "common.schema.json#/$defs/gender"},
+        "seed": {"$ref": "common.schema.json#/$defs/countOrNull"},
+        "rounds": {"type": "integer", "minimum": 1},
+        "w": {"$ref": "common.schema.json#/$defs/count"},
+        "l": {"$ref": "common.schema.json#/$defs/count"},
+        "d": {"$ref": "common.schema.json#/$defs/count"},
+        "gf": {"$ref": "common.schema.json#/$defs/count"},
+        "ga": {"$ref": "common.schema.json#/$defs/count"},
+        "games": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/game"}},
+        "reachedRound": {"$ref": "common.schema.json#/$defs/count"},
+        "reached": {"type": ["string", "null"]},
+        "result": {"$ref": "common.schema.json#/$defs/appearanceResult"},
+        "depth": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "game": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["round", "roundName", "date", "opp", "gf", "ga", "res", "pk"],
+      "properties": {
+        "round": {"$ref": "common.schema.json#/$defs/count"},
+        "roundName": {"type": ["string", "null"]},
+        "date": {"$ref": "common.schema.json#/$defs/dateOrNull"},
+        "opp": {"$ref": "common.schema.json#/$defs/gameSideOrNull"},
+        "gf": {"$ref": "common.schema.json#/$defs/countOrNull"},
+        "ga": {"$ref": "common.schema.json#/$defs/countOrNull"},
+        "res": {"enum": ["W", "L", "D", "BYE", null]},
+        "pk": {"enum": ["W", "L", null]},
+        "place": {"type": "integer"}
+      },
+      "allOf": [
+        {"if": {"properties": {"pk": {"enum": ["W", "L"]}}, "required": ["pk"]}, "then": {"properties": {"res": {"const": "D"}}}}
+      ]
+    }
+  }
+}
