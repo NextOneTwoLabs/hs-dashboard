@@ -52,7 +52,7 @@ export function termButtons(statesIndex, term) {
   const rows = covered(statesIndex);
   const terms = [['', 'All'], ...Object.entries(TERM).filter(([t]) => rows.some((s) => s.terms.includes(t)))];
   const buttons = terms.map(([t, label]) => `<button type="button" id="f-term-${t || 'all'}" data-term="${t}" aria-pressed="${t === (term || '')}">${esc(label)}</button>`).join('');
-  return `<div class="field"><span class="field-label" id="f-term-label">Season of play</span><div class="seg" role="group" aria-labelledby="f-term-label">${buttons}</div></div>`;
+  return `<div class="field seg-field"><span class="field-label" id="f-term-label">Season of play</span><div class="seg" role="group" aria-labelledby="f-term-label">${buttons}</div></div>`;
 }
 
 // What a change also clears, so the next level falls back to its default (state.js normalize):

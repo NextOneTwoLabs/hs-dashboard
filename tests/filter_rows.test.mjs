@@ -138,3 +138,17 @@ test('7. the bracket\'s round pills keep focus: each has a stable id that surviv
   assert.match(list.controls.innerHTML, /<p class="filter-hint">Search by name or city in the box at the top\.<\/p>/);
   assert.doesNotMatch(list.controls.innerHTML, /filter-term/);
 });
+
+// #23 review B2: at 320 px the landing's four "Season of play" buttons beside the 92 px label column ran past the
+// panel (Spring at 289–358 against an edge at 304) and `.seg { overflow: hidden }` cut it to "Sp".
+test('8. phones: a toggle group stacks under its label and wraps, so no button is cut off', async () => {
+  const landing = await open('#tab=teams');
+  assert.match(landing.controls.innerHTML, /<div class="field seg-field"><span class="field-label" id="f-term-label">Season of play<\/span><div class="seg"/);
+  const { segmented } = await import('../public/js/components/controls.js');
+  assert.match(segmented('g', 'g', [['b', 'Boys'], ['g', 'Girls']], 'Gender'), /^<div class="field seg-field">/, 'the gender toggle too');
+  const css = await read('public/css/app.css');
+  const phone = css.slice(css.indexOf('@media (max-width: 768px)'));
+  assert.match(phone, /\.controls \.seg-field \{ flex-direction: column; align-items: stretch;/, 'the label sits above the buttons');
+  assert.match(phone, /\.controls \.seg \{ display: flex; flex-wrap: wrap; overflow: visible; \}/, 'the group wraps and is not clipped');
+  assert.match(phone, /\.controls \.seg button \{ flex: 1 1 auto;/, 'the buttons share the full width');
+});

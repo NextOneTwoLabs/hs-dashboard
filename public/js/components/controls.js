@@ -8,7 +8,7 @@ export function segmented(key, value, options, label) {
   const buttons = options
     .map(([v, text]) => `<button type="button" id="f-${key}-${esc(v)}" data-set-${key}="${esc(v)}" aria-pressed="${v === value}">${esc(text)}</button>`)
     .join('');
-  return `<div class="field">${label ? `<span class="field-label">${esc(label)}</span>` : ''}<div class="seg" role="group" aria-label="${esc(label || key)}">${buttons}</div></div>`;
+  return `<div class="field seg-field">${label ? `<span class="field-label">${esc(label)}</span>` : ''}<div class="seg" role="group" aria-label="${esc(label || key)}">${buttons}</div></div>`;
 }
 
 // Only shown when the catalog publishes more than one gender.
