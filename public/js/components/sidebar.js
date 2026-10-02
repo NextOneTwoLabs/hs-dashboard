@@ -5,14 +5,20 @@
 import { bracketHref, esc } from '../util.js';
 import { hrefFor } from '../nav.js';
 
+// The accessible name starts with the visible text (WCAG 2.5.3, Label in Name): "TX, Texas, 6 brackets in 2025-26".
+export function srName(label, name, count, unit) {
+  const base = !name || name === label || name.startsWith(label) ? (name || label) : `${label}, ${name}`;
+  return count != null ? `${base}, ${count} ${unit}`.trim() : base;
+}
+
 export function pillLink(href, label, { current = false, count = null, unit = '', name = label } = {}) {
-  const sr = count != null ? `${name}, ${count} ${unit}`.trim() : name;
+  const sr = srName(label, name, count, unit);
   return `<a class="pill" href="${esc(href)}"${current ? ' aria-current="true"' : ''} aria-label="${esc(sr)}">`
     + `${esc(label)}${count != null ? `<span class="pill-sub" aria-hidden="true">${esc(count)}</span>` : ''}</a>`;
 }
 
 export function pillButton(attrs, label, { pressed = false, count = null, unit = '', name = label } = {}) {
-  const sr = count != null ? `${name}, ${count} ${unit}`.trim() : name;
+  const sr = srName(label, name, count, unit);
   return `<button type="button" class="pill" ${attrs} aria-pressed="${pressed}" aria-label="${esc(sr)}">`
     + `${esc(label)}${count != null ? `<span class="pill-sub" aria-hidden="true">${esc(count)}</span>` : ''}</button>`;
 }
@@ -65,7 +71,7 @@ export function showPills(state) {
   const show = state.show || 'all';
   return group('Show', [['all', 'All'], ['results', 'Results'], ['upcoming', 'Upcoming']].map(([v, label]) =>
     pillLink(hrefFor({ tab: 'results', st: state.st, season: state.season, g: state.g, show: v === 'all' ? null : v }), label,
-      { current: show === v, name: `Show ${label.toLowerCase()}` })).join(''));
+      { current: show === v })).join(''));
 }
 
 // Season-of-play filter on the States view: it only filters the cards, so it is a button.

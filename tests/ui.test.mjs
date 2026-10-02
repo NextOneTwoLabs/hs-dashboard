@@ -74,13 +74,14 @@ test('state pills count brackets (and schools); division pills have no count', (
   const expected = { CA: 5, FL: 7, GA: 8, PA: 4, TX: 6, WA: 5 };
   for (const [code, n] of Object.entries(expected)) {
     const name = statesIndex.states.find((s) => s.code === code).name;
-    assert.match(pills, new RegExp(`aria-label="${name}, ${n} brackets in 2025-26">${code}<span class="pill-sub" aria-hidden="true">${n}</span>`), code);
+    // #11: the accessible name starts with the visible code (Label in Name).
+    assert.match(pills, new RegExp(`aria-label="${code}, ${name}, ${n} brackets in 2025-26">${code}<span class="pill-sub" aria-hidden="true">${n}</span>`), code);
   }
   assert.match(pills, /href="#tab=playoffs&amp;st=TX" aria-current="true"/);
   assert.equal((pills.match(/aria-current/g) || []).length, 1);
 
   const schools = sidebar.statePills(statesIndex, null, (c) => hrefFor({ tab: 'schools', st: c }), { all: '#tab=schools', count: 'schools' });
-  assert.match(schools, /aria-label="Texas, 384 schools">TX<span class="pill-sub" aria-hidden="true">384<\/span>/);
+  assert.match(schools, /aria-label="TX, Texas, 384 schools">TX<span class="pill-sub" aria-hidden="true">384<\/span>/);
   assert.match(schools, /href="#tab=schools" aria-current="true" aria-label="All states">All</);
 
   const tx = open('#tab=playoffs&st=TX');
@@ -88,7 +89,7 @@ test('state pills count brackets (and schools); division pills have no count', (
   const divs = sidebar.divisionPills(comp, tx);
   assert.equal((divs.match(/class="pill"/g) || []).length, 6);
   assert.doesNotMatch(divs, /pill-sub/);
-  assert.match(divs, /aria-current="true" aria-label="Conference 6A D1">6A D1</);
+  assert.match(divs, /aria-current="true" aria-label="6A D1, Conference 6A D1">6A D1</);
 });
 
 test('the sidebar is built from states.json and the state catalog only (no requests)', async () => {
@@ -142,7 +143,7 @@ test('pills, tabs and the drawer toggle use link and ARIA semantics', async () =
   const term = sidebar.termPills(statesIndex, 'fall');
   assert.match(term, /<button type="button" class="pill" data-term="fall" aria-pressed="true" aria-label="Fall, 2 states">/);
   assert.match(sidebar.pillLink('#x', 'TX', { current: true, count: 6, unit: 'brackets', name: 'Texas' }),
-    /^<a class="pill" href="#x" aria-current="true" aria-label="Texas, 6 brackets">TX<span class="pill-sub" aria-hidden="true">6<\/span><\/a>$/);
+    /^<a class="pill" href="#x" aria-current="true" aria-label="TX, Texas, 6 brackets">TX<span class="pill-sub" aria-hidden="true">6<\/span><\/a>$/);
   const head = pageHeadHtml({ crumbs: [['All states', '#tab=states'], ['Texas', '#tab=playoffs&st=TX'], ['2025-26']], title: '6A D1', subtitle: 'UIL' });
   assert.match(head, /<a href="#tab=states">All states<\/a>.*<span class="breadcrumb-current" aria-current="page">2025-26<\/span>/s);
   assert.match(head, /<h1 class="content-title" tabindex="-1">6A D1<\/h1>/);
