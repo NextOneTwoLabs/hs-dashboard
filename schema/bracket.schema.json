@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hs-dashboard.local/schema/bracket.schema.json",
+  "title": "One normalized bracket (public/archive/brackets/<season>/<competition>/<division>.json)",
+  "description": "/api/v1/seasons/{season}/competitions/{competition}/divisions/{division}/bracket. Written by build.load_brackets from the raw MaxPreps view (collect/maxpreps.parse). hsdash.py validate also checks what a schema can't: the path matches the content, game ids are unique, every `next` is a later game in the same bracket, and the champion won the final.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "season", "state", "competition", "division", "source", "champion", "rounds", "games"],
+  "properties": {
+    "schema": {"$ref": "common.schema.json#/$defs/schemaVersion1"},
+    "season": {"$ref": "common.schema.json#/$defs/season"},
+    "state": {"$ref": "common.schema.json#/$defs/state"},
+    "competition": {"$ref": "common.schema.json#/$defs/competitionId"},
+    "division": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "gender", "label"],
+      "properties": {
+        "code": {"$ref": "common.schema.json#/$defs/divisionCode"},
+        "gender": {"$ref": "common.schema.json#/$defs/gender"},
+        "label": {"$ref": "common.schema.json#/$defs/name"}
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cif", "maxpreps", "fetchedAt"],
+      "properties": {
+        "cif": {"$ref": "common.schema.json#/$defs/urlOrNull"},
+        "maxpreps": {"$ref": "common.schema.json#/$defs/urlOrNull"},
+        "fetchedAt": {"anyOf": [{"$ref": "common.schema.json#/$defs/dateTime"}, {"type": "null"}]}
+      }
+    },
+    "champion": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["schoolId", "name", "fullName"],
+          "properties": {
+            "schoolId": {"$ref": "common.schema.json#/$defs/schoolIdOrNull"},
+            "name": {"$ref": "common.schema.json#/$defs/name"},
+            "fullName": {"$ref": "common.schema.json#/$defs/name"}
+          }
+        },
+        {"type": "null"}
+      ]
+    },
+    "rounds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["index", "name", "date"],
+        "properties": {
+          "index": {"$ref": "common.schema.json#/$defs/count"},
+          "name": {"$ref": "common.schema.json#/$defs/name"},
+          "date": {"$ref": "common.schema.json#/$defs/dateOrNull"}
+        }
+      }
+    },
+    "games": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/game"}}
+  },
+  "$defs": {
+    "team": {
+      "description": "A team as parsed: the MaxPreps school id (before school-aliases merges), its page path, and a PK score when the source shows one.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schoolId", "name", "seed", "score", "pk", "path"],
+      "properties": {
+        "schoolId": {"$ref": "common.schema.json#/$defs/schoolIdOrNull"},
+        "name": {"type": "string"},
+        "seed": {"$ref": "common.schema.json#/$defs/countOrNull"},
+        "score": {"$ref": "common.schema.json#/$defs/countOrNull"},
+        "pk": {"$ref": "common.schema.json#/$defs/countOrNull"},
+        "path": {"anyOf": [{"type": "string", "pattern": "^/"}, {"type": "null"}]}
+      }
+    },
+    "teamOrNull": {"anyOf": [{"$ref": "#/$defs/team"}, {"type": "null"}]},
+    "game": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "round", "slot", "date", "status", "decidedBy", "top", "bottom", "winner", "next", "matchUrl"],
+      "properties": {
+        "id": {"type": ["string", "null"], "minLength": 1},
+        "round": {"$ref": "common.schema.json#/$defs/count"},
+        "slot": {"$ref": "common.schema.json#/$defs/count"},
+        "date": {"$ref": "common.schema.json#/$defs/dateOrNull"},
+        "status": {"$ref": "common.schema.json#/$defs/gameStatus"},
+        "decidedBy": {"$ref": "common.schema.json#/$defs/decidedBy"},
+        "top": {"$ref": "#/$defs/teamOrNull"},
+        "bottom": {"$ref": "#/$defs/teamOrNull"},
+        "winner": {"anyOf": [{"$ref": "common.schema.json#/$defs/side"}, {"type": "null"}]},
+        "next": {"type": ["string", "null"], "minLength": 1},
+        "matchUrl": {"$ref": "common.schema.json#/$defs/urlOrNull"},
+        "place": {"type": "integer", "description": "Set only on a game from another place's view, e.g. 3 for a third-place game."}
+      },
+      "allOf": [
+        {"if": {"properties": {"status": {"const": "final"}}}, "then": {"properties": {"winner": {"$ref": "common.schema.json#/$defs/side"}}}},
+        {"if": {"properties": {"status": {"const": "bye"}}}, "then": {"properties": {"winner": {"$ref": "common.schema.json#/$defs/side"}, "decidedBy": {"const": null}}}},
+        {"if": {"properties": {"status": {"enum": ["scheduled", "unreported"]}}}, "then": {"properties": {"winner": {"const": null}, "decidedBy": {"const": null}}}}
+      ]
+    }
+  }
+}

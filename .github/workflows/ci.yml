@@ -16,6 +16,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      # jsonschema for `hsdash.py validate` and tests/test_validate.py (dev and CI only; pinned).
+      - name: Dev dependencies
+        run: python -m pip install -r requirements-dev.txt
       - name: Python tests (network blocked)
         env:
           PYTHONPATH: tests/netguard
@@ -24,3 +27,7 @@ jobs:
         run: node --test "tests/*.test.mjs"
       - name: Derived files are up to date
         run: python hsdash.py build --check --export
+      - name: Published files match their schemas (committed tree)
+        run: python hsdash.py validate
+      - name: Published files match their schemas (a fresh build in a temp directory)
+        run: python hsdash.py validate --fresh

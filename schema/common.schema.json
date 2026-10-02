@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hs-dashboard.local/schema/common.schema.json",
+  "title": "Shared definitions for the published files (#8 PR 4)",
+  "description": "Not a document kind: the other schemas $ref these. Patterns match the route checks in api/routes.mjs (season, state, competition, division, school id). Dates are plain patterns, not `format`, so they are asserted.",
+  "$defs": {
+    "schemaVersion1": {"const": 1},
+    "season": {"type": "string", "pattern": "^\\d{4}-\\d{2}$"},
+    "state": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "competitionId": {"type": "string", "pattern": "^[a-z][a-z0-9-]{1,40}$"},
+    "divisionCode": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,29}$"},
+    "schoolId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{2,100}$"},
+    "schoolIdOrNull": {"anyOf": [{"$ref": "#/$defs/schoolId"}, {"type": "null"}]},
+    "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "dateOrNull": {"anyOf": [{"$ref": "#/$defs/date"}, {"type": "null"}]},
+    "dateTime": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"},
+    "url": {"type": "string", "pattern": "^https://"},
+    "urlOrNull": {"anyOf": [{"$ref": "#/$defs/url"}, {"type": "null"}]},
+    "name": {"type": "string", "minLength": 1},
+    "count": {"type": "integer", "minimum": 0},
+    "countOrNull": {"type": ["integer", "null"], "minimum": 0},
+    "gender": {"enum": ["boys", "girls"]},
+    "genderCode": {"enum": ["b", "g"]},
+    "genderCodes": {"type": "array", "items": {"$ref": "#/$defs/genderCode"}, "minItems": 1, "uniqueItems": true},
+    "term": {"enum": ["fall", "winter", "spring"]},
+    "side": {"enum": ["top", "bottom"]},
+    "gameStatus": {"enum": ["scheduled", "final", "bye", "unreported"]},
+    "decidedBy": {"enum": ["pk", "unreported", null]},
+    "divisionStatus": {"enum": ["scheduled", "in-progress", "complete", "unreported"]},
+    "appearanceResult": {"enum": ["champion", "runner-up", "eliminated", "alive", "unreported"]},
+    "schoolRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name"],
+      "properties": {"id": {"$ref": "#/$defs/schoolId"}, "name": {"$ref": "#/$defs/name"}}
+    },
+    "schoolRefOrNull": {"anyOf": [{"$ref": "#/$defs/schoolRef"}, {"type": "null"}]},
+    "gameSide": {
+      "description": "A team in a game as the derived files show it: id after school-aliases merges (null when the source gave none).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "seed", "score"],
+      "properties": {
+        "id": {"$ref": "#/$defs/schoolIdOrNull"},
+        "name": {"type": "string"},
+        "seed": {"$ref": "#/$defs/countOrNull"},
+        "score": {"$ref": "#/$defs/countOrNull"}
+      }
+    },
+    "gameSideOrNull": {"anyOf": [{"$ref": "#/$defs/gameSide"}, {"type": "null"}]},
+    "stateMeta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "association", "associationName"],
+      "properties": {
+        "name": {"$ref": "#/$defs/name"},
+        "association": {"$ref": "#/$defs/name"},
+        "associationName": {"$ref": "#/$defs/name"}
+      }
+    },
+    "competitionMeta": {
+      "description": "A sources.json competition without its `source` (catalog.json and states.json).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "term", "label", "short"],
+      "properties": {
+        "state": {"$ref": "#/$defs/state"},
+        "term": {"$ref": "#/$defs/term"},
+        "gender": {"$ref": "#/$defs/gender"},
+        "label": {"$ref": "#/$defs/name"},
+        "short": {"$ref": "#/$defs/name"},
+        "liveFrom": {"type": "string", "pattern": "^\\d{2}-\\d{2}$"},
+        "liveTo": {"type": "string", "pattern": "^\\d{2}-\\d{2}$"}
+      }
+    },
+    "catalogDivision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "gender", "label", "games", "played", "status", "champion", "runnerUp", "start", "end", "order"],
+      "properties": {
+        "code": {"$ref": "#/$defs/divisionCode"},
+        "gender": {"$ref": "#/$defs/gender"},
+        "label": {"$ref": "#/$defs/name"},
+        "games": {"$ref": "#/$defs/count"},
+        "played": {"$ref": "#/$defs/count"},
+        "status": {"$ref": "#/$defs/divisionStatus"},
+        "champion": {"$ref": "#/$defs/schoolRefOrNull"},
+        "runnerUp": {"$ref": "#/$defs/schoolRefOrNull"},
+        "start": {"$ref": "#/$defs/dateOrNull"},
+        "end": {"$ref": "#/$defs/dateOrNull"},
+        "order": {"$ref": "#/$defs/count"}
+      }
+    },
+    "catalogCompetition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "state", "label", "short", "term", "divisions"],
+      "properties": {
+        "id": {"$ref": "#/$defs/competitionId"},
+        "state": {"$ref": "#/$defs/state"},
+        "label": {"$ref": "#/$defs/name"},
+        "short": {"$ref": "#/$defs/name"},
+        "term": {"anyOf": [{"$ref": "#/$defs/term"}, {"type": "null"}]},
+        "divisions": {"type": "array", "items": {"$ref": "#/$defs/catalogDivision"}}
+      }
+    },
+    "directoryRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "city", "state", "gender", "apps", "titles", "last"],
+      "properties": {
+        "id": {"$ref": "#/$defs/schoolId"},
+        "name": {"$ref": "#/$defs/name"},
+        "city": {"type": ["string", "null"]},
+        "state": {"$ref": "#/$defs/state"},
+        "gender": {"$ref": "#/$defs/genderCodes"},
+        "apps": {"type": "integer", "minimum": 1},
+        "titles": {"$ref": "#/$defs/count"},
+        "last": {"$ref": "#/$defs/season"}
+      }
+    }
+  }
+}

@@ -21,7 +21,8 @@ Design notes are in [docs/DESIGN.md](docs/DESIGN.md).
 
 ```
 public/data/sources.json      registry: states, competitions, seasons -> CIF paths / MaxPreps tournament ids
-hsdash.py                     the CLI: refresh, backfill, season, discover, build, serve
+hsdash.py                     the CLI: refresh, backfill, season, discover, build, validate, serve
+schema/*.schema.json          JSON Schemas (Draft 2020-12) for every published file; build_lib/validate.py checks them
 collect/                      refresh.py (live detection, crawler), fetch.py, cif.py + maxpreps.py (parsers), discover.py
 build.py, build_lib/          the offline build (public/archive and export/ from archive/raw); store.py, divisions.py
 crawler/hs.py                 deprecated shim: `python -m crawler.hs --…` still works (same engine)
@@ -67,6 +68,9 @@ python hsdash.py season 2025-26           # one season (add --state TX for one s
 python hsdash.py discover 2026-27         # list MaxPreps tournaments for review (3 requests)
 python hsdash.py build --export           # rebuild public/archive and export/ from raw (offline)
 python hsdash.py build --check            # drift check (CI)
+python -m pip install -r requirements-dev.txt   # once: jsonschema, for validate and its tests (dev and CI only)
+python hsdash.py validate                 # published files vs schema/*.schema.json, plus cross-checks (CI)
+python hsdash.py validate --fresh         # the same on a build written to a temp directory (CI)
 python hsdash.py serve                    # http://localhost:8787, same /api/v1 as the Worker (dev_server.py)
 PYTHONPATH=tests/netguard python -m unittest discover -s tests -p 'test_*.py'
 node --test "tests/*.test.mjs"

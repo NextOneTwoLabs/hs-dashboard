@@ -1,0 +1,24 @@
+{
+  "why": "A division's status is scheduled, in-progress, complete or unreported.",
+  "errorAt": "$.seasons[0].competitions[0].divisions[0].status",
+  "fix": {"at": "/seasons/0/competitions/0/divisions/0/status", "value": "complete"},
+  "document": {
+    "schema": 1,
+    "state": "TX",
+    "name": "Texas",
+    "association": "UIL",
+    "associationName": "University Interscholastic League",
+    "activeSeason": "2026-27",
+    "latestSeason": "2025-26",
+    "genders": ["g"],
+    "seasons": [
+      {"season": "2025-26", "note": null, "competitions": [
+        {"id": "tx-uil", "state": "TX", "label": "UIL State Championships", "short": "State", "term": "winter", "divisions": [
+          {"code": "6a-d1", "gender": "girls", "label": "Conference 6A D1", "games": 63, "played": 63, "status": "done",
+           "champion": {"id": "aaa-111", "name": "Alpha"}, "runnerUp": {"id": "bbb-222", "name": "Beta"},
+           "start": "2026-03-19", "end": "2026-04-09", "order": 0}
+        ]}
+      ]}
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hs-dashboard.local/schema/status.schema.json",
+  "title": "The last crawl that changed something (public/archive/refresh-state.json)",
+  "description": "/api/v1/status. Written by a crawl (collect/refresh.py), not by a build, so a fresh build has none. `updatedAt` is when data last changed, not the last cron run. `recheckSkipped` was added after some files were written, so it is optional.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "updatedAt", "mode", "requests", "blocked", "budgetExhausted", "crawled", "failed", "durationSeconds"],
+  "properties": {
+    "schema": {"$ref": "common.schema.json#/$defs/schemaVersion1"},
+    "updatedAt": {"$ref": "common.schema.json#/$defs/dateTime"},
+    "mode": {"enum": ["refresh", "backfill", "season"]},
+    "requests": {"$ref": "common.schema.json#/$defs/count"},
+    "blocked": {"type": "boolean"},
+    "budgetExhausted": {"type": "boolean"},
+    "recheckSkipped": {"$ref": "common.schema.json#/$defs/count"},
+    "crawled": {"type": "array", "items": {"type": "string", "pattern": "^\\d{4}-\\d{2}/[a-z][a-z0-9-]*/[a-z0-9][a-z0-9-]*$"}},
+    "failed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["url", "status"],
+        "properties": {
+          "url": {"$ref": "common.schema.json#/$defs/url"},
+          "status": {"anyOf": [{"type": "integer", "minimum": 100, "maximum": 599}, {"const": "network"}]}
+        }
+      }
+    },
+    "durationSeconds": {"type": "number", "minimum": 0}
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hs-dashboard.local/schema/sources.schema.json",
+  "title": "The crawl registry (public/data/sources.json, schema 2)",
+  "description": "/api/v1/sources. Hand-edited: which states, competitions and seasons are crawled, and how. `refresh` holds the crawler's tuning and stays open to new settings; everything a build reads is pinned. hsdash.py validate also checks that every season's competitions are registered and that each competition's state is registered.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "sport", "genders", "activeSeason", "sources", "refresh", "aliases", "states", "competitions", "seasons"],
+  "properties": {
+    "schema": {"const": 2},
+    "sport": {"const": "soccer"},
+    "genders": {"$ref": "common.schema.json#/$defs/genderCodes"},
+    "activeSeason": {"$ref": "common.schema.json#/$defs/season"},
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cif", "maxpreps"],
+      "properties": {
+        "cif": {"$ref": "#/$defs/site"},
+        "maxpreps": {"$ref": "#/$defs/site"}
+      }
+    },
+    "refresh": {
+      "type": "object",
+      "required": ["maxRequests", "lookaheadDays", "lookbackDays", "recheckSlotUtc", "termWindows"],
+      "properties": {
+        "maxRequests": {"type": "integer", "minimum": 1},
+        "lookaheadDays": {"$ref": "common.schema.json#/$defs/count"},
+        "lookbackDays": {"$ref": "common.schema.json#/$defs/count"},
+        "recheckSlotUtc": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["start", "end"],
+          "properties": {
+            "start": {"type": "string", "pattern": "^\\d{2}:\\d{2}$"},
+            "end": {"type": "string", "pattern": "^\\d{2}:\\d{2}$"}
+          }
+        },
+        "termWindows": {
+          "type": "object",
+          "propertyNames": {"$ref": "common.schema.json#/$defs/term"},
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["from", "to", "year"],
+            "properties": {
+              "from": {"$ref": "#/$defs/monthDay"},
+              "to": {"$ref": "#/$defs/monthDay"},
+              "year": {"enum": ["start", "end"]}
+            }
+          }
+        },
+        "notes": {"type": "string"}
+      }
+    },
+    "aliases": {"type": "object", "additionalProperties": {"$ref": "common.schema.json#/$defs/competitionId"}},
+    "states": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {"$ref": "common.schema.json#/$defs/state"},
+      "additionalProperties": {"$ref": "common.schema.json#/$defs/stateMeta"}
+    },
+    "competitions": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {"$ref": "common.schema.json#/$defs/competitionId"},
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["state", "source", "term", "label", "short"],
+        "properties": {
+          "state": {"$ref": "common.schema.json#/$defs/state"},
+          "source": {"enum": ["cif", "maxpreps"]},
+          "term": {"$ref": "common.schema.json#/$defs/term"},
+          "gender": {"$ref": "common.schema.json#/$defs/gender"},
+          "label": {"$ref": "common.schema.json#/$defs/name"},
+          "short": {"$ref": "common.schema.json#/$defs/name"},
+          "liveFrom": {"$ref": "#/$defs/monthDay"},
+          "liveTo": {"$ref": "#/$defs/monthDay"}
+        }
+      }
+    },
+    "seasons": {
+      "type": "object",
+      "propertyNames": {"$ref": "common.schema.json#/$defs/season"},
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["competitions"],
+        "properties": {
+          "competitions": {
+            "type": "object",
+            "propertyNames": {"$ref": "common.schema.json#/$defs/competitionId"},
+            "additionalProperties": {"$ref": "#/$defs/seasonCompetition"}
+          },
+          "notes": {
+            "type": "object",
+            "propertyNames": {"$ref": "common.schema.json#/$defs/state"},
+            "additionalProperties": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "monthDay": {"type": "string", "pattern": "^\\d{2}-\\d{2}$"},
+    "site": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["base", "delaySeconds"],
+      "properties": {
+        "base": {"$ref": "common.schema.json#/$defs/url"},
+        "delaySeconds": {"type": "number", "minimum": 1}
+      }
+    },
+    "seasonCompetition": {
+      "description": "Where a season's brackets are found: a CIF folder (`path`) or a MaxPreps tournament and its list page.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "tournament": {"type": "string", "minLength": 1},
+        "list": {"type": "string", "pattern": "^/"},
+        "window": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["start", "end"],
+          "properties": {"start": {"$ref": "common.schema.json#/$defs/date"}, "end": {"$ref": "common.schema.json#/$defs/date"}}
+        },
+        "liveFrom": {"$ref": "#/$defs/monthDay"},
+        "liveTo": {"$ref": "#/$defs/monthDay"}
+      },
+      "oneOf": [
+        {"required": ["path"], "not": {"anyOf": [{"required": ["tournament"]}, {"required": ["list"]}]}},
+        {"required": ["tournament", "list"], "not": {"required": ["path"]}}
+      ]
+    }
+  }
+}

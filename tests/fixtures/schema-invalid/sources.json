@@ -1,0 +1,26 @@
+{
+  "why": "A season's competition is found either by a CIF folder (path) or by a MaxPreps tournament and its list page, not both.",
+  "errorAt": "$.seasons['2025-26'].competitions['tx-uil']",
+  "fix": {"at": "/seasons/2025-26/competitions/tx-uil", "value": {"tournament": "abc", "list": "/tournament/list/abc/x.htm"}},
+  "document": {
+    "schema": 2,
+    "sport": "soccer",
+    "genders": ["g"],
+    "activeSeason": "2026-27",
+    "sources": {
+      "cif": {"base": "https://www.cifstate.org/sports/soccer/", "delaySeconds": 8},
+      "maxpreps": {"base": "https://www.maxpreps.com", "delaySeconds": 4}
+    },
+    "refresh": {
+      "maxRequests": 60, "lookaheadDays": 2, "lookbackDays": 3,
+      "recheckSlotUtc": {"start": "06:00", "end": "06:29"},
+      "termWindows": {"winter": {"from": "01-15", "to": "04-20", "year": "end"}}
+    },
+    "aliases": {},
+    "states": {"TX": {"name": "Texas", "association": "UIL", "associationName": "University Interscholastic League"}},
+    "competitions": {"tx-uil": {"state": "TX", "source": "maxpreps", "term": "winter", "gender": "girls", "label": "UIL State Championships", "short": "State"}},
+    "seasons": {
+      "2025-26": {"competitions": {"tx-uil": {"path": "brkts_2026", "tournament": "abc", "list": "/tournament/list/abc/x.htm"}}}
+    }
+  }
+}

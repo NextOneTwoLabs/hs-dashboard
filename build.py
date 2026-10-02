@@ -117,8 +117,19 @@ def _outcome(game, side):
     return ("W" if won else "L"), None
 
 
-def build_all(sources, check=False, export=False, warn=None):
+def _shown(path):
+    """A path for messages: relative to the repo, or as is outside it (a temp build)."""
+    try:
+        return str(path.relative_to(store.ROOT))
+    except ValueError:
+        return str(path)
+
+
+def build_all(sources, check=False, export=False, warn=None, archive=None):
+    """`archive` writes the served files somewhere else than public/archive, e.g. a temp directory for
+    `hsdash.py validate --fresh` (#8 PR 4). The inputs are always the repo's."""
     warn = warn or (lambda msg: print("warning: " + msg, file=sys.stderr))
+    archive = archive or store.ARCHIVE
     links = store.load_json(store.LINKS, {}) or {}
     aliases = store.load_json(store.ALIASES, {}) or {}
     merge = aliases.get("merge", {})
@@ -341,7 +352,7 @@ def build_all(sources, check=False, export=False, warn=None):
         "seasons": sorted(all_seasons.values(), key=lambda s: s["season"], reverse=True),
     }
 
-    files = {store.ARCHIVE / rel: store.dumps(obj) for rel, obj in out.items()}
+    files = {archive / rel: store.dumps(obj) for rel, obj in out.items()}
     if export:
         for b in brackets:
             files[store.EXPORT / b["season"] / f"{b['competition']}-{b['division']['code']}.csv"] = _csv(b)
@@ -349,13 +360,13 @@ def build_all(sources, check=False, export=False, warn=None):
     # Under --check a skipped bracket fails CI instead of silently vanishing from the site.
     changed = list(errors) if check else []
     # Prune derived files that are no longer produced (e.g. a gender switched off).
-    managed = [store.ARCHIVE / sub for sub in ("brackets", "schools", "seasons", "states")]
+    managed = [archive / sub for sub in ("brackets", "schools", "seasons", "states")]
     if export:
         managed.append(store.EXPORT)
     for folder in managed:
         for path in sorted(folder.rglob("*.*")) if folder.exists() else []:
             if path.is_file() and path not in files:
-                changed.append(str(path.relative_to(store.ROOT)) + " (stale)")
+                changed.append(_shown(path) + " (stale)")
                 if not check:
                     path.unlink()
     for path, text in sorted(files.items()):
@@ -365,9 +376,9 @@ def build_all(sources, check=False, export=False, warn=None):
             except FileNotFoundError:
                 same = False
             if not same:
-                changed.append(str(path.relative_to(store.ROOT)))
+                changed.append(_shown(path))
         elif store.write_text(path, text):
-            changed.append(str(path.relative_to(store.ROOT)))
+            changed.append(_shown(path))
     if not check:
         for folder in managed:
             for d in sorted(folder.rglob("*"), reverse=True) if folder.exists() else []:

@@ -1,0 +1,9 @@
+# Dev and CI only (#8 PR 4): `python hsdash.py validate` checks the published files against schema/*.schema.json.
+# The crawler and the build stay stdlib-only and never import these. Pinned, with jsonschema's own dependencies,
+# so CI validates with exactly what was tested.
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+referencing==0.37.0
+rpds-py==0.30.0
+attrs==26.1.0
+typing-extensions==4.15.0   # referencing needs it on Python < 3.13 (CI runs 3.12)

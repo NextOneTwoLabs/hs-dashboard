@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hs-dashboard.local/schema/states.schema.json",
+  "title": "The coverage index (public/archive/states.json)",
+  "description": "/api/v1/states: one row per covered state, with its latest season's divisions. hsdash.py validate also checks each row against that state's catalog and directory.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "activeSeason", "genders", "aliases", "competitions", "states"],
+  "properties": {
+    "schema": {"$ref": "common.schema.json#/$defs/schemaVersion1"},
+    "activeSeason": {"$ref": "common.schema.json#/$defs/season"},
+    "genders": {"$ref": "common.schema.json#/$defs/genderCodes"},
+    "aliases": {
+      "description": "Old competition ids (e.g. cif-state) -> their current id.",
+      "type": "object",
+      "additionalProperties": {"$ref": "common.schema.json#/$defs/competitionId"}
+    },
+    "competitions": {
+      "type": "object",
+      "propertyNames": {"$ref": "common.schema.json#/$defs/competitionId"},
+      "additionalProperties": {"$ref": "common.schema.json#/$defs/competitionMeta"}
+    },
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["code", "name", "association", "associationName", "terms", "seasons", "latestSeason", "latest", "schools"],
+        "properties": {
+          "code": {"$ref": "common.schema.json#/$defs/state"},
+          "name": {"$ref": "common.schema.json#/$defs/name"},
+          "association": {"$ref": "common.schema.json#/$defs/name"},
+          "associationName": {"$ref": "common.schema.json#/$defs/name"},
+          "terms": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/term"}, "uniqueItems": true},
+          "seasons": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/season"}, "uniqueItems": true},
+          "latestSeason": {"anyOf": [{"$ref": "common.schema.json#/$defs/season"}, {"type": "null"}]},
+          "latest": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["competition", "short", "divisions"],
+              "properties": {
+                "competition": {"$ref": "common.schema.json#/$defs/competitionId"},
+                "short": {"$ref": "common.schema.json#/$defs/name"},
+                "divisions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["code", "label", "status", "champion", "start", "end"],
+                    "properties": {
+                      "code": {"$ref": "common.schema.json#/$defs/divisionCode"},
+                      "label": {"$ref": "common.schema.json#/$defs/name"},
+                      "status": {"$ref": "common.schema.json#/$defs/divisionStatus"},
+                      "champion": {"$ref": "common.schema.json#/$defs/schoolRefOrNull"},
+                      "start": {"$ref": "common.schema.json#/$defs/dateOrNull"},
+                      "end": {"$ref": "common.schema.json#/$defs/dateOrNull"}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "schools": {"$ref": "common.schema.json#/$defs/count"}
+        }
+      }
+    }
+  }
+}
