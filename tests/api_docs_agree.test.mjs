@@ -15,7 +15,8 @@ const read = (p) => readFileSync(new URL(p, root), 'utf8').replace(/\r\n/g, '\n'
 const DOCS = process.env.API_DOCS_PATH
   ? readFileSync(process.env.API_DOCS_PATH, 'utf8').replace(/\r\n/g, '\n')
   : read('docs/data-api.md');
-const WORKER = read('worker.js');
+// The Worker's API code: worker.js dispatches, api/data-api.mjs answers, api/data-reader.mjs reads storage (#8 PR 2).
+const WORKER = ['worker.js', 'api/data-api.mjs', 'api/data-reader.mjs'].map(read).join('\n');
 const TOML = read('wrangler.toml');
 const ROUTES_MJS = read('api/routes.mjs');
 const ROUTES_PY = read('crawler/api_routes.py');
