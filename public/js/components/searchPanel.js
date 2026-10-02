@@ -5,8 +5,9 @@ import { HINT, optionText, scopeText } from '../search.js';
 
 export const optionId = (i) => `search-opt-${i}`;
 
-// One group per kind, in the order the options come (#31: a state's list, schools, cities' lists, all matches).
-const GROUPS = { state: 'State', school: 'Schools', city: 'Cities', all: 'All matches', chip: 'Examples' };
+// One group per kind, in the order the options come (#31: a state's list, schools, cities' lists, all matches,
+// then events: an event and a state's "All N events" share the Events group).
+const GROUPS = { state: 'State', school: 'Schools', city: 'Cities', all: 'All matches', event: 'Events', events: 'Events', chip: 'Examples' };
 
 export function panelHtml(result, { active = -1, raw = '', idx = null, statesIndex, phone = false } = {}) {
   let help = '';
@@ -15,7 +16,7 @@ export function panelHtml(result, { active = -1, raw = '', idx = null, statesInd
       ? `<p class="qhelp-scope">${esc(scopeText(idx, statesIndex, { phone: true }))}</p>`
       : `<p class="qhelp-scope">${esc(scopeText(idx, statesIndex))}</p><p>${esc(HINT)} For example:</p>`;
   } else if (result.mode === 'nomatch') {
-    help = `<p class="qhelp-scope">No school matches “${esc(String(raw).trim())}”.</p><p>Try the start of a school's name, a city or a state:</p>`;
+    help = `<p class="qhelp-scope">No school or event matches “${esc(String(raw).trim())}”.</p><p>Try the start of a school's name, a city, a state or a division:</p>`;
   }
   const parts = [];
   let open = null;
@@ -37,7 +38,7 @@ export function panelHtml(result, { active = -1, raw = '', idx = null, statesInd
   });
   if (open) parts.push('</div>');
   const foot = !phone && result.mode !== 'list'
-    ? '<div class="qfoot" aria-hidden="true"><span><kbd>↑</kbd> <kbd>↓</kbd> move · <kbd>Enter</kbd> open · <kbd>Esc</kbd> close</span><span>School, city or state</span></div>'
+    ? '<div class="qfoot" aria-hidden="true"><span><kbd>↑</kbd> <kbd>↓</kbd> move · <kbd>Enter</kbd> open · <kbd>Esc</kbd> close</span><span>School, city, state or event</span></div>'
     : '';
   return `${help ? `<div class="qhelp">${help}</div>` : ''}<div role="listbox" id="search-list" aria-label="Suggestions" class="qlist">${parts.join('')}</div>${foot}`;
 }

@@ -74,6 +74,8 @@ export function resolveTab(raw) {
   // `city` (#31) is the school list of one city, so it needs the list and its state (a city name repeats across
   // states); anywhere else it is dropped.
   if (out.city && !(out.tab === 'schools' && out.st)) delete out.city;
+  // Events has no text filter since "Find an event" went (#31 PR 2): the header search's Events group finds them.
+  if (out.tab === 'events') delete out.q;
   return out;
 }
 

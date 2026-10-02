@@ -81,6 +81,11 @@ test('old links open their new route (and replaceState rewrites them)', () => {
     'a competition with no division keeps the competition (normalize fills the division)');
   assert.equal(canon('#tab=playoffs&st=TX'), '#tab=events&st=TX');
   assert.equal(canon('#tab=events&show=results'), '#tab=events');
+  // #31 PR 2: Events has no text filter since "Find an event" went; the header search finds events.
+  assert.equal(canon('#tab=events&q=6a'), '#tab=events');
+  assert.equal(canon('#tab=events&st=TX&q=6a'), '#tab=events&st=TX');
+  assert.equal(canon('#tab=events&view=games&st=TX&q=x'), '#tab=events&view=games&st=TX');
+  assert.equal(canon('#tab=schools&q=ake'), null, 'q= stays on the school list');
   // New-form links, and the home page with no hash, are left alone (no replaceState).
   for (const hash of ['', '#tab=schools', '#tab=schools&q=ake', '#tab=schools&view=list', '#tab=events', '#tab=events&st=TX&show=live',
     '#tab=events&view=games&st=TX&season=2025-26&show=upcoming', '#tab=events&view=champions&st=PA', '#tab=event',
@@ -97,7 +102,7 @@ test('old links resolve in one step: resolveTab is idempotent and the canonical 
     '#tab=results&st=TX&show=upcoming&g=g', '#tab=playoffs&st=CA&season=2025-26&comp=ca-cif-state&div=gd1&round=1',
     '#tab=playoffs&st=CA&season=2024-25&comp=ca-cif-norcal', '#tab=playoffs&st=TX', '#tab=playoffs', '#tab=bogus&comp=tx-uil',
     '#tab=event', '#tab=teams&q=ake', `#tab=team&view=history&school=${LOS_GATOS}`, '#tab=states&st=TX', `#school=${LOS_GATOS}`,
-    '#tab=events&show=results&round=3', '#tab=events&view=nope'];
+    '#tab=events&show=results&round=3', '#tab=events&view=nope', '#tab=events&q=6a', '#tab=events&st=TX&q=6a&show=live'];
   for (const hash of old) {
     location.hash = hash;
     const once = nav.resolveTab(readHash());

@@ -13,9 +13,16 @@ const s = await import('../public/js/search.js');
 const searchIndex = await json('public/archive/search-index.json');
 const statesIndex = await json('public/archive/states.json');
 const schoolsDir = await json('public/archive/schools.json');
-const idx = s.buildIndex(searchIndex, statesIndex);
+const catalog = await json('public/archive/catalog.json');
+const idx = s.buildIndex(searchIndex, statesIndex, catalog);
 
+const EVENT_KINDS = new Set(['event', 'events']);
 const kinds = (r) => r.items.map((it) => it.kind);
+// The Schools group only (#31 PR 2: the Events group comes after it).
+const schoolKinds = (r) => kinds(r).filter((k) => !EVENT_KINDS.has(k));
+// The Events group: an event as "ST comp/div", a state's row as "all ST N".
+const evs = (q) => s.suggest(idx, q).items.filter((it) => EVENT_KINDS.has(it.kind))
+  .map((it) => (it.kind === 'event' ? `${it.state.code} ${it.comp.id}/${it.div.code}` : `all ${it.state.code} ${it.n}`));
 // Name matches only (a state's "top" schools and a city's schools carry `why`).
 const names = (r, kind = 'school') => r.items.filter((it) => it.kind === kind && !it.why).map((it) => s.optionText(it).name);
 
@@ -50,19 +57,30 @@ test('one normalisation rule: punctuation, accents, St/Saint and Mt/Mount', () =
   assert.deepEqual(s.chunksOf('P.K. Yonge'), ['pk', 'yonge']);
 });
 
-// #31 (owner: "the search box could accept the names and states and cities"; plan v2 + Kongming's notes): every
-// option is a school or a list of schools, and every target is in Schools (#30: "search in schools is to find
-// schools").
-test('every option is a school or a list of schools, and stays in Schools', () => {
-  const ALLOWED = new Set(['school', 'state', 'city', 'all', 'chip']);
+// #31 (owner: "the search box could accept the names and states and cities"; plan v2 + Kongming's notes): the
+// Schools group's options are schools or lists of schools, and its targets are in Schools (#30: "search in
+// schools is to find schools"). #31 PR 2: the Events group comes after it, and its targets are in Events.
+test('the Schools group stays in Schools, the Events group in Events, and schools come first', async () => {
+  const SCHOOLS = new Set(['school', 'state', 'city', 'all', 'chip']);
+  const { hrefFor, resolveTab } = await import('../public/js/nav.js');
+  const params = (hash) => Object.fromEntries(new URLSearchParams(hash.slice(1)));
   for (const q of ['Texas', 'TX', 'tx', 'UIL', 'CIF', 'tex', 'san antonio', 'St Petersburg', 'mat', 'lake', 's', 'zzzz', '',
-    'Austin TX', 'Lincoln CA', 'Washington', 'ca', 'pa']) {
+    'Austin TX', 'Lincoln CA', 'Washington', 'ca', 'pa', 'CIF D1', '6A', 'Class A', 'D1', 'Georgia 6A']) {
     const r = s.suggest(idx, q);
+    let inEvents = false;
     for (const it of r.items) {
-      assert.ok(ALLOWED.has(it.kind), `${q}: a ${it.kind} option`);
       const t = s.target(it);
+      if (EVENT_KINDS.has(it.kind)) {
+        inEvents = true;
+        assert.match(t.hash, it.kind === 'event' ? /^#tab=event&st=[A-Z]{2}&season=\d{4}-\d{2}&comp=[\w-]+&div=[\w-]+$/ : /^#tab=events&st=[A-Z]{2}$/, `${q}: ${t.hash} stays in Events`);
+        assert.equal(hrefFor(resolveTab(params(t.hash))), t.hash, `${q}: ${t.hash} is canonical (no rewrite)`);
+        continue;
+      }
+      assert.ok(SCHOOLS.has(it.kind), `${q}: a ${it.kind} option`);
+      assert.ok(!inEvents, `${q}: schools come before events`);
       if (t.hash) assert.match(t.hash, /^#tab=(school&school=|schools&(st=[A-Z]{2}(&city=[^&]+)?$|(st=[A-Z]{2}&)?q=))/, `${q}: ${t.hash} stays in Schools`);
     }
+    assert.ok(r.items.filter((it) => EVENT_KINDS.has(it.kind)).length <= s.EVENTS_MAX, `${q}: ${s.EVENTS_MAX} events at most`);
     assert.ok(r.items.filter((it) => it.kind === 'state').length <= 1, `${q}: one state row at most`);
     assert.ok(r.items.filter((it) => it.kind === 'school').length <= s.SCHOOLS_MAX, `${q}: ${s.SCHOOLS_MAX} schools at most`);
     assert.ok(r.items.filter((it) => it.kind === 'city').length <= s.CITIES_MAX, `${q}: ${s.CITIES_MAX} cities at most`);
@@ -72,14 +90,15 @@ test('every option is a school or a list of schools, and stays in Schools', () =
 test('states: "Texas", "TX" and "tx" open the Texas list first, then its top 3 schools', () => {
   for (const q of ['Texas', 'texas', 'TX', 'tx']) {
     const r = s.suggest(idx, q);
-    assert.deepEqual(kinds(r), ['state', 'school', 'school', 'school'], q);
+    assert.deepEqual(schoolKinds(r), ['state', 'school', 'school', 'school'], q);
+    assert.deepEqual(evs(q), q === 'tx' ? [] : ['all TX 6'], `${q}: the Events row only from the name or the code in capitals`);
     assert.equal(r.items[0].n, 384);
     assert.deepEqual(s.target(r.items[0]), { hash: '#tab=schools&st=TX' });
-    assert.deepEqual(r.items.slice(1).map((it) => [it.row.name, it.why]), [['Celina', 'top'], ['Kingwood', 'top'], ['Lake Creek', 'top']], q);
+    assert.deepEqual(r.items.slice(1, 4).map((it) => [it.row.name, it.why]), [['Celina', 'top'], ['Kingwood', 'top'], ['Lake Creek', 'top']], q);
     assert.deepEqual(s.enterTarget(r), { hash: '#tab=schools&st=TX' }, `${q}: Enter opens the list`);
   }
   // Kongming: "California" is a state and a school; "Washington" a state, schools and a city (Washington, GA).
-  assert.deepEqual(s.suggest(idx, 'California').items.map((it) => it.kind === 'school' ? it.row.name : it.kind), ['state', 'California']);
+  assert.deepEqual(s.suggest(idx, 'California').items.map((it) => it.kind === 'school' ? it.row.name : it.kind), ['state', 'California', 'events']);
   const wa = s.suggest(idx, 'Washington');
   assert.equal(wa.items[0].kind, 'state');
   assert.equal(wa.items[0].state.code, 'WA');
@@ -140,6 +159,61 @@ test('a trailing state narrows the rest, and adds to (never hides) full-name mat
   assert.deepEqual(sf.items.filter((it) => it.kind === 'school').map((it) => it.row.name), ['South Florida Prep', 'South Fork']);
 });
 
+// #31 PR 2 (plan v4 "Events", v4.1 B2): an event is a division in its state's newest school year; noise queries
+// give no Events group.
+test('events: specific words only, state codes in capitals, Georgia\'s classes, at most 4 rows', async () => {
+  // B2: every word under 2 characters, words every event shares, lowercase codes and school names: no Events group.
+  for (const q of ['s', 'a', 'd', 'st', 'st pius', 'class', 'state', 'states', 'division', 'championship', 'regional', 'conference',
+    'ca', 'pa', 'wa', 'fl', 'ga', 'tx', 'mater', 'Mater Dei', 'tex', 'Austin TX', 'zzzz']) {
+    assert.deepEqual(evs(q), [], q);
+  }
+  // The specific ones.
+  assert.deepEqual(evs('Class 7A'), ['FL fl-fhsaa/7a']);
+  assert.deepEqual(evs('Division 1'), ['CA ca-cif-state/gd1', 'GA ga-ghsa/a-division-i'], 'TX "6A D1" matches only through d1');
+  for (const q of ['GHSA Division I', 'Georgia D1', 'georgia division 1']) assert.deepEqual(evs(q), ['GA ga-ghsa/a-division-i'], q);
+  assert.deepEqual(evs('GHSA Division II'), ['GA ga-ghsa/a-division-ii']);
+  assert.deepEqual(evs('Georgia 6A'), ['GA ga-ghsa/aaaaaa'], 'Class AAAAAA is 6A');
+  assert.deepEqual(evs('Georgia 2A'), ['GA ga-ghsa/aa']);
+  assert.deepEqual(evs('Class A'), ['GA ga-ghsa/a-division-i', 'GA ga-ghsa/a-division-ii'], 'one letter: a whole division word, beside another word');
+  assert.deepEqual(evs('GHSA private'), ['GA ga-ghsa/private']);
+  assert.deepEqual(evs('CIF D1'), ['CA ca-cif-state/gd1']);
+  assert.deepEqual(evs('Texas 6A'), ['TX tx-uil/6a-d1', 'TX tx-uil/6a-d2']);
+  assert.deepEqual(evs('6A'), ['FL fl-fhsaa/6a', 'GA ga-ghsa/aaaaaa', 'TX tx-uil/6a-d1', 'TX tx-uil/6a-d2']);
+  assert.deepEqual(evs('WA 1B'), ['WA wa-wiaa/1b-2b']);
+  assert.equal(evs('D1').length, s.EVENTS_MAX, 'D1 matches 5 events: 4 are shown');
+  assert.deepEqual(evs('aaa')[0], 'GA ga-ghsa/aaa', 'an exact word before a longer one');
+  // A state or an association alone: that school year's "All N events" row, from the name in any case or the code
+  // in capitals.
+  for (const q of ['Texas', 'texas', 'TX', 'UIL', 'uil', 'Texas UIL']) assert.deepEqual(evs(q), ['all TX 6'], q);
+  assert.deepEqual(evs('CIF'), ['all CA 5']);
+  assert.deepEqual(evs('CIF State'), ['all CA 5'], 'a generic word beside a specific one');
+  assert.deepEqual(evs('Washington'), ['all WA 5']);
+  assert.deepEqual(evs('PA'), ['all PA 4']);
+  const row = (q) => s.suggest(idx, q).items.find((it) => it.kind === 'events');
+  assert.equal(s.optionText(row('Texas')).name, 'All 6 events in Texas, 2025-26 →');
+  assert.equal(s.optionText(row('UIL')).name, 'All 6 UIL events in Texas, 2025-26 →');
+  assert.deepEqual(s.target(row('Texas')), { hash: '#tab=events&st=TX', focusTitle: true });
+  // Counts: a row's N is the cards the Events page shows for that state and year.
+  const { eventsOf } = await import('../public/js/views/events.js');
+  for (const st of statesIndex.states.filter((x) => x.latestSeason)) {
+    const r = row(st.name);
+    const page = eventsOf(catalog, statesIndex, st.latestSeason).find((g) => g.state.code === st.code);
+    assert.equal(r.n, page.events.length, `${st.name}: the row's count is the page's`);
+    assert.equal(r.season, st.latestSeason);
+  }
+  // An event's option: the labels shown don't change; it opens the bracket.
+  const cif = s.suggest(idx, 'CIF D1');
+  assert.deepEqual(s.optionText(cif.items[0]), { name: 'State · Division 1', line: 'CIF State Championships · California · 2025-26' });
+  assert.deepEqual(s.enterTarget(cif), { hash: '#tab=event&st=CA&season=2025-26&comp=ca-cif-state&div=gd1', focusTitle: true });
+  assert.deepEqual(s.enterTarget(cif, { list: true }), s.enterTarget(cif), 'on the school list too: no school matches, so the event opens');
+  assert.equal(s.statusText(cif, 'CIF D1'), '1 event · Enter opens State · Division 1');
+  assert.match(s.statusText(s.suggest(idx, 'UIL'), 'UIL'), /, 6 events · /, 'a state\'s row counts its events');
+  // Without the catalog, schools still work and there is no Events group.
+  const bare = s.buildIndex(searchIndex, statesIndex);
+  assert.deepEqual(s.suggest(bare, 'Texas').items.filter((it) => EVENT_KINDS.has(it.kind)), []);
+  assert.equal(s.suggest(bare, 'CIF D1').mode, 'nomatch');
+});
+
 test('short queries: at most 6 schools plus "All N"', () => {
   const r = s.suggest(idx, 's');
   assert.equal(r.items.filter((it) => it.kind === 'school').length, 6);
@@ -156,7 +230,7 @@ test('chips and the no-match panel', () => {
   const none = s.suggest(idx, 'zzzz');
   assert.equal(none.mode, 'nomatch');
   assert.deepEqual(none.items.map((it) => it.text), s.NOMATCH_CHIPS);
-  assert.equal(s.statusText(none, 'zzzz'), 'No school matches “zzzz”');
+  assert.equal(s.statusText(none, 'zzzz'), 'No school or event matches “zzzz”');
   assert.match(s.scopeText(idx, statesIndex), /^Every school with a state playoff appearance: 1,337 in 6 states \(CA, FL, GA, PA, TX, WA\)\.$/);
 });
 
@@ -218,6 +292,11 @@ test('the panel markup: combobox, listbox options with aria-selected, one status
   assert.deepEqual(opts.map((m) => m[2]), r.items.map((_, i) => String(i === 1)));
   assert.match(html, /role="group" aria-label="Schools"/);
   assert.doesNotMatch(html, /aria-label="Places"/, '#30: no places group');
+  // #31 PR 2: one Events group after the schools, for an event and a state's "All N events" alike.
+  const both = panelHtml(s.suggest(idx, 'Texas'), { raw: 'Texas', idx, statesIndex });
+  assert.equal((both.match(/role="group" aria-label="Events"/g) || []).length, 1);
+  assert.ok(both.indexOf('aria-label="Schools"') < both.indexOf('aria-label="Events"'));
+  assert.match(panelHtml(s.suggest(idx, '6A'), { raw: '6A', idx, statesIndex }), /role="group" aria-label="Events"><div class="qgroup-label" aria-hidden="true">Events<\/div>/);
   assert.doesNotMatch(html, /<mark/, 'no highlighting (owner decision)');
   assert.match(html, /Mater Dei<\/span><span class="sr-only">, <\/span><span class="qopt-sub">Santa Ana, CA/);
   const help = panelHtml(s.suggest(idx, ''), { active: -1, raw: '', idx, statesIndex });
@@ -242,6 +321,7 @@ test('the panel markup: combobox, listbox options with aria-selected, one status
 test('search makes no requests of its own', () => {
   s.suggest(idx, 'mat');
   s.suggest(idx, '');
-  s.buildIndex(searchIndex, statesIndex);
+  s.suggest(idx, 'CIF D1');
+  s.buildIndex(searchIndex, statesIndex, catalog);
   assert.equal(requests, 0);
 });

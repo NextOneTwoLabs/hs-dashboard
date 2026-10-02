@@ -5,7 +5,7 @@
 import { api, errorHtml } from '../api.js';
 import { matchCard, statusOf } from '../components/match.js';
 import { setHead } from '../components/pageHeader.js';
-import { listHref, teamHref } from '../nav.js';
+import { hrefFor, listHref, teamHref } from '../nav.js';
 import { bracketHref, esc, favorites, fmtDate, resultText, toggleFavorite } from '../util.js';
 
 export const STANDINGS_NOTE = 'Playoff games only: our source is state championship brackets, so league standings and regular-season games aren\'t covered.';
@@ -156,6 +156,7 @@ export function historyHtml({ s, own, comps, catalog, g }) {
       <caption>Every recorded state playoff appearance${covered.length ? ` (${esc(catalog.name)} coverage: ${esc(covered[0])} to ${esc(covered.at(-1))})` : ''}</caption>
       <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Season</th><th scope="col" role="columnheader">Competition</th><th scope="col" role="columnheader" class="n">Seed</th><th scope="col" role="columnheader">Furthest round</th><th scope="col" role="columnheader" class="n">Playoff W-L-D</th></tr></thead>
       <tbody role="rowgroup">${rows}</tbody></table></div>
+    <p class="history-events"><a href="${esc(hrefFor({ tab: 'events', school: s.id }))}">This school's events <span aria-hidden="true">→</span></a></p>
     ${missingNote}<p class="note">${esc(PK_NOTE)}</p>`;
 }
 

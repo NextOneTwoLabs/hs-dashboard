@@ -161,7 +161,7 @@ export/<season>/<division>.csv                           human-readable export
 - **Routes since #20 (names since #26, Events since #30):** the Main nav is Schools · Events (header nav; a two-item
   bottom bar on phones).
   - `#tab=schools` (the landing; the school list with `st`, `q` or `view=list`), `#tab=school&school=<id>`,
-    `#tab=events` (the event cards; `st`, `season`, `show=live|upcoming|complete`, `q`, `school`),
+    `#tab=events` (the event cards; `st`, `season`, `show=live|upcoming|complete`, `school`; `q` is dropped since #31),
     `#tab=events&view=games` (All games, was Results; `show=results|upcoming`), `#tab=events&view=champions`,
     `#tab=event&st&season&comp&div[&round]` (an event's bracket, was Playoffs; a missing `comp`/`div` is filled from
     the state catalog) and `#tab=about`. Events' pages share a sub-nav, Events · All games · Champions.
@@ -173,13 +173,21 @@ export/<season>/<division>.csv                           human-readable export
     only, `show` only where the page has it.
   - The Events landing (`views/events.js`) reads `/api/v1/catalog` once: one card per division tournament in the
     chosen school year (newest by default), grouped by state, with State, School year, Status and Season of play
-    filters and a "Find an event" box. Typing filters the cards with no request; schools are suggested from
-    `/search-index` (once), and only picking one loads its file (Kongming B1 on #30).
-  - The search suggests schools, and lists of schools, only (#30: "search in schools is to find schools"). Since #31
-    it also accepts a state ("All 384 schools in Texas", plus its top 3 schools when no name matches) and a city
-    (one row per city, `#tab=schools&st=TX&city=Austin`, plus that city's schools); a trailing state narrows the
-    rest ("Austin TX") without hiding full-name matches; a lowercase code that starts names ("pa") keeps the names
-    first. Row counts equal the list's rows: both use `search.js` `cityMatch`.
+    filters. Its "Find an event" box went in #31 (the header search finds events). `school=<id>` shows one school's
+    events (in its latest year with one, when the link has no season); a school's Playoff history links to it
+    ("This school's events →"), and it costs that school's one file.
+  - The search's Schools group suggests schools, and lists of schools, only (#30: "search in schools is to find
+    schools"). Since #31 it also accepts a state ("All 384 schools in Texas", plus its top 3 schools when no name
+    matches) and a city (one row per city, `#tab=schools&st=TX&city=Austin`, plus that city's schools); a trailing
+    state narrows the rest ("Austin TX") without hiding full-name matches; a lowercase code that starts names
+    ("pa") keeps the names first. Row counts equal the list's rows: both use `search.js` `cityMatch`.
+  - Its Events group (#31) comes after the schools, from `/api/v1/catalog`: an event is a division in its state's
+    newest school year. Every typed word must start a different word of the event (state, association,
+    championship, division); "Division 1" also matches "D1", Georgia's "Division I" matches "1"/"D1" and "Class
+    AAAAAA" matches "6A". At most 4 events. A query that only names a state or an association gives "All 6 events in
+    Texas, 2025-26" (`#tab=events&st=TX`) instead. No group when every word is under 2 letters, or for words every
+    event shares (state, championship, class, conference, division, regional); a one-letter word counts only as a
+    whole division word beside another ("Class A"); a state code only in capitals ("TX", not "tx").
   - A school page (`views/team.js`) has its own nav, Overview · Results · Playoff history (`view=results|history`), and no
     statewide sidebar. The playoff history is a table (season, competition, seed, furthest round, playoff W-L-D);
     the finishing-round SVG chart above is retired.
@@ -190,9 +198,11 @@ export/<season>/<division>.csv                           human-readable export
     a "PK win" tag, the status (Final, Result not reported, Scheduled, Awaiting result, Bye), "Match details" and
     "View in bracket" (at the game's round), and a note that a PK game counts as a draw in playoff records.
   - The Schools landing (`views/landing.js`): "Followed schools" (saved in this browser only, and it says so) and
-    "Browse by state" with a season-of-play toggle.
+    "Browse by state" with a season-of-play toggle. Each state card links to Schools, Events, Champions and All games.
   - The one search box is in the site header on every page (#31, owner: "the search box should appear at header";
-    it was a Schools page band from #26). `components/searchBox.js` owns it; no view writes into it. Its text is
+    it was a Schools page band from #26), for schools and events; it's the only search landmark ("Search schools and
+    events"). On its first focus it loads `/search-index` and `/catalog`, once each per page session (`api.js` keeps
+    them). `components/searchBox.js` owns it; no view writes into it. Its text is
     kept only between the Schools landing and the list (where it filters the table); any other navigation clears
     it. "/" focuses it everywhere (ignored while typing in a field and with Ctrl, Meta or Alt). Phones keep the one
     56 px header row: a search button opens the same box as a full-width bar under it; Escape closes the list, then

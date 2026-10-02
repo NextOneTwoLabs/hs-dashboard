@@ -1,5 +1,5 @@
 // #30 PR 1: the Events landing (one card per division tournament in one school year, grouped by state), its
-// filters, the school search's request bound (Kongming B1), and Events' sub-pages. Offline: the shared view
+// filters (no "Find an event" band since #31 PR 2), its requests, and Events' sub-pages. Offline: the shared view
 // harness (netguard fetch over the local files through api/routes.mjs, no DOM library).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -25,29 +25,21 @@ globalThis.fetch = (input, init) => {
 const count = (path) => counts.get(path) || 0;
 const total = () => [...counts.values()].reduce((t, n) => t + n, 0);
 
-// Kongming B1 (plan v2, option a): typing never fans out into one request per matching school. This test runs
-// first, so nothing has loaded the search index yet.
-test('1. B1: one search makes at most 1 search-index request, and 1 school file per pick', async () => {
-  const finder = ev.schoolFinder(statesIndex);
+// #31 PR 2 (owner: remove the in-page "Find an event" band; the header search's Events group finds events). This
+// test runs first, so nothing has loaded the search index yet.
+test('1. no "Find an event" band: no second search box, and the page makes no search request', async () => {
   const before = total();
-  assert.deepEqual(await finder.suggestions('s'), [], 'one letter: no suggestions, no request');
-  assert.equal(total() - before, 0);
-  const st = await finder.suggestions('st');
-  const san = await finder.suggestions('san');
-  assert.ok(st.length && san.length, 'schools are suggested');
-  assert.ok(san.length <= 5, 'at most 5 schools');
-  assert.equal(count('/api/v1/search-index'), 1, '"s", "st", "san": the index once');
-  await finder.suggestions('lake');
-  assert.equal(count('/api/v1/search-index'), 1, 'a new query: no new request');
-  assert.equal(total() - before, 1, 'nothing else while typing (no school files)');
-  const school = await finder.pick(LOS_GATOS);
-  assert.equal(school.id, LOS_GATOS);
-  assert.equal(count(`/api/v1/schools/${LOS_GATOS}`), 1);
-  assert.equal(total() - before, 2, 'search-index + the picked school, whatever the queries matched');
-  // The view reaches schools only through the finder.
+  const { view } = await open('#tab=events');
+  const html = view.innerHTML;
+  assert.doesNotMatch(html, /Find an event|id="event-q"|role="search"|event-search|data-fill=|event-schools/, 'no band, box, chips or school finder');
+  assert.equal(count('/api/v1/search-index'), 0, 'the header box loads the index, not the page');
+  assert.equal(total() - before, 1, 'the catalog, and nothing else');
   const src = await read('public/js/views/events.js');
-  assert.equal((src.match(/api\.school\(/g) || []).length, 2, 'finder.pick and the hash school= (one file)');
-  assert.doesNotMatch(src.replace(/^\s*\/\/.*$/gm, ''), /\.map\([^)]*api\.school|for \([^)]*\)[^{]*\{[^}]*api\.school/, 'never one request per row');
+  assert.doesNotMatch(src, /searchIndex|search\.js|textMatch|schoolFinder/, 'no text filter and no school finder');
+  assert.equal((src.match(/api\.school\(/g) || []).length, 1, 'only the hash school= (one file)');
+  // A school from a link costs its one file.
+  await open(`#tab=events&school=${LOS_GATOS}`);
+  assert.equal(count(`/api/v1/schools/${LOS_GATOS}`), 1);
 });
 
 test('2. the landing: the newest school year, one card per division, grouped by state in states.json order', async () => {
@@ -56,9 +48,8 @@ test('2. the landing: the newest school year, one card per division, grouped by 
   assert.match(head.innerHTML, /<h1 class="content-title" tabindex="-1">Events<\/h1>/);
   assert.equal(controls.innerHTML, '', 'the filters sit beside the cards; the filter row hides');
   const html = view.innerHTML;
-  assert.match(html, /<h2 class="event-search-h" id="find-event-h">Find an event<\/h2>/);
-  assert.match(html, /<label class="sr-only" for="event-q">Search events<\/label>/);
-  // The cards are drawn into #event-groups (a child the view writes after its band and filters).
+  assert.ok(html.startsWith('<div class="landing-browse-row">'), 'the filters come first (#31 PR 2: no band)');
+  // The cards are drawn into #event-groups (a child the view writes after its filters).
   const groups = ev.eventsOf(catalog, statesIndex, catalog.latestSeason);
   const season = catalog.seasons.find((s) => s.season === catalog.latestSeason);
   const divisions = season.competitions.reduce((t, c) => t + c.divisions.length, 0);
@@ -90,17 +81,28 @@ test('3. a card says what its catalog division says, and links to the event in t
   }
 });
 
-test('4. the filters: state, school year, status, text and a picked school', async () => {
+test('4. the filters: state, school year, status and a school from a link', async () => {
   const all = ev.eventsOf(catalog, statesIndex, '2025-26').flatMap((g) => g.events.map((e) => ({ ...e, state: g.state })));
   const pick = (fn) => all.filter(fn).map((e) => `${e.comp.id}/${e.div.code}`);
   assert.deepEqual(pick((e) => ev.statusMatch(e, 'live')), [], 'nothing is being played on the data date');
   assert.equal(pick((e) => ev.statusMatch(e, 'complete')).length, 35, 'every 2025-26 bracket is finished');
-  assert.deepEqual(pick((e) => ev.textMatch(e, e.state, '6a')), ['fl-fhsaa/6a', 'tx-uil/6a-d1', 'tx-uil/6a-d2']);
-  assert.deepEqual(pick((e) => ev.textMatch(e, e.state, 'texas 6a')), ['tx-uil/6a-d1', 'tx-uil/6a-d2'], 'every word must match');
-  assert.deepEqual(pick((e) => ev.textMatch(e, e.state, 'cif division 1')), ['ca-cif-state/gd1']);
-  assert.deepEqual(pick((e) => ev.textMatch(e, e.state, 'mater dei')), ['ca-cif-state/gd1'], 'a champion\'s name finds its event');
   const lg = await api.school(LOS_GATOS);
   assert.deepEqual(pick((e) => ev.schoolMatch(e, lg, '2025-26')), ['ca-cif-state/gd1'], 'Los Gatos played State D1 in 2025-26');
+  // #31 PR 2: "This school's events →" (#tab=events&school=ID) shows that school's events, in its latest year
+  // with one when it didn't play in the newest.
+  const seasons = catalog.seasons.filter((s) => s.competitions.length).map((s) => s.season);
+  assert.equal(ev.schoolSeason(lg, seasons, '2025-26'), '2025-26');
+  assert.equal(ev.schoolSeason({ appearances: [{ season: '2022-23' }, { season: '2023-24' }] }, seasons, '2025-26'), '2023-24');
+  assert.equal(ev.schoolSeason(null, seasons, '2025-26'), '2025-26');
+  // The page opens on that year (the cards are drawn into #event-groups, which this DOM-less harness doesn't keep).
+  const selected = (html) => html.match(/<select id="ev-season"[^]*?<option value="([^"]+)" selected>/)?.[1];
+  assert.equal(selected((await open(`#tab=events&school=${LOS_GATOS}`)).view.innerHTML), '2025-26');
+  const old = (await json('public/archive/schools.json')).schools.find((r) => r.last === '2018-19');
+  const oldFile = await api.school(old.id);
+  assert.equal(selected((await open(`#tab=events&school=${old.id}`)).view.innerHTML), '2018-19', `${old.name}: its last year`);
+  assert.ok(all.length && ev.eventsOf(catalog, statesIndex, '2018-19').flatMap((g) => g.events).some((e) => ev.schoolMatch(e, oldFile, '2018-19')),
+    `${old.name}: that year has its event`);
+  assert.equal(selected((await open(`#tab=events&season=2024-25&school=${old.id}`)).view.innerHTML), '2024-25', 'a season in the link wins');
   assert.equal(ev.eventsOf(catalog, statesIndex, '2024-25').reduce((t, g) => t + g.events.length, 0),
     catalog.seasons.find((s) => s.season === '2024-25').competitions.reduce((t, c) => t + c.divisions.length, 0));
   // The hash's filters reach the page; an invalid state or school year falls back (no empty page).
@@ -146,9 +148,10 @@ test('6. All games and Champions under Events: the same content, new crumbs and 
   assert.match(games.view.innerHTML, /href="#tab=event&amp;st=TX&amp;season=2025-26&amp;comp=tx-uil&amp;div=[^"]+&amp;round=\d+">View in bracket/);
 });
 
-test('7. styles: the band, the cards and a two-item phone bar', async () => {
+test('7. styles: the cards and a two-item phone bar, and no band rules left', async () => {
   const css = await read('public/css/app.css');
-  assert.match(css, /\.event-search-card \{ padding: 16px 18px; \}/, 'the Events band keeps its card (the Schools band is gone since #31)');
+  assert.doesNotMatch(css, /\.event-search|\.event-schools|\.school-search/, 'both bands are gone (#31)');
+  assert.match(css, /\.event-picked \.chip \{/, 'the school chip from a link keeps its style');
   assert.match(css, /\.bottom-nav \{\s*display: grid; grid-template-columns: repeat\(2, 1fr\);/);
   assert.match(css, /\.event-card \.event-meta \{/);
 });

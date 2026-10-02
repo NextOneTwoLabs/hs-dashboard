@@ -30,10 +30,10 @@
     </nav>
     <!-- The one search box (#13, #31: "the search box should appear at header"), on every page, owned by
          components/searchBox.js. Phones: hidden behind the search button, then a full-width bar under the header. -->
-    <div class="header-search search" id="search" role="search" aria-label="Search schools">
-      <input type="search" class="search-input" id="search-input" role="combobox" aria-label="Search schools" aria-autocomplete="list" aria-controls="search-list" aria-expanded="false" aria-describedby="search-hint" placeholder="School, city or state…" autocomplete="off" spellcheck="false" enterkeyhint="search">
+    <div class="header-search search" id="search" role="search" aria-label="Search schools and events">
+      <input type="search" class="search-input" id="search-input" role="combobox" aria-label="Search schools and events" aria-autocomplete="list" aria-controls="search-list" aria-expanded="false" aria-describedby="search-hint" placeholder="School, city, state or event…" autocomplete="off" spellcheck="false" enterkeyhint="search">
       <span class="search-kbd" aria-hidden="true">/</span>
-      <span class="sr-only" id="search-hint">Type a school's name, a city or a state. Down arrow for suggestions. Press / to come back here.</span>
+      <span class="sr-only" id="search-hint">Type a school's name, a city, a state or an event. Down arrow for suggestions. Press / to come back here.</span>
       <button type="button" class="header-search-close" id="search-close">Close</button>
       <div class="qpanel" id="search-panel" hidden><div role="listbox" id="search-list" aria-label="Suggestions" class="qlist"></div></div>
       <span class="sr-only" id="search-status" role="status"></span>
@@ -41,7 +41,7 @@
     <div class="header-right">
       <span class="observed-top" id="data-updated"></span>
       <a class="header-link" href="#tab=about">About the data</a>
-      <button class="header-search-toggle" id="search-toggle" type="button" aria-label="Search schools" aria-expanded="false" aria-controls="search">
+      <button class="header-search-toggle" id="search-toggle" type="button" aria-label="Search schools and events" aria-expanded="false" aria-controls="search">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
       </button>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
