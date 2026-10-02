@@ -175,7 +175,11 @@ export/<season>/<division>.csv                           human-readable export
     chosen school year (newest by default), grouped by state, with State, School year, Status and Season of play
     filters and a "Find an event" box. Typing filters the cards with no request; schools are suggested from
     `/search-index` (once), and only picking one loads its file (Kongming B1 on #30).
-  - The Schools search suggests schools only since #30 (owner: "search in schools is to find schools").
+  - The search suggests schools, and lists of schools, only (#30: "search in schools is to find schools"). Since #31
+    it also accepts a state ("All 384 schools in Texas", plus its top 3 schools when no name matches) and a city
+    (one row per city, `#tab=schools&st=TX&city=Austin`, plus that city's schools); a trailing state narrows the
+    rest ("Austin TX") without hiding full-name matches; a lowercase code that starts names ("pa") keeps the names
+    first. Row counts equal the list's rows: both use `search.js` `cityMatch`.
   - A school page (`views/team.js`) has its own nav, Overview · Results · Playoff history (`view=results|history`), and no
     statewide sidebar. The playoff history is a table (season, competition, seed, furthest round, playoff W-L-D);
     the finishing-round SVG chart above is retired.
@@ -187,11 +191,14 @@ export/<season>/<division>.csv                           human-readable export
     "View in bracket" (at the game's round), and a note that a PK game counts as a draw in playoff records.
   - The Schools landing (`views/landing.js`): "Followed schools" (saved in this browser only, and it says so) and
     "Browse by state" with a season-of-play toggle.
-  - The one search box (#26) is on the Schools page, not in the header: `#school-search` in `index.html`, between the
-    page head and the filter row, shown on the landing ("Find a school", with example chips) and the list (where it
-    filters the table). `components/searchBox.js` owns it and no view writes into it, so typed text and focus
-    survive landing → list. Leaving Schools clears it. "/" focuses it, or opens Schools and then focuses it
-    (ignored while typing in a field and with Ctrl, Meta or Alt). The phone header is one 56 px row.
+  - The one search box is in the site header on every page (#31, owner: "the search box should appear at header";
+    it was a Schools page band from #26). `components/searchBox.js` owns it; no view writes into it. Its text is
+    kept only between the Schools landing and the list (where it filters the table); any other navigation clears
+    it. "/" focuses it everywhere (ignored while typing in a field and with Ctrl, Meta or Alt). Phones keep the one
+    56 px header row: a search button opens the same box as a full-width bar under it; Escape closes the list, then
+    clears the text, then closes the bar (focus back to the button); "Close" closes it at once; a tap outside
+    closes it without clearing. After navigation the page title gets focus without a ring (`data-scripted-focus`,
+    `components/titleFocus.js`).
 - **Reused from ECNL:**
   - The light/dark CSS token set.
   - The column-definition table renderer (sortable).

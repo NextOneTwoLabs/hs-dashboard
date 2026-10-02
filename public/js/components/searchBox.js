@@ -1,13 +1,17 @@
-// The one search box (#13), on the Schools page since #26 (the #school-search band in index.html, shown on the
-// landing and the list; this module owns it and no view writes into it). An ARIA 1.2 editable combobox with list
-// autocomplete: the box (role=combobox) owns a listbox of options; the active option is named by
-// aria-activedescendant and has aria-selected="true". The hint is the box's aria-describedby; the single
-// role=status region announces counts after a pause in typing. Matching lives in search.js.
+// The one search box (#13), in the site header on every page (owner, #31: "the search box should appear at
+// header"; in a Schools page band from #26 to #31). An ARIA 1.2 editable combobox with list autocomplete: the box
+// (role=combobox) owns a listbox of options; the active option is named by aria-activedescendant and has
+// aria-selected="true". The hint is the box's aria-describedby; the single role=status region announces counts
+// after a pause in typing. Matching lives in search.js.
+// Phones: the header keeps one 56 px row with a search button; it opens the same box as a full-width bar under the
+// header (#31 v4.1). Escape there: closes the list, then clears the text, then closes the bar (focus back to the
+// button); "Close" closes the bar at once and keeps the text; a tap outside closes it without clearing.
 import { api } from '../api.js';
 import { buildIndex, enterTarget, keyStep, statusText, suggest, target } from '../search.js';
 import { readHash } from '../state.js';
-import { boxTextAfter, hasSchoolSearch, pageOf, resolveTab, slashAction } from '../nav.js';
+import { boxTextAfter, pageOf, resolveTab, slashAction } from '../nav.js';
 import { optionId, panelHtml } from './searchPanel.js';
+import { focusPageTitle } from './titleFocus.js';
 
 const PHONE = matchMedia('(max-width: 768px)');
 const ANNOUNCE_MS = 450;
@@ -16,15 +20,18 @@ export function initSearch({ getStatesIndex }) {
   const input = document.getElementById('search-input');
   const panel = document.getElementById('search-panel');
   const status = document.getElementById('search-status');
+  const box = document.getElementById('search');
+  const header = document.getElementById('header');
+  const toggle = document.getElementById('search-toggle');
+  const close = document.getElementById('search-close');
   let idx = null;
   let loading = null;
   let result = { mode: 'help', items: [] };
   let st = { open: false, active: -1 };
   let timer = null;
   let titleFocus = false;
-  let focusAfterRender = false;   // "/" from another page: focus the box once Schools has rendered (#26)
 
-  // The school list (Schools with st/q/view=list) is where the box filters the table.
+  // The school list (Schools with st/q/city/view=list) is where the box filters the table.
   const onList = () => pageOf(resolveTab(readHash())) === 'schools';
   const empty = () => ({ rows: [], cities: [], states: [] });
 
@@ -65,10 +72,33 @@ export function initSearch({ getStatesIndex }) {
     if (onList()) window.dispatchEvent(new CustomEvent('hs-query', { detail: input.value }));
   }
 
-  function focusTitle() {
-    const h = document.querySelector('.content-title');
-    if (h) h.focus({ preventScroll: true });
+  // ----- The phone bar -----
+  const barOpen = () => header.classList.contains('search-open');
+  function openBar() {
+    header.classList.add('search-open');
+    document.body.classList.add('search-open');   // the bottom bar stays hidden while the bar is open
+    toggle?.setAttribute('aria-expanded', 'true');
   }
+  function closeBar({ restore = true } = {}) {
+    if (!barOpen()) return;
+    header.classList.remove('search-open');
+    document.body.classList.remove('search-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    st = { open: false, active: -1 };
+    draw();
+    if (restore) toggle?.focus({ preventScroll: true });
+  }
+  toggle?.addEventListener('click', () => {
+    if (barOpen()) { closeBar(); return; }
+    openBar();
+    input.focus();
+  });
+  close?.addEventListener('click', () => closeBar());   // Close: at once, keeping the text
+  // A tap outside the open bar closes it without clearing; focus stays where the tap put it.
+  document.addEventListener('pointerdown', (e) => {
+    if (!barOpen() || box.contains(e.target) || toggle?.contains(e.target)) return;
+    closeBar({ restore: false });
+  });
 
   function go(t) {
     st = { open: false, active: -1 };
@@ -77,13 +107,13 @@ export function initSearch({ getStatesIndex }) {
       if (PHONE.matches) input.blur();
       return;
     }
-    // The box shows what the next page filters by: q= on Schools, nothing anywhere else.
+    // The box shows what the next page filters by: q= on the school list, nothing anywhere else.
     input.value = new URLSearchParams(t.hash.slice(1)).get('q') || '';
     if (t.focusTitle) titleFocus = true;
     draw();
-    if (PHONE.matches) input.blur();   // a phone's keyboard drops
+    if (PHONE.matches) { input.blur(); closeBar({ restore: false }); }   // the keyboard drops, the bar closes
     if (location.hash === t.hash) {
-      if (titleFocus) { titleFocus = false; focusTitle(); }
+      if (titleFocus) { titleFocus = false; focusPageTitle(); }
     } else {
       location.hash = t.hash;
     }
@@ -104,24 +134,11 @@ export function initSearch({ getStatesIndex }) {
     go(t);
   }
 
-  // The landing's example chips, under the box (#26): fill it, focus it and show the suggestions, as the panel's
-  // own chips do.
-  document.getElementById('school-search-chips')?.addEventListener('click', async (e) => {
-    const chip = e.target.closest('[data-fill]');
-    if (!chip) return;
-    choose({ kind: 'chip', text: chip.dataset.fill });
-    await ensureIndex();
-    if (document.activeElement === input) { st = { open: true, active: -1 }; draw(); announce(); }
-  });
-
-  // Phones: the bottom nav hides while the box has focus, so the fixed bar can't ride above the on-screen
-  // keyboard and cover the suggestions (#20). CSS does it with :has(); this class is the fallback.
+  // Phones: the bottom nav hides while the box has focus or the bar is open, so the fixed bar can't ride above the
+  // on-screen keyboard and cover the suggestions (#20). CSS does it with :has(); these classes are the fallback.
   input.addEventListener('focus', () => document.body.classList.add('search-focus'));
   input.addEventListener('blur', () => document.body.classList.remove('search-focus'));
   input.addEventListener('focus', async () => {
-    // Phones: bring the band to the top of the content column, so the suggestions open into the space above the
-    // on-screen keyboard (the panel's height is --vvh minus the box's bottom edge, app.css).
-    if (PHONE.matches) document.getElementById('school-search')?.scrollIntoView?.({ block: 'start' });
     sizePanel();
     await ensureIndex();
     st = { open: true, active: -1 };
@@ -140,7 +157,7 @@ export function initSearch({ getStatesIndex }) {
   });
   input.addEventListener('keydown', (e) => {
     if (!['ArrowDown', 'ArrowUp', 'Enter', 'Escape', 'Tab'].includes(e.key)) return;
-    const next = keyStep(st, e.key, { alt: e.altKey }, result.items.length);
+    const next = keyStep(st, e.key, { alt: e.altKey, bar: barOpen(), empty: !input.value }, result.items.length);
     if (e.key !== 'Tab') e.preventDefault();
     st = { open: next.open, active: next.active };
     if (next.action === 'choose') { choose(result.items[next.index]); return; }
@@ -149,6 +166,7 @@ export function initSearch({ getStatesIndex }) {
       if (t) go(t); else draw();
       return;
     }
+    if (next.action === 'closeBar') { closeBar(); return; }
     if (next.action === 'clear') {
       input.value = '';
       status.textContent = '';
@@ -171,26 +189,22 @@ export function initSearch({ getStatesIndex }) {
     emitQuery();
     input.focus();
   });
-  // "/" (#26): on a Schools page it focuses the box; elsewhere it opens Schools, and the box gets focus once that
-  // page has rendered (hs-rendered, which app.js sends before its title-focus step). nav.js slashAction ignores
-  // it while typing in a field and with Ctrl, Meta or Alt.
+  // "/" focuses the header box on every page (on phones it opens the bar first). nav.js slashAction ignores it
+  // while typing in a field and with Ctrl, Meta or Alt.
   document.addEventListener('keydown', (e) => {
     const act = slashAction(resolveTab(readHash()), e);
     if (!act) return;
     e.preventDefault();
-    if (act.hash) { focusAfterRender = true; location.hash = act.hash; } else { input.focus(); }
+    if (PHONE.matches) openBar();
+    input.focus();
   });
-  // After each page render: leaving Schools clears the box; on the list it shows q= (unless you're typing in it);
-  // within Schools (landing ↔ list) it keeps your text (nav.js boxTextAfter). A school chosen from search focuses
-  // the new page's title; "/" from another page focuses the box.
+  // After each page render: the box keeps its text only between the Schools landing and the list, and shows q= on
+  // the list unless you're typing in it (nav.js boxTextAfter). A school chosen from search focuses the new page's
+  // title. app.js sends hs-rendered before its own title-focus step, which leaves focus in the box when it has it.
   window.addEventListener('hs-rendered', () => {
     const state = resolveTab(readHash());
     input.value = boxTextAfter({ state, focused: document.activeElement === input, text: input.value });
-    if (focusAfterRender) {
-      focusAfterRender = false;
-      if (hasSchoolSearch(state)) input.focus({ preventScroll: true });
-    }
-    if (titleFocus) { titleFocus = false; focusTitle(); }
+    if (titleFocus) { titleFocus = false; focusPageTitle(); }
   });
   // Phones: size the panel from the visual viewport and the box's position, so it stays above the keyboard.
   function sizePanel() {

@@ -148,7 +148,7 @@ test('6. All games and Champions under Events: the same content, new crumbs and 
 
 test('7. styles: the band, the cards and a two-item phone bar', async () => {
   const css = await read('public/css/app.css');
-  assert.match(css, /\.school-search-card, \.event-search-card \{/, 'the Events band looks like the Schools band');
+  assert.match(css, /\.event-search-card \{ padding: 16px 18px; \}/, 'the Events band keeps its card (the Schools band is gone since #31)');
   assert.match(css, /\.bottom-nav \{\s*display: grid; grid-template-columns: repeat\(2, 1fr\);/);
   assert.match(css, /\.event-card \.event-meta \{/);
 });

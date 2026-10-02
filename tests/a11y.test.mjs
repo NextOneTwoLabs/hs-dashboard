@@ -70,5 +70,6 @@ test('3. the view is not an aria-live region; navigation moves focus to the page
   assert.equal(nav.refocusId({ cause: 'hashchange', keep: 'f-season' }), null);
   const app = await read('public/js/app.js');
   assert.match(app, /focusTitleAfter\(/);
-  assert.match(app, /\.content-title/);
+  assert.match(app, /focusPageTitle\(\)/, 'through components/titleFocus.js since #31');
+  assert.match(await read('public/js/components/titleFocus.js'), /querySelector\('\.content-title'\)/);
 });

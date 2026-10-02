@@ -42,7 +42,7 @@ What each returns:
   `updatedAt` is when data last changed, not the last cron run.
 - **`sources`:** the crawl registry (`public/data/sources.json`).
 - **`states`:** coverage, one row per state, with its association, seasons and latest champions.
-- **`search-index`:** compact `[id, name, city, state, apps, titles]` rows for the Schools search.
+- **`search-index`:** compact `[id, name, city, state, apps, titles]` rows for the header search.
 - **`schools`:** the full school directory. **`schools/{id}`:** one school's appearances, games and summary.
 - **`states/{ST}/catalog`:** that state's seasons → competitions → divisions, with status, champion and runner-up.
 - **`states/{ST}/schools`:** that state's school directory.

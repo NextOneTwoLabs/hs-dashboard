@@ -132,7 +132,7 @@ export async function render({ state, statesIndex, controls, view, head, setStat
       <div class="card event-search-card">
         <h2 class="event-search-h" id="find-event-h">Find an event</h2>
         <p class="event-search-lead">Type a state, an association, a division or a school.</p>
-        <div class="search" role="search">
+        <div class="search" role="search" aria-label="Search events">
           <label class="sr-only" for="event-q">Search events</label>
           <input type="search" class="search-input" id="event-q" value="${esc(f.q)}" placeholder="State, association, division or school…" autocomplete="off" spellcheck="false" aria-describedby="event-q-hint">
           <span class="sr-only" id="event-q-hint">Filters the events below as you type. Schools that match are listed under the box; choose one to see its events.</span>

@@ -127,12 +127,13 @@ test('q=ake still lists "Lake…" schools, with the table count (old and new lin
     assert.equal((view.innerHTML.match(/<tr><td><a href="#tab=school&school=/g) || []).length, want, `${hash}: rows`);
     assert.match(head.innerHTML, new RegExp(`${want} of 1,337 schools`));
   }
-  // The search's "All N" option opens the same list (since #30 the search has no city or state options).
+  // The search's "All N" option opens the same list.
   const all = target({ kind: 'all', n: want, q: 'ake' }).hash;
   assert.equal(all, '#tab=schools&q=ake');
   location.hash = all;
   assert.equal(nav.pageOf(nav.resolveTab(readHash())), 'schools');
-  assert.equal(target({ kind: 'city', city: { city: 'San Antonio' } }), null);
+  // #31: a city's row opens that city's list (with its state), not a name search.
+  assert.equal(target({ kind: 'city', city: 'San Antonio', state: 'TX', n: 17 }).hash, '#tab=schools&st=TX&city=San%20Antonio');
   assert.equal(target({ kind: 'school', row: { id: LOS_GATOS } }).hash, `#tab=school&school=${LOS_GATOS}`);
 });
 
