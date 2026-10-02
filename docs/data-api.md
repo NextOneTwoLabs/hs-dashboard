@@ -37,7 +37,8 @@ Every route answers `GET` and `HEAD`. A body is the published file's bytes, unch
 | `/api/v1/seasons/{season}/competitions/{comp}/divisions/{div}/bracket` | `/archive/brackets/{season}/{comp}/{div}.json` | yes |
 
 What each returns:
-- **`catalog`:** every state's seasons, competitions and divisions in one file (schema 2).
+- **`catalog`:** every state's seasons, competitions and divisions in one file (schema 2). The Events page and the
+  header search's Events group read it.
 - **`status`:** the last crawl run that changed something: `updatedAt`, requests, blocked, budget, crawled and failed.
   `updatedAt` is when data last changed, not the last cron run.
 - **`sources`:** the crawl registry (`public/data/sources.json`).

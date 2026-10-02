@@ -167,15 +167,6 @@ button { cursor: pointer; }
 .header-search-toggle, .header-search-close { display: none; }
 .search-kbd { position: absolute; right: 10px; top: 9px; font-size: 12px; line-height: 18px; color: var(--text-secondary); border: 1px solid var(--border); border-radius: 4px; padding: 0 6px; pointer-events: none; }
 .search-input:focus ~ .search-kbd { display: none; }
-/* The Events landing's "Find an event" band (#30, views/events.js). */
-.event-search-card { padding: 16px 18px; }
-.event-search-h { font-size: 18px; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 4px; }
-.event-search-lead { font-size: 13px; color: var(--text-secondary); margin-bottom: 10px; }
-.event-search .search { position: relative; max-width: 640px; }
-.event-search .search-input { height: 44px; font-size: 15px; padding-left: 38px; background-position: 12px center; }
-.event-search-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.event-search-chips .chip { height: 34px; padding: 0 14px; font-size: 13px; color: var(--text-primary); background: var(--bg-surface); border: 1px solid var(--border); cursor: pointer; }
-.event-search-chips .chip:hover { border-color: var(--accent); color: var(--accent-text); }
 
 /* ===== Layout and the filter row (#20 PR 3: the statewide sidebar is gone) ===== */
 .layout { display: flex; height: 100vh; padding-top: var(--header-height); }
@@ -278,12 +269,10 @@ select:hover { border-color: var(--accent-text); }
 .state-card p { font-size: 12px; margin-top: 2px; }
 .state-links { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 10px !important; font-weight: 600; }
 .state-links a { white-space: nowrap; }
-/* The Events landing (#30): the Schools landing's band, filters and card grid; one card per division tournament. */
-.content-body .event-search { padding: 0 0 18px; }
-.event-schools-h { font-size: 12px; color: var(--text-secondary); margin: 12px 0 6px; }
-.event-schools-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
-.event-schools-list .chip, .event-picked .chip { height: 34px; padding: 0 12px; font-size: 13px; color: var(--text-primary); background: var(--bg-surface); border: 1px solid var(--border); cursor: pointer; }
-.event-schools-list .chip:hover, .event-picked .chip:hover { border-color: var(--accent); color: var(--accent-text); }
+/* The Events landing (#30): the Schools landing's filters and card grid; one card per division tournament. Its
+   "Find an event" band went in #31 PR 2 (the header search finds events). */
+.event-picked .chip { height: 34px; padding: 0 12px; font-size: 13px; color: var(--text-primary); background: var(--bg-surface); border: 1px solid var(--border); cursor: pointer; }
+.event-picked .chip:hover { border-color: var(--accent); color: var(--accent-text); }
 .event-picked { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; margin: 0 0 8px; }
 .browse-tools { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
 .browse-tools .field { flex-wrap: wrap; }
@@ -423,6 +412,7 @@ table.data td.n, table.data th.n { text-align: right; font-variant-numeric: tabu
 /* Playoff history: a compact table (caption, th scope); stacked label/value rows on narrow screens. */
 table.history caption { caption-side: top; text-align: left; padding: 10px 12px; font-size: 12px; color: var(--text-secondary); }
 table.history tbody th { background: none; position: static; font-size: 13px; color: var(--text-primary); }
+.history-events { margin: 12px 0 0; font-size: 13px; font-weight: 600; }   /* "This school's events →" (#31) */
 @media (max-width: 960px) {
   .team-overview { grid-template-columns: minmax(0, 1fr); grid-template-areas: none; }
   .team-overview > * { grid-area: auto; }

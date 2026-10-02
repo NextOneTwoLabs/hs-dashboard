@@ -29,7 +29,7 @@ export function stateCardHtml(s) {
       <h3><a href="${esc(listHref({ st: s.code }))}">${esc(s.name)}</a>${live ? ' <span class="badge live"><span aria-hidden="true">● </span>Live</span>' : ''}</h3>
       <p class="muted">${esc(s.association)} · ${esc(s.terms.map((t) => TERM[t] || t).join(' and '))} season</p>
       <p class="muted">${s.schools.toLocaleString()} schools in playoff records · ${n} bracket${n === 1 ? '' : 's'} in ${esc(s.latestSeason)}</p>
-      <p class="state-links"><a href="${esc(listHref({ st: s.code }))}">Schools</a><a href="${esc(eventsHref('events', { st: s.code }))}">Events</a><a href="${esc(eventsHref('champions', { st: s.code }))}">Champions</a><a href="${esc(eventsHref('games', { st: s.code }))}">Games</a></p>
+      <p class="state-links"><a href="${esc(listHref({ st: s.code }))}">Schools</a><a href="${esc(eventsHref('events', { st: s.code }))}">Events</a><a href="${esc(eventsHref('champions', { st: s.code }))}">Champions</a><a href="${esc(eventsHref('games', { st: s.code }))}">All games</a></p>
     </article>`;
 }
 

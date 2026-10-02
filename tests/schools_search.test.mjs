@@ -1,5 +1,5 @@
 // #31: one search box in the site header, on every page (owner: "the search box should appear at header"). It
-// accepts a school's name, a state or a city; every option is a school or a list of schools. On phones it is a
+// accepts a school's name, a state or a city (the Schools group), then events (the Events group, PR 2). On phones it is a
 // search button that opens a full-width bar (Escape: the list, then the text, then the bar). "/" focuses it
 // everywhere. The page title gets focus after navigation without a ring (data-scripted-focus).
 // (#26 put the box in a Schools page band; this file grew from its tests.)
@@ -10,6 +10,14 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { api, nav, read } from './helpers/views.mjs';
 
+// Every request of this one page session, by path (the harness's netguard fetch does the work).
+const requests = new Map();
+const harnessFetch = globalThis.fetch;
+globalThis.fetch = (input, init) => {
+  const path = new URL(String(input), 'http://hs.test').pathname;
+  requests.set(path, (requests.get(path) || 0) + 1);
+  return harnessFetch(input, init);
+};
 const { tableMatch, cityMatch } = await import('../public/js/search.js');
 const MATER_DEI = '2b6b45d3-4465-4750-ba48-a273b674e37c';
 const LOS_GATOS = 'bdb0b593-ef7f-4c69-8c2a-e0a48c934ca7';
@@ -22,26 +30,28 @@ test('1. one search box, in the header, between the Main nav and the right group
   const header = html.slice(html.indexOf('<header'), html.indexOf('</header>'));
   const at = (s) => { const i = header.indexOf(s); assert.ok(i > 0, s); return i; };
   assert.ok(at('id="main-nav"') < at('id="search"') && at('id="search"') < at('class="header-right"'));
-  assert.match(header, /<div class="header-search search" id="search" role="search" aria-label="Search schools">/);
+  // #31 PR 2: one box for schools and events.
+  assert.match(header, /<div class="header-search search" id="search" role="search" aria-label="Search schools and events">/);
+  assert.match(header, /<span class="sr-only" id="search-hint">Type a school's name, a city, a state or an event\./);
   for (const id of ['search-input', 'search-hint', 'search-panel', 'search-list', 'search-status', 'search-close', 'search-toggle']) {
     assert.equal((html.match(new RegExp(`id="${id}"`, 'g')) || []).length, 1, `one #${id}`);
     assert.match(header, new RegExp(`id="${id}"`), `#${id} is in the header`);
   }
-  assert.match(header, /<input type="search" class="search-input" id="search-input" role="combobox"[^>]*aria-controls="search-list" aria-expanded="false" aria-describedby="search-hint"[^>]*placeholder="School, city or state…"/);
+  assert.match(header, /<input type="search" class="search-input" id="search-input" role="combobox"[^>]*aria-controls="search-list" aria-expanded="false" aria-describedby="search-hint"[^>]*placeholder="School, city, state or event…"/);
   // Phones: the button names the bar it opens (Kongming v4: aria-controls is the bar, present at all times).
-  assert.match(header, /<button class="header-search-toggle" id="search-toggle" type="button" aria-label="Search schools" aria-expanded="false" aria-controls="search">/);
+  assert.match(header, /<button class="header-search-toggle" id="search-toggle" type="button" aria-label="Search schools and events" aria-expanded="false" aria-controls="search">/);
   assert.match(header, /<button type="button" class="header-search-close" id="search-close">Close<\/button>/);
   assert.doesNotMatch(html, /id="school-search"|Find a school|school-search-chips/, 'the Schools band is gone');
   assert.equal((html.match(/role="search"/g) || []).length, 1, 'one search landmark in the page shell');
 });
 
-test('2. views never write the box; the Events band is a second landmark with its own name', async () => {
+test('2. views never write the box, and none has a search box of its own (both bands are gone)', async () => {
   for (const page of nav.PAGES) {
     const src = (await read(`public/js/views/${page}.js`)).replace(/^\s*\/\/.*$/gm, '');   // code, not comments
     assert.doesNotMatch(src, /school-search|id="search-|#search-(input|panel|status)|'search-(input|panel|status)'|hs-search-fill/, `${page}.js`);
     assert.doesNotMatch(src, /\bdocument\./, `${page}.js writes only its head, controls and view`);
+    assert.doesNotMatch(src, /role="search"|type="search"|Find an event|Find a school/, `${page}.js: the header box is the only search (#31 PR 2)`);
   }
-  assert.match(await read('public/js/views/events.js'), /<div class="search" role="search" aria-label="Search events">/);
   const app = await read('public/js/app.js');
   const i = (re) => { const m = app.search(re); assert.ok(m > 0, String(re)); return m; };
   assert.ok(i(/window\.dispatchEvent\(new CustomEvent\('hs-rendered'\)\)/) < i(/if \(focusTitleAfter\(\{ cause, searchFocused:/),
@@ -98,7 +108,10 @@ test('4. nav.js: "/" everywhere, the box\'s text after a render, and the `city` 
   for (const h of ['#tab=schools&city=Austin', `#tab=school&school=${LOS_GATOS}&city=Austin`, '#tab=events&city=Austin', '#tab=event&st=TX&city=Austin']) {
     assert.equal(st(h).city, undefined, h);
   }
-  for (const h of ['#tab=schools&st=TX&city=Austin', '#tab=schools&city=Austin', '#tab=events&city=X']) {
+  // #31 PR 2: no q on Events (no "Find an event"); q stays on the school list.
+  for (const h of ['#tab=events&q=6a', '#tab=events&view=games&q=6a']) assert.equal(st(h).q, undefined, h);
+  assert.equal(st('#tab=schools&q=6a').q, '6a');
+  for (const h of ['#tab=schools&st=TX&city=Austin', '#tab=schools&city=Austin', '#tab=events&city=X', '#tab=events&st=TX&q=6a']) {
     const once = st(h);
     assert.deepEqual(nav.resolveTab(once), once, `${h}: resolving twice changes nothing`);
     assert.equal(nav.canonicalHash(Object.fromEntries(new URLSearchParams(nav.hrefFor(once).slice(1)))), null, h);
@@ -456,12 +469,50 @@ test('13. every old link opens its route through app.js, rewritten in place (no 
   }
 });
 
-test('14. requests: one search-index for a whole session of searching, and states and cities cost nothing', async () => {
+// #31 PR 2: the Events group, through the real app.js.
+test('14. events: "CIF D1" → Enter opens the bracket; "Texas" offers the state\'s events; no box on Events', async () => {
   await boot();
-  // Every search above ran in this one session. api.js keeps one copy (fetchJSON memo); count through the source.
+  await go(`#tab=school&school=${LOS_GATOS}`);
+  input.focus();
+  await type('CIF D1');
+  assert.match(panel.innerHTML, /role="group" aria-label="Events"/);
+  assert.match(panel.innerHTML, /State · Division 1<\/span><span class="sr-only">, <\/span><span class="qopt-sub">CIF State Championships · California · 2025-26/);
+  let p = rendered();
+  press('Enter', {}, input);
+  await p;
+  assert.equal(location.hash, '#tab=event&st=CA&season=2025-26&comp=ca-cif-state&div=gd1');
+  assert.equal(h1(), 'State · Division 1');
+  assert.equal(document.activeElement, title, 'an event chosen from search focuses its page title');
+  assert.equal(input.value, '');
+  // "Texas": the Schools group first, then "All 6 events in Texas, 2025-26"; choosing it opens Events for Texas.
+  input.focus();
+  await type('Texas');
+  const opts = [...panel.innerHTML.matchAll(/data-i="(\d+)"><span class="qopt-name">([^<]*)</g)].map((m) => m[2]);
+  assert.equal(opts[0], 'All 384 schools in Texas →', 'schools first: Enter still opens the school list');
+  const at = opts.indexOf('All 6 events in Texas, 2025-26 →');
+  assert.ok(at > 0, 'the Events row, after the schools');
+  for (let i = 0; i <= at; i++) press('ArrowDown', {}, input);
+  p = rendered();
+  press('Enter', {}, input);
+  await p;
+  assert.equal(location.hash, '#tab=events&st=TX');
+  assert.equal(h1(), 'Events');
+  assert.doesNotMatch(els.get('view').innerHTML, /role="search"|Find an event/, 'the header box is the only search');
+  // An old Events link with q= is rewritten without it.
+  await go('#tab=about');
+  await go('#tab=events&q=6a');
+  assert.equal(location.hash, '#tab=events');
+});
+
+test('15. requests: 1 search-index and 1 catalog for a whole session of searching on many pages', async () => {
+  await boot();
+  // Every search above ran in this one page session, on Schools, school, event, Events and All games pages.
+  assert.equal(requests.get('/api/v1/search-index'), 1, 'the search index once');
+  assert.equal(requests.get('/api/v1/catalog'), 1, 'the catalog once (shared with the Events page)');
   const box = await read('public/js/components/searchBox.js');
-  assert.equal((box.match(/api\.searchIndex\(\)/g) || []).length, 1, 'one place loads it, once (loading ||=)');
+  assert.equal((box.match(/api\.searchIndex\(\)/g) || []).length, 1, 'one place loads it, once');
+  assert.equal((box.match(/api\.catalog\(\)/g) || []).length, 1);
   assert.match(box, /if \(idx\) return Promise\.resolve\(idx\);/);
   const src = await read('public/js/search.js');
-  assert.doesNotMatch(src.replace(/^\s*\/\/.*$/gm, ''), /fetch\(|api\./, 'matching states and cities makes no request');
+  assert.doesNotMatch(src.replace(/^\s*\/\/.*$/gm, ''), /fetch\(|api\./, 'matching schools, states, cities and events makes no request');
 });

@@ -120,6 +120,10 @@ test('5. Playoff history: one compact table for all seasons, same names for the 
   assert.match(notes, /penalty kicks count as a draw \(D\) in the playoff record/);
   const css = await read('public/css/app.css');
   assert.match(css, /@media \(max-width: 560px\) \{\s*table\.history thead \{ display: none; \}/, 'stacked rows on phones');
+  // #31: one way in to Events' school= filter, under the table (owner: "agreed").
+  assert.match(html, new RegExp(`</table></div>\\s*<p class="history-events"><a href="#tab=events&amp;school=${LOS_GATOS}">This school's events <span aria-hidden="true">→</span></a></p>`));
+  assert.equal(nav.canonicalHash({ tab: 'events', school: LOS_GATOS }), null, 'the link is in its canonical form');
+  for (const v of ['overview', 'results']) assert.doesNotMatch((await open(team(v))).view.innerHTML, /history-events/, `only on Playoff history, not ${v}`);
 });
 
 test('6. Results: match cards name the PK winner, keep the draw, and tell missing results from scores', async () => {

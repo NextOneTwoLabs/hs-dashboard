@@ -1,5 +1,5 @@
 // The one search box (#13), in the site header on every page (owner, #31: "the search box should appear at
-// header"; in a Schools page band from #26 to #31). An ARIA 1.2 editable combobox with list autocomplete: the box
+// header"; in a Schools page band from #26 to #31), for schools and events (#31 PR 2). An ARIA 1.2 editable combobox with list autocomplete: the box
 // (role=combobox) owns a listbox of options; the active option is named by aria-activedescendant and has
 // aria-selected="true". The hint is the box's aria-describedby; the single role=status region announces counts
 // after a pause in typing. Matching lives in search.js.
@@ -33,13 +33,15 @@ export function initSearch({ getStatesIndex }) {
 
   // The school list (Schools with st/q/city/view=list) is where the box filters the table.
   const onList = () => pageOf(resolveTab(readHash())) === 'schools';
-  const empty = () => ({ rows: [], cities: [], states: [] });
+  const empty = () => ({ rows: [], cities: [], states: [], ev: null });
 
+  // The search index and the catalog (for the Events group), on the first focus: at most 1 of each per page
+  // session (api.js keeps them; the Events page shares the catalog). Without the catalog, schools still work.
   function ensureIndex() {
     if (idx) return Promise.resolve(idx);
     if (!loading) {
-      loading = api.searchIndex()
-        .then((si) => { idx = buildIndex(si, getStatesIndex()); return idx; })
+      loading = Promise.all([api.searchIndex(), api.catalog().catch(() => null)])
+        .then(([si, catalog]) => { idx = buildIndex(si, getStatesIndex(), catalog); return idx; })
         .catch(() => { loading = null; return null; });
     }
     return loading;
