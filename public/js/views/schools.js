@@ -1,7 +1,7 @@
 import { api, errorHtml } from '../api.js';
 import { setHead } from '../components/pageHeader.js';
 import { statePills } from '../components/sidebar.js';
-import { hrefFor, resolveTab } from '../nav.js';
+import { listHref, pageOf, resolveTab } from '../nav.js';
 import { tableMatch } from '../search.js';
 import { readHash } from '../state.js';
 import { esc, favorites, schoolHref } from '../util.js';
@@ -22,10 +22,10 @@ export async function render({ state, statesIndex, controls, view, head, setStat
   // The filter is the header search box (#13): it writes q= here, and the table keeps substring matching.
   let q = state.q || '';
   // State pills keep the name filter (`q`), so filtered links stay filtered.
-  controls.innerHTML = statePills(statesIndex, st, (code) => hrefFor({ tab: 'schools', st: code, q: state.q }),
-    { all: hrefFor({ tab: 'schools', q: state.q }), count: 'schools' })
+  controls.innerHTML = statePills(statesIndex, st, (code) => listHref({ st: code, q: state.q }),
+    { all: listHref({ q: state.q }), count: 'schools' })
     + '<p class="side-note">Search by name or city in the box at the top.</p>';
-  setHead(head, { crumbs: [['All states', '#tab=states'], ['Schools']], title: 'Schools' });
+  setHead(head, { crumbs: [['Teams', '#tab=teams'], ['Schools']], title: 'Schools' });
   view.innerHTML = '<div class="card notice">Loading schools…</div>';
   let data;
   try {
@@ -52,7 +52,7 @@ export async function render({ state, statesIndex, controls, view, head, setStat
       <td>${esc(s.state)}</td><td class="n">${s.apps}</td><td class="n">${s.titles || ''}</td><td class="num">${esc(s.last)}</td></tr>`).join('');
     const more = rows.length > 500 ? `<p class="muted" style="margin-top:10px;font-size:12px">Showing the first 500. Filter by state or name to narrow the list.</p>` : '';
     const stName = statesIndex.states.find((s) => s.code === st)?.name;
-    setHead(head, { crumbs: [['All states', '#tab=states'], ['Schools']], title: stName ? `${stName} schools` : 'Schools',
+    setHead(head, { crumbs: [['Teams', '#tab=teams'], ['Schools']], title: stName ? `${stName} schools` : 'Schools',
       subtitle: `${rows.length.toLocaleString()} of ${data.count.toLocaleString()} schools with a state playoff appearance · ${covered} states covered`
         + (q.trim() ? ` · matching “${esc(q.trim())}” <button type="button" class="clear-search" data-clear-search>Clear search</button>` : '') });
     view.innerHTML = `${favs.length ? `<div class="fav-list"><span class="muted">Following:</span>${favs.map((f) => `<a class="chip accent" href="${schoolHref(f.id)}">★ ${esc(f.name)}</a>`).join('')}</div>` : ''}
@@ -65,14 +65,14 @@ export async function render({ state, statesIndex, controls, view, head, setStat
   };
   // Typing in the header box while this view is open (components/searchBox.js).
   const onQuery = (e) => {
-    if (resolveTab(readHash()).tab !== 'schools') { window.removeEventListener('hs-query', onQuery); return; }
+    if (pageOf(resolveTab(readHash())) !== 'schools') { window.removeEventListener('hs-query', onQuery); return; }
     q = e.detail || '';
-    setState({ q: q || null }, { replace: true, silent: true });
+    // With no state and no name this is the whole list (view=list), so a refresh keeps the list.
+    setState({ q: q || null, view: q || st ? null : 'list' }, { replace: true, silent: true });
     // Keep the state pills' links carrying the current filter.
     controls.querySelectorAll('a.pill').forEach((a) => {
       const p = new URLSearchParams(a.getAttribute('href').slice(1));
-      if (q) p.set('q', q); else p.delete('q');
-      a.setAttribute('href', '#' + p.toString());
+      a.setAttribute('href', listHref({ st: p.get('st'), q }));
     });
     draw();
   };

@@ -24,7 +24,8 @@ export function resultText(app) {
   return RESULT_LABEL[app.result] || app.result;
 }
 
-export const schoolHref = (id, g) => `#tab=school&school=${encodeURIComponent(id)}${g ? `&g=${g}` : ''}`;
+// A team page (#20): #tab=team&school=<id>, with the program (g) when there are two.
+export const schoolHref = (id, g) => `#tab=team&school=${encodeURIComponent(id)}${g ? `&g=${g}` : ''}`;
 
 export const bracketHref = (st, season, comp, div) =>
   `#tab=playoffs&st=${st}&season=${season}&comp=${comp}${div ? `&div=${div}` : ''}`;

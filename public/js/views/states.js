@@ -1,6 +1,6 @@
 import { setHead } from '../components/pageHeader.js';
 import { bracketCount, statePills, termPills } from '../components/sidebar.js';
-import { hrefFor } from '../nav.js';
+import { hrefFor, listHref } from '../nav.js';
 import { bracketHref, esc, fmtDate, isLive, schoolHref } from '../util.js';
 
 const TERM = { fall: 'Fall', winter: 'Winter', spring: 'Spring' };
@@ -15,13 +15,15 @@ export async function render({ statesIndex, controls, view, head }) {
     const seasons = [...new Set(list.map((s) => s.latestSeason))].sort().reverse();
     // A state pill opens that state's brackets (owner decision on #5).
     controls.innerHTML = termPills(statesIndex, term)
-      + statePills(statesIndex, null, (code) => hrefFor({ tab: 'playoffs', st: code }), { all: hrefFor({ tab: 'states' }) })
+      + statePills(statesIndex, null, (code) => hrefFor({ tab: 'playoffs', st: code }), { all: hrefFor({ tab: 'teams' }) })
       + '<p class="side-note">Counts are brackets in each state\'s latest season. A state opens its brackets.</p>';
     controls.querySelectorAll('[data-term]').forEach((b) => b.addEventListener('click', () => { term = b.dataset.term; draw(); }));
     setHead(head, {
-      crumbs: [['All states']],
+      crumbs: [['Teams']],
       title: 'State championships',
       subtitle: `Girls soccer · ${list.length} of ${covered.length} states · ${schools.toLocaleString()} schools${seasons.length ? ` · ${esc(seasons.join(', '))}` : ''}`,
+      // The whole school list stays one link away (an old plain Schools link opens it too).
+      right: `<a href="${listHref()}">All ${covered.reduce((t, s) => t + s.schools, 0).toLocaleString()} schools <span aria-hidden="true">→</span></a>`,
     });
     view.innerHTML = `<div class="grid cards">${list.map(card).join('')}</div>`;
   };
@@ -52,7 +54,7 @@ function card(s) {
       </div>
       <ul class="champ-list">${rows}</ul>
     </div>
-    <div class="foot"><span><a href="#tab=champions&st=${s.code}">All champions</a> · <a href="#tab=results&st=${s.code}">Results</a></span>
+    <div class="foot"><span><a href="${listHref({ st: s.code })}">Schools</a> · <a href="${hrefFor({ tab: 'playoffs', view: 'champions', st: s.code })}">All champions</a> · <a href="#tab=results&st=${s.code}">Results</a></span>
       <a href="${hrefFor({ tab: 'playoffs', st: s.code })}">Brackets →</a></div>
   </article>`;
 }

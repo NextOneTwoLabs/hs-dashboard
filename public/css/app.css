@@ -148,6 +148,22 @@ button { cursor: pointer; }
 }
 .theme-toggle:hover { background: var(--bg-surface-alt); }
 
+/* ===== Main nav (#20): Teams · Results · Playoffs. The header nav on wider screens, the bottom bar on phones;
+   only one is displayed at a time (the other is display:none), so there is one Main landmark in use. ===== */
+.header-nav { display: flex; align-items: center; gap: 2px; flex: none; margin-left: 12px; }
+.main-nav-link {
+  display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 10px; border-radius: var(--radius-sm);
+  font-size: 14px; font-weight: 600; color: var(--text-secondary); white-space: nowrap;
+}
+.main-nav-link svg { width: 18px; height: 18px; flex: none; }
+.main-nav-link:hover { color: var(--text-primary); background: var(--bg-surface-alt); text-decoration: none; }
+.main-nav-link[aria-current] { color: var(--accent-text); background: var(--accent-surface); }
+.bottom-nav { display: none; }
+/* Room for the search box: the product label goes first, then icons, then the header "About" link (it is in the footer). */
+@media (max-width: 1360px) { .header-divider, .section-label { display: none; } }
+@media (max-width: 1180px) { .main-nav-link svg { display: none; } .main-nav-link { padding: 0 8px; } }
+@media (max-width: 1024px) { .header-right .header-link { display: none; } .header-search { margin: 0 10px; } .header-nav { margin-left: 4px; } }
+
 /* ===== Layout and sidebar (collegedash .layout / .sidebar / .pill) ===== */
 .layout { display: flex; height: 100vh; padding-top: var(--header-height); }
 .sidebar-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.4); z-index: 49; }
@@ -209,7 +225,9 @@ select:hover { border-color: var(--accent-text); }
 .breadcrumb-sep { font-size: 10px; }
 .breadcrumb-current { color: var(--text-primary); font-weight: 600; }
 .content-title { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; line-height: 1.2; }
-.content-title:focus { outline: none; }
+/* Focus moves here after navigation (#11). No ring for a mouse click; a visible one for keyboard users (#18). */
+.content-title:focus:not(:focus-visible) { outline: none; }
+.content-title:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 4px; border-radius: 4px; }
 .content-subtitle { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
 .content-header-right { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 10px 14px; flex-shrink: 0; font-size: 13px; font-weight: 600; }
 .view-tabs { display: flex; gap: 24px; margin-bottom: -1px; flex-wrap: wrap; }
@@ -218,6 +236,7 @@ select:hover { border-color: var(--accent-text); }
 .view-tab[aria-current="page"] { color: var(--accent-text); border-bottom-color: var(--accent); }
 .content-body { flex: 1 0 auto; min-width: 0; padding: 20px 28px 40px; }
 .footer { padding: 12px 28px 24px; font-size: 12px; color: var(--text-secondary); border-top: 1px solid var(--border-light); }
+.footer-about { margin-left: 6px; font-weight: 600; }
 
 /* ===== Cards and primitives ===== */
 .card { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); }
@@ -342,7 +361,28 @@ table.data td.n, table.data th.n { text-align: right; font-variant-numeric: tabu
 .footer-updated { display: none; }
 @media (max-width: 1100px) { .observed-top { display: none; } .footer-updated { display: inline; } }
 @media (max-width: 768px) {
-  :root { --header-height: 112px; }
+  :root { --header-height: 112px; --bottom-nav-h: calc(56px + env(safe-area-inset-bottom)); }
+  /* Main nav: the bottom bar replaces the header nav. The phone header has room for the product label again. */
+  .header-nav { display: none; }
+  .header-divider { display: block; }
+  .section-label { display: inline; }
+  .bottom-nav {
+    display: grid; grid-template-columns: repeat(3, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    height: var(--bottom-nav-h); padding-bottom: env(safe-area-inset-bottom);
+    background: var(--bg-header); border-top: 1px solid var(--border);
+  }
+  .bottom-nav-link {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 48px;
+    font-size: 11px; font-weight: 600; color: var(--text-secondary);
+  }
+  .bottom-nav-link svg { width: 22px; height: 22px; }
+  .bottom-nav-link:hover { text-decoration: none; color: var(--text-primary); }
+  .bottom-nav-link[aria-current] { color: var(--accent-text); }
+  .bottom-nav-link[aria-current] svg { stroke-width: 2.2; }
+  /* While the header search has focus the bar hides: a fixed bar rides above the iOS keyboard and would cover
+     the suggestions. :has() where supported; body.search-focus (components/searchBox.js) as the fallback. */
+  body:has(#search-input:focus) .bottom-nav, body.search-focus .bottom-nav { display: none; }
+  .layout { padding-bottom: var(--bottom-nav-h); }
   .header { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: 52px 52px; column-gap: 8px; align-items: center; padding: 0 12px; }
   .header-search { grid-row: 2; grid-column: 1 / -1; max-width: none; margin: 0; }
   .search-input { font-size: 16px; }   /* iOS does not zoom on focus */
@@ -358,7 +398,7 @@ table.data td.n, table.data th.n { text-align: right; font-variant-numeric: tabu
   .wordmark img { width: 26px; height: 26px; margin-right: 8px; }
   .section-label { font-size: 13px; overflow: hidden; text-overflow: ellipsis; }
   .sidebar {
-    position: fixed; top: var(--header-height); left: 0; bottom: 0; width: min(320px, 88vw); min-width: 0;
+    position: fixed; top: var(--header-height); left: 0; bottom: var(--bottom-nav-h); width: min(320px, 88vw); min-width: 0;
     transform: translateX(-100%); visibility: hidden; transition: transform var(--transition-med), visibility 0s var(--transition-med);
   }
   .layout.drawer .sidebar { transform: translateX(0); visibility: visible; box-shadow: var(--shadow-lg); transition: transform var(--transition-med); }
@@ -389,4 +429,4 @@ table.data td.n, table.data th.n { text-align: right; font-variant-numeric: tabu
 @media (max-width: 400px) { .header-left { gap: 6px; } .wordmark { font-size: 17px; } }
 @media (max-width: 359px) { .header-divider, .section-label { display: none; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
-@media print { .header, .sidebar, .view-tabs { display: none; } body { overflow: auto; height: auto; } .layout { height: auto; padding: 0; } }
+@media print { .header, .sidebar, .view-tabs, .bottom-nav { display: none; } body { overflow: auto; height: auto; } .layout { height: auto; padding: 0; } }

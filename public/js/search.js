@@ -56,7 +56,7 @@ export function matchScore(p, q) {
 }
 
 // The Schools table keeps today's meaning of q= (#13 build item 1): a substring of the name or the city,
-// case-insensitive, so old links like #tab=schools&q=ake still list "Lake ..." schools.
+// case-insensitive, so q=ake still lists "Lake ..." schools (old Schools links open this list under Teams, #20).
 export function tableMatch(row, q) {
   const needle = String(q ?? '').trim().toLowerCase();
   if (!needle) return true;
@@ -127,20 +127,21 @@ export function suggest(idx, raw, { phone = false } = {}) {
 // Where choosing an item goes: a hash, or a chip's text to search for.
 export function target(item) {
   switch (item.kind) {
-    case 'school': return { hash: `#tab=school&school=${encodeURIComponent(item.row.id)}`, focusTitle: true };
+    case 'school': return { hash: `#tab=team&school=${encodeURIComponent(item.row.id)}`, focusTitle: true };
     case 'state': return { hash: `#tab=playoffs&st=${item.state.code}` };
-    case 'city': return { hash: `#tab=schools&q=${encodeURIComponent(item.city.city)}` };
-    case 'all': return { hash: `#tab=schools&q=${encodeURIComponent(item.q)}` };
+    case 'city': return { hash: `#tab=teams&q=${encodeURIComponent(item.city.city)}` };
+    case 'all': return { hash: `#tab=teams&q=${encodeURIComponent(item.q)}` };
     case 'chip': return { fill: item.text };
     default: return null;
   }
 }
 
-// Enter with no active option (collegedash's rule, on our views): on Schools the filtered table stays;
-// elsewhere the first school opens, or the first place when the query names only places, or Schools with q.
-export function enterTarget(result, { tab } = {}) {
+// Enter with no active option (collegedash's rule, on our views): on the school list the filtered table stays;
+// elsewhere the first school opens, or the first place when the query names only places, or the list with q.
+// `list`: the school list (Teams with st/q, nav.js pageOf) is the page now open.
+export function enterTarget(result, { list = false } = {}) {
   if (result.mode !== 'list') return null;
-  if (tab === 'schools') return { stay: true };
+  if (list) return { stay: true };
   const first = result.items.find((it) => it.kind === 'school');
   if (first) return target(first);
   const place = result.items.find((it) => it.kind === 'state' || it.kind === 'city');
@@ -193,8 +194,8 @@ export function optionText(item) {
 }
 
 // The status line read after a pause in typing.
-export function statusText(result, raw, { tab } = {}) {
-  if (tab === 'schools' && result.mode === 'list') return `${result.table.toLocaleString('en-US')} schools match · Enter keeps the table`;
+export function statusText(result, raw, { list = false } = {}) {
+  if (list && result.mode === 'list') return `${result.table.toLocaleString('en-US')} schools match · Enter keeps the table`;
   if (result.mode === 'help') return '';
   if (result.mode === 'nomatch') return `No school matches “${String(raw).trim()}”`;
   const places = result.items.filter((it) => it.kind === 'state' || it.kind === 'city').length;

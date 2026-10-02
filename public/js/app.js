@@ -7,16 +7,18 @@ import * as champions from './views/champions.js';
 import * as schools from './views/schools.js';
 import * as school from './views/school.js';
 import * as about from './views/about.js';
-import { activeTab, focusTitleAfter, resolveTab, tabHref } from './nav.js';
+import { canonicalHash, focusTitleAfter, hasSubNav, mainNavHtml, needsCatalog, pageOf, resolveTab, subNavHtml } from './nav.js';
 import { initSearch } from './components/searchBox.js';
 import './shell.js';
 
+// Page modules by pageOf(): until #20's new views land, the new tabs render these (see nav.js).
 const VIEWS = { states, playoffs, results, champions, schools, school, about };
 const head = document.getElementById('page-head');
-// Tabs that show one state at a time and need that state's catalog.
-const STATE_TABS = new Set(['playoffs', 'results', 'champions']);
 const controls = document.getElementById('controls');
 const view = document.getElementById('view');
+const mainNav = document.getElementById('main-nav');
+const bottomNav = document.getElementById('bottom-nav');
+const subNav = document.getElementById('tabs');
 let statesIndex = null;
 let state = {};
 let renderSeq = 0;
@@ -30,13 +32,19 @@ function setState(patch, { replace = false, silent = false } = {}) {
   if (!silent) render();
 }
 
-// cause: 'hashchange' (a link, Back/Forward), 'tab' (a view tab), 'boot' (first load) or 'control' (an in-page
+// cause: 'hashchange' (a link, a Main nav link, Back/Forward), 'boot' (first load) or 'control' (an in-page
 // control such as the season select or round pills). Only navigation moves focus to the new page's title (#11).
 async function render(cause = 'control') {
   const seq = ++renderSeq;
-  let raw = resolveTab(readHash());
+  const hash = readHash();
+  // Old links (Schools, School, States, Champions; nav.js migrate) open their new route; replaceState, so Back
+  // has no extra entry.
+  const fixed = canonicalHash(hash);
+  if (fixed) history.replaceState(null, '', fixed);
+  let raw = resolveTab(hash);
   let catalog = null;
-  if (STATE_TABS.has(raw.tab)) {
+  // Results and Playoffs (Brackets, Champions) show one state at a time and need its catalog.
+  if (needsCatalog(raw.tab)) {
     raw = resolveState(raw, statesIndex);
     try {
       catalog = await api.stateCatalog(raw.st);
@@ -48,16 +56,16 @@ async function render(cause = 'control') {
     raw = normalize(raw, catalog);
   }
   state = raw;
-  document.querySelectorAll('#tabs [data-tab]').forEach((a) => {
-    a.href = tabHref(a.dataset.tab, state);
-    if (a.dataset.tab === activeTab(state.tab)) a.setAttribute('aria-current', 'page');
-    else a.removeAttribute('aria-current');
-  });
+  // The Main nav (header and phone bottom bar) and the Playoffs sub-nav: one aria-current="page" per route.
+  mainNav.innerHTML = mainNavHtml(state);
+  bottomNav.innerHTML = mainNavHtml(state, { cls: 'bottom-nav-link' });
+  subNav.innerHTML = subNavHtml(state);
+  subNav.hidden = !hasSubNav(state);
   const stateName = catalog ? ` · ${catalog.name}` : '';
-  document.title = state.tab === 'school' || state.tab === 'schools'
-    ? 'Schools · High School Girls Soccer' : `High School Girls Soccer${stateName}`;
+  document.title = state.tab === 'team' || state.tab === 'teams'
+    ? 'Teams · High School Girls Soccer' : `High School Girls Soccer${stateName}`;
   try {
-    await VIEWS[state.tab].render({ state, catalog, statesIndex, controls, view, head, setState });
+    await VIEWS[pageOf(state)].render({ state, catalog, statesIndex, controls, view, head, setState });
   } catch (err) {
     if (seq === renderSeq) {
       console.error(err);
@@ -78,18 +86,6 @@ async function render(cause = 'control') {
 
 view.addEventListener('click', (e) => {
   if (e.target.closest('[data-action="retry"]')) render();
-});
-
-// Tab links keep the current state and season.
-document.getElementById('tabs').addEventListener('click', (e) => {
-  const a = e.target.closest('[data-tab]');
-  if (!a) return;
-  e.preventDefault();
-  const tab = a.dataset.tab;
-  const { st, season, g } = state;
-  state = tab === 'states' ? { tab } : tab === 'schools' ? { tab, st } : { tab, st, season, g };
-  writeHash(state);
-  render('tab');
 });
 
 // ----- Theme -----
