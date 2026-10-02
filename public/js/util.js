@@ -35,7 +35,14 @@ export const bracketHref = (st, season, comp, div, round = null) =>
   `#tab=playoffs&st=${st}&season=${season}&comp=${comp}${div ? `&div=${div}` : ''}${round != null ? `&round=${round}` : ''}`;
 
 // A division is live while it is unfinished and today is near its dates.
-export function isLive(div, today = new Date().toISOString().slice(0, 10)) {
+// Today as YYYY-MM-DD in the viewer's local time zone. Game dates are local calendar dates, so the UTC date
+// (toISOString) would be tomorrow in a US evening and call tonight's game "Awaiting result" (#24 review).
+export function localToday(d = new Date()) {
+  const p = (n) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
+export function isLive(div, today = localToday()) {
   if (div.status === 'complete' || div.status === 'unreported' || !div.start) return false;
   const shift = (iso, days) => new Date(Date.parse(iso) + days * 864e5).toISOString().slice(0, 10);
   return shift(div.start, -3) <= today && today <= shift(div.end || div.start, 3);

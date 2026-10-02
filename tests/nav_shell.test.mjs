@@ -11,7 +11,7 @@ const { tableMatch, target } = await import('../public/js/search.js');
 test('old links open their new route (and replaceState rewrites them)', () => {
   const cases = [
     // [old hash, expected subset of the resolved route, the page that renders it]
-    ['#tab=states', { tab: 'teams', view: undefined, st: undefined }, 'states'],
+    ['#tab=states', { tab: 'teams', view: undefined, st: undefined }, 'landing'],   // the Teams landing (#20 PR 5)
     ['#tab=states&st=TX', { tab: 'teams', st: 'TX' }, 'schools'],          // intended: that state's school list
     ['#tab=schools', { tab: 'teams', view: 'list' }, 'schools'],            // the full list stays reachable
     ['#tab=schools&q=ake', { tab: 'teams', q: 'ake', view: undefined }, 'schools'],
@@ -24,8 +24,8 @@ test('old links open their new route (and replaceState rewrites them)', () => {
     ['#tab=playoffs&view=bogus&st=TX', { tab: 'playoffs', view: undefined }, 'playoffs'],   // no view: Brackets
     ['#tab=results&st=TX&show=upcoming', { tab: 'results', show: 'upcoming' }, 'results'],
     ['#tab=about', { tab: 'about' }, 'about'],
-    ['', { tab: 'teams' }, 'states'],
-    ['#tab=bogus', { tab: 'teams' }, 'states'],
+    ['', { tab: 'teams' }, 'landing'],
+    ['#tab=bogus', { tab: 'teams' }, 'landing'],
     ['#tab=bogus&comp=tx-uil', { tab: 'playoffs', comp: 'tx-uil' }, 'playoffs'],
   ];
   for (const [hash, want, page] of cases) {

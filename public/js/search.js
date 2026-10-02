@@ -11,11 +11,15 @@ export function normalize(s) {
 }
 export const wordsOf = (s) => normalize(s).split(/[^a-z0-9]+/).filter(Boolean);
 export const chunksOf = (s) => normalize(s).split(/\s+/).map((c) => c.replace(/[^a-z0-9]+/g, '')).filter(Boolean);
+// The same chunks with their punctuation kept ("a&m", "p.k.", "o'connor"), for punctuation-exact matches.
+export const rawChunksOf = (s) => normalize(s).split(/\s+/).map((c) => c.replace(/^[^a-z0-9]+|[^a-z0-9]+$/g, '')).filter(Boolean);
 
-// St/Saint and Mt/Mount are the same word (owner decision on #13). A name word matches a query token
-// when it, or its alias, starts with the token: "st pius" and "saint pius" both find "St. Pius X".
+// St/Saint and Mt/Mount are the same word (owner decision on #13), as **whole words only** (#15 item 1): a name
+// word matches a query token when it starts with the token, or when the token is a whole alias word and the name
+// word is its alias. So "st pius" and "saint pius" both find "St. Pius X", but "mt" doesn't prefix "Mountain"
+// and "mo" doesn't find "Mt. Carmel".
 const ALIAS = { st: 'saint', saint: 'st', mt: 'mount', mount: 'mt' };
-const wordMatches = (word, tok) => word.startsWith(tok) || (ALIAS[word] ? ALIAS[word].startsWith(tok) : false);
+const wordMatches = (word, tok) => word.startsWith(tok) || (ALIAS[tok] ? word === ALIAS[tok] : false);
 
 // Every query token must start a different word, in any order.
 function tokensPrefix(toks, words) {
@@ -31,25 +35,32 @@ const canon = (words) => words.map((w) => (w === 'st' ? 'saint' : w === 'mt' ? '
 
 export function prepare(text) {
   const words = wordsOf(text);
-  return { words, chunks: chunksOf(text), canon: canon(words), initials: words.map((w) => w[0]).join('') };
+  return { words, chunks: chunksOf(text), raw: rawChunksOf(text), joinedWords: words.join(' '), canon: canon(words),
+    initials: words.map((w) => w[0]).join('') };
 }
 
 export function parseQuery(raw) {
   const words = wordsOf(raw);
+  const rawChunks = rawChunksOf(raw);
   return { raw: String(raw ?? ''), typed: String(raw ?? '').trim(), words, chunks: chunksOf(raw), canon: canon(words),
-    joined: words.join('') };
+    joined: words.join(''), joinedWords: words.join(' '), punct: rawChunks.filter((c) => /[^a-z0-9]/.test(c)) };
 }
 
-// Score of one name (or city) for a query, or 0. Exact 100 > whole-name prefix 90 > every word a prefix 80 >
-// initials 55 (3+ letters), as in collegedash.
+// Score of one name (or city) for a query, or 0. Exact 100 > whole-name prefix 90 > punctuation-exact 85 >
+// every word a prefix 80 > a punctuated query's loose chunk prefix 60 > initials 55 (3+ letters).
 export function matchScore(p, q) {
   if (!q.words.length) return 0;
   if (p.canon === q.canon) return 100;
-  if (p.canon.startsWith(q.canon)) return 90;
+  // Whole-name prefix as typed, or with St/Mt aliases on whole words only ("mt" is not a prefix of "Mountain").
+  if (p.joinedWords.startsWith(q.joinedWords) || p.canon.startsWith(`${q.canon} `)) return 90;
   // A query whose punctuation joins letters ("a&m", "p.k.", "o'connor") is matched by its joined chunks only,
-  // so "a&m" finds A&M Consolidated but not "Archbishop Mitty" (an a-word and an m-word).
+  // so "a&m" finds A&M Consolidated but not "Archbishop Mitty" (an a-word and an m-word). A name with the same
+  // punctuated chunk ranks above names that only share its letters, "A&M" before "Amador" (#15 item 2).
   const joinedPunct = q.words.length !== q.chunks.length;
   if (!joinedPunct && tokensPrefix(q.words, p.words)) return 80;
+  if (joinedPunct && tokensPrefix(q.chunks, p.chunks)) {
+    return q.punct.every((c) => p.raw.some((pc) => pc.startsWith(c))) ? 85 : 60;
+  }
   if (tokensPrefix(q.chunks, p.chunks)) return 80;
   if (q.words.length === 1 && q.joined.length >= 3 && p.initials === q.joined) return 55;
   return 0;

@@ -23,7 +23,13 @@ globalThis.fetch = async (input, init = {}) => {
 const store = new Map();
 globalThis.localStorage = { getItem: (k) => store.get(k) ?? null, setItem: (k, v) => store.set(k, String(v)), removeItem: (k) => store.delete(k) };
 globalThis.matchMedia = () => ({ matches: false, addEventListener() {}, removeEventListener() {} });
-globalThis.window = { addEventListener() {}, removeEventListener() {}, dispatchEvent() {} };
+// A small event target, so a test can send the events a view listens for (e.g. hs-query while a list loads).
+const listeners = new Map();
+globalThis.window = {
+  addEventListener: (type, fn) => { if (!listeners.has(type)) listeners.set(type, new Set()); listeners.get(type).add(fn); },
+  removeEventListener: (type, fn) => listeners.get(type)?.delete(fn),
+  dispatchEvent: (e) => { for (const fn of [...(listeners.get(e.type) || [])]) fn(e); return true; },
+};
 
 export const nav = await import('../../public/js/nav.js');
 export const { readHash, resolveState, normalize } = await import('../../public/js/state.js');
