@@ -27,8 +27,10 @@
       <a class="section-label" href="#tab=states">High School Girls Soccer</a>
     </div>
     <div class="header-search search" id="search" role="search">
-      <input type="search" class="search-input" id="search-input" placeholder="Find a school  /" aria-label="Find a school" autocomplete="off">
-      <ul class="search-results" id="search-results" role="listbox" hidden></ul>
+      <input type="search" class="search-input" id="search-input" role="combobox" aria-label="Search schools, cities, states" aria-autocomplete="list" aria-controls="search-list" aria-expanded="false" aria-describedby="search-hint" placeholder="School, city or state…  /" autocomplete="off" spellcheck="false" enterkeyhint="search">
+      <span class="sr-only" id="search-hint">Type a school, a city, a state or an association. Down arrow for suggestions.</span>
+      <div class="qpanel" id="search-panel" hidden><div role="listbox" id="search-list" aria-label="Suggestions" class="qlist"></div></div>
+      <span class="sr-only" id="search-status" role="status"></span>
     </div>
     <div class="header-right">
       <span class="observed-top" id="data-updated"></span>

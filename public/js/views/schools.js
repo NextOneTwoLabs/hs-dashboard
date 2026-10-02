@@ -1,7 +1,9 @@
 import { api, errorHtml } from '../api.js';
 import { setHead } from '../components/pageHeader.js';
 import { statePills } from '../components/sidebar.js';
-import { hrefFor } from '../nav.js';
+import { hrefFor, resolveTab } from '../nav.js';
+import { tableMatch } from '../search.js';
+import { readHash } from '../state.js';
 import { esc, favorites, schoolHref } from '../util.js';
 
 const COLS = [
@@ -13,15 +15,16 @@ const COLS = [
   { key: 'last', label: 'Last appearance', type: 'text' },
 ];
 let sort = { key: 'titles', dir: -1 };
+let listener = null;   // the current render's hs-query handler
 
 export async function render({ state, statesIndex, controls, view, head, setState }) {
   const st = state.st || '';
+  // The filter is the header search box (#13): it writes q= here, and the table keeps substring matching.
+  let q = state.q || '';
   // State pills keep the name filter (`q`), so filtered links stay filtered.
   controls.innerHTML = statePills(statesIndex, st, (code) => hrefFor({ tab: 'schools', st: code, q: state.q }),
     { all: hrefFor({ tab: 'schools', q: state.q }), count: 'schools' })
-    + `<div class="browse-label"><label for="filter">Name or city</label></div>
-      <div class="browse-row"><input id="filter" class="text-input" type="search" value="${esc(state.q || '')}" placeholder="e.g. Mater Dei"></div>`;
-  const filter = controls.querySelector('#filter');
+    + '<p class="side-note">Search by name or city in the box at the top.</p>';
   setHead(head, { crumbs: [['All states', '#tab=states'], ['Schools']], title: 'Schools' });
   view.innerHTML = '<div class="card notice">Loading schools…</div>';
   let data;
@@ -34,10 +37,9 @@ export async function render({ state, statesIndex, controls, view, head, setStat
   const favs = favorites();
   const covered = statesIndex.states.filter((s) => s.latestSeason).length;
   const draw = () => {
-    const q = filter.value.trim().toLowerCase();
     const rows = data.schools
       .filter((s) => !st || s.state === st)
-      .filter((s) => !q || s.name.toLowerCase().includes(q) || (s.city || '').toLowerCase().includes(q))
+      .filter((s) => tableMatch(s, q))
       .sort((a, b) => {
         const col = COLS.find((c) => c.key === sort.key);
         const av = a[sort.key] ?? '', bv = b[sort.key] ?? '';
@@ -51,7 +53,8 @@ export async function render({ state, statesIndex, controls, view, head, setStat
     const more = rows.length > 500 ? `<p class="muted" style="margin-top:10px;font-size:12px">Showing the first 500. Filter by state or name to narrow the list.</p>` : '';
     const stName = statesIndex.states.find((s) => s.code === st)?.name;
     setHead(head, { crumbs: [['All states', '#tab=states'], ['Schools']], title: stName ? `${stName} schools` : 'Schools',
-      subtitle: `${rows.length.toLocaleString()} of ${data.count.toLocaleString()} schools with a state playoff appearance · ${covered} states covered` });
+      subtitle: `${rows.length.toLocaleString()} of ${data.count.toLocaleString()} schools with a state playoff appearance · ${covered} states covered`
+        + (q.trim() ? ` · matching “${esc(q.trim())}” <button type="button" class="clear-search" data-clear-search>Clear search</button>` : '') });
     view.innerHTML = `${favs.length ? `<div class="fav-list"><span class="muted">Following:</span>${favs.map((f) => `<a class="chip accent" href="${schoolHref(f.id)}">★ ${esc(f.name)}</a>`).join('')}</div>` : ''}
       <div class="card table-wrap"><table class="data"><thead><tr>${thead}</tr></thead><tbody>${body || `<tr><td colspan="${COLS.length}" class="cell-empty">No schools match.</td></tr>`}</tbody></table></div>${more}`;
     view.querySelectorAll('th[data-sort]').forEach((th) => th.addEventListener('click', () => {
@@ -60,15 +63,21 @@ export async function render({ state, statesIndex, controls, view, head, setStat
       draw();
     }));
   };
-  filter.addEventListener('input', () => {
-    setState({ q: filter.value || null }, { replace: true, silent: true });
+  // Typing in the header box while this view is open (components/searchBox.js).
+  const onQuery = (e) => {
+    if (resolveTab(readHash()).tab !== 'schools') { window.removeEventListener('hs-query', onQuery); return; }
+    q = e.detail || '';
+    setState({ q: q || null }, { replace: true, silent: true });
     // Keep the state pills' links carrying the current filter.
     controls.querySelectorAll('a.pill').forEach((a) => {
       const p = new URLSearchParams(a.getAttribute('href').slice(1));
-      if (filter.value) p.set('q', filter.value); else p.delete('q');
+      if (q) p.set('q', q); else p.delete('q');
       a.setAttribute('href', '#' + p.toString());
     });
     draw();
-  });
+  };
+  window.removeEventListener('hs-query', listener);
+  listener = onQuery;
+  window.addEventListener('hs-query', onQuery);
   draw();
 }

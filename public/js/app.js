@@ -1,6 +1,5 @@
 import { api, errorHtml } from './api.js';
 import { normalize, readHash, resolveState, writeHash } from './state.js';
-import { esc, schoolHref } from './util.js';
 import * as states from './views/states.js';
 import * as playoffs from './views/playoffs.js';
 import * as results from './views/results.js';
@@ -9,6 +8,7 @@ import * as schools from './views/schools.js';
 import * as school from './views/school.js';
 import * as about from './views/about.js';
 import { activeTab, resolveTab, tabHref } from './nav.js';
+import { initSearch } from './components/searchBox.js';
 import './shell.js';
 
 const VIEWS = { states, playoffs, results, champions, schools, school, about };
@@ -62,7 +62,10 @@ async function render() {
       view.innerHTML = '<div class="card notice">Something went wrong rendering this page.</div>';
     }
   }
-  if (seq === renderSeq) document.getElementById('main').scrollTo({ top: 0 }); // the content column scrolls, not the window
+  if (seq === renderSeq) {
+    document.getElementById('main').scrollTo({ top: 0 }); // the content column scrolls, not the window
+    window.dispatchEvent(new CustomEvent('hs-rendered'));  // the header search syncs its box (#13)
+  }
 }
 
 view.addEventListener('click', (e) => {
@@ -88,58 +91,8 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
   try { localStorage.setItem('hs-theme', next); } catch { /* ignore */ }
 });
 
-// ----- Global school search (all states) -----
-const input = document.getElementById('search-input');
-const list = document.getElementById('search-results');
-let directory = null;
-let active = -1;
-
-async function search() {
-  const q = input.value.trim().toLowerCase();
-  if (!q) { list.hidden = true; return; }
-  if (!directory) {
-    try {
-      const idx = await api.searchIndex();
-      directory = idx.rows.map((r) => Object.fromEntries(idx.fields.map((f, i) => [f, r[i]])));
-    } catch {
-      list.innerHTML = '<li class="empty">Search unavailable</li>';
-      list.hidden = false;
-      return;
-    }
-  }
-  const hits = directory
-    .filter((s) => s.name.toLowerCase().includes(q) || (s.city || '').toLowerCase().includes(q))
-    .sort((a, b) => (b.name.toLowerCase().startsWith(q) - a.name.toLowerCase().startsWith(q)) || b.apps - a.apps)
-    .slice(0, 8);
-  active = hits.length ? 0 : -1;
-  list.innerHTML = hits.length
-    ? hits.map((s, i) => `<li><a href="${schoolHref(s.id)}" aria-selected="${i === 0}"><span>${esc(s.name)}</span><span class="muted">${esc([s.city, s.state].filter(Boolean).join(', '))}</span></a></li>`).join('')
-    : '<li class="empty">No schools found</li>';
-  list.hidden = false;
-}
-input.addEventListener('input', search);
-input.addEventListener('keydown', (e) => {
-  const links = [...list.querySelectorAll('a')];
-  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-    e.preventDefault();
-    if (!links.length) return;
-    active = (active + (e.key === 'ArrowDown' ? 1 : -1) + links.length) % links.length;
-    links.forEach((a, i) => a.setAttribute('aria-selected', i === active));
-  } else if (e.key === 'Enter' && links[active]) {
-    location.hash = links[active].getAttribute('href');
-    input.value = '';
-    list.hidden = true;
-    input.blur();
-  } else if (e.key === 'Escape') {
-    list.hidden = true;
-    input.blur();
-  }
-});
-list.addEventListener('click', () => { list.hidden = true; input.value = ''; });
-document.addEventListener('click', (e) => { if (!e.target.closest('#search')) list.hidden = true; });
-document.addEventListener('keydown', (e) => {
-  if (e.key === '/' && !e.target.closest('input, select, textarea')) { e.preventDefault(); input.focus(); }
-});
+// ----- The one search box, in the header (#13): components/searchBox.js -----
+initSearch({ getStatesIndex: () => statesIndex });
 
 // ----- Boot -----
 window.addEventListener('hashchange', render);
