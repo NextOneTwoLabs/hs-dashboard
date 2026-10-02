@@ -294,15 +294,27 @@ select:hover { border-color: var(--accent-text); }
 .pk { font-size: 10px; font-weight: 700; color: var(--accent-text); background: var(--accent-surface); padding: 1px 4px; border-radius: 4px; margin-left: 4px; }
 .match.hl { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
 .team-row.hl { background: var(--accent-surface); }
-.match-meta { display: flex; justify-content: space-between; padding: 4px 10px; font-size: 11px; color: var(--text-muted); border-top: 1px solid var(--border-light); }
+/* The shared match card's footer (#20 PR 4): the status, then links; a PK game adds the draw-convention note. */
+.match-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 10px; padding: 5px 10px; font-size: 11px; color: var(--text-secondary); border-top: 1px solid var(--border-light); }
+.match-status { font-weight: 600; }
+.match-status.status-unreported, .match-status.status-awaiting { font-style: italic; }
+.match-status.status-scheduled { color: var(--accent-text); }
+.match-links { display: inline-flex; flex-wrap: wrap; gap: 4px 12px; margin-left: auto; }
+.match-links a { font-weight: 600; white-space: nowrap; }
+.match-note { padding: 0 10px 6px; font-size: 11px; color: var(--text-secondary); line-height: 1.35; }
 .round-switch { display: none; padding: 0 0 12px; }
 
 /* ===== Results ===== */
 .day { margin-bottom: 22px; }
 .day h3 { font-size: 13px; font-weight: 600; color: var(--text-secondary); margin-bottom: 8px; }
 .cards .match::before, .cards .match::after { display: none; }
-.match-top { display: flex; justify-content: space-between; gap: 8px; padding: 6px 10px; font-size: 11px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); }
-.match-top a { color: var(--text-secondary); font-weight: 600; }
+/* Cards in a row share a height: the footer (and a PK note) sits at the bottom of each. */
+.cards .match { display: flex; flex-direction: column; }
+.cards .match .match-foot { margin-top: auto; }
+/* Header: competition · round on the left may wrap; the date on the right never does (the 320 px wrap in PR 2). */
+.match-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 6px 10px; font-size: 11px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); }
+.match-head { min-width: 0; flex: 1 1 auto; font-weight: 600; }
+.match-date { flex: none; white-space: nowrap; }
 
 /* ===== Tables ===== */
 .table-wrap { overflow-x: auto; }

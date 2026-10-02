@@ -84,25 +84,15 @@ function bracketHtml(b, state) {
       const games = byRound.get(r.index).sort((a, c) => a.slot - c.slot);
       return `<section class="round${r.index === active ? ' active' : ''}" aria-label="${esc(r.name)}">
         <header class="round-head"><div class="name">${esc(r.name)}</div><div class="date">${esc(fmtDate(r.date, { weekday: 'short', month: 'short', day: 'numeric' }))}</div></header>
-        <div class="round-body">${games.map((x) => matchCard(x, { meta: metaLine(x), g })).join('')}</div>
+        <div class="round-body">${games.map((x) => matchCard(x, { g, compact: true })).join('')}</div>
       </section>`;
     })
     .join('');
   const third = extra.length
-    ? `<h2 class="section-title">Placement games</h2><div class="cards">${extra.map((x) => matchCard(x, { meta: metaLine(x), g })).join('')}</div>`
+    ? `<h2 class="section-title">Placement games</h2><div class="cards">${extra.map((x) => matchCard(x, { g })).join('')}</div>`
     : '';
   const src = b.source?.maxpreps ? `<p class="muted" style="margin-top:14px;font-size:12px">Source: <a href="${esc(b.source.maxpreps)}" rel="noopener" target="_blank">MaxPreps bracket</a>${b.source.cif ? ` via <a href="${esc(b.source.cif)}" rel="noopener" target="_blank">CIF</a>` : ''}.</p>` : '';
   return `${banner}${switcher}<div class="bracket-wrap"><div class="bracket">${cols}</div></div>${third}${src}`;
-}
-
-function metaLine(g) {
-  if (g.status === 'bye') return '<span>Bye</span>';
-  if (g.status === 'unreported') return '<span>Result not reported</span>';
-  if (g.status !== 'final') return '<span>Scheduled</span>';
-  const parts = ['<span>Final</span>'];
-  if (g.decidedBy === 'pk') parts.push('<span>Decided on PKs</span>');
-  if (g.decidedBy === 'unreported') parts.push('<span>Score not reported</span>');
-  return parts.join('');
 }
 
 function shortRound(name) {

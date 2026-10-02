@@ -30,8 +30,9 @@ export const schoolHref = (id, g) => `#tab=team&school=${encodeURIComponent(id)}
 // Brackets in a state's latest season, from states.json.
 export const bracketCount = (row) => (row.latest || []).reduce((t, c) => t + c.divisions.length, 0);
 
-export const bracketHref = (st, season, comp, div) =>
-  `#tab=playoffs&st=${st}&season=${season}&comp=${comp}${div ? `&div=${div}` : ''}`;
+// A bracket, optionally opened at one round (a match card's "View in bracket", #20 PR 4).
+export const bracketHref = (st, season, comp, div, round = null) =>
+  `#tab=playoffs&st=${st}&season=${season}&comp=${comp}${div ? `&div=${div}` : ''}${round != null ? `&round=${round}` : ''}`;
 
 // A division is live while it is unfinished and today is near its dates.
 export function isLive(div, today = new Date().toISOString().slice(0, 10)) {

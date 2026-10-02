@@ -162,6 +162,9 @@ export/<season>/<division>.csv                           human-readable export
   - Filters are a row of selects above the content (`components/filters.js`): state, school year, championship,
     division and Results' "show", with the season of play (Fall / Winter / Spring) as text. On phones the row is a
     "Filters" disclosure with a summary. The statewide sidebar and its phone drawer are gone; hash keys are unchanged.
+  - One match card everywhere (`components/match.js`): competition · round and the date in the header, team links,
+    a "PK win" tag, the status (Final, Result not reported, Scheduled, Awaiting result, Bye), "Match details" and
+    "View in bracket" (at the game's round), and a note that a PK game counts as a draw in playoff records.
 - **Reused from ECNL:**
   - The light/dark CSS token set.
   - The column-definition table renderer (sortable).

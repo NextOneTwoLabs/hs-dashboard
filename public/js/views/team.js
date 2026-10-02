@@ -3,7 +3,7 @@
 // is state championship brackets, so there are no league standings or regular-season games.
 // The markup is built by pure functions (exported for tests); render() fetches and binds.
 import { api, errorHtml } from '../api.js';
-import { matchCard } from '../components/match.js';
+import { matchCard, statusOf } from '../components/match.js';
 import { setHead } from '../components/pageHeader.js';
 import { listHref, teamHref } from '../nav.js';
 import { bracketHref, esc, favorites, fmtDate, resultText, toggleFavorite } from '../util.js';
@@ -48,68 +48,64 @@ export function teamGame(s, a, x) {
   const opp = x.opp ? { id: x.opp.id, name: x.opp.name, seed: x.opp.seed, score: x.ga } : null;
   const won = x.res === 'W' || (x.res === 'D' && x.pk === 'W');
   const lost = x.res === 'L' || (x.res === 'D' && x.pk === 'L');
-  return { status: rowStatus(a, x), top: me, bottom: opp,
-    winner: won ? 'top' : lost ? 'bottom' : null, decidedBy: x.pk ? 'pk' : null };
+  return { status: rowStatus(a, x), date: x.date, top: me, bottom: opp, winner: won ? 'top' : lost ? 'bottom' : null,
+    decidedBy: x.pk ? 'pk' : x.res && x.gf == null ? 'unreported' : null };
 }
 
 // A school file's game row has no status, and `res` is null both for a game never reported and for one not
 // played yet (crawler/derive.py writes `res` for final games only). The appearance tells them apart: while the
-// team is still alive, its last row without a result is the next game; any other one was never reported.
+// team is still alive, its **last** row is the next game if it has no result (#22 review: the last row, not the
+// last open row, so an earlier gap stays "not reported"); any other open row was never reported.
 export function rowStatus(a, x) {
   if (x.res === 'BYE') return 'bye';
   if (x.res != null) return 'final';
-  if (a.result === 'alive') {
-    const open = a.games.filter((r) => r.res == null);
-    if (open.at(-1) === x) return 'scheduled';
-  }
+  if (a.result === 'alive' && x === a.games.at(-1)) return 'scheduled';
   return 'unreported';
 }
 
-// The card's footer: Final, a PK decision (a draw in the record), a missing score or result, a bye, next game.
-export function gameMeta(a, x) {
-  const status = rowStatus(a, x);
-  if (status === 'bye') return '<span>Bye</span>';
-  if (status === 'scheduled') return `<span>Scheduled</span>${x.opp ? '' : '<span>Opponent to be decided</span>'}`;
-  if (status === 'unreported') return '<span>Result not reported</span>';
-  if (x.gf == null) return '<span>Final</span><span>Score not reported</span>';
-  if (x.pk) return '<span>Final · decided on PKs</span><span>A draw in the playoff record</span>';
-  return '<span>Final</span>';
-}
+// The card's words for a row (components/match.js statusOf): a scheduled row whose date has passed in a live
+// season is "Awaiting result", not "Scheduled" (#22 review note).
+export const gameStatus = (a, x, today) => statusOf({ status: rowStatus(a, x), date: x.date,
+  decidedBy: x.pk ? 'pk' : x.res && x.gf == null ? 'unreported' : null }, today);
 
-export function gameCardHtml(s, a, x, comps, g) {
+// The shared card: competition · division · round, the date, and "View in bracket" at that round.
+export function gameCardHtml(s, a, x, comps, g, today) {
   const short = compShort(a, comps);
-  const top = `<a href="${bracketHref(a.state, a.season, a.competition, a.division)}">${esc(short ? `${short} · ` : '')}${esc(a.divisionLabel)}</a>`
-    + `<span>${esc(x.roundName)}${x.date ? ` · ${esc(fmtDate(x.date))}` : ''}</span>`;
-  return matchCard(teamGame(s, a, x), { top, meta: gameMeta(a, x), g });
+  const head = `${esc(short ? `${short} · ` : '')}${esc(a.divisionLabel)}${x.roundName ? ` · ${esc(x.roundName)}` : ''}`;
+  return matchCard(teamGame(s, a, x), { head, date: x.date ? fmtDate(x.date) : '', g, today,
+    bracket: bracketHref(a.state, a.season, a.competition, a.division, x.round) });
 }
 
 // One step of the playoff journey, from this team's side.
-export function stepText(a, x) {
+export function stepText(a, x, today) {
   const opp = x.opp ? ` v ${x.opp.name}` : '';
   const score = x.gf != null ? ` ${x.gf}–${x.ga}` : '';
-  const status = rowStatus(a, x);
-  if (status === 'bye') return 'Bye';
-  if (status === 'scheduled') return x.opp ? `Scheduled${opp}` : 'Scheduled · opponent to be decided';
-  if (status === 'unreported') return `${opp.trim()} · result not reported`;
+  const { kind } = gameStatus(a, x, today);
+  if (kind === 'bye') return 'Bye';
+  if (kind === 'scheduled' || kind === 'awaiting') {
+    const word = kind === 'scheduled' ? 'Scheduled' : 'Awaiting result';
+    return x.opp ? `${word}${opp}` : `${word} · opponent to be decided`;
+  }
+  if (kind === 'unreported') return `${opp.trim()} · result not reported`;
   if (x.res === 'D') return `${x.pk === 'W' ? 'Won' : x.pk === 'L' ? 'Lost' : 'Drew'} on PKs${score}${opp}`;
   return `${x.res === 'W' ? 'Won' : 'Lost'}${score || ' (score not reported)'}${opp}`;
 }
 const stepClass = (x) => (x.res === 'W' || (x.res === 'D' && x.pk === 'W') ? 'win' : x.res === 'L' || (x.res === 'D' && x.pk === 'L') ? 'loss' : '');
 
 // Overview, in reading order on every width: latest playoff game, season summary, playoff journey, recent games.
-export function overviewHtml({ s, a, own, comps, g }) {
+export function overviewHtml({ s, a, own, comps, g, today }) {
   const games = played(a);
   const latest = games.at(-1) || a.games.at(-1);
-  const latestCard = latest ? gameCardHtml(s, a, latest, comps, g) : '<p class="muted">No games on record.</p>';
-  const steps = a.games.map((x) => `<li class="step ${stepClass(x)}"><b>${esc(x.roundName)}</b><span>${esc(stepText(a, x))}</span></li>`).join('')
+  const latestCard = latest ? gameCardHtml(s, a, latest, comps, g, today) : '<p class="muted">No games on record.</p>';
+  const steps = a.games.map((x) => `<li class="step ${stepClass(x)}"><b>${esc(x.roundName)}</b><span>${esc(stepText(a, x, today))}</span></li>`).join('')
     + `<li class="step end"><b>${esc(a.result === 'champion' ? 'Champion' : a.result === 'runner-up' ? 'Runner-up' : 'Finish')}</b><span>${esc(resultText(a))}</span></li>`;
   const recent = own.flatMap((ap) => played(ap).map((x) => ({ ap, x })))
     .sort((p, q) => String(q.x.date).localeCompare(String(p.x.date))).slice(0, 5)
     .map(({ ap, x }) => {
       const res = x.res === 'D' ? 'D' : x.res || '–';
       const opp = x.opp ? `<a href="${esc(teamHref(x.opp.id, { g }))}">${esc(x.opp.name)}</a>` : 'opponent to be decided';
-      const status = rowStatus(ap, x);
-      const what = status === 'scheduled' ? 'Scheduled · ' : status === 'unreported' ? 'Result not reported · '
+      const status = gameStatus(ap, x, today);
+      const what = status.kind !== 'final' ? `${status.text} · `
         : x.gf != null ? `${x.gf}–${x.ga}${x.pk ? ` (PK ${x.pk === 'W' ? 'won' : 'lost'})` : ''} · ` : '';
       return `<li><span class="res res-${esc(res)}">${esc(res)}</span><span class="recent-opp">v ${opp}</span>`
         + `<span class="muted recent-meta">${esc(what)}${esc(fmtDate(x.date))} · ${esc(ap.season)}</span></li>`;
@@ -130,8 +126,8 @@ export function overviewHtml({ s, a, own, comps, g }) {
   </div>`;
 }
 
-export function resultsHtml({ s, a, comps, g }) {
-  const cards = [...a.games].reverse().map((x) => gameCardHtml(s, a, x, comps, g)).join('');
+export function resultsHtml({ s, a, comps, g, today }) {
+  const cards = [...a.games].reverse().map((x) => gameCardHtml(s, a, x, comps, g, today)).join('');
   return `<div class="cards">${cards}</div><p class="note">${esc(PK_NOTE)}</p>`;
 }
 
