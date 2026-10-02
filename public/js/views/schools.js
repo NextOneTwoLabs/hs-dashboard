@@ -31,7 +31,20 @@ export async function render({ state, statesIndex, controls, view, head, setStat
   bindFilters(controls, setState, { patch: (key, value) => listPatch(q)(key, value) });
   setHead(head, { crumbs: [['Teams', '#tab=teams'], ['Schools']], title: 'Schools' });
   view.innerHTML = '<div class="card notice">Loading schools…</div>';
-  let data;
+  let data = null;
+  let draw = () => {};
+  // Typing in the header box while this view is open (components/searchBox.js). The listener is in place before
+  // the list loads, so text typed while it loads is kept and applied when it arrives (#15 item 3).
+  const onQuery = (e) => {
+    if (pageOf(resolveTab(readHash())) !== 'schools') { window.removeEventListener('hs-query', onQuery); return; }
+    q = e.detail || '';
+    // With no state and no name this is the whole list (view=list), so a refresh keeps the list.
+    setState({ q: q || null, view: q || st ? null : 'list' }, { replace: true, silent: true });
+    if (data) draw();
+  };
+  window.removeEventListener('hs-query', listener);
+  listener = onQuery;
+  window.addEventListener('hs-query', onQuery);
   try {
     data = await api.schools();
   } catch (err) {
@@ -40,7 +53,7 @@ export async function render({ state, statesIndex, controls, view, head, setStat
   }
   const favs = favorites();
   const covered = statesIndex.states.filter((s) => s.latestSeason).length;
-  const draw = () => {
+  draw = () => {
     const rows = data.schools
       .filter((s) => !st || s.state === st)
       .filter((s) => tableMatch(s, q))
@@ -67,16 +80,5 @@ export async function render({ state, statesIndex, controls, view, head, setStat
       draw();
     }));
   };
-  // Typing in the header box while this view is open (components/searchBox.js).
-  const onQuery = (e) => {
-    if (pageOf(resolveTab(readHash())) !== 'schools') { window.removeEventListener('hs-query', onQuery); return; }
-    q = e.detail || '';
-    // With no state and no name this is the whole list (view=list), so a refresh keeps the list.
-    setState({ q: q || null, view: q || st ? null : 'list' }, { replace: true, silent: true });
-    draw();
-  };
-  window.removeEventListener('hs-query', listener);
-  listener = onQuery;
-  window.addEventListener('hs-query', onQuery);
   draw();
 }

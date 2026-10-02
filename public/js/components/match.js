@@ -5,10 +5,10 @@
 // - Footer: the status (Final, Result not reported, Scheduled, Awaiting result, Bye), then "Match details ↗"
 //   (MaxPreps, when the bracket has the match page) and "View in bracket →" (to the exact round).
 // - A PK game also says that it counts as a draw in playoff records (the source's convention).
-import { esc, schoolHref } from '../util.js';
+import { esc, localToday, schoolHref } from '../util.js';
 
 export const PK_NOTE = 'Level after full time, decided on penalty kicks · counts as a draw in playoff records';
-const todayIso = () => new Date().toISOString().slice(0, 10);
+const todayIso = () => localToday();   // the viewer's local date, not UTC (#24 review)
 
 // What the card says about the game. `today` decides whether a scheduled game's date has passed: then it is
 // awaiting a result rather than upcoming.

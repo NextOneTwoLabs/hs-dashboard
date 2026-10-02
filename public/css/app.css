@@ -233,31 +233,29 @@ select:hover { border-color: var(--accent-text); }
 .chip.gold { background: var(--gold-surface); color: var(--gold); border-color: transparent; }
 .chip.accent { background: var(--accent-surface); color: var(--accent-text); border-color: transparent; }
 .trophy::before { content: "🏆"; font-size: 11px; }
-.grid { display: grid; gap: 14px; }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
-/* State cards (collegedash .pcard with a neutral band: we have no team colours). */
-.pcard { display: flex; flex-direction: column; overflow: hidden; transition: border-color var(--transition-fast); }
-.pcard:hover { border-color: var(--accent); }
-.band { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 14px 16px 12px; background: var(--bg-surface-alt); }
-.band h2 { font-size: 17px; line-height: 1.2; }
-.band h2 a { color: var(--text-primary); }
-.band .nick { display: block; font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-top: 2px; }
-.badges { display: flex; flex-wrap: wrap; gap: 6px; }
 .badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; color: var(--text-secondary); white-space: nowrap; }
 .badge.live { color: var(--good-text); }
-.stripe { height: 5px; background: var(--border-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.pcard .body { flex: 1; padding: 14px 16px 12px; }
-.pcard .meta { color: var(--text-secondary); font-size: 12px; margin-bottom: 12px; }
-.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; }
-.facts .label { font-size: 11px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: .04em; }
-.facts .value { font-size: 18px; font-weight: 600; margin-top: 2px; line-height: 1.2; font-variant-numeric: tabular-nums; }
-.champ-list { list-style: none; margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border-light); font-size: 12px; }
-.champ-list li { display: flex; justify-content: space-between; gap: 10px; padding: 2px 0; }
-.champ-list .d { color: var(--text-secondary); white-space: nowrap; }
-.champ-list .c { font-weight: 600; text-align: right; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.champ-list .c a { color: var(--text-primary); }
-.pcard .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 8px; padding: 8px 16px; border-top: 1px solid var(--border-light); font-size: 12px; font-weight: 600; }
-.pcard .foot a { white-space: nowrap; }
+/* ===== Teams landing (#20 PR 5): find a team, followed teams, browse by state ===== */
+.landing-top { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px; align-items: start; margin-bottom: 22px; }
+.landing-h { font-size: 20px; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 6px; }
+.landing-find .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.landing-find .chip { height: 36px; padding: 0 14px; font-size: 13px; color: var(--text-primary); background: var(--bg-surface); border: 1px solid var(--border); cursor: pointer; }
+.landing-find .chip:hover { border-color: var(--accent); color: var(--accent-text); }
+.followed { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.followed a { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border: 1px solid var(--border); border-radius: var(--radius-md); font-weight: 600; color: var(--text-primary); }
+.followed a:hover { border-color: var(--accent); text-decoration: none; }
+.crest.crest-sm { width: 32px; height: 32px; font-size: 12px; border-radius: var(--radius-sm); flex: none; }
+.landing-browse-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin: 0 0 12px; }
+.landing-browse-row .field { flex-wrap: wrap; }   /* at 320 px the label goes above the buttons */
+.state-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.state-card { padding: 14px 16px; height: 100%; }
+.state-card h3 { font-size: 16px; margin-bottom: 4px; }
+.state-card h3 a { color: var(--text-primary); }
+.state-card p { font-size: 12px; margin-top: 2px; }
+.state-links { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 10px !important; font-weight: 600; }
+.state-links a { white-space: nowrap; }
+@media (max-width: 960px) { .landing-top { grid-template-columns: minmax(0, 1fr); } }
 .prose { max-width: 820px; line-height: 1.6; }
 .prose h2 { font-size: 15px; margin: 18px 0 6px; }
 .prose h2:first-child { margin-top: 0; }
@@ -277,6 +275,10 @@ select:hover { border-color: var(--accent-text); }
 .round-head { padding: 0 2px 10px; }
 .round-head .name { font-weight: 600; }
 .round-head .date { color: var(--text-secondary); font-size: 12px; }
+/* The round a link named ("View in bracket"): its heading is marked and its games outlined. */
+.round.picked .round-head { margin: 0 -8px; padding: 6px 10px 10px; border-radius: var(--radius-sm); background: var(--accent-surface); }
+.round.picked .round-head .name { color: var(--accent-text); }
+.round.picked .match { border-color: var(--accent); }
 .round-body { flex: 1; display: flex; flex-direction: column; justify-content: space-around; gap: 12px; }
 .match { position: relative; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
 .round:not(:last-child) .match::after { content: ""; position: absolute; right: -19px; top: 50%; width: 18px; border-top: 1px solid var(--border); }

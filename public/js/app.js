@@ -1,6 +1,6 @@
 import { api, errorHtml } from './api.js';
 import { normalize, readHash, resolveState, writeHash } from './state.js';
-import * as states from './views/states.js';
+import * as landing from './views/landing.js';
 import * as playoffs from './views/playoffs.js';
 import * as results from './views/results.js';
 import * as champions from './views/champions.js';
@@ -14,7 +14,7 @@ import { summaryOf } from './components/filters.js';
 import { setFiltersOpen } from './shell.js';
 
 // Page modules by pageOf(): until #20's new views land, Teams renders today's views (see nav.js).
-const VIEWS = { states, playoffs, results, champions, schools, team, about };
+const VIEWS = { landing, playoffs, results, champions, schools, team, about };
 const head = document.getElementById('page-head');
 const controls = document.getElementById('controls');
 const view = document.getElementById('view');

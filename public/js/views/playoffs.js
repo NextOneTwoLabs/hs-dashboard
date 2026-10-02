@@ -51,6 +51,8 @@ export async function render({ state, catalog, statesIndex, controls, view, head
     ? `<a href="${esc(bracket.source.maxpreps)}" rel="noopener" target="_blank">MaxPreps bracket <span aria-hidden="true">↗</span></a>` : '';
   setHead(head, { crumbs, title: div.label, subtitle: summary(teams), right: src });
   host.innerHTML = bracketHtml(bracket, state);
+  // Wider screens show every round: bring the picked one into view (phones already show only that round).
+  if (!matchMedia('(max-width: 768px)').matches) host.querySelector('.round.picked')?.scrollIntoView({ block: 'nearest', inline: 'center' });
   bindHighlight(host);
   host.querySelectorAll('[data-round]').forEach((btn) =>
     btn.addEventListener('click', () => setState({ round: btn.dataset.round }, { replace: true })),
@@ -64,6 +66,8 @@ function bracketHtml(b, state) {
   for (const g of main) (byRound.get(g.round) || byRound.set(g.round, []).get(g.round)).push(g);
   const firstOpen = b.rounds.find((r) => byRound.get(r.index).some((g) => g.status === 'scheduled'));
   const active = Number(state.round ?? firstOpen?.index ?? b.rounds.at(-1)?.index ?? 0);
+  // A link that names a round (a match card's "View in bracket") marks that column on wider screens too.
+  const picked = state.round != null ? Number(state.round) : null;
   const g = b.division.gender[0];
 
   let banner = '';
@@ -82,7 +86,7 @@ function bracketHtml(b, state) {
   const cols = b.rounds
     .map((r) => {
       const games = byRound.get(r.index).sort((a, c) => a.slot - c.slot);
-      return `<section class="round${r.index === active ? ' active' : ''}" aria-label="${esc(r.name)}">
+      return `<section class="round${r.index === active ? ' active' : ''}${r.index === picked ? ' picked' : ''}" aria-label="${esc(r.name)}">
         <header class="round-head"><div class="name">${esc(r.name)}</div><div class="date">${esc(fmtDate(r.date, { weekday: 'short', month: 'short', day: 'numeric' }))}</div></header>
         <div class="round-body">${games.map((x) => matchCard(x, { g, compact: true })).join('')}</div>
       </section>`;

@@ -165,6 +165,8 @@ export/<season>/<division>.csv                           human-readable export
   - One match card everywhere (`components/match.js`): competition · round and the date in the header, team links,
     a "PK win" tag, the status (Final, Result not reported, Scheduled, Awaiting result, Bye), "Match details" and
     "View in bracket" (at the game's round), and a note that a PK game counts as a draw in playoff records.
+  - The Teams landing (`views/landing.js`): "Find a team" (example chips fill the one header search), "Followed
+    teams" (saved in this browser only, and it says so) and "Browse by state" with a season-of-play toggle.
 - **Reused from ECNL:**
   - The light/dark CSS token set.
   - The column-definition table renderer (sortable).

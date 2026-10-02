@@ -56,15 +56,14 @@ export function canonicalHash(raw) {
 }
 
 // Page modules (public/js/views/<page>.js) and the tabs that show one state at a time with its catalog.
-export const PAGES = ['states', 'schools', 'team', 'playoffs', 'champions', 'results', 'about'];
+export const PAGES = ['landing', 'schools', 'team', 'playoffs', 'champions', 'results', 'about'];
 export const needsCatalog = (tab) => tab === 'playoffs' || tab === 'results';
 
-// The page module that renders a resolved state. Until each new view lands (#20 PR 3–5), Teams renders
-// today's views: the state overview, or the school list with st/q/view=list. Playoffs › Champions is the
-// champions grid. A team has its own page (views/team.js, PR 2).
+// The page module that renders a resolved state: Teams is the landing (views/landing.js, #20 PR 5), or the
+// school list with st/q/view=list; a team has its own page (views/team.js); Playoffs › Champions is the grid.
 export function pageOf(state) {
   switch (state.tab) {
-    case 'teams': return state.st || state.q || state.view === 'list' ? 'schools' : 'states';
+    case 'teams': return state.st || state.q || state.view === 'list' ? 'schools' : 'landing';
     case 'team': return 'team';
     case 'playoffs': return state.view === 'champions' ? 'champions' : 'playoffs';
     default: return state.tab;

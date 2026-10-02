@@ -61,10 +61,12 @@ test('3. Results, Champions, the school list and Teams each filter with their ow
   assert.deepEqual(schools.listPatch('ake')('st', 'TX'), { st: 'TX', view: null });
   assert.deepEqual(schools.listPatch('ake')('st', ''), { st: null, view: null });
   assert.deepEqual(schools.listPatch('')('st', ''), { st: null, view: 'list' });
+  // #20 PR 5: the landing's season-of-play toggle filters only the state cards, so it moved beside them (the
+  // "Browse by state" heading) and the page's filter row is empty and hidden.
   const landing = await open('#tab=teams');
-  assert.match(landing.controls.innerHTML, /<span class="field-label" id="f-term-label">Season of play<\/span>/);
-  assert.match(landing.controls.innerHTML, /<button type="button" id="f-term-all" data-term="" aria-pressed="true">All<\/button>/);
-  assert.doesNotMatch(landing.controls.innerHTML, /id="f-st"|pill-sub|>\d+</, 'state cards link to each state; no counts');
+  assert.equal(landing.controls.innerHTML, '');
+  assert.match(landing.view.innerHTML, /<div class="landing-browse-row"><h2 class="section-h" id="browse-h">Browse by state<\/h2><div class="field seg-field"><span class="field-label" id="f-term-label">Season of play<\/span>/);
+  assert.match(landing.view.innerHTML, /<button type="button" id="f-term-all" data-term="" aria-pressed="true">All<\/button>/);
   const about = await open('#tab=about');
   assert.equal(about.controls.innerHTML, '', 'nothing to filter on About: the row hides');
 });
@@ -87,7 +89,7 @@ test('5. phones: the "Filters" toggle summarises the selection', async () => {
   assert.equal(filters.summaryOf(controls.innerHTML), 'California · 2024-25 · CIF NorCal Regional Championships · Division 1');
   // The same HTML read back from the DOM writes selected="".
   assert.equal(filters.summaryOf(controls.innerHTML.replace(/ selected>/g, ' selected="">')), 'California · 2024-25 · CIF NorCal Regional Championships · Division 1');
-  assert.equal(filters.summaryOf((await open('#tab=teams')).controls.innerHTML), 'All');
+  assert.equal(filters.summaryOf(filters.termButtons({ states: [{ latestSeason: 'x', terms: ['fall'] }] }, 'fall')), 'Fall', 'a pressed toggle');
   assert.equal(filters.summaryOf((await open('#tab=results&st=TX&show=upcoming')).controls.innerHTML), 'Texas · 2025-26 · Upcoming');
   const app = await read('public/js/app.js');
   assert.match(app, /filterSummary\.textContent = summaryOf\(controls\.innerHTML\);/);
@@ -105,7 +107,7 @@ test('6. #18: a filter select or toggle keeps focus after the re-render; the pan
   assert.deepEqual([...controls.innerHTML.matchAll(/<select id="([^"]+)"/g)].map((m) => m[1]), ['f-st', 'f-season', 'f-comp', 'f-div']);
   assert.match((await import('../public/js/components/controls.js')).segmented('g', 'g', [['b', 'Boys'], ['g', 'Girls']], 'Gender'),
     /<button type="button" id="f-g-g" data-set-g="g" aria-pressed="true">Girls<\/button>/);
-  const states = await read('public/js/views/states.js');
+  const states = await read('public/js/views/landing.js');   // the Teams landing (#20 PR 5; was states.js)
   assert.match(states, /draw\(b\.id\);/, 'the landing\'s season-of-play buttons redraw and refocus themselves');
   const shell = await read('public/js/shell.js');
   assert.match(shell, /toggle\.setAttribute\('aria-expanded', String\(open\)\);/);
@@ -142,8 +144,8 @@ test('7. the bracket\'s round pills keep focus: each has a stable id that surviv
 // #23 review B2: at 320 px the landing's four "Season of play" buttons beside the 92 px label column ran past the
 // panel (Spring at 289–358 against an edge at 304) and `.seg { overflow: hidden }` cut it to "Sp".
 test('8. phones: a toggle group stacks under its label and wraps, so no button is cut off', async () => {
-  const landing = await open('#tab=teams');
-  assert.match(landing.controls.innerHTML, /<div class="field seg-field"><span class="field-label" id="f-term-label">Season of play<\/span><div class="seg"/);
+  const landing = await open('#tab=teams');   // the toggle is beside the state cards since #20 PR 5
+  assert.match(landing.view.innerHTML, /<div class="field seg-field"><span class="field-label" id="f-term-label">Season of play<\/span><div class="seg"/);
   const { segmented } = await import('../public/js/components/controls.js');
   assert.match(segmented('g', 'g', [['b', 'Boys'], ['g', 'Girls']], 'Gender'), /^<div class="field seg-field">/, 'the gender toggle too');
   const css = await read('public/css/app.css');

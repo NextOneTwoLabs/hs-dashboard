@@ -103,6 +103,14 @@ export function initSearch({ getStatesIndex }) {
     go(t);
   }
 
+  // The Teams landing's example chips (#20 PR 5) use this one box, as its own chips do: fill it, focus it and
+  // show the suggestions. There is no second search box on the page.
+  window.addEventListener('hs-search-fill', async (e) => {
+    choose({ kind: 'chip', text: String(e.detail || '') });
+    await ensureIndex();
+    if (document.activeElement === input) { st = { open: true, active: -1 }; draw(); announce(); }
+  });
+
   // Phones: the bottom nav hides while the box has focus, so the fixed bar can't ride above the on-screen
   // keyboard and cover the suggestions (#20). CSS does it with :has(); this class is the fallback.
   input.addEventListener('focus', () => document.body.classList.add('search-focus'));
