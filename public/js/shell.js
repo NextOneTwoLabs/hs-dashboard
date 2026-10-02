@@ -2,7 +2,7 @@
 // Kept out of app.js so routing there stays as it was.
 import { api } from './api.js';
 import { readHash } from './state.js';
-import { resolveTab } from './nav.js';
+import { pageOf, resolveTab } from './nav.js';
 
 const PHONE = matchMedia('(max-width: 768px)');
 const layout = document.getElementById('layout');
@@ -10,9 +10,11 @@ const sidebar = document.getElementById('sidebar');
 const toggle = document.getElementById('sidebar-toggle');
 const overlay = document.getElementById('sidebar-overlay');
 const done = document.getElementById('drawer-done');
-const behind = [document.getElementById('main'), document.querySelector('.header-search'), document.querySelector('.header-right')];
+const behind = [document.getElementById('main'), document.querySelector('.header-search'), document.querySelector('.header-right'),
+  document.getElementById('main-nav'), document.getElementById('bottom-nav')];
 let lastFocus = null;
 
+// The drawer's "Show …" button, by page (nav.js pageOf).
 const DONE = { states: 'Show states', playoffs: 'Show bracket', results: 'Show results', champions: 'Show champions',
   schools: 'Show schools', school: 'Show school', about: 'Close filters' };
 
@@ -71,7 +73,7 @@ PHONE.addEventListener('change', reset);
 window.addEventListener('resize', reset);
 
 function label() {
-  done.textContent = DONE[resolveTab(readHash()).tab] || 'Done';
+  done.textContent = DONE[pageOf(resolveTab(readHash()))] || 'Done';
 }
 window.addEventListener('hashchange', label);
 label();

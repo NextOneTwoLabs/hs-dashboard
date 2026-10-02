@@ -5,7 +5,7 @@
 import { api } from '../api.js';
 import { buildIndex, enterTarget, keyStep, statusText, suggest, target } from '../search.js';
 import { readHash } from '../state.js';
-import { resolveTab } from '../nav.js';
+import { pageOf, resolveTab } from '../nav.js';
 import { optionId, panelHtml } from './searchPanel.js';
 
 const PHONE = matchMedia('(max-width: 768px)');
@@ -21,9 +21,10 @@ export function initSearch({ getStatesIndex }) {
   let st = { open: false, active: -1 };
   let timer = null;
   let titleFocus = false;
-  let lastTab = null;
+  let lastList = false;
 
-  const tab = () => resolveTab(readHash()).tab;
+  // The school list (Teams with st/q/view=list, #20) is where the box filters the table.
+  const onList = () => pageOf(resolveTab(readHash())) === 'schools';
   const empty = () => ({ rows: [], cities: [], states: [] });
 
   function ensureIndex() {
@@ -55,12 +56,12 @@ export function initSearch({ getStatesIndex }) {
   // Counts are announced once typing pauses, not on every key or on focus (the hint is aria-describedby).
   function announce() {
     clearTimeout(timer);
-    timer = setTimeout(() => { status.textContent = statusText(result, input.value, { tab: tab() }); }, ANNOUNCE_MS);
+    timer = setTimeout(() => { status.textContent = statusText(result, input.value, { list: onList() }); }, ANNOUNCE_MS);
   }
 
-  // On the Schools view, the box is the table's filter (q=).
+  // On the school list, the box is the table's filter (q=).
   function emitQuery() {
-    if (tab() === 'schools') window.dispatchEvent(new CustomEvent('hs-query', { detail: input.value }));
+    if (onList()) window.dispatchEvent(new CustomEvent('hs-query', { detail: input.value }));
   }
 
   function focusTitle() {
@@ -102,6 +103,10 @@ export function initSearch({ getStatesIndex }) {
     go(t);
   }
 
+  // Phones: the bottom nav hides while the box has focus, so the fixed bar can't ride above the on-screen
+  // keyboard and cover the suggestions (#20). CSS does it with :has(); this class is the fallback.
+  input.addEventListener('focus', () => document.body.classList.add('search-focus'));
+  input.addEventListener('blur', () => document.body.classList.remove('search-focus'));
   input.addEventListener('focus', async () => {
     await ensureIndex();
     st = { open: true, active: -1 };
@@ -125,7 +130,7 @@ export function initSearch({ getStatesIndex }) {
     st = { open: next.open, active: next.active };
     if (next.action === 'choose') { choose(result.items[next.index]); return; }
     if (next.action === 'enter') {
-      const t = enterTarget(result, { tab: tab() });
+      const t = enterTarget(result, { list: onList() });
       if (t) go(t); else draw();
       return;
     }
@@ -154,16 +159,16 @@ export function initSearch({ getStatesIndex }) {
   document.addEventListener('keydown', (e) => {
     if (e.key === '/' && !e.target.closest('input, select, textarea')) { e.preventDefault(); input.focus(); }
   });
-  // After each page render: on Schools the box shows q=; leaving Schools clears it (q drops out of the
+  // After each page render: on the school list the box shows q=; leaving it clears it (q drops out of the
   // next tab link, as before). A school chosen from search focuses the new page's title.
   window.addEventListener('hs-rendered', () => {
-    const now = tab();
-    if (now === 'schools') {
+    const now = onList();
+    if (now) {
       if (document.activeElement !== input) input.value = readHash().q || '';
-    } else if (lastTab === 'schools') {
-      input.value = '';   // leaving Schools drops its filter text
+    } else if (lastList) {
+      input.value = '';   // leaving the list drops its filter text
     }
-    lastTab = now;
+    lastList = now;
     if (titleFocus) { titleFocus = false; focusTitle(); }
   });
   // Phones: size the panel from the visual viewport, so it stays above the on-screen keyboard.

@@ -11,7 +11,7 @@ const read = (p) => readFile(new URL(p, root), 'utf8');
 const json = async (p) => JSON.parse(await read(p));
 
 const { readHash, resolveState, normalize } = await import('../public/js/state.js');
-const { resolveTab, tabHref, hrefFor, activeTab, VIEW_TABS } = await import('../public/js/nav.js');
+const { resolveTab, navHref, hrefFor, listHref, sectionOf, needsCatalog, MAIN_NAV } = await import('../public/js/nav.js');
 const sidebar = await import('../public/js/components/sidebar.js');
 const { pageHeadHtml } = await import('../public/js/components/pageHeader.js');
 
@@ -23,13 +23,15 @@ const catalogs = Object.fromEntries(await Promise.all(statesIndex.states.filter(
 function open(hash) {
   globalThis.location.hash = hash;
   let raw = resolveTab(readHash());
-  if (['playoffs', 'results', 'champions'].includes(raw.tab)) {
+  if (needsCatalog(raw.tab)) {
     raw = resolveState(raw, statesIndex);
     raw = normalize(raw, catalogs[raw.st]);
   }
   return raw;
 }
 
+// #20 renamed the tabs (states/schools -> teams, school -> team, champions -> playoffs&view=champions); the
+// old names still open the same content. The full old-links table is in nav_shell.test.mjs.
 test('old links still open the same view and state', () => {
   const school = '000472c2-dee8-4be6-bcdd-c0ff8a4582aa';
   const cases = [
@@ -38,16 +40,16 @@ test('old links still open the same view and state', () => {
     ['#tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=5a-d1', { tab: 'playoffs', st: 'TX', comp: 'tx-uil', div: '5a-d1' }],
     ['#tab=results&st=TX&show=upcoming', { tab: 'results', st: 'TX', show: 'upcoming' }],
     ['#tab=results&st=GA&season=2025-26&show=results', { tab: 'results', st: 'GA', season: '2025-26', show: 'results' }],
-    ['#tab=schools&q=lake', { tab: 'schools', q: 'lake' }],
-    ['#tab=schools&st=WA&q=east', { tab: 'schools', st: 'WA', q: 'east' }],
-    [`#tab=school&school=${school}`, { tab: 'school', school }],
-    [`#school=${school}`, { tab: 'school', school }],
-    ['', { tab: 'states' }],
-    ['#tab=bogus', { tab: 'states' }],
+    ['#tab=schools&q=lake', { tab: 'teams', q: 'lake' }],
+    ['#tab=schools&st=WA&q=east', { tab: 'teams', st: 'WA', q: 'east' }],
+    [`#tab=school&school=${school}`, { tab: 'team', school }],
+    [`#school=${school}`, { tab: 'team', school }],
+    ['', { tab: 'teams' }],
+    ['#tab=bogus', { tab: 'teams' }],
     ['#tab=bogus&comp=tx-uil', { tab: 'playoffs', st: 'TX', comp: 'tx-uil' }],
-    ['#tab=school', { tab: 'schools' }],
+    ['#tab=school', { tab: 'teams', view: 'list' }],
     ['#tab=about', { tab: 'about' }],
-    ['#tab=champions&st=pa', { tab: 'champions', st: 'PA' }],
+    ['#tab=champions&st=pa', { tab: 'playoffs', view: 'champions', st: 'PA' }],
   ];
   for (const [hash, want] of cases) {
     const got = open(hash);
@@ -60,13 +62,16 @@ test('filters keep writing the same hash keys (show, q) and tabs keep context', 
   const show = sidebar.showPills(results);
   assert.match(show, /href="#tab=results&amp;st=TX&amp;season=2025-26&amp;g=g&amp;show=upcoming" aria-current="true"/);
   assert.match(show, /href="#tab=results&amp;st=TX&amp;season=2025-26&amp;g=g"/);   // "All" drops show
-  assert.equal(hrefFor({ tab: 'schools', st: 'TX', q: 'lake' }), '#tab=schools&st=TX&q=lake');
-  assert.equal(tabHref('playoffs', { st: 'TX', season: '2025-26', g: 'g' }), '#tab=playoffs&st=TX&season=2025-26&g=g');
-  assert.equal(tabHref('schools', { st: 'TX', season: '2025-26' }), '#tab=schools&st=TX');
-  assert.equal(tabHref('states', { st: 'TX' }), '#tab=states');
-  assert.equal(activeTab('school'), 'schools');
-  assert.deepEqual(VIEW_TABS.map(([t]) => t), ['states', 'playoffs', 'results', 'champions', 'schools']);
-  for (const [t] of VIEW_TABS) assert.equal(resolveTab({ tab: t }).tab, t);
+  assert.equal(listHref({ st: 'TX', q: 'lake' }), '#tab=teams&st=TX&q=lake');
+  assert.equal(listHref(), '#tab=teams&view=list');
+  assert.equal(navHref('playoffs', { st: 'TX', season: '2025-26', g: 'g' }), '#tab=playoffs&st=TX&season=2025-26&g=g');
+  assert.equal(navHref('results', { st: 'TX', season: '2025-26', g: 'g' }), '#tab=results&st=TX&season=2025-26&g=g');
+  assert.equal(navHref('teams', { st: 'TX' }), '#tab=teams');
+  assert.equal(hrefFor({ tab: 'playoffs', view: 'champions', st: 'TX' }), '#tab=playoffs&view=champions&st=TX');
+  assert.equal(sectionOf('team'), 'teams');
+  assert.equal(sectionOf('about'), null);
+  assert.deepEqual(MAIN_NAV.map(([t]) => t), ['teams', 'results', 'playoffs']);
+  for (const [t] of MAIN_NAV) assert.equal(resolveTab({ tab: t }).tab, t);
 });
 
 test('state pills count brackets (and schools); division pills have no count', () => {
@@ -137,7 +142,7 @@ test('pill counts meet 4.5:1 contrast in light and dark, at full opacity', async
 test('pills, tabs and the drawer toggle use link and ARIA semantics', async () => {
   const html = await read('public/index.html');
   assert.doesNotMatch(html, /role="tab/);
-  assert.match(html, /<nav class="view-tabs" aria-label="Views" id="tabs">/);
+  assert.match(html, /<nav class="view-tabs" aria-label="Playoffs" id="tabs" hidden>/);
   assert.match(html, /id="sidebar-toggle"[^>]*aria-controls="sidebar"[^>]*aria-expanded=/);
   assert.match(html, /viewport-fit=cover/);
   const term = sidebar.termPills(statesIndex, 'fall');

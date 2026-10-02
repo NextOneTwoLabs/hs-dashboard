@@ -6,11 +6,11 @@ import { bracketHref, esc, schoolHref } from '../util.js';
 
 // Season-by-season grid of a state's champions, one column per division.
 export async function render({ state, catalog, statesIndex, controls, view, head, setState }) {
-  controls.innerHTML = statePills(statesIndex, state.st, (code) => hrefFor({ tab: 'champions', st: code, g: state.g }))
+  controls.innerHTML = statePills(statesIndex, state.st, (code) => hrefFor({ tab: 'playoffs', view: 'champions', st: code, g: state.g }))
     + genderSeg(state.g, catalog);
   bindControls(controls, setState);
   setHead(head, {
-    crumbs: [['All states', '#tab=states'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], ['Champions']],
+    crumbs: [['All states', '#tab=teams'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], ['Champions']],
     title: `${catalog.name} champions`,
     subtitle: `${esc(catalog.associationName)} (${esc(catalog.association)})`,
   });

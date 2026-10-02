@@ -3,14 +3,14 @@ import { bindChart, depthChart } from '../components/chart.js';
 import { bindControls, segmented } from '../components/controls.js';
 import { setHead } from '../components/pageHeader.js';
 import { statePills } from '../components/sidebar.js';
-import { hrefFor } from '../nav.js';
+import { listHref } from '../nav.js';
 import { bracketHref, esc, favorites, fmtDate, genderLabel, resultText, schoolHref, toggleFavorite } from '../util.js';
 
 export async function render({ state, statesIndex, controls, view, head, setState }) {
-  const pills = (st) => statePills(statesIndex, st, (code) => hrefFor({ tab: 'schools', st: code }),
-    { all: hrefFor({ tab: 'schools' }), count: 'schools' });
+  const pills = (st) => statePills(statesIndex, st, (code) => listHref({ st: code }),
+    { all: listHref(), count: 'schools' });
   controls.innerHTML = pills(null);
-  setHead(head, { crumbs: [['All states', '#tab=states'], ['Schools', '#tab=schools'], ['School']], title: 'School' });
+  setHead(head, { crumbs: [['Teams', '#tab=teams'], ['Schools', listHref()], ['School']], title: 'School' });
   view.innerHTML = '<div class="card notice">Loading school…</div>';
   let s;
   try {
@@ -70,7 +70,7 @@ export async function render({ state, statesIndex, controls, view, head, setStat
   const stateMeta = statesIndex.states.find((x) => x.code === s.state);
   const place = [s.city, s.state].filter(Boolean).join(', ');
   setHead(head, {
-    crumbs: [['All states', '#tab=states'], ['Schools', hrefFor({ tab: 'schools', st: s.state })], [s.name]],
+    crumbs: [['Teams', '#tab=teams'], ['Schools', listHref({ st: s.state })], [s.name]],
     title: s.fullName || s.name,
     subtitle: `${esc(place)}${stateMeta ? ` · ${esc(stateMeta.association)}` : ''}`,
     right: `<button class="star-btn" id="fav" type="button" aria-pressed="${fav}">${fav ? '★ Following' : '☆ Follow'}</button>`

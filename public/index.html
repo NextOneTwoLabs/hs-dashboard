@@ -24,8 +24,14 @@
       </button>
       <a class="wordmark" href="https://www.nextonetwo.com"><img src="/assets/logo.svg" alt="" width="32" height="32">next<span class="accent">one</span>two</a>
       <div class="header-divider" aria-hidden="true"></div>
-      <a class="section-label" href="#tab=states">High School Girls Soccer</a>
+      <a class="section-label" href="#tab=teams">High School Girls Soccer</a>
     </div>
+    <!-- The Main nav (#20): here on wider screens, the bottom bar on phones; only one is displayed (app.js fills both). -->
+    <nav class="header-nav" aria-label="Main" id="main-nav">
+      <a class="main-nav-link" href="#tab=teams"><span>Teams</span></a>
+      <a class="main-nav-link" href="#tab=results"><span>Results</span></a>
+      <a class="main-nav-link" href="#tab=playoffs"><span>Playoffs</span></a>
+    </nav>
     <div class="header-search search" id="search" role="search">
       <input type="search" class="search-input" id="search-input" role="combobox" aria-label="Search schools, cities, states" aria-autocomplete="list" aria-controls="search-list" aria-expanded="false" aria-describedby="search-hint" placeholder="School, city or state…  /" autocomplete="off" spellcheck="false" enterkeyhint="search">
       <span class="sr-only" id="search-hint">Type a school, a city, a state or an association. Down arrow for suggestions.</span>
@@ -50,21 +56,22 @@
     <div class="main" id="main">
       <div class="content-header">
         <div class="content-header-row" id="page-head"></div>
-        <nav class="view-tabs" aria-label="Views" id="tabs">
-          <a class="view-tab" data-tab="states" href="#tab=states">States</a>
-          <a class="view-tab" data-tab="playoffs" href="#tab=playoffs">Brackets</a>
-          <a class="view-tab" data-tab="results" href="#tab=results">Results</a>
-          <a class="view-tab" data-tab="champions" href="#tab=champions">Champions</a>
-          <a class="view-tab" data-tab="schools" href="#tab=schools">Schools</a>
-        </nav>
+        <!-- Playoffs › Brackets · Champions (shown on Playoffs only). -->
+        <nav class="view-tabs" aria-label="Playoffs" id="tabs" hidden></nav>
       </div>
       <div class="content-body" id="view"></div>
       <footer class="footer">
         <span id="status-line">US high school girls soccer state championships. Brackets from state associations via MaxPreps.</span>
+        <a class="footer-about" href="#tab=about">About the data</a>
         <span class="footer-updated" id="data-updated-foot"></span>
       </footer>
     </div>
   </div>
+  <nav class="bottom-nav" aria-label="Main" id="bottom-nav">
+    <a class="bottom-nav-link" href="#tab=teams"><span>Teams</span></a>
+    <a class="bottom-nav-link" href="#tab=results"><span>Results</span></a>
+    <a class="bottom-nav-link" href="#tab=playoffs"><span>Playoffs</span></a>
+  </nav>
 
   <script type="module" src="/js/app.js"></script>
 </body>

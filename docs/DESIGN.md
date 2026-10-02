@@ -152,6 +152,10 @@ export/<season>/<division>.csv                           human-readable export
      - An "at a glance" card: best finish, titles, appearances.
      - The playoff path for this season, a history table, and a finishing-round SVG chart.
      - A follow star (`localStorage`).
+- **Routes since #20:** the Main nav is Teams · Results · Playoffs (header nav; a bottom bar on phones).
+  - `#tab=teams` (the school list with `st`, `q` or `view=list`), `#tab=team&school=<id>`, `#tab=results`,
+    `#tab=playoffs` (`view=champions` for Champions) and `#tab=about`.
+  - The old Schools, School, States and Champions links (and `#school=<id>`) still open the same content; `public/js/nav.js` maps them.
 - **Reused from ECNL:**
   - The light/dark CSS token set.
   - The column-definition table renderer (sortable).
