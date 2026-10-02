@@ -379,7 +379,7 @@ test('11. every old link opens its route through app.js, rewritten in place (no 
     ['#tab=states&st=TX', '#tab=schools&st=TX', 'Texas schools'],
     ['#tab=champions&st=PA', '#tab=events&view=champions&st=PA', 'Pennsylvania champions'],
     ['#tab=results&st=TX', '#tab=events&view=games&st=TX', 'Texas games'],
-    ['#tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=5a-d1', '#tab=event&st=TX&season=2025-26&comp=tx-uil&div=5a-d1', 'Conference 5A D1'],
+    ['#tab=playoffs&st=TX&season=2025-26&comp=tx-uil&div=5a-d1', '#tab=event&st=TX&season=2025-26&comp=tx-uil&div=5a-d1', 'State · Conference 5A D1'],
     ['#tab=playoffs&st=TX', '#tab=events&st=TX', 'Events'],
     ['#tab=bogus', '#tab=schools', 'Schools'],
   ];

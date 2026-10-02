@@ -81,8 +81,8 @@ async function render(cause = 'control', { keep = null } = {}) {
   // per route.
   mainNav.innerHTML = mainNavHtml(state);
   bottomNav.innerHTML = mainNavHtml(state, { cls: 'bottom-nav-link' });
-  subNav.innerHTML = subNavHtml(state);
-  subNav.setAttribute('aria-label', subNavLabel(state));
+  subNav.innerHTML = subNavHtml(state, catalog);
+  subNav.setAttribute('aria-label', subNavLabel(state, catalog));
   subNav.hidden = !hasSubNav(state);
   // Navigating closes the phone filter panel; changing a filter inside it keeps it open.
   if (cause === 'hashchange') setFiltersOpen(false);

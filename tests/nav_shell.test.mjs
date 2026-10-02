@@ -162,7 +162,7 @@ test('one aria-current="page" per route across the Main nav and the sub-nav', as
     ['#tab=schools', 'Schools', null], ['#tab=schools&q=ake', 'Schools', null], [`#tab=school&school=${LOS_GATOS}`, 'Schools', 'Overview'],
     [`#tab=school&view=results&school=${LOS_GATOS}`, 'Schools', 'Results'], [`#tab=school&view=history&school=${LOS_GATOS}`, 'Schools', 'Playoff history'],
     ['#tab=events', 'Events', 'Events'], ['#tab=events&view=games&st=CA', 'Events', 'All games'],
-    ['#tab=events&view=champions&st=CA', 'Events', 'Champions'], ['#tab=event&st=CA', 'Events', null], ['#tab=about', null, null],
+    ['#tab=events&view=champions&st=CA', 'Events', 'Champions'], ['#tab=event&st=CA', 'Events', 'Bracket'], ['#tab=event&view=games&st=CA', 'Events', 'Games'], ['#tab=about', null, null],
   ];
   const current = (html, value) => [...html.matchAll(new RegExp(`aria-current="${value}">(?:<svg[\\s\\S]*?</svg>)?(?:<span>)?([^<]+)`, 'g'))].map((m) => m[1]);
   for (const [hash, section, sub] of cases) {
@@ -197,7 +197,8 @@ test('one aria-current="page" per route across the Main nav and the sub-nav', as
   const app = await read('public/js/app.js');
   assert.match(app, /mainNav\.innerHTML = mainNavHtml\(state\);/);
   assert.match(app, /bottomNav\.innerHTML = mainNavHtml\(state, \{ cls: 'bottom-nav-link' \}\);/);
-  assert.match(app, /subNav\.innerHTML = subNavHtml\(state\);/);
+  assert.match(app, /subNav\.innerHTML = subNavHtml\(state, catalog\);/);
+  assert.match(app, /subNav\.setAttribute\('aria-label', subNavLabel\(state, catalog\)\);/, 'an event\'s sub-nav is named by the event');
 });
 
 test('internal links use the new routes: no old tab names outside the old-link map in nav.js', async () => {

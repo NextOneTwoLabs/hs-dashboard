@@ -280,6 +280,15 @@ select:hover { border-color: var(--accent-text); }
 .event-state-group:first-child .event-state { margin-top: 4px; }
 .event-state h3 { font-size: 15px; }
 .event-state .muted { font-size: 12px; }
+/* An event's page (#30 PR 2): the championship, its divisions as link pills, and the school year. */
+.event-divs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0 0 16px; }
+.event-divs .pill-row { padding: 0; }
+.event-divs .event-year { margin-left: auto; }
+.event-comp-name { font-size: 12px; }
+/* A long championship name ("CIF SoCal Regional Championships") must not widen a phone page: the select shrinks
+   to its row, and on phones each select takes its own line (the phone block below; found in the 320 px sweep). */
+.event-divs .field { min-width: 0; max-width: 100%; }
+.event-divs select { min-width: 0; max-width: 100%; }
 .event-card .event-meta { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
 .event-card .event-champ { margin-top: 8px !important; color: var(--text-secondary); }
 .event-card .event-champ a { font-weight: 700; color: var(--text-primary); }
@@ -451,6 +460,9 @@ table.history tbody th { background: none; position: static; font-size: 13px; co
   .header-left { flex: 1 1 auto; }
   .header-right { flex: none; }
   .school-search { padding: 12px 16px 0; }
+  .event-divs .field, .event-divs .event-year { flex: 1 1 100%; }   /* an event's championship and year (#30) */
+  .event-divs .field select { flex: 1 1 0; width: 0; }
+  .event-divs .event-year { margin-left: 0; }
   .search-input { font-size: 16px; }   /* iOS does not zoom on focus */
   .search-kbd { display: none; }
   /* The panel opens under the box. Its height is the visual viewport (--vvh, components/searchBox.js) above the

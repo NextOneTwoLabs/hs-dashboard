@@ -78,7 +78,7 @@ test('3. a card says what its catalog division says, and links to the event in t
   assert.match(text(html), new RegExp(`Complete Mar 3 – Mar 14 · ${d.played} of ${d.games} games`));
   assert.match(text(html), new RegExp(`Champion ${d.champion.name} · runner-up ${d.runnerUp.name}`));
   assert.match(html, /href="#tab=school&amp;school=[^"]+&amp;g=g">Mater Dei<\/a>/);
-  assert.match(html, /<a href="#tab=events&amp;view=games&amp;st=CA&amp;season=2025-26"[^>]*>Games<\/a>/);
+  assert.match(html, /<a href="#tab=event&amp;view=games&amp;st=CA&amp;season=2025-26&amp;comp=ca-cif-state&amp;div=gd1">Games<\/a>/, 'the event\'s Games tab (PR 2)');
   // Every card of the year, against its catalog row.
   for (const g of ev.eventsOf(catalog, statesIndex, '2025-26')) {
     for (const e of g.events) {
@@ -140,7 +140,7 @@ test('6. All games and Champions under Events: the same content, new crumbs and 
   assert.match(text(champs.head.innerHTML), /Events › Pennsylvania › Champions Pennsylvania champions/);
   assert.match(champs.view.innerHTML, /<table class="data">/);
   const bracket = await open('#tab=event&st=TX&season=2025-26&comp=tx-uil&div=6a-d1');
-  assert.match(text(bracket.head.innerHTML), /Events › Texas › 2025-26 Conference 6A D1/);
+  assert.match(text(bracket.head.innerHTML), /Events › Texas › 2025-26 State · Conference 6A D1/);
   // Links are written in their new form at the source (Kongming): a match card's "View in bracket".
   assert.equal(util.bracketHref('TX', '2025-26', 'tx-uil', '6a-d1', 2), '#tab=event&st=TX&season=2025-26&comp=tx-uil&div=6a-d1&round=2');
   assert.match(games.view.innerHTML, /href="#tab=event&amp;st=TX&amp;season=2025-26&amp;comp=tx-uil&amp;div=[^"]+&amp;round=\d+">View in bracket/);

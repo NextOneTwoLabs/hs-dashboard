@@ -18,7 +18,10 @@ export const EVENTS_VIEWS = [['events', 'Events'], ['games', 'All games'], ['cha
 export const TEAM_VIEWS = [['overview', 'Overview'], ['results', 'Results'], ['history', 'Playoff history']];
 
 // The `view` values each tab accepts; anything else is dropped.
-const VIEW_VALUES = { schools: ['list'], school: ['results', 'history'], events: ['games', 'champions'] };
+const VIEW_VALUES = { schools: ['list'], school: ['results', 'history'], events: ['games', 'champions'], event: ['games'] };
+
+// An event's two pages (#30 PR 2): its bracket (the default, not written to the hash) and its games.
+export const EVENT_VIEWS = [['bracket', 'Bracket'], ['games', 'Games']];
 
 // The `show` values each page accepts (#30 plan v2): the event cards filter by status, All games by finished or
 // upcoming; anywhere else `show` is dropped, so e.g. events&show=results can't render an empty landing.
@@ -124,11 +127,27 @@ export function pageOf(state) {
 export const sectionOf = (tab) => (tab === 'school' ? 'schools' : tab === 'event' ? 'events'
   : MAIN_NAV.some(([k]) => k === tab) ? tab : null);
 
-// Pages with their own sub-navigation (Events › Events · All games · Champions; a school's Overview · Results ·
-// Playoff history): there the sub-nav item is the current page and the Main item is aria-current="true" (the
-// current section), so a route has exactly one aria-current="page".
-export const hasSubNav = (state) => state.tab === 'events' || state.tab === 'school';
-export const subNavLabel = (state) => (state.tab === 'school' ? 'School' : 'Events');
+// Pages with their own sub-navigation (Events › Events · All games · Champions; an event's Bracket · Games; a
+// school's Overview · Results · Playoff history): there the sub-nav item is the current page and the Main item is
+// aria-current="true" (the current section), so a route has exactly one aria-current="page".
+export const hasSubNav = (state) => state.tab === 'events' || state.tab === 'event' || state.tab === 'school';
+
+// The division an event's state points at in its state catalog (after normalize), or null.
+export function eventOf(state, catalog) {
+  const comp = catalog?.seasons.find((s) => s.season === state.season)?.competitions.find((c) => c.id === state.comp);
+  const div = comp?.divisions.find((d) => d.code === state.div);
+  return comp && div ? { comp, div } : null;
+}
+
+// The sub-nav's name: an event's is the event itself ("CIF State Championships Division 1 2025-26").
+export function subNavLabel(state, catalog = null) {
+  if (state.tab === 'school') return 'School';
+  if (state.tab === 'event') {
+    const ev = eventOf(state, catalog);
+    return ev ? `${ev.comp.label} ${ev.div.label} ${state.season}` : 'Event';
+  }
+  return 'Events';
+}
 
 // Whether a finished render should move focus to the page title (#11). Navigation does (a link, a nav link,
 // Back/Forward); the first load and in-page controls (the filter row, #20 PR 3) don't, nor does a render while
@@ -184,13 +203,22 @@ export const teamHref = (school, { view = null, season = null, g = null } = {}) 
 
 // An event's page: one division's tournament in one school year (#30). A missing division (or competition) is
 // filled in from the state catalog by normalize, as Playoffs did.
-export const eventHref = ({ st, season, comp, div, round = null, g = null }) =>
-  hrefFor({ tab: 'event', st, season, comp, div, round: round == null ? null : String(round), g });
+export const eventHref = ({ st, season, comp, div, round = null, g = null, view = null }) =>
+  hrefFor({ tab: 'event', view, st, season, comp, div, round: round == null ? null : String(round), g });
 
-// Events › Events · All games · Champions, or a school's Overview · Results · Playoff history. Empty elsewhere.
-export function subNavHtml(state) {
+// Events › Events · All games · Champions, an event's Bracket · Games (N), or a school's Overview · Results ·
+// Playoff history. Empty elsewhere. The count of an event's games is inside the link, read as "Games (15)".
+export function subNavHtml(state, catalog = null) {
   if (!hasSubNav(state)) return '';
   const { st, season, g } = state;
+  if (state.tab === 'event') {
+    const now = state.view || 'bracket';
+    const n = eventOf(state, catalog)?.div.games;
+    return EVENT_VIEWS.map(([key, label]) => {
+      const href = eventHref({ st, season, comp: state.comp, div: state.div, g, view: key === 'bracket' ? null : key });
+      return `<a class="view-tab" href="${esc(href)}"${key === now ? ' aria-current="page"' : ''}>${label}${key === 'games' && n != null ? ` (${n})` : ''}</a>`;
+    }).join('');
+  }
   if (state.tab === 'school') {
     const now = state.view || 'overview';
     return TEAM_VIEWS.map(([key, label]) => `<a class="view-tab" href="${esc(teamHref(state.school, { view: key, season, g }))}"`
