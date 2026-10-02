@@ -173,9 +173,9 @@ test('phones: the bottom nav replaces the header nav, and hides while the search
   const box = await read('public/js/components/searchBox.js');
   assert.match(box, /addEventListener\('focus', \(\) => document\.body\.classList\.add\('search-focus'\)\)/);
   assert.match(box, /addEventListener\('blur', \(\) => document\.body\.classList\.remove\('search-focus'\)\)/);
-  // The drawer is modal on phones: both Main navs go inert behind it.
+  // #20 PR 3: the modal phone drawer is gone (filters are an inline disclosure), so nothing goes inert.
   const shell = await read('public/js/shell.js');
-  assert.match(shell, /getElementById\('main-nav'\), document\.getElementById\('bottom-nav'\)/);
+  assert.doesNotMatch(shell, /\.inert = /);
 });
 
 test('About is in the footer at every width; the title has a visible keyboard focus ring (#18)', async () => {

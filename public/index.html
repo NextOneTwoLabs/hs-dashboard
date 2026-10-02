@@ -19,9 +19,6 @@
 <body>
   <header class="header" id="header">
     <div class="header-left">
-      <button class="hamburger" id="sidebar-toggle" type="button" aria-label="Show filters" aria-controls="sidebar" aria-expanded="true">
-        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="15" height="12" rx="2"/><path d="M7.5 4v12"/></svg>
-      </button>
       <a class="wordmark" href="https://www.nextonetwo.com"><img src="/assets/logo.svg" alt="" width="32" height="32">next<span class="accent">one</span>two</a>
       <div class="header-divider" aria-hidden="true"></div>
       <a class="section-label" href="#tab=teams">High School Girls Soccer</a>
@@ -48,16 +45,18 @@
   </header>
 
   <div class="layout" id="layout">
-    <div class="sidebar-overlay" id="sidebar-overlay" hidden></div>
-    <aside class="sidebar" id="sidebar" aria-label="Filters">
-      <div class="controls" id="controls"></div>
-      <div class="drawer-show"><button class="btn primary" type="button" id="drawer-done">Show results</button></div>
-    </aside>
     <div class="main" id="main">
       <div class="content-header">
         <div class="content-header-row" id="page-head"></div>
-        <!-- Playoffs › Brackets · Champions (shown on Playoffs only). -->
+        <!-- Playoffs › Brackets · Champions, or a team's Overview · Results · Playoff history (app.js sets the label). -->
         <nav class="view-tabs" aria-label="Playoffs" id="tabs" hidden></nav>
+      </div>
+      <!-- The filter row (#20 PR 3), above the content it filters. Phones: a "Filters" disclosure with a summary. -->
+      <div class="filter-bar" id="filter-bar" hidden>
+        <button class="filter-toggle" id="filter-toggle" type="button" aria-expanded="false" aria-controls="controls">
+          <span class="filter-toggle-label">Filters</span><span class="filter-summary" id="filter-summary"></span>
+        </button>
+        <div class="controls" id="controls" role="group" aria-label="Filters"></div>
       </div>
       <div class="content-body" id="view"></div>
       <footer class="footer">

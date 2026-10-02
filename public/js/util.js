@@ -27,6 +27,9 @@ export function resultText(app) {
 // A team page (#20): #tab=team&school=<id>, with the program (g) when there are two.
 export const schoolHref = (id, g) => `#tab=team&school=${encodeURIComponent(id)}${g ? `&g=${g}` : ''}`;
 
+// Brackets in a state's latest season, from states.json.
+export const bracketCount = (row) => (row.latest || []).reduce((t, c) => t + c.divisions.length, 0);
+
 export const bracketHref = (st, season, comp, div) =>
   `#tab=playoffs&st=${st}&season=${season}&comp=${comp}${div ? `&div=${div}` : ''}`;
 

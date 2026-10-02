@@ -1,8 +1,8 @@
 import { api, errorHtml } from '../api.js';
-import { bindControls, genderSeg, seasonSelect } from '../components/controls.js';
+import { bindControls, genderSeg } from '../components/controls.js';
+import { bindFilters, compSelect, divisionSelect, seasonSelect, stateSelect, termNote } from '../components/filters.js';
 import { bindHighlight, matchCard } from '../components/match.js';
 import { setHead } from '../components/pageHeader.js';
-import { compPills, divisionPills, statePills } from '../components/sidebar.js';
 import { hrefFor } from '../nav.js';
 import { esc, fmtDate, schoolHref } from '../util.js';
 
@@ -10,14 +10,17 @@ export async function render({ state, catalog, statesIndex, controls, view, head
   const season = catalog.seasons.find((s) => s.season === state.season);
   const comps = season?.competitions || [];
   const comp = comps.find((c) => c.id === state.comp);
+  // The filter row (#20 PR 3): state, school year, championship, division; the season of play as text.
   controls.innerHTML = [
-    statePills(statesIndex, state.st, (code) => hrefFor({ tab: 'playoffs', st: code, g: state.g })),
-    `<div class="browse-row">${seasonSelect(catalog, state.season)}</div>`,
-    compPills(season, state),
-    divisionPills(comp, state),
+    stateSelect(statesIndex, state.st),
+    seasonSelect(catalog, state.season),
+    compSelect(season, state.comp),
+    divisionSelect(comp, state),
     genderSeg(state.g, catalog),
+    termNote(statesIndex, state.st),
   ].join('');
-  bindControls(controls, (patch) => setState(patch.g || patch.season ? { ...patch, comp: null, div: null } : patch));
+  bindFilters(controls, setState);
+  bindControls(controls, setState);
 
   const crumbs = [['All states', '#tab=teams'], [catalog.name, hrefFor({ tab: 'playoffs', st: state.st })], [state.season]];
   if (!comp) {
