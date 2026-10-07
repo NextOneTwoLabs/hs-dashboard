@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "_meta": {"source":"maxpreps","url":"https://www.maxpreps.com","asOf":null},
   "season": "2021-22",
   "games": [
     {"id":"9ced7250-3b89-ec11-80d3-0a9bf6d97784","state":"CA","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","gender":"girls","round":0,"roundName":"Round I","date":"2022-03-01","status":"final","decidedBy":null,"winner":"top","top":{"id":"74c1621c-e0cf-4821-b5e1-3c8170c8125a","name":"Oak Ridge","seed":1,"score":2},"bottom":{"id":"093dfd99-3456-4fa9-98ba-7f1a93af473b","name":"Windsor","seed":8,"score":0}},

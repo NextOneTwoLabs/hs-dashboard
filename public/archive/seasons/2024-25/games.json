@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "_meta": {"source":"maxpreps","url":"https://www.maxpreps.com","asOf":null},
   "season": "2024-25",
   "games": [
     {"id":"7c974fe1-561a-4688-8215-26da5d71c368","state":"CA","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","gender":"girls","round":0,"roundName":"Round I","date":"2025-03-04","status":"final","decidedBy":"pk","winner":"bottom","top":{"id":"38af84a6-48a9-4953-804e-cad1cc07c0ef","name":"Del Oro","seed":1,"score":0},"bottom":{"id":"f8a146fc-198e-4220-b0fc-ee145a8a81d9","name":"Bishop O'Dowd","seed":8,"score":0}},

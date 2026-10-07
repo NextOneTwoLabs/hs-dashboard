@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "_meta": {"source":"maxpreps","url":"https://www.maxpreps.com","asOf":null},
   "season": "2022-23",
   "games": [
     {"id":"143de1e3-f7ae-ed11-80d3-0a9bf6d97784","state":"CA","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","gender":"girls","round":0,"roundName":"Round I","date":"2023-02-28","status":"final","decidedBy":null,"winner":"top","top":{"id":"de6d3780-e8f6-4a2a-93f2-b5d89499f9b0","name":"Saint Francis","seed":1,"score":1},"bottom":{"id":"594e7f5d-3e25-480c-bc2c-c15cbf09c737","name":"San Ramon Valley","seed":8,"score":0}},

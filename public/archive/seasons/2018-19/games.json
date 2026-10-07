@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "_meta": {"source":"maxpreps","url":"https://www.maxpreps.com","asOf":null},
   "season": "2018-19",
   "games": [
     {"id":"42a0d810-3020-e911-80cd-8a0e844f09b2","state":"CA","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","gender":"girls","round":0,"roundName":"Round I","date":"2019-02-26","status":"final","decidedBy":null,"winner":"top","top":{"id":"288ca10d-8448-41e9-b26e-463df226b8c8","name":"Davis Sr.","seed":1,"score":1},"bottom":{"id":"1dc4836b-4daf-4573-b525-27b474bd5366","name":"St. Ignatius College Preparatory","seed":8,"score":0}},

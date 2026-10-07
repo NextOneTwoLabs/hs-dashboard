@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "_meta": {"source":"maxpreps","url":"https://www.maxpreps.com","asOf":null},
   "season": "2023-24",
   "games": [
     {"id":"46dd2d4e-acd1-ee11-80d4-0a9bf6d97784","state":"CA","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","gender":"girls","round":0,"roundName":"Round I","date":"2024-02-27","status":"final","decidedBy":null,"winner":"top","top":{"id":"de6d3780-e8f6-4a2a-93f2-b5d89499f9b0","name":"Saint Francis","seed":1,"score":2},"bottom":{"id":"f62e70f3-0c88-4711-9e52-3e9e132006b3","name":"Carondelet","seed":8,"score":0}},

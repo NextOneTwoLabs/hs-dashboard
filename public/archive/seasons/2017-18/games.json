@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "_meta": {"source":"maxpreps","url":"https://www.maxpreps.com","asOf":null},
   "season": "2017-18",
   "games": [
     {"id":"5020c180-cff7-e711-93f8-ecf4bbe7be14","state":"CA","competition":"ca-cif-norcal","division":"gd1","divisionLabel":"Division 1","gender":"girls","round":0,"roundName":"Round I","date":"2018-03-06","status":"final","decidedBy":null,"winner":"top","top":{"id":"21625f1d-edb3-4fa8-9158-f6b6b0a04e2d","name":"Monte Vista","seed":1,"score":6},"bottom":{"id":"a38a628c-c65f-487f-a65e-7264b6804ce0","name":"Palo Alto","seed":8,"score":0}},

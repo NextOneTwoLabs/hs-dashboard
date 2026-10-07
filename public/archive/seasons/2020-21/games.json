@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "_meta": {"source":"maxpreps","url":"https://www.maxpreps.com","asOf":null},
   "season": "2020-21",
   "games": [
     {"id":"2bf35355-6aaf-eb11-80ce-a444a33a3a97","state":"CA","competition":"ca-cif-socal","division":"gd3","divisionLabel":"Division 3","gender":"girls","round":2,"roundName":"Regional Final","date":null,"status":"final","decidedBy":null,"winner":"bottom","top":{"id":"b5b69b00-252c-4c74-8165-56bf0432c321","name":"Alta Loma","seed":5,"score":0},"bottom":{"id":"9ef67997-7f5d-4899-b500-2d0b5c758105","name":"Westview","seed":3,"score":2}},
