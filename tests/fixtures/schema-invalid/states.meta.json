@@ -1,0 +1,73 @@
+{
+  "why": "`_meta` is one object, not a list of them.",
+  "errorAt": "$['_meta']",
+  "fix": {
+    "at": "/_meta",
+    "value": {
+      "source": "maxpreps",
+      "url": "https://www.maxpreps.com",
+      "asOf": null
+    }
+  },
+  "document": {
+    "schema": 1,
+    "_meta": [
+      {
+        "source": "maxpreps",
+        "url": "https://www.maxpreps.com",
+        "asOf": null
+      }
+    ],
+    "activeSeason": "2026-27",
+    "genders": [
+      "g"
+    ],
+    "aliases": {
+      "cif-state": "ca-cif-state"
+    },
+    "competitions": {
+      "tx-uil": {
+        "state": "TX",
+        "term": "winter",
+        "gender": "girls",
+        "label": "UIL State Championships",
+        "short": "State"
+      }
+    },
+    "states": [
+      {
+        "code": "TX",
+        "name": "Texas",
+        "association": "UIL",
+        "associationName": "University Interscholastic League",
+        "terms": [
+          "winter"
+        ],
+        "seasons": [
+          "2025-26"
+        ],
+        "latestSeason": "2025-26",
+        "latest": [
+          {
+            "competition": "tx-uil",
+            "short": "State",
+            "divisions": [
+              {
+                "code": "6a-d1",
+                "label": "Conference 6A D1",
+                "status": "complete",
+                "champion": {
+                  "id": "aaa-111",
+                  "name": "Alpha"
+                },
+                "start": "2026-03-19",
+                "end": "2026-04-09"
+              }
+            ]
+          }
+        ],
+        "schools": 1
+      }
+    ]
+  }
+}

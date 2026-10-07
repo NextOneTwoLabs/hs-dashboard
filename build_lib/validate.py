@@ -20,7 +20,9 @@ A schema pins one file's shape. The cross-checks cover what a schema can't see:
     file, and the search index is the directory's rows;
   - a school's summary adds up from its appearances, and each appearance is in its bracket;
   - the games feeds hold each bracket's non-bye games, and the all-states feed is the state feeds combined;
-  - every school a game names has a school file.
+  - every school a game names has a school file;
+  - every built file's `_meta` is what the build derives: a bracket's is its source URL and fetch time, a school's
+    names its MaxPreps page, and every other file's names the MaxPreps base with `asOf: null`.
 """
 import argparse
 import json
@@ -452,8 +454,27 @@ def _check_sources(sources, p):
             p.append(f"data/sources.json: alias {old} -> {new}, which is not registered")
 
 
+def _check_meta(docs, sources, p):
+    """`_meta` is what the build derives (build._with_meta): the same rule, written a second time on purpose."""
+    base = sources["sources"]["maxpreps"]["base"]
+    for rel, doc in sorted(docs.items()):
+        kind = kind_of(rel)
+        if kind in (None, "status", SOURCES_KIND):
+            continue
+        if kind == "bracket":
+            want = {"source": "maxpreps", "url": doc["source"]["maxpreps"], "asOf": doc["source"]["fetchedAt"]}
+        elif kind == "school":
+            want = {"source": "maxpreps", "url": doc["maxpreps"], "asOf": None}
+        else:
+            want = {"source": "maxpreps", "url": base, "asOf": None}
+        got = doc.get("_meta")
+        if got != want:
+            p.append(f"{rel}: _meta is {got}, expected {want}")
+
+
 def cross_checks(docs, sources, merge):
     p = []
+    _check_meta(docs, sources, p)
     _check_sources(sources, p)
     brackets = _by_kind(docs, "bracket")
     schools = {rel[len("schools/"):-len(".json")]: d for rel, d in _by_kind(docs, "school").items()}

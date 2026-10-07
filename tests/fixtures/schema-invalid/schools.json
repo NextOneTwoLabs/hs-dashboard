@@ -4,6 +4,7 @@
   "fix": {"at": "/schools/0/gender/0", "value": "g"},
   "document": {
     "schema": 1,
+    "_meta": {"source": "maxpreps", "url": "https://www.maxpreps.com", "asOf": null},
     "state": "TX",
     "count": 1,
     "schools": [

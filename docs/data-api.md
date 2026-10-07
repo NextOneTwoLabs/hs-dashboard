@@ -75,6 +75,25 @@ counts and champions are their brackets', directories and the search index add u
 has a file. `--fresh` does the same on a build written to a temp directory. CI runs both. It needs
 `requirements-dev.txt` (`jsonschema`, pinned); the crawler and the build stay stdlib-only.
 
+## Provenance (`_meta`)
+
+Since #8 PR 5, every built file carries `_meta` as its second key, right after `schema`:
+`{"source": "maxpreps", "url": …, "asOf": …}`. It is additive: no document's `schema` number changes (the 1s stay
+1, and `catalog.json` stays 2). `refresh-state.json` (the crawl status, which is the freshness record) and
+`/data/sources.json` (the hand-edited registry the provenance comes from) have none.
+
+| Schema | `url` | `asOf` |
+|---|---|---|
+| `bracket` | the MaxPreps page the bracket was fetched from | when it was fetched |
+| `school` | the school's MaxPreps page | `null` |
+| `schools`, `search-index`, `games`, `state-catalog`, `catalog`, `states` | the MaxPreps base (`https://www.maxpreps.com`) | `null` |
+
+Only a bracket carries a fetch time. `asOf: null` never means unknown; it means built from several brackets: see
+each bracket's `_meta.asOf`, or `/api/v1/status` `updatedAt`. A school appearance names its bracket by
+`(season, competition, division)`, and that bracket's `_meta` holds the fetch. Keeping the time on brackets alone
+means a refetch of one bracket changes that bracket's files and no catalog, feed or directory. The UI doesn't read
+`_meta` yet.
+
 ## Parameters
 
 A parameter that breaks its rule is answered **400** with the error below, before any file is read.

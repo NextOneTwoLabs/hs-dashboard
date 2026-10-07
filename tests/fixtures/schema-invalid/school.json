@@ -4,6 +4,7 @@
   "fix": {"at": "/appearances/0/games/0/res", "value": "D"},
   "document": {
     "schema": 1,
+    "_meta": {"source": "maxpreps", "url": "https://www.maxpreps.com/tx/austin/alpha", "asOf": null},
     "id": "aaa-111",
     "name": "Alpha",
     "fullName": null,

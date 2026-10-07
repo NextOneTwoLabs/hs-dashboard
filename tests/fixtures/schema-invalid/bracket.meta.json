@@ -1,0 +1,66 @@
+{
+  "why": "A bracket must say when it was fetched: asOf is a time, never null.",
+  "errorAt": "$['_meta'].asOf",
+  "fix": {
+    "at": "/_meta/asOf",
+    "value": "2026-04-10T06:00:00Z"
+  },
+  "document": {
+    "schema": 1,
+    "_meta": {
+      "source": "maxpreps",
+      "url": "https://www.maxpreps.com/tournament/x.htm",
+      "asOf": null
+    },
+    "season": "2025-26",
+    "state": "TX",
+    "competition": "tx-uil",
+    "division": {
+      "code": "6a-d1",
+      "gender": "girls",
+      "label": "Conference 6A D1"
+    },
+    "source": {
+      "cif": null,
+      "maxpreps": "https://www.maxpreps.com/tournament/x.htm",
+      "fetchedAt": "2026-04-10T06:00:00Z"
+    },
+    "champion": null,
+    "rounds": [
+      {
+        "index": 0,
+        "name": "State Finals",
+        "date": "2026-04-09"
+      }
+    ],
+    "games": [
+      {
+        "id": "g1",
+        "round": 0,
+        "slot": 0,
+        "date": "2026-04-09",
+        "status": "final",
+        "decidedBy": null,
+        "top": {
+          "schoolId": "aaa-111",
+          "name": "Alpha",
+          "seed": null,
+          "score": 2,
+          "pk": null,
+          "path": "/tx/a/alpha"
+        },
+        "bottom": {
+          "schoolId": "bbb-222",
+          "name": "Beta",
+          "seed": null,
+          "score": 1,
+          "pk": null,
+          "path": "/tx/b/beta"
+        },
+        "winner": "top",
+        "next": null,
+        "matchUrl": null
+      }
+    ]
+  }
+}

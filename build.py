@@ -17,6 +17,10 @@ Outputs (all schema 1 unless noted):
   schools.json                         full school directory (all states)
   schools/<id>.json                    one school's appearances
   search-index.json                    compact rows for the header search
+
+Every file carries `_meta` {source, url, asOf} right after `schema` (#8 PR 5). A bracket's is its fetch (the
+MaxPreps page and when); a document built from several brackets has `asOf: null`, so a refetch of one bracket
+changes that bracket's files only.
 """
 import csv
 import io
@@ -352,6 +356,8 @@ def build_all(sources, check=False, export=False, warn=None, archive=None):
         "seasons": sorted(all_seasons.values(), key=lambda s: s["season"], reverse=True),
     }
 
+    base = sources["sources"]["maxpreps"]["base"]
+    out = {rel: _with_meta(rel, obj, base) for rel, obj in out.items()}
     files = {archive / rel: store.dumps(obj) for rel, obj in out.items()}
     if export:
         for b in brackets:
@@ -385,6 +391,18 @@ def build_all(sources, check=False, export=False, warn=None, archive=None):
                 if d.is_dir() and not any(d.iterdir()):
                     d.rmdir()
     return changed
+
+
+def _with_meta(rel, doc, base):
+    """`doc` with `_meta` as its second key (#8 PR 5). Only a bracket carries a fetch time, so a refetch
+    moves that one bracket and no document built from several: their `asOf` is null."""
+    if rel.startswith("brackets/"):
+        meta = {"source": "maxpreps", "url": doc["source"]["maxpreps"], "asOf": doc["source"]["fetchedAt"]}
+    elif rel.startswith("schools/"):
+        meta = {"source": "maxpreps", "url": doc["maxpreps"], "asOf": None}
+    else:
+        meta = {"source": "maxpreps", "url": base, "asOf": None}
+    return {"schema": doc["schema"], "_meta": meta, **{k: v for k, v in doc.items() if k != "schema"}}
 
 
 def _game_side(side, merge):
