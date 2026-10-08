@@ -2,12 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://hs-dashboard.local/schema/states.schema.json",
   "title": "The coverage index (public/archive/states.json)",
-  "description": "/api/v1/states: one row per covered state, with its latest season's divisions. hsdash.py validate also checks each row against that state's catalog and directory.",
+  "description": "/api/v1/states: one row per covered state, with its latest season's divisions. hsdash.py validate also checks each row against that state's catalog and directory. `_meta.asOf` is null: it is built from several brackets.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema", "activeSeason", "genders", "aliases", "competitions", "states"],
+  "required": ["schema", "_meta", "activeSeason", "genders", "aliases", "competitions", "states"],
   "properties": {
     "schema": {"$ref": "common.schema.json#/$defs/schemaVersion1"},
+    "_meta": {"$ref": "common.schema.json#/$defs/buildMeta"},
     "activeSeason": {"$ref": "common.schema.json#/$defs/season"},
     "genders": {"$ref": "common.schema.json#/$defs/genderCodes"},
     "aliases": {

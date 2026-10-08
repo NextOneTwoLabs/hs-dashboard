@@ -2,12 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://hs-dashboard.local/schema/schools.schema.json",
   "title": "The school directory (public/archive/schools.json and states/<ST>/schools.json)",
-  "description": "/api/v1/schools (every state, no `state`) and /api/v1/states/{ST}/schools (one state, with `state`). hsdash.py validate also checks that `count` is the number of rows, the state directories add up to the full one, and every row matches its school file.",
+  "description": "/api/v1/schools (every state, no `state`) and /api/v1/states/{ST}/schools (one state, with `state`). hsdash.py validate also checks that `count` is the number of rows, the state directories add up to the full one, and every row matches its school file. `_meta.asOf` is null: it is built from several brackets.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema", "count", "schools"],
+  "required": ["schema", "_meta", "count", "schools"],
   "properties": {
     "schema": {"$ref": "common.schema.json#/$defs/schemaVersion1"},
+    "_meta": {"$ref": "common.schema.json#/$defs/buildMeta"},
     "state": {"$ref": "common.schema.json#/$defs/state"},
     "count": {"$ref": "common.schema.json#/$defs/count"},
     "schools": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/directoryRow"}}

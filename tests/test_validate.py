@@ -3,6 +3,7 @@
 - Every schema is Draft 2020-12, loads, and has a document kind; every /api/v1 route's file has a schema.
 - One INVALID fixture per schema (tests/fixtures/schema-invalid/<kind>.json) must fail, at the place it says, and
   pass once that one thing is fixed, so a schema that accepts everything (or rejects everything) can't pass.
+  The eight built kinds have a second one, <kind>.meta.json, with one `_meta` defect (#8 PR 5).
 - The committed files validate, and so does a build written to a temp directory (not only the committed tree).
 - Each cross-check catches the mistake it is for, on an otherwise valid copy of the committed files.
 
@@ -25,6 +26,8 @@ from build_lib import store, validate  # noqa: E402
 
 FIXTURES = ROOT / "tests" / "fixtures" / "schema-invalid"
 BASE = "https://hs-dashboard.local/schema/"
+# The kinds a build writes: each requires `_meta` (status and sources are not built).
+META_KINDS = ["bracket", "catalog", "games", "school", "schools", "search-index", "state-catalog", "states"]
 
 
 def set_pointer(doc, pointer, value):
@@ -72,6 +75,20 @@ class Schemas(unittest.TestCase):
         names = sorted(row.split("|")[1].strip().strip("`") for row in table.splitlines()[2:])
         self.assertEqual(names, validate.document_kinds())
 
+    def test_meta_source_is_the_registry(self):
+        sources = store.load_json(store.SOURCES)
+        self.assertEqual(self.schemas["common"]["$defs"]["metaSource"]["enum"], sorted(sources["sources"]))
+
+    def test_built_kinds_require_meta(self):
+        for kind in META_KINDS:
+            schema = self.schemas[kind]
+            self.assertIn("_meta", schema["required"], kind)
+            want = "fetchMeta" if kind == "bracket" else "buildMeta"
+            self.assertEqual(schema["properties"]["_meta"], {"$ref": f"common.schema.json#/$defs/{want}"}, kind)
+        for kind in ("status", "sources"):
+            self.assertNotIn("_meta", self.schemas[kind].get("required", []), kind)
+            self.assertNotIn("_meta", self.schemas[kind].get("properties", {}), kind)
+
     def test_refs_resolve_locally_only(self):
         # A schema that refers outside schema/ fails to resolve instead of being fetched.
         from referencing.exceptions import Unresolvable
@@ -88,18 +105,25 @@ class InvalidFixtures(unittest.TestCase):
         cls.checkers = validate.validators()
 
     def test_one_fixture_per_document_kind(self):
-        self.assertEqual(sorted(p.stem for p in FIXTURES.glob("*.json")), validate.document_kinds())
+        # <kind>.json for every kind; <kind>.meta.json (one `_meta` defect) for the eight built kinds.
+        names = [p.name for p in FIXTURES.glob("*.json")]
+        self.assertEqual(sorted(n for n in names if n.count(".") == 1), [f"{k}.json" for k in validate.document_kinds()])
+        self.assertEqual(sorted(n for n in names if n.endswith(".meta.json")), [f"{k}.meta.json" for k in META_KINDS])
 
     def test_each_fixture_fails_where_it_says_and_passes_once_fixed(self):
         for path in sorted(FIXTURES.glob("*.json")):
-            with self.subTest(kind=path.stem):
+            kind = path.name.split(".")[0]
+            with self.subTest(fixture=path.name):
                 fx = json.loads(path.read_text(encoding="utf-8"))
-                checker = self.checkers[path.stem]
+                checker = self.checkers[kind]
                 errors = list(checker.iter_errors(fx["document"]))
                 self.assertTrue(errors, f"{path.name} must be rejected: {fx['why']}")
                 for e in errors:
                     self.assertTrue(e.json_path.startswith(fx["errorAt"]),
                                     f"{path.name}: unexpected error at {e.json_path}: {e.message}")
+                if "message" in fx:
+                    self.assertTrue(any(fx["message"] in e.message for e in errors),
+                                    f"{path.name}: no error says {fx['message']!r}")
                 fixed = copy.deepcopy(fx["document"])
                 set_pointer(fixed, fx["fix"]["at"], fx["fix"]["value"])
                 self.assertEqual([e.message for e in checker.iter_errors(fixed)], [],
@@ -245,6 +269,18 @@ class CrossChecks(unittest.TestCase):
         def stranger(f):
             f["games"][0]["top"]["id"] = "zzz-not-a-school"
         self.assertCaught(self.run_checks(self.edit(rel, stranger)), "(zzz-not-a-school) has no school file")
+
+    def test_meta_agrees_with_the_document(self):
+        def asof(b):
+            b["_meta"]["asOf"] = "2020-01-01T00:00:00Z"
+        self.assertCaught(self.run_checks(self.edit(self.TX, asof)), f"{self.TX}: _meta is")
+        rel = "schools/bdb0b593-ef7f-4c69-8c2a-e0a48c934ca7.json"   # Los Gatos
+        def school_url(s):
+            s["_meta"]["url"] = "https://www.maxpreps.com/x"
+        self.assertCaught(self.run_checks(self.edit(rel, school_url)), f"{rel}: _meta is")
+        def base(c):
+            c["_meta"]["url"] = "https://example.com"
+        self.assertCaught(self.run_checks(self.edit("catalog.json", base)), "catalog.json: _meta is")
 
     def test_sources_registry_is_consistent(self):
         sources = copy.deepcopy(self.sources)

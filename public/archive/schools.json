@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "_meta": {"source":"maxpreps","url":"https://www.maxpreps.com","asOf":null},
   "count": 1337,
   "schools": [
     {"id":"000472c2-dee8-4be6-bcdd-c0ff8a4582aa","name":"South El Monte","city":"South El Monte","state":"CA","gender":["g"],"apps":1,"titles":1,"last":"2018-19"},

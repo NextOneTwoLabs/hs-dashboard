@@ -16,6 +16,32 @@
     "dateTime": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"},
     "url": {"type": "string", "pattern": "^https://"},
     "urlOrNull": {"anyOf": [{"$ref": "#/$defs/url"}, {"type": "null"}]},
+    "metaSource": {
+      "description": "Where the data comes from: a key of sources.json `sources`.",
+      "enum": ["cif", "maxpreps"]
+    },
+    "fetchMeta": {
+      "description": "A bracket's provenance (#8 PR 5): the MaxPreps page it was built from and when it was fetched (archive/links.json `canonical` and `fetchedAt`, the raw file's header).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "url", "asOf"],
+      "properties": {
+        "source": {"$ref": "#/$defs/metaSource"},
+        "url": {"$ref": "#/$defs/url"},
+        "asOf": {"$ref": "#/$defs/dateTime"}
+      }
+    },
+    "buildMeta": {
+      "description": "Provenance of a document built from several brackets (#8 PR 5). `asOf: null` never means unknown; it means built from several brackets: see each bracket's `_meta.asOf`, or `/api/v1/status` `updatedAt`. Only a bracket carries a fetch time, so a refresh never touches more files because of `_meta`.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "url", "asOf"],
+      "properties": {
+        "source": {"$ref": "#/$defs/metaSource"},
+        "url": {"$ref": "#/$defs/urlOrNull"},
+        "asOf": {"type": "null"}
+      }
+    },
     "name": {"type": "string", "minLength": 1},
     "count": {"type": "integer", "minimum": 0},
     "countOrNull": {"type": ["integer", "null"], "minimum": 0},

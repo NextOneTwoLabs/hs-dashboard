@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "_meta": {"source":"maxpreps","url":"https://www.maxpreps.com","asOf":null},
   "activeSeason": "2026-27",
   "genders": ["g"],
   "aliases": {"cif-state":"ca-cif-state","cif-norcal":"ca-cif-norcal","cif-socal":"ca-cif-socal"},

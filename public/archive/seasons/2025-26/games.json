@@ -1,5 +1,6 @@
 {
   "schema": 1,
+  "_meta": {"source":"maxpreps","url":"https://www.maxpreps.com","asOf":null},
   "season": "2025-26",
   "games": [
     {"id":"c5cfa03f-0645-4c82-9599-47cd81e68310","state":"GA","competition":"ga-ghsa","division":"a-division-i","divisionLabel":"Class A Division I","gender":"girls","round":4,"roundName":"Round 5","date":null,"status":"final","decidedBy":null,"winner":"top","top":{"id":"f5b39d8f-b944-4b2a-b597-0851b9c1d852","name":"Thomasville","seed":null,"score":1},"bottom":{"id":"fe4668fc-2d47-4061-8597-3ac6cba1e932","name":"Model","seed":null,"score":0}},

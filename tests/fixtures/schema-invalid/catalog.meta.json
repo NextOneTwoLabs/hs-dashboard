@@ -1,0 +1,44 @@
+{
+  "why": "`_meta.url` is https, or null.",
+  "errorAt": "$['_meta'].url",
+  "fix": {
+    "at": "/_meta/url",
+    "value": "https://www.maxpreps.com"
+  },
+  "document": {
+    "schema": 2,
+    "_meta": {
+      "source": "maxpreps",
+      "url": "http://www.maxpreps.com",
+      "asOf": null
+    },
+    "activeSeason": "2026-27",
+    "latestSeason": "2025-26",
+    "genders": [
+      "g"
+    ],
+    "states": {
+      "TX": {
+        "name": "Texas",
+        "association": "UIL",
+        "associationName": "University Interscholastic League"
+      }
+    },
+    "competitions": {
+      "tx-uil": {
+        "state": "TX",
+        "term": "winter",
+        "gender": "girls",
+        "label": "UIL State Championships",
+        "short": "State"
+      }
+    },
+    "seasons": [
+      {
+        "season": "2025-26",
+        "notes": {},
+        "competitions": []
+      }
+    ]
+  }
+}

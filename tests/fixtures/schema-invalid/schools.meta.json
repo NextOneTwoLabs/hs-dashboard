@@ -1,0 +1,32 @@
+{
+  "why": "A document built from several brackets carries no fetch time: asOf is null.",
+  "errorAt": "$['_meta'].asOf",
+  "fix": {
+    "at": "/_meta/asOf",
+    "value": null
+  },
+  "document": {
+    "schema": 1,
+    "_meta": {
+      "source": "maxpreps",
+      "url": "https://www.maxpreps.com",
+      "asOf": "2026-10-01T20:22:20Z"
+    },
+    "state": "TX",
+    "count": 1,
+    "schools": [
+      {
+        "id": "aaa-111",
+        "name": "Alpha",
+        "city": "Austin",
+        "state": "TX",
+        "gender": [
+          "g"
+        ],
+        "apps": 1,
+        "titles": 0,
+        "last": "2025-26"
+      }
+    ]
+  }
+}

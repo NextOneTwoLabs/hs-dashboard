@@ -1,0 +1,39 @@
+{
+  "why": "`_meta` has exactly source, url and asOf.",
+  "errorAt": "$['_meta']",
+  "fix": {
+    "at": "/_meta",
+    "value": {
+      "source": "maxpreps",
+      "url": "https://www.maxpreps.com",
+      "asOf": null
+    }
+  },
+  "document": {
+    "schema": 1,
+    "_meta": {
+      "source": "maxpreps",
+      "url": "https://www.maxpreps.com",
+      "asOf": null,
+      "fetchedAt": "2026-10-01T20:22:20Z"
+    },
+    "fields": [
+      "id",
+      "name",
+      "city",
+      "state",
+      "apps",
+      "titles"
+    ],
+    "rows": [
+      [
+        "aaa-111",
+        "Alpha",
+        "Austin",
+        "TX",
+        1,
+        0
+      ]
+    ]
+  }
+}

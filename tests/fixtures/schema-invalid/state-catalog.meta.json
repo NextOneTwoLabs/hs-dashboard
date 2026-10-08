@@ -1,0 +1,61 @@
+{
+  "why": "`_meta.source` is a key of sources.json `sources`, in lower case.",
+  "errorAt": "$['_meta'].source",
+  "fix": {
+    "at": "/_meta/source",
+    "value": "maxpreps"
+  },
+  "document": {
+    "schema": 1,
+    "_meta": {
+      "source": "MaxPreps",
+      "url": "https://www.maxpreps.com",
+      "asOf": null
+    },
+    "state": "TX",
+    "name": "Texas",
+    "association": "UIL",
+    "associationName": "University Interscholastic League",
+    "activeSeason": "2026-27",
+    "latestSeason": "2025-26",
+    "genders": [
+      "g"
+    ],
+    "seasons": [
+      {
+        "season": "2025-26",
+        "note": null,
+        "competitions": [
+          {
+            "id": "tx-uil",
+            "state": "TX",
+            "label": "UIL State Championships",
+            "short": "State",
+            "term": "winter",
+            "divisions": [
+              {
+                "code": "6a-d1",
+                "gender": "girls",
+                "label": "Conference 6A D1",
+                "games": 63,
+                "played": 63,
+                "status": "complete",
+                "champion": {
+                  "id": "aaa-111",
+                  "name": "Alpha"
+                },
+                "runnerUp": {
+                  "id": "bbb-222",
+                  "name": "Beta"
+                },
+                "start": "2026-03-19",
+                "end": "2026-04-09",
+                "order": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

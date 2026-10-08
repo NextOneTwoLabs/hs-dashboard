@@ -2,12 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://hs-dashboard.local/schema/games.schema.json",
   "title": "A season's games feed (public/archive/states/<ST>/seasons/<season>/games.json and seasons/<season>/games.json)",
-  "description": "/api/v1/states/{ST}/seasons/{season}/games (with `state`) and /api/v1/seasons/{season}/games (every state, no `state`). Byes are not games and are left out. hsdash.py validate checks every game against its bracket and that the all-states feed is the union of the state feeds.",
+  "description": "/api/v1/states/{ST}/seasons/{season}/games (with `state`) and /api/v1/seasons/{season}/games (every state, no `state`). Byes are not games and are left out. hsdash.py validate checks every game against its bracket and that the all-states feed is the union of the state feeds. `_meta.asOf` is null: it is built from several brackets.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema", "season", "games"],
+  "required": ["schema", "_meta", "season", "games"],
   "properties": {
     "schema": {"$ref": "common.schema.json#/$defs/schemaVersion1"},
+    "_meta": {"$ref": "common.schema.json#/$defs/buildMeta"},
     "state": {"$ref": "common.schema.json#/$defs/state"},
     "season": {"$ref": "common.schema.json#/$defs/season"},
     "games": {"type": "array", "items": {"$ref": "#/$defs/game"}}
