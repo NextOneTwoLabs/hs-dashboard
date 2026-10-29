@@ -226,7 +226,14 @@ class Crawler:
             self.log(f"{season} {comp_id}: index not found ({entry['status']})")
             self.save_links()
             return
-        found = cif.parse_index(html, cfg["path"], self.cif_base)
+        except (OSError, http.client.HTTPException) as e:  # HTTPError, URLError, timeouts, resets
+            self.log(f"warning: {season} {comp_id}: index failed ({getattr(e, 'code', 'network')}); status kept")
+            return
+        try:
+            found = cif.parse_index(html, cfg["path"], self.cif_base)
+        except Exception as e:  # unfamiliar markup must not crash the run
+            self.log(f"warning: {season} {comp_id}: could not parse the index ({type(e).__name__}: {e}); status kept")
+            return
         entry["status"] = "ok" if found else "pending"
         for code, div_url in found.items():
             gender, _ = divisions.cif_division(code)
@@ -258,7 +265,11 @@ class Crawler:
             self.log(f"warning: {where}: tournament list failed ({getattr(e, 'code', 'network')}); status kept")
             return
         drop = [self.sources["states"][meta["state"]]["association"]]
-        found = maxpreps.parse_tournament(html, cfg["tournament"])
+        try:
+            found = maxpreps.parse_tournament(html, cfg["tournament"])
+        except Exception as e:  # unfamiliar markup must not crash the run
+            self.log(f"warning: {where}: could not parse the tournament list ({type(e).__name__}: {e}); status kept")
+            return
         if not found and was_ok:
             self.log(f"warning: {where}: tournament list is empty on re-check; keeping {len(entry['divisions'])} brackets")
             return
@@ -340,7 +351,12 @@ class Crawler:
             got = self._get(season, comp_id, code, div, div["cif"], "cif")
             if got is None:
                 return
-            link = cif.parse_division(got[1])
+            try:
+                link = cif.parse_division(got[1])
+            except Exception as e:  # unfamiliar markup must not crash the run (or be retried every run)
+                self.log(f"{season} {comp_id} {code}: could not parse the division page ({type(e).__name__}: {e})")
+                self._fail(season, comp_id, code, div, "error", "parse")
+                return
             if not link:
                 self._fail(season, comp_id, code, div, "no-bracket")
                 return
